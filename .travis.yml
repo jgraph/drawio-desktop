@@ -23,6 +23,9 @@ addons:
     packages:
       - libgnome-keyring-dev
       - icnsutils
+      - graphicsmagick
+      - xz-utils
+
 # Handle git submodules yourself
 git:
     submodules: false
