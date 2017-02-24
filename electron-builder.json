@@ -29,6 +29,7 @@
   },
   "dmg": {},
   "linux": {
+    "icon": "./build/icon.png",
     "category": "Graphics",
     "maintainer": "JGraph <sales@jgraph.com>",
     "target": [
