@@ -1,4 +1,4 @@
-version: 0.4.{build}
+version: 1.0.{build}
 
 platform:
   - x64
@@ -14,7 +14,7 @@ init:
 install:
   - ps: Install-Product node 7 x64
   - yarn install
-  - yarn add electron-builder@next --dev # force install next version to test electron-builder
+#  - yarn add electron-builder@next --dev # force install next version to test electron-builder
 
 build_script:
   - yarn run dist
