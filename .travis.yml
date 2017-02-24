@@ -32,7 +32,7 @@ before_install:
 install:
 - nvm install 7
 - yarn install
-- yarn add electron-builder@next --dev # force install next version to test electron-builder
+#- yarn add electron-builder@next --dev # force install next version to test electron-builder
 
 script:
 - yarn run release
@@ -40,3 +40,11 @@ script:
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
+
+# Handle git submodules yourself
+git:
+    submodules: false
+# Use sed to replace the SSH URL with the public URL, then initialize submodules
+before_install:
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+    - git submodule update --init --recursive
