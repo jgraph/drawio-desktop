@@ -1,0 +1,42 @@
+osx_image: xcode7.3
+
+dist: trusty
+sudo: false
+
+language: c
+
+matrix:
+  include:
+    - os: osx
+    - os: linux
+      env: CC=clang CXX=clang++ npm_config_clang=1
+      compiler: clang
+
+cache:
+  directories:
+  - node_modules
+  - $HOME/.electron
+  - $HOME/.cache
+
+addons:
+  apt:
+    packages:
+      - libgnome-keyring-dev
+      - icnsutils
+
+before_install:
+  - mkdir -p /tmp/git-lfs && curl -L https://github.com/github/git-lfs/releases/download/v1.5.5/git-lfs-$([ "$TRAVIS_OS_NAME" == "linux" ] && echo "linux" || echo "darwin")-amd64-1.5.5.tar.gz | tar -xz -C /tmp/git-lfs --strip-components 1 && /tmp/git-lfs/git-lfs pull
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+install:
+- nvm install 7
+- yarn install
+- yarn add electron-builder@next --dev # force install next version to test electron-builder
+
+script:
+- yarn run release
+
+branches:
+  except:
+    - "/^v\\d+\\.\\d+\\.\\d+$/"

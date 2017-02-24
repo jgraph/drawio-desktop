@@ -1,0 +1,39 @@
+{
+  "appId": "com.jgraph.drawio.desktop",
+  "copyright": "Copyright 2017 JGraph LTD",
+  "asar": true,
+  "directories": {
+    "app": "./draw.io/war",
+    "output": "./dist/"
+  },
+  "npmRebuild": false,
+  "publish": [
+    {
+      "provider": "github"
+    }
+  ],
+  "win": {
+    "target": [
+      "nsis"
+    ]
+  },
+  "nsis": {
+    "perMachine": true,
+    "unicode": false
+  },
+  "mac": {
+    "category": "public.app-category.graphics-design",
+    "target": [
+      "dmg"
+    ]
+  },
+  "dmg": {},
+  "linux": {
+    "category": "Graphics",
+    "maintainer": "JGraph <sales@jgraph.com>",
+    "target": [
+      "AppImage",
+      "deb"
+    ]
+  }
+}
