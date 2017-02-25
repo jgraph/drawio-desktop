@@ -1,10 +1,11 @@
 {
   "name": "draw.io",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
     "start": "electron ./draw.io/war",
+    "sync": "node ./sync.js",
     "builder": "node ./builder.js",
     "release": "build"
   },
@@ -26,6 +27,6 @@
   "homepage": "https://github.com/jgraph/draw.io",
   "devDependencies": {
     "electron": "^1.6.1",
-    "electron-builder": "^14.1.1"
+    "electron-builder": "^14.4.0"
   }
 }

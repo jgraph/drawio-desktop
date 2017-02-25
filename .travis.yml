@@ -39,12 +39,13 @@ before_install:
   - git submodule update --init --recursive
 
 install:
-- nvm install 7
-- yarn install
-#- yarn add electron-builder@next --dev # force install next version to test electron-builder
+  - nvm install 7
+  - yarn install
+  # - yarn add electron-builder@next --dev # force install next version to test electron-builder
 
 script:
-- yarn run release
+  - yarn run sync
+  - yarn run release
 
 branches:
   except:
