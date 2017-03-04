@@ -22,6 +22,10 @@
     "7zip-bin-mac" "^1.0.1"
     "7zip-bin-win" "^2.0.2"
 
+abbrev@1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
+
 ajv-keywords@^2.0.1-beta.0:
   version "2.0.1-beta.0"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.0.1-beta.0.tgz#aa242a131ae362b8bf72ff9ad07b24d0918cdfab"
@@ -57,15 +61,18 @@ array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
 
-asar-electron-builder@^0.13.5:
-  version "0.13.5"
-  resolved "https://registry.yarnpkg.com/asar-electron-builder/-/asar-electron-builder-0.13.5.tgz#4ccd4d11fd7c9d3b3cffc782fde3deed9ef91af6"
+asar@~0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/asar/-/asar-0.13.0.tgz#df33dd9d01bff842464d0d9f095740d4a62afb14"
   dependencies:
     chromium-pickle-js "^0.2.0"
     commander "^2.9.0"
     cuint "^0.2.1"
-    minimatch "^3.0.2"
-    mkdirp "^0.5.1"
+    glob "^6.0.4"
+    minimatch "^3.0.3"
+    mkdirp "^0.5.0"
+    mksnapshot "^0.3.0"
+    tmp "0.0.28"
 
 asn1@~0.2.3:
   version "0.2.3"
@@ -105,6 +112,13 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+binary@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/binary/-/binary-0.3.0.tgz#9f60553bc5ce8c3386f3b553cff47462adecaa79"
+  dependencies:
+    buffers "~0.1.1"
+    chainsaw "~0.1.0"
+
 bluebird-lst@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/bluebird-lst/-/bluebird-lst-1.0.1.tgz#2b666b20bb1c1902e6b7b352d9c0fbf56830b5a3"
@@ -140,6 +154,10 @@ brace-expansion@^1.0.0:
     balanced-match "^0.4.1"
     concat-map "0.0.1"
 
+buffers@~0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/buffers/-/buffers-0.1.1.tgz#b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb"
+
 builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
@@ -170,6 +188,12 @@ capture-stack-trace@^1.0.0:
 caseless@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
+
+chainsaw@~0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/chainsaw/-/chainsaw-0.1.0.tgz#5eab50b28afe58074d0d58291388828b5e5fbc98"
+  dependencies:
+    traverse ">=0.3.0 <0.4"
 
 chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
   version "1.1.3"
@@ -299,7 +323,7 @@ debug@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.7.4.tgz#06e1ea8082c2cb14e39806e22e2f6f757f92af39"
 
-debug@2.6.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0:
+debug@2.6.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0, debug@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
@@ -308,6 +332,18 @@ debug@2.6.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0:
 decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
+
+decompress-zip@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/decompress-zip/-/decompress-zip-0.3.0.tgz#ae3bcb7e34c65879adfe77e19c30f86602b4bdb0"
+  dependencies:
+    binary "^0.3.0"
+    graceful-fs "^4.1.3"
+    mkpath "^0.1.0"
+    nopt "^3.0.1"
+    q "^1.1.2"
+    readable-stream "^1.1.8"
+    touch "0.0.3"
 
 deep-extend@~0.4.0:
   version "0.4.1"
@@ -361,14 +397,14 @@ electron-builder-util@13.10.1, electron-builder-util@~13.10.1:
     stat-mode "^0.2.2"
     tunnel-agent "^0.4.3"
 
-electron-builder@^14.1.1:
-  version "14.1.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-14.1.1.tgz#5d27ce7a66d8fe7b14db7d50fad11c6aa1a42f5c"
+electron-builder@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-15.0.0.tgz#528d6f05bcc383f40e27c1f6571c906ec3435589"
   dependencies:
     "7zip-bin" "^2.0.4"
     ajv "^5.0.2-beta"
     ajv-keywords "^2.0.1-beta.0"
-    asar-electron-builder "^0.13.5"
+    asar "~0.13.0"
     bluebird-lst "^1.0.1"
     chalk "^1.1.3"
     chromium-pickle-js "^0.2.0"
@@ -376,9 +412,9 @@ electron-builder@^14.1.1:
     electron-builder-core "13.6.0"
     electron-builder-http "13.10.1"
     electron-builder-util "13.10.1"
-    electron-download-tf "3.2.0"
+    electron-download-tf "4.0.0"
     electron-macos-sign "~1.6.0"
-    electron-publish "13.10.1"
+    electron-publish "15.0.0"
     fs-extra-p "^4.0.2"
     hosted-git-info "^2.2.0"
     is-ci "^1.0.10"
@@ -395,16 +431,16 @@ electron-builder@^14.1.1:
     uuid-1345 "^0.99.6"
     yargs "^6.6.0"
 
-electron-download-tf@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/electron-download-tf/-/electron-download-tf-3.2.0.tgz#690443d2e7d068f000358f86b9d504303711ad10"
+electron-download-tf@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/electron-download-tf/-/electron-download-tf-4.0.0.tgz#b2cd6af916ea94cc3723d8931961cb537fb2efff"
   dependencies:
-    debug "^2.6.0"
+    debug "^2.6.1"
     fs-extra "^2.0.0"
     minimist "^1.2.0"
     nugget "^2.0.1"
     path-exists "^3.0.0"
-    rc "^1.1.6"
+    rc "^1.1.7"
     semver "^5.3.0"
     sumchecker "^2.0.1"
 
@@ -432,9 +468,9 @@ electron-macos-sign@~1.6.0:
     isbinaryfile "^3.0.2"
     plist "^2.0.1"
 
-electron-publish@13.10.1:
-  version "13.10.1"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-13.10.1.tgz#01830d44d913074d510db61a34e0242b665949ad"
+electron-publish@15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-15.0.0.tgz#6db5eabbe8b7e1fd3be22beb4b506fd85ad0d8a4"
   dependencies:
     bluebird-lst "^1.0.1"
     chalk "^1.1.3"
@@ -444,9 +480,9 @@ electron-publish@13.10.1:
     mime "^1.3.4"
     progress-ex "^2.0.0"
 
-electron@^1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.1.tgz#aa426e83bfb5919c3a492297eff368b67e66f1ae"
+electron@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.6.2.tgz#b0ccd7703f86d09c4d2a7273455c3f993f158994"
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
@@ -529,6 +565,16 @@ fs-extra-p@^4.0.2:
     bluebird-lst "^1.0.1"
     fs-extra "^2.0.0"
 
+fs-extra@0.26.7:
+  version "0.26.7"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.26.7.tgz#9ae1fdd94897798edab76d0918cf42d0c3184fa9"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^2.1.0"
+    klaw "^1.0.0"
+    path-is-absolute "^1.0.0"
+    rimraf "^2.2.8"
+
 fs-extra@^0.30.0:
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.30.0.tgz#f233ffcc08d4da7d432daa449776989db1df93f0"
@@ -578,6 +624,16 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+glob@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-6.0.4.tgz#0f08860f6a155127b2fadd4f9ce24b1aab6e4d22"
+  dependencies:
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "2 || 3"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
 glob@^7.0.5:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
@@ -605,7 +661,7 @@ got@^6.7.1:
     unzip-response "^2.0.1"
     url-parse-lax "^1.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -919,7 +975,7 @@ mime@^1.3.4:
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.4.tgz#115f9e3b6b3daf2959983cb38f149a2d40eb5d53"
 
-minimatch@^3.0.2, minimatch@^3.0.3:
+"minimatch@2 || 3", minimatch@^3.0.2, minimatch@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774"
   dependencies:
@@ -933,17 +989,23 @@ minimist@^1.1.0, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
-mkdirp@0.5.0:
+mkdirp@0.5.0, mkdirp@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.0.tgz#1d73076a6df986cd9344e15e71fcc05a4c9abf12"
   dependencies:
     minimist "0.0.8"
 
-mkdirp@^0.5.0, mkdirp@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
+mkpath@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/mkpath/-/mkpath-0.1.0.tgz#7554a6f8d871834cc97b5462b122c4c124d6de91"
+
+mksnapshot@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/mksnapshot/-/mksnapshot-0.3.1.tgz#2501c05657436d742ce958a4ff92c77e40dd37e6"
   dependencies:
-    minimist "0.0.8"
+    decompress-zip "0.3.0"
+    fs-extra "0.26.7"
+    request "^2.79.0"
 
 ms@0.7.2:
   version "0.7.2"
@@ -958,6 +1020,18 @@ node-emoji@^1.5.1:
 node-forge@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.0.tgz#5e0782a44e5e093fae3676d59f84ecfb38a4baad"
+
+nopt@^3.0.1:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
+  dependencies:
+    abbrev "1"
+
+nopt@~1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee"
+  dependencies:
+    abbrev "1"
 
 normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.3.5:
   version "2.3.5"
@@ -1013,6 +1087,10 @@ os-locale@^1.4.0:
   resolved "https://registry.yarnpkg.com/os-locale/-/os-locale-1.4.0.tgz#20f9f17ae29ed345e8bde583b13d2009803c14d9"
   dependencies:
     lcid "^1.0.0"
+
+os-tmpdir@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
 package-json@^3.0.0:
   version "3.1.0"
@@ -1121,11 +1199,15 @@ punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
+q@^1.1.2:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
+
 qs@~6.3.0:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.3.1.tgz#918c0b3bcd36679772baf135b1acb4c1651ed79d"
 
-rc@^1.0.1, rc@^1.1.2, rc@^1.1.6:
+rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.1.7.tgz#c5ea564bb07aff9fd3a5b32e906c1d3a65940fea"
   dependencies:
@@ -1149,7 +1231,7 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-readable-stream@~1.1.9:
+readable-stream@^1.1.8, readable-stream@~1.1.9:
   version "1.1.14"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
@@ -1194,7 +1276,7 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
-request@^2.45.0:
+request@^2.45.0, request@^2.79.0:
   version "2.79.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
@@ -1419,11 +1501,27 @@ timed-out@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
 
+tmp@0.0.28:
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.28.tgz#172735b7f614ea7af39664fa84cf0de4e515d120"
+  dependencies:
+    os-tmpdir "~1.0.1"
+
+touch@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/touch/-/touch-0.0.3.tgz#51aef3d449571d4f287a5d87c9c8b49181a0db1d"
+  dependencies:
+    nopt "~1.0.10"
+
 tough-cookie@~2.3.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.2.tgz#f081f76e4c85720e6c37a5faced737150d84072a"
   dependencies:
     punycode "^1.4.1"
+
+"traverse@>=0.3.0 <0.4":
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.3.9.tgz#717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
