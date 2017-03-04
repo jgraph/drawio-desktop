@@ -7,9 +7,8 @@
     "start": "electron ./draw.io/war",
     "sync": "node ./sync.js",
     "builder": "node ./builder.js",
-    "postinstall": "cd draw.io && cd war && yarn install --production",
+    "postinstall": "cd draw.io/war && yarn install --production",
     "release": "build"
-
   },
   "repository": {
     "type": "git",
