@@ -13,7 +13,7 @@ pj.version = ver
 
 fs.writeFileSync(appjsonpath, JSON.stringify(pj), 'utf8')
 
-child_process.spawnSync('yarn', ['install'], {cwd: wardir})
+child_process.spawnSync('yarn', ['install','--production'], {cwd: wardir})
 
 /*
  "postinstall": "cd draw.io/war && yarn install --production",

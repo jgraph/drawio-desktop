@@ -19,7 +19,7 @@ clone_script:
 
 install:
   - ps: Install-Product node 7 x64
-  - ps: yarn install
+  - yarn install
 #  - yarn add electron-builder@next --dev # force install next version to test electron-builder
 
 before_build:
