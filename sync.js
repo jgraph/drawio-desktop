@@ -5,7 +5,9 @@ const child_process = require('child_process')
 const wardir = path.resolve(__dirname, 'draw.io', 'war')
 const appjsonpath = path.resolve(wardir, 'package.json')
 
-let ver = fs.readFileSync(path.resolve(__dirname, 'draw.io', 'VERSION'), 'utf8')
+// let ver = fs.readFileSync(path.resolve(__dirname, 'draw.io', 'VERSION'), 'utf8')
+
+let ver = '6.2.5' // just to test autoupdate
 
 let pj = require(appjsonpath)
 
