@@ -13,6 +13,7 @@ matrix:
       compiler: clang
 
 cache:
+  yarn: true
   directories:
   - node_modules
   - $HOME/.electron
@@ -50,4 +51,3 @@ script:
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
-
