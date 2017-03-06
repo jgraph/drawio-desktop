@@ -27,6 +27,6 @@
   "homepage": "https://github.com/jgraph/draw.io",
   "devDependencies": {
     "electron": "^1.6.2",
-    "electron-builder": "^15.0.0"
+    "electron-builder": "^15.1.1"
   }
 }
