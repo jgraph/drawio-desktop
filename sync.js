@@ -7,7 +7,7 @@ const appjsonpath = path.resolve(wardir, 'package.json')
 
 // let ver = fs.readFileSync(path.resolve(__dirname, 'draw.io', 'VERSION'), 'utf8')
 
-let ver = '6.2.7' // just to test autoupdate
+let ver = '6.2.9' // just to test autoupdate
 
 let pj = require(appjsonpath)
 
