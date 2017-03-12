@@ -6,7 +6,6 @@
   "scripts": {
     "start": "electron ./draw.io/war",
     "sync": "node ./sync.js",
-    "builder": "node ./builder.js",
     "release": "build"
   },
   "repository": {
@@ -26,7 +25,7 @@
   },
   "homepage": "https://github.com/jgraph/draw.io",
   "devDependencies": {
-    "electron": "^1.6.2",
-    "electron-builder": "^15.1.1"
+    "electron": "^1.6.3",
+    "electron-builder": "^15.3.0"
   }
 }

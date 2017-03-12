@@ -25,7 +25,8 @@
   "mac": {
     "category": "public.app-category.graphics-design",
     "target": [
-      "zip"
+      "zip",
+      "dmg"
     ]
   },
   "dmg": {},
