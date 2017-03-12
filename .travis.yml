@@ -42,7 +42,6 @@ before_install:
 install:
   - nvm install 7
   - yarn install
-  # - yarn add electron-builder@next --dev # force install next version to test electron-builder
 
 script:
   - yarn run sync

@@ -2,6 +2,10 @@
   "appId": "com.jgraph.drawio.desktop",
   "copyright": "Copyright 2017 JGraph LTD",
   "asar": true,
+  "files": [
+    "**/*",
+    "!**/WEB-INF{,/**}"
+  ],
   "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
     "app": "./draw.io/war",
