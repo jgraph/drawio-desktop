@@ -8,7 +8,7 @@
   ],
   "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
-    "app": "./draw.io/war",
+    "app": "./draw.io/etc/electron",
     "output": "./dist/"
   },
   "npmRebuild": false,
