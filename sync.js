@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const child_process = require('child_process')
 
-const wardir = path.resolve(__dirname, 'draw.io', 'war')
+const electronAppDir = path.resolve(__dirname, 'draw.io', 'etc', 'electron')
 const appjsonpath = path.resolve(__dirname, 'draw.io', 'etc', 'electron', 'package.json')
 
 let ver = fs.readFileSync(path.resolve(__dirname, 'draw.io', 'VERSION'), 'utf8')
@@ -12,10 +12,6 @@ let pj = require(appjsonpath)
 
 pj.version = ver
 
-fs.writeFileSync(appjsonpath, JSON.stringify(pj), 'utf8')
+fs.writeFileSync(appjsonpath, JSON.stringify(pj, null, 2), 'utf8')
 
-child_process.spawnSync('yarn', ['install','--production'], {cwd: wardir})
-
-/*
- "postinstall": "cd draw.io/war && yarn install --production",
- */
+child_process.spawnSync('yarn', ['install', '--production'], {cwd: electronAppDir})

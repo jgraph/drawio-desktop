@@ -4,7 +4,7 @@
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
-    "start": "electron ./draw.io/war",
+    "start": "electron ./draw.io/etc/electron",
     "sync": "node ./sync.js",
     "release": "build"
   },
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/jgraph/draw.io",
   "devDependencies": {
-    "electron": "^1.6.3",
-    "electron-builder": "^15.3.0"
+    "electron": "^1.7.2",
+    "electron-builder": "^18.1.0"
   }
 }
