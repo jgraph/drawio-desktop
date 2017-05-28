@@ -23,8 +23,7 @@
     ]
   },
   "nsis": {
-    "perMachine": true,
-    "unicode": false
+    "perMachine": true
   },
   "mac": {
     "category": "public.app-category.graphics-design",
