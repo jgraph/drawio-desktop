@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:mediaslav/drawiodesktop.git"
+    "url": "git@github.com:jgraph/drawio-desktop.git"
   },
   "keywords": [
     "draw.io",
