@@ -27,7 +27,7 @@ addons:
       - graphicsmagick
       - xz-utils
 
-# Handle git submodules yourself
+# Handle git submodules yourself 
 git:
     submodules: false
 
