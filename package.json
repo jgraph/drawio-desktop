@@ -4,7 +4,7 @@
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
-    "start": "electron ./draw.io/etc/electron",
+    "start": "electron .",
     "sync": "node ./sync.js",
     "release": "build"
   },
@@ -19,9 +19,9 @@
     "UML"
   ],
   "author": "JGraph <sales@jgraph.com>",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jgraph/draw.io/issues"
+    "url": "https://github.com/jgraph/drawio-desktop/issues"
   },
   "homepage": "https://github.com/jgraph/draw.io",
   "devDependencies": {
