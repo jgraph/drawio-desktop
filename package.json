@@ -4,7 +4,7 @@
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron ./draw.io/etc/electron",
     "sync": "node ./sync.js",
     "release": "build"
   },
