@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const child_process = require('child_process')
 
-const electronAppDir = path.resolve(__dirname, 'draw.io', 'war')
+const electronAppDir = path.resolve(__dirname, 'draw.io', 'etc', 'electron')
 const appjsonpath = path.resolve(__dirname, 'draw.io', 'etc', 'electron', 'package.json')
 
 let ver = fs.readFileSync(path.resolve(__dirname, 'draw.io', 'VERSION'), 'utf8')
