@@ -24,6 +24,10 @@
     "url": "https://github.com/jgraph/drawio-desktop/issues"
   },
   "homepage": "https://github.com/jgraph/draw.io",
+    "dependencies": {
+    "electron-log": "^2.2.6",
+    "electron-updater": "^1.16.0"
+  },
   "devDependencies": {
     "electron": "^1.7.2",
     "electron-builder": "^18.1.0"
