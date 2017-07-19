@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "6.7.7",
+  "version": "6.8.0",
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "flowchart",
     "UML"
   ],
-  "author": "JGraph <sales@jgraph.com>",
+  "author": "JGraph <support@draw.io>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/jgraph/drawio-desktop/issues"
