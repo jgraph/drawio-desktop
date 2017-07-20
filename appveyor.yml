@@ -7,7 +7,6 @@ cache:
   - node_modules
   - '%APPDATA%\npm-cache'
   - '%USERPROFILE%\.electron'
-  - '%LOCALAPPDATA%\Yarn'
 
 init:
   - git config --global core.autocrlf input
