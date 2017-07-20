@@ -27,5 +27,9 @@
   "dependencies": {
     "electron-log": "^2.2.7",
     "electron-updater": "^2.7.1"
+  },
+  "devDependencies": {
+    "electron": "^1.6.11",
+    "electron-builder": "^19.16.1"
   }
 }
