@@ -12,14 +12,14 @@ clone_script:
   - cmd: git clone --depth=1 -q --branch=%APPVEYOR_REPO_BRANCH% https://github.com/%APPVEYOR_REPO_NAME%.git %APPVEYOR_BUILD_FOLDER%
   - cmd: cd %APPVEYOR_BUILD_FOLDER%
   - cmd: git checkout -qf %APPVEYOR_REPO_COMMIT%
+  - ps: (gc .\.gitmodules) -replace 'git@github.com:','https://github.com/' | Out-File -encoding ASCII .gitmodules
+  - cmd: git submodule update --init --recursive
 
 install:
   - ps: Install-Product node 7 x64
   - yarn install
 
 before_build:
-  - ps: (gc .\.gitmodules) -replace 'git@github.com:','https://github.com/' | Out-File -encoding ASCII .gitmodules
-  - cmd: git submodule update --init --recursive
 
 build_script:
   - yarn run sync
