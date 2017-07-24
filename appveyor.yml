@@ -20,7 +20,7 @@ install:
   - yarn install
   - cd draw.io/war
   - yarn install
-  - cd .
+  - cd ../..
 
 before_build:
 
