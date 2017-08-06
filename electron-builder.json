@@ -18,6 +18,7 @@
     }
   ],
   "win": {
+    "certificateSubjectName": "JGraph Ltd",
     "target": [
       "nsis"
     ]
