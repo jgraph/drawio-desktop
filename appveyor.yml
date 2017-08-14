@@ -20,6 +20,9 @@ clone_script:
 install:
   - ps: Install-Product node 7 x64
   - yarn install
+  - cd draw.io/war
+  - yarn install
+  - cd ../..
 
 before_build:
   - ps: (gc .\.gitmodules) -replace 'git@github.com:','https://github.com/' | Out-File -encoding ASCII .gitmodules
