@@ -20,7 +20,7 @@ clone_script:
 install:
   - ps: Install-Product node 7 x64
   - yarn install
-  - cd draw.io/war
+  - cd drawio/war
   - yarn install
   - cd ../..
 
