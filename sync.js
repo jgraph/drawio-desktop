@@ -5,8 +5,8 @@ const child_process = require('child_process')
 const electronAppDir = path.join(__dirname, 'draw.io', 'war')
 const appjsonpath = path.join(__dirname, 'draw.io', 'war', 'package.json')
 
-//let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
-let ver = '7.0.5' // just to test autoupdate
+let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
+//let ver = '7.0.5' // just to test autoupdate
 
 let pj = require(appjsonpath)
 
