@@ -173,9 +173,9 @@ function checkUpdate () {
 			if (idx === 0) return autoUpdater.downloadUpdate()
 		}
 	}).then((a, b) => {
-		log.info('@checkForUpdates update-downloaded@\n', a, b)
+		log.info('@checkForUpdates update-downloaded:', a, b)
 	}).catch(e => {
-		log.error('@checkForUpdates catch error@\n', e)
+		log.error('@checkForUpdates catch error:', e)
 	})
 }
 
@@ -184,14 +184,14 @@ function setupAutoUpdater () {
 	autoUpdater.logger.transports.file.level = 'info'
 	autoUpdater.autoDownload = true
 
-	autoUpdater.on('error', e => log.error('@error@\n', e))
+	autoUpdater.on('error', e => log.error('@error:', e))
 
 	autoUpdater.on('update-available',
-		(a, b) => log.info('@update-available@\n', a, b))
+		(a, b) => log.info('@update-available:', a, b))
 
 	/**/
 	autoUpdater.on('update-downloaded', (event, info) => {
-		log.info('@update-downloaded@\n', info, event)
+		log.info('@update-downloaded:', info, event)
 		// Ask user to update the app
 		dialog.showMessageBox({
 			type: 'question',

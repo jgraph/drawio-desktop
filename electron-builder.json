@@ -30,7 +30,9 @@
       "nsis"
     ]
   },
-  "nsis": {},
+  "nsis": {
+    "perMachine": true
+  },
   "mac": {
     "category": "public.app-category.graphics-design"
   },
