@@ -17,8 +17,18 @@ try {
 	console.error(`Problem updating app version`, err)
 }
 
-const res = child_process.spawnSync('yarn', ['install', '--production'], {cwd: electronAppDir})
+const res = child_process.spawnSync('yarn', ['install', '--production'], {
+	cwd: electronAppDir,
+	stdio: 'pipe',
+	shell: true,
+})
 
 console.log(`App dir: ${electronAppDir}`)
+
+if (res.error) {
+	console.error('sub:', res.stderr && res.stderr.toString())
+} else {
+	console.log('sub:', res.stdout && res.stdout.toString())
+}
 
 process.exit(res.status)

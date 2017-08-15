@@ -26,12 +26,12 @@
     }
   ],
   "win": {
+    "certificateSubjectName": "JGraph Ltd",
     "target": [
       "nsis"
     ]
   },
-  "nsis": {
-  },
+  "nsis": {},
   "mac": {
     "category": "public.app-category.graphics-design"
   },
