@@ -3,12 +3,20 @@
   "copyright": "Copyright 2017 JGraph LTD",
   "asar": true,
   "files": [
-    "**/*",
-    "!**/WEB-INF{,/**}"
+    {
+      "from": "."
+    },
+    {
+      "from": "../draw.io/war",
+      "to": "war",
+      "filter": [
+        "**/*",
+        "!**/WEB-INF{,/**}"
+      ]
+    }
   ],
   "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
-    "app": "./draw.io/war",
     "output": "./dist/"
   },
   "npmRebuild": false,
@@ -23,14 +31,9 @@
     ]
   },
   "nsis": {
-    "perMachine": true
   },
   "mac": {
-    "category": "public.app-category.graphics-design",
-    "target": [
-      "zip",
-      "dmg"
-    ]
+    "category": "public.app-category.graphics-design"
   },
   "dmg": {},
   "linux": {

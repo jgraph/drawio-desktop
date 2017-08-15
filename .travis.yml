@@ -40,8 +40,8 @@ before_install:
   - git submodule update --init --recursive
 
 install:
-  - nvm install 8
-  - yarn install
+  - nvm install 7
+  - yarn install --ignore-optional
 
 script:
   - yarn run sync

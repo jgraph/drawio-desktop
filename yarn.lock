@@ -294,7 +294,14 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-cross-spawn@^5.0.1:
+cross-env@~5.0.5:
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.0.5.tgz#4383d364d9660873dd185b398af3bfef5efffef3"
+  dependencies:
+    cross-spawn "^5.1.0"
+    is-windows "^1.0.0"
+
+cross-spawn@^5.0.1, cross-spawn@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449"
   dependencies:
@@ -382,24 +389,23 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-builder-http@19.20.1, electron-builder-http@~19.20.1:
-  version "19.20.1"
-  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-19.20.1.tgz#4e2cceeb20265a69344bbd0551c85be59418839d"
+electron-builder-http@19.21.0, electron-builder-http@~19.21.0:
+  version "19.21.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-19.21.0.tgz#3e812f030fddb5eaebcc26303f7bca1a34e1da76"
   dependencies:
     bluebird-lst "^1.0.3"
     debug "^3.0.0"
     fs-extra-p "^4.4.0"
 
-electron-builder-util@19.20.1, electron-builder-util@~19.20.1:
-  version "19.20.1"
-  resolved "https://registry.yarnpkg.com/electron-builder-util/-/electron-builder-util-19.20.1.tgz#5e5d9815456af30e7dfafa6fd67c49ff1bcafdc3"
+electron-builder-util@19.22.0:
+  version "19.22.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-util/-/electron-builder-util-19.22.0.tgz#1da670a504cfa4e1cbd82b6aa62f9fb20c74820a"
   dependencies:
     "7zip-bin" "^2.1.0"
-    async-exit-hook "^2.0.1"
     bluebird-lst "^1.0.3"
     chalk "^2.1.0"
     debug "^3.0.0"
-    electron-builder-http "~19.20.1"
+    electron-builder-http "~19.21.0"
     fcopy-pre-bundled "0.3.4"
     fs-extra-p "^4.4.0"
     ini "^1.3.4"
@@ -409,11 +415,33 @@ electron-builder-util@19.20.1, electron-builder-util@~19.20.1:
     semver "^5.4.1"
     source-map-support "^0.4.15"
     stat-mode "^0.2.2"
+    temp-file "^1.0.1"
     tunnel-agent "^0.6.0"
 
-electron-builder@^19.20.1:
-  version "19.20.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-19.20.1.tgz#21ac04ab57807feb5dc52ef894f9fd80376c3e12"
+electron-builder-util@~19.21.0:
+  version "19.21.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-util/-/electron-builder-util-19.21.0.tgz#d812100cf2df94734231b25d200e133185cee639"
+  dependencies:
+    "7zip-bin" "^2.1.0"
+    bluebird-lst "^1.0.3"
+    chalk "^2.1.0"
+    debug "^3.0.0"
+    electron-builder-http "~19.21.0"
+    fcopy-pre-bundled "0.3.4"
+    fs-extra-p "^4.4.0"
+    ini "^1.3.4"
+    is-ci "^1.0.10"
+    lazy-val "^1.0.2"
+    node-emoji "^1.8.1"
+    semver "^5.4.1"
+    source-map-support "^0.4.15"
+    stat-mode "^0.2.2"
+    temp-file "^1.0.1"
+    tunnel-agent "^0.6.0"
+
+electron-builder@~19.22.1:
+  version "19.22.2"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-19.22.2.tgz#4edf5e214a52be114a249e7f2bc9db8ba94eecf6"
   dependencies:
     "7zip-bin" "^2.1.0"
     ajv "^5.2.2"
@@ -426,11 +454,11 @@ electron-builder@^19.20.1:
     debug "^3.0.0"
     dotenv "^4.0.0"
     dotenv-expand "^4.0.1"
-    electron-builder-http "19.20.1"
-    electron-builder-util "19.20.1"
+    electron-builder-http "19.21.0"
+    electron-builder-util "19.22.0"
     electron-download-tf "4.3.1"
     electron-osx-sign "0.4.7"
-    electron-publish "19.20.1"
+    electron-publish "19.21.0"
     fs-extra-p "^4.4.0"
     hosted-git-info "^2.5.0"
     is-ci "^1.0.10"
@@ -444,6 +472,7 @@ electron-builder@^19.20.1:
     read-config-file "^1.0.5"
     sanitize-filename "^1.6.1"
     semver "^5.4.1"
+    temp-file "^1.0.1"
     update-notifier "^2.2.0"
     uuid-1345 "^0.99.6"
     yargs "^8.0.2"
@@ -476,14 +505,6 @@ electron-download@^3.0.1:
     semver "^5.3.0"
     sumchecker "^1.2.0"
 
-electron-is-dev@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
-
-electron-log@^2.2.7:
-  version "2.2.7"
-  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-2.2.7.tgz#8da0d2586b53b175392ae6b91dc510a67c195341"
-
 electron-osx-sign@0.4.7:
   version "0.4.7"
   resolved "https://registry.yarnpkg.com/electron-osx-sign/-/electron-osx-sign-0.4.7.tgz#1d75647a82748eacd48bea70616ec83ffade3ee5"
@@ -495,37 +516,20 @@ electron-osx-sign@0.4.7:
     minimist "^1.2.0"
     plist "^2.1.0"
 
-electron-publish@19.20.1:
-  version "19.20.1"
-  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-19.20.1.tgz#147316c00338a74a0ac23a0c5fc3ce151062585b"
+electron-publish@19.21.0:
+  version "19.21.0"
+  resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-19.21.0.tgz#1368d01fd325f6e1b4b25e17098e5e77ed4d71ad"
   dependencies:
     bluebird-lst "^1.0.3"
     chalk "^2.1.0"
-    electron-builder-http "~19.20.1"
-    electron-builder-util "~19.20.1"
+    electron-builder-http "~19.21.0"
+    electron-builder-util "~19.21.0"
     fs-extra-p "^4.4.0"
     mime "^1.3.6"
 
-electron-updater@^2.8.6:
-  version "2.8.6"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-2.8.6.tgz#03793717d63b47d416039b1a22867fe1944bc51b"
-  dependencies:
-    bluebird-lst "^1.0.3"
-    debug "^3.0.0"
-    electron-builder-http "~19.20.1"
-    electron-is-dev "^0.3.0"
-    fs-extra-p "^4.4.0"
-    js-yaml "^3.9.1"
-    lazy-val "^1.0.2"
-    lodash.isequal "^4.5.0"
-    semver "^5.4.1"
-    source-map-support "^0.4.15"
-    uuid-1345 "^0.99.6"
-    xelement "^1.0.16"
-
-electron@^1.7.5:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.5.tgz#065a3102bf8b87102df50c50985fefe6c569045b"
+electron@~1.7.5:
+  version "1.7.6"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.7.6.tgz#fb69ea31bd03df0eff247f26f0b538bd29b6ee72"
   dependencies:
     "@types/node" "^7.0.18"
     electron-download "^3.0.1"
@@ -850,6 +854,10 @@ is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
+is-windows@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-windows/-/is-windows-1.0.1.tgz#310db70f742d259a16a369202b51af84233310d9"
+
 isarray@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
@@ -975,10 +983,6 @@ locate-path@^2.0.0:
   dependencies:
     p-locate "^2.0.0"
     path-exists "^3.0.0"
-
-lodash.isequal@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
 lodash.toarray@^4.4.0:
   version "4.4.0"
@@ -1424,10 +1428,6 @@ sanitize-filename@^1.6.1:
   dependencies:
     truncate-utf8-bytes "^1.0.0"
 
-sax@^1.2.1:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
-
 semver-diff@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
@@ -1587,7 +1587,7 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-sumchecker@^1.2.0, sumchecker@^1.3.1:
+sumchecker@^1.2.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/sumchecker/-/sumchecker-1.3.1.tgz#79bb3b4456dd04f18ebdbc0d703a1d1daec5105d"
   dependencies:
@@ -1609,6 +1609,15 @@ supports-color@^4.0.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.2.1.tgz#65a4bb2631e90e02420dba5554c375a4754bb836"
   dependencies:
     has-flag "^2.0.0"
+
+temp-file@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/temp-file/-/temp-file-1.0.2.tgz#790ac9093b9d12a84f277f42f6314e0cf579f1c7"
+  dependencies:
+    async-exit-hook "^2.0.1"
+    bluebird-lst "^1.0.3"
+    fs-extra-p "^4.4.0"
+    lazy-val "^1.0.2"
 
 term-size@^1.2.0:
   version "1.2.0"
@@ -1765,12 +1774,6 @@ write-file-atomic@^2.0.0:
 xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
-
-xelement@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/xelement/-/xelement-1.0.16.tgz#900bb46c20fc2dffadff778a9d2dc36699d0ff7e"
-  dependencies:
-    sax "^1.2.1"
 
 xmlbuilder@8.2.2:
   version "8.2.2"

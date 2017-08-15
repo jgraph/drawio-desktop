@@ -6,8 +6,22 @@ draw.io desktop app based on Electron
 
 [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
 
-To run this:
-1. npm install
-2. export NODE_ENV=development
-3. npm start
+### Prepare
 
+Run 
+`yarn install`
+`yarn appdeps`
+
+### Running
+
+Generic devmode: `yarn start`
+    
+Mxgraph development: `yarn startmx`
+    
+### Logs    
+
+By default it writes logs to the following locations:
+
+on Linux: ~/.config/<app name>/log.log
+on OS X: ~/Library/Logs/<app name>/log.log
+on Windows: %USERPROFILE%\AppData\Roaming\<app name>\log.log

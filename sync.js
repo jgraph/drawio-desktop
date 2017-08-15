@@ -2,16 +2,23 @@ const fs = require('fs')
 const path = require('path')
 const child_process = require('child_process')
 
-const electronAppDir = path.join(__dirname, 'draw.io', 'war')
-const appjsonpath = path.join(__dirname, 'draw.io', 'war', 'package.json')
+const electronAppDir = path.join(__dirname, 'app')
+const appjsonpath = path.join(electronAppDir, 'package.json')
 
-let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
+try {
+	let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
 // let ver = '6.4.3' // just to test autoupdate
 
-let pj = require(appjsonpath)
+	let pj = require(appjsonpath)
+	pj.version = ver
+	fs.writeFileSync(appjsonpath, JSON.stringify(pj, null, 2), 'utf8')
+	console.log(`App version successfully updated: ${ver}`)
+} catch (err) {
+	console.error(`Problem updating app version`, err)
+}
 
-pj.version = ver
+const res = child_process.spawnSync('yarn', ['install', '--production'], {cwd: electronAppDir})
 
-fs.writeFileSync(appjsonpath, JSON.stringify(pj, null, 2), 'utf8')
+console.log(`App dir: ${electronAppDir}`)
 
-child_process.spawnSync('yarn', ['install', '--production'], {cwd: electronAppDir})
+process.exit(res.status)
