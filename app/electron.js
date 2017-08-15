@@ -73,7 +73,7 @@ function createWindow (opt = {}) {
 	mainWindow.loadURL(wurl)
 
 	// Open the DevTools.
-	if (__DEV__ || __MXDEV__) {
+	if (__DEV__ || __MXDEV__ || process.env.NODE_DEVTOOLS === 'on') {
 		mainWindow.webContents.openDevTools()
 	}
 

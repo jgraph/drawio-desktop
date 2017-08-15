@@ -9,19 +9,24 @@ draw.io desktop app based on Electron
 ### Prepare
 
 Run 
-`yarn install`
-`yarn appdeps`
+
+    yarn install
+    yarn appdeps
 
 ### Running
 
 Generic devmode: `yarn start`
     
 Mxgraph development: `yarn startmx`
+
+set `NODE_DEVTOOLS=on` to force open devtools
     
 ### Logs    
 
 By default it writes logs to the following locations:
 
-on Linux: ~/.config/<app name>/log.log
-on OS X: ~/Library/Logs/<app name>/log.log
-on Windows: %USERPROFILE%\AppData\Roaming\<app name>\log.log
+on Linux: `~/.config/<app name>/log.log`
+
+on OS X: `~/Library/Logs/<app name>/log.log`
+
+on Windows: `%USERPROFILE%\AppData\Roaming\<app name>\log.log`

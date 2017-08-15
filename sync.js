@@ -6,8 +6,8 @@ const electronAppDir = path.join(__dirname, 'app')
 const appjsonpath = path.join(electronAppDir, 'package.json')
 
 try {
-	let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
-// let ver = '6.4.3' // just to test autoupdate
+	// let ver = fs.readFileSync(path.join(__dirname, 'draw.io', 'VERSION'), 'utf8')
+	let ver = '7.2.1' // just to test autoupdate
 
 	let pj = require(appjsonpath)
 	pj.version = ver
