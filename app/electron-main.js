@@ -20,6 +20,8 @@ if (!__DEV__) {
 	if (autoUpdater) setupAutoUpdater()
 }
 
+log.info(`Starting main process ${app.getName()} - ${app.getVersion()}`)
+
 let windowsRegistry = []
 
 function createWindow (opt = {}) {
@@ -48,7 +50,7 @@ function createWindow (opt = {}) {
 		pathname = path.join(__dirname, '..', 'draw.io', 'war', 'index.html')
 	}
 
-	console.log('Starting drawio via:', pathname)
+	console.log('Starting browser process drawio via:', pathname)
 
 	let wurl = url.format({
 		pathname,
