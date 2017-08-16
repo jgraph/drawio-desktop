@@ -10,6 +10,7 @@ const BrowserWindow = electron.BrowserWindow
 const log = require('electron-log')
 
 let autoUpdater = null
+let updateReadyDialogDisplayed = false
 
 const __DEV__ = process.env.NODE_ENV === 'development'
 const __MXDEV__ = process.env.NODE_MXDEV === 'on'
@@ -139,7 +140,7 @@ app.on('ready', e => {
 		event.returnValue = 'pong'
 	})
 	createWindow()
-	checkUpdate()
+	setTimeout(() => checkUpdate(), 1999)
 })
 
 // Quit when all windows are closed.
@@ -184,7 +185,7 @@ function checkUpdate () {
 function setupAutoUpdater () {
 	autoUpdater.logger = log
 	autoUpdater.logger.transports.file.level = 'info'
-	autoUpdater.autoDownload = true
+	autoUpdater.autoDownload = false
 
 	autoUpdater.on('error', e => log.error('@error:', e))
 
@@ -194,18 +195,21 @@ function setupAutoUpdater () {
 	/**/
 	autoUpdater.on('update-downloaded', (event, info) => {
 		log.info('@update-downloaded:', info, event)
-		// Ask user to update the app
-		dialog.showMessageBox({
-			type: 'question',
-			buttons: ['Install and Relaunch', 'Later'],
-			defaultId: 0,
-			message: 'A new version of ' + app.getName() + ' has been downloaded',
-			detail: 'It will be installed the next time you restart the application',
-		}, response => {
-			if (response === 0) {
-				setTimeout(() => autoUpdater.quitAndInstall(), 1)
-			}
-		})
+		if (!updateReadyDialogDisplayed) {
+			// Ask user to update the app
+			updateReadyDialogDisplayed = true
+			dialog.showMessageBox({
+				type: 'question',
+				buttons: ['Install and Relaunch', 'Later'],
+				defaultId: 0,
+				message: 'A new version of ' + app.getName() + ' has been downloaded',
+				detail: 'It will be installed the next time you restart the application',
+			}, response => {
+				if (response === 0) {
+					setTimeout(() => autoUpdater.quitAndInstall(), 1)
+				}
+			})
+		}
 	})
 	/**/
 }
