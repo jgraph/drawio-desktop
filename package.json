@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "7.8.4",
+  "version": "7.8.5",
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
@@ -25,8 +25,7 @@
   },
   "homepage": "https://github.com/jgraph/draw.io",
   "dependencies": {
-    "electron-log": "^2.2.7",
-    "electron-updater": "^2.8.7"
+    "electron-log": "^2.2.7"
   },
   "devDependencies": {
     "electron": "^1.7.5",
