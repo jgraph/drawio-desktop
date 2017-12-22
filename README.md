@@ -6,6 +6,12 @@ draw.io desktop app based on Electron
 
 [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
 
+Setup:
+
+**draw.io** is a git submodule of **drawio-desktop**. To get both you need to clone recursively:
+
+`git clone --recursive https://github.com/jgraph/drawio-desktop.git`
+
 To run this:
 1. npm install (in the root directory of this repo)
 2. export NODE_ENV=development
