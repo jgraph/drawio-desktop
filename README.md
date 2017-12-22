@@ -1,10 +1,15 @@
-# drawio-desktop
+About
+----- 
 
-draw.io desktop app based on Electron
+**drawio-desktop** is a **draw.io** desktop app based on [Electron](https://electronjs.org/)
 
 [![Build Status](https://travis-ci.org/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.org/jgraph/drawio-desktop)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
+
+draw-io desktop uses [draw-io](https://github.com/jgraph/drawio). draw.io uses the [mxGraph library](https://github.com/jgraph/mxgraph) as the base of the stack, with the [GraphEditor example](https://github.com/jgraph/mxgraph/tree/master/javascript/examples/grapheditor) from mxGraph as the base of the application part. 
+
+![](dependency-diagram.png)
 
 Setup:
 
