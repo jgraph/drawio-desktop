@@ -13,11 +13,6 @@ matrix:
       compiler: clang
 
 cache:
-  yarn: true
-  directories:
-  - node_modules
-  - $HOME/.electron
-  - $HOME/.cache
 
 addons:
   apt:
