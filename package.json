@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/jgraph/draw.io",
   "dependencies": {
+	"commander": "^2.12.2",
     "electron-log": "^2.2.7"
   },
   "devDependencies": {
