@@ -8,6 +8,7 @@ draw.io desktop app based on Electron
 
 To run this:
 1. npm install (in the root directory of this repo)
+2. npm install (in the draw.io directory of this repo)
 2. export NODE_ENV=development
 3. npm start
 
