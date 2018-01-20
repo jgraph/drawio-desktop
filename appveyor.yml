@@ -20,7 +20,7 @@ install:
   - ps: Install-Product node 7 x64
   - yarn install
   - cd draw.io/src/main/webapp
-  - cat ../../extra-cache.txt >> cache.manifest
+  - cat ../../../../extra-cache.txt >> cache.manifest
   - yarn install
   - cd ../..
 
