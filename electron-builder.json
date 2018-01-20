@@ -1,6 +1,6 @@
 {
   "appId": "com.jgraph.drawio.desktop",
-  "copyright": "Copyright 2017 JGraph LTD",
+  "copyright": "Copyright 2017-2018 draw.io",
   "asar": true,
   "files": [
     "**/*",
@@ -8,7 +8,7 @@
   ],
   "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
-    "app": "./draw.io/war",
+    "app": "./draw.io/src/main/webapp",
     "output": "./dist/"
   },
   "npmRebuild": false,
