@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "7.9.5",
+  "version": "8.0.0",
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
