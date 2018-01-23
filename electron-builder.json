@@ -8,7 +8,7 @@
   ],
   "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
-    "app": "./draw.io/src/main/webapp",
+    "app": "./drawio/src/main/webapp",
     "output": "./dist/"
   },
   "npmRebuild": false,
