@@ -38,7 +38,8 @@
     "maintainer": "JGraph <support@draw.io>",
     "target": [
       "AppImage",
-      "deb"
+      "deb",
+      "rpm"
     ]
   }
 }

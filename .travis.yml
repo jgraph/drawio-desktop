@@ -21,6 +21,7 @@ addons:
       - icnsutils
       - graphicsmagick
       - xz-utils
+      - rpm
 
 # Handle git submodules yourself 
 git:
