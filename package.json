@@ -4,7 +4,7 @@
   "description": "draw.io desktop",
   "main": "electron.js",
   "scripts": {
-    "start": "electron ./draw.io/src/main/webapp",
+    "start": "electron ./drawio/src/main/webapp",
     "sync": "node ./sync.js",
     "release": "build"
   },
@@ -23,9 +23,9 @@
   "bugs": {
     "url": "https://github.com/jgraph/drawio-desktop/issues"
   },
-  "homepage": "https://github.com/jgraph/draw.io",
+  "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
-	"commander": "^2.12.2",
+    "commander": "^2.12.2",
     "electron-log": "^2.2.7"
   },
   "devDependencies": {
