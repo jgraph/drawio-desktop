@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "electron": "^1.7.13",
+    "electron-builder": "^20.5.1",
     "sumchecker": "^1.3.1"
   }
 }
