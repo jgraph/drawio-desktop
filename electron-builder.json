@@ -19,11 +19,15 @@
   ],
   "win": {
     "target": [
-      "nsis"
+      "nsis",
+      "portable"
     ]
   },
   "nsis": {
     "perMachine": true
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.${ext}"
   },
   "mac": {
     "category": "public.app-category.graphics-design",
