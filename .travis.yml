@@ -37,7 +37,7 @@ before_install:
   - cat extra-cache.txt >> drawio/src/main/webapp/cache.manifest
 
 install:
-  - nvm install 8
+  - nvm install 10
   - yarn install
 
 script:
