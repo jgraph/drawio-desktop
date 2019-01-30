@@ -24,7 +24,8 @@
     ]
   },
   "nsis": {
-    "perMachine": true
+    "perMachine": true,
+    "include": "build/installer.nsh"
   },
   "portable": {
     "artifactName": "${productName}-${version}-portable.${ext}"
