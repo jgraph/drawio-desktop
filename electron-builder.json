@@ -38,12 +38,14 @@
   },
   "dmg": {},
   "linux": {
+    "executableName": "draw-io",
     "category": "Graphics",
     "maintainer": "JGraph <support@draw.io>",
     "target": [
       "AppImage",
       "deb",
-      "rpm"
+      "rpm",
+      "snap"
     ]
   }
 }
