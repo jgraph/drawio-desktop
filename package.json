@@ -30,8 +30,8 @@
     "yargs": "^13.2.2"
   },
   "devDependencies": {
-    "electron": "^4.0.0",
-    "electron-builder": "^20.38.0",
+    "electron": "^4.2.0",
+    "electron-builder": "^20.41.0",
     "sumchecker": "^2.0.2"
   }
 }
