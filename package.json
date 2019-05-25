@@ -30,7 +30,9 @@
     "electron-progressbar": "^1.2.0",
     "electron-store": "^3.2.0",
     "electron-updater": "^4.0.6",
-    "yargs": "^13.2.2"
+    "yargs": "^13.2.2",
+    "compression": "^1.7.4",
+    "crc": "^3.8.0"
   },
   "devDependencies": {
     "electron": "^5.0.1",
