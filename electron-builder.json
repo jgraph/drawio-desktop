@@ -47,5 +47,12 @@
       "rpm",
       "snap"
     ]
+  },
+  "fileAssociations": {
+  	"ext": "drawio",
+  	"name": "draw.io Diagram",
+  	"description": "draw.io Diagram",
+  	"mimeType": "application/vnd.jgraph.mxfile",
+  	"role": "Editor"
   }
 }
