@@ -20,7 +20,8 @@
   "win": {
     "target": [
       "nsis",
-      "portable"
+      "portable",
+      "appx"
     ]
   },
   "nsis": {
