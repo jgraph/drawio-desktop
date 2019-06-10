@@ -30,15 +30,20 @@
     "artifactName": "${productName}-${version}-portable.${ext}"
   },
   "mac": {
+  	"hardenedRuntime": true,
+  	"gatekeeperAssess": false,
+  	"entitlements": "build/entitlements.mac.plist",
+  	"entitlementsInherit": "build/entitlements.mac.plist",
     "category": "public.app-category.graphics-design",
     "target": [
       "zip",
       "dmg"
     ]
   },
-  "dmg": {},
+  "afterSign": "build/notarize.js",
+  "dmg": {
+  },
   "linux": {
-    "executableName": "draw-io",
     "category": "Graphics",
     "maintainer": "JGraph <support@draw.io>",
     "target": [
@@ -48,11 +53,20 @@
       "snap"
     ]
   },
-  "fileAssociations": {
-  	"ext": "drawio",
-  	"name": "draw.io Diagram",
-  	"description": "draw.io Diagram",
-  	"mimeType": "application/vnd.jgraph.mxfile",
-  	"role": "Editor"
-  }
+  "fileAssociations": [
+	  {
+	  	"ext": "drawio",
+	  	"name": "draw.io Diagram",
+	  	"description": "draw.io Diagram",
+	  	"mimeType": "application/vnd.jgraph.mxfile",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": "vsdx",
+	  	"name": "VSDX Document",
+	  	"description": "VSDX Document",
+	  	"mimeType": "application/vnd.visio",
+	  	"role": "Editor"
+	  }
+  ]
 }
