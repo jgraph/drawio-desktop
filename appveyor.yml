@@ -20,7 +20,6 @@ install:
   - ps: Install-Product node 10 x64
   - yarn install
   - cd drawio/src/main/webapp
-  - cat ../../../../extra-cache.txt >> cache.manifest
   - yarn install
   - cd ../..
 

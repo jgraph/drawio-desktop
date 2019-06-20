@@ -34,7 +34,6 @@ before_install:
   # Use sed to replace the SSH URL with the public URL, then initialize submodules
   - sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
-  - cat extra-cache.txt >> drawio/src/main/webapp/cache.manifest
 
 install:
   - nvm install 10
