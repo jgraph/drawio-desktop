@@ -1,7 +1,9 @@
 About
 ----- 
 
-**drawio-desktop** is a **draw.io** desktop app based on [Electron](https://electronjs.org/)
+**drawio-desktop** is a **draw.io** desktop app based on [Electron](https://electronjs.org/).
+
+Download from [get.draw.io](https://get.draw.io).
 
 [![Build Status](https://travis-ci.org/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.org/jgraph/drawio-desktop)
 
