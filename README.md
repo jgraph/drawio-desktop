@@ -12,9 +12,15 @@ draw.io Desktop is designed to be completely isolated from the Internet. All Jav
 
 No diagram data is ever sent externally, none do we send any analtics about app usage externally. This means certain functionality that we do not have a JavaScript implementation of do not work in the Desktop build, namely .vsd and Gliffy import.
 
+Build Status
+------------
+
 [![Build Status](https://travis-ci.org/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.org/jgraph/drawio-desktop)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
+
+Developing
+----------
 
 **draw.io** is a git submodule of **drawio-desktop**. To get both you need to clone recursively:
 
