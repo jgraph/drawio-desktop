@@ -3,7 +3,14 @@ About
 
 **drawio-desktop** is a **draw.io** desktop app based on [Electron](https://electronjs.org/).
 
-Download from [get.draw.io](https://get.draw.io).
+Download built binaries from the [releases section](https://github.com/jgraph/drawio-desktop/releases).
+
+Security
+--------
+
+draw.io Desktop is designed to be completely isolated from the Internet. All JavaScript files are self-contained, the Content Security Policy forbids running remotely loaded JavaScript.
+
+No diagram data is ever sent externally, none do we send any analtics about app usage externally. This means certain functionality that we do not have a JavaScript implementation of do not work in the Desktop build, namely .vsd and Gliffy import.
 
 [![Build Status](https://travis-ci.org/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.org/jgraph/drawio-desktop)
 
