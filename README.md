@@ -10,7 +10,7 @@ Security
 
 draw.io Desktop is designed to be completely isolated from the Internet. All JavaScript files are self-contained, the Content Security Policy forbids running remotely loaded JavaScript.
 
-No diagram data is ever sent externally, none do we send any analtics about app usage externally. This means certain functionality that we do not have a JavaScript implementation of do not work in the Desktop build, namely .vsd and Gliffy import.
+No diagram data is ever sent externally, nor do we send any analtics about app usage externally. This means certain functionality that we do not have a JavaScript implementation of do not work in the Desktop build, namely .vsd and Gliffy import.
 
 Build Status
 ------------
