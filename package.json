@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ./drawio/src/main/webapp",
     "sync": "node ./sync.js",
-    "release": "build"
+    "release": "electron-builder"
   },
   "repository": {
     "type": "git",
