@@ -34,7 +34,7 @@ before_install:
   # Use sed to replace the SSH URL with the public URL, then initialize submodules
   - sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
-  - npm install -g yarn@1.16.0
+  - npm install -g yarn
 
 install:
   - nvm install 10
