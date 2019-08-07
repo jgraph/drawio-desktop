@@ -45,6 +45,7 @@
   "dmg": {
   },
   "linux": {
+  	"executableName": "drawio",
     "category": "Graphics",
     "maintainer": "JGraph <support@draw.io>",
     "icon": "./build",
