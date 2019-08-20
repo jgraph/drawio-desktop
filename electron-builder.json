@@ -30,6 +30,10 @@
   "portable": {
     "artifactName": "${productName}-${version}-portable.${ext}"
   },
+  "appx": {
+    "displayName": "draw.io Diagrams",
+    "publisherDisplayName": "JGraph Ltd"
+  },
   "mac": {
   	"hardenedRuntime": true,
   	"gatekeeperAssess": false,
