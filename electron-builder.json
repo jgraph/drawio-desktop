@@ -32,7 +32,9 @@
   },
   "appx": {
     "displayName": "draw.io Diagrams",
-    "publisherDisplayName": "JGraph Ltd"
+    "publisherDisplayName": "JGraph Ltd",
+    "identityName": "draw.io.draw.ioDiagrams",
+    "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733"
   },
   "mac": {
   	"hardenedRuntime": true,
