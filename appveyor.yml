@@ -20,6 +20,7 @@ install:
   - ps: Install-Product node 10 x64
   - npm install -g yarn
   - yarn install
+  - snap install snapcraft --classic
   - cd drawio/src/main/webapp
   - yarn install
   - cd ../..

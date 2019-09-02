@@ -39,6 +39,7 @@ before_install:
 install:
   - nvm install 10
   - yarn install
+  - snap install snapcraft --classic
 
 script:
   - yarn run sync
