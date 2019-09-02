@@ -14,10 +14,12 @@
   "npmRebuild": false,
   "publish": [
     {
-      "provider": [
-      	"github",
+      "provider": 
+      	"github"
+    },
+    {
+      "provider": 
       	"snapStore"
-      ]
     }
   ],
   "win": {
