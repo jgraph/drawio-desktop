@@ -14,7 +14,9 @@
   "npmRebuild": false,
   "publish": [
     {
-      "provider": "github"
+      "provider": [
+      	"github",
+      	"snapStore"
     }
   ],
   "win": {
@@ -58,8 +60,7 @@
     "target": [
       "AppImage",
       "deb",
-      "rpm",
-      "snap"
+      "rpm"
     ]
   },
   "fileAssociations": [
