@@ -17,6 +17,7 @@
       "provider": [
       	"github",
       	"snapStore"
+      ]
     }
   ],
   "win": {
