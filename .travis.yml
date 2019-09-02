@@ -1,6 +1,6 @@
 osx_image: xcode10.2
 
-dist: trusty
+dist: bionic
 sudo: false
 
 language: c
@@ -39,7 +39,7 @@ before_install:
 install:
   - nvm install 10
   - yarn install
-  - sudo snap install snapcraft --classic
+  - snap install snapcraft --classic
 
 script:
   - yarn run sync
