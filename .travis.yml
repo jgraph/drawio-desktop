@@ -43,7 +43,7 @@ install:
 script:
   - yarn run sync
   - yarn run release-linux
-  - yarn run release-snap
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then yarn run release-snap; fi
 
 branches:
   except:
