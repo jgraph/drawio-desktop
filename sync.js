@@ -6,8 +6,8 @@ const electronAppDir = path.join(__dirname, 'drawio', 'src/main/webapp')
 const appjsonpath = path.join(__dirname, 'drawio', 'src/main/webapp', 'package.json')
 const disableUpdatePath = path.join(__dirname, 'drawio', 'src/main/webapp', 'disableUpdate.js')
 
-//let ver = fs.readFileSync(path.join(__dirname, 'drawio', 'VERSION'), 'utf8')
-let ver = '11.2.5' // just to test autoupdate
+let ver = fs.readFileSync(path.join(__dirname, 'drawio', 'VERSION'), 'utf8')
+//let ver = '11.2.5' // just to test autoupdate
 
 let pj = require(appjsonpath)
 
