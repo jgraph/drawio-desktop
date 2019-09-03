@@ -12,34 +12,8 @@
     "output": "./dist/"
   },
   "npmRebuild": false,
-  "publish": [
-    {
-      "provider": 
-      	"github"
-    },
-    {
-      "provider": 
-      	"snapStore"
-    }
-  ],
-  "win": {
-    "target": [
-      "nsis",
-      "portable",
-      "appx"
-    ]
-  },
-  "nsis": {
-    "perMachine": true
-  },
-  "portable": {
-    "artifactName": "${productName}-${version}-portable.${ext}"
-  },
-  "appx": {
-    "displayName": "draw.io Diagrams",
-    "publisherDisplayName": "JGraph Ltd",
-    "identityName": "draw.io.draw.ioDiagrams",
-    "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733"
+  "publish": {
+      "provider": "github"
   },
   "mac": {
   	"hardenedRuntime": true,

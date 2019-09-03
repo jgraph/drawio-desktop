@@ -1,0 +1,53 @@
+{
+  "appId": "com.jgraph.drawio.desktop",
+  "copyright": "Copyright 2017-2019 draw.io",
+  "asar": true,
+  "files": [
+    "**/*",
+    "!**/WEB-INF{,/**}"
+  ],
+  "artifactName": "${productName}-${arch}-${version}.${ext}",
+  "directories": {
+    "app": "./drawio/src/main/webapp",
+    "output": "./dist/"
+  },
+  "npmRebuild": false,
+  "publish": {
+      "provider": "github"
+  },
+  "win": {
+    "target": [
+      "nsis",
+      "portable",
+      "appx"
+    ]
+  },
+  "nsis": {
+    "perMachine": true
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.${ext}"
+  },
+  "appx": {
+    "displayName": "draw.io Diagrams",
+    "publisherDisplayName": "JGraph Ltd",
+    "identityName": "draw.io.draw.ioDiagrams",
+    "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733"
+  },
+  "fileAssociations": [
+	  {
+	  	"ext": "drawio",
+	  	"name": "draw.io Diagram",
+	  	"description": "draw.io Diagram",
+	  	"mimeType": "application/vnd.jgraph.mxfile",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": "vsdx",
+	  	"name": "VSDX Document",
+	  	"description": "VSDX Document",
+	  	"mimeType": "application/vnd.visio",
+	  	"role": "Editor"
+	  }
+  ]
+}

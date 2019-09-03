@@ -29,6 +29,6 @@ before_build:
 
 build_script:
   - yarn run sync
-  - yarn run release
+  - yarn run release-win
 
 test: off
