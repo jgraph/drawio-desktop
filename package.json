@@ -6,9 +6,9 @@
   "scripts": {
     "start": "electron ./drawio/src/main/webapp",
     "sync": "node ./sync.js",
-    "release-win": "electron-builder electron-builder-win.json",
-    "release-linux": "electron-builder electron-builder-linux-mac.json",
-    "release-snap": "electron-builder electron-builder-snap.json"
+    "release-win": "electron-builder --config electron-builder-win.json",
+    "release-linux": "electron-builder --config electron-builder-linux-mac.json",
+    "release-snap": "electron-builder --config electron-builder-snap.json"
   },
   "repository": {
     "type": "git",
