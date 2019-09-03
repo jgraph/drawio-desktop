@@ -38,7 +38,7 @@ before_install:
 install:
   - nvm install 10
   - yarn install
-  - sudo snap install snapcraft --classic
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo snap install snapcraft --classic; fi
 
 script:
   - yarn run sync
