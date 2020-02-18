@@ -12,6 +12,9 @@
     "output": "./dist/"
   },
   "npmRebuild": false,
+  "publish": {
+      "provider": "snapStore"
+    },
   "linux": {
   	"executableName": "drawio",
     "category": "Graphics",
