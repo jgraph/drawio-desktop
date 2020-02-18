@@ -50,3 +50,9 @@ script:
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
+
+deploy:
+  provider: snap
+  snap: draw.io-amd64-*.snap
+  channel: edge
+  skip_cleanup: true
