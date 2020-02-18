@@ -13,7 +13,8 @@
   },
   "npmRebuild": false,
   "publish": {
-      "provider": "snapStore"
+      "provider": "snapStore",
+      "channels": ["stable"]
     },
   "linux": {
   	"executableName": "drawio",
