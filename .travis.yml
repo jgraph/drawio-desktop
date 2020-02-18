@@ -46,13 +46,8 @@ script:
   - yarn run sync
   - yarn run release-linux
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then yarn run release-snap; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then snapcraft push --release=edge dist/draw.io-amd64-*.snap; fi
 
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
-
-deploy:
-  provider: snap
-  snap: draw.io-amd64-*.snap
-  channel: edge
-  skip_cleanup: true
