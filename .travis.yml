@@ -34,11 +34,13 @@ before_install:
   - sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
   - npm install -g yarn
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then echo $SNAP_TOKEN > /tmp/login_token_file; fi
 
 install:
   - nvm install 10
   - yarn install
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo snap install snapcraft --classic; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then snapcraft login --with /tmp/login_token_file; fi
 
 script:
   - yarn run sync
