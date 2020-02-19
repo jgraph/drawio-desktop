@@ -46,7 +46,8 @@ script:
   - yarn run sync
   - yarn run release-linux
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then yarn run release-snap; fi
-
+  # Cannot configure electron-builder to publish to stable channel, so do it explicitly
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
 branches:
   except:
     - "/^v\\d+\\.\\d+\\.\\d+$/"
