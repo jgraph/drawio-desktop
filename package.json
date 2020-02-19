@@ -8,7 +8,7 @@
     "sync": "node ./sync.js",
     "release-win": "electron-builder --config electron-builder-win.json",
     "release-linux": "electron-builder --config electron-builder-linux-mac.json",
-    "release-snap": "electron-builder --config electron-builder-snap.json --publish always"
+    "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },
   "repository": {
     "type": "git",
