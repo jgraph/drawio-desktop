@@ -1,4 +1,4 @@
-osx_image: xcode10.2
+osx_image: xcode11.3
 
 dist: bionic
 
@@ -7,6 +7,7 @@ language: c
 matrix:
   include:
     - os: osx
+      osx_image: xcode11.3
     - os: linux
       env: CC=clang CXX=clang++ npm_config_clang=1
       compiler: clang
