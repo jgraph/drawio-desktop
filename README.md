@@ -5,7 +5,7 @@ About
 
 Download built binaries from the [releases section](https://github.com/jgraph/drawio-desktop/releases).
 
-Travis MacOS/Linux builds   [![Build Status](https://travis-ci.com/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.org/jgraph/drawio-desktop)
+Travis MacOS/Linux builds   [![Build Status](https://travis-ci.com/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.com/github/jgraph/drawio-desktop)
 
 Appveyor Windows build  [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
 
