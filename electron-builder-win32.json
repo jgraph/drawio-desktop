@@ -38,7 +38,9 @@
     ]
   },
   "nsis": {
-    "perMachine": true
+  	"oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true
   },
   "portable": {
     "artifactName": "${productName}-ia32-${version}-portable.${ext}"
