@@ -627,9 +627,9 @@ electron-builder@^22.7.0:
     yargs "^15.3.1"
 
 electron-log@^4.2.0:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-4.2.1.tgz#a5e9f5b7a9c8cffb6ae5af78b76e68012d5e68da"
-  integrity sha512-tUI9w3kUP3qhwXJ92RDUPFVZfwtBwKCy/1TsSHndXYLlNCB/7+vkiQG0uxv9D2Leuxc/DJKfYyrdEBpzi/vyZg==
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-4.2.2.tgz#b358dc6d1e4772465609ee3d8ad9f594d9e742c8"
+  integrity sha512-lBpLh1Q8qayrTxFIrTPcNjSHsosvUfOYyZ8glhiLcx7zCNPDGuj8+nXlEaaSS6LRiQQbLgLG+wKpuvztNzBIrA==
 
 electron-notarize@^0.3.0:
   version "0.3.0"
@@ -681,10 +681,10 @@ electron-updater@^4.3.1:
     lodash.isequal "^4.5.0"
     semver "^7.1.3"
 
-electron@^9.0.1:
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-9.0.3.tgz#72a7ea08abadd494794735d90666d1b95fc90d28"
-  integrity sha512-rY59wy50z0oWp/q69zq0UIzvtcM5j2BJbLAwEoLfVNS3DLt9wDZqRqSIBvLEBl+xWbafCnRA9haEqi7ssM94GA==
+electron@^9.0.4:
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-9.0.4.tgz#5aa72c1576c82c19f6e087311ffe1d7b74358d25"
+  integrity sha512-QzkeZNAiNB7KxcdoQKSoaiVT/GQdB4Vt0/ZZOuU8tIKABAsni2I7ztiAbUzxcsnQsqEBSfChuPuDQ5A4VbbzPg==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
