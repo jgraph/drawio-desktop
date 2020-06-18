@@ -36,7 +36,7 @@ To run this:
 5. `npm start` runs the app.
 
 To release:
-1. Update the draw.io sub-module and push the change
+1. Update the draw.io sub-module and push the change. Add version tag before pushing to origin.
 2. Wait for the builds to complete (https://travis-ci.org/jgraph/drawio-desktop and https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
 3. Go to https://github.com/jgraph/drawio-desktop/releases, edit the preview release.
 4. Download the windows exe and windows portable, sign them using `signtool sign /a /tr http://timestamp.globalsign.com/?signature=sha2 /td SHA256 c:/path/to/your/file.exe`
