@@ -8,6 +8,7 @@
     "sync": "node ./sync.js",
     "release-win": "electron-builder --config electron-builder-win.json",
     "release-win32": "electron-builder --config electron-builder-win32.json",
+    "release-appx": "electron-builder --config electron-builder-appx.json",
     "release-linux": "electron-builder --config electron-builder-linux-mac.json",
     "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },
