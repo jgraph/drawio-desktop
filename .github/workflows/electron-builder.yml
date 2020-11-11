@@ -22,17 +22,20 @@ jobs:
     steps:
     - name: Checkout reposistory
       uses: actions/checkout@v2
+    - name: Installing Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10
     - name: Build for ${{ matrix.os}}
       run: |
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then apt update && apt install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
         curl -o- -L https://yarnpkg.com/install.sh | bash
         export PATH="$HOME/.yarn/bin:$PATH"
         # Use sed to replace the SSH URL with the public URL, then initialize submodules
         sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
         git submodule update --init --recursive
-        npm install -g yarn
+        sudo npm install -g yarn
         if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN > /tmp/login_token_file; fi
-        nvm install 10
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
         if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
