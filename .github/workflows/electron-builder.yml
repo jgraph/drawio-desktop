@@ -3,8 +3,9 @@ name: Electron Builder CI
 on:
   push:
     branches: #For testing
+      - master
     tags:
-    - 'v*'
+      - 'v*'
 
 jobs:
   build:
