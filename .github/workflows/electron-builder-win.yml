@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: 10
     - name: Build for Windows
-      shell: powershell
+      shell: powershell #The default shell for Windows
       run: |
         git config --global core.autocrlf input
         (gc .\.gitmodules) -replace 'git@github.com:','https://github.com/' | Out-File -encoding ASCII .gitmodules
@@ -32,3 +32,9 @@ jobs:
         yarn run release-win
         yarn run sync disableUpdate
         yarn run release-appx
+    - name: Archive production appx
+      uses: actions/upload-artifact@v2
+      with:
+        name: electron-builder-appx
+        path: dist/*.appx
+        retention-days: 1

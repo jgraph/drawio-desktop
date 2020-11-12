@@ -35,21 +35,13 @@ jobs:
         sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
         git submodule update --init --recursive
         sudo npm install -g yarn
+        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials
         if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN > /tmp/login_token_file; fi
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
-        #if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
         yarn run sync
         yarn run release-linux
         if [ "$OS_NAME" = "ubuntu-latest" ]; then yarn run release-snap; fi
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        #if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: electron-builder
-        path: |
-          dist
-          !dist/mac*
-          !dist/linux*
-        retention-days: 1
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
