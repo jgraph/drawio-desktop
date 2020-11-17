@@ -49,9 +49,9 @@ jobs:
         echo $SECRET_FILE
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
+        #if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
         yarn run sync
         yarn run release-linux
         if [ "$OS_NAME" = "ubuntu-latest" ]; then yarn run release-snap; fi
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
+        #if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
