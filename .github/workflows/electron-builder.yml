@@ -41,7 +41,8 @@ jobs:
         git submodule update --init --recursive
         sudo npm install -g yarn
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN > /tmp/login_token_file; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN > /tmp/login_token_file_b64; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then base64 -d /tmp/login_token_file_b64 -o /tmp/login_token_file; fi
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
         if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi

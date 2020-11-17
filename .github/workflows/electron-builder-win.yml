@@ -37,5 +37,6 @@ jobs:
     - name: Archive production appx
       uses: actions/upload-artifact@v2
       with:
+        name: electron-builder-appx
         path: dist/*.appx
         retention-days: 1
