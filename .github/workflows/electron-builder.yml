@@ -17,7 +17,13 @@ jobs:
       CC: clang
       CXX: clang++ 
       npm_config_clang: 1
+      APPLEID: ${{ secrets.APPLEID }}
+      APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
+      CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+      CSC_LINK: ${{ secrets.CSC_LINK }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
       SNAP_TOKEN: ${{ secrets.SNAP_TOKEN }}
+      TEST_SECRET: ${{ secrets.TEST_SECRET }}
       OS_NAME: ${{ matrix.os }}
     steps:
     - name: Checkout reposistory
@@ -37,6 +43,10 @@ jobs:
         sudo npm install -g yarn
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials
         if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN > /tmp/login_token_file; fi
+        echo $TEST_SECRET > /tmp/secret_file
+        export SECRET_FILE=`cat /tmp/secret_file`
+        if [ "$SECRET_FILE" = "$TEST_SECRET" ]; then echo "SECRET IS ADDED TO FILE CORRECTLY"; fi
+        echo $SECRET_FILE
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
         if [ "$OS_NAME" = "ubuntu-latest" ]; then snapcraft login --with /tmp/login_token_file; fi
