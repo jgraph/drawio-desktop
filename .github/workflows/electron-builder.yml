@@ -2,8 +2,6 @@ name: Electron Builder CI
 
 on:
   push:
-    branches: #For testing
-      - master
     tags:
       - 'v*'
 
@@ -40,7 +38,7 @@ jobs:
         sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
         git submodule update --init --recursive
         sudo npm install -g yarn
-        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials
+        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. Then encode as base64
         if [ "$OS_NAME" = "ubuntu-latest" ]; then echo $SNAP_TOKEN | base64 -d > /tmp/login_token_file; fi
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo snap install snapcraft --classic; fi
