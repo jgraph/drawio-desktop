@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - name: Checkout reposistory
       uses: actions/checkout@v2

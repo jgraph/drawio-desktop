@@ -19,7 +19,7 @@ jobs:
       APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
       CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
       CSC_LINK: ${{ secrets.CSC_LINK }}
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SNAP_TOKEN: ${{ secrets.SNAP_TOKEN }}
       OS_NAME: ${{ matrix.os }}
     steps:
