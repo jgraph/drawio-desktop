@@ -15,7 +15,7 @@ No diagram data is ever sent externally, nor do we send any analytics about app 
 Build Status
 ------------
 
-[![Electron+Builder+CI+(WIN) Actions Status](https://github.com/{jgraph}/{drawio-desktop}/workflows/{electron-builder-win}/badge.svg)](https://github.com/{jgraph}/{drawio-desktop}/actions)
+[![Electron+Builder+CI+(WIN) Actions Status](https://github.com/jgraph/drawio-desktop/workflows/electron-builder-win/badge.svg)](https://github.com/jgraph/drawio-desktop/actions)
 
 Developing
 ----------
