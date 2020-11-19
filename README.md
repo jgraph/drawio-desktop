@@ -12,11 +12,6 @@ draw.io Desktop is designed to be completely isolated from the Internet, apart f
 
 No diagram data is ever sent externally, nor do we send any analytics about app usage externally. This means certain functionality for which we do not have a JavaScript implementation do not work in the Desktop build, namely .vsd and Gliffy import.
 
-Build Status
-------------
-
-[![Electron+Builder+CI+(WIN) Actions Status](https://github.com/jgraph/drawio-desktop/workflows/electron-builder-win/badge.svg)](https://github.com/jgraph/drawio-desktop/actions)
-
 Developing
 ----------
 
