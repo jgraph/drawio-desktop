@@ -5,10 +5,6 @@ About
 
 Download built binaries from the [releases section](https://github.com/jgraph/drawio-desktop/releases).
 
-Travis MacOS/Linux builds   [![Build Status](https://travis-ci.com/jgraph/drawio-desktop.svg?branch=master)](https://travis-ci.com/github/jgraph/drawio-desktop)
-
-Appveyor Windows build  [![Build status](https://ci.appveyor.com/api/projects/status/e56wdssukquwe7bv?svg=true)](https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
-
 Security
 --------
 
@@ -19,7 +15,7 @@ No diagram data is ever sent externally, nor do we send any analytics about app 
 Build Status
 ------------
 
-
+[![Electron+Builder+CI+(WIN) Actions Status](https://github.com/{jgraph}/{drawio-desktop}/workflows/{electron-builder-win}/badge.svg)](https://github.com/{jgraph}/{drawio-desktop}/actions)
 
 Developing
 ----------
@@ -43,12 +39,3 @@ To release:
 5. Re-upload signed file as `draw.io-windows-installer-x.y.z.exe` and `draw.io-windows-no-installer-x.y.z.exe`
 6. Add release notes
 7. Publish release
-
-
-
-![draw.io desktop app](screenshot.png)
-
-**draw-io desktop** uses [draw-io](https://github.com/jgraph/drawio). draw.io uses the [mxGraph library](https://github.com/jgraph/mxgraph) as the base of the stack, with the [GraphEditor example](https://github.com/jgraph/mxgraph/tree/master/javascript/examples/grapheditor) from mxGraph as the base of the application part. 
-
-![Dependency Diagram](dependency-diagram.png)
-[Edit this image](https://www.draw.io/#Hjgraph%2Fdrawio-desktop%2Fmaster%2Fdependency-diagram.png)
