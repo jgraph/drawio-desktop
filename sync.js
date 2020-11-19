@@ -7,7 +7,7 @@ const appjsonpath = path.join(__dirname, 'drawio', 'src/main/webapp', 'package.j
 const disableUpdatePath = path.join(__dirname, 'drawio', 'src/main/webapp', 'disableUpdate.js')
 
 let ver = fs.readFileSync(path.join(__dirname, 'drawio', 'VERSION'), 'utf8')
-//let ver = '11.2.5' // just to test autoupdate
+let ver = '13.10.0.1' // just to test autoupdate
 
 let pj = require(appjsonpath)
 
