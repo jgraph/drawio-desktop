@@ -32,9 +32,3 @@ jobs:
         yarn run release-win
         yarn run sync disableUpdate
         yarn run release-appx
-    - name: Archive production appx
-      uses: actions/upload-artifact@v2
-      with:
-        name: electron-builder-appx
-        path: dist/*.appx
-        retention-days: 1
