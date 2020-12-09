@@ -21,10 +21,9 @@ Developing
 
 To run this:
 1. `npm install` (in the root directory of this repo)
-2. `npm install` (in the drawio directory of this repo)
+2. `npm install` (in the drawio directory of this repo `drawio/src/main/webapp`)
 3. export DRAWIO_ENV=dev if you want to develop/debug in dev mode.
-4. If you run in dev mode, clone https://github.com/jgraph/mxgraph as a sibling directory to this repo, rename the folder containing the repo "mxgraph2".
-5. `npm start` runs the app.
+4. `npm start` runs the app.
 
 To release:
 1. Update the draw.io sub-module and push the change. Add version tag before pushing to origin.
