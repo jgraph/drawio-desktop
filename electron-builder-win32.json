@@ -1,4 +1,5 @@
 {
+  "__comment__": "When using both x64 and is32 as arch, the result is one huge file with both archs. This is why we split them",
   "appId": "com.jgraph.drawio.desktop",
   "copyright": "Copyright 2017-2019 draw.io",
   "asar": true,
@@ -6,7 +7,7 @@
     "**/*",
     "!**/WEB-INF{,/**}"
   ],
-  "artifactName": "${productName}-${arch}-${version}.${ext}",
+  "artifactName": "${productName}-ia32-${version}.${ext}",
   "directories": {
     "app": "./drawio/src/main/webapp",
     "output": "./dist/"
@@ -20,13 +21,13 @@
       {
           "target": "nsis",
           "arch": [
-            "x64"
+            "ia32"
           ]
       },
       {
           "target": "portable",
           "arch": [
-            "x64"
+            "ia32"
           ]
       }
     ]
@@ -37,7 +38,7 @@
     "allowToChangeInstallationDirectory": true
   },
   "portable": {
-    "artifactName": "${productName}-${version}-portable.${ext}"
+    "artifactName": "${productName}-ia32-${version}-portable.${ext}"
   },
   "fileAssociations": [
 	  {

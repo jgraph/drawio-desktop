@@ -30,5 +30,6 @@ jobs:
         cd ../..
         yarn run sync
         yarn run release-win
+        yarn run release-win32
         yarn run sync disableUpdate
         yarn run release-appx
