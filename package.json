@@ -30,7 +30,7 @@
   "dependencies": {
     "commander": "^6.2.0",
     "electron-log": "^4.3.0",
-    "electron-progressbar": "^1.2.0",
+    "electron-progressbar": "^2.0.0",
     "electron-store": "^6.0.1",
     "electron-updater": "^4.3.5",
     "compression": "^1.7.4",
