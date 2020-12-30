@@ -1,5 +1,4 @@
 {
-  "__comment__": "When using both x64 and is32 as arch, the result is one huge file with both archs. This is why we split them",
   "appId": "com.jgraph.drawio.desktop",
   "copyright": "Copyright 2017-2019 draw.io",
   "asar": true,

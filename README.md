@@ -33,3 +33,6 @@ To release:
 5. Re-upload signed file as `draw.io-windows-installer-x.y.z.exe` and `draw.io-windows-no-installer-x.y.z.exe`
 6. Add release notes
 7. Publish release
+
+
+*Note*: In Windows release, when using both x64 and is32 as arch, the result is one big file with both archs. This is why we split them.
