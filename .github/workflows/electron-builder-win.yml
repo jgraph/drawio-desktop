@@ -28,8 +28,12 @@ jobs:
         cd drawio/src/main/webapp
         yarn install
         cd ../..
+        #Disable auto-update and build 32bit first such that latest.yml is for 64bit next
+        yarn run sync disableUpdate
+        yarn run release-win32
+        #Enable auto-update again
         yarn run sync
         yarn run release-win
-        yarn run release-win32
+        #Disable auto-update for appx also
         yarn run sync disableUpdate
         yarn run release-appx
