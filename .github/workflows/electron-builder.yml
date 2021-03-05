@@ -43,6 +43,7 @@ jobs:
         yarn install
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo snap install snapcraft --classic; fi
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then snapcraft login --with /tmp/login_token_file; fi
+        if [ "$OS_NAME" = "ubuntu-18.04" ]; sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
         yarn run sync
         yarn run release-linux
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then yarn run release-snap; fi
