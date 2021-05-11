@@ -18,7 +18,7 @@ jobs:
     - name: Installing Node
       uses: actions/setup-node@v1
       with:
-        node-version: 10
+        node-version: 14
     - name: Build for Windows
       shell: powershell #The default shell for Windows
       run: |
