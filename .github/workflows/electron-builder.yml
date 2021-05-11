@@ -3,7 +3,7 @@ name: Electron Builder CI
 on:
   push:
     branches:
-      - *
+      - dev
     tags:
       - 'v*'
 
