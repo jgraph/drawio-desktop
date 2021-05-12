@@ -3,7 +3,7 @@ name: Electron Builder CI
 on:
   push:
     branches:
-      - dev
+      - release
     tags:
       - 'v*'
 
@@ -12,14 +12,17 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04]
+        os: [ubuntu-18.04, macos-latest]
     env:
       CC: clang
       CXX: clang++ 
       npm_config_clang: 1
+      APPLEID: ${{ secrets.APPLEID }}
+      APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
       CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
       CSC_LINK: ${{ secrets.CSC_LINK }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      SNAP_TOKEN: ${{ secrets.SNAP_TOKEN }}
       OS_NAME: ${{ matrix.os }}
     steps:
     - name: Checkout reposistory
@@ -41,3 +44,13 @@ jobs:
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
         yarn run sync
         yarn run release-linux
+    - name: Build for Snap
+      if: ${{ matrix.os == 'ubuntu-18.04' }}
+      run: |
+        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. Then encode as base64
+        echo $SNAP_TOKEN | base64 -d > /tmp/login_token_file
+        sudo snap install snapcraft --classic
+        snapcraft login --with /tmp/login_token_file
+        yarn run release-snap
+        # Cannot configure electron-builder to publish to stable channel, so do it explicitly
+        snapcraft push --release stable dist/draw.io-amd64-*.snap
