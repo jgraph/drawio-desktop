@@ -27,7 +27,7 @@ jobs:
     - name: Installing Node
       uses: actions/setup-node@v1
       with:
-        node-version: 14
+        node-version: 12
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
