@@ -3,7 +3,7 @@ name: Electron Builder CI
 on:
   push:
     branches:
-      - main
+      - release
     tags:
       - 'v*'
 
@@ -28,9 +28,9 @@ jobs:
     - name: Checkout reposistory
       uses: actions/checkout@v2
     - name: Installing Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: 10
+        node-version: 14
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
@@ -40,14 +40,17 @@ jobs:
         sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
         git submodule update --init --recursive
         sudo npm install -g yarn
-        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. Then encode as base64
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then echo $SNAP_TOKEN | base64 -d > /tmp/login_token_file; fi
         yarn install
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo snap install snapcraft --classic; fi
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then snapcraft login --with /tmp/login_token_file; fi
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
         yarn run sync
         yarn run release-linux
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then yarn run release-snap; fi
+    - name: Build for Snap
+      if: ${{ matrix.os == 'ubuntu-18.04' }}
+      run: |
+        #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. Then encode as base64
+        echo $SNAP_TOKEN | base64 -d > /tmp/login_token_file
+        sudo snap install snapcraft --classic
+        snapcraft login --with /tmp/login_token_file
+        yarn run release-snap
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then snapcraft push --release stable dist/draw.io-amd64-*.snap; fi
+        snapcraft push --release stable dist/draw.io-amd64-*.snap
