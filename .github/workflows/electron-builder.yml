@@ -25,9 +25,9 @@ jobs:
     - name: Checkout reposistory
       uses: actions/checkout@v2
     - name: Installing Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
-        node-version: 12
+        node-version: 14
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
