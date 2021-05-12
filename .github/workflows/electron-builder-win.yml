@@ -36,6 +36,3 @@ jobs:
         #Enable auto-update again
         yarn run sync
         yarn run release-win
-        #Disable auto-update for appx also
-        yarn run sync disableUpdate
-        yarn run release-appx
