@@ -9,7 +9,7 @@
     "release-win": "electron-builder --config electron-builder-win.json --publish onTagOrDraft",
     "release-win32": "electron-builder --config electron-builder-win32.json --publish onTagOrDraft",
     "release-appx": "electron-builder --config electron-builder-appx.json --publish onTagOrDraft",
-    "release-linux": "electron-builder --config electron-builder-linux-mac.json",
+    "release-linux": "electron-builder --config electron-builder-linux-mac.json --publish onTagOrDraft",
     "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },
   "repository": {
