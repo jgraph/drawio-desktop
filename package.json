@@ -9,12 +9,12 @@
     "release-win": "electron-builder --config electron-builder-win.json --publish onTagOrDraft",
     "release-win32": "electron-builder --config electron-builder-win32.json --publish onTagOrDraft",
     "release-appx": "electron-builder --config electron-builder-appx.json --publish onTagOrDraft",
-    "release-linux": "electron-builder --config electron-builder-linux-mac.json --publish onTagOrDraft",
+    "release-linux": "electron-builder --config electron-builder-linux-mac.json",
     "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jgraph/drawio-desktop.git"
+    "url": "https://github.com/ashrafteleb/drawio-desktop"
   },
   "keywords": [
     "draw.io",
@@ -25,7 +25,7 @@
   "author": "JGraph <support@draw.io>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jgraph/drawio-desktop/issues"
+    "url": "https://github.com/ashrafteleb/drawio-desktop/issues"
   },
   "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
