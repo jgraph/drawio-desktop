@@ -30,9 +30,16 @@ jobs:
         cd drawio/src/main/webapp
         yarn install
         cd ../..
+    - name: Build for Windows (x32)
+      shell: powershell #The default shell for Windows
+      run: |
+        #Disable auto-update and build 32bit first such that latest.yml is for 64bit only (64bit will overwrite 32bit one)
+        yarn run sync disableUpdate
+        yarn run release-win32
     - name: Build for Windows (x64)
       shell: powershell #The default shell for Windows
-      run: |    
+      run: |
+        #Enable auto-update again
         yarn run sync
         yarn run release-win
     - name: Build for Windows (APPX)
