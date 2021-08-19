@@ -1,4 +1,4 @@
 [submodule "drawio"]
 	path = drawio
-	url = https://github.com/jgraph/drawio.git
+	url = git@github.com:matlab379/drawio.git
 	branch = master
