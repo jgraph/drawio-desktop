@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "14.9.6",
+  "version": "15.1.1",
   "description": "diagrams.net desktop",
   "main": "electron.js",
   "scripts": {
@@ -40,9 +40,9 @@
   },
   "devDependencies": {
     "dotenv": "^9.0.2",
-    "electron": "^12.0.16",
+    "electron": "^12.0.18",
     "electron-builder": "^22.11.11",
-    "electron-notarize": "^1.0.0",
+    "electron-notarize": "^1.1.1",
     "sumchecker": "^3.0.1"
   }
 }
