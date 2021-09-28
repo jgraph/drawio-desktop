@@ -15,7 +15,7 @@
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
 
-"@electron/get@^1.13.0":
+"@electron/get@^1.0.1":
   version "1.13.0"
   resolved "https://registry.npmjs.org/@electron/get/-/get-1.13.0.tgz"
   integrity sha512-+SjZhRuRo+STTO1Fdhzqnv9D2ZhjxXP6egsJ9kiO8dtP68cDx7dFCwWi64dlMQV7sWcfW1OYCW4wviEBzmRsfQ==
@@ -557,7 +557,7 @@ commander@^5.0.0:
 
 commander@^8.2.0:
   version "8.2.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-8.2.0.tgz#37fe2bde301d87d47a53adeff8b5915db1381ca8"
+  resolved "https://registry.npmjs.org/commander/-/commander-8.2.0.tgz"
   integrity sha512-LLKxDvHeL91/8MIyTAD5BFMNtoIwztGPMiM/7Bl8rIPmHCZXRxmSWr91h57dpOpnQ6jIUqEWdXE/uBYMfiVZDA==
 
 compressible@~2.0.16:
@@ -870,12 +870,12 @@ electron-updater@^4.3.9:
     lodash.isequal "^4.5.0"
     semver "^7.3.5"
 
-electron@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.npmjs.org/electron/-/electron-15.0.0.tgz"
-  integrity sha512-LlBjN5nCJoC7EDrgfDQwEGSGSAo/o08nSP5uJxN2m+ZtNA69SxpnWv4yPgo1K08X/iQPoGhoZu6C8LYYlk1Dtg==
+electron@^14.0.1:
+  version "14.0.1"
+  resolved "https://registry.npmjs.org/electron/-/electron-14.0.1.tgz"
+  integrity sha512-1XILvfE5mQEBz5L/QeNfcwC3PxAIjwMyA3GR8Naw5C0IKAnHl3lAdjczbtGX8nqbcEpOAVo+4TMSpcPD3zxe8Q==
   dependencies:
-    "@electron/get" "^1.13.0"
+    "@electron/get" "^1.0.1"
     "@types/node" "^14.6.2"
     extract-zip "^1.0.3"
 
