@@ -870,10 +870,10 @@ electron-updater@^4.3.9:
     lodash.isequal "^4.5.0"
     semver "^7.3.5"
 
-electron@^14.0.1:
-  version "14.0.1"
-  resolved "https://registry.npmjs.org/electron/-/electron-14.0.1.tgz"
-  integrity sha512-1XILvfE5mQEBz5L/QeNfcwC3PxAIjwMyA3GR8Naw5C0IKAnHl3lAdjczbtGX8nqbcEpOAVo+4TMSpcPD3zxe8Q==
+electron@^13.4.0:
+  version "13.5.0"
+  resolved "https://registry.npmjs.org/electron/-/electron-13.5.0.tgz"
+  integrity sha512-s4+b1RFWkNKWp7WWrv2q60MuFljHUCbO7XAupBSCUz/NP1Hz4OenWbMPUt0H+fa8YZeN8CX3JDIA8Bet5uAJvw==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^14.6.2"
