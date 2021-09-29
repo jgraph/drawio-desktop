@@ -2,8 +2,6 @@ name: Electron Builder CI (WIN)
 
 on:
   push:
-    branches:
-      - release
     tags:
       - 'v*'
 
