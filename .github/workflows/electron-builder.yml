@@ -2,8 +2,6 @@ name: Electron Builder CI
 
 on:
   push:
-    branches:
-      - dev
     tags:
       - 'v*'
 
@@ -12,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04]
+        os: [ubuntu-18.04, macos-latest]
     env:
       CC: clang
       CXX: clang++ 
