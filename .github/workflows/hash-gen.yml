@@ -1,0 +1,24 @@
+name: Generate sha256 hashes for release files
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate Hashes
+      uses: MCJack123/ghaction-generate-release-hashes@v1
+      with:
+        hash-type: sha256
+        file-name: hashes.txt
+    - name: Upload Hashes to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: hashes.txt
+        overwrite: true
+        asset_name: Files-SHA256-Hashes.txt
+        tag: ${{ github.ref }}
+
