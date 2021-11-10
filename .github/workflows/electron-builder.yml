@@ -2,8 +2,6 @@ name: Electron Builder CI
 
 on:
   push:
-    tags:
-      - 'v*'
 
 jobs:
   build:
