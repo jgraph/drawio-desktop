@@ -36,3 +36,19 @@ To release:
 
 
 *Note*: In Windows release, when using both x64 and is32 as arch, the result is one big file with both archs. This is why we split them.
+
+Open-source, not open-contribution
+----------------------------------
+
+[Similar to SQLite](https://www.sqlite.org/copyright.html), diagrams.net is open
+source but closed to contributions.
+
+The level of complexity of this project means that even simple changes 
+can break a _lot_ of other moving parts. The amount of testing required 
+is far more than it first seems. If we were to receive a PR, we'd have 
+to basically throw it away and write it how we want it to be implemented.
+
+We are grateful for community involvement, bug reports, & feature requests. We do
+not wish to come off as anything but welcoming, however, we've
+made the decision to keep this project closed to contributions for 
+the long term viability of the project.
