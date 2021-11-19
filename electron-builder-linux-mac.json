@@ -63,6 +63,13 @@
 	  	"description": "VSDX Document",
 	  	"mimeType": "application/vnd.visio",
 	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": "png",
+	  	"name": "draw.io Diagram",
+	  	"description": "draw.io Diagram embedded in PNG",
+	  	"mimeType": "image/png",
+	  	"role": "Editor"
 	  }
   ]
 }
