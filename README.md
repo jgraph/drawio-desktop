@@ -1,7 +1,7 @@
 About
 ----- 
 
-**drawio-desktop** is a **diagrams.net** desktop app based on [Electron](https://electronjs.org/). draw.io is the old name for diagrams.net, we just don't want the hassle of changing all the binary's names.
+**drawio-desktop** is a diagramming and whiteboarding desktop app based on [Electron](https://electronjs.org/) that wraps the [core draw.io editor](https://github.com/jgraph/drawio).
 
 Download built binaries from the [releases section](https://github.com/jgraph/drawio-desktop/releases).
 
