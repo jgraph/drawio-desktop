@@ -35,8 +35,5 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - OS: Windows, MacOS, Linux...
 
-**I tested the problem in incognito/private mode with all browser extensions switched off, write "yes" below:**
- - 
- 
 **Additional context**
 Add any other context about the problem here.
