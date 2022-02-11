@@ -33,7 +33,7 @@
     "commander": "^8.2.0",
     "compression": "^1.7.4",
     "crc": "^3.8.0",
-    "electron-log": "^4.4.1",
+    "electron-log": "^4.4.5",
     "electron-progressbar": "^2.0.1",
     "electron-store": "^8.0.0",
     "electron-updater": "^4.3.9",
