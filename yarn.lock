@@ -31,10 +31,10 @@
     global-agent "^3.0.0"
     global-tunnel-ng "^2.7.1"
 
-"@electron/remote@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@electron/remote/-/remote-2.0.4.tgz#c3dae436aed79d1b8adcefc5a4963c06750ad5d8"
-  integrity sha512-8m2P/d2RH986PmMW5lKygbPEjEYJ7RgCe37Y8DQ1wujKMH6VjmLIB+Y+DP2SA611svCZc58TRSd8FraGvcfGZw==
+"@electron/remote@^2.0.5":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@electron/remote/-/remote-2.0.7.tgz#9b02adf5cc21d91d648fff68770d390597509b4c"
+  integrity sha512-IjtMlSrkSmWNSnsvM0l2PQ3a50xFjco4M+arRi6BiziimgctNF8w8LB5NcRTs43OQZG91U/KGTWd89G1Fw7muA==
 
 "@electron/universal@1.0.5":
   version "1.0.5"
