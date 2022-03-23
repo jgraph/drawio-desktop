@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "16.5.1",
+  "version": "17.1.5",
   "description": "diagrams.net desktop",
   "main": "electron.js",
   "scripts": {
@@ -33,15 +33,15 @@
     "commander": "^8.2.0",
     "compression": "^1.7.4",
     "crc": "^3.8.0",
-    "electron-log": "^4.4.1",
+    "electron-log": "^4.4.4",
     "electron-progressbar": "^2.0.1",
     "electron-store": "^8.0.0",
-    "electron-updater": "^4.3.9",
+    "electron-updater": "^4.6.5",
     "pdf-lib": "^1.16.0"
   },
   "devDependencies": {
     "dotenv": "^10.0.0",
-    "electron": "^16.0.5",
+    "electron": "^16.1.0",
     "electron-builder": "22.11.11",
     "electron-notarize": "^1.1.1",
     "sumchecker": "^3.0.1"
