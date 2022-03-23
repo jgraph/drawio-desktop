@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
-    "@electron/remote": "^2.0.1",
+    "@electron/remote": "^2.0.5",
     "commander": "^8.2.0",
     "compression": "^1.7.4",
     "crc": "^3.8.0",
-    "electron-log": "^4.4.4",
+    "electron-log": "^4.4.5",
     "electron-progressbar": "^2.0.1",
     "electron-store": "^8.0.0",
     "electron-updater": "^4.6.5",
