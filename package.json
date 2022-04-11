@@ -42,7 +42,7 @@
   "devDependencies": {
     "dotenv": "^10.0.0",
     "electron": "^18.0.1",
-    "electron-builder": "23.0.3",
+    "electron-builder": "23.0.4",
     "electron-notarize": "^1.1.1",
     "sumchecker": "^3.0.1"
   }
