@@ -21,6 +21,12 @@
       "snap"
     ]
   },
+  "snap": {
+    "plugs": [
+      "default",
+      "removable-media"
+    ]
+  },
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",
