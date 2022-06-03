@@ -6,7 +6,6 @@
     "**/*",
     "!**/WEB-INF{,/**}"
   ],
-  "artifactName": "${productName}-ia32-${version}.${ext}",
   "directories": {
     "app": "./drawio/src/main/webapp",
     "output": "./dist/"
@@ -16,6 +15,7 @@
       "provider": "github"
   },
   "win": {
+    "publisherName": "JGraph Ltd",
     "target": [
       {
           "target": "nsis",
@@ -28,22 +28,17 @@
           "arch": [
             "ia32"
           ]
-      },
-      {
-        "target": "msi",
-        "arch": [
-          "ia32"
-        ]
       }
     ]
   },
   "nsis": {
+    "artifactName": "${productName}-ia32-${version}-windows-32bit-installer.${ext}",
   	"oneClick": false,
     "perMachine": true,
     "allowToChangeInstallationDirectory": true
   },
   "portable": {
-    "artifactName": "${productName}-ia32-${version}-portable.${ext}"
+    "artifactName": "${productName}-ia32-${version}-windows-32bit-no-installer.${ext}"
   },
   "fileAssociations": [
 	  {

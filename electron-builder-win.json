@@ -6,7 +6,6 @@
     "**/*",
     "!**/WEB-INF{,/**}"
   ],
-  "artifactName": "${productName}-${arch}-${version}.${ext}",
   "directories": {
     "app": "./drawio/src/main/webapp",
     "output": "./dist/"
@@ -16,6 +15,7 @@
       "provider": "github"
   },
   "win": {
+    "publisherName": "JGraph Ltd",
     "target": [
       {
           "target": "nsis",
@@ -38,12 +38,16 @@
     ]
   },
   "nsis": {
+    "artifactName": "${productName}-${version}-windows-installer.${ext}",
   	"oneClick": false,
     "perMachine": true,
     "allowToChangeInstallationDirectory": true
   },
+  "msi": {
+    "artifactName": "${productName}-${version}.${ext}"
+  },
   "portable": {
-    "artifactName": "${productName}-${version}-portable.${ext}"
+    "artifactName": "${productName}-${version}-windows-no-installer.${ext}"
   },
   "fileAssociations": [
 	  {
