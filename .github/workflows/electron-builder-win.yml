@@ -10,8 +10,6 @@ jobs:
     runs-on: windows-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
-      CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
     steps:
     - name: Checkout reposistory
       uses: actions/checkout@v2
@@ -31,12 +29,18 @@ jobs:
         yarn install
         cd ../..
     - name: Build for Windows (x32)
+      env:
+        CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+        CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
       shell: powershell #The default shell for Windows
       run: |
         #Disable auto-update and build 32bit first such that latest.yml is for 64bit only (64bit will overwrite 32bit one)
         yarn run sync disableUpdate
         yarn run release-win32
     - name: Build for Windows (x64)
+      env:
+        CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+        CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
       shell: powershell #The default shell for Windows
       run: |
         #Enable auto-update again
