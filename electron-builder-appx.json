@@ -16,6 +16,7 @@
       "provider": "github"
   },
   "win": {
+    "publisherName": "JGraph Ltd",
     "target": [
       {
           "target": "appx",
