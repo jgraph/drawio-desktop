@@ -30,20 +30,20 @@
   "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
     "@electron/remote": "^2.0.5",
-    "commander": "^8.2.0",
+    "commander": "^9.3.0",
     "compression": "^1.7.4",
-    "crc": "^3.8.0",
-    "electron-log": "^4.4.5",
+    "crc": "^4.1.1",
+    "electron-log": "^4.4.7",
     "electron-progressbar": "^2.0.1",
-    "electron-store": "^8.0.0",
-    "electron-updater": "^4.6.5",
-    "pdf-lib": "^1.16.0"
+    "electron-store": "^8.0.1",
+    "electron-updater": "^5.0.1",
+    "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
-    "dotenv": "^10.0.0",
-    "electron": "^18.3.0",
+    "dotenv": "^16.0.1",
+    "electron": "^19.0.3",
     "electron-builder": "23.0.4",
-    "electron-notarize": "^1.1.1",
+    "electron-notarize": "^1.2.1",
     "sumchecker": "^3.0.1"
   }
 }
