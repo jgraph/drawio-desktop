@@ -25,9 +25,6 @@ jobs:
         git submodule update --init --recursive
         npm install -g yarn
         yarn install
-        cd drawio/src/main/webapp
-        yarn install
-        cd ../..
     - name: Build for Windows (x32)
       env:
         CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
