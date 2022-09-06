@@ -3,7 +3,7 @@ const path = require('path')
 const child_process = require('child_process')
 
 const electronAppDir = path.join(__dirname, 'drawio', 'src/main/webapp')
-const appjsonpath = path.join(__dirname, 'drawio', 'src/main/webapp', 'package.json')
+const appjsonpath = path.join(__dirname, 'package.json')
 const disableUpdatePath = path.join(__dirname, 'drawio', 'src/main/webapp', 'disableUpdate.js')
 
 let ver = fs.readFileSync(path.join(__dirname, 'drawio', 'VERSION'), 'utf8')
