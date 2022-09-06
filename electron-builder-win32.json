@@ -7,7 +7,6 @@
     "!**/WEB-INF{,/**}"
   ],
   "directories": {
-    "app": "./drawio/src/main/webapp",
     "output": "./dist/"
   },
   "npmRebuild": false,
