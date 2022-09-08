@@ -1,10 +1,10 @@
 {
   "name": "draw.io",
-  "version": "20.2.8",
+  "version": "20.3.0",
   "description": "draw.io desktop",
-  "main": "electron.js",
+  "main": "./drawio/src/main/webapp/electron.js",
   "scripts": {
-    "start": "electron ./drawio/src/main/webapp",
+    "start": "electron .",
     "sync": "node ./sync.js",
     "release-win": "electron-builder --config electron-builder-win.json --publish always",
     "release-win32": "electron-builder --config electron-builder-win32.json --publish always",
@@ -41,8 +41,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.1",
-    "electron": "^19.0.10",
-    "electron-builder": "23.3.3",
+    "electron": "^20.1.1",
+    "electron-builder": "23.5.0",
     "electron-notarize": "^1.2.1",
     "sumchecker": "^3.0.1"
   }

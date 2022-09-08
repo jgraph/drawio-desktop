@@ -1,8 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const child_process = require('child_process')
 
-const electronAppDir = path.join(__dirname, 'drawio', 'src/main/webapp')
 const appjsonpath = path.join(__dirname, 'package.json')
 const disableUpdatePath = path.join(__dirname, 'drawio', 'src/main/webapp', 'disableUpdate.js')
 
@@ -16,5 +14,3 @@ pj.version = ver
 fs.writeFileSync(appjsonpath, JSON.stringify(pj, null, 2), 'utf8')
 //Enable/disable updates
 fs.writeFileSync(disableUpdatePath, 'module.exports = { disableUpdate: function() { return ' + (process.argv[2] == 'disableUpdate'? 'true' : 'false') + ';}}', 'utf8');
-
-child_process.spawnSync('yarn', ['install', '--production'], {cwd: electronAppDir})
