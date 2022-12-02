@@ -47,6 +47,6 @@ jobs:
       run: |
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. It is used now without login
         sudo snap install snapcraft --classic
-        yarn run release-snap
+        # yarn run release-snap
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        snapcraft push --release stable dist/draw.io-amd64-*.snap
+        # snapcraft push --release stable dist/draw.io-amd64-*.snap
