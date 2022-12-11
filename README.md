@@ -34,8 +34,12 @@ To release:
 6. Add release notes
 7. Publish release
 
-
 *Note*: In Windows release, when using both x64 and is32 as arch, the result is one big file with both archs. This is why we split them.
+
+Local Storage and Session Storage is stored in the AppData folder:
+
+- macOS: `~/Library/Application Support/draw.io`
+- Windows: `C:\Users\<USER-NAME>\AppData\Roaming\draw.io\`
 
 Open-source, not open-contribution
 ----------------------------------
