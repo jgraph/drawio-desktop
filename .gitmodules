@@ -1,4 +1,4 @@
 [submodule "drawio"]
 	path = drawio
-	url = https://github.com/phamjef/drawio
+	url = https://github.com/phamjef/drawio.git
 	branch = dev
