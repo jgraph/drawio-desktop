@@ -19,7 +19,7 @@ Developing
 
 **draw.io** is a git submodule of **drawio-desktop**. To get both you need to clone recursively:
 
-`git clone --recursive https://github.com/jgraph/drawio-desktop.git`
+`git clone --recursive https://github.com/phamjef/drawio`
 
 To run this:
 1. `npm install` (in the root directory of this repo)
