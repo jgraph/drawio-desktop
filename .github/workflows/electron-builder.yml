@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-18.04, macos-latest]
+        os: [ubuntu-latest, macos-latest]
     env:
       CC: clang
       CXX: clang++ 
@@ -24,14 +24,14 @@ jobs:
       OS_NAME: ${{ matrix.os }}
     steps:
     - name: Checkout reposistory
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: Installing Node
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: 14
     - name: Build for ${{ matrix.os}}
       run: |
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
         curl -o- -L https://yarnpkg.com/install.sh | bash
         export PATH="$HOME/.yarn/bin:$PATH"
         # Use sed to replace the SSH URL with the public URL, then initialize submodules
@@ -39,11 +39,11 @@ jobs:
         git submodule update --init --recursive
         sudo npm install -g yarn
         yarn install
-        if [ "$OS_NAME" = "ubuntu-18.04" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
         yarn run sync
         yarn run release-linux
     - name: Build for Snap
-      if: ${{ matrix.os == 'ubuntu-18.04' }}
+      if: ${{ matrix.os == 'ubuntu-latest' }}
       run: |
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. It is used now without login
         sudo snap install snapcraft --classic
