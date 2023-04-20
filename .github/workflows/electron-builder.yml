@@ -31,7 +31,7 @@ jobs:
         node-version: 14
     - name: Build for ${{ matrix.os}}
       run: |
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y libgnome-keyring-dev icnsutils graphicsmagick xz-utils rpm; fi
+        if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm; fi
         curl -o- -L https://yarnpkg.com/install.sh | bash
         export PATH="$HOME/.yarn/bin:$PATH"
         # Use sed to replace the SSH URL with the public URL, then initialize submodules
