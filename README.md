@@ -47,7 +47,7 @@ Local Storage and Session Storage is stored in the AppData folder:
 Open-source, not open-contribution
 ----------------------------------
 
-[Similar to SQLite](https://www.sqlite.org/copyright.html), diagrams.net is open
+[Similar to SQLite](https://www.sqlite.org/copyright.html), draw.io is open
 source but closed to contributions.
 
 The level of complexity of this project means that even simple changes 
