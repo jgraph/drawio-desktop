@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 
 const appjsonpath = path.join(__dirname, 'package.json')
-const disableUpdatePath = path.join(__dirname, 'drawio', 'src/main/webapp', 'disableUpdate.js')
+const disableUpdatePath = path.join(__dirname, 'src/main', 'disableUpdate.js')
 
 let ver = fs.readFileSync(path.join(__dirname, 'drawio', 'VERSION'), 'utf8')
 //let ver = '14.1.5' // just to test autoupdate

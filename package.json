@@ -2,7 +2,7 @@
   "name": "draw.io",
   "version": "21.4.0",
   "description": "draw.io desktop",
-  "main": "./drawio/src/main/webapp/electron.js",
+  "main": "src/main/electron.js",
   "scripts": {
     "start": "electron .",
     "sync": "node ./sync.js",
