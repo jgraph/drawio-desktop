@@ -10,9 +10,11 @@ exports.default = async function notarizing(context) {
   }
 
   return await notarize({
+    tool: "notarytool",
     appBundleId: 'com.jgraph.drawio.desktop',
     appPath: `${appOutDir}/${appName}.app`,
     appleId: process.env.APPLEID,
     appleIdPassword: process.env.APPLEIDPASS,
+    teamId: process.env.APPLE_TEAM_ID
   });
 };
