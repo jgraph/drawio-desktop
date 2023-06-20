@@ -258,6 +258,10 @@ function createWindow (opt = {})
 	return mainWindow
 }
 
+function isPluginsEnabled()
+{
+	return enablePlugins;
+}
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -274,10 +278,12 @@ app.on('ready', e =>
 		})
 	});
 
+	const pluginsCodeUrl = url.pathToFileURL(path.join(getAppDataFolder(), '/plugins/')).href;
+
 	// Enforce loading file only from our app directory
 	session.defaultSession.webRequest.onBeforeRequest({urls: ['file://*']}, (details, callback) =>
 	{
-		if (!details.url.startsWith(codeUrl))
+		if (!details.url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !details.url.startsWith(pluginsCodeUrl))))
 		{
 			callback({cancel: true});
 		}
