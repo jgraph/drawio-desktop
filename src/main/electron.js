@@ -43,7 +43,9 @@ let dialogOpen = false;
 let enablePlugins = false;
 const codeDir = path.join(__dirname, '/../../drawio/src/main/webapp');
 const codeUrl = url.pathToFileURL(codeDir).href;
-const appBaseDir = path.join(__dirname, '/../../');
+// Production app uses asar archive, so we need to go up two more level. It's extra cautious since asar is read-only anyway.
+const appBaseDir = path.join(__dirname, __dirname.endsWith(path.join('resources', 'app.asar', 'src', 'main')) ? 
+								'/../../../../' : '/../../');
 
 //Read config file
 var queryObj = {
@@ -1998,6 +2000,7 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 			// O_SYNC is for sync I/O and reduce risk of file corruption
 			fh = await fsProm.open(fileObject.path, O_SYNC | O_CREAT | O_WRONLY | O_TRUNC);
 			await fsProm.writeFile(fh, data, writeEnc);
+			await fh.sync(); // Flush to disk
 		}
 		finally
 		{
@@ -2053,6 +2056,7 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 				let fileContent = await fsProm.readFile(fileObject.path, writeEnc);
 				bkpFh = await fsProm.open(bkpPath, O_SYNC | O_CREAT | O_WRONLY | O_TRUNC);
 				await fsProm.writeFile(bkpFh, fileContent, writeEnc);
+				await bkpFh.sync(); // Flush to disk
 				backupCreated = true;
 			}
 			catch (e) 
@@ -2112,7 +2116,19 @@ async function writeFile(filePath, data, enc)
 	}
 	else
 	{
-		return await fsProm.writeFile(filePath, data, enc);
+		let fh;
+
+		try
+		{
+			// O_SYNC is for sync I/O and reduce risk of file corruption
+			fh = await fsProm.open(filePath, O_SYNC | O_CREAT | O_WRONLY | O_TRUNC);
+			await fsProm.writeFile(fh, data, enc);
+			await fh.sync(); // Flush to disk
+		}
+		finally
+		{
+			await fh?.close();
+		}
 	}
 };
 
