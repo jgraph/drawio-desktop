@@ -46,6 +46,7 @@ const codeUrl = url.pathToFileURL(codeDir).href;
 // Production app uses asar archive, so we need to go up two more level. It's extra cautious since asar is read-only anyway.
 const appBaseDir = path.join(__dirname, __dirname.endsWith(path.join('resources', 'app.asar', 'src', 'main')) ? 
 								'/../../../../' : '/../../');
+let appZoom = 1;
 
 //Read config file
 var queryObj = {
@@ -372,6 +373,8 @@ app.on('ready', e =>
 				'selects a page range (for PDF format only)', argsRange)
 			.option('-u, --uncompressed',
 				'Uncompressed XML output (for XML format only)')
+			.option('-z, --zoom <zoom>',
+				'scales the application interface', parseFloat)
 			.option('--enable-plugins',
 				'Enable Plugins')
 	        .parse(argv)
@@ -384,6 +387,11 @@ app.on('ready', e =>
 	
 	var options = program.opts();
 	enablePlugins = options.enablePlugins;
+
+	if (options.zoom != null)
+	{
+		appZoom = options.zoom;
+	}
 
     //Start export mode?
     if (options.export)
@@ -755,8 +763,8 @@ app.on('ready', e =>
     	    
     	    win.webContents.on('did-finish-load', function()
     	    {    			
-    	        win.webContents.zoomFactor = 1;
-    	        win.webContents.setVisualZoomLevelLimits(1, 1);
+    	        win.webContents.zoomFactor = appZoom;
+    	        win.webContents.setVisualZoomLevelLimits(1, appZoom);
 				loadFinished();
     	    });
     	})
@@ -799,8 +807,8 @@ app.on('ready', e =>
     	
     	firstWinLoaded = true;
     	
-        win.webContents.zoomFactor = 1;
-        win.webContents.setVisualZoomLevelLimits(1, 1);
+        win.webContents.zoomFactor = appZoom;
+        win.webContents.setVisualZoomLevelLimits(1, appZoom);
 		loadFinished();
     });
 	
@@ -986,8 +994,8 @@ app.on('will-finish-launching', function()
     	    
 		    win.webContents.on('did-finish-load', function()
 		    {
-		        win.webContents.zoomFactor = 1;
-		        win.webContents.setVisualZoomLevelLimits(1, 1);
+		        win.webContents.zoomFactor = appZoom;
+		        win.webContents.setVisualZoomLevelLimits(1, appZoom);
 				loadFinished();
 		    });
 	    }
