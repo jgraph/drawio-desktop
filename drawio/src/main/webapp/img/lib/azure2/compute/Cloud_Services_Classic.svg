@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="afcc3783-7378-4497-bf15-72c20633bf21"
+   width="18"
+   height="13.075367"
+   viewBox="0 0 18 13.075367"
+   version="1.1"
+   sodipodi:docname="Cloud_Services_(Classic).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview3944"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="5.6241497"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="afcc3783-7378-4497-bf15-72c20633bf21" />
+  <defs
+     id="defs3927">
+    <linearGradient
+       id="b82da118-993d-4c39-803c-c36675d35ebf"
+       x1="8.9899998"
+       y1="16.610001"
+       x2="8.9899998"
+       y2="-1.27"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop3916" />
+      <stop
+         offset="0.16"
+         stop-color="#1380da"
+         id="stop3918" />
+      <stop
+         offset="0.53"
+         stop-color="#3c91e5"
+         id="stop3920" />
+      <stop
+         offset="0.82"
+         stop-color="#559cec"
+         id="stop3922" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop3924" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title3929">Icon-compute-30</title>
+  <path
+     d="m 18,9.0012176 a 4.11,4.11 0 0 0 -3.51,-4 5.14,5.14 0 0 0 -5.25,-4.99999997 5.26,5.26 0 0 0 -5,3.46999997 4.87,4.87 0 0 0 -4.24,4.8 4.94,4.94 0 0 0 5.07,4.8000004 h 0.44 8.21 a 1.46,1.46 0 0 0 0.22,0 A 4.13,4.13 0 0 0 18,9.0012176 Z"
+     id="path3931"
+     inkscape:connector-curvature="0"
+     style="fill:url(#b82da118-993d-4c39-803c-c36675d35ebf)" />
+  <circle
+     cx="5.2399998"
+     cy="8.1012173"
+     r="0.70999998"
+     id="circle3933"
+     style="fill:#e3e3e3" />
+  <path
+     d="m 7.74,8.3712176 v -0.57 H 7.66 l -0.61,-0.2 -0.16,-0.39 0.31,-0.66 -0.4,-0.4 H 6.72 l -0.57,0.3 -0.39,-0.16 -0.25,-0.69 H 4.94 v 0.08 l -0.2,0.61 -0.42,0.16 -0.65,-0.31 -0.4,0.4 v 0.08 l 0.29,0.57 -0.16,0.39 -0.7,0.25 v 0.62 h 0.08 l 0.61,0.2 0.16,0.39 -0.31,0.66 0.4,0.4000004 h 0.08 l 0.57,-0.2900004 0.39,0.16 0.25,0.6900004 H 5.5 v -0.08 l 0.2,-0.6100004 0.39,-0.16 0.66,0.3100004 0.4,-0.4000004 v -0.08 l -0.29,-0.57 0.16,-0.39 z m -2.5,0.83 a 1.1,1.1 0 1 1 1.1,-1.1 1.09,1.09 0 0 1 -1.1,1.1 z"
+     id="path3935"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <circle
+     cx="10"
+     cy="5.0412178"
+     r="0.83999997"
+     id="circle3937"
+     style="fill:#e3e3e3" />
+  <path
+     d="m 13,5.3612176 v -0.68 h -0.09 l -0.74,-0.23 -0.17,-0.51 0.37,-0.8 -0.48,-0.48 H 11.8 l -0.69,0.35 -0.46,-0.19 -0.3,-0.83 H 9.64 v 0.1 l -0.24,0.73 -0.47,0.19 -0.78,-0.37 -0.48,0.48 0.05,0.09 0.28,0.74 -0.16,0.5 -0.84,0.27 v 0.73 h 0.1 l 0.73,0.24 0.17,0.45 -0.37,0.8 0.5,0.51 0.1,-0.05 0.68,-0.35 0.47,0.19 0.3,0.83 h 0.68 v -0.1 l 0.24,-0.73 0.47,-0.19 0.79,0.37 0.48,-0.48 -0.05,-0.09 -0.29,-0.72 0.19,-0.47 z m -3,1 a 1.32,1.32 0 1 1 1.32,-1.32 1.31,1.31 0 0 1 -1.32,1.32 z"
+     id="path3939"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata3941">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.CloudService()</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-30</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

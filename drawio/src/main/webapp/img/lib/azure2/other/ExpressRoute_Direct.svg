@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg4038" sodipodi:docname="00903-icon-service-ExpressRoute-Direct.svg" version="1.1"
+    width="18" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 18 15.962" height="15.962"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs4006">
+        <linearGradient x1="13.119" y1="5.6430001" x2="11.489" gradientUnits="userSpaceOnUse" y2="16.919001" id="aa436aef-5326-4d7d-ad29-02c369cb3782">
+            <stop offset="0" stop-color="#a67af4" id="stop4001"/>
+            <stop offset="1" stop-color="#773adc" id="stop4003"/>
+        </linearGradient>
+    </defs>
+    <rect width="1.335" x="5.460825" height="6.415" y="-0.32986867" style="fill:#773adc" transform="rotate(30)"/>
+    <rect width="1.335" x="3.6374691" height="6.415" y="5.8165393" style="fill:#773adc" transform="rotate(-30)"/>
+    <rect width="1.335" x="8.7769995" height="6.415" y="-9.2119999" style="fill:#773adc" transform="rotate(90)"/>
+    <circle r="1.626" style="fill:#86d633" cx="6.1240001" cy="1.626"/>
+    <circle r="1.626" style="fill:#86d633" cx="1.626" cy="9.5410004"/>
+    <circle r="5.3249998" style="fill:#ffffff" cx="12.284" cy="10.325"/>
+    <path style="fill:#773adc" d="M 9.853,11.702 A 0.3,0.3 0 0 1 9.641,11.19 l 1.128,-1.127 a 0.3,0.3 0 1 1 0.424,0.423 
+        l -1.128,1.128 a 0.3,0.3 0 0 1 -0.212,0.088 z"/>
+    <path style="fill:#773adc" d="M 10.686,12.535 A 0.3,0.3 0 0 1 10.474,12.023 L 11.6,10.896 a 0.3,0.3 0 1 1 
+        0.424,0.424 L 10.9,12.448 a 0.3,0.3 0 0 1 -0.214,0.087 z"/>
+    <path style="fill:#773adc" d="m 11.511,13.36 a 0.3,0.3 0 0 1 -0.212,-0.511 l 1.127,-1.128 a 0.30016704,0.30016704 0 
+        1 1 0.425,0.424 l -1.127,1.132 a 0.3,0.3 0 0 1 -0.213,0.083 z"/>
+    <path style="fill:#773adc" d="m 11.924,9.6310001 a 0.3,0.3 0 0 1 -0.212,-0.511 l 1.128,-1.128 a 0.3,0.3 0 0 1 
+        0.424,0.424 l -1.128,1.127 a 0.3,0.3 0 0 1 -0.212,0.088 z"/>
+    <path style="fill:#773adc" d="M 12.757,10.464 A 0.3,0.3 0 0 1 12.545,9.9530001 l 1.127,-1.128 a 
+        0.30016704,0.30016704 0 1 1 0.425,0.424 L 12.97,10.377 a 0.3,0.3 0 0 1 -0.213,0.087 z"/>
+    <path style="fill:#773adc" d="M 13.582,11.289 A 0.3,0.3 0 0 1 13.37,10.777 L 14.5,9.6490001 A 0.30016704,0.30016704 
+        0 0 1 14.924,10.074 l -1.128,1.128 a 0.3,0.3 0 0 1 -0.214,0.087 z"/>
+    <path style="fill:#a67af4" d="m 9.62,10.999 a 0.3,0.3 0 0 0 -0.425,0 L 7.27,12.924 a 5.717,5.717 0 0 0 2.947,2.634 l 
+        1.769,-1.768 a 0.3,0.3 0 0 0 0,-0.426 z"/>
+    <path style="fill:#b796f9" d="m 14.973,5.2260001 -2.193,2.193 a 0.3,0.3 0 0 0 0,0.425 L 15.146,10.21 a 0.3,0.3 0 0 0 
+        0.425,0 l 2.035,-2.0329999 a 5.713,5.713 0 0 0 -2.633,-2.951 z"/>
+    <path style="fill:url(#aa436aef-5326-4d7d-ad29-02c369cb3782)" d="M 12.3,5.3120001 A 4.946,4.946 0 1 1 7.354,10.258 
+        4.952,4.952 0 0 1 12.3,5.3120001 m 0,-0.75 A 5.7,5.7 0 1 0 18,10.262 5.7,5.7 0 0 0 12.3,4.5620001 Z"/>​
+</svg>

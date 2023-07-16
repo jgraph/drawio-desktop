@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.726"
+   height="17.726"
+   viewBox="0 0 17.726 17.726"
+   version="1.1"
+   id="svg31791"
+   sodipodi:docname="Integration_Service_Environments.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview31793"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.8638083"
+     inkscape:cy="8.8638083"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31791" />
+  <defs
+     id="defs31770">
+    <radialGradient
+       id="f25af711-9b7f-4e33-92dc-aac4716591f3"
+       cx="9.0439997"
+       cy="8.9130001"
+       r="10.514"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.13700008,-0.13700008)">
+      <stop
+         offset="0.183"
+         stop-color="#5ea0ef"
+         id="stop31755" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop31757" />
+    </radialGradient>
+    <linearGradient
+       id="a305fb35-e815-4445-a184-35cb29dae4a9"
+       x1="5.3439999"
+       y1="10.72"
+       x2="5.3439999"
+       y2="13.464"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.13700008,-0.13700008)">
+      <stop
+         offset="0.001"
+         stop-color="#76bc2d"
+         id="stop31760" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop31762" />
+    </linearGradient>
+    <linearGradient
+       id="a936de98-dcd2-4eeb-b313-9efe1853d9b9"
+       x1="12.646"
+       y1="10.72"
+       x2="12.646"
+       y2="13.464"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.13700008,-0.13700008)">
+      <stop
+         offset="0.001"
+         stop-color="#76bc2d"
+         id="stop31765" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop31767" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title31772">Icon-555Artboard 1</title>
+  <circle
+     cx="8.8629999"
+     cy="8.8629999"
+     r="8.8629999"
+     fill="url(#f25af711-9b7f-4e33-92dc-aac4716591f3)"
+     id="circle31774"
+     style="fill:url(#f25af711-9b7f-4e33-92dc-aac4716591f3)" />
+  <circle
+     cx="8.8629999"
+     cy="8.8629999"
+     r="7.3860002"
+     fill="#ffffff"
+     id="circle31776" />
+  <path
+     d="m 9.2949999,8.5279999 v -1.19 h -0.838 v 1.19 a 0.168,0.168 0 0 1 -0.168,0.168 h -3.154 a 0.335,0.335 0 0 0 -0.335,0.335 V 10.576 h 0.838 V 9.7199999 a 0.167,0.167 0 0 1 0.167,-0.167 H 11.91 a 0.167,0.167 0 0 1 0.167,0.167 V 10.594 h 0.838 V 9.0309999 a 0.335,0.335 0 0 0 -0.335,-0.335 H 9.4629999 a 0.168,0.168 0 0 1 -0.168,-0.168 z"
+     fill="#0078d4"
+     id="path31778" />
+  <path
+     d="M 10.414,3.7249999 H 7.2729999 a 0.347,0.347 0 0 0 -0.347,0.347 v 3.141 a 0.347,0.347 0 0 0 0.347,0.35 H 10.414 a 0.347,0.347 0 0 0 0.349,-0.35 v -3.141 a 0.347,0.347 0 0 0 -0.349,-0.347 z"
+     fill="#ffffff"
+     id="path31780" />
+  <path
+     d="M 10.414,3.7249999 H 7.2729999 a 0.347,0.347 0 0 0 -0.347,0.347 v 3.141 a 0.347,0.347 0 0 0 0.347,0.35 H 10.414 a 0.347,0.347 0 0 0 0.349,-0.35 v -3.141 a 0.347,0.347 0 0 0 -0.349,-0.347 z m -0.3,2.96 a 0.23,0.23 0 0 1 -0.2300001,0.23 h -2.083 a 0.23,0.23 0 0 1 -0.23,-0.23 v -2.085 a 0.23,0.23 0 0 1 0.23,-0.23 h 2.085 a 0.23,0.23 0 0 1 0.2300001,0.23 z"
+     fill="#a67af4"
+     id="path31782" />
+  <path
+     id="bdc94428-22ed-41e6-a140-3d9647e53950"
+     d="m 6.5779999,13.048 v -2.185 a 0.279,0.279 0 0 0 -0.279,-0.279 h -2.185 a 0.279,0.279 0 0 0 -0.279,0.279 v 2.186 a 0.279,0.279 0 0 0 0.279,0.279 h 2.185 a 0.279,0.279 0 0 0 0.279,-0.28 z"
+     fill="url(#a305fb35-e815-4445-a184-35cb29dae4a9)"
+     style="fill:url(#a305fb35-e815-4445-a184-35cb29dae4a9)" />
+  <path
+     id="a551ca4d-bd02-42d4-b100-f5246ebf0f81"
+     d="m 13.881,13.048 v -2.185 a 0.279,0.279 0 0 0 -0.279,-0.279 h -2.186 a 0.279,0.279 0 0 0 -0.279,0.279 v 2.186 a 0.279,0.279 0 0 0 0.279,0.279 h 2.186 a 0.279,0.279 0 0 0 0.279,-0.28 z"
+     fill="url(#a936de98-dcd2-4eeb-b313-9efe1853d9b9)"
+     style="fill:url(#a936de98-dcd2-4eeb-b313-9efe1853d9b9)" />
+  <metadata
+     id="metadata31875">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-555Artboard 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

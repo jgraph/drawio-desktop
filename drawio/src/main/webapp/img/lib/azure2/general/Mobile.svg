@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.777"
+   height="18"
+   viewBox="0 0 10.777 18"
+   version="1.1"
+   id="svg33526"
+   sodipodi:docname="Mobile.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview33528"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="5.388"
+     inkscape:cy="9"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg33526" />
+  <defs
+     id="defs33503">
+    <linearGradient
+       id="b861ecb1-69d3-40ff-b38a-443a49a377b1"
+       x1="9"
+       y1="22.809999"
+       x2="9"
+       y2="-2.4909999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(3.612)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop33485" />
+      <stop
+         offset="0.165"
+         stop-color="#1c84dc"
+         id="stop33487" />
+      <stop
+         offset="0.378"
+         stop-color="#3990e4"
+         id="stop33489" />
+      <stop
+         offset="0.59"
+         stop-color="#4d99ea"
+         id="stop33491" />
+      <stop
+         offset="0.799"
+         stop-color="#5a9eee"
+         id="stop33493" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop33495" />
+    </linearGradient>
+    <linearGradient
+       id="b829f877-fb68-49d0-8cb6-c12a07b10184"
+       x1="9"
+       y1="15.982"
+       x2="9"
+       y2="1.522"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(3.612)">
+      <stop
+         offset="0"
+         stop-color="#d2ebff"
+         id="stop33498" />
+      <stop
+         offset="0.997"
+         stop-color="#f0fffd"
+         id="stop33500" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title33505">MsPortalFx.base.images-62</title>
+  <g
+     id="abf8a417-4093-4c62-8738-0493c164e5d3"
+     transform="translate(-3.612)">
+    <g
+       id="g33521">
+      <rect
+         x="3.612"
+         width="10.777"
+         height="18"
+         rx="0.419"
+         id="rect33507"
+         y="0"
+         style="fill:url(#b861ecb1-69d3-40ff-b38a-443a49a377b1)" />
+      <rect
+         x="7.7579999"
+         y="0.60399997"
+         width="2.483"
+         height="0.333"
+         rx="0.154"
+         id="rect33509"
+         style="fill:#f2f2f2" />
+      <rect
+         x="4.6230001"
+         y="1.522"
+         width="8.7539997"
+         height="14.461"
+         rx="0.20100001"
+         id="rect33511"
+         style="opacity:0.9;fill:url(#b829f877-fb68-49d0-8cb6-c12a07b10184)" />
+      <rect
+         x="8.3979998"
+         y="16.58"
+         width="1.204"
+         height="1.028"
+         rx="0.28600001"
+         id="rect33513"
+         style="fill:#f2f2f2" />
+      <polygon
+         points="9.077,12.255 9.077,9.004 11.882,7.378 11.882,10.624 "
+         id="polygon33515"
+         style="fill:#005ba1" />
+      <polygon
+         points="6.272,7.378 9.078,5.747 11.882,7.378 9.078,9.009 "
+         id="polygon33517"
+         style="fill:#5ea0ef" />
+      <polygon
+         points="6.272,10.624 6.272,7.378 9.077,9.009 9.077,12.255 "
+         id="polygon33519"
+         style="fill:#0078d4" />
+    </g>
+  </g>
+  <metadata
+     id="metadata33524">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Mobile()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-62</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

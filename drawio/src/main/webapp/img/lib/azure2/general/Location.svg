@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="10.186"
+   height="18"
+   viewBox="0 0 10.186 18"
+   version="1.1"
+   id="svg30172"
+   sodipodi:docname="Location.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview30174"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="6.2639999"
+     inkscape:cy="9.0000001"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30172" />
+  <defs
+     id="defs30156">
+    <linearGradient
+       id="a40543c1-03b8-4190-8346-b855075b3f0d"
+       x1="7.8629999"
+       x2="7.8629999"
+       y2="12.81"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(2.7360001)">
+      <stop
+         offset="0"
+         stop-color="#b77af4"
+         id="stop30149" />
+      <stop
+         offset="0.621"
+         stop-color="#8c4fe4"
+         id="stop30151" />
+      <stop
+         offset="0.997"
+         stop-color="#773adc"
+         id="stop30153" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title30158">MsPortalFx.base.images-49</title>
+  <g
+     id="e24f1216-e555-4a33-b1ed-d87b36f6ba1d"
+     transform="translate(-2.7360001)">
+    <g
+       id="g30167">
+      <circle
+         id="a5eab3d8-3bb2-4f0d-b199-b7e448427ca9"
+         cx="7.8299999"
+         cy="12.908"
+         r="2.2279999"
+         style="fill:#32bedd" />
+      <path
+         d="m 7.83,16.491 a 3.584,3.584 0 1 1 3.583,-3.583 3.587,3.587 0 0 1 -3.583,3.583 z m 0,-6.558 A 2.975,2.975 0 1 0 10.8,12.908 2.978,2.978 0 0 0 7.83,9.933 Z"
+         id="path30161"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+      <path
+         d="M 7.83,18 A 5.093,5.093 0 1 1 12.922,12.908 5.1,5.1 0 0 1 7.83,18 Z m 0,-9.576 A 4.484,4.484 0 1 0 12.313,12.908 4.489,4.489 0 0 0 7.83,8.424 Z"
+         id="path30163"
+         inkscape:connector-curvature="0"
+         style="fill:#9cebff" />
+      <path
+         d="M 7.863,0 A 3.894,3.894 0 0 0 4.092,4.063 c 0,1.772 2.249,5.922 3.274,8.413 a 0.535,0.535 0 0 0 0.992,0 c 1.023,-2.507 3.277,-6.7 3.277,-8.412 A 3.941,3.941 0 0 0 7.863,0 Z m 0,5.5 A 1.677,1.677 0 1 1 9.54,3.826 1.676,1.676 0 0 1 7.863,5.5 Z"
+         id="path30165"
+         inkscape:connector-curvature="0"
+         style="fill:url(#a40543c1-03b8-4190-8346-b855075b3f0d)" />
+    </g>
+  </g>
+  <metadata
+     id="metadata30170">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Location()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-49</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

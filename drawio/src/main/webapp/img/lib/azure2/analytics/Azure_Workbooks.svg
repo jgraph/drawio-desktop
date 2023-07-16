@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="18"
+   viewBox="0 0 18 18"
+   version="1.1"
+   id="svg3966"
+   sodipodi:docname="Azure_Workbooks.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview3968"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3966" />
+  <defs
+     id="defs3955">
+    <linearGradient
+       id="abe241b1-5a9a-45d6-aa6a-018218fcb790"
+       x1="15.601"
+       y1="771.73602"
+       x2="2.5369999"
+       y2="793.07001"
+       gradientTransform="matrix(1,0,0,-1,0,791.516)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop3940" />
+      <stop
+         offset="1"
+         stop-color="#289bf2"
+         id="stop3942" />
+    </linearGradient>
+    <linearGradient
+       id="aa8b03fb-bed7-4004-829e-edcb663a744f"
+       x1="5.138"
+       y1="789.26398"
+       x2="13.27"
+       y2="773.77002"
+       gradientTransform="matrix(1,0,0,-1,0,791.516)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#00ccf9"
+         id="stop3945" />
+      <stop
+         offset="1"
+         stop-color="#0095e6"
+         id="stop3947" />
+    </linearGradient>
+    <linearGradient
+       id="b62f4b11-b9c6-44f0-b9c4-a8dc21d95f47"
+       x1="5.7680001"
+       y1="791.57703"
+       x2="9.7200003"
+       y2="780.16803"
+       gradientTransform="matrix(1,0,0,-1,0,791.516)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#7cecff"
+         id="stop3950" />
+      <stop
+         offset="1"
+         stop-color="#50e6ff"
+         id="stop3952" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 7.773,3.682 0,11.455 v 4.909 A 1.637,1.637 0 0 0 1.636,18 H 16.364 A 1.637,1.637 0 0 0 18,16.364 V 1.636 A 1.637,1.637 0 0 0 16.364,0 H 15.545 L 9.818,5.727 Z"
+     fill="url(#abe241b1-5a9a-45d6-aa6a-018218fcb790)"
+     id="path3957"
+     style="fill:url(#abe241b1-5a9a-45d6-aa6a-018218fcb790)" />
+  <path
+     d="M 7.773,8.591 0.586,15.778 A 1.194,1.194 0 0 0 0.205,17.157 1.635,1.635 0 0 0 1.636,18 H 16.364 A 1.637,1.637 0 0 0 18,16.364 V 2.455 l -8.182,8.181 z"
+     fill="url(#aa8b03fb-bed7-4004-829e-edcb663a744f)"
+     id="path3959"
+     style="fill:url(#aa8b03fb-bed7-4004-829e-edcb663a744f)" />
+  <path
+     d="M 9.818,5.727 15.545,0 H 1.636 A 1.637,1.637 0 0 0 0,1.636 v 9.819 L 7.773,3.682 Z"
+     fill="url(#b62f4b11-b9c6-44f0-b9c4-a8dc21d95f47)"
+     id="path3961"
+     style="fill:url(#b62f4b11-b9c6-44f0-b9c4-a8dc21d95f47)" />
+</svg>

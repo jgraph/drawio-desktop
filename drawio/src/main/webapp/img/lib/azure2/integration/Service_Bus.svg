@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17"
+   height="15.142"
+   viewBox="0 0 17 15.142"
+   version="1.1"
+   id="svg34435"
+   sodipodi:docname="Service_Bus.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview34437"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.5006305"
+     inkscape:cy="7.5699874"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34435" />
+  <defs
+     id="defs34394">
+    <linearGradient
+       id="bbd02878-309a-4490-8196-946338d0f593"
+       x1="8.9949999"
+       y1="10.299"
+       x2="8.9949999"
+       y2="13.199"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop34383" />
+      <stop
+         offset="0.258"
+         stop-color="#00589d"
+         id="stop34385" />
+      <stop
+         offset="0.525"
+         stop-color="#004f90"
+         id="stop34387" />
+      <stop
+         offset="0.796"
+         stop-color="#003f7c"
+         id="stop34389" />
+      <stop
+         offset="1"
+         stop-color="#003067"
+         id="stop34391" />
+    </linearGradient>
+  </defs>
+  <polygon
+     points="4.612,7.384 4.612,7.396 4.606,7.4 4.612,7.4 4.612,13.201 13.382,13.201 13.382,7.4 13.387,7.4 13.382,7.396 13.382,7.384 13.363,7.384 8.997,4.405 4.631,7.384 "
+     fill="#50e6ff"
+     id="polygon34396"
+     transform="translate(-0.5,-1.43)" />
+  <path
+     d="m 4.106,5.97 c 0,-0.1 0.008,5.681 0.008,5.8 l 4.381,-2.9 z"
+     fill="#32bedd"
+     id="path34398" />
+  <path
+     d="m 12.884,5.97 -4.389,2.9 4.381,2.9 c 0,-0.117 0.008,-5.9 0.008,-5.8 z"
+     fill="#198ab3"
+     id="path34400" />
+  <polygon
+     points="4.614,13.194 4.614,13.199 13.376,13.199 13.376,13.194 8.995,10.299 "
+     fill="url(#bbd02878-309a-4490-8196-946338d0f593)"
+     id="polygon34402"
+     style="fill:url(#bbd02878-309a-4490-8196-946338d0f593)"
+     transform="translate(-0.5,-1.43)" />
+  <path
+     d="m 0.572,0 h 1.29 V 3.6 A 0.286,0.286 0 0 1 1.576,3.886 H 0.286 A 0.286,0.286 0 0 1 0,3.605 V 0.57 A 0.572,0.572 0 0 1 0.572,0 Z"
+     fill="#999999"
+     id="path34404" />
+  <path
+     d="m 0.572,0 h 1.29 V 3.6 A 0.286,0.286 0 0 1 1.576,3.886 H 0.286 A 0.286,0.286 0 0 1 0,3.605 V 0.57 A 0.572,0.572 0 0 1 0.572,0 Z"
+     fill="#999999"
+     opacity="0.5"
+     id="path34406" />
+  <path
+     d="m 15.138,0 h 1.29 A 0.572,0.572 0 0 1 17,0.57 v 3.035 a 0.286,0.286 0 0 1 -0.286,0.286 h -1.29 A 0.286,0.286 0 0 1 15.138,3.605 Z"
+     fill="#999999"
+     id="path34410" />
+  <path
+     d="m 15.138,0 h 1.29 A 0.572,0.572 0 0 1 17,0.57 v 3.035 a 0.286,0.286 0 0 1 -0.286,0.286 h -1.29 A 0.286,0.286 0 0 1 15.138,3.605 Z"
+     fill="#999999"
+     opacity="0.5"
+     id="path34412" />
+  <path
+     d="M 17,0.567 V 1.814 H 0 V 0.567 A 0.567,0.567 0 0 1 0.567,0 h 15.87 A 0.567,0.567 0 0 1 17,0.567 Z"
+     fill="#949494"
+     id="path34416" />
+  <path
+     d="m 0.286,11.249 h 1.29 a 0.286,0.286 0 0 1 0.286,0.286 v 3.6 H 0.572 A 0.572,0.572 0 0 1 0,14.57 v -3.035 a 0.286,0.286 0 0 1 0.286,-0.286 z"
+     fill="#999999"
+     id="path34418" />
+  <path
+     d="m 0.286,11.249 h 1.29 a 0.286,0.286 0 0 1 0.286,0.286 v 3.6 H 0.572 A 0.572,0.572 0 0 1 0,14.57 v -3.035 a 0.286,0.286 0 0 1 0.286,-0.286 z"
+     fill="#999999"
+     opacity="0.5"
+     id="path34420" />
+  <path
+     d="m 15.424,11.249 h 1.29 A 0.286,0.286 0 0 1 17,11.535 v 3.035 a 0.572,0.572 0 0 1 -0.572,0.572 h -1.29 v -3.6 a 0.286,0.286 0 0 1 0.286,-0.293 z"
+     fill="#999999"
+     id="path34424" />
+  <path
+     d="m 15.424,11.249 h 1.29 A 0.286,0.286 0 0 1 17,11.535 v 3.035 a 0.572,0.572 0 0 1 -0.572,0.572 h -1.29 v -3.6 a 0.286,0.286 0 0 1 0.286,-0.293 z"
+     fill="#999999"
+     opacity="0.5"
+     id="path34426" />
+  <path
+     d="m 0,14.573 v -1.247 h 17 v 1.247 A 0.567,0.567 0 0 1 16.433,15.14 H 0.567 A 0.567,0.567 0 0 1 0,14.573 Z"
+     fill="#949494"
+     id="path34430" />
+</svg>

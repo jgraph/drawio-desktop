@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="17.442282"
+   viewBox="0 0 18 17.442282"
+   version="1.1"
+   id="svg63698"
+   sodipodi:docname="Azurite.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview63700"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="8.7276166"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg63698" />
+  <defs
+     id="defs63680">
+    <linearGradient
+       id="f80faa5f-01d6-470d-9b4b-2f1d9b4be881"
+       x1="7.9549999"
+       y1="3.5469999"
+       x2="7.9549999"
+       y2="12.614"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.27871823)">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop63670" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop63672" />
+    </linearGradient>
+    <linearGradient
+       id="e1178db9-a4a8-4a17-911c-51ece799d710"
+       x1="13.499"
+       y1="8.4790001"
+       x2="13.499"
+       y2="18.277"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.27871823)">
+      <stop
+         offset="0.232"
+         stop-color="#50e6ff"
+         id="stop63675" />
+      <stop
+         offset="1"
+         stop-color="#32bedd"
+         id="stop63677" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 15.91,3.2682818 v 8.5580002 a 0.52,0.52 0 0 1 -0.531,0.5 H 0.531 A 0.514,0.514 0 0 1 0,11.814282 V 3.2682818 Z"
+     fill="url(#f80faa5f-01d6-470d-9b4b-2f1d9b4be881)"
+     id="path63682"
+     style="fill:url(#f80faa5f-01d6-470d-9b4b-2f1d9b4be881)" />
+  <path
+     d="M 15.91,3.2682818 H 0 V 0.51228177 A 0.514,0.514 0 0 1 0.531,2.8177046e-4 H 15.366 A 0.513,0.513 0 0 1 15.896,0.51228177 V 3.2682818 Z"
+     fill="#0078d4"
+     id="path63684" />
+  <path
+     d="m 15.91,7.3212818 v 4.6190002 a 0.519,0.519 0 0 1 -0.531,0.5 h 0.531 z"
+     fill="#ffffff"
+     id="path63688" />
+  <path
+     d="M 17.022,17.441282 H 9.975 A 0.983,0.983 0 0 1 9,16.463282 V 9.4322818 a 0.983,0.983 0 0 1 0.978,-0.978 h 7.047 a 0.978,0.978 0 0 1 0.975,0.978 v 7.0320002 a 0.978,0.978 0 0 1 -0.978,0.978 z"
+     fill="url(#e1178db9-a4a8-4a17-911c-51ece799d710)"
+     id="path63690"
+     style="fill:url(#e1178db9-a4a8-4a17-911c-51ece799d710)" />
+  <path
+     d="M 13.5,2.2842818 H 2.409 a 0.269,0.269 0 0 1 -0.272,-0.263 v -0.8 A 0.268,0.268 0 0 1 2.409,0.95928177 H 13.5 a 0.268,0.268 0 0 1 0.272,0.26200003 v 0.814 a 0.267,0.267 0 0 1 -0.272,0.249 z m -0.744,10.4740002 -1.9,-1.9 a 0.117,0.117 0 0 0 -0.165,0 l -0.257,0.258 v 0 a 0.117,0.117 0 0 0 0,0.165 l 1.65,1.645 -1.614,1.619 a 0.116,0.116 0 0 0 0,0.164 l 0.259,0.258 v 0 a 0.115,0.115 0 0 0 0.164,0 l 1.87,-1.875 a 0.245,0.245 0 0 0 0,-0.337 z m 3.64,1.609 h -2.92 a 0.2,0.2 0 0 0 -0.2,0.2 v 0.3 a 0.2,0.2 0 0 0 0.2,0.2 H 16.4 a 0.2,0.2 0 0 0 0.2,-0.2 v -0.3 a 0.2,0.2 0 0 0 -0.2,-0.2 z"
+     fill="#ffffff"
+     id="path63695" />
+</svg>

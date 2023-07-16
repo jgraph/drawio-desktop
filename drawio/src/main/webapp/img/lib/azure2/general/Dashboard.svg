@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e88e7012-6ae0-43b5-9280-053e991d49c6"
+   width="18.030001"
+   height="12.750854"
+   viewBox="0 0 18.030001 12.750854"
+   version="1.1"
+   sodipodi:docname="Dashboard.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview22113"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9.49"
+     inkscape:cy="6.2404354"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e88e7012-6ae0-43b5-9280-053e991d49c6" />
+  <defs
+     id="defs22100">
+    <linearGradient
+       id="b9c03c70-29a5-4e17-9674-29577b4b9674"
+       x1="8.5100002"
+       y1="0.57999998"
+       x2="8.5100002"
+       y2="17.27"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.09"
+         stop-color="#6cc6b9"
+         id="stop22085" />
+      <stop
+         offset="0.46"
+         stop-color="#6ac4b7"
+         id="stop22087" />
+      <stop
+         offset="0.64"
+         stop-color="#62bdb0"
+         id="stop22089" />
+      <stop
+         offset="0.77"
+         stop-color="#56b1a4"
+         id="stop22091" />
+      <stop
+         offset="0.88"
+         stop-color="#439f93"
+         id="stop22093" />
+      <stop
+         offset="0.98"
+         stop-color="#2c897d"
+         id="stop22095" />
+      <stop
+         offset="1"
+         stop-color="#258277"
+         id="stop22097" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title22102">Icon-general-15</title>
+  <path
+     d="M 0.55,4.1785469e-4 H 17.49 A 0.52,0.52 0 0 1 18.03,0.49041785 V 12.260418 a 0.52,0.52 0 0 1 -0.54,0.49 H 0.55 A 0.53,0.53 0 0 1 0,12.260418 V 0.51041785 A 0.53,0.53 0 0 1 0.55,4.1785469e-4 Z"
+     id="path22104"
+     inkscape:connector-curvature="0"
+     style="fill:url(#b9c03c70-29a5-4e17-9674-29577b4b9674)" />
+  <path
+     id="bd0aa3dd-0b00-4321-a08d-35d4016600a8"
+     d="m 7.49,1.5104179 h 8.09 a 0.16,0.16 0 0 1 0.16,0.15 v 4.47 a 0.16,0.16 0 0 1 -0.16,0.15 H 7.49 a 0.16,0.16 0 0 1 -0.16,-0.15 v -4.48 a 0.16,0.16 0 0 1 0.16,-0.14 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <rect
+     id="bda038fc-05f8-4c73-8191-dcc998cc8c65"
+     x="2.24"
+     y="1.5004178"
+     width="3.4100001"
+     height="9.6099997"
+     rx="0.15000001"
+     style="fill:#ffffff" />
+  <path
+     id="f698805f-4654-42cb-b2bf-38f0a925cdbf"
+     d="m 12.41,7.6304179 h 3.14 a 0.15,0.15 0 0 1 0.15,0.15 v 3.1900001 a 0.15,0.15 0 0 1 -0.15,0.14 h -3.14 a 0.15,0.15 0 0 1 -0.15,-0.14 V 7.7804179 a 0.15,0.15 0 0 1 0.15,-0.15 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     id="f83fd769-9efd-4d02-bd0d-a012d7e875a2"
+     d="m 7.44,7.6304179 h 3.05 a 0.15,0.15 0 0 1 0.15,0.15 v 3.1900001 a 0.14,0.14 0 0 1 -0.14,0.14 H 7.49 a 0.15,0.15 0 0 1 -0.15,-0.15 V 7.7804179 a 0.14,0.14 0 0 1 0.1,-0.15 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata22110">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Dashboard()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-15</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

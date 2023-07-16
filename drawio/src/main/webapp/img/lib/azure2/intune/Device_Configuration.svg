@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="bf3a2419-135b-41ee-bc88-2f3b1acc56fb"
+   width="15.49"
+   height="16.99"
+   viewBox="0 0 15.49 16.99"
+   version="1.1"
+   sodipodi:docname="Device_Configuration.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview36179"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.7288777"
+     inkscape:cy="8.5006305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bf3a2419-135b-41ee-bc88-2f3b1acc56fb" />
+  <defs
+     id="defs36162">
+    <linearGradient
+       id="aea980d4-fa5d-4c84-bc90-5406a1644118"
+       x1="6.3600001"
+       y1="22.030001"
+       x2="6.3600001"
+       y2="-1.85"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.28,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop36144" />
+      <stop
+         offset="0.17"
+         stop-color="#1c84dc"
+         id="stop36146" />
+      <stop
+         offset="0.38"
+         stop-color="#3990e4"
+         id="stop36148" />
+      <stop
+         offset="0.59"
+         stop-color="#4d99ea"
+         id="stop36150" />
+      <stop
+         offset="0.8"
+         stop-color="#5a9eee"
+         id="stop36152" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop36154" />
+    </linearGradient>
+    <linearGradient
+       id="b9a53daf-5df9-457b-aa44-5b4bf259cd65"
+       x1="6.3600001"
+       y1="15.58"
+       x2="6.3600001"
+       y2="1.9400001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.28,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#d2ebff"
+         id="stop36157" />
+      <stop
+         offset="1"
+         stop-color="#f0fffd"
+         id="stop36159" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title36164">Icon-intune-338</title>
+  <rect
+     x="0"
+     y="0"
+     width="10.17"
+     height="16.99"
+     rx="0.50999999"
+     fill="url(#aea980d4-fa5d-4c84-bc90-5406a1644118)"
+     id="rect36166"
+     style="fill:url(#aea980d4-fa5d-4c84-bc90-5406a1644118)" />
+  <rect
+     x="4.5100002"
+     y="15.66"
+     width="1.14"
+     height="0.97000003"
+     rx="0.27000001"
+     fill="#f2f2f2"
+     id="rect36168" />
+  <rect
+     x="3.9100001"
+     y="0.57000005"
+     width="2.3399999"
+     height="0.31"
+     rx="0.14"
+     fill="#f2f2f2"
+     id="rect36170" />
+  <rect
+     x="0.95000005"
+     y="1.4400001"
+     width="8.2600002"
+     height="13.65"
+     rx="0.19"
+     opacity="0.9"
+     fill="url(#b9a53daf-5df9-457b-aa44-5b4bf259cd65)"
+     id="rect36172"
+     style="fill:url(#b9a53daf-5df9-457b-aa44-5b4bf259cd65)" />
+  <path
+     d="m 14.63,15.21 v 0 l -0.49,-1 a 0.14,0.14 0 0 1 0,-0.11 l 0.17,-0.59 a 0.15,0.15 0 0 1 0.09,-0.1 l 1,-0.36 a 0.17,0.17 0 0 0 0.09,-0.14 v -0.93 l -0.06,-0.05 -1,-0.34 A 0.13,0.13 0 0 1 14.34,11.5 l -0.22,-0.58 a 0.17,0.17 0 0 1 0,-0.12 l 0.42,-0.86 a 0.14,0.14 0 0 0 0,-0.17 L 13.88,9.1 a 0.15,0.15 0 0 0 -0.17,0 L 12.87,9.52 A 0.14,0.14 0 0 1 12.72,9.5 L 12.15,9.33 a 0.12,0.12 0 0 1 -0.1,-0.09 l -0.38,-1 a 0.15,0.15 0 0 0 -0.14,-0.1 h -0.91 -0.05 l -0.34,1 A 0.16,0.16 0 0 1 10.14,9.23 L 9.55,9.45 a 0.17,0.17 0 0 1 -0.12,0 l -1,-0.5 a 0.15,0.15 0 0 0 -0.17,0 L 7.68,9.52 a 0.17,0.17 0 0 0 0,0.17 v 0 l 0.49,1 a 0.17,0.17 0 0 1 0,0.12 L 7.89,11.5 A 0.16,0.16 0 0 1 7.8,11.59 l -1.08,0.33 a 0.15,0.15 0 0 0 -0.1,0.14 v 0.81 a 0.13,0.13 0 0 0 0.1,0.14 v 0 l 1,0.34 a 0.16,0.16 0 0 1 0.09,0.09 l 0.24,0.58 a 0.13,0.13 0 0 1 0,0.12 l -0.5,1 a 0.16,0.16 0 0 0 0,0.16 l 0.57,0.59 a 0.15,0.15 0 0 0 0.18,0 v 0 l 1,-0.49 a 0.13,0.13 0 0 1 0.12,0 L 10,15.64 a 0.2,0.2 0 0 1 0.09,0.09 l 0.38,1.08 a 0.15,0.15 0 0 0 0.14,0.1 h 0.81 a 0.15,0.15 0 0 0 0.14,-0.11 v 0 l 0.34,-1 a 0.2,0.2 0 0 1 0.09,-0.09 l 0.73,-0.21 a 0.16,0.16 0 0 1 0.12,0 l 1.05,0.49 a 0.14,0.14 0 0 0 0.17,0 l 0.57,-0.57 a 0.14,0.14 0 0 0 0,-0.21 z m -4.08,-1.37 a 1.41,1.41 0 1 1 1.84,-0.75 1.41,1.41 0 0 1 -1.84,0.75 z"
+     fill="#949494"
+     id="path36174" />
+  <circle
+     cx="-7.2533889"
+     cy="15.088174"
+     r="1.4"
+     transform="rotate(-67.17)"
+     fill="#ffffff"
+     id="circle36176" />
+  <metadata
+     id="metadata36261">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-intune-338</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

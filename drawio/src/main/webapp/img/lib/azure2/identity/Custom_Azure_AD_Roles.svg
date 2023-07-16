@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.788687"
+   height="17.802"
+   viewBox="0 0 17.788687 17.802"
+   version="1.1"
+   id="svg28921"
+   sodipodi:docname="Custom_Azure_AD_Roles.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview28923"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.8865069"
+     inkscape:cy="8.9092055"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg28921"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs28900">
+    <linearGradient
+       id="a8c422b3-2be3-408c-9302-3a4621bbfd64"
+       x1="-609.26001"
+       y1="-224.13"
+       x2="-609.26001"
+       y2="-211.218"
+       gradientTransform="matrix(1,0,0,-1,617.02069,-205.857)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop28890" />
+      <stop
+         offset="1"
+         stop-color="#b4ec36"
+         id="stop28892" />
+    </linearGradient>
+    <linearGradient
+       id="b2f19e06-38a1-4f8e-8f30-7617c1e8ec45"
+       x1="-609.22302"
+       y1="-214.978"
+       x2="-609.22302"
+       y2="-203.218"
+       gradientTransform="matrix(1,0,0,-1,617.02069,-205.857)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop28895" />
+      <stop
+         offset="1"
+         stop-color="#b4ec36"
+         id="stop28897" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 14.133687,17.122 a 1.363,1.363 0 0 0 1.383,-1.341 V 15.75 a 0.943,0.943 0 0 0 0,-0.168 c -0.545,-4.346 -3.016,-7.881 -7.7500004,-7.881 -4.734,0 -7.24600001,3 -7.76000001,7.9 A 1.4,1.4 0 0 0 1.2536866,17.13 Z"
+     fill="url(#a8c422b3-2be3-408c-9302-3a4621bbfd64)"
+     id="path28902"
+     style="fill:url(#a8c422b3-2be3-408c-9302-3a4621bbfd64)" />
+  <path
+     d="m 7.8506866,8.723 a 4.364,4.364 0 0 1 -2.367,-0.691 l 2.283,6.105 2.3280004,-6.063 A 4.4,4.4 0 0 1 7.8506866,8.723 Z"
+     fill="#ffffff"
+     opacity="0.8"
+     id="path28904" />
+  <circle
+     cx="7.7986865"
+     cy="4.3670001"
+     r="4.3670001"
+     fill="url(#b2f19e06-38a1-4f8e-8f30-7617c1e8ec45)"
+     id="circle28906"
+     style="fill:url(#b2f19e06-38a1-4f8e-8f30-7617c1e8ec45)" />
+  <polygon
+     points="14.082,17.901 14.082,13.461 17.894,11.231 17.894,15.671 "
+     fill="#ef7100"
+     id="polygon28908"
+     transform="translate(-0.10531341,-0.09899998)" />
+  <polygon
+     points="10.27,11.231 14.082,9 17.894,11.231 14.082,13.461 "
+     fill="#f78d1e"
+     id="polygon28910"
+     transform="translate(-0.10531341,-0.09899998)" />
+  <polygon
+     points="10.27,15.671 10.27,11.231 14.082,13.461 14.082,17.901 "
+     fill="#faa21d"
+     id="polygon28912"
+     transform="translate(-0.10531341,-0.09899998)" />
+  <polygon
+     points="10.27,15.671 14.082,13.461 14.082,17.901 "
+     fill="#ffb34d"
+     id="polygon28914"
+     transform="translate(-0.10531341,-0.09899998)" />
+  <polygon
+     points="17.894,15.671 14.082,13.461 14.082,17.901 "
+     fill="#f78d1e"
+     id="polygon28916"
+     transform="translate(-0.10531341,-0.09899998)" />
+</svg>

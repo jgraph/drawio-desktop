@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b5aac633-5e4e-4ba3-b79d-874030b01628"
+   width="17.340094"
+   height="18.001358"
+   viewBox="0 0 17.340094 18.001358"
+   version="1.1"
+   sodipodi:docname="Disks_Snapshots.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5678"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.7100923"
+     inkscape:cy="9.12"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b5aac633-5e4e-4ba3-b79d-874030b01628" />
+  <defs
+     id="defs5647">
+    <linearGradient
+       id="f5aba28d-a61e-4c5e-a881-77250d6754cf"
+       x1="14.18"
+       y1="12.41"
+       x2="14.2"
+       y2="12.41"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop5627" />
+      <stop
+         offset="0.14"
+         stop-color="#1782da"
+         id="stop5629" />
+      <stop
+         offset="0.37"
+         stop-color="#368fe3"
+         id="stop5631" />
+      <stop
+         offset="0.59"
+         stop-color="#4c98ea"
+         id="stop5633" />
+      <stop
+         offset="0.8"
+         stop-color="#599eee"
+         id="stop5635" />
+      <stop
+         offset="0.99"
+         stop-color="#5ea0ef"
+         id="stop5637" />
+    </linearGradient>
+    <linearGradient
+       id="bdc9aa5d-e4d2-4d75-91df-453ede2d7944"
+       x1="9.0100002"
+       y1="11.69"
+       x2="9.0100002"
+       y2="2.48"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop5640" />
+      <stop
+         offset="0.54"
+         stop-color="#358ee3"
+         id="stop5642" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop5644" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#f5aba28d-a61e-4c5e-a881-77250d6754cf"
+       id="linearGradient5680"
+       gradientUnits="userSpaceOnUse"
+       x1="14.18"
+       y1="12.41"
+       x2="14.2"
+       y2="12.41" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#f5aba28d-a61e-4c5e-a881-77250d6754cf"
+       id="linearGradient5682"
+       gradientUnits="userSpaceOnUse"
+       x1="14.18"
+       y1="12.41"
+       x2="14.2"
+       y2="12.41" />
+  </defs>
+  <title
+     id="title5649">Icon-compute-26</title>
+  <ellipse
+     cx="8.7200928"
+     cy="11.001357"
+     rx="6.0700002"
+     ry="2.49"
+     id="ellipse5651"
+     style="fill:#76bc2d" />
+  <ellipse
+     cx="8.8700924"
+     cy="10.981358"
+     rx="2.02"
+     ry="0.55000001"
+     id="ellipse5653"
+     style="fill:#5e9624" />
+  <path
+     d="M 13.890092,12.281358 Z"
+     id="path5655"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient5680)" />
+  <ellipse
+     cx="8.7200928"
+     cy="5.4713578"
+     rx="6.0700002"
+     ry="2.49"
+     id="ellipse5657"
+     style="fill:url(#bdc9aa5d-e4d2-4d75-91df-453ede2d7944)" />
+  <ellipse
+     cx="8.8700924"
+     cy="5.4413576"
+     rx="2.02"
+     ry="0.55000001"
+     id="ellipse5659"
+     style="fill:#005ba1" />
+  <path
+     d="M 3.6000923,0.0013576 H 0.60009232 a 0.58,0.58 0 0 0 -0.599999999163,0.59 v 3 a 0.29,0.29 0 0 0 0.289999999163,0.29 h 0.33 a 0.29,0.29 0 0 0 0.3,-0.29 v -2.71 H 3.6000923 a 0.29,0.29 0 0 0 0.3,-0.29 v -0.29 a 0.29,0.29 0 0 0 -0.3,-0.3 z"
+     id="path5661"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 16.710092,0.0013576 h -3 a 0.3,0.3 0 0 0 -0.3,0.3 v 0.32 a 0.3,0.3 0 0 0 0.3,0.26 h 2.69 v 2.7 a 0.29,0.29 0 0 0 0.31,0.3 h 0.33 a 0.29,0.29 0 0 0 0.3,-0.29 v -3 0 a 0.59,0.59 0 0 0 -0.63,-0.59 z"
+     id="path5663"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="M 3.6000923,17.091358 H 0.92009232 v -2.7 a 0.29,0.29 0 0 0 -0.3,-0.29 h -0.33 a 0.29,0.29 0 0 0 -0.289999999163,0.29 v 3 0 a 0.58,0.58 0 0 0 0.579999999163,0.59 H 3.5800923 a 0.29,0.29 0 0 0 0.3,-0.29 v -0.32 a 0.3,0.3 0 0 0 -0.28,-0.28 z"
+     id="path5665"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 17.000092,14.101358 h -0.29 a 0.29,0.29 0 0 0 -0.29,0.29 v 2.7 h -2.71 a 0.31,0.31 0 0 0 -0.3,0.3 v 0.32 a 0.3,0.3 0 0 0 0.3,0.29 h 3 a 0.59,0.59 0 0 0 0.59,-0.59 v -3 a 0.29,0.29 0 0 0 -0.3,-0.31 z"
+     id="path5667"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 8.7100923,13.441358 c 3.3499997,0 6.0699997,-1.11 6.0699997,-2.49 v 0 1.47 0 c -0.07,1.34 -2.78,2.46 -6.0699997,2.46 -3.29,0 -6.07,-1.12 -6.07,-2.49 v -1.44 c 0.01,1.38 2.73,2.49 6.07,2.49 z"
+     id="path5669"
+     inkscape:connector-curvature="0"
+     style="fill:#5e9624" />
+  <path
+     d="M 13.890092,12.281358 Z"
+     id="path5671"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient5682)" />
+  <path
+     d="m 8.7100923,7.8813576 c 3.3499997,0 6.0699997,-1.12 6.0699997,-2.49 v 0 1.49 0 c -0.07,1.35 -2.78,2.42 -6.0699997,2.42 -3.29,0 -6.06,-1.12 -6.06,-2.5 v -1.38 c 0,1.37 2.72,2.46 6.06,2.46 z"
+     id="path5673"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <metadata
+     id="metadata5675">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-26</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

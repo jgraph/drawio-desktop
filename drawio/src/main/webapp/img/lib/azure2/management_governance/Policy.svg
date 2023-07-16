@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e0c2a2f0-e647-4f01-b91b-afb7bf15040d"
+   width="16.007648"
+   height="16.978119"
+   viewBox="0 0 16.007648 16.978119"
+   version="1.1"
+   sodipodi:docname="Policy.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview61942"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.0076491"
+     inkscape:cy="8.4777112"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e0c2a2f0-e647-4f01-b91b-afb7bf15040d" />
+  <defs
+     id="defs61917">
+    <linearGradient
+       id="a7f731a9-5c58-44f4-8037-3c3627e98008"
+       x1="8.4499998"
+       y1="11.47"
+       x2="8.4499998"
+       y2="6.2399998"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop61906" />
+      <stop
+         offset="0.16"
+         stop-color="#1f9ac2"
+         id="stop61908" />
+      <stop
+         offset="0.5"
+         stop-color="#29bade"
+         id="stop61910" />
+      <stop
+         offset="0.8"
+         stop-color="#30cdef"
+         id="stop61912" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop61914" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title61919">Icon-manage-316</title>
+  <ellipse
+     cx="7.4576488"
+     cy="8.3504076"
+     rx="2.5999999"
+     ry="2.6099999"
+     id="ellipse61921"
+     style="fill:url(#a7f731a9-5c58-44f4-8037-3c3627e98008)" />
+  <ellipse
+     cx="14.737649"
+     cy="4.2704072"
+     rx="1.27"
+     ry="1.28"
+     id="ellipse61923"
+     style="fill:#32bedd" />
+  <ellipse
+     cx="14.737649"
+     cy="8.450407"
+     rx="1.27"
+     ry="1.28"
+     id="ellipse61925"
+     style="fill:#32bedd" />
+  <ellipse
+     cx="14.737649"
+     cy="12.620407"
+     rx="1.27"
+     ry="1.28"
+     id="ellipse61927"
+     style="fill:#32bedd" />
+  <ellipse
+     cx="11.837649"
+     cy="6.4104071"
+     rx="1.27"
+     ry="1.28"
+     id="ellipse61929"
+     style="fill:#50e6ff" />
+  <ellipse
+     cx="11.837649"
+     cy="10.590407"
+     rx="1.27"
+     ry="1.28"
+     id="ellipse61931"
+     style="fill:#50e6ff" />
+  <path
+     d="m 1.4176491,5.0804072 a 0.24,0.24 0 0 1 0.09,-0.08 l 5.82,-3.39 c 0.08,0 4.9999999,2.78 4.9999999,2.78 a 0.24,0.24 0 0 0 0.36,-0.21 v -1.09 a 0.24,0.24 0 0 0 -0.12,-0.21 c 0,0 -5.1599999,-2.91999996 -5.2299999,-2.87999996227 L 0.11764912,4.1404072 l -0.11,0.08 z"
+     id="path61933"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 12.307649,12.640407 -4.7399999,2.73 a 0.35,0.35 0 0 1 -0.11,0 v 1.6 a 0.2,0.2 0 0 0 0.11,0 l 4.9999999,-2.86 a 0.24,0.24 0 0 0 0.12,-0.2 v -1.06 a 0.24,0.24 0 0 0 -0.38,-0.21 z"
+     id="path61935"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 7.4576491,15.400407 a 0.31,0.31 0 0 1 -0.13,0 l -5.82,-3.43 a 0.22,0.22 0 0 1 -0.12,-0.2 V 5.2004072 a 0.27,0.27 0 0 1 0,-0.12 l -1.37999998,-0.86 a 0.28,0.28 0 0 0 0,0.13 v 8.2699998 a 0.24,0.24 0 0 0 0.11,0.21 l 7.21999998,4.14 a 0.24,0.24 0 0 0 0.12,0 z"
+     id="path61937"
+     inkscape:connector-curvature="0"
+     style="fill:#b3b3b3" />
+  <metadata
+     id="metadata61939">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-316</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

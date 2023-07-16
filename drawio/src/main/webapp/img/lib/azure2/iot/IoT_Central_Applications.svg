@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b8a5deb0-257d-4029-9ed0-a02518e9a519"
+   width="15.7"
+   height="18"
+   viewBox="0 0 15.7 18"
+   version="1.1"
+   sodipodi:docname="IoT_Central_Applications.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs56532" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview56530"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.85"
+     inkscape:cy="9"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b8a5deb0-257d-4029-9ed0-a02518e9a519" />
+  <title
+     id="title56511">Icon-iot-184</title>
+  <path
+     d="M 7.85,0 0,4.49 v 3 L 3.05,9.34 V 7.54 L 1.45,6.62 V 5.38 l 6.4,-3.7 6.4,3.71 v 7.18 L 7.85,16.27 0,11.78 v 1.68 L 7.85,18 15.7,13.51 v -9 z"
+     id="path56513"
+     inkscape:connector-curvature="0"
+     style="fill:#a3a3a3" />
+  <polygon
+     points="1.15,4.49 2.6,5.38 9,1.68 9,1.68 15.4,5.38 16.85,4.49 9,0 "
+     id="polygon56515"
+     style="fill:#949494"
+     transform="translate(-1.15)" />
+  <polygon
+     points="9,13.93 9,9.01 13.25,6.54 13.25,11.46 "
+     id="polygon56517"
+     style="fill:#32bedd"
+     transform="translate(-1.15)" />
+  <polygon
+     points="4.75,6.54 9,4.07 13.25,6.54 9,9.01 "
+     id="polygon56519"
+     style="fill:#9cebff"
+     transform="translate(-1.15)" />
+  <polygon
+     points="4.75,11.46 4.75,6.54 9,9.01 9,13.93 "
+     id="polygon56521"
+     style="fill:#50e6ff"
+     transform="translate(-1.15)" />
+  <polygon
+     points="9,13.93 4.75,11.46 9,9.01 "
+     id="polygon56523"
+     style="fill:#9cebff"
+     transform="translate(-1.15)" />
+  <polygon
+     points="9,13.93 13.25,11.46 9,9.01 "
+     id="polygon56525"
+     style="fill:#50e6ff"
+     transform="translate(-1.15)" />
+  <metadata
+     id="metadata56527">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-iot-184</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

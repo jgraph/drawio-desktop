@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="bcf59632-8add-4163-98ab-f4b84940e447"
+   width="17.995762"
+   height="15.37"
+   viewBox="0 0 17.995762 15.37"
+   version="1.1"
+   sodipodi:docname="Stream_Analytics_Jobs.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview57128"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.9957617"
+     inkscape:cy="7.67"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bcf59632-8add-4163-98ab-f4b84940e447" />
+  <defs
+     id="defs57111">
+    <linearGradient
+       id="bf1f93aa-5175-40a2-82a6-8b8653d30d7a"
+       x1="11.08"
+       y1="31.200001"
+       x2="11.08"
+       y2="15.71"
+       gradientTransform="matrix(1,0,0,0.99,0.00423829,-13.02)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#949494"
+         id="stop57102" />
+      <stop
+         offset="0.33"
+         stop-color="#9b9b9b"
+         id="stop57104" />
+      <stop
+         offset="0.82"
+         stop-color="#aeafb0"
+         id="stop57106" />
+      <stop
+         offset="1"
+         stop-color="#b6b8b9"
+         id="stop57108" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title57113">Icon-analytics-147</title>
+  <g
+     id="g57123"
+     transform="translate(-0.00423829,-1.3)">
+    <path
+       d="M 18,9.69 V 7.9 L 17.9,7.81 16.06,7.19 15.59,6 16.5,4.12 16.6,3.91 16,3.3 15.3,2.61 15.06,2.73 13.26,3.64 12.05,3.3 11.27,1.3 H 9.48 L 9.39,1.39 8.77,3.22 7.51,3.69 5.43,2.69 4.15,3.94 4.27,4.18 5.23,6 A 6,6 0 0 1 8.43,5.14 6.26,6.26 0 0 1 12,6.28 3.32,3.32 0 0 1 12.36,6.54 v 0 a 3.25,3.25 0 0 1 0.93,1.35 v 0 A 3,3 0 0 1 13.5,9 a 3.23,3.23 0 0 1 -3.25,3.23 3.27,3.27 0 0 1 -1.87,-0.59 6.31,6.31 0 0 1 -4,1.75 l -0.19,0.39 1.28,1.29 0.26,-0.07 1.8,-1 1.24,0.51 0.79,2.16 h 1.8 L 11.43,16.42 12.07,14.51 13.29,14 15.4,15 16.67,13.74 16.55,13.5 15.62,11.71 16,10.46 Z"
+       id="path57115"
+       inkscape:connector-curvature="0"
+       style="fill:url(#bf1f93aa-5175-40a2-82a6-8b8653d30d7a)" />
+    <path
+       d="m 4,10.65 v 0 A 3.6,3.6 0 0 1 1.44,9.6 0.46,0.46 0 1 1 2.09,9 2.65,2.65 0 0 0 4,9.73 v 0 A 2.62,2.62 0 0 0 5.88,9 3.55,3.55 0 0 1 8.43,8 3.64,3.64 0 0 1 11,9 0.46,0.46 0 1 1 10.35,9.65 2.69,2.69 0 0 0 8.46,8.87 v 0 A 2.61,2.61 0 0 0 6.58,9.65 3.61,3.61 0 0 1 4,10.65 Z"
+       id="path57117"
+       inkscape:connector-curvature="0"
+       style="fill:#50e6ff" />
+    <path
+       d="m 4,8.82 v 0 A 1.79,1.79 0 0 1 2.74,8.3 0.46,0.46 0 0 1 3.39,7.65 0.84,0.84 0 0 0 4,7.9 v 0 a 1.08,1.08 0 0 0 0.6,-0.25 5.46,5.46 0 0 1 7.67,0 A 0.46,0.46 0 0 1 11.62,8.3 4.55,4.55 0 0 0 5.21,8.3 1.94,1.94 0 0 1 4,8.82 Z"
+       id="path57119"
+       inkscape:connector-curvature="0"
+       style="fill:#50e6ff" />
+    <path
+       d="m 4,12.48 a 5.41,5.41 0 0 1 -3.87,-1.59 0.47,0.47 0 0 1 0,-0.64 0.47,0.47 0 0 1 0.66,0 4.47,4.47 0 0 0 3.21,1.32 4.5,4.5 0 0 0 3.2,-1.33 1.94,1.94 0 0 1 1.21,-0.49 1.83,1.83 0 0 1 1.25,0.52 0.46,0.46 0 0 1 0,0.65 0.47,0.47 0 0 1 -0.66,0 0.83,0.83 0 0 0 -0.59,-0.25 v 0 A 1,1 0 0 0 7.81,10.93 5.41,5.41 0 0 1 4,12.48 Z"
+       id="path57121"
+       inkscape:connector-curvature="0"
+       style="fill:#32bedd" />
+  </g>
+  <metadata
+     id="metadata57125">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.StreamAnalytics()</rdf:li>
+      <rdf:li>category: Analytics, IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-analytics-147</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

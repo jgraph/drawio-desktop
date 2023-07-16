@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e6af6735-bd3f-44c2-910e-4b8b228f3336"
+   width="17.001118"
+   height="16.084408"
+   viewBox="0 0 17.001118 16.084408"
+   version="1.1"
+   sodipodi:docname="Service_Health.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview45287"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.8455022"
+     inkscape:cy="8.12"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e6af6735-bd3f-44c2-910e-4b8b228f3336" />
+  <defs
+     id="defs45274">
+    <linearGradient
+       id="f5e553fa-756a-4028-aba5-719555f5d693"
+       x1="8.6599998"
+       y1="17.120001"
+       x2="8.6599998"
+       y2="1.03"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1988d9"
+         id="stop45265" />
+      <stop
+         offset="0.22"
+         stop-color="#218ddc"
+         id="stop45267" />
+      <stop
+         offset="0.56"
+         stop-color="#379ce5"
+         id="stop45269" />
+      <stop
+         offset="0.9"
+         stop-color="#54aef0"
+         id="stop45271" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title45276">Icon-general-4</title>
+  <path
+     d="m 8.5055022,16.084407 c 8.1799998,-5.86 8.4599998,-9.28 8.4899998,-10.35 0.05,-1.5 -0.15,-5.41000001 -4.15,-5.72000001 A 4.26,4.26 0 0 0 8.5055022,2.864407 a 4.28,4.28 0 0 0 -4.39,-2.85000001 c -3.94999995,0.31 -4.15999995,4.22000001 -4.10999995,5.72000001 0,1.07 0.32,4.49 8.49999995,10.35"
+     id="path45278"
+     inkscape:connector-curvature="0"
+     style="fill:url(#f5e553fa-756a-4028-aba5-719555f5d693)" />
+  <path
+     d="m 16.995502,5.734407 c 0.05,-1.5 -0.15,-5.41000001 -4.15,-5.72000001 A 4.26,4.26 0 0 0 8.5055022,2.864407 a 4.28,4.28 0 0 0 -4.39,-2.85000001 c -3.94999995,0.31 -4.15999995,4.22000001 -4.10999995,5.72000001 0,1.07 0.24,4.44 8.42999995,10.3"
+     id="path45280"
+     inkscape:connector-curvature="0"
+     style="fill:none" />
+  <path
+     d="m 16.995502,5.144407 h -4 a 0.17,0.17 0 0 0 -0.13,0.07 l -1.21,2.09 a 0.16,0.16 0 0 1 -0.27,0 l -1.7299998,-3.29 a 0.31,0.31 0 0 0 -0.56,0 l -1.66,4.95 a 0.16,0.16 0 0 1 -0.29,0 l -1.42,-3.29 a 0.31,0.31 0 0 0 -0.55,0 l -1.94,3.49 a 0.16,0.16 0 0 1 -0.13,0.08 h -1.84 a 13,13 0 0 0 0.9,1.22 h 1.68 a 0.13,0.13 0 0 0 0.13,-0.08 l 1.21,-2.23 a 0.16,0.16 0 0 1 0.28,0 l 1.66,3.86 a 0.31,0.31 0 0 0 0.58,0 l 1.75,-5.2 a 0.15,0.15 0 0 1 0.28,0 l 1.4599998,2.77 a 0.3,0.3 0 0 0 0.53,0 l 1.86,-3.13 a 0.16,0.16 0 0 1 0.13,-0.08 h 3.23"
+     id="path45282"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata45284">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-4</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

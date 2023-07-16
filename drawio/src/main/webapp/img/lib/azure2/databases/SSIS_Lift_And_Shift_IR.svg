@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="af189b19-13e4-4905-af1b-f05e22230012" sodipodi:docname="02392-icon-service-SSIS-Lift-And-Shift-IR.svg"
+    version="1.1" width="16.211733" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 90.065183 99.335999"
+    height="17.88048" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs1782">
+        <linearGradient gradientTransform="matrix(1,0,0,-1,0,102)" x1="4.9689999" y1="45.222" x2="79.875" gradientUnits="userSpaceOnUse"
+            y2="45.222" id="e3344512-11a0-4dfd-b3f7-44857e080202">
+            <stop offset="0" stop-color="#005ba1" id="stop1767"/>
+            <stop offset="0.07" stop-color="#0060a9" id="stop1769"/>
+            <stop offset="0.36" stop-color="#0071c8" id="stop1771"/>
+            <stop offset="0.52" stop-color="#0078d4" id="stop1773"/>
+            <stop offset="0.64" stop-color="#0074cd" id="stop1775"/>
+            <stop offset="0.82" stop-color="#006abb" id="stop1777"/>
+            <stop offset="1" stop-color="#005ba1" id="stop1779"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:url(#e3344512-11a0-4dfd-b3f7-44857e080202)" d="M 37.46,27.113 C 16.774,27.113 0.004,21.27 
+        0.004,13.556 V 85.78 c 0,7.421 16.478,13.439 36.93,13.556 h 0.526 c 20.681,0 37.45,-5.843 37.45,-13.556 V 13.556 
+        c 0,7.538 -16.769,13.557 -37.45,13.557 z"/>
+    <path style="fill:#e8e8e8" d="m 74.91,13.556 c 0,7.538 -16.769,13.557 -37.45,13.557 C 16.779,27.113 0,21.268 
+        0,13.556 0,5.844 16.77,0 37.46,0 58.15,0 74.91,5.843 74.91,13.556 Z"/>
+    <path style="fill:#50e6ff" d="m 66.205,12.445 c 0,4.793 -12.914,8.649 -28.749,8.649 -15.835,0 -28.749,-3.856 
+        -28.749,-8.649 0,-4.793 12.914,-8.589 28.749,-8.589 15.835,0 28.749,3.857 28.749,8.589 z"/>
+    <path style="fill:#198ab3" d="m 37.46,14.42 a 73.46,73.46 0 0 0 -22.725,3.331 c 4.985,1.839 15.164,3.645 
+        22.866,3.376 A 65.267,65.267 0 0 0 60.335,17.676 76.58,76.58 0 0 0 37.46,14.42 Z"/>
+    <path style="fill:#ffffff" d="M 67.925,95.886 A 19.635,19.635 0 1 0 48.29,76.251 19.635,19.635 0 0 0 67.925,95.886 
+        Z"/>
+    <path style="fill:#003067" d="m 67.456,59.596 a 16.65,16.65 0 1 1 -6.374,1.272 16.656,16.656 0 0 1 6.374,-1.272 z m 
+        0,-5.96 a 22.64,22.64 0 1 0 15.979,6.632 22.609,22.609 0 0 0 -15.979,-6.632 z"/>
+    <path style="fill:#76bc2d" d="m 56.988,81.512 a 2.689,2.689 0 0 0 2.682,2.669 h 0.018 l 8.991,-0.078 V 78.45 h -5.8 
+        V 68.037 l -3.3,0.02 a 2.681,2.681 0 0 0 -2.473,1.676 2.7,2.7 0 0 0 -0.2,1.031 l 0.027,3.97 h -3.564 v 2.662 h 
+        3.583 z"/>
+    <path style="fill:#76bc2d" d="m 78.548,70.622 a 2.689,2.689 0 0 0 -2.682,-2.669 h -0.018 l -8.813,0.074 v 6.272 h 
+        5.8 v 9.8 l 3.121,-0.02 a 2.683,2.683 0 0 0 2.669,-2.7 l -0.027,-3.974 h 3.571 v -2.671 h -3.588 z"/>​
+</svg>

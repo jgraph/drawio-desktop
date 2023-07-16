@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   version="1.1"
+   id="svg26322"
+   sodipodi:docname="Guide.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview26324"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg26322" />
+  <defs
+     id="defs26305">
+    <radialGradient
+       id="a46c6207-de72-42c2-9439-402b14abf53e"
+       cx="9"
+       cy="9"
+       r="8.5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.5)">
+      <stop
+         offset="0"
+         stop-color="#50e6ff"
+         id="stop26296" />
+      <stop
+         offset="0.333"
+         stop-color="#49ddf7"
+         id="stop26298" />
+      <stop
+         offset="0.876"
+         stop-color="#37c5e3"
+         id="stop26300" />
+      <stop
+         offset="1"
+         stop-color="#32bedd"
+         id="stop26302" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title26307">MsPortalFx.base.images-72</title>
+  <g
+     id="b043d919-8eb3-4f42-a358-981a88dfb740"
+     transform="translate(-0.5,-0.5)">
+    <g
+       id="g26317">
+      <circle
+         cx="9"
+         cy="9"
+         r="8.5"
+         id="circle26309"
+         style="fill:url(#a46c6207-de72-42c2-9439-402b14abf53e)" />
+      <circle
+         cx="9"
+         cy="9"
+         r="6.7610002"
+         id="circle26311"
+         style="fill:#198ab3" />
+      <path
+         d="M 6.916,8.637 10.938,9.811 10.424,4.689 A 0.179,0.179 0 0 0 10.106,4.596 Z"
+         id="path26313"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <path
+         d="M 10.96,9.735 6.938,8.56 7.452,13.683 a 0.179,0.179 0 0 0 0.318,0.093 z"
+         id="path26315"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+    </g>
+  </g>
+  <metadata
+     id="metadata26320">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Guide()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-72</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

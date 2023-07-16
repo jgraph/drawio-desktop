@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg4240" sodipodi:docname="02340-icon-service-Template-Specs.svg" version="1.1"
+    width="14.362004" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 14.362004 17"
+    height="17" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs4216">
+        <linearGradient gradientTransform="translate(49,-58)" x1="-40" y1="74.181" x2="-40" gradientUnits="userSpaceOnUse"
+            y2="59.819" id="a9c4371a-d707-43d8-b213-37d041a253ab">
+            <stop offset="0" stop-color="#198ab3" id="stop4209"/>
+            <stop offset="0.619" stop-color="#31d0f1" id="stop4211"/>
+            <stop offset="1" stop-color="#32d4f5" id="stop4213"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:#32bedd" d="m 4.3970044,0 h -3.371 A 1.026,1.026 0 0 0 4.3859743e-6,1.026 V 4.4 H 2.0520044 V 
+        2.052 h 2.345 z"/>
+    <path style="fill:#32bedd" d="M 13.336004,0 H 9.9660044 V 2.052 H 12.310004 V 4.4 h 2.052 V 1.026 A 1.026,1.026 0 0 
+        0 13.336004,0 Z"/>
+    <path style="fill:#32bedd" d="m 12.310004,12.6 v 2.345 H 9.9660044 V 17 h 3.3699996 a 1.026,1.026 0 0 0 1.026,-1.026 
+        V 12.6 Z"/>
+    <path style="fill:#32bedd" d="M 2.0520044,14.948 V 12.6 H 4.3859743e-6 v 3.371 A 1.026,1.026 0 0 0 1.0260044,17 h 
+        3.371 v -2.052 z"/>
+    <path style="fill:url(#a9c4371a-d707-43d8-b213-37d041a253ab)" d="M 1.9050044,15.681 H 12.457004 a 0.588,0.588 0 0 0 
+        0.586,-0.586 V 1.9 a 0.588,0.588 0 0 0 -0.586,-0.586 H 1.9050044 a 0.588,0.588 0 0 0 -0.586,0.586 v 13.2 a 
+        0.588,0.588 0 0 0 0.586,0.581 z"/>
+    <path style="fill:#ffffff" d="m 2.7810044,14.509 h 8.7999996 a 0.294,0.294 0 0 0 0.293,-0.293 V 2.785 a 0.294,0.294 
+        0 0 0 -0.293,-0.294 H 2.7810044 a 0.294,0.294 0 0 0 -0.293,0.294 v 11.431 a 0.294,0.294 0 0 0 0.293,0.293 z"/>
+    <path style="fill:#5e9624" d="m 4.8360044,12.75 h 4.69 a 0.294,0.294 0 0 0 0.293,-0.293 v -1.319 a 0.294,0.294 0 0 0 
+        -0.293,-0.293 h -4.69 a 0.294,0.294 0 0 0 -0.293,0.293 v 1.319 a 0.294,0.294 0 0 0 0.293,0.293 z"/>
+    <path style="fill:#76bc2d" d="m 4.8360044,9.453 h 4.69 a 0.294,0.294 0 0 0 0.293,-0.293 V 7.841 a 0.294,0.294 0 0 0 
+        -0.293,-0.294 h -4.69 a 0.294,0.294 0 0 0 -0.293,0.294 V 9.16 a 0.294,0.294 0 0 0 0.293,0.293 z"/>
+    <path style="fill:#86d633" d="m 4.8360044,6.155 h 4.69 a 0.294,0.294 0 0 0 0.293,-0.293 V 4.543 a 0.294,0.294 0 0 0 
+        -0.293,-0.293 h -4.69 a 0.294,0.294 0 0 0 -0.293,0.293 v 1.319 a 0.294,0.294 0 0 0 0.293,0.293 z"/>​
+</svg>

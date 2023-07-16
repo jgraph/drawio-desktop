@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="b8d4ff6d-c1e7-4878-8e1b-24a12cad15e1"
+   width="17"
+   height="17.652"
+   viewBox="0 0 17 17.652"
+   version="1.1"
+   sodipodi:docname="Azure_Sphere.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview60961"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.5006305"
+     inkscape:cy="8.8184111"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b8d4ff6d-c1e7-4878-8e1b-24a12cad15e1" />
+  <defs
+     id="defs60932">
+    <linearGradient
+       id="fdda967e-7651-4c84-9759-7be8308e5f44"
+       x1="9"
+       y1="17.826"
+       x2="9"
+       y2="0.82599998"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.5,-0.17399974)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop60920" />
+      <stop
+         offset="0.442"
+         stop-color="#28b7db"
+         id="stop60922" />
+      <stop
+         offset="0.775"
+         stop-color="#32d4f5"
+         id="stop60924" />
+    </linearGradient>
+    <linearGradient
+       id="a71b08ef-312b-4529-8bf0-fa396a725f2f"
+       x1="5.75"
+       y1="-3114.5911"
+       x2="12.303"
+       y2="-3119.908"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.5,-0.17399974)">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         stop-opacity="0.9"
+         id="stop60927" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         stop-opacity="0.8"
+         id="stop60929" />
+    </linearGradient>
+  </defs>
+  <circle
+     cx="8.5"
+     cy="9.1520004"
+     r="8.5"
+     fill="url(#fdda967e-7651-4c84-9759-7be8308e5f44)"
+     id="circle60934"
+     style="fill:url(#fdda967e-7651-4c84-9759-7be8308e5f44)" />
+  <path
+     d="M 8.31,14.893 C 7.337,14.293 4.159,12.146 4.159,9.6380003 v -3.207 l 0.341,-0.021 a 4.044,4.044 0 0 0 2.35,-0.742 2.48,2.48 0 0 1 1.65,-0.489 2.511,2.511 0 0 1 1.648,0.487 4.048,4.048 0 0 0 2.352,0.744 l 0.34,0.021 v 3.207 C 12.84,12.146 9.662,14.294 8.688,14.893 L 8.5,15.009 Z"
+     fill="url(#a71b08ef-312b-4529-8bf0-fa396a725f2f)"
+     id="path60936"
+     style="fill:url(#a71b08ef-312b-4529-8bf0-fa396a725f2f)" />
+  <path
+     d="M 8.5,14.469 C 6.614,13.298 4.619,11.426 4.619,9.6380003 v -2.775 a 4.446,4.446 0 0 0 2.486,-0.812 2.027,2.027 0 0 1 1.395,-0.412 2.073,2.073 0 0 1 1.394,0.411 4.456,4.456 0 0 0 2.487,0.813 v 2.775 C 12.381,11.426 10.386,13.298 8.5,14.469 Z"
+     fill="#50e6ff"
+     id="path60938" />
+  <circle
+     cx="14.845"
+     cy="13.909"
+     r="1.302"
+     fill="#ffffff"
+     id="circle60940" />
+  <path
+     d="m 14.845,12.607 a 1.3,1.3 0 1 1 -1.3,1.3 1.3,1.3 0 0 1 1.3,-1.3 m 0,-0.651 a 1.954,1.954 0 1 0 1.955,1.953 1.956,1.956 0 0 0 -1.953,-1.953 z"
+     fill="#b3b3b3"
+     id="path60942" />
+  <circle
+     cx="2.155"
+     cy="13.909"
+     r="1.302"
+     fill="#ffffff"
+     id="circle60946" />
+  <path
+     d="m 2.155,12.607 a 1.3,1.3 0 1 1 -1.3,1.3 1.3,1.3 0 0 1 1.3,-1.3 m 0,-0.651 a 1.954,1.954 0 1 0 1.953,1.953 1.955,1.955 0 0 0 -1.953,-1.953 z"
+     fill="#b3b3b3"
+     id="path60948" />
+  <circle
+     cx="8.5"
+     cy="1.9540002"
+     r="1.302"
+     fill="#ffffff"
+     id="circle60952" />
+  <path
+     d="M 8.5,0.65200026 A 1.3,1.3 0 1 1 7.2,1.9520003 1.3,1.3 0 0 1 8.5,0.65200026 M 8.5,2.5588538e-7 A 1.954,1.954 0 1 0 10.453,1.9540003 1.956,1.956 0 0 0 8.5,2.5588538e-7 Z"
+     fill="#b3b3b3"
+     id="path60954" />
+</svg>

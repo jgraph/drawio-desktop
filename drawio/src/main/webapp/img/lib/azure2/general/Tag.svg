@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="ada44b30-b0e0-4b69-a3b4-281ce9b31578" sodipodi:docname="10014-icon-service-Tag.svg"
+    version="1.1" width="17.662968" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.662968 17.371599"
+    height="17.371599" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2148">
+        <linearGradient x1="9" y1="0.31" x2="9" gradientUnits="userSpaceOnUse" y2="17.690001" id="bf2c5efd-c986-4496-8dde-2626619483cc">
+            <stop offset="0" stop-color="#c69aeb" id="stop2137"/>
+            <stop offset="0.09" stop-color="#bb90e4" id="stop2139"/>
+            <stop offset="0.49" stop-color="#926bc9" id="stop2141"/>
+            <stop offset="0.81" stop-color="#7854b8" id="stop2143"/>
+            <stop offset="1" stop-color="#6f4bb2" id="stop2145"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:url(#bf2c5efd-c986-4496-8dde-2626619483cc)" d="m 17.490625,2.5500848 -2.39,-2.36999997 a 0.58,0.58 
+        0 0 0 -0.43,-0.180000003871 l -4.43,0.170000003871 a 0.52,0.52 0 0 0 -0.4099995,0.17 L 0.17062547,9.9600848 a 
+        0.59,0.59 0 0 0 0,0.8300002 l 6.44000003,6.41 a 0.6,0.6 0 0 0 0.84,0 L 17.140625,7.5700848 a 0.58,0.58 0 0 0 
+        0.17,-0.37 l 0.35,-4.19 a 0.57,0.57 0 0 0 -0.17,-0.46 z m -2.88,1.57 a 1.08,1.08 0 1 1 1.08,-1.07 1.07,1.07 0 0 
+        1 -1.08,1.07 z"/>
+    <path style="fill:#552f99" d="m 14.610625,1.1300848 a 1.92,1.92 0 1 0 1.93,1.92 1.93,1.93 0 0 0 -1.93,-1.92 z m 
+        1.06,2.13 a 1.08,1.08 0 1 1 -1.27,-1.27 1.08,1.08 0 0 1 1.27,1.27 z"/>
+</svg>

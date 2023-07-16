@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="e9454006-76a6-4438-aef9-4ccceadcc834"
+   width="16.997208"
+   height="16.700001"
+   viewBox="0 0 16.997208 16.700001"
+   version="1.1"
+   sodipodi:docname="Customer_Lockbox_for_Microsoft_Azure.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview42770"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.5006305"
+     inkscape:cy="8.3417402"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e9454006-76a6-4438-aef9-4ccceadcc834" />
+  <defs
+     id="defs42751">
+    <linearGradient
+       id="fe391986-8d36-4070-8f1d-71788a8b17d8"
+       x1="7.8600001"
+       y1="17.940001"
+       x2="7.8600001"
+       y2="5.7199998"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.5027932,-0.6500001)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop42741" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop42743" />
+    </linearGradient>
+    <linearGradient
+       id="a1a60fdb-02e5-449a-8bb9-d305c0513076"
+       x1="7.8699999"
+       y1="9.2799997"
+       x2="7.8699999"
+       y2="-1.85"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.5027932,-0.6500001)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop42746" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop42748" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title42753">Icon-manage-314</title>
+  <path
+     d="m 13.397207,16.2 a 1.31,1.31 0 0 0 1.32,-1.3 c 0,-0.05 0,-0.11 0,-0.16 -0.52,-4.11 -2.86,-7.4600001 -7.3400002,-7.4600001 -4.48,0 -6.88,2.8300001 -7.37,7.4700001 a 1.32,1.32 0 0 0 1.17,1.45 z"
+     fill="url(#fe391986-8d36-4070-8f1d-71788a8b17d8)"
+     id="path42755"
+     style="fill:url(#fe391986-8d36-4070-8f1d-71788a8b17d8)" />
+  <path
+     d="m 7.3672068,8.2499999 a 4.13,4.13 0 0 1 -2.23,-0.65 l 2.21,5.7500001 2.15,-5.7200001 a 4,4 0 0 1 -2.13,0.62 z"
+     fill="#ffffff"
+     id="path42757" />
+  <circle
+     cx="7.3672066"
+     cy="4.1300001"
+     r="4.1300001"
+     fill="url(#a1a60fdb-02e5-449a-8bb9-d305c0513076)"
+     id="circle42759"
+     style="fill:url(#a1a60fdb-02e5-449a-8bb9-d305c0513076)" />
+  <rect
+     x="8.5772066"
+     y="12.549999"
+     width="8.4200001"
+     height="4.1500001"
+     rx="0.56"
+     fill="#50e6ff"
+     id="rect42761" />
+  <path
+     d="M 12.787207,12.55 H 9.1372068 a 0.56,0.56 0 0 0 -0.56,0.56 v 3 a 0.56,0.56 0 0 0 0.56,0.56 h 3.6500002 z"
+     fill="#32bedd"
+     id="path42763" />
+  <path
+     d="m 12.177207,13.71 -0.09,-0.1 a 0.15,0.15 0 0 0 -0.2,0 l -1.76,1.74 -0.6300002,-0.63 a 0.17,0.17 0 0 0 -0.21,0 l -0.09,0.1 a 0.13,0.13 0 0 0 0,0.2 l 0.8400002,0.85 h 0.05 a 0.16,0.16 0 0 0 0.16,0 l 1.95,-2 a 0.13,0.13 0 0 0 -0.02,-0.16 z"
+     fill="#ffffff"
+     id="path42765" />
+  <path
+     d="m 16.007207,15.57 -0.84,-0.83 0.83,-0.83 a 0.14,0.14 0 0 0 0,-0.19 l -0.11,-0.11 a 0.12,0.12 0 0 0 -0.19,0 l -0.83,0.83 -0.82,-0.82 a 0.14,0.14 0 0 0 -0.21,0 l -0.1,0.09 a 0.14,0.14 0 0 0 0,0.19 l 0.83,0.84 -0.82,0.82 a 0.16,0.16 0 0 0 0,0.22 l 0.1,0.09 a 0.11,0.11 0 0 0 0.18,0 l 0.84,-0.83 0.84,0.83 a 0.14,0.14 0 0 0 0.19,0 l 0.11,-0.11 a 0.14,0.14 0 0 0 0,-0.19 z"
+     fill="#f2f2f2"
+     id="path42767" />
+  <metadata
+     id="metadata42852">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-manage-314</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

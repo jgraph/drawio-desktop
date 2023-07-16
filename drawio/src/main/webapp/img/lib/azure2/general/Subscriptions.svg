@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="bc18bade-5481-447e-a959-659d72346474"
+   width="11.246984"
+   height="18.030787"
+   viewBox="0 0 11.246984 18.030787"
+   version="1.1"
+   sodipodi:docname="Subscriptions.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview48337"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="6.0794045"
+     inkscape:cy="9.1140588"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bc18bade-5481-447e-a959-659d72346474" />
+  <defs
+     id="defs48326">
+    <radialGradient
+       id="a445c717-9d75-44c7-ba6b-0d8f2383e560"
+       cx="-36.630001"
+       cy="17.120001"
+       r="11.18"
+       gradientTransform="matrix(0.94,0,0,0.94,41.88,-7.4)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.27"
+         stop-color="#ffd70f"
+         id="stop48317" />
+      <stop
+         offset="0.49"
+         stop-color="#ffcb12"
+         id="stop48319" />
+      <stop
+         offset="0.88"
+         stop-color="#feac19"
+         id="stop48321" />
+      <stop
+         offset="1"
+         stop-color="#fea11b"
+         id="stop48323" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title48328">Icon-general-2</title>
+  <path
+     id="e3d1e58c-f78e-4fb5-9857-0c9331da9979"
+     d="m 10.639404,7.1067278 a 2.07,2.07 0 0 0 0,-2.93 v 0 L 7.0794045,0.60672783 a 2.06,2.06 0 0 0 -2.92,0 v 0 L 0.59940448,4.1767278 a 2.09,2.09 0 0 0 0,2.93 L 3.5994045,10.106728 a 0.61,0.61 0 0 1 0.17,0.41 v 5.52 a 0.7,0.7 0 0 0 0.2,0.5 l 1.35,1.35 a 0.45,0.45 0 0 0 0.66,0 l 1.31,-1.31 v 0 l 0.77,-0.77 a 0.26,0.26 0 0 0 0,-0.38 l -0.55,-0.56 a 0.29,0.29 0 0 1 0,-0.42 l 0.55,-0.56 a 0.26,0.26 0 0 0 0,-0.38 l -0.58,-0.59 a 0.28,0.28 0 0 1 0,-0.41 l 0.6,-0.59 a 0.26,0.26 0 0 0 0,-0.38 l -0.77,-0.78 v -0.28 z m -4.9999995,-5.64 a 1.18,1.18 0 1 1 -1.19,1.18 1.17,1.17 0 0 1 1.17,-1.18 z"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a445c717-9d75-44c7-ba6b-0d8f2383e560)" />
+  <path
+     id="a21a8f7a-61cc-4035-8449-e5c8fe4d4d5e"
+     d="m 4.6994045,16.126728 v 0 a 0.25,0.25 0 0 0 0.38,-0.21 v -4.45 a 0.27,0.27 0 0 0 -0.11,-0.22 v 0 a 0.25,0.25 0 0 0 -0.39,0.22 v 4.45 a 0.27,0.27 0 0 0 0.12,0.21 z"
+     inkscape:connector-curvature="0"
+     style="opacity:0.75;fill:#ff9300" />
+  <rect
+     id="ecd3189c-fb1e-4a0e-a2b6-ba2f11dda484"
+     x="2.7694046"
+     y="5.3667278"
+     width="5.8600001"
+     height="0.69"
+     rx="0.31999999"
+     style="opacity:0.75;fill:#ff9300" />
+  <rect
+     id="a1949a3c-4818-4bd1-b236-0d970b92fc62"
+     x="2.7694046"
+     y="6.4867282"
+     width="5.8600001"
+     height="0.69"
+     rx="0.31999999"
+     style="opacity:0.75;fill:#ff9300" />
+  <metadata
+     id="metadata48334">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Key()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-2</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

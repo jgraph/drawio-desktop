@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="eec17d46-3393-4b50-8d12-b9ccbeeb95af"
+   width="11.812507"
+   height="17.000294"
+   viewBox="0 0 11.812507 17.000294"
+   version="1.1"
+   sodipodi:docname="Batch_AI.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview1806"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="5.9129887"
+     inkscape:cy="8.5006305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="eec17d46-3393-4b50-8d12-b9ccbeeb95af" />
+  <defs
+     id="defs1783">
+    <radialGradient
+       id="e8b60f10-f807-4931-b22c-ee0ff4f50905"
+       cx="8.9499998"
+       cy="6.1799998"
+       r="5.5100002"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.0937465,-0.49972953)">
+      <stop
+         offset="0"
+         stop-color="#6bb9f2"
+         id="stop1767" />
+      <stop
+         offset="0.2"
+         stop-color="#65b6f1"
+         id="stop1769" />
+      <stop
+         offset="0.45"
+         stop-color="#55aef0"
+         id="stop1771" />
+      <stop
+         offset="0.74"
+         stop-color="#3aa2ee"
+         id="stop1773" />
+      <stop
+         offset="1"
+         stop-color="#1b93eb"
+         id="stop1775" />
+    </radialGradient>
+    <linearGradient
+       id="aa2db4a1-6677-4793-9372-6c604298c9d2"
+       x1="5.6700001"
+       y1="-0.43000001"
+       x2="5.6700001"
+       y2="12.53"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.0937465,-0.49972953)">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop1778" />
+      <stop
+         offset="1"
+         stop-color="#ccc"
+         id="stop1780" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title1785">Icon-machinelearning-161</title>
+  <path
+     d="m 7.7662535,15.99027 -0.85,0.89 a 0.4,0.4 0 0 1 -0.29,0.12 h -1.44 a 0.4,0.4 0 0 1 -0.28,-0.12 l -0.85,-0.89 a 0.42,0.42 0 0 1 -0.12,-0.3 v -2.09 h 4 v 2.09 a 0.42,0.42 0 0 1 -0.17,0.3 z"
+     fill="#a3a3a3"
+     id="path1787" />
+  <path
+     d="m 5.9062535,2.7047264e-4 a 5.85,5.85 0 0 0 -5.87,6.50000002736 c 0.27,2.45 2.61,3.5899995 3.27,6.6999995 a 0.48,0.48 0 0 0 0.47,0.38 h 4.26 a 0.48,0.48 0 0 0 0.47,-0.38 c 0.66,-3.11 3.0000005,-4.2499995 3.2700005,-6.6999995 A 5.85,5.85 0 0 0 5.9062535,2.7047264e-4 Z M 3.9662535,13.60027"
+     fill="url(#e8b60f10-f807-4931-b22c-ee0ff4f50905)"
+     id="path1789"
+     style="fill:url(#e8b60f10-f807-4931-b22c-ee0ff4f50905)" />
+  <path
+     d="m 10.236254,2.0802705 -1.0000005,1 a 0.14,0.14 0 0 1 -0.15,0 l -1.29,-0.43 a 0.16,0.16 0 0 0 -0.18,0.09 l -0.13,0.39 a 0.15,0.15 0 0 0 0.09,0.18 l 1.33,0.49 a 0.16,0.16 0 0 1 0.09,0.09 l 0.45,1.35 a 0.15,0.15 0 0 0 0.18,0.09 l 0.3900005,-0.13 a 0.16,0.16 0 0 0 0.09,-0.18 l -0.4300005,-1.29 a 0.14,0.14 0 0 1 0,-0.15 l 1.0000005,-1 a 0.15,0.15 0 0 0 0,-0.19 4.19,4.19 0 0 0 -0.26,-0.33 0.14,0.14 0 0 0 -0.18,0.02 z"
+     fill="#f2f2f2"
+     id="path1791" />
+  <path
+     d="m 7.6062535,11.29027 -0.06,-0.12 a 0.28,0.28 0 0 0 -0.38,-0.12 l -0.83,0.45 V 6.5002705 l 1.15,-0.57 a 0.28,0.28 0 0 0 0.12,-0.38 l -0.06,-0.12 a 0.28,0.28 0 0 0 -0.38,-0.13 l -0.83,0.42 V 0.41027047 a 0.42,0.42 0 0 1 0.22,-0.37 5.3,5.3 0 0 0 -1.3,0 0.42,0.42 0 0 1 0.22,0.37 V 5.7302705 l -0.83,-0.42 a 0.28,0.28 0 0 0 -0.38,0.13 l -0.06,0.12 a 0.28,0.28 0 0 0 0.12,0.38 l 1.15,0.56 V 11.50027 l -0.83,-0.42 a 0.28,0.28 0 0 0 -0.38,0.12 l -0.06,0.12 a 0.28,0.28 0 0 0 0.12,0.38 l 1.15,0.57 v 1 a 0.42,0.42 0 0 1 -0.21,0.37 h 1.28 a 0.42,0.42 0 0 1 -0.21,-0.37 v -1 l 1.15,-0.57 a 0.28,0.28 0 0 0 0.12,-0.41 z"
+     fill="#f2f2f2"
+     id="path1793" />
+  <path
+     d="m 3.6962535,2.7402705 -1.08,0.36 a 0.31,0.31 0 0 1 -0.29,-0.07 l -0.73,-0.73 a 0.28,0.28 0 0 0 -0.42,0 l -0.08,0.1 a 0.29,0.29 0 0 0 0,0.37 l 0.74,0.73 a 0.29,0.29 0 0 1 0.07,0.31 l -0.36,1.07 a 0.28,0.28 0 0 0 0.18,0.36 h 0.12 a 0.29,0.29 0 0 0 0.36,-0.17 l 0.38,-1.15 a 0.29,0.29 0 0 1 0.18,-0.18 l 1.14,-0.34 a 0.28,0.28 0 0 0 0.18,-0.36 v -0.12 a 0.28,0.28 0 0 0 -0.39,-0.18 z"
+     fill="url(#aa2db4a1-6677-4793-9372-6c604298c9d2)"
+     id="path1795"
+     style="fill:url(#aa2db4a1-6677-4793-9372-6c604298c9d2)" />
+  <path
+     d="m 9.4762535,8.1402705 -0.14,-1.55 -0.69,0.07 0.14,1.62 -1.21,1.09 0.47,0.52 1.21,-1.09 1.2700005,0.49 c 0.14,-0.2 0.27,-0.4 0.4,-0.6 z"
+     fill="#f2f2f2"
+     id="path1797" />
+  <path
+     d="m 4.0262535,9.1802705 -0.9,-0.8 a 0.27,0.27 0 0 1 -0.09,-0.24 l 0.1,-1.2 a 0.28,0.28 0 0 0 -0.23,-0.31 h -0.15 a 0.28,0.28 0 0 0 -0.31,0.26 l -0.1,1.08 a 0.27,0.27 0 0 1 -0.18,0.24 l -1,0.37 a 0.27,0.27 0 0 0 -0.13,0.42 l 0.07,0.11 a 0.3,0.3 0 0 0 0.34,0.11 l 0.9,-0.35 a 0.26,0.26 0 0 1 0.29,0.06 l 0.87,0.78 a 0.27,0.27 0 0 0 0.4,0 l 0.09,-0.1 a 0.28,0.28 0 0 0 0.03,-0.43 z"
+     fill="#f2f2f2"
+     id="path1799" />
+  <path
+     d="m 7.9062535,14.81027 -4,0.82 v 0.06 a 0.42,0.42 0 0 0 0.12,0.3 v 0 l 3.88,-0.75 z"
+     fill="#e6e6e6"
+     id="path1801" />
+  <polygon
+     points="10.98,14.32 7.01,15.14 7.01,15.57 10.98,14.75 "
+     fill="#e6e6e6"
+     id="polygon1803"
+     transform="translate(-3.0937465,-0.49972953)" />
+  <metadata
+     id="metadata1888">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-machinelearning-161</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+
+  <threadsafe>true</threadsafe>
+  <sessions-enabled>false</sessions-enabled>
+  <runtime>java8</runtime>
+
+  <!-- Configure java.util.logging -->
+  <system-properties>
+    <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+  </system-properties>
+
+  <!-- Path patterns not supported in production -->
+  <static-files>
+    <include path="/**">
+      <http-header name="Referrer-Policy" value="strict-origin"/>
+	  <http-header name="Access-Control-Allow-Origin" value="*"/>
+	  <http-header name="X-XSS-Protection" value="1; mode=block"/>
+	  <http-header name="X-Content-Type-Options" value="nosniff"/>
+	</include>
+  </static-files>
+
+  <!-- App engine has conflicting interfaces for javax.cache.CacheManager -->
+  <class-loader-config>
+    <priority-specifier filename="cache-api-1.1.1.jar"/>
+  </class-loader-config>
+  
+  <instance-class>F1</instance-class>
+  <automatic-scaling>
+    <max-idle-instances>1</max-idle-instances>
+  </automatic-scaling>
+</appengine-web-app>

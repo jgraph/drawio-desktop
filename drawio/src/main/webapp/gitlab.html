@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		This window will be closed automatically.
+		<script>
+			if (window.opener != null && window.opener.onGitLabCallback != null)
+			{
+				try
+				{
+					var search = window.location.href;
+					var idx1 = search.indexOf('access_token=');
+					var code = null;
+					
+					if (idx1 >= 0)
+					{
+            			var idx2 = search.indexOf('&', idx1);
+						code = search.substring(idx1 + 13, idx2);
+					}
+
+					// Continues execution of main program flow
+					window.opener.onGitLabCallback(code, window);
+					window.close();
+				}
+				catch (e)
+				{
+					alert('GitLab error: ' + e.toString());
+					window.close();
+				}
+			}
+		</script>
+	</body>
+</html>

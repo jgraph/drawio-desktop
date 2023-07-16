@@ -1,0 +1,4 @@
+# Snyk (https://snyk.io) policy file
+exclude:
+ global:
+   - etc/vsdx/src/com/mxgraph/vsdxImport

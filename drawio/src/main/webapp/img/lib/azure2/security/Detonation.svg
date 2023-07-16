@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="f9856773-7dbd-4db6-aa0e-f1518664fde8"
+   width="16.476633"
+   height="16.898087"
+   viewBox="0 0 16.476633 16.898087"
+   version="1.1"
+   sodipodi:docname="Detonation.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview88497"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.2282472"
+     inkscape:cy="8.4552333"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f9856773-7dbd-4db6-aa0e-f1518664fde8" />
+  <defs
+     id="defs88482">
+    <linearGradient
+       id="ff57b96a-66a9-4db3-80f9-889db4cc343d"
+       x1="10.646"
+       y1="12.18"
+       x2="10.646"
+       y2="1.846"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.76136701,-0.55100012)">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop88471" />
+      <stop
+         offset="0.192"
+         stop-color="#1e71b5"
+         id="stop88473" />
+      <stop
+         offset="0.567"
+         stop-color="#5598da"
+         id="stop88475" />
+      <stop
+         offset="0.848"
+         stop-color="#76b0f0"
+         id="stop88477" />
+      <stop
+         offset="1"
+         stop-color="#83b9f9"
+         id="stop88479" />
+    </linearGradient>
+  </defs>
+  <circle
+     cx="9.8846331"
+     cy="6.4619999"
+     r="5.1669998"
+     fill="#ffffff"
+     id="circle88484" />
+  <rect
+     x="-11.453526"
+     y="10.856751"
+     width="9.5900002"
+     height="2.184"
+     rx="1.021"
+     transform="rotate(-45)"
+     fill="#767676"
+     id="rect88486" />
+  <circle
+     cx="9.8976336"
+     cy="6.579"
+     r="6.579"
+     fill="#a3a3a3"
+     id="circle88488" />
+  <circle
+     cx="9.8846331"
+     cy="6.4619999"
+     r="5.1669998"
+     fill="url(#ff57b96a-66a9-4db3-80f9-889db4cc343d)"
+     id="circle88490"
+     style="fill:url(#ff57b96a-66a9-4db3-80f9-889db4cc343d)" />
+  <path
+     d="m 13.788633,5.4219999 a 1.5751432,1.5751432 0 1 1 -2.952,1.1 z"
+     fill="#f2f2f2"
+     id="path88492" />
+  <path
+     d="m 8.938633,6.5219999 a 1.5751432,1.5751432 0 0 1 -2.952,-1.1 z"
+     fill="#f2f2f2"
+     id="path88494" />
+</svg>

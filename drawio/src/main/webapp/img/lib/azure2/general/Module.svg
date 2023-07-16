@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg34534"
+   sodipodi:docname="Module.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview34536"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34534" />
+  <defs
+     id="defs34509">
+    <linearGradient
+       id="b05ecef1-bdba-47cb-a2a6-665a5bf9ae79"
+       x1="9"
+       y1="19.049"
+       x2="9"
+       y2="1.048"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1,1)">
+      <stop
+         offset="0.2"
+         stop-color="#0078d4"
+         id="stop34498" />
+      <stop
+         offset="0.287"
+         stop-color="#1380da"
+         id="stop34500" />
+      <stop
+         offset="0.495"
+         stop-color="#3c91e5"
+         id="stop34502" />
+      <stop
+         offset="0.659"
+         stop-color="#559cec"
+         id="stop34504" />
+      <stop
+         offset="0.759"
+         stop-color="#5ea0ef"
+         id="stop34506" />
+    </linearGradient>
+  </defs>
+  <g
+     id="adc593fc-9575-4f0f-b9cc-4803103092a4"
+     transform="translate(-1,-1)">
+    <g
+       id="g34529">
+      <rect
+         x="1"
+         y="1"
+         width="16"
+         height="16"
+         rx="0.53399998"
+         id="rect34511"
+         style="fill:url(#b05ecef1-bdba-47cb-a2a6-665a5bf9ae79)" />
+      <g
+         id="g34527">
+        <g
+           id="g34519"
+           style="opacity:0.95">
+          <rect
+             x="2.3610001"
+             y="2.777"
+             width="3.6170001"
+             height="3.368"
+             rx="0.14"
+             id="rect34513"
+             style="fill:#ffffff" />
+          <rect
+             x="7.1919999"
+             y="2.777"
+             width="3.6170001"
+             height="3.368"
+             rx="0.14"
+             id="rect34515"
+             style="fill:#ffffff" />
+          <rect
+             x="12.023"
+             y="2.777"
+             width="3.6170001"
+             height="3.368"
+             rx="0.14"
+             id="rect34517"
+             style="fill:#ffffff" />
+        </g>
+        <rect
+           x="2.3610001"
+           y="7.2800002"
+           width="8.3940001"
+           height="3.368"
+           rx="0.14"
+           id="rect34521"
+           style="opacity:0.45;fill:#ffffff" />
+        <rect
+           x="12.009"
+           y="7.2800002"
+           width="3.6170001"
+           height="3.368"
+           rx="0.14"
+           id="rect34523"
+           style="opacity:0.9;fill:#ffffff" />
+        <rect
+           x="2.3610001"
+           y="11.854"
+           width="13.186"
+           height="3.368"
+           rx="0.14"
+           id="rect34525"
+           style="opacity:0.75;fill:#ffffff" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata34532">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.base.images.Polychromatic.Module()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="ff30cf1f-fbde-4896-9279-4e5bbc6f104f"
+   width="17.021584"
+   height="16.744442"
+   viewBox="0 0 17.021584 16.744442"
+   version="1.1"
+   sodipodi:docname="Blueprints.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview58322"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5114985"
+     inkscape:cy="8.4162553"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="ff30cf1f-fbde-4896-9279-4e5bbc6f104f" />
+  <defs
+     id="defs58307">
+    <linearGradient
+       id="f5a0c05e-637e-4adf-b38d-bb1a0e612a3a"
+       x1="6050.2002"
+       y1="-3638.8301"
+       x2="6038.2798"
+       y2="-3638.8301"
+       gradientTransform="rotate(90,1202.39,-4832.22)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop58292" />
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop58294" />
+      <stop
+         offset="0.11"
+         stop-color="#22a5cb"
+         id="stop58296" />
+      <stop
+         offset="0.23"
+         stop-color="#29bade"
+         id="stop58298" />
+      <stop
+         offset="0.37"
+         stop-color="#2ec9eb"
+         id="stop58300" />
+      <stop
+         offset="0.53"
+         stop-color="#31d1f3"
+         id="stop58302" />
+      <stop
+         offset="0.78"
+         stop-color="#32d4f5"
+         id="stop58304" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title58309">Icon-manage-304</title>
+  <path
+     d="m 14.671498,12.838187 a 2.08,2.08 0 0 1 2.28,2.24 v 0 a 1.89,1.89 0 0 1 -3.06,1.25 0.67,0.67 0 0 1 -0.26,-0.54 v -2.96 z"
+     id="path58311"
+     inkscape:connector-curvature="0"
+     style="fill:#198ab3" />
+  <path
+     d="M 17.001498,12.828187 V 3.8281868 a 2.29,2.29 0 0 0 -2.29,-2.27 H 0.02149849 v 9.0000002 a 2.29,2.29 0 0 0 2.29000001,2.29 h 2.43 7.4899995 a 25.76,25.76 0 0 1 3,0 c 2,0.32 1.64,2.47 1.64,2.47 a 11.13,11.13 0 0 0 0.13,-2.49 z"
+     id="path58313"
+     inkscape:connector-curvature="0"
+     style="fill:url(#f5a0c05e-637e-4adf-b38d-bb1a0e612a3a)" />
+  <path
+     d="m 0.01149849,10.748187 v -0.07 a 1.84,1.84 0 0 1 3.24000001,-0.9000002 0.23,0.23 0 0 0 0.4,-0.15 v -7.82 a 1.36,1.36 0 0 0 0,-0.29 v 0 0 a 1.85,1.85 0 0 0 -3.64000001,0 v 0 0 a 0.92,0.92 0 0 0 0,0.29 z"
+     id="path58315"
+     inkscape:connector-curvature="0"
+     style="fill:#198ab3" />
+  <path
+     d="m 11.851498,7.8081868 a 0.28,0.28 0 0 0 -0.28,-0.28 h -1 c -0.06,-0.14 -0.11,-0.29 -0.17,-0.43 -0.22,-0.57 -0.4599995,-1.14 -0.6899995,-1.7 l -0.08,-0.19 a 1.38,1.38 0 1 0 -0.7,0 l -0.09,0.2 c -0.25,0.56 -0.49,1.13 -0.73,1.7 l -0.18,0.44 h -1 a 0.28,0.28 0 0 0 -0.28,0.28 0.27,0.27 0 0 0 0.28,0.28 h 0.8 c -0.1,0.24 -0.19,0.48 -0.28,0.72 -0.22,0.58 -0.43,1.16 -0.63,1.7500002 v 0 a 0.23048861,0.23048861 0 0 0 0.42,0.19 v 0 c 0.31,-0.54 0.6,-1.0900002 0.88,-1.6300002 0.18,-0.34 0.35,-0.68 0.52,-1 h 1.26 l 0.4799995,1 c 0.28,0.55 0.56,1.1000002 0.85,1.6400002 v 0 a 0.23,0.23 0 0 0 0.42,-0.18 v 0 c -0.18,-0.59 -0.38,-1.1700002 -0.58,-1.7500002 l -0.27,-0.73 h 0.74 a 0.27,0.27 0 0 0 0.31,-0.31 z m -3.3399995,-3.94 a 0.81,0.81 0 0 1 1.6199995,0 0.81,0.81 0 0 1 -1.6199995,0 z m 0.43,3.66 v -0.07 l 0.33,-0.72 0.32,0.71 v 0.08 z"
+     id="path58317"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata58319">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-304</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

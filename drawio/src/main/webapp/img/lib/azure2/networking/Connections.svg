@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="f8cc67b6-88d2-4d65-b9d4-0887e04d1f38"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   version="1.1"
+   sodipodi:docname="Connections.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview63653"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f8cc67b6-88d2-4d65-b9d4-0887e04d1f38" />
+  <defs
+     id="defs63630">
+    <radialGradient
+       id="b1cd44f2-d62b-4753-a859-aa68f089cdca"
+       cx="46.419998"
+       cy="43.209999"
+       r="9"
+       gradientTransform="matrix(0.94,0,0,0.94,-34.84,-31.81)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop63607" />
+      <stop
+         offset="0.56"
+         stop-color="#5c9fee"
+         id="stop63609" />
+      <stop
+         offset="0.69"
+         stop-color="#559ced"
+         id="stop63611" />
+      <stop
+         offset="0.78"
+         stop-color="#4a97e9"
+         id="stop63613" />
+      <stop
+         offset="0.86"
+         stop-color="#3990e4"
+         id="stop63615" />
+      <stop
+         offset="0.93"
+         stop-color="#2387de"
+         id="stop63617" />
+      <stop
+         offset="0.99"
+         stop-color="#087bd6"
+         id="stop63619" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop63621" />
+    </radialGradient>
+    <clipPath
+       id="f0c68de7-8aac-4038-bd4b-8e0fb8fab5fc">
+      <path
+         d="M 10.58,8.34 13,10.92 a 0.22,0.22 0 0 1 0,0.3 l -0.47,0.49 a 0.2,0.2 0 0 1 -0.3,0 v 0 L 9,8.34 A 0.22,0.22 0 0 1 9,8 l 3.15,-3.32 a 0.2,0.2 0 0 1 0.3,0 v 0 l 0.47,0.49 a 0.23,0.23 0 0 1 0,0.31 L 10.58,8 a 0.22,0.22 0 0 0 0,0.34 z"
+         id="path63624"
+         inkscape:connector-curvature="0"
+         style="fill:none" />
+    </clipPath>
+    <clipPath
+       id="e1eb0374-eab6-40b9-91d8-e8a5f1c9b58a">
+      <path
+         d="m 7.11,9.91 -2.43,2.57 a 0.23,0.23 0 0 0 0,0.31 l 0.47,0.49 a 0.2,0.2 0 0 0 0.3,0 v 0 l 3.2,-3.37 a 0.22,0.22 0 0 0 0,-0.3 L 5.5,6.29 a 0.2,0.2 0 0 0 -0.3,0 v 0 L 4.73,6.78 a 0.22,0.22 0 0 0 0,0.3 l 2.38,2.53 a 0.2,0.2 0 0 1 0,0.3 z"
+         id="path63627"
+         inkscape:connector-curvature="0"
+         style="fill:none" />
+    </clipPath>
+  </defs>
+  <title
+     id="title63632">Icon-networking-81</title>
+  <circle
+     cx="8.5"
+     cy="8.5"
+     r="8.5"
+     id="circle63634"
+     style="fill:url(#b1cd44f2-d62b-4753-a859-aa68f089cdca)" />
+  <circle
+     cx="8.5"
+     cy="8.5"
+     r="7.4000001"
+     id="circle63636"
+     style="fill:#ffffff" />
+  <g
+     clip-path="url(#f0c68de7-8aac-4038-bd4b-8e0fb8fab5fc)"
+     id="g63642"
+     transform="translate(-0.5,-0.5)">
+    <polygon
+       points="12.39,11.87 8.89,8.19 12.34,4.56 13.11,5.36 10.43,8.19 13.16,11.07 "
+       id="polygon63638"
+       style="fill:#5e9624" />
+    <polygon
+       points="9.67,8.99 12.39,11.87 13.16,11.07 10.43,8.19 "
+       id="polygon63640"
+       style="fill:#86d633" />
+  </g>
+  <g
+     clip-path="url(#e1eb0374-eab6-40b9-91d8-e8a5f1c9b58a)"
+     id="g63648"
+     transform="translate(-0.5,-0.5)">
+    <polygon
+       points="5.3,13.44 8.8,9.76 5.35,6.13 4.58,6.93 7.26,9.76 4.54,12.64 "
+       id="polygon63644"
+       style="fill:#5e9624" />
+    <polygon
+       points="8.02,10.56 5.3,13.44 4.54,12.64 7.26,9.76 "
+       id="polygon63646"
+       style="fill:#86d633" />
+  </g>
+  <metadata
+     id="metadata63650">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.RemoteApp()</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-networking-81</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

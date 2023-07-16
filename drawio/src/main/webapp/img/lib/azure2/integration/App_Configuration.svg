@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="b62fe53d-d102-488e-bedf-3b7a48aa14bf"
+   width="16.82"
+   height="18.112495"
+   viewBox="0 0 16.82 18.112495"
+   version="1.1"
+   sodipodi:docname="App_Configuration.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview31339"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.4098361"
+     inkscape:cy="8.7957125"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b62fe53d-d102-488e-bedf-3b7a48aa14bf" />
+  <defs
+     id="defs31328">
+    <linearGradient
+       id="bbaa244d-7a73-4def-ae33-b68783fa5b51"
+       x1="9"
+       y1="15.63"
+       x2="9"
+       y2="-2.51"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.59,-0.20750496)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop31306" />
+      <stop
+         offset="0.16"
+         stop-color="#1380da"
+         id="stop31308" />
+      <stop
+         offset="0.53"
+         stop-color="#3c91e5"
+         id="stop31310" />
+      <stop
+         offset="0.82"
+         stop-color="#559cec"
+         id="stop31312" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop31314" />
+    </linearGradient>
+    <linearGradient
+       id="fa74d148-d6d0-4c75-94f7-94732b8c62b0"
+       x1="12.26"
+       y1="7.1700001"
+       x2="12.26"
+       y2="17.209999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.59,-0.20750496)">
+      <stop
+         offset="0"
+         stop-color="#ffd70f"
+         id="stop31317" />
+      <stop
+         offset="0.27"
+         stop-color="#ffd310"
+         id="stop31319" />
+      <stop
+         offset="0.54"
+         stop-color="#ffc613"
+         id="stop31321" />
+      <stop
+         offset="0.83"
+         stop-color="#feb217"
+         id="stop31323" />
+      <stop
+         offset="1"
+         stop-color="#fea11b"
+         id="stop31325" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title31330">Icon-integration-219</title>
+  <path
+     d="m 16.82,8.192495 a 3.77,3.77 0 0 0 -3.28,-3.63 A 4.76,4.76 0 0 0 8.63,0.00249504 4.92,4.92 0 0 0 3.94,3.192495 a 4.48,4.48 0 0 0 -3.94,4.33 4.58,4.58 0 0 0 4.74,4.4 2.75,2.75 0 0 0 0.41,0 h 7.67 a 0.64,0.64 0 0 0 0.2,0 3.82,3.82 0 0 0 3.8,-3.73 z"
+     fill="url(#bbaa244d-7a73-4def-ae33-b68783fa5b51)"
+     id="path31332"
+     style="fill:url(#bbaa244d-7a73-4def-ae33-b68783fa5b51)" />
+  <path
+     id="ba7b3762-4752-4c4a-8a7e-af4c5e383796"
+     d="m 7.55,15.792495 v -0.6 0 l -0.61,-0.21 -0.16,-0.41 0.31,-0.62 v -0.07 l -0.19,-0.19 -0.23,-0.23 H 6.59 l -0.6,0.3 -0.41,-0.11 -0.26,-0.67 H 4.73 v 0 l -0.2,0.61 -0.45,0.2 -0.67,-0.38 -0.44,0.38 v 0.08 l 0.3,0.59 -0.17,0.41 -0.69,0.3 v 0.62 H 2.5 l 0.63,0.21 0.17,0.41 -0.32,0.69 0.42,0.42 h 0.08 l 0.6,-0.3 0.41,0.17 0.26,0.72 h 0.59 v -0.09 l 0.21,-0.63 0.4,-0.17 0.7,0.32 0.42,-0.42 v -0.08 l -0.3,-0.59 0.11,-0.42 z m -2.51,0.55 a 0.84,0.84 0 1 1 0.83,-0.84 v 0 a 0.84,0.84 0 0 1 -0.83,0.8 z"
+     fill="#76bc2d" />
+  <path
+     id="bff6fc37-370d-4b52-9427-43a5a5385267"
+     d="m 16.69,12.432495 v -1.17 l -0.06,-0.05 -1.22,-0.42 -0.31,-0.8 0.62,-1.2 0.06,-0.13 -0.37,-0.4 -0.44,-0.47 -0.16,0.08 -1.17,0.6 -0.8,-0.23 -0.51,-1.3 h -1.16 l -0.06,0.06 -0.4,1.19 -0.82,0.31 -1.35,-0.64 -0.82,0.82 0.08,0.16 0.61,1.16 -0.33,0.8 -1.41,0.51 v 1.17 l 0.17,0.05 1.24,0.41 0.33,0.85 -0.64,1.35 0.82,0.83 0.16,-0.07 1.17,-0.6 0.8,0.33 0.51,1.41 h 1.18 v -0.25 l 0.41,-1.24 0.79,-0.33 1.37,0.63 0.82,-0.82 -0.08,-0.16 -0.57,-1.08 0.23,-0.82 z m -4.91,1.08 a 1.64,1.64 0 1 1 1.63,-1.65 v 0 a 1.65,1.65 0 0 1 -1.63,1.65 z"
+     fill="url(#fa74d148-d6d0-4c75-94f7-94732b8c62b0)"
+     style="fill:url(#fa74d148-d6d0-4c75-94f7-94732b8c62b0)" />
+  <path
+     d="m 11.78,13.512495 a 1.64,1.64 0 1 1 1.63,-1.65 v 0 a 1.65,1.65 0 0 1 -1.63,1.65 z"
+     fill="#ffffff"
+     id="path31336" />
+  <metadata
+     id="metadata31421">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-integration-219</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

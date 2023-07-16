@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e0050721-e8d8-4c79-ae50-d8fc2871d932"
+   width="17"
+   height="15"
+   viewBox="0 0 17 15"
+   version="1.1"
+   sodipodi:docname="Network_Interfaces.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview65543"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="7.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e0050721-e8d8-4c79-ae50-d8fc2871d932" />
+  <defs
+     id="defs65512">
+    <linearGradient
+       id="fcad3287-b71c-44fa-971a-6a18bcf384a0"
+       x1="9.0100002"
+       y1="16.5"
+       x2="9.0100002"
+       y2="1.5"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5e9641"
+         id="stop65503" />
+      <stop
+         offset="0.34"
+         stop-color="#6baa42"
+         id="stop65505" />
+      <stop
+         offset="0.67"
+         stop-color="#73b743"
+         id="stop65507" />
+      <stop
+         offset="1"
+         stop-color="#76bb43"
+         id="stop65509" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title65514">Icon-networking-80</title>
+  <path
+     d="m 15.39,1.41 h 1.27 A 0.34,0.34 0 0 1 17,1.75 v 3.5 a 0.34,0.34 0 0 1 -0.34,0.34 h -1.27 z"
+     id="path65516"
+     inkscape:connector-curvature="0"
+     style="fill:#ffca00" />
+  <path
+     d="m 15.39,7.5 h 1.27 A 0.34,0.34 0 0 1 17,7.84 v 5.86 a 0.34,0.34 0 0 1 -0.34,0.34 h -1.27 z"
+     id="path65518"
+     inkscape:connector-curvature="0"
+     style="fill:#ffca00" />
+  <rect
+     x="1.6300001"
+     y="0"
+     width="13.76"
+     height="15"
+     rx="0.69"
+     id="rect65520"
+     style="fill:url(#fcad3287-b71c-44fa-971a-6a18bcf384a0)" />
+  <path
+     d="M 5.4,11.4 H 4.69 A 0.2,0.2 0 0 1 4.5,11.19 V 2.84 A 0.19,0.19 0 0 1 4.69,2.64 H 6.62 A 0.19,0.19 0 0 1 6.81,2.84 0.2,0.2 0 0 1 6.62,3.05 H 4.88 v 7.93 H 5.4 A 0.2,0.2 0 0 1 5.59,11.19 0.21,0.21 0 0 1 5.4,11.4 Z"
+     id="path65522"
+     inkscape:connector-curvature="0"
+     style="fill:#b4ec36" />
+  <path
+     d="M 5.5,12.42 H 3.9 A 0.2,0.2 0 0 1 3.71,12.21 L 3.58,1.88 A 0.2,0.2 0 0 1 3.64,1.73 0.16,0.16 0 0 1 3.77,1.67 H 6.62 V 2.08 H 3.97 L 4.09,12 H 5.5 Z"
+     id="path65524"
+     inkscape:connector-curvature="0"
+     style="fill:#b4ec36" />
+  <path
+     d="M 11.5,11.5 H 9.91 A 0.19,0.19 0 0 1 9.77,11.43 0.18,0.18 0 0 1 9.71,11.29 V 6.4 A 0.19,0.19 0 0 1 9.9,6.2 h 0.91 V 3.95 h 0.38 V 6.39 A 0.2,0.2 0 0 1 11.01,6.6 H 10.1 v 4.42 h 1.4 z"
+     id="path65526"
+     inkscape:connector-curvature="0"
+     style="fill:#b4ec36" />
+  <rect
+     x="6.5700002"
+     y="0.78999996"
+     width="6.1399999"
+     height="3.1099999"
+     rx="0.25999999"
+     id="rect65528"
+     style="fill:#365615" />
+  <rect
+     x="9.29"
+     y="-8.3500004"
+     width="4.9000001"
+     height="1.09"
+     rx="0.25999999"
+     transform="rotate(90)"
+     id="rect65530"
+     style="fill:#365615" />
+  <rect
+     x="9.3100004"
+     y="-6.4899998"
+     width="4.9000001"
+     height="1.09"
+     rx="0.25999999"
+     transform="rotate(90)"
+     id="rect65532"
+     style="fill:#365615" />
+  <rect
+     x="9.3099995"
+     y="-12.47"
+     width="4.9000001"
+     height="1.09"
+     rx="0.25999999"
+     transform="rotate(90)"
+     id="rect65534"
+     style="fill:#f2f2f2" />
+  <ellipse
+     cx="7.6099997"
+     cy="6.5600004"
+     rx="1.04"
+     ry="1.12"
+     id="ellipse65536"
+     style="fill:#f2f2f2" />
+  <path
+     d="M 1.61,10.75 H 0.34 A 0.34,0.34 0 0 1 0,10.45 L 0,4.59 A 0.34,0.34 0 0 1 0.34,4.25 h 1.27 z"
+     id="path65538"
+     inkscape:connector-curvature="0"
+     style="fill:#3b3b3b" />
+  <metadata
+     id="metadata65540">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.NetworkInterfaceCard()</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-networking-80</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="15.2"
+   height="17.001905"
+   viewBox="0 0 15.2 17.001905"
+   version="1.1"
+   id="svg54154"
+   sodipodi:docname="Azure_Data_Catalog.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview54156"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.6"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg54154" />
+  <defs
+     id="defs54125">
+    <linearGradient
+       id="a790cec7-07c9-4638-b5c5-ab9fbd5ca908"
+       x1="6.4099998"
+       y1="1.78"
+       x2="6.4099998"
+       y2="14.13"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1.4,0.49809517)">
+      <stop
+         offset="0"
+         stop-color="#b3b2b3"
+         id="stop54101" />
+      <stop
+         offset="0.38"
+         stop-color="#afaeaf"
+         id="stop54103" />
+      <stop
+         offset="0.76"
+         stop-color="#a2a2a2"
+         id="stop54105" />
+      <stop
+         offset="1"
+         stop-color="#979797"
+         id="stop54107" />
+    </linearGradient>
+    <linearGradient
+       id="b9e6ae88-e13e-4cbb-9678-9c3623cbd024"
+       x1="7.8499999"
+       y1="13.09"
+       x2="16.6"
+       y2="13.09"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1.4,0.49809517)">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop54110" />
+      <stop
+         offset="0.07"
+         stop-color="#0060a9"
+         id="stop54112" />
+      <stop
+         offset="0.36"
+         stop-color="#0071c8"
+         id="stop54114" />
+      <stop
+         offset="0.52"
+         stop-color="#0078d4"
+         id="stop54116" />
+      <stop
+         offset="0.64"
+         stop-color="#0074cd"
+         id="stop54118" />
+      <stop
+         offset="0.82"
+         stop-color="#006abb"
+         id="stop54120" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop54122" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title54127">Icon-integration-216</title>
+  <g
+     id="g54150"
+     transform="translate(-1.4,-0.49809517)">
+    <g
+       id="e324a405-82e2-4fb6-93ca-106df2178669">
+      <g
+         id="g54147">
+        <path
+           d="m 1.42,1.79 1,-1.13 A 0.48,0.48 0 0 1 2.75,0.5 h 9.31 a 0.66,0.66 0 0 1 0.71,0.67 v 11.62 a 0.48,0.48 0 0 1 -0.16,0.35 l -1,0.95 z"
+           id="path54129"
+           inkscape:connector-curvature="0"
+           style="fill:#999999" />
+        <path
+           d="m 1.42,1.79 1,-1.13 A 0.48,0.48 0 0 1 2.75,0.5 h 9.31 a 0.66,0.66 0 0 1 0.71,0.67 v 11.62 a 0.48,0.48 0 0 1 -0.16,0.35 l -1,0.95 z"
+           id="path54131"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#999999" />
+        <path
+           d="M 2.2,1.79 2.79,1.11 A 0.44,0.44 0 0 1 3.11,1 h 8.69 a 0.42,0.42 0 0 1 0.42,0.42 v 11.01 a 0.44,0.44 0 0 1 -0.13,0.31 l -0.93,0.85"
+           id="path54133"
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff" />
+        <path
+           d="M 11.1,1.78 H 1.45 a 0.025,0 0 0 0 -0.05,0 v 12 a 0.31,0.31 0 0 0 0.31,0.31 h 9.39 a 0.31,0.31 0 0 0 0.31,-0.31 V 2.09 A 0.31,0.31 0 0 0 11.1,1.78 Z"
+           id="path54135"
+           inkscape:connector-curvature="0"
+           style="fill:url(#a790cec7-07c9-4638-b5c5-ab9fbd5ca908)" />
+        <g
+           id="g54145">
+          <path
+             d="M 12.22,10.08 C 9.81,10.08 7.85,9.46 7.85,8.69 v 7.42 c 0,0.76 1.92,1.38 4.31,1.39 h 0.06 c 2.42,0 4.38,-0.62 4.38,-1.39 V 8.69 c 0,0.77 -1.96,1.39 -4.38,1.39 z"
+             id="path54137"
+             inkscape:connector-curvature="0"
+             style="fill:url(#b9e6ae88-e13e-4cbb-9678-9c3623cbd024)" />
+          <path
+             d="m 16.6,8.69 c 0,0.77 -2,1.39 -4.38,1.39 -2.38,0 -4.37,-0.62 -4.37,-1.39 0,-0.77 2,-1.4 4.37,-1.4 2.37,0 4.38,0.63 4.38,1.4"
+             id="path54139"
+             inkscape:connector-curvature="0"
+             style="fill:#e8e8e8" />
+          <path
+             d="m 15.58,8.58 c 0,0.49 -1.51,0.88 -3.36,0.88 -1.85,0 -3.35,-0.39 -3.35,-0.88 0,-0.49 1.5,-0.89 3.35,-0.89 1.85,0 3.36,0.4 3.36,0.89"
+             id="path54141"
+             inkscape:connector-curvature="0"
+             style="fill:#50e6ff" />
+          <path
+             d="M 12.22,8.78 A 8.89,8.89 0 0 0 9.57,9.12 8.79,8.79 0 0 0 12.22,9.46 8.86,8.86 0 0 0 14.88,9.12 9,9 0 0 0 12.22,8.78 Z"
+             id="path54143"
+             inkscape:connector-curvature="0"
+             style="fill:#198ab3" />
+        </g>
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata54152">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Integration</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-integration-216</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

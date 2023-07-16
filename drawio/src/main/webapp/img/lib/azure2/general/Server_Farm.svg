@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.886375"
+   height="17.000626"
+   viewBox="0 0 16.886375 17.000626"
+   version="1.1"
+   id="svg43833"
+   sodipodi:docname="Server_Farm.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview43835"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.44"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg43833" />
+  <defs
+     id="defs43794">
+    <linearGradient
+       id="b50cf5f1-c6e1-4f11-b8cc-ac5883e58b03"
+       x1="5.7589998"
+       y1="0.5"
+       x2="5.7589998"
+       y2="16.523001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.56,0.49937382)">
+      <stop
+         offset="0"
+         stop-color="#b3b2b3"
+         id="stop43774" />
+      <stop
+         offset="0.375"
+         stop-color="#afaeaf"
+         id="stop43776" />
+      <stop
+         offset="0.763"
+         stop-color="#a2a2a2"
+         id="stop43778" />
+      <stop
+         offset="1"
+         stop-color="#979797"
+         id="stop43780" />
+    </linearGradient>
+    <linearGradient
+       id="e6a4aefe-099f-4820-80ab-37d0a9752ce4"
+       x1="11.676"
+       y1="17.5"
+       x2="11.676"
+       y2="8.901"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.56,0.49937382)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop43783" />
+      <stop
+         offset="0.156"
+         stop-color="#1380da"
+         id="stop43785" />
+      <stop
+         offset="0.528"
+         stop-color="#3c91e5"
+         id="stop43787" />
+      <stop
+         offset="0.822"
+         stop-color="#559cec"
+         id="stop43789" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop43791" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title43796">MsPortalFx.base.images-57</title>
+  <g
+     id="abb598c4-c86a-468d-9987-3d53df2d9db9"
+     transform="translate(-0.56,-0.49937382)">
+    <g
+       id="g43828">
+      <path
+         d="m 10.96,15.98 a 0.574,0.574 0 0 1 -0.6,0.543 H 1.16 A 0.574,0.574 0 0 1 0.56,15.98 V 1.043 A 0.574,0.574 0 0 1 1.158,0.5 h 9.2 a 0.574,0.574 0 0 1 0.6,0.543 z"
+         id="path43798"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b50cf5f1-c6e1-4f11-b8cc-ac5883e58b03)" />
+      <path
+         d="M 2.086,7.35 A 1.193,1.193 0 0 1 3.217,6.1 h 5.177 a 1.193,1.193 0 0 1 1.131,1.25 v 0 A 1.193,1.193 0 0 1 8.394,8.6 H 3.217 A 1.193,1.193 0 0 1 2.086,7.35 Z"
+         id="path43800"
+         inkscape:connector-curvature="0"
+         style="fill:#003067" />
+      <path
+         d="M 2.086,3.649 A 1.193,1.193 0 0 1 3.217,2.4 h 5.177 a 1.193,1.193 0 0 1 1.131,1.249 v 0 A 1.193,1.193 0 0 1 8.394,4.895 H 3.217 A 1.193,1.193 0 0 1 2.086,3.649 Z"
+         id="path43802"
+         inkscape:connector-curvature="0"
+         style="fill:#003067" />
+      <circle
+         cx="3.5420001"
+         cy="3.6489999"
+         r="0.83600003"
+         id="circle43804"
+         style="fill:#50e6ff" />
+      <circle
+         cx="3.5420001"
+         cy="7.3499999"
+         r="0.83600003"
+         id="circle43806"
+         style="fill:#50e6ff" />
+      <path
+         d="M 14.849,10.484 11.676,8.9 l -3.288,1.584 -1.2,2.35 v 4.381 A 0.286,0.286 0 0 0 7.474,17.5 h 8.405 a 0.286,0.286 0 0 0 0.286,-0.285 v -4.381 z"
+         id="path43808"
+         inkscape:connector-curvature="0"
+         style="fill:url(#e6a4aefe-099f-4820-80ab-37d0a9752ce4)" />
+      <path
+         d="m 6.481,14.1 a 0.438,0.438 0 0 1 -0.4,-0.62 l 1.41,-3.08 a 0.439,0.439 0 0 1 0.191,-0.2 l 3.854,-2.073 a 0.438,0.438 0 0 1 0.42,0 l 3.721,2.073 a 0.434,0.434 0 0 1 0.178,0.187 l 1.545,3.078 a 0.43737513,0.43737513 0 1 1 -0.782,0.392 L 15.133,10.9 11.739,9.01 8.226,10.9 6.879,13.843 A 0.438,0.438 0 0 1 6.481,14.1 Z"
+         id="path43810"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+      <rect
+         x="10.742"
+         y="11.41"
+         width="1.7869999"
+         height="1.8710001"
+         rx="0.285"
+         id="rect43812"
+         style="fill:#005ba1" />
+      <g
+         id="g43826">
+        <path
+           d="m 11.635,15.94 1.728,-1.157 a 0.283,0.283 0 0 0 -0.16,-0.049 h -3.136 a 0.285,0.285 0 0 0 -0.16,0.049 z"
+           id="path43814"
+           inkscape:connector-curvature="0"
+           style="fill:#005ba1" />
+        <polygon
+           points="11.899,16.117 13.488,17.18 13.488,15.053 "
+           id="polygon43816"
+           style="fill:#005ba1" />
+        <polygon
+           points="9.782,17.18 11.371,16.117 9.782,15.053 "
+           id="polygon43818"
+           style="fill:#005ba1" />
+        <polygon
+           points="13.488,17.479 13.475,17.5 13.488,17.5 "
+           id="polygon43820"
+           style="fill:#005ba1" />
+        <polygon
+           points="9.796,17.5 9.782,17.479 9.782,17.5 "
+           id="polygon43822"
+           style="fill:#005ba1" />
+        <polygon
+           points="11.635,16.294 9.833,17.5 13.437,17.5 "
+           id="polygon43824"
+           style="fill:#005ba1" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata43831">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.ServerFarm()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-57</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

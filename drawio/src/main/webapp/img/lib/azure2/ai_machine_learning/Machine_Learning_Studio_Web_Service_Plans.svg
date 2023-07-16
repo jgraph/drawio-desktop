@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="ef5369a6-4f00-45dd-95b2-21948c5d6d41" sodipodi:docname="10168-icon-service-Machine-Learning-Studio-Web-Service-Plans.svg"
+    version="1.1" width="17.001322" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.001322 16.91"
+    height="16.91" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs3680">
+        <linearGradient x1="9.8299999" y1="1.59" x2="9.8299999" gradientUnits="userSpaceOnUse" y2="8.9399996" id="a2854fe3-9b14-477e-8294-5e6b9a1e1b11">
+            <stop offset="0" stop-color="#fff" id="stop3658"/>
+            <stop offset="0.56" stop-color="#fbfbfb" id="stop3660"/>
+            <stop offset="1" stop-color="#f2f2f2" id="stop3662"/>
+        </linearGradient>
+        <linearGradient x1="5.71" y1="7.1300001" x2="5.8200002" gradientUnits="userSpaceOnUse" y2="17.51" id="b36fdb3b-36cd-4376-b375-7b5dfcc211f3">
+            <stop offset="0" stop-color="#32d4f5" id="stop3665"/>
+            <stop offset="0.32" stop-color="#31d1f3" id="stop3667"/>
+            <stop offset="0.53" stop-color="#2ec9eb" id="stop3669"/>
+            <stop offset="0.7" stop-color="#29bade" id="stop3671"/>
+            <stop offset="0.86" stop-color="#22a5cb" id="stop3673"/>
+            <stop offset="1" stop-color="#198ab3" id="stop3675"/>
+            <stop offset="1" stop-color="#198ab3" id="stop3677"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:#0078d4" d="m 9.3298079,0 c 4.6200001,0 7.4400001,3.48 7.6700001,8.13 a 1.19,1.19 0 0 1 -1.19,1.25 
+        H 2.8098079 a 1.18,1.18 0 0 1 -1.15,-1.25 c 0.23,-4.65 3.05,-8.13 7.67,-8.13 z"/>
+    <path style="fill:url(#a2854fe3-9b14-477e-8294-5e6b9a1e1b11)" d="m 2.8398079,8.59 a 0.39,0.39 0 0 1 -0.34,-0.42 c 
+        0.17,-4.49 3.26,-7.38 6.83,-7.38 3.5700001,0 6.6600001,2.89 6.8800001,7.38 a 0.47,0.47 0 0 1 -0.11,0.3 0.44,0.44 
+        0 0 1 -0.29,0.12 z"/>
+    <path style="fill:#5ea0ef" d="M 13.049808,3.27 A 5.62,5.62 0 0 0 9.7198079,1.85 v 2.63 a 3.07,3.07 0 0 1 
+        1.5500001,0.66 z"/>
+    <path style="fill:#0078d4" d="m 5.6098079,3.27 1.78,1.83 a 3,3 0 0 1 1.54,-0.62 V 1.85 a 5.57,5.57 0 0 0 -3.32,1.42 
+        z"/>
+    <path style="fill:#5ea0ef" d="m 11.829808,5.68 a 3.28,3.28 0 0 1 0.67,1.58 h 2.52 a 5.9,5.9 0 0 0 -1.38,-3.41 z"/>
+    <path style="fill:#005ba1" d="m 6.8298079,5.68 -1.78,-1.83 a 5.84,5.84 0 0 0 -1.38,3.41 h 2.51 a 3.39,3.39 0 0 1 
+        0.65,-1.58 z"/>
+    <path style="fill:#005ba1" d="m 13.959808,5.11 a 0.42,0.42 0 0 0 -0.52,-0.23 l -3.7100001,1.48 0.2900001,0.74 
+        3.71,-1.48 a 0.41,0.41 0 0 0 0.23,-0.51 z"/>
+    <circle r="1.08" style="fill:#767676" cx="9.3298082" cy="6.9000001"/>
+    <path style="fill:url(#b36fdb3b-36cd-4376-b375-7b5dfcc211f3)" d="M 10.229808,16.91 H 0.3898079 c -0.31,0 -0.5,-0.5 
+        -0.32,-0.76 l 3.43,-4.94 a 0.38,0.38 0 0 0 0,-0.22 V 7.72 a 0.2,0.2 0 0 0 -0.16,-0.24 h -0.19 a 0.39,0.39 0 0 1 
+        -0.39,-0.39 V 6.96 a 0.39,0.39 0 0 1 0.39,-0.39 h 4.35 a 0.38,0.38 0 0 1 0.39,0.39 v 0.17 a 0.38,0.38 0 0 1 
+        -0.39,0.35 h -0.21 a 0.2,0.2 0 0 0 -0.2,0.2 v 3.27 a 0.41,0.41 0 0 0 0.07,0.22 l 3.4000001,4.94 c 0.17,0.3 
+        -0.01,0.8 -0.33,0.8 z"/>
+    <path style="fill:#ffffff" d="m 1.6898079,15.48 2.46,-3.6 a 0.86,0.86 0 0 0 0.16,-0.51 V 9.91 a 0.29,0.29 0 0 1 
+        0.29,-0.29 h 1.4 a 0.28,0.28 0 0 1 0.28,0.29 v 1.57 a 0.6,0.6 0 0 0 0.11,0.34 l 2.52,3.66 a 0.21,0.21 0 0 1 
+        -0.18,0.33 h -6.87 a 0.21,0.21 0 0 1 -0.17,-0.33 z"/>
+</svg>

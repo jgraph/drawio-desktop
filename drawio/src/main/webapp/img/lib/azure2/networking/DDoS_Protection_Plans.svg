@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="abd0f203-bb3f-40b1-aa70-d3c4523b69e9"
+   width="14.72"
+   height="17.997572"
+   viewBox="0 0 14.72 17.997572"
+   version="1.1"
+   sodipodi:docname="DDoS_Protection_Plans.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview63788"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.36"
+     inkscape:cy="8.9975717"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="abd0f203-bb3f-40b1-aa70-d3c4523b69e9" />
+  <defs
+     id="defs63767">
+    <linearGradient
+       id="bf34fd15-2ab2-49bf-80d2-731c19b20dc3"
+       x1="9"
+       y1="1.36"
+       x2="9"
+       y2="17.870001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop63762" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop63764" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title63769">Icon-networking-72</title>
+  <path
+     d="m 14.72,8.4 c 0,4.84 -5.85,8.74 -7.12,9.53 a 0.46,0.46 0 0 1 -0.48,0 C 5.85,17.14 1.2845085e-8,13.24 1.2845085e-8,8.4 V 2.58 A 0.46,0.46 0 0 1 0.45000001,2.12 C 5,2 3.95,0 7.36,0 c 3.41,0 2.36,2 6.91,2.12 a 0.46,0.46 0 0 1 0.45,0.46 z"
+     id="path63771"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <path
+     d="m 14.11,8.45 c 0,4.44 -5.36,8 -6.53,8.74 a 0.43,0.43 0 0 1 -0.44,0 C 5.97,16.47 0.61000001,12.89 0.61000001,8.45 V 3.11 A 0.42,0.42 0 0 1 1.02,2.69 C 5.19,2.58 4.23,0.75 7.36,0.75 c 3.13,0 2.17,1.83 6.34,1.94 a 0.42,0.42 0 0 1 0.41,0.42 z"
+     id="path63773"
+     inkscape:connector-curvature="0"
+     style="fill:url(#bf34fd15-2ab2-49bf-80d2-731c19b20dc3)" />
+  <path
+     d="M 10.16,12.52 A 0.48,0.48 0 0 1 9.68,13 H 5.04 A 0.48,0.48 0 0 1 4.56,12.52 V 3.94 A 0.48,0.48 0 0 1 5.04,3.45 h 4.64 a 0.48,0.48 0 0 1 0.48,0.49 z"
+     id="path63775"
+     inkscape:connector-curvature="0"
+     style="fill:#e6e6e6" />
+  <path
+     d="m 5.36,5 a 0.6,0.6 0 0 1 0.6,-0.6 h 2.8 A 0.6,0.6 0 0 1 9.36,5 V 5 A 0.6,0.6 0 0 1 8.76,5.61 H 5.96 A 0.6,0.6 0 0 1 5.36,5 Z"
+     id="path63777"
+     inkscape:connector-curvature="0"
+     style="fill:#003067" />
+  <circle
+     cx="5.9900002"
+     cy="4.9899998"
+     r="0.41"
+     id="circle63779"
+     style="fill:#50e6ff" />
+  <path
+     d="m 5.36,6.9 a 0.61,0.61 0 0 1 0.6,-0.61 h 2.8 a 0.61,0.61 0 0 1 0.6,0.61 v 0 A 0.6,0.6 0 0 1 8.76,7.51 H 5.96 A 0.6,0.6 0 0 1 5.36,6.9 Z"
+     id="path63781"
+     inkscape:connector-curvature="0"
+     style="fill:#003067" />
+  <circle
+     cx="5.9900002"
+     cy="6.9000001"
+     r="0.41"
+     id="circle63783"
+     style="fill:#50e6ff" />
+  <metadata
+     id="metadata63785">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-networking-72</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

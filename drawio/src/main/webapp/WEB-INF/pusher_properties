@@ -1,0 +1,4 @@
+app_id=Replace_with_your_pusher_app_id
+key=Replace_with_your_pusher_key
+secret=Replace_with_your_pusher_secret
+cluster=Replace_with_your_pusher_cluster

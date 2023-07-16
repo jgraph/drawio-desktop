@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="fca2105f-c039-4f34-bd65-8ab95d4ecdb9"
+   width="16.84009"
+   height="17.001196"
+   viewBox="0 0 16.84009 17.001196"
+   version="1.1"
+   sodipodi:docname="App_Service_Plans.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview1263"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="24.055556"
+     inkscape:cx="11.709686"
+     inkscape:cy="8.3571552"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="fca2105f-c039-4f34-bd65-8ab95d4ecdb9" />
+  <defs
+     id="defs1242">
+    <linearGradient
+       id="a773af38-43e4-4fd2-9485-f8aac63ca91b"
+       x1="5.5700002"
+       y1="17.5"
+       x2="5.5700002"
+       y2="0.5"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.05"
+         stop-color="#949494"
+         id="stop1226" />
+      <stop
+         offset="0.36"
+         stop-color="#979797"
+         id="stop1228" />
+      <stop
+         offset="0.54"
+         stop-color="#9f9f9f"
+         id="stop1230" />
+      <stop
+         offset="0.69"
+         stop-color="#adadad"
+         id="stop1232" />
+      <stop
+         offset="0.73"
+         stop-color="#b3b3b3"
+         id="stop1234" />
+    </linearGradient>
+    <linearGradient
+       id="b4779ae6-74a5-486d-8aad-cd011859785a"
+       x1="10.56"
+       y1="6.02"
+       x2="10.56"
+       y2="19.709999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop1237" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop1239" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title1244">Icon-web-46</title>
+  <path
+     d="m 9.9800893,16.430091 a 0.56,0.56 0 0 1 -0.57,0.57 H 0.56008929 a 0.56,0.56 0 0 1 -0.55999999704,-0.57 V 0.57009092 A 0.56,0.56 0 0 1 0.56008929,9.0924122e-5 H 9.4200893 a 0.56,0.56 0 0 1 0.57,0.569999995878 z"
+     id="path1246"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a773af38-43e4-4fd2-9485-f8aac63ca91b)" />
+  <path
+     d="m 1.4200893,5.9600909 a 1.08,1.08 0 0 1 1.13,-1.08 h 5 a 1.08,1.08 0 0 1 1.05,1.08 v 0 a 1.08,1.08 0 0 1 -1.08,1.09 h -5 a 1.09,1.09 0 0 1 -1.1,-1.09 z"
+     id="path1248"
+     inkscape:connector-curvature="0"
+     style="fill:#003067" />
+  <path
+     d="m 1.4200893,2.7400909 a 1.09,1.09 0 0 1 1.13,-1.09 h 5 a 1.08,1.08 0 0 1 1.05,1.09 v 0 a 1.08,1.08 0 0 1 -1.08,1.08 h -5 a 1.08,1.08 0 0 1 -1.1,-1.08 z"
+     id="path1250"
+     inkscape:connector-curvature="0"
+     style="fill:#003067" />
+  <circle
+     cx="2.5900893"
+     cy="2.7400908"
+     r="0.73000002"
+     id="circle1252"
+     style="fill:#50e6ff" />
+  <circle
+     cx="2.5900893"
+     cy="5.9600911"
+     r="0.73000002"
+     id="circle1254"
+     style="fill:#50e6ff" />
+  <path
+     d="m 16.840089,13.880091 a 3.12,3.12 0 0 0 -2.67,-3 3.93,3.93 0 0 0 -4,-3.8000001 4,4 0 0 0 -3.8299997,2.66 3.7,3.7 0 0 0 -3.22,3.5900001 3.77,3.77 0 0 0 3.86,3.67 h 0.34 6.2599997 0.17 a 3.15,3.15 0 0 0 3.09,-3.12 z"
+     id="path1256"
+     inkscape:connector-curvature="0"
+     style="fill:url(#b4779ae6-74a5-486d-8aad-cd011859785a)" />
+  <metadata
+     id="metadata1260">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.WebHosting()</rdf:li>
+      <rdf:li>category: App Services</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-web-46</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

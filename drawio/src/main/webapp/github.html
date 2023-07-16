@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		This window will be closed automatically.
+		<script>
+			if (window.opener != null && window.opener.onGitHubCallback != null)
+			{
+				try
+				{
+					var search = window.location.search;
+					var idx1 = search.indexOf('code=');
+					var code = null;
+					
+					if (idx1 >= 0)
+					{
+						code = search.substring(idx1 + 5);
+					}
+
+					// Continues execution of main program flow
+					window.opener.onGitHubCallback(code, window);
+				}
+				catch (e)
+				{
+					alert('GitHub: ' + e.toString());
+					window.close();
+				}
+			}
+		</script>
+	</body>
+</html>

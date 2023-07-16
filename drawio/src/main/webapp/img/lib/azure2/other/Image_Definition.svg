@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18.00001"
+   height="16.825001"
+   viewBox="0 0 18.00001 16.825001"
+   version="1.1"
+   id="svg76629"
+   sodipodi:docname="Image_Definition.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview76631"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="8.4098361"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg76629" />
+  <defs
+     id="defs76604">
+    <linearGradient
+       id="e881218a-e4bf-4e0e-bbcf-da090b5b5cbf"
+       x1="10.564"
+       y1="1.3329999"
+       x2="10.564"
+       y2="16.764999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.588)">
+      <stop
+         offset="0"
+         stop-color="#999"
+         id="stop76589" />
+      <stop
+         offset="0.999"
+         stop-color="#767676"
+         id="stop76591" />
+    </linearGradient>
+    <linearGradient
+       id="aab4f9d9-9377-4fd9-b798-ac0a7f7cafdb"
+       x1="10.564"
+       y1="5.3790002"
+       x2="10.564"
+       y2="12.655"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.588)">
+      <stop
+         offset="0.001"
+         stop-color="#b3b3b3"
+         id="stop76594" />
+      <stop
+         offset="1"
+         stop-color="#999"
+         id="stop76596" />
+    </linearGradient>
+    <linearGradient
+       id="b836196c-4c51-4b78-af87-4d352c55cb07"
+       x1="5.4559999"
+       y1="0.35100001"
+       x2="5.4559999"
+       y2="17.782"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.588)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop76599" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop76601" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 18,8.401 a 7.465,7.465 0 0 1 -0.418,2.468 c -0.058,0.165 -0.122,0.327 -0.19,0.486 a 7.106,7.106 0 0 1 -0.378,0.756 7.449,7.449 0 0 1 -4.647,3.518 h -0.014 l -0.062,0.016 -0.031,0.006 a 7.274,7.274 0 0 1 -0.9,0.154 c -0.146,0.016 -0.294,0.027 -0.443,0.033 -0.027,0 -0.054,0 -0.081,0 -0.089,0 -0.178,0.006 -0.267,0.006 A 7.44,7.44 0 0 1 3.494,10.712 7.288,7.288 0 0 1 3.245,9.712 7.435,7.435 0 0 1 3.129,8.394 7.521,7.521 0 0 1 3.235,7.13 7.442,7.442 0 0 1 10.564,0.947 c 0.116,0 0.232,0 0.348,0.008 A 7.443,7.443 0 0 1 18,8.401 Z"
+     fill="url(#e881218a-e4bf-4e0e-bbcf-da090b5b5cbf)"
+     id="path76606"
+     style="fill:url(#e881218a-e4bf-4e0e-bbcf-da090b5b5cbf)" />
+  <ellipse
+     cx="10.564"
+     cy="8.401"
+     rx="3.5050001"
+     ry="3.5109999"
+     fill="url(#aab4f9d9-9377-4fd9-b798-ac0a7f7cafdb)"
+     id="ellipse76608"
+     style="fill:url(#aab4f9d9-9377-4fd9-b798-ac0a7f7cafdb)" />
+  <rect
+     y="0"
+     width="10.912"
+     height="16.825001"
+     rx="0.52600002"
+     fill="url(#b836196c-4c51-4b78-af87-4d352c55cb07)"
+     id="rect76610"
+     style="fill:url(#b836196c-4c51-4b78-af87-4d352c55cb07)"
+     x="0" />
+  <polygon
+     points="5.481,12.447 5.46,9 8.397,7.262 8.418,10.702 "
+     fill="#50e6ff"
+     id="polygon76612"
+     transform="translate(0,-0.588)" />
+  <polygon
+     points="2.495,7.297 5.44,5.552 8.397,7.262 5.461,9.007 "
+     fill="#c3f1ff"
+     id="polygon76614"
+     transform="translate(0,-0.588)" />
+  <polygon
+     points="2.516,10.738 2.495,7.297 5.461,9.007 5.481,12.447 "
+     fill="#9cebff"
+     id="polygon76616"
+     transform="translate(0,-0.588)" />
+  <polygon
+     points="5.46,9 5.481,12.447 2.516,10.738 "
+     fill="#c3f1ff"
+     id="polygon76618"
+     transform="translate(0,-0.588)" />
+  <polygon
+     points="5.46,9 5.481,12.447 8.418,10.702 "
+     fill="#9cebff"
+     id="polygon76620"
+     transform="translate(0,-0.588)" />
+</svg>

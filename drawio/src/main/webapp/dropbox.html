@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			if (window.opener != null && window.opener.onDropboxCallback != null)
+			{
+				try
+				{
+ 					var hash = window.location.hash;
+ 					var i1 = hash.indexOf('access_token=');
+ 					var token = null;
+ 					
+ 					if (i1 >= 0)
+ 					{
+ 						var i2 = hash.indexOf('&', i1 + 13);
+ 						
+ 						if (i2 > i1)
+ 						{
+ 							token = hash.substring(i1 + 13, i2);
+ 						}
+ 					}
+
+					// Continues execution of main program flow
+					window.opener.onDropboxCallback(token, window);
+				}
+				catch (e)
+				{
+					alert('Dropbox: ' + e.toString());
+					window.close();
+				}
+			}
+		</script>
+	</body>
+</html>

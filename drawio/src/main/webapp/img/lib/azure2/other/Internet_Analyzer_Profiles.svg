@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.576853"
+   height="16.597385"
+   viewBox="0 0 17.576853 16.597385"
+   version="1.1"
+   id="svg71667"
+   sodipodi:docname="Internet_Analyzer_Profiles.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview71669"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="24.055556"
+     inkscape:cx="7.0500329"
+     inkscape:cy="2.1899568"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg71667" />
+  <defs
+     id="defs71636">
+    <linearGradient
+       id="bd6e50c9-d5a4-4e74-abad-3b4ae921495e"
+       x1="8.6929998"
+       y1="12.726"
+       x2="8.6929998"
+       y2="0.70499998"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop71623" />
+      <stop
+         offset="0.105"
+         stop-color="#1480da"
+         id="stop71625" />
+      <stop
+         offset="0.306"
+         stop-color="#348ee3"
+         id="stop71627" />
+      <stop
+         offset="0.5"
+         stop-color="#4b98ea"
+         id="stop71629" />
+      <stop
+         offset="0.682"
+         stop-color="#599eee"
+         id="stop71631" />
+      <stop
+         offset="0.84"
+         stop-color="#5ea0ef"
+         id="stop71633" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title71638">Icon-469-Internet-Analyzer</title>
+  <path
+     d="m 16.962,8.2583845 a 3.811,3.811 0 0 0 -3.307,-3.661 A 4.8,4.8 0 0 0 8.708,0.00238446 4.926,4.926 0 0 0 4,3.2133845 a 4.547,4.547 0 0 0 -4,4.375 4.615,4.615 0 0 0 4.776,4.4349995 c 0.141,0 0.281,-0.007 0.42,-0.018 h 7.734 a 0.769,0.769 0 0 0 0.2,-0.031 3.855,3.855 0 0 0 3.832,-3.7159995 z"
+     id="path71645"
+     inkscape:connector-curvature="0"
+     style="fill:url(#bd6e50c9-d5a4-4e74-abad-3b4ae921495e)" />
+  <circle
+     cx="8.8899994"
+     cy="5.676384"
+     r="1.318"
+     id="circle71647"
+     style="fill:#ffffff" />
+  <ellipse
+     cx="12.482"
+     cy="6.9953842"
+     rx="1.057"
+     ry="1.062"
+     id="ellipse71649"
+     style="fill:#ffffff" />
+  <circle
+     cx="10.207998"
+     cy="2.9123843"
+     r="0.73799998"
+     id="circle71651"
+     style="fill:#ffffff" />
+  <path
+     style="fill:#50e6ff"
+     inkscape:connector-curvature="0"
+     id="path71653"
+     d="m 17.231,16.597384 h -8.7 c -0.277,0 -0.44,-0.443 -0.283,-0.671 l 3,-4.369 a 0.351,0.351 0 0 0 0.061,-0.2 V 8.4693845 a 0.173,0.173 0 0 0 -0.174,-0.172 h -0.161 a 0.344,0.344 0 0 1 -0.344,-0.344 v -0.156 a 0.344,0.344 0 0 1 0.344,-0.344 h 3.815 a 0.344,0.344 0 0 1 0.344,0.344 v 0.155 a 0.344,0.344 0 0 1 -0.344,0.345 h -0.161 a 0.172,0.172 0 0 0 -0.172,0.172 v 2.8949995 a 0.339,0.339 0 0 0 0.061,0.2 l 3,4.362 c 0.155,0.223 -0.009,0.671 -0.286,0.671 z" />
+  <path
+     style="fill:#ffffff"
+     inkscape:connector-curvature="0"
+     id="path71655"
+     d="m 9.535,15.425384 2.277,-3.32 a 0.827,0.827 0 0 0 0.146,-0.471 v -1.337 a 0.265,0.265 0 0 1 0.265,-0.265 h 1.292 a 0.265,0.265 0 0 1 0.265,0.265 v 1.428 a 0.553,0.553 0 0 0 0.1,0.317 l 2.325,3.383 a 0.2,0.2 0 0 1 -0.163,0.311 H 9.698 a 0.2,0.2 0 0 1 -0.163,-0.311 z" />
+  <path
+     style="fill:#86d633"
+     inkscape:connector-curvature="0"
+     id="path71657"
+     d="m 11.738,14.331384 0.463,1.072 a 0.066,0.066 0 0 0 0.124,-0.005 l 0.484,-1.435 a 0.066,0.066 0 0 1 0.122,-0.01 l 0.394,0.751 a 0.067,0.067 0 0 0 0.116,0 l 0.526,-0.889 a 0.066,0.066 0 0 1 0.058,-0.033 h 1.057 l -0.215,-0.311 a 0.066,0.066 0 0 0 -0.055,-0.029 h -0.981 a 0.067,0.067 0 0 0 -0.058,0.032 l -0.314,0.532 a 0.066,0.066 0 0 1 -0.116,0 l -0.481,-0.915 a 0.066,0.066 0 0 0 -0.122,0.01 l -0.451,1.348 a 0.066,0.066 0 0 1 -0.124,0.005 l -0.387,-0.9 a 0.066,0.066 0 0 0 -0.119,0 l -0.549,1 a 0.067,0.067 0 0 1 -0.059,0.034 h -0.9 a 0.068,0.068 0 0 0 -0.055,0.029 l -0.214,0.311 h 1.367 a 0.067,0.067 0 0 0 0.059,-0.034 l 0.311,-0.565 a 0.066,0.066 0 0 1 0.119,0.002 z" />
+  <metadata
+     id="metadata71665">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Other</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-469-Internet-Analyzer</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

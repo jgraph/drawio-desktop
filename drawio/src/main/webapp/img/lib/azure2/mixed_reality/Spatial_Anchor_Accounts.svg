@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="bba85be8-9732-442a-809b-d61dc92aa629"
+   width="16.661568"
+   height="17"
+   viewBox="0 0 16.661568 17"
+   version="1.1"
+   sodipodi:docname="Spatial_Anchor_Accounts.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview46625"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.3190416"
+     inkscape:cy="8.5006305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bba85be8-9732-442a-809b-d61dc92aa629" />
+  <defs
+     id="defs46610">
+    <linearGradient
+       id="b1e7032f-a771-4e9c-8697-4742c3f961d9"
+       x1="8.2200003"
+       y1="8.0900002"
+       x2="8.2200003"
+       y2="4.71"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.66999984,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop46588" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop46590" />
+    </linearGradient>
+    <linearGradient
+       id="bdda0d5c-f636-4ea8-9f0f-c234c5739420"
+       x1="2.3599999"
+       y1="12.63"
+       x2="2.3599999"
+       y2="9.25"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.66999984,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop46593" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop46595" />
+    </linearGradient>
+    <linearGradient
+       id="e764e489-8213-4958-8dad-a441b8ecbd06"
+       x1="8.2200003"
+       y1="17.5"
+       x2="8.2200003"
+       y2="14.12"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.66999984,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop46598" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop46600" />
+    </linearGradient>
+    <linearGradient
+       id="fa9d132d-3569-42e2-ae7f-64ec04cf2c7e"
+       x1="14.08"
+       y1="0.5"
+       x2="14.08"
+       y2="11.54"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.66999984,-0.5)">
+      <stop
+         offset="0"
+         stop-color="#b77af4"
+         id="stop46603" />
+      <stop
+         offset="0.62"
+         stop-color="#8c4fe4"
+         id="stop46605" />
+      <stop
+         offset="1"
+         stop-color="#773adc"
+         id="stop46607" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title46612">Icon-other-352</title>
+  <circle
+     id="a0c1ba3e-b1b7-469c-bdc3-466c91eaeae0"
+     cx="13.41"
+     cy="10.44"
+     r="1.34"
+     fill="#9cebff" />
+  <path
+     d="M 13.41,8.06 A 2.36,2.36 0 0 0 12,8.5 L 7.5500002,5.37 0.41000016,10.44 7.5500002,15.86 12.08,12.42 a 2.42,2.42 0 0 0 1.33,0.4 2.38,2.38 0 1 0 0,-4.76 z M 11.8,8.69 Z m -4.2499998,5.87 -5.39,-4.06 5.39,-3.86 L 11.33,9.32 v 0 a 2.32,2.32 0 0 0 -0.28,1.12 2.4,2.4 0 0 0 0.28,1.22 v 0 z M 11.62,8.87 Z m -0.16,0.21 z m 0.21,3 z m -0.16,-0.19 z m 0.35,0.37 z m 1.55,-0.45 a 1.35,1.35 0 1 1 0,-2.69 1.35,1.35 0 0 1 0,2.69 z"
+     fill="#50e6ff"
+     id="path46615" />
+  <circle
+     id="a9522cc2-b2ba-4b00-9796-5c509d789e81"
+     cx="7.5500002"
+     cy="5.9000001"
+     r="1.6900001"
+     fill="url(#b1e7032f-a771-4e9c-8697-4742c3f961d9)"
+     style="fill:url(#b1e7032f-a771-4e9c-8697-4742c3f961d9)" />
+  <circle
+     id="f6bf0b63-bfa6-4c36-8883-b7c63ca6cc98"
+     cx="1.6900001"
+     cy="10.44"
+     r="1.6900001"
+     fill="url(#bdda0d5c-f636-4ea8-9f0f-c234c5739420)"
+     style="fill:url(#bdda0d5c-f636-4ea8-9f0f-c234c5739420)" />
+  <circle
+     id="a22c324d-f47e-42c6-beb7-a9e72fe96c3d"
+     cx="7.5500002"
+     cy="15.31"
+     r="1.6900001"
+     fill="url(#e764e489-8213-4958-8dad-a441b8ecbd06)"
+     style="fill:url(#e764e489-8213-4958-8dad-a441b8ecbd06)" />
+  <path
+     d="m 13.41,0 a 3.35,3.35 0 0 0 -3.25,3.5 c 0,1.53 1.94,5.11 2.82,7.25 a 0.46,0.46 0 0 0 0.85,0 C 14.72,8.59 16.66,4.98 16.66,3.5 A 3.4,3.4 0 0 0 13.41,0 Z m 0,4.74 A 1.45,1.45 0 1 1 14.85,3.3 1.44,1.44 0 0 1 13.41,4.74 Z"
+     fill="url(#fa9d132d-3569-42e2-ae7f-64ec04cf2c7e)"
+     id="path46620"
+     style="fill:url(#fa9d132d-3569-42e2-ae7f-64ec04cf2c7e)" />
+  <metadata
+     id="metadata46707">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-other-352</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

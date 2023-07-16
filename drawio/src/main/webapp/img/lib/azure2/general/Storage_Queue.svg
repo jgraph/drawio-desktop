@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.912001"
+   height="13.599"
+   viewBox="0 0 16.912001 13.599"
+   version="1.1"
+   id="svg47793"
+   sodipodi:docname="Storage_Queue.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview47795"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.456"
+     inkscape:cy="6.799"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg47793" />
+  <defs
+     id="defs47772">
+    <linearGradient
+       id="f6607f9a-6e3a-4339-acc9-d6f3ae1a2c0d"
+       x1="9"
+       y1="15.799"
+       x2="9"
+       y2="5.316"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.544,2.2)">
+      <stop
+         offset="0"
+         stop-color="#a67af4"
+         id="stop47767" />
+      <stop
+         offset="0.775"
+         stop-color="#b796f9"
+         id="stop47769" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title47774">MsPortalFx.base.images-3</title>
+  <g
+     id="f3784f80-3379-4e66-8e32-fca3fab0f4d7"
+     transform="translate(-0.544,-2.2)">
+    <g
+       id="g47788">
+      <path
+         d="m 0.544,5.316 h 16.912 v 9.918 a 0.565,0.565 0 0 1 -0.565,0.565 H 1.109 A 0.565,0.565 0 0 1 0.544,15.234 Z"
+         id="path47776"
+         inkscape:connector-curvature="0"
+         style="fill:url(#f6607f9a-6e3a-4339-acc9-d6f3ae1a2c0d)" />
+      <path
+         d="m 1.112,2.2 h 15.776 a 0.565,0.565 0 0 1 0.565,0.565 v 2.55 H 0.547 V 2.766 A 0.565,0.565 0 0 1 1.112,2.2 Z"
+         id="path47778"
+         inkscape:connector-curvature="0"
+         style="fill:#773adc" />
+      <g
+         id="g47786">
+        <rect
+           x="2.625"
+           y="6.4349999"
+           width="3.6830001"
+           height="7.9330001"
+           rx="0.27399999"
+           id="rect47780"
+           style="fill:#ffffff" />
+        <rect
+           x="7.158"
+           y="6.4349999"
+           width="3.6830001"
+           height="7.9330001"
+           rx="0.27399999"
+           id="rect47782"
+           style="opacity:0.75;fill:#ffffff" />
+        <rect
+           x="11.692"
+           y="6.4349999"
+           width="3.6830001"
+           height="7.9330001"
+           rx="0.27399999"
+           id="rect47784"
+           style="opacity:0.5;fill:#ffffff" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata47791">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.StorageQueue()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-3</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

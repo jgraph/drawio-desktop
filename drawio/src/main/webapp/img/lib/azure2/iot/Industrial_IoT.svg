@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16.553999"
+   height="18.001307"
+   viewBox="0 0 16.553999 18.001307"
+   version="1.1"
+   id="svg41200"
+   sodipodi:docname="Industrial_IoT.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview41202"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="44.055556"
+   inkscape:cx="8.2736444"
+   inkscape:cy="9"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg41200" />
+<defs
+   id="defs41178">
+  <linearGradient
+     id="b6ff5ac2-f7a5-4e68-8c19-dabded72f2d6"
+     x1="2.053"
+     y1="3.2579999"
+     x2="2.053"
+     y2="5.9180002"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(-0.72299993,0.00130578)">
+    <stop
+       offset="0"
+       stop-color="#50e6ff"
+       id="stop41158" />
+    <stop
+       offset="1"
+       stop-color="#32bedd"
+       id="stop41160" />
+  </linearGradient>
+  <linearGradient
+     id="ae84e0ac-ac51-49f6-b6ba-2ddc8a8d5977"
+     x1="9.0340004"
+     y1="15.265"
+     x2="9.0340004"
+     y2="17.924"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(-0.72299993,0.00130578)">
+    <stop
+       offset="0"
+       stop-color="#50e6ff"
+       id="stop41163" />
+    <stop
+       offset="1"
+       stop-color="#32bedd"
+       id="stop41165" />
+  </linearGradient>
+  <linearGradient
+     id="b507edec-318c-4b6e-a794-52c980297a12"
+     x1="15.947"
+     y1="3.3399999"
+     x2="15.947"
+     y2="5.9990001"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(-0.72299993,0.00130578)">
+    <stop
+       offset="0"
+       stop-color="#50e6ff"
+       id="stop41168" />
+    <stop
+       offset="1"
+       stop-color="#32bedd"
+       id="stop41170" />
+  </linearGradient>
+  <linearGradient
+     id="b9c885f9-e246-4b5c-a44a-a929e3757698"
+     x1="9.0010004"
+     y1="7.0479999"
+     x2="9.0010004"
+     y2="13.068"
+     gradientUnits="userSpaceOnUse"
+     gradientTransform="translate(-0.72299993,0.00130578)">
+    <stop
+       offset="0"
+       stop-color="#50e6ff"
+       id="stop41173" />
+    <stop
+       offset="1"
+       stop-color="#32bedd"
+       id="stop41175" />
+  </linearGradient>
+</defs>
+<path
+   d="m 7.8990001,17.234306 -6.852,-3.956 a 0.757,0.757 0 0 1 -0.37700003,-0.654 V 4.7123058 a 0.756,0.756 0 0 1 0.37700003,-0.654 l 6.852,-3.95700002 a 0.754,0.754 0 0 1 0.755,0 L 15.506,4.0573058 a 0.755,0.755 0 0 1 0.378,0.654 v 7.9120002 a 0.756,0.756 0 0 1 -0.378,0.654 l -6.8519999,3.957 a 0.759,0.759 0 0 1 -0.755,0 z m -5.817,-4.554 5.817,3.359 a 0.754,0.754 0 0 0 0.755,0 l 5.8229999,-3.359 a 0.754,0.754 0 0 0 0.377,-0.653 V 5.3093058 a 0.756,0.756 0 0 0 -0.377,-0.654 l -5.8229999,-3.354 a 0.759,0.759 0 0 0 -0.755,0 l -5.817,3.354 a 0.755,0.755 0 0 0 -0.378,0.654 v 6.7180002 a 0.753,0.753 0 0 0 0.378,0.653 z"
+   fill="#a3a3a3"
+   id="path41180" />
+<circle
+   cx="1.33"
+   cy="4.6653056"
+   r="1.33"
+   fill="url(#b6ff5ac2-f7a5-4e68-8c19-dabded72f2d6)"
+   id="circle41182"
+   style="fill:url(#b6ff5ac2-f7a5-4e68-8c19-dabded72f2d6)" />
+<circle
+   cx="8.3110008"
+   cy="16.671307"
+   r="1.33"
+   fill="url(#ae84e0ac-ac51-49f6-b6ba-2ddc8a8d5977)"
+   id="circle41184"
+   style="fill:url(#ae84e0ac-ac51-49f6-b6ba-2ddc8a8d5977)" />
+<circle
+   cx="15.224"
+   cy="4.7463055"
+   r="1.33"
+   fill="url(#b507edec-318c-4b6e-a794-52c980297a12)"
+   id="circle41186"
+   style="fill:url(#b507edec-318c-4b6e-a794-52c980297a12)" />
+<path
+   d="m 7.3700001,7.9953058 h -2.58 l 0.387,-3.774 a 0.33,0.33 0 0 1 0.329,-0.3 h 1.148 a 0.331,0.331 0 0 1 0.33,0.3 z"
+   fill="#32bedd"
+   id="path41188" />
+<path
+   d="m 9.6500001,8.1623058 h -1.839 l 0.275,-2.561 a 0.236,0.236 0 0 1 0.235,-0.214 h 0.819 a 0.237,0.237 0 0 1 0.237,0.214 z"
+   fill="#32bedd"
+   id="path41190" />
+<path
+   d="M 12.863,7.4353058 H 3.6920001 a 0.385,0.385 0 0 0 -0.385,0.385 v 4.2000002 a 0.385,0.385 0 0 0 0.385,0.384 h 5.258 v -1.549 a 0.189,0.189 0 0 1 0.189,-0.189 H 10.204 a 0.189,0.189 0 0 1 0.189,0.189 v 1.546 h 2.47 a 0.384,0.384 0 0 0 0.385,-0.384 V 7.8173058 a 0.385,0.385 0 0 0 -0.385,-0.382 z"
+   fill="url(#b9c885f9-e246-4b5c-a44a-a929e3757698)"
+   id="path41192"
+   style="fill:url(#b9c885f9-e246-4b5c-a44a-a929e3757698)" />
+<rect
+   x="4.7820001"
+   y="8.6403055"
+   width="1.524"
+   height="1.115"
+   rx="0.138"
+   fill="#ffffff"
+   id="rect41194" />
+<rect
+   x="7.5160003"
+   y="8.6403055"
+   width="1.524"
+   height="1.115"
+   rx="0.138"
+   fill="#ffffff"
+   id="rect41196" />
+<rect
+   x="10.249001"
+   y="8.6403055"
+   width="1.524"
+   height="1.115"
+   rx="0.138"
+   fill="#ffffff"
+   id="rect41198" />
+​
+</svg>

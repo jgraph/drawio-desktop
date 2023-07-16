@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18.001873"
+   height="16.77"
+   viewBox="0 0 18.001873 16.77"
+   version="1.1"
+   id="svg58187"
+   sodipodi:docname="Azure_Monitor_Dashboard.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview58189"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="8.3871375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg58187" />
+  <defs
+     id="defs58157">
+    <linearGradient
+       id="fab66c9e-8ade-4b14-85a1-89a3dd7ceae9"
+       x1="8.1409998"
+       y1="1.048"
+       x2="8.1409998"
+       y2="13.741"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-0.60900003)">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop58152" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop58154" />
+    </linearGradient>
+  </defs>
+  <rect
+     y="0"
+     width="16.282"
+     height="13.678"
+     rx="0.76099998"
+     fill="url(#fab66c9e-8ade-4b14-85a1-89a3dd7ceae9)"
+     id="rect58159"
+     x="0"
+     style="fill:url(#fab66c9e-8ade-4b14-85a1-89a3dd7ceae9)" />
+  <ellipse
+     cx="6.5240002"
+     cy="4.7199998"
+     rx="1.131"
+     ry="1.137"
+     fill="#ffffff"
+     id="ellipse58161" />
+  <ellipse
+     cx="9.6590004"
+     cy="6.8509998"
+     rx="1.131"
+     ry="1.137"
+     fill="#ffffff"
+     id="ellipse58163" />
+  <ellipse
+     cx="12.695"
+     cy="2.813"
+     rx="1.131"
+     ry="1.137"
+     fill="#ffffff"
+     id="ellipse58165" />
+  <ellipse
+     cx="3.5869999"
+     cy="8.9019995"
+     rx="1.131"
+     ry="1.137"
+     fill="#ffffff"
+     id="ellipse58167" />
+  <polygon
+     points="12.296,3.122 13.095,3.723 9.773,8.141 6.65,6.02 3.996,9.798 3.177,9.224 6.398,4.64 9.546,6.778 "
+     fill="#ffffff"
+     id="polygon58169"
+     transform="translate(0,-0.60900003)" />
+  <path
+     d="M 6.931,16.483 A 1.169,1.169 0 0 1 5.763,15.316 c 0.2,-3.889 2.539,-6.362 5.974,-6.362 3.435,0 5.79,2.473 5.974,6.3 A 1.17,1.17 0 0 1 16.6,16.481 H 6.93 Z"
+     fill="#ffffff"
+     id="path58171" />
+  <path
+     d="m 11.737,9.241 c 3.427,0 5.52,2.549 5.687,6.029 a 0.881,0.881 0 0 1 -0.836,0.924 H 6.931 A 0.88,0.88 0 0 1 6.05,15.314 c 0,-0.015 0,-0.03 0,-0.046 0.177,-3.477 2.266,-6.027 5.687,-6.027 m 0,-0.575 c -3.6,0 -6.058,2.581 -6.26,6.574 v 0.076 a 1.458,1.458 0 0 0 1.456,1.454 h 9.626 0.059 A 1.457,1.457 0 0 0 18,15.241 C 17.811,11.309 15.295,8.666 11.739,8.666 Z"
+     fill="#0078d4"
+     id="path58173" />
+  <path
+     d="M 14.368,11.663 A 3.991,3.991 0 0 0 11.986,10.649 V 12.5 a 2.224,2.224 0 0 1 1.106,0.472 z"
+     fill="#50e6ff"
+     id="path58175" />
+  <path
+     d="m 9.044,11.663 1.276,1.309 A 2.224,2.224 0 0 1 11.426,12.5 v -1.851 a 3.994,3.994 0 0 0 -2.382,1.014 z"
+     fill="#50e6ff"
+     id="path58177" />
+  <path
+     d="m 13.5,13.384 a 2.35,2.35 0 0 1 0.462,1.136 h 1.8 a 4.231,4.231 0 0 0 -0.987,-2.445 z"
+     fill="#32bedd"
+     id="path58179" />
+  <path
+     d="M 9.917,13.384 8.641,12.075 A 4.223,4.223 0 0 0 7.655,14.52 h 1.8 a 2.352,2.352 0 0 1 0.462,-1.136 z"
+     fill="#50e6ff"
+     id="path58181" />
+  <path
+     d="m 14.773,12.917 a 0.4,0.4 0 0 0 -0.363,-0.233 0.388,0.388 0 0 0 -0.167,0.038 l -2.772,1.3 0.334,0.726 2.775,-1.3 a 0.4,0.4 0 0 0 0.193,-0.531 z"
+     fill="#e62323"
+     id="path58183" />
+  <circle
+     cx="11.737"
+     cy="14.354"
+     r="0.954"
+     fill="#4f4f4f"
+     id="circle58185" />
+</svg>

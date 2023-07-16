@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e2c4fead-2d58-4de9-a9d4-4d961c9e0620"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   version="1.1"
+   sodipodi:docname="Recent.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview37014"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.6199999"
+     inkscape:cy="8.5900002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e2c4fead-2d58-4de9-a9d4-4d961c9e0620" />
+  <defs
+     id="defs36990">
+    <radialGradient
+       id="effe6513-9d59-4ea4-be18-9228e5407456"
+       cx="-7.5500002"
+       cy="17.42"
+       r="9"
+       gradientTransform="matrix(0.94,0,0,0.94,16.02,-7.37)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop36968" />
+      <stop
+         offset="0.56"
+         stop-color="#5c9fee"
+         id="stop36970" />
+      <stop
+         offset="0.69"
+         stop-color="#559ced"
+         id="stop36972" />
+      <stop
+         offset="0.78"
+         stop-color="#4a97e9"
+         id="stop36974" />
+      <stop
+         offset="0.86"
+         stop-color="#3990e4"
+         id="stop36976" />
+      <stop
+         offset="0.93"
+         stop-color="#2387de"
+         id="stop36978" />
+      <stop
+         offset="0.99"
+         stop-color="#087bd6"
+         id="stop36980" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop36982" />
+    </radialGradient>
+    <radialGradient
+       id="e025ef80-86ff-4bd1-bbc9-eb35b96a5a7e"
+       cx="-7.1700001"
+       cy="18.5"
+       r="1.26"
+       gradientTransform="matrix(0.94,0,0,0.94,15.68,-8.34)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#7f7f7f"
+         id="stop36985" />
+      <stop
+         offset="1"
+         stop-color="#5e5e5e"
+         id="stop36987" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title36992">Icon-general-6</title>
+  <circle
+     cx="8.5"
+     cy="8.5"
+     r="8.5"
+     id="circle36994"
+     style="fill:url(#effe6513-9d59-4ea4-be18-9228e5407456)" />
+  <circle
+     cx="8.54"
+     cy="8.5"
+     r="7.4000001"
+     id="circle36996"
+     style="fill:#ffffff" />
+  <rect
+     id="aceb7cb9-58cb-48fa-8e61-5ef12bf99b74"
+     x="5.0975113"
+     y="11.826215"
+     width="1.27"
+     height="0.41"
+     transform="rotate(-45)"
+     style="fill:#7a7a7a" />
+  <rect
+     id="ebb8133f-edd1-4f29-a441-eb0a438d6dc2"
+     x="13.55"
+     y="8.29"
+     width="1.27"
+     height="0.41"
+     style="fill:#7a7a7a" />
+  <rect
+     id="af989baf-d5e3-49e7-86f6-e72de83ca00b"
+     x="-0.18227208"
+     y="17.023266"
+     width="0.41"
+     height="1.27"
+     transform="rotate(-45)"
+     style="fill:#7a7a7a" />
+  <rect
+     id="a05e3ec9-3b82-44cd-81fb-376dc2152cdb"
+     x="8.3299999"
+     y="13.49"
+     width="0.41"
+     height="1.27"
+     style="fill:#7a7a7a" />
+  <rect
+     id="b16f4a81-ab50-4cf1-9c62-0a7141b15bae"
+     x="-0.16832624"
+     y="5.6427917"
+     width="0.41"
+     height="1.27"
+     transform="rotate(-45)"
+     style="fill:#7a7a7a" />
+  <rect
+     id="a2d229fb-1605-4450-a05f-6e35f6de0534"
+     x="-6.2729621"
+     y="11.836411"
+     width="1.27"
+     height="0.41"
+     transform="rotate(-45)"
+     style="fill:#7a7a7a" />
+  <rect
+     id="b198c913-4b35-4230-bc4f-74b3884eed78"
+     x="2.1699998"
+     y="8.29"
+     width="1.27"
+     height="0.41"
+     style="fill:#7a7a7a" />
+  <rect
+     x="8.0199995"
+     y="2.2399998"
+     width="1.14"
+     height="6.52"
+     rx="0.51999998"
+     id="rect37005"
+     style="fill:#7a7a7a" />
+  <rect
+     x="-0.58760715"
+     y="-16.325012"
+     width="1.14"
+     height="4.0799999"
+     rx="0.51999998"
+     transform="rotate(135)"
+     id="rect37007"
+     style="fill:#7a7a7a" />
+  <circle
+     cx="8.54"
+     cy="8.4899998"
+     r="1.2"
+     id="circle37009"
+     style="fill:url(#e025ef80-86ff-4bd1-bbc9-eb35b96a5a7e)" />
+  <metadata
+     id="metadata37011">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Clock()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-6</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

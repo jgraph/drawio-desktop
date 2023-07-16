@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="ab6915f8-be54-4d6f-932a-7f429e75983a" sodipodi:docname="10167-icon-service-Machine-Learning-Studio-Workspaces.svg"
+    version="1.1" width="17.021242" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.021242 16.800182"
+    height="16.800182" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs3529">
+        <linearGradient x1="5.71" y1="7.0999999" x2="5.8200002" gradientUnits="userSpaceOnUse" y2="17.48" id="b8ef1ebf-419d-4097-a9bc-e2fbb68d9c3b">
+            <stop offset="0" stop-color="#32d4f5" id="stop3514"/>
+            <stop offset="0.32" stop-color="#31d1f3" id="stop3516"/>
+            <stop offset="0.53" stop-color="#2ec9eb" id="stop3518"/>
+            <stop offset="0.7" stop-color="#29bade" id="stop3520"/>
+            <stop offset="0.86" stop-color="#22a5cb" id="stop3522"/>
+            <stop offset="1" stop-color="#198ab3" id="stop3524"/>
+            <stop offset="1" stop-color="#198ab3" id="stop3526"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:#e6e6e6" d="M 5.4998079,1.8157497e-4 H 16.619808 a 0.37,0.37 0 0 1 0.38,0.33999999503 V 8.9301816 
+        a 0.36,0.36 0 0 1 -0.38,0.34 H 5.4998079 a 0.36,0.36 0 0 1 -0.38,-0.34 V 0.34018157 a 0.37,0.37 0 0 1 
+        0.38,-0.33999999503 z"/>
+    <path style="fill:#5ea0ef" d="M 5.4398079,1.8157497e-4 H 16.639808 a 0.35,0.35 0 0 1 0.36,0.31999999503 v 0 
+        1.30000003 H 5.0798079 V 0.32018157 a 0.35,0.35 0 0 1 0.36,-0.31999999503 z"/>
+    <rect x="5.0798078" width="3.98" y="1.6201816" height="3.8299999" style="fill:#83b9f9"/>
+    <rect x="9.0398083" width="3.98" y="1.6201816" height="3.8299999" style="fill:#0078d4"/>
+    <rect x="13.019809" width="3.98" y="1.6201816" height="3.8299999" style="fill:#83b9f9"/>
+    <path style="fill:#0078d4" d="m 16.429808,9.3101816 h -3.41 v -3.87 h 4 v 3.26 a 0.57,0.57 0 0 1 -0.59,0.61 z"/>
+    <rect width="3.98" x="-13.049808" height="3.8299999" y="-9.2701817" style="fill:#83b9f9" transform="scale(-1)"/>
+    <rect width="3.98" x="-9.069808" height="3.8299999" y="-9.2701817" style="fill:#0078d4" transform="scale(-1)"/>
+    <path style="fill:url(#b8ef1ebf-419d-4097-a9bc-e2fbb68d9c3b)" d="M 10.229808,16.800182 H 0.3898079 c -0.31,0 
+        -0.5,-0.5 -0.32,-0.76 l 3.39,-5 a 0.34,0.34 0 0 0 0.04,-0.17 V 7.6001816 a 0.2,0.2 0 0 0 -0.16,-0.2 h -0.19 a 
+        0.39,0.39 0 0 1 -0.39,-0.39 v -0.17 a 0.39,0.39 0 0 1 0.39,-0.38 h 4.35 a 0.38,0.38 0 0 1 0.39,0.38 v 0.18 a 
+        0.38,0.38 0 0 1 -0.39,0.38 h -0.21 a 0.2,0.2 0 0 0 -0.2,0.19 v 3.2800004 a 0.41,0.41 0 0 0 0.07,0.22 l 
+        3.4000001,4.94 c 0.17,0.27 -0.01,0.77 -0.33,0.77 z"/>
+    <path style="fill:#ffffff" d="m 1.6898079,15.400182 2.46,-3.59 a 0.86,0.86 0 0 0 0.16,-0.51 V 9.8001816 a 0.29,0.29 
+        0 0 1 0.29,-0.29 h 1.4 a 0.28,0.28 0 0 1 0.28,0.29 v 1.6000004 a 0.6,0.6 0 0 0 0.11,0.34 l 2.52,3.66 a 0.21,0.21 
+        0 0 1 -0.18,0.34 h -6.87 a 0.21,0.21 0 0 1 -0.17,-0.34 z"/>
+</svg>

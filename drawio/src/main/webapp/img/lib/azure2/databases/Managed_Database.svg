@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a0bfe492-1579-433c-8ece-4b967fa03537"
+   width="17.030001"
+   height="16.001677"
+   viewBox="0 0 17.030001 16.001677"
+   version="1.1"
+   sodipodi:docname="Managed_Database.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview14587"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.57"
+     inkscape:cy="8.0016758"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a0bfe492-1579-433c-8ece-4b967fa03537" />
+  <defs
+     id="defs14568">
+    <linearGradient
+       id="a277b8e4-bda7-42ff-a227-3f8bf005decb"
+       x1="0.5"
+       y1="9.96"
+       x2="12.43"
+       y2="9.96"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop14538" />
+      <stop
+         offset="0.07"
+         stop-color="#0060a9"
+         id="stop14540" />
+      <stop
+         offset="0.36"
+         stop-color="#0071c8"
+         id="stop14542" />
+      <stop
+         offset="0.52"
+         stop-color="#0078d4"
+         id="stop14544" />
+      <stop
+         offset="0.64"
+         stop-color="#0074cd"
+         id="stop14546" />
+      <stop
+         offset="0.82"
+         stop-color="#006abb"
+         id="stop14548" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop14550" />
+    </linearGradient>
+    <linearGradient
+       id="ab2c3ec1-3cb9-4ca3-b673-1a1d1ffb5675"
+       x1="11.77"
+       y1="17.030001"
+       x2="11.77"
+       y2="8.8999996"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop14553" />
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop14555" />
+      <stop
+         offset="0.11"
+         stop-color="#22a5cb"
+         id="stop14557" />
+      <stop
+         offset="0.23"
+         stop-color="#29bade"
+         id="stop14559" />
+      <stop
+         offset="0.37"
+         stop-color="#2ec9eb"
+         id="stop14561" />
+      <stop
+         offset="0.53"
+         stop-color="#31d1f3"
+         id="stop14563" />
+      <stop
+         offset="0.78"
+         stop-color="#32d4f5"
+         id="stop14565" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title14570">Icon-databases-135</title>
+  <path
+     d="m 6.04,4.3 c -3.3,0 -6,-1 -6,-2.16 v 11.49 c 0,1.18 2.63,2.15 5.88,2.16 h 0.09 c 3.29,0 6,-1 6,-2.16 V 2.14 C 12,3.33 9.33,4.3 6.04,4.3 Z"
+     id="path14572"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a277b8e4-bda7-42ff-a227-3f8bf005decb)" />
+  <path
+     d="M 12,2.14 C 12,3.33 9.33,4.3 6,4.3 2.67,4.3 0,3.3 0,2.14 0,0.98 2.74,0 6.04,0 c 3.3,0 6,1 6,2.17"
+     id="path14574"
+     inkscape:connector-curvature="0"
+     style="fill:#eaeaea" />
+  <path
+     d="M 10.57,2 C 10.57,2.76 8.57,3.37 6,3.37 3.43,3.37 1.46,2.72 1.46,2 1.46,1.28 3.51,0.59 6.04,0.59 8.57,0.59 10.57,1.2 10.57,2"
+     id="path14576"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="M 6.04,2.28 A 11,11 0 0 0 2.41,2.8 10.89,10.89 0 0 0 6.04,3.33 10.86,10.86 0 0 0 9.66,2.8 11,11 0 0 0 6.04,2.28 Z"
+     id="path14578"
+     inkscape:connector-curvature="0"
+     style="fill:#198ab3" />
+  <path
+     d="M 16.32,11.74 A 2.89,2.89 0 0 0 14.83,11 3.24,3.24 0 0 0 11.49,7.9 3.35,3.35 0 0 0 8.29,10.07 3.06,3.06 0 0 0 5.57,13 3.12,3.12 0 0 0 8.79,16 h 0.29 5.23 0.13 a 2.61,2.61 0 0 0 2.59,-2.51 2.46,2.46 0 0 0 -0.75,-1.74"
+     id="path14580"
+     inkscape:connector-curvature="0"
+     style="fill:url(#ab2c3ec1-3cb9-4ca3-b673-1a1d1ffb5675)" />
+  <path
+     d="m 13.87,14.8 h -0.94 v -2.53 q 0,-0.4 0,-0.9 v 0 c 0,0.25 -0.1,0.44 -0.13,0.56 l -1,2.87 h -0.78 l -1,-2.85 A 4.61,4.61 0 0 1 9.89,11.37 v 0 c 0,0.41 0,0.78 0,1.09 V 14.8 H 9.05 v -4.23 h 1.4 l 0.86,2.51 a 3.29,3.29 0 0 1 0.15,0.6 v 0 c 0.05,-0.23 0.11,-0.44 0.16,-0.61 l 0.87,-2.5 h 1.38 z"
+     id="path14582"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata14584">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Databases</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-databases-135</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

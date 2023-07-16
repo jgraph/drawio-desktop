@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="ed8fbe5c-618b-47ce-8d68-3dbd1e10f81a"
+   width="16.986103"
+   height="17"
+   viewBox="0 0 16.986103 17"
+   version="1.1"
+   sodipodi:docname="Azure_AD_Roles_and_Administrators.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview55737"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.4961033"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="ed8fbe5c-618b-47ce-8d68-3dbd1e10f81a" />
+  <defs
+     id="defs55716">
+    <linearGradient
+       id="e78519cd-36d2-4ee5-987f-be84be24d95e"
+       x1="7.9299998"
+       y1="17.950001"
+       x2="7.9299998"
+       y2="5.6199999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop55706" />
+      <stop
+         offset="1"
+         stop-color="#b4ec36"
+         id="stop55708" />
+    </linearGradient>
+    <linearGradient
+       id="ac3f95ec-6391-4f34-b431-9534d4cdf013"
+       x1="7.9499998"
+       y1="9.21"
+       x2="7.9499998"
+       y2="-2.02"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop55711" />
+      <stop
+         offset="1"
+         stop-color="#b4ec36"
+         id="stop55713" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 13.496103,16.35 a 1.3,1.3 0 0 0 1.32,-1.31 0.81,0.81 0 0 0 0,-0.16 c -0.52,-4.15 -2.88,-7.53 -7.3999997,-7.53 -4.52,0 -6.91999996,2.86 -7.40999996,7.54 a 1.34,1.34 0 0 0 1.18999996,1.46 z"
+     id="path55718"
+     inkscape:connector-curvature="0"
+     style="fill:url(#e78519cd-36d2-4ee5-987f-be84be24d95e)" />
+  <path
+     d="m 7.4961033,8.33 a 4.16,4.16 0 0 1 -2.26,-0.66 l 2.18,5.83 2.22,-5.79 a 4.2,4.2 0 0 1 -2.14,0.62 z"
+     id="path55720"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <circle
+     cx="7.4461031"
+     cy="4.1700001"
+     r="4.1700001"
+     id="circle55722"
+     style="fill:url(#ac3f95ec-6391-4f34-b431-9534d4cdf013)" />
+  <polygon
+     points="13.85,17.5 13.85,13.26 17.49,11.13 17.49,15.37 "
+     id="polygon55724"
+     style="fill:#32bedd"
+     transform="translate(-0.50389666,-0.5)" />
+  <polygon
+     points="10.21,11.13 13.85,9 17.49,11.13 13.85,13.26 "
+     id="polygon55726"
+     style="fill:#9cebff"
+     transform="translate(-0.50389666,-0.5)" />
+  <polygon
+     points="10.21,15.37 10.21,11.13 13.85,13.26 13.85,17.5 "
+     id="polygon55728"
+     style="fill:#50e6ff"
+     transform="translate(-0.50389666,-0.5)" />
+  <polygon
+     points="13.85,17.5 10.21,15.37 13.85,13.26 "
+     id="polygon55730"
+     style="fill:#9cebff"
+     transform="translate(-0.50389666,-0.5)" />
+  <polygon
+     points="13.85,17.5 17.49,15.37 13.85,13.26 "
+     id="polygon55732"
+     style="fill:#50e6ff"
+     transform="translate(-0.50389666,-0.5)" />
+  <metadata
+     id="metadata55734">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.ResourceRole()</rdf:li>
+      <rdf:li>category: Intune</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

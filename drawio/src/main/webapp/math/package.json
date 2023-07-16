@@ -1,0 +1,59 @@
+{
+  "name": "mathjax",
+  "version": "3.2.2",
+  "description": "Beautiful and accessible math in all browsers. MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all browsers. This package includes the packaged components (install mathjax-full to get the source code).",
+  "keywords": [
+    "math",
+    "svg",
+    "mathml",
+    "tex",
+    "latex",
+    "asciimath",
+    "browser",
+    "node"
+  ],
+  "devDependencies": {
+    "mathjax-full": "3.2.2"
+  },
+  "maintainers": [
+    "MathJax Consortium <info@mathjax.org> (http://www.mathjax.org)"
+  ],
+  "bugs": {
+    "url": "http://github.com/mathjax/MathJax/issues"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mathjax/MathJax.git"
+  },
+  "main": "es5/node-main.js",
+  "files": [
+    "/es5"
+  ],
+  "scripts": {
+    "test": "echo 'No tests defined'",
+    "clean": "npm run --silent clean:es5 && npm run --silent clean:node",
+    "clean:es5": "rm -rf es5",
+    "clean:node": "rm -rf node_modules package-lock.json",
+    "message": "echo \"$(tput setaf 4)${npm_package_config_message}$(tput setaf 0)\" && echo",
+    "line": "echo '--------------------------------------------'",
+    "title": "npm run --silent line && npm run --silent message --mathjax:message=\"${npm_package_config_title}\"",
+    "preinstall:mj3": "npm run --silent title --mathjax:title='Installing MathJax...'",
+    "install:mj3": "npm install",
+    "preinstall:mj3-deps": "npm run --silent message --mathjax:message='Installing MathJax Dependencies...'",
+    "install:mj3-deps": "cd node_modules/mathjax-full && npm install",
+    "install:all": "npm run --silent install:mj3 && npm run --silent install:mj3-deps",
+    "precompile": "npm run --silent title --mathjax:title='Compiling MathJax...'",
+    "compile": "cd node_modules/mathjax-full && npm run --silent compile",
+    "precomponents": "npm run --silent title --mathjax:title='Building MathJax Components...'",
+    "components": "cd node_modules/mathjax-full && npm run --silent make-components",
+    "premove": "npm run --silent title --mathjax:title='Moving MathJax Components...'",
+    "move": "npm run --silent clean:es5 && mv node_modules/mathjax-full/es5 .",
+    "premake-es5": "npm run --silent clean:node",
+    "make-es5": "npm run --silent install:all && npm run --silent compile && npm run --silent components && npm run --silent move",
+    "postmake-es5": "npm run --silent title --mathjax:title='Cleaning Up...' && npm run --silent clean:node",
+    "preget-es5": "npm run --silent clean:node",
+    "get-es5": "npm run --silent install:mj3 && npm run --silent move",
+    "postget-es5": "npm run --silent title --mathjax:title='Cleaning Up...' && npm run --silent clean:node"
+  }
+}

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.950001"
+   height="18.000002"
+   viewBox="0 0 17.950001 18.000002"
+   version="1.1"
+   id="svg1508"
+   sodipodi:docname="Azure_Object_Understanding.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1510"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.9773014"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1508" />
+  <defs
+     id="defs1483">
+    <linearGradient
+       id="ec04b9e1-5ea3-46c5-94db-3c9863f3d653"
+       x1="11.499"
+       y1="2.355"
+       x2="11.499"
+       y2="12.575"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.025)">
+      <stop
+         offset="0"
+         stop-color="#42e8ca"
+         id="stop1478" />
+      <stop
+         offset="1"
+         stop-color="#37c2b1"
+         id="stop1480" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 7.821,9.1320009 v 0 l 3.342,-6.582 a 0.357,0.357 0 0 1 0.633,-0.006 l 3.334,6.291 a 2.243,2.243 0 0 1 0.333,1.2850001 c 0,1.356 -1.786,2.455 -3.989,2.455 -2.203,0 -3.989,-1.099 -3.989,-2.455 A 1.691,1.691 0 0 1 7.821,9.1320009 Z"
+     fill="url(#ec04b9e1-5ea3-46c5-94db-3c9863f3d653)"
+     style="isolation:isolate;fill:url(#ec04b9e1-5ea3-46c5-94db-3c9863f3d653)"
+     id="path1485" />
+  <polygon
+     points="10.548,8.127 10.548,12.868 6.45,15.25 6.45,10.502 "
+     fill="#50e6ff"
+     id="polygon1487"
+     transform="translate(-0.025)" />
+  <polygon
+     points="6.45,10.508 6.45,15.25 2.352,12.868 2.352,8.126 "
+     fill="#9cebff"
+     id="polygon1489"
+     transform="translate(-0.025)" />
+  <polygon
+     points="10.548,8.127 6.451,10.508 2.352,8.126 6.451,5.744 "
+     fill="#c3f1ff"
+     id="polygon1491"
+     transform="translate(-0.025)" />
+  <path
+     d="m 10.663,8.2070009 0.139,-0.08 -0.139,-0.081 v -0.164 l -0.14,0.082 -4.098,-2.383 -4.1,2.382 -0.14,-0.082 v 0.164 l -0.14,0.081 0.14,0.081 v 4.7420001 l 4.1,2.382 v 0.169 l 0.141,-0.082 0.14,0.082 v -0.164 l 4.1,-2.382 z m -4.238,-2.301 3.817,2.22 L 6.42,10.342001 5.475,9.7910009 2.607,8.1260009 Z M 2.468,12.787001 V 8.3710009 l 3.816,2.2180001 v 4.416 z m 4.1,2.218 v -4.416 l 3.817,-2.2180001 v 4.4160001 z"
+     fill="#32bedd"
+     id="path1493" />
+  <path
+     d="M 0.575,4.9080009 A 0.574,0.574 0 0 1 0,4.3340009 V 0.57400087 A 0.574,0.574 0 0 1 0.575,8.710808e-7 h 3.52 A 0.575,0.575 0 0 1 4.095,1.1490009 H 1.151 v 3.185 a 0.574,0.574 0 0 1 -0.576,0.574 z"
+     fill="#50e6ff"
+     id="path1495" />
+  <path
+     d="m 17.375,4.9080009 a 0.574,0.574 0 0 1 -0.574,-0.574 v -3.185 h -2.948 a 0.575,0.575 0 0 1 0,-1.1490000289192 h 3.522 A 0.574,0.574 0 0 1 17.95,0.57400087 V 4.3340009 a 0.574,0.574 0 0 1 -0.575,0.574 z"
+     fill="#50e6ff"
+     id="path1497" />
+  <path
+     d="M 4.097,18.000001 H 0.575 A 0.574,0.574 0 0 1 0,17.426001 v -3.76 a 0.575,0.575 0 0 1 1.149,0 v 3.185 h 2.948 a 0.575,0.575 0 0 1 0,1.149 z"
+     fill="#50e6ff"
+     id="path1499" />
+  <path
+     d="m 17.375,18.000001 h -3.52 a 0.575,0.575 0 0 1 0,-1.149 h 2.946 v -3.185 a 0.575,0.575 0 0 1 1.149,0 v 3.76 a 0.574,0.574 0 0 1 -0.575,0.574 z"
+     fill="#50e6ff"
+     id="path1501" />
+  <path
+     d="m 2.83,8.1520009 a 0.467,0.467 0 1 1 -0.466,-0.466 0.467,0.467 0 0 1 0.466,0.466 z m 3.595,-2.852 a 0.466,0.466 0 1 0 0.466,0.466 0.465,0.465 0 0 0 -0.466,-0.466 z m 4.091,2.386 a 0.467,0.467 0 1 0 0.466,0.466 0.466,0.466 0 0 0 -0.466,-0.466 z M 6.425,10.042001 a 0.467,0.467 0 1 0 0.466,0.466 0.466,0.466 0 0 0 -0.466,-0.466 z m -4.061,2.411 a 0.467,0.467 0 1 0 0.466,0.467 0.467,0.467 0 0 0 -0.466,-0.467 z m 4.061,2.331 a 0.466,0.466 0 1 0 0.466,0.466 0.466,0.466 0 0 0 -0.466,-0.466 z m 4.091,-2.331 a 0.467,0.467 0 1 0 0.466,0.467 0.467,0.467 0 0 0 -0.466,-0.467 z"
+     fill="#198ab3"
+     id="path1505" />
+</svg>

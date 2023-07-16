@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="12.761528"
+   viewBox="0 0 18 12.761528"
+   version="1.1"
+   id="svg60310"
+   sodipodi:docname="Azure_Quotas.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview60312"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="3.779319"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg60310"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <defs
+     id="defs60299">
+    <linearGradient
+       id="b34ec488-362d-4e56-ba08-b30b594400e7"
+       x1="9"
+       y1="2.619"
+       x2="9"
+       y2="15.381"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-2.6197719)">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop60284" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop60286" />
+    </linearGradient>
+    <linearGradient
+       id="a991103a-cd8c-4c10-9187-45efb6afaa60"
+       x1="9.0010004"
+       y1="6.1700001"
+       x2="9.0010004"
+       y2="15.458"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-2.6197719)">
+      <stop
+         offset="0.33"
+         stop-color="#b4ec36"
+         id="stop60289" />
+      <stop
+         offset="1"
+         stop-color="#86d633"
+         id="stop60291" />
+    </linearGradient>
+    <linearGradient
+       id="b85f8f17-e712-4c0f-bc80-cfc59ff8aa95"
+       x1="9"
+       y1="9.6520004"
+       x2="9"
+       y2="15.442"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-2.6197719)">
+      <stop
+         offset="0.429"
+         stop-color="#86d633"
+         id="stop60294" />
+      <stop
+         offset="0.999"
+         stop-color="#76bc2d"
+         id="stop60296" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 18,8.7632281 a 4.093,4.093 0 0 1 -3.667,3.9219999 3.919,3.919 0 0 1 -0.394,0.021 0.825,0.825 0 0 1 -0.216,0.033 H 5.516 c -0.138,0.012 -0.285,0.019 -0.431,0.019 H 5.07 A 4.894,4.894 0 0 1 0,8.0572281 a 4.824,4.824 0 0 1 4.244,-4.648 5.228,5.228 0 0 1 5,-3.40699999 5.1,5.1 0 0 1 5.246,4.87799999 4.042,4.042 0 0 1 3.51,3.883 z"
+     fill="url(#b34ec488-362d-4e56-ba08-b30b594400e7)"
+     id="path60301"
+     style="fill:url(#b34ec488-362d-4e56-ba08-b30b594400e7)" />
+  <path
+     d="m 11.441,6.6592281 h -1.295 a 0.15,0.15 0 0 0 -0.15,0.15 V 12.739228 H 8 V 6.8092281 a 0.15,0.15 0 0 0 -0.15,-0.15 H 6.56 a 0.15,0.15 0 0 1 -0.113,-0.248 l 2.439,-2.831 a 0.151,0.151 0 0 1 0.228,0 l 2.441,2.827 a 0.15,0.15 0 0 1 -0.114,0.252 z"
+     fill="url(#a991103a-cd8c-4c10-9187-45efb6afaa60)"
+     id="path60303"
+     style="fill:url(#a991103a-cd8c-4c10-9187-45efb6afaa60)" />
+  <path
+     d="m 13.51,7.0732281 -1.642,1.9 a 0.15,0.15 0 0 0 0.114,0.248 h 0.783 a 0.151,0.151 0 0 1 0.15,0.151 v 3.3659999 h 0.808 a 0.825,0.825 0 0 0 0.216,-0.033 3.919,3.919 0 0 0 0.394,-0.021 V 9.3732281 a 0.151,0.151 0 0 1 0.15,-0.151 h 0.783 a 0.15,0.15 0 0 0 0.114,-0.248 l -1.642,-1.9 a 0.15,0.15 0 0 0 -0.228,-0.001 z m -9.248,0 -1.642,1.9 a 0.15,0.15 0 0 0 0.114,0.248 h 0.783 a 0.151,0.151 0 0 1 0.15,0.151 v 3.2329999 a 4.9,4.9 0 0 0 1.4,0.152 H 5.082 V 9.3732281 a 0.151,0.151 0 0 1 0.15,-0.151 h 0.783 a 0.15,0.15 0 0 0 0.114,-0.248 l -1.639,-1.901 a 0.15,0.15 0 0 0 -0.228,0 z"
+     opacity="0.9"
+     fill="url(#b85f8f17-e712-4c0f-bc80-cfc59ff8aa95)"
+     id="path60305"
+     style="fill:url(#b85f8f17-e712-4c0f-bc80-cfc59ff8aa95)" />
+</svg>

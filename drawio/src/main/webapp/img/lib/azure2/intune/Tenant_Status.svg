@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="e979f534-1d24-46aa-9a2a-7433f250352d"
+   width="16.006315"
+   height="16.959999"
+   viewBox="0 0 16.006315 16.959999"
+   version="1.1"
+   sodipodi:docname="Tenant_Status.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview39870"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.001261"
+     inkscape:cy="8.5006305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e979f534-1d24-46aa-9a2a-7433f250352d" />
+  <defs
+     id="defs39855">
+    <linearGradient
+       id="a48bec21-4c8e-4f6e-81c7-d97c02c84089"
+       x1="8.1400003"
+       y1="6.52"
+       x2="8.1400003"
+       y2="18.389999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.99368401,-0.5)">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop39845" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop39847" />
+    </linearGradient>
+    <linearGradient
+       id="a823dbf1-63ca-413a-8d39-d29758a0e3ca"
+       x1="7.8000002"
+       y1="0.15000001"
+       x2="8.6700001"
+       y2="10.93"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.99368401,-0.5)">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop39850" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop39852" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title39857">Icon-intune-342</title>
+  <path
+     d="m 13.006316,15.75 a 1.27,1.27 0 0 0 1.29,-1.25 0.76,0.76 0 0 0 0,-0.15 c -0.5,-4 -2.78,-7.25 -7.13,-7.25 -4.35,0 -6.72000001,2.73 -7.16000001,7.24 a 1.28,1.28 0 0 0 1.14000001,1.4 h 11.86 z"
+     fill="url(#a48bec21-4c8e-4f6e-81c7-d97c02c84089)"
+     id="path39859"
+     style="fill:url(#a48bec21-4c8e-4f6e-81c7-d97c02c84089)" />
+  <path
+     d="m 7.156316,8.02 a 3.92,3.92 0 0 1 -2.15,-0.64 l 2.13,5.62 2.13,-5.58 a 4,4 0 0 1 -2.11,0.6 z"
+     fill="#ffffff"
+     opacity="0.8"
+     id="path39861" />
+  <circle
+     cx="7.1563158"
+     cy="4.0100002"
+     r="4.0100002"
+     fill="url(#a823dbf1-63ca-413a-8d39-d29758a0e3ca)"
+     id="circle39863"
+     style="fill:url(#a823dbf1-63ca-413a-8d39-d29758a0e3ca)" />
+  <path
+     d="m 14.316316,10.32 a 1.77,1.77 0 0 0 -1.81,1.18 1.76,1.76 0 0 0 -1.81,-1.18 c -1.64,0.18 -1.69,1.75 -1.69,2.37 0,0.44 0.1,1.84 3.48,4.27 v 0 0 0 0 c 3.43,-2.46 3.52,-3.83 3.52,-4.27 0,-0.62 0,-2.19 -1.69,-2.37 z"
+     fill="#b31b1b"
+     id="path39865" />
+  <path
+     d="m 16.006316,12.5 h -1.6 a 0.11,0.11 0 0 0 -0.11,0.06 l -0.5,0.83 a 0.07,0.07 0 0 1 -0.11,0 l -0.68,-1.41 a 0.13,0.13 0 0 0 -0.24,0 l -0.68,2 a 0.06,0.06 0 0 1 -0.12,0 l -0.59,-1.36 a 0.13,0.13 0 0 0 -0.23,0 l -0.78,1.42 a 0.11,0.11 0 0 1 -0.11,0.06 h -0.72 a 4.6,4.6 0 0 0 0.37,0.51 h 0.65 a 0.11,0.11 0 0 0 0.11,-0.07 l 0.55,-1 0.74,1.71 a 0.13,0.13 0 0 0 0.24,0 l 0.77,-2.28 0.67,1.28 a 0.14,0.14 0 0 0 0.23,0 l 0.74,-1.26 a 0.15,0.15 0 0 1 0.11,-0.07 h 1.29"
+     fill="#f2f2f2"
+     id="path39867" />
+  <metadata
+     id="metadata39952">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-intune-342</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

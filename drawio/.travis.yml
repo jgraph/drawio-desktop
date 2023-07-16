@@ -1,0 +1,18 @@
+language: java
+sudo: false
+before_install:
+- sudo apt-get update
+- sudo apt-get install ant
+- cd etc/build
+script: ant war
+before_deploy:
+- cd $TRAVIS_BUILD_DIR
+deploy:
+  provider: releases
+  api_key:
+    secure: CzBd1sEPknb5wQYpPa3Ao517JTi8I/wBQXAQN3xUcGiJycZRb4GcOdbylDzcL9VtjkXAldHUxGHV181xvs/xUt4BQQY4Rg0OhWFQ8JhThFGe/eQwLKTxZbJmFk9eRs36GbqrBXRQ/2SgWDzhWf1FBefBb/blJKrgpzqyJlIhYESE7mKvPGORF9ef/3zrieXCu6ycDn/AhWLXgB/HE7ZztcrsUa+DxiIvjGoVIfECIXf1uejBJSK5iPzfxWEMOoOxKueA9Y6cajMNJeKO410D/GxFTT+2xRyZhTIFiM7BF0hTCbPlIIJIS6TdIYYkIZAjd8FlYqk8ECrhCQn5etzaDx/FWvtC5IvFMJjwAfydLwPFt+iRBfP8fFSuQ6Hw8RE3CxDkU1SV6N6BAEACiteAQXzYcjtL3YCoUlsR8CIHXf+x+gaxK6rPE/XGNg8JX1N5duYDsHBf5rJZrVfImQd5Qy/eddP2/4/NBsV+5zfapMrfx0MIeP/uUWhENkZYUysnum+sn9JhKvqqjbou1gBJh8xXgFEPAqcylSqxgXFY+AcWVCJzKnycjR2ldi0jBWgaYt0ItzwW0oWOaDmxMPnXLMzbozap414BfpdipxWrhYM9e2ldGd7StniJFYN4eAzRGMYlSFd3xA+HLeJzk7EunI3tAn8VMVy7gXcHzyQ4GpA=
+  file: build/draw.war
+  skip_cleanup: true
+  on:
+    repo: jgraph/drawio
+    tags: true

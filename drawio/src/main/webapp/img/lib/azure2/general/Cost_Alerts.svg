@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="14.164014"
+   viewBox="0 0 17 14.164014"
+   version="1.1"
+   id="svg19425"
+   sodipodi:docname="Cost_Alerts.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview19427"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="7.0820141"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg19425" />
+  <defs
+     id="defs19412">
+    <linearGradient
+       id="b69628e4-f1fb-4b63-9c34-e2d84c36afc4"
+       x1="9"
+       y1="17.198"
+       x2="9"
+       y2="-3.2820001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,1.918)">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop19401" />
+      <stop
+         offset="0.183"
+         stop-color="#629c25"
+         id="stop19403" />
+      <stop
+         offset="0.435"
+         stop-color="#6dae2a"
+         id="stop19405" />
+      <stop
+         offset="0.726"
+         stop-color="#7fcb30"
+         id="stop19407" />
+      <stop
+         offset="0.822"
+         stop-color="#86d633"
+         id="stop19409" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title19414">MsPortalFx.base.images-31</title>
+  <g
+     id="a0c8ba28-a0da-4e78-8fdc-d8090f0226f2"
+     transform="translate(-0.5,-1.918)">
+    <g
+       id="g19420">
+      <path
+         d="m 17.5,2.5 v 10.832 a 0.583,0.583 0 0 1 -0.584,0.581 H 12.4 a 0.142,0.142 0 0 0 -0.142,0.141 V 15.8 a 0.284,0.284 0 0 1 -0.456,0.224 L 9.079,13.943 A 0.145,0.145 0 0 0 8.992,13.913 H 1.084 A 0.583,0.583 0 0 1 0.5,13.332 V 2.5 A 0.584,0.584 0 0 1 1.084,1.918 H 16.916 A 0.584,0.584 0 0 1 17.5,2.5 Z"
+         id="path19416"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b69628e4-f1fb-4b63-9c34-e2d84c36afc4)" />
+      <path
+         d="m 10.772,7.857 v 0 A 3.811,3.811 0 0 0 9.348,7.018 V 5.454 a 3.444,3.444 0 0 1 1.286,0.455 0.11,0.11 0 0 0 0.111,0 0.109,0.109 0 0 0 0.056,-0.1 V 4.556 a 0.11,0.11 0 0 0 -0.056,-0.1 3.37,3.37 0 0 0 -1.4,-0.325 V 3.392 A 0.11,0.11 0 0 0 9.235,3.282 H 8.563 a 0.11,0.11 0 0 0 -0.11,0.11 V 4.158 A 2.3,2.3 0 0 0 7.14,4.772 1.8,1.8 0 0 0 6.584,6.1 1.788,1.788 0 0 0 7.038,7.371 3.874,3.874 0 0 0 8.453,8.207 V 9.7 A 3.684,3.684 0 0 1 7.653,9.5 2.6,2.6 0 0 1 6.89,9.118 0.111,0.111 0 0 0 6.714,9.207 V 10.5 a 0.112,0.112 0 0 0 0.059,0.1 3.883,3.883 0 0 0 1.685,0.439 v 0.874 a 0.111,0.111 0 0 0 0.11,0.111 h 0.675 a 0.111,0.111 0 0 0 0.11,-0.111 V 11 A 2.39,2.39 0 0 0 10.72,10.4 1.77,1.77 0 0 0 11.234,9.081 1.721,1.721 0 0 0 10.772,7.857 Z M 9.787,9.135 v 0.008 a 0.5,0.5 0 0 1 -0.438,0.53 v -1.1 C 9.636,8.734 9.783,8.922 9.787,9.135 Z M 8.033,6.023 A 0.512,0.512 0 0 1 8.453,5.487 V 6.639 A 0.726,0.726 0 0 1 8.033,6.023 Z"
+         id="path19418"
+         inkscape:connector-curvature="0"
+         style="fill:#f2f2f2" />
+    </g>
+  </g>
+  <metadata
+     id="metadata19423">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.CostAlerts()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-31</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

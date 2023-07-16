@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18"
+   height="15.376398"
+   viewBox="0 0 18 15.376398"
+   version="1.1"
+   id="svg44593"
+   sodipodi:docname="Service_Bus.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview44595"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="7.6870461"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg44593" />
+  <defs
+     id="defs44562">
+    <linearGradient
+       id="bfaf9eca-0566-4d05-9aa2-c2ccb9db061f"
+       x1="9"
+       y1="14.071"
+       x2="9"
+       y2="1.313"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,1.3106482)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop44551" />
+      <stop
+         offset="0.156"
+         stop-color="#1380da"
+         id="stop44553" />
+      <stop
+         offset="0.528"
+         stop-color="#3c91e5"
+         id="stop44555" />
+      <stop
+         offset="0.822"
+         stop-color="#559cec"
+         id="stop44557" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop44559" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title44564">MsPortalFx.base.images-58</title>
+  <g
+     id="b59a3860-e924-4d5f-b847-0f0976124add"
+     transform="translate(0,-1.3106482)">
+    <g
+       id="g44588">
+      <path
+         d="M 18,10.075 A 4.044,4.044 0 0 0 14.49,6.188 5.1,5.1 0 0 0 9.24,1.313 5.229,5.229 0 0 0 4.24,4.721 4.825,4.825 0 0 0 0,9.364 4.9,4.9 0 0 0 5.068,14.071 c 0.151,0 0.3,-0.007 0.447,-0.019 h 8.207 A 0.819,0.819 0 0 0 13.939,14.019 4.093,4.093 0 0 0 18,10.075 Z"
+         id="path44566"
+         inkscape:connector-curvature="0"
+         style="fill:url(#bfaf9eca-0566-4d05-9aa2-c2ccb9db061f)" />
+      <path
+         d="m 12.067,11.806 h -6.36 a 0.276,0.276 0 0 0 -0.282,0.27 v 1.732 a 0.276,0.276 0 0 0 0.281,0.27 h 6.361 a 0.276,0.276 0 0 0 0.281,-0.27 v -1.732 a 0.277,0.277 0 0 0 -0.281,-0.27 z"
+         id="path44568"
+         inkscape:connector-curvature="0"
+         style="fill:#32bedd" />
+      <path
+         d="m 12.067,14.415 h -6.36 a 0.276,0.276 0 0 0 -0.282,0.27 v 1.731 a 0.276,0.276 0 0 0 0.281,0.271 h 6.361 a 0.276,0.276 0 0 0 0.281,-0.271 v -1.731 a 0.277,0.277 0 0 0 -0.281,-0.27 z"
+         id="path44570"
+         inkscape:connector-curvature="0"
+         style="fill:#198ab3" />
+      <path
+         d="m 11.27,12.231 h 0.373 a 0.072,0.072 0 0 1 0.072,0.072 v 0.356 a 0.069,0.069 0 0 1 -0.069,0.069 H 11.267 A 0.069,0.069 0 0 1 11.198,12.659 V 12.3 a 0.072,0.072 0 0 1 0.072,-0.069 z"
+         id="path44572"
+         inkscape:connector-curvature="0"
+         style="fill:#b4ec36" />
+      <path
+         d="m 11.268,13.087 h 0.376 a 0.072,0.072 0 0 1 0.072,0.072 v 0.353 a 0.072,0.072 0 0 1 -0.072,0.072 H 11.27 a 0.072,0.072 0 0 1 -0.072,-0.072 v -0.356 a 0.069,0.069 0 0 1 0.07,-0.069 z"
+         id="path44574"
+         inkscape:connector-curvature="0"
+         style="fill:#b4ec36" />
+      <path
+         d="m 11.289,14.827 h 0.376 a 0.072,0.072 0 0 1 0.072,0.072 v 0.356 a 0.069,0.069 0 0 1 -0.069,0.069 H 11.292 A 0.072,0.072 0 0 1 11.22,15.252 V 14.9 a 0.069,0.069 0 0 1 0.069,-0.073 z"
+         id="path44576"
+         inkscape:connector-curvature="0"
+         style="fill:#b4ec36" />
+      <path
+         d="m 11.289,15.683 h 0.376 a 0.072,0.072 0 0 1 0.072,0.072 v 0.356 A 0.069,0.069 0 0 1 11.668,16.18 H 11.289 A 0.069,0.069 0 0 1 11.22,16.111 v -0.359 a 0.069,0.069 0 0 1 0.069,-0.069 z"
+         id="path44578"
+         inkscape:connector-curvature="0"
+         style="fill:#b4ec36" />
+      <path
+         d="M 12.007,8.993 H 5.647 A 0.276,0.276 0 0 0 5.365,9.264 V 11 a 0.277,0.277 0 0 0 0.281,0.271 h 6.361 A 0.277,0.277 0 0 0 12.288,11 V 9.264 A 0.277,0.277 0 0 0 12.007,8.993 Z"
+         id="path44580"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+      <path
+         d="m 11.208,9.419 h 0.376 a 0.072,0.072 0 0 1 0.072,0.072 V 9.847 A 0.069,0.069 0 0 1 11.587,9.916 H 11.21 A 0.072,0.072 0 0 1 11.138,9.844 V 9.488 a 0.069,0.069 0 0 1 0.07,-0.069 z"
+         id="path44582"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <path
+         d="m 11.208,10.275 h 0.376 a 0.072,0.072 0 0 1 0.072,0.072 V 10.7 a 0.069,0.069 0 0 1 -0.069,0.069 H 11.208 A 0.069,0.069 0 0 1 11.139,10.7 v -0.359 a 0.069,0.069 0 0 1 0.069,-0.066 z"
+         id="path44584"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <path
+         d="m 11.635,7.4 -2.43,2.43 a 0.29,0.29 0 0 1 -0.41,0 L 6.365,7.4 A 0.13,0.13 0 0 1 6.457,7.179 H 7.951 A 0.129,0.129 0 0 0 8.08,7.05 V 4.014 a 0.1,0.1 0 0 1 0.1,-0.1 h 1.636 a 0.1,0.1 0 0 1 0.1,0.1 v 3.037 a 0.129,0.129 0 0 0 0.129,0.129 h 1.494 a 0.13,0.13 0 0 1 0.096,0.22 z"
+         id="path44586"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+  <metadata
+     id="metadata44591">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.ServiceBus()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-58</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

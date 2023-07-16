@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="15.474"
+   height="18"
+   viewBox="0 0 15.474 18"
+   version="1.1"
+   id="svg89222"
+   sodipodi:docname="Storage_Explorer.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview89224"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.7288777"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg89222" />
+  <defs
+     id="defs89195">
+    <linearGradient
+       id="bee6f948-729b-4fc1-971c-9b33c93b461f"
+       x1="9.2860003"
+       y1="7.1030002"
+       x2="8.8760004"
+       y2="19.415001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.263)">
+      <stop
+         offset="0"
+         stop-color="#e6e6e6"
+         id="stop89190" />
+      <stop
+         offset="1"
+         stop-color="#b3b3b3"
+         id="stop89192" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title89197">Icon-613-Storage-Explorer-blue</title>
+  <path
+     d="M 14.955,6.589 H 10.03 A 0.259,0.259 0 0 0 9.771,6.848 V 9.829 A 0.259,0.259 0 0 1 9.512,10.088 H 5.143 a 0.257,0.257 0 0 0 -0.257,0.257 v 3.043 a 0.26,0.26 0 0 1 -0.26,0.259 H 0.258 A 0.258,0.258 0 0 0 0,13.904 v 3.581 A 0.516,0.516 0 0 0 0.515,18 h 9.816 a 0.233,0.233 0 0 0 0.053,-0.006 h 4.571 a 0.518,0.518 0 0 0 0.519,-0.518 V 7.107 A 0.518,0.518 0 0 0 14.955,6.589 Z"
+     fill="url(#bee6f948-729b-4fc1-971c-9b33c93b461f)"
+     id="path89199"
+     style="fill:url(#bee6f948-729b-4fc1-971c-9b33c93b461f)" />
+  <rect
+     x="10.588"
+     y="14.495"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#005ba1"
+     id="rect89201" />
+  <rect
+     x="10.588"
+     y="10.936"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#5ea0ef"
+     id="rect89203" />
+  <rect
+     x="10.588"
+     y="7.3769999"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#ffffff"
+     id="rect89205" />
+  <rect
+     x="5.7030001"
+     y="14.5"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#005ba1"
+     id="rect89207" />
+  <rect
+     x="5.7030001"
+     y="10.942"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#ffffff"
+     id="rect89209" />
+  <rect
+     x="0.81800008"
+     y="14.5"
+     width="4.0679998"
+     height="2.711"
+     rx="0.259"
+     fill="#005ba1"
+     id="rect89211" />
+  <rect
+     x="4.8340001"
+     y="3.3959999"
+     width="4.8340001"
+     height="3.221"
+     rx="0.308"
+     fill="#5ea0ef"
+     id="rect89213" />
+  <rect
+     x="1.1444092e-08"
+     y="6.7600002"
+     width="4.8340001"
+     height="3.221"
+     rx="0.308"
+     fill="#0078d4"
+     id="rect89215" />
+  <rect
+     x="1.1444092e-08"
+     width="4.8340001"
+     height="3.221"
+     rx="0.308"
+     fill="#83b9f9"
+     id="rect89217"
+     y="0" />
+  <metadata
+     id="metadata89306">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-613-Storage-Explorer-blue</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

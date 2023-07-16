@@ -1,0 +1,2289 @@
+"use strict";
+
+if (!Array.from) {
+    Array.from = function (object) {
+        'use strict';
+        return [].slice.call(object);
+    };
+}
+
+Math.imul = Math.imul || function(a, b) {
+  var ah = (a >>> 16) & 0xffff;
+  var al = a & 0xffff;
+  var bh = (b >>> 16) & 0xffff;
+  var bl = b & 0xffff;
+  // the shift by 0 fixes the sign on the high part
+  // the final |0 converts the unsigned value into a signed value
+  return ((al * bl) + (((ah * bl + al * bh) << 16) >>> 0)|0);
+};
+
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e29) { throw _e29; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e30) { didErr = true; err = _e30; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var rough = function () {
+  "use strict";
+
+  function t(t, e, s) {
+    if (t && t.length) {
+      var _e2 = _slicedToArray(e, 2),
+          _n = _e2[0],
+          _o = _e2[1],
+          _a = Math.PI / 180 * s,
+          _r = Math.cos(_a),
+          _h = Math.sin(_a);
+
+      t.forEach(function (t) {
+        var _t = _slicedToArray(t, 2),
+            e = _t[0],
+            s = _t[1];
+
+        t[0] = (e - _n) * _r - (s - _o) * _h + _n, t[1] = (e - _n) * _h + (s - _o) * _r + _o;
+      });
+    }
+  }
+
+  function e(t) {
+    var e = t[0],
+        s = t[1];
+    return Math.sqrt(Math.pow(e[0] - s[0], 2) + Math.pow(e[1] - s[1], 2));
+  }
+
+  function s(t, e, s, n) {
+    var o = e[1] - t[1],
+        a = t[0] - e[0],
+        r = o * t[0] + a * t[1],
+        h = n[1] - s[1],
+        i = s[0] - n[0],
+        c = h * s[0] + i * s[1],
+        l = o * i - h * a;
+    return l ? [(i * r - a * c) / l, (o * c - h * r) / l] : null;
+  }
+
+  function n(t, e, s) {
+    var n = t.length;
+    if (n < 3) return !1;
+    var h = [Number.MAX_SAFE_INTEGER, s],
+        i = [e, s];
+    var c = 0;
+
+    for (var _e3 = 0; _e3 < n; _e3++) {
+      var _s2 = t[_e3],
+          _l = t[(_e3 + 1) % n];
+
+      if (r(_s2, _l, i, h)) {
+        if (0 === a(_s2, i, _l)) return o(_s2, i, _l);
+        c++;
+      }
+    }
+
+    return c % 2 == 1;
+  }
+
+  function o(t, e, s) {
+    return e[0] <= Math.max(t[0], s[0]) && e[0] >= Math.min(t[0], s[0]) && e[1] <= Math.max(t[1], s[1]) && e[1] >= Math.min(t[1], s[1]);
+  }
+
+  function a(t, e, s) {
+    var n = (e[1] - t[1]) * (s[0] - e[0]) - (e[0] - t[0]) * (s[1] - e[1]);
+    return 0 === n ? 0 : n > 0 ? 1 : 2;
+  }
+
+  function r(t, e, s, n) {
+    var r = a(t, e, s),
+        h = a(t, e, n),
+        i = a(s, n, t),
+        c = a(s, n, e);
+    return r !== h && i !== c || !(0 !== r || !o(t, s, e)) || !(0 !== h || !o(t, n, e)) || !(0 !== i || !o(s, t, n)) || !(0 !== c || !o(s, e, n));
+  }
+
+  function h(e, s) {
+    var n = [0, 0],
+        o = Math.round(s.hachureAngle + 90);
+    o && t(e, n, o);
+
+    var a = function (t, e) {
+      var s = _toConsumableArray(t);
+
+      s[0].join(",") !== s[s.length - 1].join(",") && s.push([s[0][0], s[0][1]]);
+      var n = [];
+
+      if (s && s.length > 2) {
+        var _ret = function () {
+          var t = e.hachureGap;
+          t < 0 && (t = 4 * e.strokeWidth), t = Math.max(t, .1);
+          var o = [];
+
+          for (var _t2 = 0; _t2 < s.length - 1; _t2++) {
+            var _e4 = s[_t2],
+                _n2 = s[_t2 + 1];
+
+            if (_e4[1] !== _n2[1]) {
+              var _t3 = Math.min(_e4[1], _n2[1]);
+
+              o.push({
+                ymin: _t3,
+                ymax: Math.max(_e4[1], _n2[1]),
+                x: _t3 === _e4[1] ? _e4[0] : _n2[0],
+                islope: (_n2[0] - _e4[0]) / (_n2[1] - _e4[1])
+              });
+            }
+          }
+
+          if (o.sort(function (t, e) {
+            return t.ymin < e.ymin ? -1 : t.ymin > e.ymin ? 1 : t.x < e.x ? -1 : t.x > e.x ? 1 : t.ymax === e.ymax ? 0 : (t.ymax - e.ymax) / Math.abs(t.ymax - e.ymax);
+          }), !o.length) return {
+            v: n
+          };
+          var a = [],
+              r = o[0].ymin;
+
+          for (; a.length || o.length;) {
+            if (o.length) {
+              var _t4 = -1;
+
+              for (var _e5 = 0; _e5 < o.length && !(o[_e5].ymin > r); _e5++) {
+                _t4 = _e5;
+              }
+
+              o.splice(0, _t4 + 1).forEach(function (t) {
+                a.push({
+                  s: r,
+                  edge: t
+                });
+              });
+            }
+
+            if (a = a.filter(function (t) {
+              return !(t.edge.ymax <= r);
+            }), a.sort(function (t, e) {
+              return t.edge.x === e.edge.x ? 0 : (t.edge.x - e.edge.x) / Math.abs(t.edge.x - e.edge.x);
+            }), a.length > 1) for (var _t5 = 0; _t5 < a.length; _t5 += 2) {
+              var _e6 = _t5 + 1;
+
+              if (_e6 >= a.length) break;
+              var _s3 = a[_t5].edge,
+                  _o2 = a[_e6].edge;
+              n.push([[Math.round(_s3.x), r], [Math.round(_o2.x), r]]);
+            }
+            r += t, a.forEach(function (e) {
+              e.edge.x = e.edge.x + t * e.edge.islope;
+            });
+          }
+        }();
+
+        if (_typeof(_ret) === "object") return _ret.v;
+      }
+
+      return n;
+    }(e, s);
+
+    return o && (t(e, n, -o), function (e, s, n) {
+      var o = [];
+      e.forEach(function (t) {
+        return o.push.apply(o, _toConsumableArray(t));
+      }), t(o, s, n);
+    }(a, n, -o)), a;
+  }
+
+  var i = /*#__PURE__*/function () {
+    function i(t) {
+      _classCallCheck(this, i);
+
+      this.helper = t;
+    }
+
+    _createClass(i, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        return this._fillPolygon(t, e);
+      }
+    }, {
+      key: "_fillPolygon",
+      value: function _fillPolygon(t, e) {
+        var s = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : !1;
+        var n = h(t, e);
+
+        if (s) {
+          var _e7 = this.connectingLines(t, n);
+
+          n = n.concat(_e7);
+        }
+
+        return {
+          type: "fillSketch",
+          ops: this.renderLines(n, e)
+        };
+      }
+    }, {
+      key: "renderLines",
+      value: function renderLines(t, e) {
+        var s = [];
+
+        var _iterator = _createForOfIteratorHelper(t),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var _n3 = _step.value;
+            s.push.apply(s, _toConsumableArray(this.helper.doubleLineOps(_n3[0][0], _n3[0][1], _n3[1][0], _n3[1][1], e)));
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        return s;
+      }
+    }, {
+      key: "connectingLines",
+      value: function connectingLines(t, s) {
+        var n = [];
+        if (s.length > 1) for (var _o3 = 1; _o3 < s.length; _o3++) {
+          var _a2 = s[_o3 - 1];
+          if (e(_a2) < 3) continue;
+          var _r2 = [s[_o3][0], _a2[1]];
+
+          if (e(_r2) > 3) {
+            var _e8 = this.splitOnIntersections(t, _r2);
+
+            n.push.apply(n, _toConsumableArray(_e8));
+          }
+        }
+        return n;
+      }
+    }, {
+      key: "midPointInPolygon",
+      value: function midPointInPolygon(t, e) {
+        return n(t, (e[0][0] + e[1][0]) / 2, (e[0][1] + e[1][1]) / 2);
+      }
+    }, {
+      key: "splitOnIntersections",
+      value: function splitOnIntersections(t, o) {
+        var a = Math.max(5, .1 * e(o)),
+            h = [];
+
+        for (var _n4 = 0; _n4 < t.length; _n4++) {
+          var _i2 = t[_n4],
+              _c = t[(_n4 + 1) % t.length];
+
+          if (r.apply(void 0, [_i2, _c].concat(_toConsumableArray(o)))) {
+            var _t6 = s(_i2, _c, o[0], o[1]);
+
+            if (_t6) {
+              var _s4 = e([_t6, o[0]]),
+                  _n5 = e([_t6, o[1]]);
+
+              _s4 > a && _n5 > a && h.push({
+                point: _t6,
+                distance: _s4
+              });
+            }
+          }
+        }
+
+        if (h.length > 1) {
+          var _e9 = h.sort(function (t, e) {
+            return t.distance - e.distance;
+          }).map(function (t) {
+            return t.point;
+          });
+
+          if (n.apply(void 0, [t].concat(_toConsumableArray(o[0]))) || _e9.shift(), n.apply(void 0, [t].concat(_toConsumableArray(o[1]))) || _e9.pop(), _e9.length <= 1) return this.midPointInPolygon(t, o) ? [o] : [];
+
+          var _s5 = [o[0]].concat(_toConsumableArray(_e9), [o[1]]),
+              _a3 = [];
+
+          for (var _e10 = 0; _e10 < _s5.length - 1; _e10 += 2) {
+            var _n6 = [_s5[_e10], _s5[_e10 + 1]];
+            this.midPointInPolygon(t, _n6) && _a3.push(_n6);
+          }
+
+          return _a3;
+        }
+
+        return this.midPointInPolygon(t, o) ? [o] : [];
+      }
+    }]);
+
+    return i;
+  }();
+
+  var c = /*#__PURE__*/function (_i3) {
+    _inherits(c, _i3);
+
+    var _super = _createSuper(c);
+
+    function c() {
+      _classCallCheck(this, c);
+
+      return _super.apply(this, arguments);
+    }
+
+    _createClass(c, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        return this._fillPolygon(t, e, !0);
+      }
+    }]);
+
+    return c;
+  }(i);
+
+  var l = /*#__PURE__*/function (_i4) {
+    _inherits(l, _i4);
+
+    var _super2 = _createSuper(l);
+
+    function l() {
+      _classCallCheck(this, l);
+
+      return _super2.apply(this, arguments);
+    }
+
+    _createClass(l, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        var s = this._fillPolygon(t, e),
+            n = Object.assign({}, e, {
+          hachureAngle: e.hachureAngle + 90
+        }),
+            o = this._fillPolygon(t, n);
+
+        return s.ops = s.ops.concat(o.ops), s;
+      }
+    }]);
+
+    return l;
+  }(i);
+
+  var u = /*#__PURE__*/function () {
+    function u(t) {
+      _classCallCheck(this, u);
+
+      this.helper = t;
+    }
+
+    _createClass(u, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        var s = h(t, e = Object.assign({}, e, {
+          curveStepCount: 4,
+          hachureAngle: 0,
+          roughness: 1
+        }));
+        return this.dotsOnLines(s, e);
+      }
+    }, {
+      key: "dotsOnLines",
+      value: function dotsOnLines(t, s) {
+        var n = [];
+        var o = s.hachureGap;
+        o < 0 && (o = 4 * s.strokeWidth), o = Math.max(o, .1);
+        var a = s.fillWeight;
+        a < 0 && (a = s.strokeWidth / 2);
+        var r = o / 4;
+
+        var _iterator2 = _createForOfIteratorHelper(t),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var _h2 = _step2.value;
+
+            var _t7 = e(_h2),
+                _i5 = _t7 / o,
+                _c2 = Math.ceil(_i5) - 1,
+                _l2 = _t7 - _c2 * o,
+                _u = (_h2[0][0] + _h2[1][0]) / 2 - o / 4,
+                _p = Math.min(_h2[0][1], _h2[1][1]);
+
+            for (var _t8 = 0; _t8 < _c2; _t8++) {
+              var _e11 = _p + _l2 + _t8 * o,
+                  _h3 = this.helper.randOffsetWithRange(_u - r, _u + r, s),
+                  _i6 = this.helper.randOffsetWithRange(_e11 - r, _e11 + r, s),
+                  _c3 = this.helper.ellipse(_h3, _i6, a, a, s);
+
+              n.push.apply(n, _toConsumableArray(_c3.ops));
+            }
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+
+        return {
+          type: "fillSketch",
+          ops: n
+        };
+      }
+    }]);
+
+    return u;
+  }();
+
+  var p = /*#__PURE__*/function () {
+    function p(t) {
+      _classCallCheck(this, p);
+
+      this.helper = t;
+    }
+
+    _createClass(p, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        var s = h(t, e);
+        return {
+          type: "fillSketch",
+          ops: this.dashedLine(s, e)
+        };
+      }
+    }, {
+      key: "dashedLine",
+      value: function dashedLine(t, s) {
+        var _this = this;
+
+        var n = s.dashOffset < 0 ? s.hachureGap < 0 ? 4 * s.strokeWidth : s.hachureGap : s.dashOffset,
+            o = s.dashGap < 0 ? s.hachureGap < 0 ? 4 * s.strokeWidth : s.hachureGap : s.dashGap,
+            a = [];
+        return t.forEach(function (t) {
+          var r = e(t),
+              h = Math.floor(r / (n + o)),
+              i = (r + o - h * (n + o)) / 2;
+          var c = t[0],
+              l = t[1];
+          c[0] > l[0] && (c = t[1], l = t[0]);
+          var u = Math.atan((l[1] - c[1]) / (l[0] - c[0]));
+
+          for (var _t9 = 0; _t9 < h; _t9++) {
+            var _e12 = _t9 * (n + o),
+                _r3 = _e12 + n,
+                _h4 = [c[0] + _e12 * Math.cos(u) + i * Math.cos(u), c[1] + _e12 * Math.sin(u) + i * Math.sin(u)],
+                _l3 = [c[0] + _r3 * Math.cos(u) + i * Math.cos(u), c[1] + _r3 * Math.sin(u) + i * Math.sin(u)];
+
+            a.push.apply(a, _toConsumableArray(_this.helper.doubleLineOps(_h4[0], _h4[1], _l3[0], _l3[1], s)));
+          }
+        }), a;
+      }
+    }]);
+
+    return p;
+  }();
+
+  var f = /*#__PURE__*/function () {
+    function f(t) {
+      _classCallCheck(this, f);
+
+      this.helper = t;
+    }
+
+    _createClass(f, [{
+      key: "fillPolygon",
+      value: function fillPolygon(t, e) {
+        var s = e.hachureGap < 0 ? 4 * e.strokeWidth : e.hachureGap,
+            n = e.zigzagOffset < 0 ? s : e.zigzagOffset,
+            o = h(t, e = Object.assign({}, e, {
+          hachureGap: s + n
+        }));
+        return {
+          type: "fillSketch",
+          ops: this.zigzagLines(o, n, e)
+        };
+      }
+    }, {
+      key: "zigzagLines",
+      value: function zigzagLines(t, s, n) {
+        var _this2 = this;
+
+        var o = [];
+        return t.forEach(function (t) {
+          var a = e(t),
+              r = Math.round(a / (2 * s));
+          var h = t[0],
+              i = t[1];
+          h[0] > i[0] && (h = t[1], i = t[0]);
+          var c = Math.atan((i[1] - h[1]) / (i[0] - h[0]));
+
+          for (var _t10 = 0; _t10 < r; _t10++) {
+            var _e13 = 2 * _t10 * s,
+                _a4 = 2 * (_t10 + 1) * s,
+                _r4 = Math.sqrt(2 * Math.pow(s, 2)),
+                _i7 = [h[0] + _e13 * Math.cos(c), h[1] + _e13 * Math.sin(c)],
+                _l4 = [h[0] + _a4 * Math.cos(c), h[1] + _a4 * Math.sin(c)],
+                _u2 = [_i7[0] + _r4 * Math.cos(c + Math.PI / 4), _i7[1] + _r4 * Math.sin(c + Math.PI / 4)];
+
+            o.push.apply(o, _toConsumableArray(_this2.helper.doubleLineOps(_i7[0], _i7[1], _u2[0], _u2[1], n)).concat(_toConsumableArray(_this2.helper.doubleLineOps(_u2[0], _u2[1], _l4[0], _l4[1], n))));
+          }
+        }), o;
+      }
+    }]);
+
+    return f;
+  }();
+
+  var d = {};
+
+  var g = /*#__PURE__*/function () {
+    function g(t) {
+      _classCallCheck(this, g);
+
+      this.seed = t;
+    }
+
+    _createClass(g, [{
+      key: "next",
+      value: function next() {
+        return this.seed ? (Math.pow(2, 31) - 1 & (this.seed = Math.imul(48271, this.seed))) / Math.pow(2, 31) : Math.random();
+      }
+    }]);
+
+    return g;
+  }();
+
+  var M = {
+    A: 7,
+    a: 7,
+    C: 6,
+    c: 6,
+    H: 1,
+    h: 1,
+    L: 2,
+    l: 2,
+    M: 2,
+    m: 2,
+    Q: 4,
+    q: 4,
+    S: 4,
+    s: 4,
+    T: 2,
+    t: 2,
+    V: 1,
+    v: 1,
+    Z: 0,
+    z: 0
+  };
+
+  function k(t, e) {
+    return t.type === e;
+  }
+
+  function b(t) {
+    var e = [],
+        s = function (t) {
+      var e = new Array();
+
+      for (; "" !== t;) {
+        if (t.match(/^([ \t\r\n,]+)/)) t = t.substr(RegExp.$1.length);else if (t.match(/^([aAcChHlLmMqQsStTvVzZ])/)) e[e.length] = {
+          type: 0,
+          text: RegExp.$1
+        }, t = t.substr(RegExp.$1.length);else {
+          if (!t.match(/^(([-+]?[0-9]+(\.[0-9]*)?|[-+]?\.[0-9]+)([eE][-+]?[0-9]+)?)/)) return [];
+          e[e.length] = {
+            type: 1,
+            text: "".concat(parseFloat(RegExp.$1))
+          }, t = t.substr(RegExp.$1.length);
+        }
+      }
+
+      return e[e.length] = {
+        type: 2,
+        text: ""
+      }, e;
+    }(t);
+
+    var n = "BOD",
+        o = 0,
+        a = s[o];
+
+    for (; !k(a, 2);) {
+      var _r5 = 0;
+      var _h5 = [];
+
+      if ("BOD" === n) {
+        if ("M" !== a.text && "m" !== a.text) return b("M0,0" + t);
+        o++, _r5 = M[a.text], n = a.text;
+      } else k(a, 1) ? _r5 = M[n] : (o++, _r5 = M[a.text], n = a.text);
+
+      if (!(o + _r5 < s.length)) throw new Error("Path data ended short");
+
+      for (var _t11 = o; _t11 < o + _r5; _t11++) {
+        var _e14 = s[_t11];
+        if (!k(_e14, 1)) throw new Error("Param not a number: " + n + "," + _e14.text);
+        _h5[_h5.length] = +_e14.text;
+      }
+
+      if ("number" != typeof M[n]) throw new Error("Bad segment: " + n);
+      {
+        var _t12 = {
+          key: n,
+          data: _h5
+        };
+        e.push(_t12), o += _r5, a = s[o], "M" === n && (n = "L"), "m" === n && (n = "l");
+      }
+    }
+
+    return e;
+  }
+
+  function y(t) {
+    var _h7, _h8, _h9, _h10, _h11, _h12;
+
+    var e = 0,
+        s = 0,
+        n = 0,
+        o = 0;
+    var a = [];
+
+    var _iterator3 = _createForOfIteratorHelper(t),
+        _step3;
+
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var _step3$value = _step3.value,
+            _r6 = _step3$value.key,
+            _h6 = _step3$value.data;
+
+        switch (_r6) {
+          case "M":
+            a.push({
+              key: "M",
+              data: _toConsumableArray(_h6)
+            }), (_h7 = _h6, _h8 = _slicedToArray(_h7, 2), e = _h8[0], s = _h8[1], _h7), (_h9 = _h6, _h10 = _slicedToArray(_h9, 2), n = _h10[0], o = _h10[1], _h9);
+            break;
+
+          case "m":
+            e += _h6[0], s += _h6[1], a.push({
+              key: "M",
+              data: [e, s]
+            }), n = e, o = s;
+            break;
+
+          case "L":
+            a.push({
+              key: "L",
+              data: _toConsumableArray(_h6)
+            }), (_h11 = _h6, _h12 = _slicedToArray(_h11, 2), e = _h12[0], s = _h12[1], _h11);
+            break;
+
+          case "l":
+            e += _h6[0], s += _h6[1], a.push({
+              key: "L",
+              data: [e, s]
+            });
+            break;
+
+          case "C":
+            a.push({
+              key: "C",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[4], s = _h6[5];
+            break;
+
+          case "c":
+            {
+              var _t13 = _h6.map(function (t, n) {
+                return n % 2 ? t + s : t + e;
+              });
+
+              a.push({
+                key: "C",
+                data: _t13
+              }), e = _t13[4], s = _t13[5];
+              break;
+            }
+
+          case "Q":
+            a.push({
+              key: "Q",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[2], s = _h6[3];
+            break;
+
+          case "q":
+            {
+              var _t14 = _h6.map(function (t, n) {
+                return n % 2 ? t + s : t + e;
+              });
+
+              a.push({
+                key: "Q",
+                data: _t14
+              }), e = _t14[2], s = _t14[3];
+              break;
+            }
+
+          case "A":
+            a.push({
+              key: "A",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[5], s = _h6[6];
+            break;
+
+          case "a":
+            e += _h6[5], s += _h6[6], a.push({
+              key: "A",
+              data: [_h6[0], _h6[1], _h6[2], _h6[3], _h6[4], e, s]
+            });
+            break;
+
+          case "H":
+            a.push({
+              key: "H",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[0];
+            break;
+
+          case "h":
+            e += _h6[0], a.push({
+              key: "H",
+              data: [e]
+            });
+            break;
+
+          case "V":
+            a.push({
+              key: "V",
+              data: _toConsumableArray(_h6)
+            }), s = _h6[0];
+            break;
+
+          case "v":
+            s += _h6[0], a.push({
+              key: "V",
+              data: [s]
+            });
+            break;
+
+          case "S":
+            a.push({
+              key: "S",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[2], s = _h6[3];
+            break;
+
+          case "s":
+            {
+              var _t15 = _h6.map(function (t, n) {
+                return n % 2 ? t + s : t + e;
+              });
+
+              a.push({
+                key: "S",
+                data: _t15
+              }), e = _t15[2], s = _t15[3];
+              break;
+            }
+
+          case "T":
+            a.push({
+              key: "T",
+              data: _toConsumableArray(_h6)
+            }), e = _h6[0], s = _h6[1];
+            break;
+
+          case "t":
+            e += _h6[0], s += _h6[1], a.push({
+              key: "T",
+              data: [e, s]
+            });
+            break;
+
+          case "Z":
+          case "z":
+            a.push({
+              key: "Z",
+              data: []
+            }), e = n, s = o;
+        }
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+
+    return a;
+  }
+
+  function m(t) {
+    var _l6, _l7, _l8, _l9, _l10, _l11;
+
+    var e = [];
+    var s = "",
+        n = 0,
+        o = 0,
+        a = 0,
+        r = 0,
+        h = 0,
+        i = 0;
+
+    var _iterator4 = _createForOfIteratorHelper(t),
+        _step4;
+
+    try {
+      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+        var _step4$value = _step4.value,
+            _c4 = _step4$value.key,
+            _l5 = _step4$value.data;
+
+        switch (_c4) {
+          case "M":
+            e.push({
+              key: "M",
+              data: _toConsumableArray(_l5)
+            }), (_l6 = _l5, _l7 = _slicedToArray(_l6, 2), n = _l7[0], o = _l7[1], _l6), (_l8 = _l5, _l9 = _slicedToArray(_l8, 2), a = _l9[0], r = _l9[1], _l8);
+            break;
+
+          case "C":
+            e.push({
+              key: "C",
+              data: _toConsumableArray(_l5)
+            }), n = _l5[4], o = _l5[5], h = _l5[2], i = _l5[3];
+            break;
+
+          case "L":
+            e.push({
+              key: "L",
+              data: _toConsumableArray(_l5)
+            }), (_l10 = _l5, _l11 = _slicedToArray(_l10, 2), n = _l11[0], o = _l11[1], _l10);
+            break;
+
+          case "H":
+            n = _l5[0], e.push({
+              key: "L",
+              data: [n, o]
+            });
+            break;
+
+          case "V":
+            o = _l5[0], e.push({
+              key: "L",
+              data: [n, o]
+            });
+            break;
+
+          case "S":
+            {
+              var _t16 = 0,
+                  _a5 = 0;
+              "C" === s || "S" === s ? (_t16 = n + (n - h), _a5 = o + (o - i)) : (_t16 = n, _a5 = o), e.push({
+                key: "C",
+                data: [_t16, _a5].concat(_toConsumableArray(_l5))
+              }), h = _l5[0], i = _l5[1], n = _l5[2], o = _l5[3];
+              break;
+            }
+
+          case "T":
+            {
+              var _l12 = _slicedToArray(_l5, 2),
+                  _t17 = _l12[0],
+                  _a6 = _l12[1];
+
+              var _r7 = 0,
+                  _c5 = 0;
+              "Q" === s || "T" === s ? (_r7 = n + (n - h), _c5 = o + (o - i)) : (_r7 = n, _c5 = o);
+
+              var _u3 = n + 2 * (_r7 - n) / 3,
+                  _p2 = o + 2 * (_c5 - o) / 3,
+                  _f = _t17 + 2 * (_r7 - _t17) / 3,
+                  _d2 = _a6 + 2 * (_c5 - _a6) / 3;
+
+              e.push({
+                key: "C",
+                data: [_u3, _p2, _f, _d2, _t17, _a6]
+              }), h = _r7, i = _c5, n = _t17, o = _a6;
+              break;
+            }
+
+          case "Q":
+            {
+              var _l13 = _slicedToArray(_l5, 4),
+                  _t18 = _l13[0],
+                  _s6 = _l13[1],
+                  _a7 = _l13[2],
+                  _r8 = _l13[3],
+                  _c6 = n + 2 * (_t18 - n) / 3,
+                  _u4 = o + 2 * (_s6 - o) / 3,
+                  _p3 = _a7 + 2 * (_t18 - _a7) / 3,
+                  _f2 = _r8 + 2 * (_s6 - _r8) / 3;
+
+              e.push({
+                key: "C",
+                data: [_c6, _u4, _p3, _f2, _a7, _r8]
+              }), h = _t18, i = _s6, n = _a7, o = _r8;
+              break;
+            }
+
+          case "A":
+            {
+              var _t19 = Math.abs(_l5[0]),
+                  _s7 = Math.abs(_l5[1]),
+                  _a8 = _l5[2],
+                  _r9 = _l5[3],
+                  _h13 = _l5[4],
+                  _i8 = _l5[5],
+                  _c7 = _l5[6];
+
+              if (0 === _t19 || 0 === _s7) e.push({
+                key: "C",
+                data: [n, o, _i8, _c7, _i8, _c7]
+              }), n = _i8, o = _c7;else if (n !== _i8 || o !== _c7) {
+                P(n, o, _i8, _c7, _t19, _s7, _a8, _r9, _h13).forEach(function (t) {
+                  e.push({
+                    key: "C",
+                    data: t
+                  });
+                }), n = _i8, o = _c7;
+              }
+              break;
+            }
+
+          case "Z":
+            e.push({
+              key: "Z",
+              data: []
+            }), n = a, o = r;
+        }
+
+        s = _c4;
+      }
+    } catch (err) {
+      _iterator4.e(err);
+    } finally {
+      _iterator4.f();
+    }
+
+    return e;
+  }
+
+  function w(t, e, s) {
+    return [t * Math.cos(s) - e * Math.sin(s), t * Math.sin(s) + e * Math.cos(s)];
+  }
+
+  function P(t, e, s, n, o, a, r, h, i, c) {
+    var l = (u = r, Math.PI * u / 180);
+    var u;
+    var p = [],
+        f = 0,
+        d = 0,
+        g = 0,
+        M = 0;
+
+    if (c) {
+      var _c8 = _slicedToArray(c, 4);
+
+      f = _c8[0];
+      d = _c8[1];
+      g = _c8[2];
+      M = _c8[3];
+    } else {
+      var _w, _w2, _w3, _w4;
+
+      (_w = w(t, e, -l), _w2 = _slicedToArray(_w, 2), t = _w2[0], e = _w2[1], _w), (_w3 = w(s, n, -l), _w4 = _slicedToArray(_w3, 2), s = _w4[0], n = _w4[1], _w3);
+
+      var _r10 = (t - s) / 2,
+          _c9 = (e - n) / 2;
+
+      var _u5 = _r10 * _r10 / (o * o) + _c9 * _c9 / (a * a);
+
+      _u5 > 1 && (_u5 = Math.sqrt(_u5), o *= _u5, a *= _u5);
+
+      var _p4 = o * o,
+          _k = a * a,
+          _b = _p4 * _k - _p4 * _c9 * _c9 - _k * _r10 * _r10,
+          _y = _p4 * _c9 * _c9 + _k * _r10 * _r10,
+          _m = (h === i ? -1 : 1) * Math.sqrt(Math.abs(_b / _y));
+
+      g = _m * o * _c9 / a + (t + s) / 2, M = _m * -a * _r10 / o + (e + n) / 2, f = Math.asin(parseFloat(((e - M) / a).toFixed(9))), d = Math.asin(parseFloat(((n - M) / a).toFixed(9))), t < g && (f = Math.PI - f), s < g && (d = Math.PI - d), f < 0 && (f = 2 * Math.PI + f), d < 0 && (d = 2 * Math.PI + d), i && f > d && (f -= 2 * Math.PI), !i && d > f && (d -= 2 * Math.PI);
+    }
+
+    var k = d - f;
+
+    if (Math.abs(k) > 120 * Math.PI / 180) {
+      var _t20 = d,
+          _e15 = s,
+          _h14 = n;
+      d = i && d > f ? f + 120 * Math.PI / 180 * 1 : f + 120 * Math.PI / 180 * -1, p = P(s = g + o * Math.cos(d), n = M + a * Math.sin(d), _e15, _h14, o, a, r, 0, i, [d, _t20, g, M]);
+    }
+
+    k = d - f;
+    var b = Math.cos(f),
+        y = Math.sin(f),
+        m = Math.cos(d),
+        x = Math.sin(d),
+        v = Math.tan(k / 4),
+        O = 4 / 3 * o * v,
+        S = 4 / 3 * a * v,
+        L = [t, e],
+        T = [t + O * y, e - S * b],
+        I = [s + O * x, n - S * m],
+        A = [s, n];
+    if (T[0] = 2 * L[0] - T[0], T[1] = 2 * L[1] - T[1], c) return [T, I, A].concat(p);
+    {
+      p = [T, I, A].concat(p);
+      var _t21 = [];
+
+      for (var _e16 = 0; _e16 < p.length; _e16 += 3) {
+        var _s8 = w(p[_e16][0], p[_e16][1], l),
+            _n7 = w(p[_e16 + 1][0], p[_e16 + 1][1], l),
+            _o4 = w(p[_e16 + 2][0], p[_e16 + 2][1], l);
+
+        _t21.push([_s8[0], _s8[1], _n7[0], _n7[1], _o4[0], _o4[1]]);
+      }
+
+      return _t21;
+    }
+  }
+
+  var x = {
+    randOffset: function randOffset(t, e) {
+      return W(t, e);
+    },
+    randOffsetWithRange: function randOffsetWithRange(t, e, s) {
+      return E(t, e, s);
+    },
+    ellipse: function ellipse(t, e, s, n, o) {
+      var a = T(s, n, o);
+      return I(t, e, o, a).opset;
+    },
+    doubleLineOps: function doubleLineOps(t, e, s, n, o) {
+      return z(t, e, s, n, o, !0);
+    }
+  };
+
+  function v(t, e, s, n, o) {
+    return {
+      type: "path",
+      ops: z(t, e, s, n, o)
+    };
+  }
+
+  function O(t, e, s) {
+    var n = (t || []).length;
+
+    if (n > 2) {
+      var _o5 = [];
+
+      for (var _e17 = 0; _e17 < n - 1; _e17++) {
+        _o5.push.apply(_o5, _toConsumableArray(z(t[_e17][0], t[_e17][1], t[_e17 + 1][0], t[_e17 + 1][1], s)));
+      }
+
+      return e && _o5.push.apply(_o5, _toConsumableArray(z(t[n - 1][0], t[n - 1][1], t[0][0], t[0][1], s))), {
+        type: "path",
+        ops: _o5
+      };
+    }
+
+    return 2 === n ? v(t[0][0], t[0][1], t[1][0], t[1][1], s) : {
+      type: "path",
+      ops: []
+    };
+  }
+
+  function S(t, e, s, n, o) {
+    return function (t, e) {
+      return O(t, !0, e);
+    }([[t, e], [t + s, e], [t + s, e + n], [t, e + n]], o);
+  }
+
+  function L(t, e) {
+    var s = $(t, 1 * (1 + .2 * e.roughness), e);
+
+    if (!e.disableMultiStroke) {
+      var _n8 = $(t, 1.5 * (1 + .22 * e.roughness), function (t) {
+        var e = Object.assign({}, t);
+        e.randomizer = void 0, t.seed && (e.seed = t.seed + 1);
+        return e;
+      }(e));
+
+      s = s.concat(_n8);
+    }
+
+    return {
+      type: "path",
+      ops: s
+    };
+  }
+
+  function T(t, e, s) {
+    var n = Math.sqrt(2 * Math.PI * Math.sqrt((Math.pow(t / 2, 2) + Math.pow(e / 2, 2)) / 2)),
+        o = Math.max(s.curveStepCount, s.curveStepCount / Math.sqrt(200) * n),
+        a = 2 * Math.PI / o;
+    var r = Math.abs(t / 2),
+        h = Math.abs(e / 2);
+    var i = 1 - s.curveFitting;
+    return r += W(r * i, s), h += W(h * i, s), {
+      increment: a,
+      rx: r,
+      ry: h
+    };
+  }
+
+  function I(t, e, s, n) {
+    var _q = q(n.increment, t, e, n.rx, n.ry, 1, n.increment * E(.1, E(.4, 1, s), s), s),
+        _q2 = _slicedToArray(_q, 2),
+        o = _q2[0],
+        a = _q2[1];
+
+    var r = G(o, null, s);
+
+    if (!s.disableMultiStroke) {
+      var _q3 = q(n.increment, t, e, n.rx, n.ry, 1.5, 0, s),
+          _q4 = _slicedToArray(_q3, 1),
+          _o6 = _q4[0],
+          _a9 = G(_o6, null, s);
+
+      r = r.concat(_a9);
+    }
+
+    return {
+      estimatedPoints: a,
+      opset: {
+        type: "path",
+        ops: r
+      }
+    };
+  }
+
+  function A(t, e, s, n, o, a, r, h, i) {
+    var c = t,
+        l = e;
+    var u = Math.abs(s / 2),
+        p = Math.abs(n / 2);
+    u += W(.01 * u, i), p += W(.01 * p, i);
+    var f = o,
+        d = a;
+
+    for (; f < 0;) {
+      f += 2 * Math.PI, d += 2 * Math.PI;
+    }
+
+    d - f > 2 * Math.PI && (f = 0, d = 2 * Math.PI);
+    var g = 2 * Math.PI / i.curveStepCount,
+        M = Math.min(g / 2, (d - f) / 2),
+        k = F(M, c, l, u, p, f, d, 1, i);
+
+    if (!i.disableMultiStroke) {
+      var _t22 = F(M, c, l, u, p, f, d, 1.5, i);
+
+      k.push.apply(k, _toConsumableArray(_t22));
+    }
+
+    return r && (h ? k.push.apply(k, _toConsumableArray(z(c, l, c + u * Math.cos(f), l + p * Math.sin(f), i)).concat(_toConsumableArray(z(c, l, c + u * Math.cos(d), l + p * Math.sin(d), i)))) : k.push({
+      op: "lineTo",
+      data: [c, l]
+    }, {
+      op: "lineTo",
+      data: [c + u * Math.cos(f), l + p * Math.sin(f)]
+    })), {
+      type: "path",
+      ops: k
+    };
+  }
+
+  function D(t, e) {
+    var s = [];
+
+    if (t.length) {
+      var _n9 = e.maxRandomnessOffset || 0,
+          _o7 = t.length;
+
+      if (_o7 > 2) {
+        s.push({
+          op: "move",
+          data: [t[0][0] + W(_n9, e), t[0][1] + W(_n9, e)]
+        });
+
+        for (var _a10 = 1; _a10 < _o7; _a10++) {
+          s.push({
+            op: "lineTo",
+            data: [t[_a10][0] + W(_n9, e), t[_a10][1] + W(_n9, e)]
+          });
+        }
+      }
+    }
+
+    return {
+      type: "fillPath",
+      ops: s
+    };
+  }
+
+  function _(t, e) {
+    return function (t, e) {
+      var s = t.fillStyle || "hachure";
+      if (!d[s]) switch (s) {
+        case "zigzag":
+          d[s] || (d[s] = new c(e));
+          break;
+
+        case "cross-hatch":
+          d[s] || (d[s] = new l(e));
+          break;
+
+        case "dots":
+          d[s] || (d[s] = new u(e));
+          break;
+
+        case "dashed":
+          d[s] || (d[s] = new p(e));
+          break;
+
+        case "zigzag-line":
+          d[s] || (d[s] = new f(e));
+          break;
+
+        case "hachure":
+        default:
+          s = "hachure", d[s] || (d[s] = new i(e));
+      }
+      return d[s];
+    }(e, x).fillPolygon(t, e);
+  }
+
+  function C(t) {
+    return t.randomizer || (t.randomizer = new g(t.seed || 0)), t.randomizer.next();
+  }
+
+  function E(t, e, s) {
+    var n = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
+    return s.roughness * n * (C(s) * (e - t) + t);
+  }
+
+  function W(t, e) {
+    var s = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+    return E(-t, t, e, s);
+  }
+
+  function z(t, e, s, n, o) {
+    var a = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : !1;
+    var r = a ? o.disableMultiStrokeFill : o.disableMultiStroke,
+        h = R(t, e, s, n, o, !0, !1);
+    if (r) return h;
+    var i = R(t, e, s, n, o, !0, !0);
+    return h.concat(i);
+  }
+
+  function R(t, e, s, n, o, a, r) {
+    var h = Math.pow(t - s, 2) + Math.pow(e - n, 2),
+        i = Math.sqrt(h);
+    var c = 1;
+    c = i < 200 ? 1 : i > 500 ? .4 : -.0016668 * i + 1.233334;
+    var l = o.maxRandomnessOffset || 0;
+    l * l * 100 > h && (l = i / 10);
+    var u = l / 2,
+        p = .2 + .2 * C(o);
+    var f = o.bowing * o.maxRandomnessOffset * (n - e) / 200,
+        d = o.bowing * o.maxRandomnessOffset * (t - s) / 200;
+    f = W(f, o, c), d = W(d, o, c);
+
+    var g = [],
+        M = function M() {
+      return W(u, o, c);
+    },
+        k = function k() {
+      return W(l, o, c);
+    },
+        b = o.preserveVertices;
+
+    return a && (r ? g.push({
+      op: "move",
+      data: [t + (b ? 0 : M()), e + (b ? 0 : M())]
+    }) : g.push({
+      op: "move",
+      data: [t + (b ? 0 : W(l, o, c)), e + (b ? 0 : W(l, o, c))]
+    })), r ? g.push({
+      op: "bcurveTo",
+      data: [f + t + (s - t) * p + M(), d + e + (n - e) * p + M(), f + t + 2 * (s - t) * p + M(), d + e + 2 * (n - e) * p + M(), s + (b ? 0 : M()), n + (b ? 0 : M())]
+    }) : g.push({
+      op: "bcurveTo",
+      data: [f + t + (s - t) * p + k(), d + e + (n - e) * p + k(), f + t + 2 * (s - t) * p + k(), d + e + 2 * (n - e) * p + k(), s + (b ? 0 : k()), n + (b ? 0 : k())]
+    }), g;
+  }
+
+  function $(t, e, s) {
+    var n = [];
+    n.push([t[0][0] + W(e, s), t[0][1] + W(e, s)]), n.push([t[0][0] + W(e, s), t[0][1] + W(e, s)]);
+
+    for (var _o8 = 1; _o8 < t.length; _o8++) {
+      n.push([t[_o8][0] + W(e, s), t[_o8][1] + W(e, s)]), _o8 === t.length - 1 && n.push([t[_o8][0] + W(e, s), t[_o8][1] + W(e, s)]);
+    }
+
+    return G(n, null, s);
+  }
+
+  function G(t, e, s) {
+    var n = t.length,
+        o = [];
+
+    if (n > 3) {
+      var _a11 = [],
+          _r11 = 1 - s.curveTightness;
+
+      o.push({
+        op: "move",
+        data: [t[1][0], t[1][1]]
+      });
+
+      for (var _e18 = 1; _e18 + 2 < n; _e18++) {
+        var _s9 = t[_e18];
+        _a11[0] = [_s9[0], _s9[1]], _a11[1] = [_s9[0] + (_r11 * t[_e18 + 1][0] - _r11 * t[_e18 - 1][0]) / 6, _s9[1] + (_r11 * t[_e18 + 1][1] - _r11 * t[_e18 - 1][1]) / 6], _a11[2] = [t[_e18 + 1][0] + (_r11 * t[_e18][0] - _r11 * t[_e18 + 2][0]) / 6, t[_e18 + 1][1] + (_r11 * t[_e18][1] - _r11 * t[_e18 + 2][1]) / 6], _a11[3] = [t[_e18 + 1][0], t[_e18 + 1][1]], o.push({
+          op: "bcurveTo",
+          data: [_a11[1][0], _a11[1][1], _a11[2][0], _a11[2][1], _a11[3][0], _a11[3][1]]
+        });
+      }
+
+      if (e && 2 === e.length) {
+        var _t23 = s.maxRandomnessOffset;
+        o.push({
+          op: "lineTo",
+          data: [e[0] + W(_t23, s), e[1] + W(_t23, s)]
+        });
+      }
+    } else 3 === n ? (o.push({
+      op: "move",
+      data: [t[1][0], t[1][1]]
+    }), o.push({
+      op: "bcurveTo",
+      data: [t[1][0], t[1][1], t[2][0], t[2][1], t[2][0], t[2][1]]
+    })) : 2 === n && o.push.apply(o, _toConsumableArray(z(t[0][0], t[0][1], t[1][0], t[1][1], s)));
+
+    return o;
+  }
+
+  function q(t, e, s, n, o, a, r, h) {
+    var i = [],
+        c = [],
+        l = W(.5, h) - Math.PI / 2;
+    c.push([W(a, h) + e + .9 * n * Math.cos(l - t), W(a, h) + s + .9 * o * Math.sin(l - t)]);
+
+    for (var _r12 = l; _r12 < 2 * Math.PI + l - .01; _r12 += t) {
+      var _t24 = [W(a, h) + e + n * Math.cos(_r12), W(a, h) + s + o * Math.sin(_r12)];
+      i.push(_t24), c.push(_t24);
+    }
+
+    return c.push([W(a, h) + e + n * Math.cos(l + 2 * Math.PI + .5 * r), W(a, h) + s + o * Math.sin(l + 2 * Math.PI + .5 * r)]), c.push([W(a, h) + e + .98 * n * Math.cos(l + r), W(a, h) + s + .98 * o * Math.sin(l + r)]), c.push([W(a, h) + e + .9 * n * Math.cos(l + .5 * r), W(a, h) + s + .9 * o * Math.sin(l + .5 * r)]), [c, i];
+  }
+
+  function F(t, e, s, n, o, a, r, h, i) {
+    var c = a + W(.1, i),
+        l = [];
+    l.push([W(h, i) + e + .9 * n * Math.cos(c - t), W(h, i) + s + .9 * o * Math.sin(c - t)]);
+
+    for (var _a12 = c; _a12 <= r; _a12 += t) {
+      l.push([W(h, i) + e + n * Math.cos(_a12), W(h, i) + s + o * Math.sin(_a12)]);
+    }
+
+    return l.push([e + n * Math.cos(r), s + o * Math.sin(r)]), l.push([e + n * Math.cos(r), s + o * Math.sin(r)]), G(l, null, i);
+  }
+
+  function V(t, e, s, n, o, a, r, h) {
+    var i = [],
+        c = [h.maxRandomnessOffset || 1, (h.maxRandomnessOffset || 1) + .3];
+    var l = [0, 0];
+    var u = h.disableMultiStroke ? 1 : 2,
+        p = h.preserveVertices;
+
+    for (var _f3 = 0; _f3 < u; _f3++) {
+      0 === _f3 ? i.push({
+        op: "move",
+        data: [r[0], r[1]]
+      }) : i.push({
+        op: "move",
+        data: [r[0] + (p ? 0 : W(c[0], h)), r[1] + (p ? 0 : W(c[0], h))]
+      }), l = p ? [o, a] : [o + W(c[_f3], h), a + W(c[_f3], h)], i.push({
+        op: "bcurveTo",
+        data: [t + W(c[_f3], h), e + W(c[_f3], h), s + W(c[_f3], h), n + W(c[_f3], h), l[0], l[1]]
+      });
+    }
+
+    return i;
+  }
+
+  function j(t) {
+    return _toConsumableArray(t);
+  }
+
+  function N(t, e) {
+    return Math.pow(t[0] - e[0], 2) + Math.pow(t[1] - e[1], 2);
+  }
+
+  function Z(t, e, s) {
+    var n = N(e, s);
+    if (0 === n) return N(t, e);
+    var o = ((t[0] - e[0]) * (s[0] - e[0]) + (t[1] - e[1]) * (s[1] - e[1])) / n;
+    return o = Math.max(0, Math.min(1, o)), N(t, Q(e, s, o));
+  }
+
+  function Q(t, e, s) {
+    return [t[0] + (e[0] - t[0]) * s, t[1] + (e[1] - t[1]) * s];
+  }
+
+  function H(t, e, s, n) {
+    var o = n || [];
+
+    if (function (t, e) {
+      var s = t[e + 0],
+          n = t[e + 1],
+          o = t[e + 2],
+          a = t[e + 3];
+      var r = 3 * n[0] - 2 * s[0] - a[0];
+      r *= r;
+      var h = 3 * n[1] - 2 * s[1] - a[1];
+      h *= h;
+      var i = 3 * o[0] - 2 * a[0] - s[0];
+      i *= i;
+      var c = 3 * o[1] - 2 * a[1] - s[1];
+      return c *= c, r < i && (r = i), h < c && (h = c), r + h;
+    }(t, e) < s) {
+      var _s10 = t[e + 0];
+
+      if (o.length) {
+        (a = o[o.length - 1], r = _s10, Math.sqrt(N(a, r))) > 1 && o.push(_s10);
+      } else o.push(_s10);
+
+      o.push(t[e + 3]);
+    } else {
+      var _n10 = .5,
+          _a13 = t[e + 0],
+          _r13 = t[e + 1],
+          _h15 = t[e + 2],
+          _i9 = t[e + 3],
+          _c10 = Q(_a13, _r13, _n10),
+          _l14 = Q(_r13, _h15, _n10),
+          _u6 = Q(_h15, _i9, _n10),
+          _p5 = Q(_c10, _l14, _n10),
+          _f4 = Q(_l14, _u6, _n10),
+          _d3 = Q(_p5, _f4, _n10);
+
+      H([_a13, _c10, _p5, _d3], 0, s, o), H([_d3, _f4, _u6, _i9], 0, s, o);
+    }
+
+    var a, r;
+    return o;
+  }
+
+  function B(t, e) {
+    return X(t, 0, t.length, e);
+  }
+
+  function X(t, e, s, n, o) {
+    var a = o || [],
+        r = t[e],
+        h = t[s - 1];
+    var i = 0,
+        c = 1;
+
+    for (var _n11 = e + 1; _n11 < s - 1; ++_n11) {
+      var _e19 = Z(t[_n11], r, h);
+
+      _e19 > i && (i = _e19, c = _n11);
+    }
+
+    return Math.sqrt(i) > n ? (X(t, e, c + 1, n, a), X(t, c, s, n, a)) : (a.length || a.push(r), a.push(h)), a;
+  }
+
+  function J(t) {
+    var e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : .15;
+    var s = arguments.length > 2 ? arguments[2] : undefined;
+    var n = [],
+        o = (t.length - 1) / 3;
+
+    for (var _s11 = 0; _s11 < o; _s11++) {
+      H(t, 3 * _s11, e, n);
+    }
+
+    return s && s > 0 ? X(n, 0, n.length, s) : n;
+  }
+
+  var K = "none";
+
+  var U = /*#__PURE__*/function () {
+    function U(t) {
+      _classCallCheck(this, U);
+
+      this.defaultOptions = {
+        maxRandomnessOffset: 2,
+        roughness: 1,
+        bowing: 1,
+        stroke: "#000",
+        strokeWidth: 1,
+        curveTightness: 0,
+        curveFitting: .95,
+        curveStepCount: 9,
+        fillStyle: "hachure",
+        fillWeight: -1,
+        hachureAngle: -41,
+        hachureGap: -1,
+        dashOffset: -1,
+        dashGap: -1,
+        zigzagOffset: -1,
+        seed: 0,
+        combineNestedSvgPaths: !1,
+        disableMultiStroke: !1,
+        disableMultiStrokeFill: !1,
+        preserveVertices: !1
+      }, this.config = t || {}, this.config.options && (this.defaultOptions = this._o(this.config.options));
+    }
+
+    _createClass(U, [{
+      key: "_o",
+      value: function _o(t) {
+        return t ? Object.assign({}, this.defaultOptions, t) : this.defaultOptions;
+      }
+    }, {
+      key: "_d",
+      value: function _d(t, e, s) {
+        return {
+          shape: t,
+          sets: e || [],
+          options: s || this.defaultOptions
+        };
+      }
+    }, {
+      key: "line",
+      value: function line(t, e, s, n, o) {
+        var a = this._o(o);
+
+        return this._d("line", [v(t, e, s, n, a)], a);
+      }
+    }, {
+      key: "rectangle",
+      value: function rectangle(t, e, s, n, o) {
+        var a = this._o(o),
+            r = [],
+            h = S(t, e, s, n, a);
+
+        if (a.fill) {
+          var _o9 = [[t, e], [t + s, e], [t + s, e + n], [t, e + n]];
+          "solid" === a.fillStyle ? r.push(D(_o9, a)) : r.push(_(_o9, a));
+        }
+
+        return a.stroke !== K && r.push(h), this._d("rectangle", r, a);
+      }
+    }, {
+      key: "ellipse",
+      value: function ellipse(t, e, s, n, o) {
+        var a = this._o(o),
+            r = [],
+            h = T(s, n, a),
+            i = I(t, e, a, h);
+
+        if (a.fill) if ("solid" === a.fillStyle) {
+          var _s12 = I(t, e, a, h).opset;
+          _s12.type = "fillPath", r.push(_s12);
+        } else r.push(_(i.estimatedPoints, a));
+        return a.stroke !== K && r.push(i.opset), this._d("ellipse", r, a);
+      }
+    }, {
+      key: "circle",
+      value: function circle(t, e, s, n) {
+        var o = this.ellipse(t, e, s, s, n);
+        return o.shape = "circle", o;
+      }
+    }, {
+      key: "linearPath",
+      value: function linearPath(t, e) {
+        var s = this._o(e);
+
+        return this._d("linearPath", [O(t, !1, s)], s);
+      }
+    }, {
+      key: "arc",
+      value: function arc(t, e, s, n, o, a) {
+        var r = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : !1;
+        var h = arguments.length > 7 ? arguments[7] : undefined;
+
+        var i = this._o(h),
+            c = [],
+            l = A(t, e, s, n, o, a, r, !0, i);
+
+        if (r && i.fill) if ("solid" === i.fillStyle) {
+          var _r14 = A(t, e, s, n, o, a, !0, !1, i);
+
+          _r14.type = "fillPath", c.push(_r14);
+        } else c.push(function (t, e, s, n, o, a, r) {
+          var h = t,
+              i = e;
+          var c = Math.abs(s / 2),
+              l = Math.abs(n / 2);
+          c += W(.01 * c, r), l += W(.01 * l, r);
+          var u = o,
+              p = a;
+
+          for (; u < 0;) {
+            u += 2 * Math.PI, p += 2 * Math.PI;
+          }
+
+          p - u > 2 * Math.PI && (u = 0, p = 2 * Math.PI);
+          var f = (p - u) / r.curveStepCount,
+              d = [];
+
+          for (var _t25 = u; _t25 <= p; _t25 += f) {
+            d.push([h + c * Math.cos(_t25), i + l * Math.sin(_t25)]);
+          }
+
+          return d.push([h + c * Math.cos(p), i + l * Math.sin(p)]), d.push([h, i]), _(d, r);
+        }(t, e, s, n, o, a, i));
+        return i.stroke !== K && c.push(l), this._d("arc", c, i);
+      }
+    }, {
+      key: "curve",
+      value: function curve(t, e) {
+        var s = this._o(e),
+            n = [],
+            o = L(t, s);
+
+        if (s.fill && s.fill !== K && t.length >= 3) {
+          var _e20 = J(function (t) {
+            var e = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+            var s = t.length;
+            if (s < 3) throw new Error("A curve must have at least three points.");
+            var n = [];
+            if (3 === s) n.push(j(t[0]), j(t[1]), j(t[2]), j(t[2]));else {
+              var _s13 = [];
+
+              _s13.push(t[0], t[0]);
+
+              for (var _e21 = 1; _e21 < t.length; _e21++) {
+                _s13.push(t[_e21]), _e21 === t.length - 1 && _s13.push(t[_e21]);
+              }
+
+              var _o10 = [],
+                  _a14 = 1 - e;
+
+              n.push(j(_s13[0]));
+
+              for (var _t26 = 1; _t26 + 2 < _s13.length; _t26++) {
+                var _e22 = _s13[_t26];
+                _o10[0] = [_e22[0], _e22[1]], _o10[1] = [_e22[0] + (_a14 * _s13[_t26 + 1][0] - _a14 * _s13[_t26 - 1][0]) / 6, _e22[1] + (_a14 * _s13[_t26 + 1][1] - _a14 * _s13[_t26 - 1][1]) / 6], _o10[2] = [_s13[_t26 + 1][0] + (_a14 * _s13[_t26][0] - _a14 * _s13[_t26 + 2][0]) / 6, _s13[_t26 + 1][1] + (_a14 * _s13[_t26][1] - _a14 * _s13[_t26 + 2][1]) / 6], _o10[3] = [_s13[_t26 + 1][0], _s13[_t26 + 1][1]], n.push(_o10[1], _o10[2], _o10[3]);
+              }
+            }
+            return n;
+          }(t), 10, (1 + s.roughness) / 2);
+
+          "solid" === s.fillStyle ? n.push(D(_e20, s)) : n.push(_(_e20, s));
+        }
+
+        return s.stroke !== K && n.push(o), this._d("curve", n, s);
+      }
+    }, {
+      key: "polygon",
+      value: function polygon(t, e) {
+        var s = this._o(e),
+            n = [],
+            o = O(t, !0, s);
+
+        return s.fill && ("solid" === s.fillStyle ? n.push(D(t, s)) : n.push(_(t, s))), s.stroke !== K && n.push(o), this._d("polygon", n, s);
+      }
+    }, {
+      key: "path",
+      value: function path(t, e) {
+        var s = this._o(e),
+            n = [];
+
+        if (!t) return this._d("path", n, s);
+        t = (t || "").replace(/\n/g, " ").replace(/(-\s)/g, "-").replace("/(ss)/g", " ");
+
+        var o = s.fill && "transparent" !== s.fill && s.fill !== K,
+            a = s.stroke !== K,
+            r = !!(s.simplification && s.simplification < 1),
+            h = function (t, e, s) {
+          var n = m(y(b(t))),
+              o = [];
+          var a = [],
+              r = [0, 0],
+              h = [];
+
+          var i = function i() {
+            var _a15;
+
+            h.length >= 4 && (_a15 = a).push.apply(_a15, _toConsumableArray(J(h, e))), h = [];
+          },
+              c = function c() {
+            i(), a.length && (o.push(a), a = []);
+          };
+
+          var _iterator5 = _createForOfIteratorHelper(n),
+              _step5;
+
+          try {
+            for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+              var _step5$value = _step5.value,
+                  _t28 = _step5$value.key,
+                  _e24 = _step5$value.data;
+
+              switch (_t28) {
+                case "M":
+                  c(), r = [_e24[0], _e24[1]], a.push(r);
+                  break;
+
+                case "L":
+                  i(), a.push([_e24[0], _e24[1]]);
+                  break;
+
+                case "C":
+                  if (!h.length) {
+                    var _t29 = a.length ? a[a.length - 1] : r;
+
+                    h.push([_t29[0], _t29[1]]);
+                  }
+
+                  h.push([_e24[0], _e24[1]]), h.push([_e24[2], _e24[3]]), h.push([_e24[4], _e24[5]]);
+                  break;
+
+                case "Z":
+                  i(), a.push([r[0], r[1]]);
+              }
+            }
+          } catch (err) {
+            _iterator5.e(err);
+          } finally {
+            _iterator5.f();
+          }
+
+          if (c(), !s) return o;
+          var l = [];
+
+          for (var _i10 = 0, _o11 = o; _i10 < _o11.length; _i10++) {
+            var _t27 = _o11[_i10];
+
+            var _e23 = B(_t27, s);
+
+            _e23.length && l.push(_e23);
+          }
+
+          return l;
+        }(t, 1, r ? 4 - 4 * s.simplification : (1 + s.roughness) / 2);
+
+        if (o) if (s.combineNestedSvgPaths) {
+          var _t30 = [];
+          h.forEach(function (e) {
+            return _t30.push.apply(_t30, _toConsumableArray(e));
+          }), "solid" === s.fillStyle ? n.push(D(_t30, s)) : n.push(_(_t30, s));
+        } else h.forEach(function (t) {
+          "solid" === s.fillStyle ? n.push(D(t, s)) : n.push(_(t, s));
+        });
+        return a && (r ? h.forEach(function (t) {
+          n.push(O(t, !1, s));
+        }) : n.push(function (t, e) {
+          var s = m(y(b(t))),
+              n = [];
+          var o = [0, 0],
+              a = [0, 0];
+
+          var _iterator6 = _createForOfIteratorHelper(s),
+              _step6;
+
+          try {
+            for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+              var _step6$value = _step6.value,
+                  _t31 = _step6$value.key,
+                  _r15 = _step6$value.data;
+
+              switch (_t31) {
+                case "M":
+                  {
+                    var _ret2 = function () {
+                      var t = 1 * (e.maxRandomnessOffset || 0),
+                          s = e.preserveVertices;
+                      n.push({
+                        op: "move",
+                        data: _r15.map(function (n) {
+                          return n + (s ? 0 : W(t, e));
+                        })
+                      }), a = [_r15[0], _r15[1]], o = [_r15[0], _r15[1]];
+                      return "break";
+                    }();
+
+                    if (_ret2 === "break") break;
+                  }
+
+                case "L":
+                  n.push.apply(n, _toConsumableArray(z(a[0], a[1], _r15[0], _r15[1], e))), a = [_r15[0], _r15[1]];
+                  break;
+
+                case "C":
+                  {
+                    var _r16 = _slicedToArray(_r15, 6),
+                        _t32 = _r16[0],
+                        _s14 = _r16[1],
+                        _o12 = _r16[2],
+                        _h16 = _r16[3],
+                        _i11 = _r16[4],
+                        _c11 = _r16[5];
+
+                    n.push.apply(n, _toConsumableArray(V(_t32, _s14, _o12, _h16, _i11, _c11, a, e))), a = [_i11, _c11];
+                    break;
+                  }
+
+                case "Z":
+                  n.push.apply(n, _toConsumableArray(z(a[0], a[1], o[0], o[1], e))), a = [o[0], o[1]];
+              }
+            }
+          } catch (err) {
+            _iterator6.e(err);
+          } finally {
+            _iterator6.f();
+          }
+
+          return {
+            type: "path",
+            ops: n
+          };
+        }(t, s))), this._d("path", n, s);
+      }
+    }, {
+      key: "opsToPath",
+      value: function opsToPath(t, e) {
+        var s = "";
+
+        var _iterator7 = _createForOfIteratorHelper(t.ops),
+            _step7;
+
+        try {
+          for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+            var _n12 = _step7.value;
+
+            var _t33 = "number" == typeof e && e >= 0 ? _n12.data.map(function (t) {
+              return +t.toFixed(e);
+            }) : _n12.data;
+
+            switch (_n12.op) {
+              case "move":
+                s += "M".concat(_t33[0], " ").concat(_t33[1], " ");
+                break;
+
+              case "bcurveTo":
+                s += "C".concat(_t33[0], " ").concat(_t33[1], ", ").concat(_t33[2], " ").concat(_t33[3], ", ").concat(_t33[4], " ").concat(_t33[5], " ");
+                break;
+
+              case "lineTo":
+                s += "L".concat(_t33[0], " ").concat(_t33[1], " ");
+            }
+          }
+        } catch (err) {
+          _iterator7.e(err);
+        } finally {
+          _iterator7.f();
+        }
+
+        return s.trim();
+      }
+    }, {
+      key: "toPaths",
+      value: function toPaths(t) {
+        var e = t.sets || [],
+            s = t.options || this.defaultOptions,
+            n = [];
+
+        var _iterator8 = _createForOfIteratorHelper(e),
+            _step8;
+
+        try {
+          for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+            var _t34 = _step8.value;
+            var _e25 = null;
+
+            switch (_t34.type) {
+              case "path":
+                _e25 = {
+                  d: this.opsToPath(_t34),
+                  stroke: s.stroke,
+                  strokeWidth: s.strokeWidth,
+                  fill: K
+                };
+                break;
+
+              case "fillPath":
+                _e25 = {
+                  d: this.opsToPath(_t34),
+                  stroke: K,
+                  strokeWidth: 0,
+                  fill: s.fill || K
+                };
+                break;
+
+              case "fillSketch":
+                _e25 = this.fillSketch(_t34, s);
+            }
+
+            _e25 && n.push(_e25);
+          }
+        } catch (err) {
+          _iterator8.e(err);
+        } finally {
+          _iterator8.f();
+        }
+
+        return n;
+      }
+    }, {
+      key: "fillSketch",
+      value: function fillSketch(t, e) {
+        var s = e.fillWeight;
+        return s < 0 && (s = e.strokeWidth / 2), {
+          d: this.opsToPath(t),
+          stroke: e.fill || K,
+          strokeWidth: s,
+          fill: K
+        };
+      }
+    }], [{
+      key: "newSeed",
+      value: function newSeed() {
+        return Math.floor(Math.random() * Math.pow(2, 31));
+      }
+    }]);
+
+    return U;
+  }();
+
+  var Y = /*#__PURE__*/function () {
+    function Y(t, e) {
+      _classCallCheck(this, Y);
+
+      this.canvas = t, this.ctx = this.canvas.getContext("2d"), this.gen = new U(e);
+    }
+
+    _createClass(Y, [{
+      key: "draw",
+      value: function draw(t) {
+        var e = t.sets || [],
+            s = t.options || this.getDefaultOptions(),
+            n = this.ctx;
+
+        var _iterator9 = _createForOfIteratorHelper(e),
+            _step9;
+
+        try {
+          for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+            var _o13 = _step9.value;
+
+            switch (_o13.type) {
+              case "path":
+                n.save(), n.strokeStyle = "none" === s.stroke ? "transparent" : s.stroke, n.lineWidth = s.strokeWidth, s.strokeLineDash && n.setLineDash(s.strokeLineDash), s.strokeLineDashOffset && (n.lineDashOffset = s.strokeLineDashOffset), this._drawToContext(n, _o13), n.restore();
+                break;
+
+              case "fillPath":
+                n.save(), n.fillStyle = s.fill || "";
+
+                var _e26 = "curve" === t.shape || "polygon" === t.shape ? "evenodd" : "nonzero";
+
+                this._drawToContext(n, _o13, _e26), n.restore();
+                break;
+
+              case "fillSketch":
+                this.fillSketch(n, _o13, s);
+            }
+          }
+        } catch (err) {
+          _iterator9.e(err);
+        } finally {
+          _iterator9.f();
+        }
+      }
+    }, {
+      key: "fillSketch",
+      value: function fillSketch(t, e, s) {
+        var n = s.fillWeight;
+        n < 0 && (n = s.strokeWidth / 2), t.save(), s.fillLineDash && t.setLineDash(s.fillLineDash), s.fillLineDashOffset && (t.lineDashOffset = s.fillLineDashOffset), t.strokeStyle = s.fill || "", t.lineWidth = n, this._drawToContext(t, e), t.restore();
+      }
+    }, {
+      key: "_drawToContext",
+      value: function _drawToContext(t, e) {
+        var s = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "nonzero";
+        t.beginPath();
+
+        var _iterator10 = _createForOfIteratorHelper(e.ops),
+            _step10;
+
+        try {
+          for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+            var _s15 = _step10.value;
+            var _e27 = _s15.data;
+
+            switch (_s15.op) {
+              case "move":
+                t.moveTo(_e27[0], _e27[1]);
+                break;
+
+              case "bcurveTo":
+                t.bezierCurveTo(_e27[0], _e27[1], _e27[2], _e27[3], _e27[4], _e27[5]);
+                break;
+
+              case "lineTo":
+                t.lineTo(_e27[0], _e27[1]);
+            }
+          }
+        } catch (err) {
+          _iterator10.e(err);
+        } finally {
+          _iterator10.f();
+        }
+
+        "fillPath" === e.type ? t.fill(s) : t.stroke();
+      }
+    }, {
+      key: "getDefaultOptions",
+      value: function getDefaultOptions() {
+        return this.gen.defaultOptions;
+      }
+    }, {
+      key: "line",
+      value: function line(t, e, s, n, o) {
+        var a = this.gen.line(t, e, s, n, o);
+        return this.draw(a), a;
+      }
+    }, {
+      key: "rectangle",
+      value: function rectangle(t, e, s, n, o) {
+        var a = this.gen.rectangle(t, e, s, n, o);
+        return this.draw(a), a;
+      }
+    }, {
+      key: "ellipse",
+      value: function ellipse(t, e, s, n, o) {
+        var a = this.gen.ellipse(t, e, s, n, o);
+        return this.draw(a), a;
+      }
+    }, {
+      key: "circle",
+      value: function circle(t, e, s, n) {
+        var o = this.gen.circle(t, e, s, n);
+        return this.draw(o), o;
+      }
+    }, {
+      key: "linearPath",
+      value: function linearPath(t, e) {
+        var s = this.gen.linearPath(t, e);
+        return this.draw(s), s;
+      }
+    }, {
+      key: "polygon",
+      value: function polygon(t, e) {
+        var s = this.gen.polygon(t, e);
+        return this.draw(s), s;
+      }
+    }, {
+      key: "arc",
+      value: function arc(t, e, s, n, o, a) {
+        var r = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : !1;
+        var h = arguments.length > 7 ? arguments[7] : undefined;
+        var i = this.gen.arc(t, e, s, n, o, a, r, h);
+        return this.draw(i), i;
+      }
+    }, {
+      key: "curve",
+      value: function curve(t, e) {
+        var s = this.gen.curve(t, e);
+        return this.draw(s), s;
+      }
+    }, {
+      key: "path",
+      value: function path(t, e) {
+        var s = this.gen.path(t, e);
+        return this.draw(s), s;
+      }
+    }, {
+      key: "generator",
+      get: function get() {
+        return this.gen;
+      }
+    }]);
+
+    return Y;
+  }();
+
+  var tt = "http://www.w3.org/2000/svg";
+
+  var et = /*#__PURE__*/function () {
+    function et(t, e) {
+      _classCallCheck(this, et);
+
+      this.svg = t, this.gen = new U(e);
+    }
+
+    _createClass(et, [{
+      key: "draw",
+      value: function draw(t) {
+        var e = t.sets || [],
+            s = t.options || this.getDefaultOptions(),
+            n = this.svg.ownerDocument || window.document,
+            o = n.createElementNS(tt, "g"),
+            a = t.options.fixedDecimalPlaceDigits;
+
+        var _iterator11 = _createForOfIteratorHelper(e),
+            _step11;
+
+        try {
+          for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+            var _r17 = _step11.value;
+            var _e28 = null;
+
+            switch (_r17.type) {
+              case "path":
+                _e28 = n.createElementNS(tt, "path"), _e28.setAttribute("d", this.opsToPath(_r17, a)), _e28.setAttribute("stroke", s.stroke), _e28.setAttribute("stroke-width", s.strokeWidth + ""), _e28.setAttribute("fill", "none"), s.strokeLineDash && _e28.setAttribute("stroke-dasharray", s.strokeLineDash.join(" ").trim()), s.strokeLineDashOffset && _e28.setAttribute("stroke-dashoffset", "".concat(s.strokeLineDashOffset));
+                break;
+
+              case "fillPath":
+                _e28 = n.createElementNS(tt, "path"), _e28.setAttribute("d", this.opsToPath(_r17, a)), _e28.setAttribute("stroke", "none"), _e28.setAttribute("stroke-width", "0"), _e28.setAttribute("fill", s.fill || ""), "curve" !== t.shape && "polygon" !== t.shape || _e28.setAttribute("fill-rule", "evenodd");
+                break;
+
+              case "fillSketch":
+                _e28 = this.fillSketch(n, _r17, s);
+            }
+
+            _e28 && o.appendChild(_e28);
+          }
+        } catch (err) {
+          _iterator11.e(err);
+        } finally {
+          _iterator11.f();
+        }
+
+        return o;
+      }
+    }, {
+      key: "fillSketch",
+      value: function fillSketch(t, e, s) {
+        var n = s.fillWeight;
+        n < 0 && (n = s.strokeWidth / 2);
+        var o = t.createElementNS(tt, "path");
+        return o.setAttribute("d", this.opsToPath(e, s.fixedDecimalPlaceDigits)), o.setAttribute("stroke", s.fill || ""), o.setAttribute("stroke-width", n + ""), o.setAttribute("fill", "none"), s.fillLineDash && o.setAttribute("stroke-dasharray", s.fillLineDash.join(" ").trim()), s.fillLineDashOffset && o.setAttribute("stroke-dashoffset", "".concat(s.fillLineDashOffset)), o;
+      }
+    }, {
+      key: "getDefaultOptions",
+      value: function getDefaultOptions() {
+        return this.gen.defaultOptions;
+      }
+    }, {
+      key: "opsToPath",
+      value: function opsToPath(t, e) {
+        return this.gen.opsToPath(t, e);
+      }
+    }, {
+      key: "line",
+      value: function line(t, e, s, n, o) {
+        var a = this.gen.line(t, e, s, n, o);
+        return this.draw(a);
+      }
+    }, {
+      key: "rectangle",
+      value: function rectangle(t, e, s, n, o) {
+        var a = this.gen.rectangle(t, e, s, n, o);
+        return this.draw(a);
+      }
+    }, {
+      key: "ellipse",
+      value: function ellipse(t, e, s, n, o) {
+        var a = this.gen.ellipse(t, e, s, n, o);
+        return this.draw(a);
+      }
+    }, {
+      key: "circle",
+      value: function circle(t, e, s, n) {
+        var o = this.gen.circle(t, e, s, n);
+        return this.draw(o);
+      }
+    }, {
+      key: "linearPath",
+      value: function linearPath(t, e) {
+        var s = this.gen.linearPath(t, e);
+        return this.draw(s);
+      }
+    }, {
+      key: "polygon",
+      value: function polygon(t, e) {
+        var s = this.gen.polygon(t, e);
+        return this.draw(s);
+      }
+    }, {
+      key: "arc",
+      value: function arc(t, e, s, n, o, a) {
+        var r = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : !1;
+        var h = arguments.length > 7 ? arguments[7] : undefined;
+        var i = this.gen.arc(t, e, s, n, o, a, r, h);
+        return this.draw(i);
+      }
+    }, {
+      key: "curve",
+      value: function curve(t, e) {
+        var s = this.gen.curve(t, e);
+        return this.draw(s);
+      }
+    }, {
+      key: "path",
+      value: function path(t, e) {
+        var s = this.gen.path(t, e);
+        return this.draw(s);
+      }
+    }, {
+      key: "generator",
+      get: function get() {
+        return this.gen;
+      }
+    }]);
+
+    return et;
+  }();
+
+  return {
+    canvas: function canvas(t, e) {
+      return new Y(t, e);
+    },
+    svg: function svg(t, e) {
+      return new et(t, e);
+    },
+    generator: function generator(t) {
+      return new U(t);
+    },
+    newSeed: function newSeed() {
+      return U.newSeed();
+    }
+  };
+}();

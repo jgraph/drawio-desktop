@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="18"
+   viewBox="0 0 18 18"
+   version="1.1"
+   id="svg80351"
+   sodipodi:docname="Open_Supply_Chain_Platform.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview80353"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg80351" />
+  <defs
+     id="defs80334">
+    <linearGradient
+       id="f93e1a0b-1f40-42b1-92e3-ab3846770c18"
+       x1="9"
+       y1="1.0470001"
+       x2="9"
+       y2="15.591"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#a67af4"
+         id="stop80309" />
+      <stop
+         offset="1"
+         stop-color="#773adc"
+         id="stop80311" />
+    </linearGradient>
+    <radialGradient
+       id="bcdecc57-8bc5-4d98-919b-9ddd2125aa48"
+       cx="11.996"
+       cy="1.934"
+       r="2.2539999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c3f1ff"
+         id="stop80314" />
+      <stop
+         offset="1"
+         stop-color="#9cebff"
+         id="stop80316" />
+    </radialGradient>
+    <radialGradient
+       id="ef1e15ea-6524-46d3-9551-8a943cb61c8a"
+       cx="13.718"
+       cy="13.162"
+       r="2.2539999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c3f1ff"
+         id="stop80319" />
+      <stop
+         offset="1"
+         stop-color="#9cebff"
+         id="stop80321" />
+    </radialGradient>
+    <radialGradient
+       id="fa94a0d5-0c4a-40bc-8227-dc698d4d328a"
+       cx="3.342"
+       cy="9.7159996"
+       r="2.2539999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c3f1ff"
+         id="stop80324" />
+      <stop
+         offset="1"
+         stop-color="#9cebff"
+         id="stop80326" />
+    </radialGradient>
+    <radialGradient
+       id="ac53146d-ca88-4cb5-856e-dfed53f1fa34"
+       cx="10.341"
+       cy="7.1440001"
+       r="4.4310002"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c3f1ff"
+         id="stop80329" />
+      <stop
+         offset="1"
+         stop-color="#9cebff"
+         id="stop80331" />
+    </radialGradient>
+  </defs>
+  <circle
+     cx="9"
+     cy="9"
+     r="9"
+     fill="url(#f93e1a0b-1f40-42b1-92e3-ab3846770c18)"
+     id="circle80336"
+     style="fill:url(#f93e1a0b-1f40-42b1-92e3-ab3846770c18)" />
+  <path
+     d="M 11.385,15.476 A 0.141,0.141 0 0 1 11.326,15.699 7.09,7.09 0 0 1 3.115,12.953 0.14,0.14 0 0 1 3.2,12.74 a 2.132,2.132 0 0 0 0.727,-0.346 0.139,0.139 0 0 1 0.2,0.035 5.963,5.963 0 0 0 6.7,2.253 0.137,0.137 0 0 1 0.175,0.086 2.151,2.151 0 0 0 0.383,0.708 z M 9,1.909 A 7.1,7.1 0 0 0 1.931,8.448 0.141,0.141 0 0 0 2.109,8.592 2.127,2.127 0 0 1 2.659,8.52 2.088,2.088 0 0 1 2.91,8.535 0.139,0.139 0 0 0 3.062,8.408 5.975,5.975 0 0 1 9,3.034 c 0.059,0 0.117,0 0.175,0 C 9.17,2.983 9.169,2.934 9.169,2.879 A 2.14,2.14 0 0 1 9.315,2.1 0.139,0.139 0 0 0 9.187,1.909 c -0.062,10e-4 -0.124,0 -0.187,0 z m 4.326,1.715 a 2.178,2.178 0 0 1 -0.417,0.69 0.138,0.138 0 0 0 0.016,0.2 5.96,5.96 0 0 1 1.181,7.577 0.136,0.136 0 0 0 0.043,0.19 2.178,2.178 0 0 1 0.6,0.541 0.141,0.141 0 0 0 0.23,-0.007 7.08,7.08 0 0 0 -1.431,-9.249 0.14,0.14 0 0 0 -0.222,0.058 z"
+     fill="#ffffff"
+     id="path80338" />
+  <circle
+     cx="9"
+     cy="9.1529999"
+     r="6.5289998"
+     fill="#b796f9"
+     opacity="0.6"
+     id="circle80340" />
+  <path
+     d="m 13.036,2.875 c 0,0.039 0,0.078 0,0.118 a 1.722,1.722 0 0 1 -3.41,0.206 1.648,1.648 0 0 1 -0.031,-0.324 1.723,1.723 0 1 1 3.445,0 z"
+     fill="url(#bcdecc57-8bc5-4d98-919b-9ddd2125aa48)"
+     id="path80342"
+     style="fill:url(#bcdecc57-8bc5-4d98-919b-9ddd2125aa48)" />
+  <path
+     d="m 14.759,14.1 a 1.724,1.724 0 1 1 -0.109,-0.6 1.7,1.7 0 0 1 0.109,0.6 z"
+     fill="url(#ef1e15ea-6524-46d3-9551-8a943cb61c8a)"
+     id="path80344"
+     style="fill:url(#ef1e15ea-6524-46d3-9551-8a943cb61c8a)" />
+  <path
+     d="M 4.382,10.657 A 1.722,1.722 0 0 1 2.659,12.379 H 2.612 a 1.7221603,1.7221603 0 0 1 0.047,-3.444 1.754,1.754 0 0 1 0.515,0.077 1.725,1.725 0 0 1 1.208,1.645 z"
+     fill="url(#fa94a0d5-0c4a-40bc-8227-dc698d4d328a)"
+     id="path80346"
+     style="fill:url(#fa94a0d5-0c4a-40bc-8227-dc698d4d328a)" />
+  <circle
+     cx="9"
+     cy="8.9919996"
+     r="3.3870001"
+     fill="url(#ac53146d-ca88-4cb5-856e-dfed53f1fa34)"
+     id="circle80348"
+     style="fill:url(#ac53146d-ca88-4cb5-856e-dfed53f1fa34)" />
+</svg>

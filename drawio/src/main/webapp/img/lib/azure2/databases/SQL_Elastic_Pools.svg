@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="bfe7cacd-ee25-481f-8f5e-25c9c27c3227"
+   width="17.993683"
+   height="17.993683"
+   viewBox="0 0 17.993683 17.993683"
+   version="1.1"
+   sodipodi:docname="SQL_Elastic_Pools.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview15456"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.9989192"
+     inkscape:cy="8.9968413"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bfe7cacd-ee25-481f-8f5e-25c9c27c3227" />
+  <defs
+     id="defs15415">
+    <linearGradient
+       id="a3e5dfd8-a5f0-49b4-8cf9-1d0f89138e2c"
+       x1="-3071.8601"
+       y1="6711.6899"
+       x2="-3071.8601"
+       y2="6747.6899"
+       gradientTransform="matrix(0.35,0.35,0.35,-0.35,-1293.3215,3478.3065)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop15406" />
+      <stop
+         offset="0.1"
+         stop-color="#0060a9"
+         id="stop15408" />
+      <stop
+         offset="0.52"
+         stop-color="#0071c8"
+         id="stop15410" />
+      <stop
+         offset="0.75"
+         stop-color="#0078d4"
+         id="stop15412" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title15417">Icon-databases-134</title>
+  <rect
+     x="-6.54"
+     y="6.183455"
+     width="13.08"
+     height="13.08"
+     rx="0.61000001"
+     transform="rotate(-45)"
+     id="rect15419"
+     style="fill:url(#a3e5dfd8-a5f0-49b4-8cf9-1d0f89138e2c)" />
+  <path
+     d="m 8.9989192,3.4068413 c -0.95,0 -1.71,-0.24 -1.71,-0.55 v 2.91 c 0,0.29 0.75,0.54 1.68,0.54 h 0.03 c 0.94,0 1.7099998,-0.24 1.7099998,-0.54 v -2.91 c 0.01,0.31 -0.7099998,0.55 -1.7099998,0.55 z"
+     id="path15421"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 10.718919,2.8568413 c 0,0.31 -0.7699998,0.55 -1.7099998,0.55 -0.94,0 -1.71,-0.24 -1.71,-0.55 0,-0.31 0.76,-0.54 1.7,-0.54 0.94,0 1.7099998,0.24 1.7099998,0.54"
+     id="path15423"
+     inkscape:connector-curvature="0"
+     style="fill:#eaeaea" />
+  <path
+     d="m 10.318919,2.8168413 c 0,0.19 -0.5899998,0.35 -1.3099998,0.35 -0.72,0 -1.31,-0.17 -1.31,-0.35 0,-0.18 0.58,-0.35 1.3,-0.35 0.72,0 1.3099998,0.16 1.3099998,0.35"
+     id="path15425"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 8.9989192,2.8968413 a 3.57,3.57 0 0 0 -1,0.1 3.52,3.52 0 0 0 1,0.14 3.52,3.52 0 0 0 1,-0.14 3.62,3.62 0 0 0 -1,-0.1 z"
+     id="path15427"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 8.9989192,12.816841 c -0.95,0 -1.71,-0.24 -1.71,-0.55 v 2.91 c 0,0.29 0.75,0.54 1.68,0.54 h 0.03 c 0.94,0 1.7099998,-0.24 1.7099998,-0.54 v -2.91 c 0.01,0.31 -0.7099998,0.55 -1.7099998,0.55 z"
+     id="path15429"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 10.718919,12.266841 c 0,0.31 -0.7699998,0.55 -1.7099998,0.55 -0.94,0 -1.71,-0.24 -1.71,-0.55 0,-0.31 0.76,-0.54 1.71,-0.54 0.95,0 1.7099998,0.24 1.7099998,0.54"
+     id="path15431"
+     inkscape:connector-curvature="0"
+     style="fill:#eaeaea" />
+  <path
+     d="m 10.318919,12.226841 c 0,0.19 -0.5899998,0.35 -1.3099998,0.35 -0.72,0 -1.31,-0.16 -1.31,-0.35 0,-0.19 0.58,-0.35 1.31,-0.35 0.73,0 1.3099998,0.16 1.3099998,0.35"
+     id="path15433"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 8.9989192,12.306841 a 3.57,3.57 0 0 0 -1,0.13 3.52,3.52 0 0 0 1,0.14 3.52,3.52 0 0 0 1,-0.14 3.62,3.62 0 0 0 -1,-0.13 z"
+     id="path15435"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 13.218919,8.0868413 c -1,0 -1.71,-0.24 -1.71,-0.54 v 2.8999997 c 0,0.3 0.75,0.54 1.69,0.55 v 0 c 0.94,0 1.71,-0.25 1.71,-0.55 V 7.5468413 c 0.02,0.3 -0.75,0.54 -1.69,0.54 z"
+     id="path15437"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 14.928919,7.5468413 c 0,0.3 -0.77,0.54 -1.71,0.54 -0.94,0 -1.71,-0.24 -1.71,-0.54 0,-0.3 0.76,-0.55 1.71,-0.55 0.95,0 1.71,0.25 1.71,0.55"
+     id="path15439"
+     inkscape:connector-curvature="0"
+     style="fill:#eaeaea" />
+  <path
+     d="m 14.528919,7.4968413 c 0,0.2 -0.59,0.35 -1.31,0.35 -0.72,0 -1.31,-0.15 -1.31,-0.35 0,-0.2 0.58,-0.34 1.31,-0.34 0.73,0 1.31,0.15 1.31,0.34"
+     id="path15441"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 13.218919,7.5768413 a 3.52,3.52 0 0 0 -1,0.14 3.57,3.57 0 0 0 1,0.13 3.57,3.57 0 0 0 1,-0.13 3.57,3.57 0 0 0 -1,-0.14 z"
+     id="path15443"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 4.9189192,8.0868413 c -0.95,0 -1.71,-0.24 -1.71,-0.54 v 2.8999997 c 0,0.3 0.75,0.54 1.68,0.55 v 0 c 0.94,0 1.71,-0.25 1.71,-0.55 V 7.5468413 c 0.03,0.3 -0.74,0.54 -1.68,0.54 z"
+     id="path15445"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 6.6289192,7.5468413 c 0,0.3 -0.77,0.54 -1.71,0.54 -0.94,0 -1.71,-0.24 -1.71,-0.54 0,-0.3 0.79,-0.55 1.71,-0.55 0.92,0 1.71,0.25 1.71,0.55"
+     id="path15447"
+     inkscape:connector-curvature="0"
+     style="fill:#eaeaea" />
+  <path
+     d="m 6.2289192,7.4968413 c 0,0.2 -0.59,0.35 -1.31,0.35 -0.72,0 -1.31,-0.15 -1.31,-0.35 0,-0.2 0.58,-0.34 1.31,-0.34 0.73,0 1.31,0.15 1.31,0.34"
+     id="path15449"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 4.9189192,7.5768413 a 3.52,3.52 0 0 0 -1,0.14 3.57,3.57 0 0 0 1,0.13 3.57,3.57 0 0 0 1,-0.13 3.57,3.57 0 0 0 -1,-0.14 z"
+     id="path15451"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <metadata
+     id="metadata15453">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Databases</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-databases-134</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

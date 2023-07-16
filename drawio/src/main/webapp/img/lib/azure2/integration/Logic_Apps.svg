@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b5b638e5-1de7-4378-8f50-7c3738e5874c"
+   width="17"
+   height="13.223171"
+   viewBox="0 0 17 13.223171"
+   version="1.1"
+   sodipodi:docname="Logic_Apps.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview55140"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="6.6098394"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b5b638e5-1de7-4378-8f50-7c3738e5874c" />
+  <defs
+     id="defs55119">
+    <linearGradient
+       id="e20ae4ca-8128-4625-bcc6-863bc1bc51d9"
+       x1="5.0500002"
+       y1="10.55"
+       x2="5.0500002"
+       y2="13.48"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,2.3866682)">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop55109" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop55111" />
+    </linearGradient>
+    <linearGradient
+       id="b6fa89de-29eb-462e-97de-5bdbdaeb090e"
+       x1="12.84"
+       y1="10.57"
+       x2="12.84"
+       y2="13.5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,2.3866682)">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop55114" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop55116" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title55121">Icon-integration-204</title>
+  <g
+     id="g55135"
+     transform="translate(-0.5,-2.3866682)">
+    <path
+       d="M 3.19,15.6 A 2.49,2.49 0 0 1 1.66,15.22 1.7,1.7 0 0 1 1.21,13.86 V 10.33 C 1.21,9.75 0.98,9.44 0.5,9.44 V 8.56 c 0.48,0 0.71,-0.31 0.71,-0.92 V 4.17 A 1.79,1.79 0 0 1 1.66,2.78 2.29,2.29 0 0 1 3.19,2.4 V 3.29 C 2.68,3.29 2.4,3.56 2.4,4.14 v 3.4 C 2.4,8.32 2.17,8.8 1.66,9 a 1.42,1.42 0 0 1 0.74,1.46 v 3.37 a 1.25,1.25 0 0 0 0.17,0.68 0.74,0.74 0 0 0 0.58,0.2 v 0.89 z"
+       id="path55123"
+       inkscape:connector-curvature="0"
+       style="fill:#949494" />
+    <path
+       d="m 14.81,2.4 a 2.49,2.49 0 0 1 1.53,0.38 1.7,1.7 0 0 1 0.45,1.36 v 3.53 c 0,0.58 0.23,0.89 0.71,0.89 v 0.88 c -0.48,0 -0.71,0.31 -0.71,0.92 v 3.43 a 1.8,1.8 0 0 1 -0.45,1.4 2.28,2.28 0 0 1 -1.53,0.41 v -0.89 c 0.51,0 0.79,-0.27 0.79,-0.85 v -3.4 C 15.6,9.68 15.83,9.2 16.34,9 A 1.42,1.42 0 0 1 15.6,7.54 V 4.17 A 1.25,1.25 0 0 0 15.43,3.49 0.74,0.74 0 0 0 14.85,3.29 Z"
+       id="path55125"
+       inkscape:connector-curvature="0"
+       style="fill:#949494" />
+    <path
+       d="M 9.41,8.35 V 7.08 H 8.51 V 8.35 A 0.18,0.18 0 0 1 8.33,8.53 H 5 A 0.36,0.36 0 0 0 4.64,8.89 v 1.65 h 0.9 V 9.63 A 0.18,0.18 0 0 1 5.71,9.45 h 6.54 a 0.18,0.18 0 0 1 0.18,0.18 v 0.93 h 0.89 V 8.89 A 0.36,0.36 0 0 0 12.97,8.53 H 9.59 A 0.18,0.18 0 0 1 9.41,8.35 Z"
+       id="path55127"
+       inkscape:connector-curvature="0"
+       style="fill:#005ba1" />
+    <path
+       d="M 10.61,3.21 H 7.25 A 0.38,0.38 0 0 0 6.87,3.58 v 3.36 a 0.37,0.37 0 0 0 0.38,0.37 h 3.36 A 0.37,0.37 0 0 0 11,6.94 V 3.58 A 0.38,0.38 0 0 0 10.61,3.21 Z M 10.29,6.38 A 0.25,0.25 0 0 1 10.04,6.62 H 7.81 A 0.25,0.25 0 0 1 7.56,6.38 V 4.15 A 0.25,0.25 0 0 1 7.81,3.9 H 10 a 0.25,0.25 0 0 1 0.25,0.25 z"
+       id="path55129"
+       inkscape:connector-curvature="0"
+       style="fill:#0078d4" />
+    <rect
+       x="3.5799999"
+       y="10.55"
+       width="2.9400001"
+       height="2.9400001"
+       rx="0.27000001"
+       id="rect55131"
+       style="fill:url(#e20ae4ca-8128-4625-bcc6-863bc1bc51d9)" />
+    <rect
+       x="11.38"
+       y="10.57"
+       width="2.9400001"
+       height="2.9400001"
+       rx="0.27000001"
+       id="rect55133"
+       style="fill:url(#b6fa89de-29eb-462e-97de-5bdbdaeb090e)" />
+  </g>
+  <metadata
+     id="metadata55137">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Integration, IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-integration-204</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="acef4c1b-4fcc-497b-8109-e31afd8e3681"
+   width="13.56"
+   height="18.050442"
+   viewBox="0 0 13.56 18.050442"
+   version="1.1"
+   sodipodi:docname="Azure_Information_Protection.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview28330"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="6.7755359"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="acef4c1b-4fcc-497b-8109-e31afd8e3681" />
+  <defs
+     id="defs28311">
+    <linearGradient
+       id="bbfb4699-b795-47f6-84ec-c1e1836a6830"
+       x1="8.5900002"
+       y1="-7.79"
+       x2="9.1199999"
+       y2="20.049999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.22,4.4247096e-4)">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop28291" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop28293" />
+    </linearGradient>
+    <linearGradient
+       id="a2bb64ee-7d95-444b-a162-7941c501325a"
+       x1="6.1599998"
+       y1="14.55"
+       x2="5.73"
+       y2="12.09"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.22,4.4247096e-4)">
+      <stop
+         offset="0"
+         stop-color="#ccc"
+         id="stop28296" />
+      <stop
+         offset="1"
+         stop-color="#fcfcfc"
+         id="stop28298" />
+    </linearGradient>
+    <linearGradient
+       id="b180557a-2006-4217-886d-74d75d6b8621"
+       x1="11.73"
+       y1="11.87"
+       x2="11.3"
+       y2="9.4099998"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.22,4.4247096e-4)">
+      <stop
+         offset="0"
+         stop-color="#ccc"
+         id="stop28301" />
+      <stop
+         offset="1"
+         stop-color="#fcfcfc"
+         id="stop28303" />
+    </linearGradient>
+    <linearGradient
+       id="f1a15bf3-bc36-4523-9b3b-6283cbe7b300"
+       x1="11.73"
+       y1="17.34"
+       x2="11.3"
+       y2="14.88"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.22,4.4247096e-4)">
+      <stop
+         offset="0"
+         stop-color="#ccc"
+         id="stop28306" />
+      <stop
+         offset="1"
+         stop-color="#fcfcfc"
+         id="stop28308" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title28313">Icon-identity-229</title>
+  <path
+     d="m 12.84,8.6704425 h -1 v -3.08 a 5.81,5.81 0 0 0 -1.49,-3.92 A 4.79,4.79 0 0 0 6.69,4.4247096e-4 4.79,4.79 0 0 0 2.99,1.6704425 a 5.73,5.73 0 0 0 -1.49,3.92 v 3.08 H 0.69 a 0.7,0.7 0 0 0 -0.69,0.69 v 7.9999995 a 0.7,0.7 0 0 0 0.69,0.69 h 12.15 a 0.71,0.71 0 0 0 0.7,-0.69 V 9.3604425 a 0.71,0.71 0 0 0 -0.7,-0.69 z m -3.37,0 H 3.91 v -3.13 a 3.18,3.18 0 0 1 0.87,-2.15 2.51,2.51 0 0 1 1.88,-0.86 2.54,2.54 0 0 1 1.89,0.86 3.19,3.19 0 0 1 0.32,0.43 v 0 a 3,3 0 0 1 0.61,1.71 z"
+     fill="url(#bbfb4699-b795-47f6-84ec-c1e1836a6830)"
+     id="path28315"
+     style="fill:url(#bbfb4699-b795-47f6-84ec-c1e1836a6830)" />
+  <path
+     d="M 12.87,8.6704425 H 0.7 a 0.66,0.66 0 0 0 -0.44,0.17 l 13.05,8.9999995 a 0.67,0.67 0 0 0 0.25,-0.52 V 9.3204425 a 0.71,0.71 0 0 0 -0.69,-0.65 z"
+     fill="#50e6ff"
+     id="path28317" />
+  <path
+     d="m 0.72,8.6704425 h 12.16 a 0.7,0.7 0 0 1 0.45,0.17 L 0.27,17.840442 a 0.7,0.7 0 0 1 -0.25,-0.52 V 9.3204425 a 0.72,0.72 0 0 1 0.7,-0.65 z"
+     fill="#ffffff"
+     opacity="0.2"
+     id="path28319" />
+  <polygon
+     points="11.42,10.23 11.7,10.81 6.65,13.3 11.7,15.83 11.42,16.4 5.2,13.3 "
+     fill="#198ab3"
+     id="polygon28321"
+     transform="translate(-2.22,4.4247096e-4)" />
+  <circle
+     cx="3.72"
+     cy="13.320442"
+     r="1.25"
+     fill="url(#a2bb64ee-7d95-444b-a162-7941c501325a)"
+     id="circle28323"
+     style="fill:url(#a2bb64ee-7d95-444b-a162-7941c501325a)" />
+  <circle
+     cx="9.29"
+     cy="10.640443"
+     r="1.25"
+     fill="url(#b180557a-2006-4217-886d-74d75d6b8621)"
+     id="circle28325"
+     style="fill:url(#b180557a-2006-4217-886d-74d75d6b8621)" />
+  <circle
+     cx="9.29"
+     cy="16.110443"
+     r="1.25"
+     fill="url(#f1a15bf3-bc36-4523-9b3b-6283cbe7b300)"
+     id="circle28327"
+     style="fill:url(#f1a15bf3-bc36-4523-9b3b-6283cbe7b300)" />
+  <metadata
+     id="metadata28412">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-identity-229</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

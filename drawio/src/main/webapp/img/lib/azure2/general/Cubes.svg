@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="17.228001"
+   viewBox="0 0 17 17.228001"
+   version="1.1"
+   id="svg21591"
+   sodipodi:docname="Cubes.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs21595" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview21593"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.614"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21591" />
+  <title
+     id="title21560">MsPortalFx.base.images-18</title>
+  <g
+     id="fb2be18e-454f-4104-869a-31c3b8ba961c"
+     transform="translate(-0.5,-0.386)">
+    <g
+       id="g21586">
+      <g
+         id="g21568">
+        <polygon
+           points="8.926,9.993 8.926,5.194 13.067,2.794 13.067,7.585 "
+           id="polygon21562"
+           style="fill:#76bc2d" />
+        <polygon
+           points="4.785,2.793 8.926,0.386 13.067,2.794 8.926,5.201 "
+           id="polygon21564"
+           style="fill:#b4ec36" />
+        <polygon
+           points="4.785,7.585 4.785,2.793 8.926,5.201 8.926,9.993 "
+           id="polygon21566"
+           style="fill:#86d633" />
+      </g>
+      <g
+         id="g21576">
+        <polygon
+           points="4.641,17.614 4.641,12.816 8.782,10.416 8.782,15.207 "
+           id="polygon21570"
+           style="fill:#76bc2d" />
+        <polygon
+           points="0.5,10.415 4.641,8.007 8.782,10.416 4.641,12.822 "
+           id="polygon21572"
+           style="fill:#b4ec36" />
+        <polygon
+           points="0.5,15.207 0.5,10.415 4.641,12.822 4.641,17.614 "
+           id="polygon21574"
+           style="fill:#86d633" />
+      </g>
+      <g
+         id="g21584">
+        <polygon
+           points="13.359,17.614 13.359,12.816 17.5,10.416 17.5,15.207 "
+           id="polygon21578"
+           style="fill:#76bc2d" />
+        <polygon
+           points="9.218,10.415 13.36,8.007 17.5,10.416 13.36,12.822 "
+           id="polygon21580"
+           style="fill:#b4ec36" />
+        <polygon
+           points="9.218,15.207 9.218,10.415 13.359,12.822 13.359,17.614 "
+           id="polygon21582"
+           style="fill:#86d633" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata21589">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Cubes()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-18</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

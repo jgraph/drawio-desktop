@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a5043521-e54b-4e71-96d7-f0f67d7a7413"
+   width="17"
+   height="16.299999"
+   viewBox="0 0 17 16.299999"
+   version="1.1"
+   sodipodi:docname="Resource_Graph_Explorer.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview62340"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.1499996"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a5043521-e54b-4e71-96d7-f0f67d7a7413" />
+  <defs
+     id="defs62327">
+    <linearGradient
+       id="aaf70b12-8383-43d3-8674-d08878f903d1"
+       x1="2.6300001"
+       y1="5.9899998"
+       x2="2.6300001"
+       y2="1.75"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop62312" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop62314" />
+    </linearGradient>
+    <linearGradient
+       id="ac810344-4e2d-4dad-99ba-9567b44e7523"
+       x1="14.76"
+       y1="6.3099999"
+       x2="14.76"
+       y2="0.85000002"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop62317" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop62319" />
+    </linearGradient>
+    <linearGradient
+       id="b4b36432-ae36-466e-9abd-a30eb14585d3"
+       x1="11.92"
+       y1="17.27"
+       x2="11.92"
+       y2="7.71"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop62322" />
+      <stop
+         offset="1"
+         stop-color="#b77af4"
+         id="stop62324" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 11.06,13.39 1.29,3.5000001 a 0.77,0.77 0 0 1 0.55,-1.35 h 12.42 v 1.58 H 3.69 L 12.16,12.31 Z"
+     id="path62329"
+     inkscape:connector-curvature="0"
+     style="fill:#b796f9" />
+  <ellipse
+     cx="2.1300001"
+     cy="3.02"
+     rx="2.1300001"
+     ry="2.1199999"
+     id="ellipse62331"
+     style="fill:url(#aaf70b12-8383-43d3-8674-d08878f903d1)" />
+  <ellipse
+     cx="14.26"
+     cy="2.73"
+     rx="2.74"
+     ry="2.73"
+     id="ellipse62333"
+     style="fill:url(#ac810344-4e2d-4dad-99ba-9567b44e7523)" />
+  <ellipse
+     cx="11.42"
+     cy="12.84"
+     rx="3.47"
+     ry="3.46"
+     id="ellipse62335"
+     style="fill:url(#b4b36432-ae36-466e-9abd-a30eb14585d3)" />
+  <metadata
+     id="metadata62337">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

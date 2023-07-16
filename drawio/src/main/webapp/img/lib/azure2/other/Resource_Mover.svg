@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg4112" sodipodi:docname="02200-icon-service-Resource-Mover.svg" version="1.1"
+    width="14.821244" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 14.821244 18.000435"
+    height="18.000435" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs4116"/>
+    <polygon style="fill:#32bedd" points="9.525,15.974 9.525,7.995 16.41,4.004 16.41,11.971" transform="translate(-1.5887561)"/>
+    <polygon style="fill:#9cebff" points="2.64,4.003 9.526,0 16.41,4.004 9.526,8.006" transform="translate(-1.5887561)"/>
+    <polygon style="fill:#50e6ff" points="2.64,11.971 2.64,4.003 9.525,8.006 9.525,15.974" transform="translate(-1.5887561)"/>
+    <polygon style="fill:#9cebff" points="2.64,11.971 9.525,7.995 9.525,15.974" transform="translate(-1.5887561)"/>
+    <polygon style="fill:#50e6ff" points="16.41,11.971 9.525,7.995 9.525,15.974" transform="translate(-1.5887561)"/>
+    <path style="fill:#773adc" d="m 11.498244,14.679 -3.3340001,3.273 a 0.168,0.168 0 0 1 -0.286,-0.122 l 0.017,-1.82 V 
+        15.9 C 3.9202439,15.863 -0.03575615,13.7 2.4385243e-4,9.877 0.56024385,10.734 3.3782439,13.029 7.9212439,13.077 
+        v -0.033 l 0.017,-1.819 a 0.168,0.168 0 0 1 0.288,-0.117 l 3.2720001,3.335 a 0.167,0.167 0 0 1 0,0.236 z"/>​
+</svg>

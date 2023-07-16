@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="12.86"
+   height="18"
+   viewBox="0 0 12.86 18"
+   version="1.1"
+   id="svg5909"
+   sodipodi:docname="Blockchain_Applications.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview5911"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="6.4350567"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5909" />
+  <defs
+     id="defs5889">
+    <linearGradient
+       id="a"
+       x1="8.9399996"
+       y1="18.110001"
+       x2="8.9099998"
+       y2="13.59"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.57)">
+      <stop
+         offset="0"
+         stop-color="#32bedd"
+         id="stop5878" />
+      <stop
+         offset="0.36"
+         stop-color="#34c1e0"
+         id="stop5880" />
+      <stop
+         offset="0.63"
+         stop-color="#3ccbe8"
+         id="stop5882" />
+      <stop
+         offset="0.88"
+         stop-color="#48dbf6"
+         id="stop5884" />
+      <stop
+         offset="1"
+         stop-color="#50e6ff"
+         id="stop5886" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title5891">Icon-Blockchain-363</title>
+  <polygon
+     points="9,15 9,7.51 15.43,3.76 15.43,11.24 "
+     fill="#773adc"
+     id="polygon5893"
+     transform="translate(-2.57)" />
+  <polygon
+     points="2.57,3.76 9,0 15.43,3.76 9,7.52 "
+     fill="#b796f9"
+     id="polygon5895"
+     transform="translate(-2.57)" />
+  <polygon
+     points="2.57,11.24 2.57,3.76 9,7.52 9,15 "
+     fill="#a67af4"
+     id="polygon5897"
+     transform="translate(-2.57)" />
+  <path
+     d="M 9.32,9 6.49,6.12 a 0.15,0.15 0 0 0 -0.21,0 L 3.43,9 A 0.14,0.14 0 0 0 3.54,9.24 H 5.21 A 0.15,0.15 0 0 1 5.36,9.39 V 12 A 0.15,0.15 0 0 0 5.5,12.15 H 7.26 A 0.15,0.15 0 0 0 7.43,12 V 9.35 A 0.15,0.15 0 0 1 7.57,9.2 H 9.24 A 0.14,0.14 0 0 0 9.32,9 Z"
+     fill="#ffffff"
+     id="path5899" />
+  <rect
+     x="2.8399999"
+     y="11.81"
+     width="7.02"
+     height="6.1900001"
+     rx="0.37"
+     fill="url(#a)"
+     id="rect5901"
+     style="fill:url(#a)" />
+  <path
+     d="M 5.53,16.3 4.12,14.89 5.5,13.51 a 0.1,0.1 0 0 0 0,-0.14 L 5.28,13.15 a 0.12,0.12 0 0 0 -0.14,0 l -1.6,1.6 a 0.22,0.22 0 0 0 0,0.22 0.18,0.18 0 0 0 0,0.07 l 1.62,1.62 a 0.1,0.1 0 0 0 0.14,0 L 5.52,16.44 A 0.1,0.1 0 0 0 5.53,16.3 Z"
+     fill="#ffffff"
+     id="path5903" />
+  <path
+     d="m 9.43,14.75 -1.59,-1.6 a 0.12,0.12 0 0 0 -0.14,0 l -0.22,0.22 a 0.1,0.1 0 0 0 0,0.14 l 1.37,1.38 -1.42,1.41 a 0.1,0.1 0 0 0 0,0.14 l 0.22,0.22 a 0.1,0.1 0 0 0 0.14,0 L 9.43,15 a 0.2,0.2 0 0 0 0,-0.25 z"
+     fill="#ffffff"
+     id="path5905" />
+  <metadata
+     id="metadata5993">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-Blockchain-363</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

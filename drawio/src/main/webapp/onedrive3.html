@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" src="https://js.live.net/v7.2/OneDrive.js"></script>
+		<script>
+			// Extract authentication info from redirect URL in popup window
+			function getAuthInfoFromUrl()
+			{
+				if (window.location.hash != null)
+				{
+					try
+					{
+						var result = new Object();
+						var authResponse = window.location.hash.substring(1);
+						var params = authResponse.split('&');
+						
+						for (var i = 0; i < params.length; i++)
+						{
+							idx = params[i].indexOf('=');
+							
+							if (idx > 0)
+							{
+								result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+							}
+						}
+						
+						return result;
+					}
+					catch (e)
+					{
+						// ignores parsing errors
+					}
+				}
+
+				return null;
+			};
+
+			// Main
+			if (window.opener != null && window.opener.onOneDriveCallback != null)
+			{
+				try
+				{
+					var authInfo = getAuthInfoFromUrl();
+					var token = authInfo['access_token'];		
+					window.opener.onOneDriveCallback(token, window);
+				}
+				catch (e)
+				{
+					alert('OneDrive: ' + e.toString());
+					window.close();
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

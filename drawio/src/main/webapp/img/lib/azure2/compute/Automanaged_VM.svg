@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg1052" sodipodi:docname="02112-icon-service-Automanaged-VM.svg" version="1.1"
+    width="18" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 18 16.629999"
+    height="16.629999" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs1042">
+        <linearGradient gradientTransform="matrix(1,0,0,-1,0,791.516)" x1="9" y1="778.83099" x2="9" gradientUnits="userSpaceOnUse"
+            y2="790.83099" id="afd24f05-59be-4c06-8334-605403fb2b7b">
+            <stop offset="0" stop-color="#0078d4" id="stop1032"/>
+            <stop offset="0.8" stop-color="#5ea0ef" id="stop1034"/>
+        </linearGradient>
+        <linearGradient gradientTransform="matrix(1,0,0,-1,0,791.516)" x1="9" y1="774.20099" x2="9" gradientUnits="userSpaceOnUse"
+            y2="778.83099" id="aabc180f-9b9a-4846-a6e7-4110dfc7dad5">
+            <stop offset="0" stop-color="#ccc" id="stop1037"/>
+            <stop offset="1" stop-color="#707070" id="stop1039"/>
+        </linearGradient>
+    </defs>
+    <rect rx="0.60000002" x="0" width="18" height="12" y="0" style="fill:url(#afd24f05-59be-4c06-8334-605403fb2b7b)"/>
+    <path style="fill:url(#aabc180f-9b9a-4846-a6e7-4110dfc7dad5)" d="M 12.61,15.63 C 10.83,15.35 10.76,14.07 10.76,12 H 
+        7.23 c 0,2.07 -0.06,3.35 -1.84,3.63 a 1,1 0 0 0 -0.89,1 h 9 a 1,1 0 0 0 -0.89,-1 z"/>
+    <path style="opacity:0.8;fill:#ffffff" d="M 10.109,1.494 A 0.27733959,0.27733959 0 0 0 9.974,2.032 4.107,4.107 0 1 1 
+        5.488,3.869 L 5.599,3.946 6.378,4.489 A 0.048,0.048 0 0 0 6.428,4.433 L 6.245,2.309 A 0.048,0.048 0 0 0 
+        6.19,2.27 L 4.2,2.915 A 0.048,0.048 0 0 0 4.166,2.982 l 0.821,0.541 0.046,0.031 a 4.647,4.647 0 1 0 5.079,-2.06 
+        z"/>
+    <path style="fill:#ffffff" d="M 11.183,5.115 10.849,4.536 11.03,3.48 10.181,2.99 9.357,3.675 H 8.689 L 7.865,2.99 
+        7.016,3.48 7.2,4.54 6.863,5.115 5.858,5.486 V 6.467 L 6.863,6.838 7.197,7.416 7.016,8.477 7.865,8.967 
+        8.689,8.282 H 9.357 L 10.181,8.967 11.03,8.477 10.849,7.42 11.183,6.842 12.188,6.471 V 5.49 Z M 9.023,7.461 A 
+        1.481,1.481 0 1 1 10.5,5.98 1.481,1.481 0 0 1 9.023,7.461 Z"/>​
+</svg>

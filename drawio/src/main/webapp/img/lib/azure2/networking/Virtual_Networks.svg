@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a1606a52-fb14-4637-87de-4d524bba1829"
+   width="18.006025"
+   height="10.784314"
+   viewBox="0 0 18.006025 10.784314"
+   version="1.1"
+   sodipodi:docname="Virtual_Networks.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview70819"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9.0042855"
+     inkscape:cy="5.3913512"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a1606a52-fb14-4637-87de-4d524bba1829" />
+  <defs
+     id="defs70798">
+    <linearGradient
+       id="f020fb7e-2243-4501-8153-5d69bd3c34f7"
+       x1="9.8800001"
+       y1="8.5900002"
+       x2="11.52"
+       y2="10.23"
+       gradientTransform="rotate(-0.08,-285.46384,-1454.0801)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#86d633"
+         id="stop70783" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop70785" />
+    </linearGradient>
+    <linearGradient
+       id="b3c2bc94-8c7c-48a2-9719-6ee899a43a97"
+       x1="6.1799998"
+       y1="8.5900002"
+       x2="7.8099999"
+       y2="10.23"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#86d633"
+         id="stop70788" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop70790" />
+    </linearGradient>
+    <linearGradient
+       id="e900c35d-0958-4d4f-b28f-302eeaaf52f5"
+       x1="2.48"
+       y1="8.5900002"
+       x2="4.1100001"
+       y2="10.23"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#86d633"
+         id="stop70793" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop70795" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title70800">Icon-networking-61</title>
+  <circle
+     cx="12.744286"
+     cy="5.3829632"
+     r="1.16"
+     id="circle70802"
+     style="fill:url(#f020fb7e-2243-4501-8153-5d69bd3c34f7)" />
+  <circle
+     cx="9.0442858"
+     cy="5.3929634"
+     r="1.16"
+     id="circle70804"
+     style="fill:url(#b3c2bc94-8c7c-48a2-9719-6ee899a43a97)" />
+  <circle
+     cx="5.3442855"
+     cy="5.3929634"
+     r="1.16"
+     id="circle70806"
+     style="fill:url(#e900c35d-0958-4d4f-b28f-302eeaaf52f5)" />
+  <path
+     d="M 6.1863956,10.030542 5.5226439,10.69615 a 0.3,0.3 0 0 1 -0.4242636,5.93e-4 L 0.18421208,5.7962782 A 0.6,0.6 0 0 1 0.18302731,4.9477509 L 0.84677897,4.2821431 6.1858032,9.6062787 a 0.3,0.3 0 0 1 5.924e-4,0.4242633 z"
+     id="path70808"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="M 5.4221989,0.10117925 6.0878067,0.76493091 A 0.3,0.3 0 0 1 6.0883991,1.1891946 L 0.84193654,6.4503285 0.17632875,5.7865769 A 0.6,0.6 0 0 1 0.17514398,4.9380496 L 4.9979353,0.10177164 a 0.3,0.3 0 0 1 0.4242636,-5.9239e-4 z"
+     id="path70810"
+     inkscape:connector-curvature="0"
+     style="fill:#1490df" />
+  <path
+     d="m 17.160946,4.2730297 0.663752,0.6656078 a 0.6,0.6 0 0 1 -0.0012,0.8485273 l -4.914168,4.9004642 a 0.3,0.3 0 0 1 -0.424264,-5.92e-4 l -0.663752,-0.665608 a 0.3,0.3 0 0 1 5.93e-4,-0.4242636 z"
+     id="path70812"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="M 17.822617,5.7800309 17.157009,6.4437825 11.910546,1.1826486 a 0.3,0.3 0 0 1 5.93e-4,-0.42426368 l 0.672688,-0.67081284 a 0.3,0.3 0 0 1 0.424264,5.9238e-4 l 4.822791,4.83627794 a 0.6,0.6 0 0 1 -0.0012,0.8485273 z"
+     id="path70814"
+     inkscape:connector-curvature="0"
+     style="fill:#1490df" />
+  <metadata
+     id="metadata70816">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.VirtualNetwork()</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-networking-61</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

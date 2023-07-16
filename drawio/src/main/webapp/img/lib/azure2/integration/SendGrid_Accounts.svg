@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="b6380083-4e28-4b51-a66e-17ad7c6f2341"
+   width="16.66"
+   height="17"
+   viewBox="0 0 16.66 17"
+   version="1.1"
+   sodipodi:docname="SendGrid_Accounts.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview33846"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.3190416"
+     inkscape:cy="8.5006305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b6380083-4e28-4b51-a66e-17ad7c6f2341" />
+  <defs
+     id="defs33833">
+    <linearGradient
+       id="fcc6e24e-9816-47ca-a4eb-f4db516e3ca2"
+       x1="11.78"
+       y1="0.5"
+       x2="11.78"
+       y2="11.83"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.67,-0.49999999)">
+      <stop
+         offset="0"
+         stop-color="#32d4f5"
+         id="stop33820" />
+      <stop
+         offset="0.23"
+         stop-color="#31d0f1"
+         id="stop33822" />
+      <stop
+         offset="0.46"
+         stop-color="#2cc3e6"
+         id="stop33824" />
+      <stop
+         offset="0.7"
+         stop-color="#25afd4"
+         id="stop33826" />
+      <stop
+         offset="0.94"
+         stop-color="#1c92ba"
+         id="stop33828" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop33830" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title33835">Icon-integration-220</title>
+  <path
+     d="M 5.55,11.33 H 0 V 6.23 A 0.57,0.57 0 0 1 0.57,5.67 h 5 z m 5.56,0 H 5.55 V 17 h 5 a 0.57,0.57 0 0 0 0.57,-0.57 z"
+     fill="#005ba1"
+     id="path33837" />
+  <path
+     d="M 11.11,11.33 H 5.55 V 5.67 h 5.56 z m -5.56,0 H 0 v 5.1 A 0.57,0.57 0 0 0 0.57,17 h 5 z"
+     fill="#0078d4"
+     id="path33839" />
+  <path
+     d="M 11.11,5.67 H 5.55 V 0.57000001 A 0.57,0.57 0 0 1 6.12,1.2845083e-8 h 5 z m 5.55,0 h -5.55 v 5.66 h 5.09 a 0.46,0.46 0 0 0 0.46,-0.45 z"
+     fill="#0078d4"
+     id="path33841" />
+  <path
+     d="M 16.66,5.67 H 11.11 V 1.2845083e-8 H 16.2 A 0.46,0.46 0 0 1 16.66,0.45000001 Z m -5.55,0 H 5.55 v 5.1 a 0.57,0.57 0 0 0 0.57,0.56 h 5 z"
+     fill="url(#fcc6e24e-9816-47ca-a4eb-f4db516e3ca2)"
+     id="path33843"
+     style="fill:url(#fcc6e24e-9816-47ca-a4eb-f4db516e3ca2)" />
+  <metadata
+     id="metadata33928">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-integration-220</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

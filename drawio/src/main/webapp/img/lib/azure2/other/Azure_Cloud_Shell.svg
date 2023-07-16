@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.874001"
+   height="12.469757"
+   viewBox="0 0 17.874001 12.469757"
+   version="1.1"
+   id="svg55875"
+   sodipodi:docname="Azure_Cloud_Shell.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview55877"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.9319042"
+     inkscape:cy="6.2307692"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg55875" />
+  <defs
+     id="defs55859">
+    <linearGradient
+       id="ba88ea91-3b3a-4da0-9b97-9a10ebaa3e50"
+       x1="12.805"
+       y1="15.237"
+       x2="12.805"
+       y2="7.9619999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.063,-2.764)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop55848" />
+      <stop
+         offset=".156"
+         stop-color="#1380da"
+         id="stop55850" />
+      <stop
+         offset=".528"
+         stop-color="#3c91e5"
+         id="stop55852" />
+      <stop
+         offset=".822"
+         stop-color="#559cec"
+         id="stop55854" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop55856" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 15.537,2.936 H 0.004 V 0.226 A 0.226,0.226 0 0 1 0.23,0 h 15.077 a 0.227,0.227 0 0 1 0.227,0.226 z"
+     fill="#949494"
+     id="path55861" />
+  <path
+     d="m 0,2.936 h 15.53 v 9.254 a 0.231,0.231 0 0 1 -0.231,0.231 H 0.231 A 0.231,0.231 0 0 1 0,12.19 Z"
+     fill="#bfbfbf"
+     id="path55863" />
+  <path
+     fill="#005ba1"
+     d="m 1.072,3.736 h 13.37 v 7.57 H 1.072 Z"
+     id="path55865" />
+  <rect
+     x="4.513"
+     y="7.974"
+     width="2.8369999"
+     height="0.52700001"
+     rx="0.26300001"
+     id="rect55867"
+     style="fill:#ffffff" />
+  <path
+     d="M 2.612,8.451 4.287,6.776 a 0.169,0.169 0 0 0 0,-0.243 L 2.587,4.9 A 0.17,0.17 0 0 0 2.343,4.91 L 2.217,5.036 a 0.17,0.17 0 0 0 0.01,0.236 L 3.56,6.536 a 0.171,0.171 0 0 1 0,0.242 l -1.3,1.333 a 0.171,0.171 0 0 0 0,0.239 l 0.1,0.1 a 0.17,0.17 0 0 0 0.252,0.001 z"
+     id="path55869"
+     style="fill:#ffffff" />
+  <path
+     d="m 17.874,10.194 a 2.3,2.3 0 0 0 -2,-2.216 2.906,2.906 0 0 0 -2.994,-2.78 2.982,2.982 0 0 0 -2.851,1.938 2.752,2.752 0 0 0 -2.42,2.648 2.793,2.793 0 0 0 2.89,2.684 l 0.255,-0.01 h 4.683 a 0.465,0.465 0 0 0 0.124,-0.019 2.333,2.333 0 0 0 2.313,-2.244 z"
+     fill="url(#ba88ea91-3b3a-4da0-9b97-9a10ebaa3e50)"
+     id="path55873"
+     style="fill:url(#ba88ea91-3b3a-4da0-9b97-9a10ebaa3e50)" />
+</svg>

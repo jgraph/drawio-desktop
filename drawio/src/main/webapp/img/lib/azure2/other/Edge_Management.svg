@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="15"
+   height="15.442017"
+   viewBox="0 0 15 15.442017"
+   version="1.1"
+   id="svg75339"
+   sodipodi:docname="Edge_Management.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview75341"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.592686"
+     inkscape:cy="7.7288777"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg75339" />
+  <defs
+     id="defs75326">
+    <linearGradient
+       id="f471a08e-ef3a-4f8c-a080-5da9199c21f4"
+       x1="8.8999996"
+       y1="1.3099999"
+       x2="8.8999996"
+       y2="12.11"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.4,-1.2785244)">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop75304" />
+      <stop
+         offset="0.18"
+         stop-color="#559cec"
+         id="stop75306" />
+      <stop
+         offset="0.47"
+         stop-color="#3c91e5"
+         id="stop75308" />
+      <stop
+         offset="0.84"
+         stop-color="#1380da"
+         id="stop75310" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop75312" />
+    </linearGradient>
+    <linearGradient
+       id="b6f9179b-e6d9-447e-a08b-5190cf63e24d"
+       x1="8.8800001"
+       y1="16.719999"
+       x2="8.8800001"
+       y2="13.85"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.4,-1.2785244)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop75315" />
+      <stop
+         offset="0.16"
+         stop-color="#1380da"
+         id="stop75317" />
+      <stop
+         offset="0.53"
+         stop-color="#3c91e5"
+         id="stop75319" />
+      <stop
+         offset="0.82"
+         stop-color="#559cec"
+         id="stop75321" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop75323" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title75328">Icon-484-EdgeManagementArtboard 1</title>
+  <path
+     d="m 15,7.4214756 a 3.39,3.39 0 0 0 -2.92,-3.29 A 4.27,4.27 0 0 0 7.7,0.00147561 4.37,4.37 0 0 0 3.54,2.8814756 4.08,4.08 0 0 0 0,6.8114756 4.12,4.12 0 0 0 4.23,10.811476 h 0.37 6.84 l 0.16,-0.09 A 3.44,3.44 0 0 0 15,7.4214756 Z"
+     fill="url(#f471a08e-ef3a-4f8c-a080-5da9199c21f4)"
+     id="path75330"
+     style="fill:url(#f471a08e-ef3a-4f8c-a080-5da9199c21f4)" />
+  <path
+     d="m 11.81,11.421476 h -4 V 6.4214756 h -0.6 v 5.0000004 h -4 a 0.3,0.3 0 0 0 -0.3,0.3 v 1.17 a 0.3,0.3 0 0 0 0.3,0.3 0.29,0.29 0 0 0 0.29,-0.3 v -0.88 h 3.71 v 0.61 H 7.8 v -0.61 h 3.72 v 1.09 a 0.3,0.3 0 0 0 0.29,0.3 0.31,0.31 0 0 0 0.3,-0.3 v -1.38 a 0.3,0.3 0 0 0 -0.3,-0.3 z"
+     fill="#949494"
+     id="path75332" />
+  <path
+     d="m 12.83,15.441476 h -2.08 a 0.36,0.36 0 0 1 -0.37,-0.37 v -2.13 a 0.37,0.37 0 0 1 0.37,-0.37 h 2.08 a 0.38,0.38 0 0 1 0.37,0.37 v 2.13 a 0.37,0.37 0 0 1 -0.37,0.37 z m -3.94,-0.37 v -2.13 a 0.38,0.38 0 0 0 -0.37,-0.37 H 6.44 a 0.37,0.37 0 0 0 -0.37,0.37 v 2.13 a 0.36,0.36 0 0 0 0.37,0.37 h 2.08 a 0.37,0.37 0 0 0 0.37,-0.37 z m -4.29,0 v -2.13 a 0.38,0.38 0 0 0 -0.37,-0.37 H 2.12 a 0.38,0.38 0 0 0 -0.37,0.37 v 2.13 a 0.37,0.37 0 0 0 0.37,0.37 h 2.09 a 0.37,0.37 0 0 0 0.39,-0.37 z"
+     fill="url(#b6f9179b-e6d9-447e-a08b-5190cf63e24d)"
+     id="path75334"
+     style="fill:url(#b6f9179b-e6d9-447e-a08b-5190cf63e24d)" />
+  <path
+     d="m 10.6,5.3214756 v -0.69 h -0.1 l -0.74,-0.24 -0.19,-0.47 0.37,-0.8 -0.48,-0.48 -0.1,0.05 -0.76,0.31 -0.48,-0.19 -0.3,-0.84 H 7.17 v 0.1 l -0.24,0.74 -0.47,0.19 -0.86,-0.38 -0.48,0.49 0.05,0.09 0.43,0.69 -0.2,0.47 -0.88,0.36 v 0.68 h 0.09 l 0.74,0.24 0.19,0.47 -0.37,0.8 0.48,0.48 h 0.1 l 0.69,-0.35 0.47,0.19 0.3,0.83 H 7.9 v -0.09 l 0.24,-0.74 0.47,-0.19 0.8,0.37 0.48,-0.48 -0.05,-0.1 -0.35,-0.69 0.19,-0.47 z m -3,1 a 1.33,1.33 0 1 1 1.32,-1.33 1.32,1.32 0 0 1 -1.38,1.33 z"
+     fill="#ffffff"
+     id="path75336" />
+  <metadata
+     id="metadata75423">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-484-EdgeManagementArtboard 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

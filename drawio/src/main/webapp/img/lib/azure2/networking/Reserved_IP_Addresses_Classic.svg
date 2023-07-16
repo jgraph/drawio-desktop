@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a190de4f-47a5-4f48-859f-421d4393bb54"
+   data-name="azure-fluent-icons"
+   width="17.43"
+   height="14.014"
+   viewBox="0 0 17.43 14.014"
+   version="1.1"
+   sodipodi:docname="Reserved_IP_Addresses_(Classic).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview68996"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.715"
+     inkscape:cy="7.007"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a190de4f-47a5-4f48-859f-421d4393bb54" />
+  <defs
+     id="defs68973">
+    <linearGradient
+       id="b4943fc0-ee69-42fa-ba77-41b9c6c6b321"
+       x1="9"
+       y1="16.007"
+       x2="9"
+       y2="5.7069998"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.285,1.993)">
+      <stop
+         offset="0"
+         stop-color="#32bedd"
+         id="stop68964" />
+      <stop
+         offset="0.175"
+         stop-color="#32caea"
+         id="stop68966" />
+      <stop
+         offset="0.41"
+         stop-color="#32d2f2"
+         id="stop68968" />
+      <stop
+         offset="0.775"
+         stop-color="#32d4f5"
+         id="stop68970" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title68975">Lighthouse-GS-networking-371</title>
+  <g
+     id="g68991"
+     transform="translate(-0.285,-1.993)">
+    <path
+       d="m 0.285,5.707 h 17.43 v 10.08 a 0.22,0.22 0 0 1 -0.22,0.22 H 0.505 a 0.22,0.22 0 0 1 -0.22,-0.22 z"
+       id="path68977"
+       inkscape:connector-curvature="0"
+       style="fill:url(#b4943fc0-ee69-42fa-ba77-41b9c6c6b321)" />
+    <path
+       d="m 0.509,1.993 h 16.982 a 0.22,0.22 0 0 1 0.22,0.22 V 5.707 H 0.289 V 2.213 a 0.22,0.22 0 0 1 0.22,-0.22 z"
+       id="path68979"
+       inkscape:connector-curvature="0"
+       style="fill:#0078d4" />
+    <g
+       id="g68987">
+      <circle
+         cx="12.917"
+         cy="10.218"
+         r="1.416"
+         id="circle68981"
+         style="fill:#0078d4" />
+      <circle
+         cx="9.0579996"
+         cy="10.218"
+         r="1.416"
+         id="circle68983"
+         style="fill:#0078d4" />
+      <circle
+         cx="5.0830002"
+         cy="10.218"
+         r="1.416"
+         id="circle68985"
+         style="fill:#0078d4" />
+    </g>
+    <rect
+       x="2.6300001"
+       y="3.102"
+       width="12.739"
+       height="1.4960001"
+       rx="0.11"
+       id="rect68989"
+       style="fill:#f2f2f2" />
+  </g>
+  <metadata
+     id="metadata68993">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Lighthouse-GS-networking-371</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

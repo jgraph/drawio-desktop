@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="13.668008"
+   viewBox="0 0 17 13.668008"
+   version="1.1"
+   id="svg18091"
+   sodipodi:docname="Code.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview18093"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="6.834"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18091" />
+  <defs
+     id="defs18068">
+    <linearGradient
+       id="b6397d2e-3ba1-4824-829e-9978a5335072"
+       x1="9"
+       y1="15.834"
+       x2="9"
+       y2="5.7880001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,2.1659921)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop18043" />
+      <stop
+         offset="0.502"
+         stop-color="#4093e6"
+         id="stop18045" />
+      <stop
+         offset="0.775"
+         stop-color="#5ea0ef"
+         id="stop18047" />
+    </linearGradient>
+    <linearGradient
+       id="b054a213-2b95-4773-bd8d-5833c021a783"
+       x1="3.7539999"
+       y1="11.614"
+       x2="6.9749999"
+       y2="11.614"
+       gradientTransform="rotate(44.919,2.4616564,11.168413)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop18050" />
+      <stop
+         offset="0.372"
+         stop-color="#9fc6f5"
+         id="stop18052" />
+      <stop
+         offset="0.8"
+         stop-color="#e4effc"
+         id="stop18054" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         id="stop18056" />
+    </linearGradient>
+    <linearGradient
+       id="ae8082eb-8439-45c6-ad31-2630ec597ba3"
+       x1="10.83"
+       y1="11.614"
+       x2="14.05"
+       y2="11.614"
+       gradientTransform="rotate(135.081,11.774908,10.666576)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop18059" />
+      <stop
+         offset="0.2"
+         stop-color="#e4effc"
+         id="stop18061" />
+      <stop
+         offset="0.628"
+         stop-color="#9fc6f5"
+         id="stop18063" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop18065" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title18070">MsPortalFx.base.images-27</title>
+  <g
+     id="ab07e3c1-374c-4c6b-be01-1dbf388ebd9f"
+     transform="translate(-0.5,-2.1659921)">
+    <g
+       id="g18086">
+      <path
+         d="m 0.5,5.788 h 17 v 9.478 a 0.568,0.568 0 0 1 -0.568,0.568 H 1.068 A 0.568,0.568 0 0 1 0.5,15.266 Z"
+         id="path18072"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b6397d2e-3ba1-4824-829e-9978a5335072)" />
+      <path
+         d="m 1.071,2.166 h 15.858 a 0.568,0.568 0 0 1 0.568,0.568 V 5.788 H 0.5 V 2.734 A 0.568,0.568 0 0 1 1.071,2.166 Z"
+         id="path18074"
+         inkscape:connector-curvature="0"
+         style="fill:#0078d4" />
+      <path
+         d="m 5.244,9.632 h 0.49 V 13.5 A 0.157,0.157 0 0 1 5.577,13.657 H 5.087 A 0.157,0.157 0 0 1 4.93,13.5 V 9.945 A 0.314,0.314 0 0 1 5.244,9.631 Z"
+         transform="rotate(-44.919,5.3327414,11.646398)"
+         id="path18076"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b054a213-2b95-4773-bd8d-5833c021a783)" />
+      <path
+         d="m 4.951,7.3 h 0.49 a 0.314,0.314 0 0 1 0.314,0.314 v 3.617 A 0.157,0.157 0 0 1 5.598,11.388 H 5.108 A 0.157,0.157 0 0 1 4.951,11.231 Z"
+         transform="rotate(-134.919,5.3532188,9.3448772)"
+         id="path18078"
+         inkscape:connector-curvature="0"
+         style="fill:#f2f2f2" />
+      <path
+         d="m 12.228,9.632 h 0.49 a 0.157,0.157 0 0 1 0.157,0.157 v 3.873 h -0.49 a 0.314,0.314 0 0 1 -0.314,-0.314 v -3.56 a 0.157,0.157 0 0 1 0.157,-0.157 z"
+         transform="rotate(-135.081,12.472791,11.646751)"
+         id="path18080"
+         inkscape:connector-curvature="0"
+         style="fill:url(#ae8082eb-8439-45c6-ad31-2630ec597ba3)" />
+      <path
+         d="m 12.2,7.3 h 0.49 a 0.157,0.157 0 0 1 0.157,0.157 v 3.617 a 0.314,0.314 0 0 1 -0.314,0.314 h -0.49 V 7.46 A 0.157,0.157 0 0 1 12.2,7.3 Z"
+         transform="rotate(-45.081,12.448713,9.3469047)"
+         id="path18082"
+         inkscape:connector-curvature="0"
+         style="fill:#f2f2f2" />
+      <rect
+         x="8.5469999"
+         y="6.598"
+         width="0.80599999"
+         height="7.6339998"
+         rx="0.112"
+         transform="rotate(17.752,8.9504116,10.416048)"
+         id="rect18084"
+         style="fill:#f2f2f2" />
+    </g>
+  </g>
+  <metadata
+     id="metadata18089">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.base.images.Polychromatic.Code()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-27</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

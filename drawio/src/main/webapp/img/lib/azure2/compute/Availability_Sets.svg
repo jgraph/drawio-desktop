@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="aabde0b6-2289-4d6f-8be8-5bb670bc80c0"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   version="1.1"
+   sodipodi:docname="Availability_Sets.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview3609"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="aabde0b6-2289-4d6f-8be8-5bb670bc80c0" />
+  <defs
+     id="defs3524">
+    <linearGradient
+       id="b020d1a3-604d-4f79-8087-b021d39314c5"
+       x1="10.31"
+       y1="12.7"
+       x2="10.31"
+       y2="6.8299999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.5)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop3514" />
+      <stop
+         offset="0.82"
+         stop-color="#5ea0ef"
+         id="stop3516" />
+    </linearGradient>
+    <linearGradient
+       id="fd885ea0-9b31-4878-9e85-930d64f33955"
+       x1="10.31"
+       y1="14.97"
+       x2="10.31"
+       y2="12.7"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.5)">
+      <stop
+         offset="0.15"
+         stop-color="#ccc"
+         id="stop3519" />
+      <stop
+         offset="1"
+         stop-color="#707070"
+         id="stop3521" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title3526">Icon-compute-25</title>
+  <g
+     id="g3604"
+     transform="translate(-0.5,-0.5)">
+    <rect
+       x="2.1199999"
+       y="0.5"
+       width="1.97"
+       height="0.56999999"
+       id="rect3528"
+       style="fill:#0078d4" />
+    <polygon
+       points="16.95,1.38 17.5,1.38 17.5,0.5 16.63,0.5 16.63,1.07 16.95,1.07 "
+       id="polygon3530"
+       style="fill:#0078d4" />
+    <polygon
+       points="1.13,16.57 0.5,16.57 0.5,17.5 1.41,17.5 1.41,16.89 1.13,16.89 "
+       id="polygon3532"
+       style="fill:#0078d4" />
+    <polygon
+       points="16.63,16.89 16.63,17.5 17.5,17.5 17.5,16.6 16.95,16.6 16.95,16.89 "
+       id="polygon3534"
+       style="fill:#0078d4" />
+    <polygon
+       points="1.41,1.07 1.41,0.5 0.5,0.5 0.5,1.36 1.13,1.36 1.13,1.07 "
+       id="polygon3536"
+       style="fill:#0078d4" />
+    <rect
+       x="3.3699999"
+       y="3.55"
+       width="8.79"
+       height="5.8800001"
+       rx="0.28999999"
+       id="rect3538"
+       style="fill:#0078d4" />
+    <g
+       id="g3546">
+      <polygon
+         points="7.77,8.21 7.77,6.49 9.23,5.64 9.23,7.35 "
+         id="polygon3540"
+         style="fill:#50e6ff" />
+      <polygon
+         points="6.3,5.64 7.77,4.78 9.23,5.64 7.77,6.5 "
+         id="polygon3542"
+         style="fill:#c3f1ff" />
+      <polygon
+         points="6.3,7.35 6.3,5.64 7.77,6.5 7.77,8.21 "
+         id="polygon3544"
+         style="fill:#9cebff" />
+    </g>
+    <g
+       id="g3564">
+      <rect
+         x="5.9099998"
+         y="6.8299999"
+         width="8.79"
+         height="5.8800001"
+         rx="0.28999999"
+         id="rect3548"
+         style="fill:url(#b020d1a3-604d-4f79-8087-b021d39314c5)" />
+      <g
+         id="g3560">
+        <polygon
+           points="10.31,11.48 10.31,9.77 11.77,8.91 11.77,10.62 "
+           id="polygon3550"
+           style="fill:#50e6ff" />
+        <polygon
+           points="8.84,8.91 10.31,8.05 11.77,8.91 10.31,9.77 "
+           id="polygon3552"
+           style="fill:#c3f1ff" />
+        <polygon
+           points="8.84,10.62 8.84,8.91 10.31,9.77 10.31,11.48 "
+           id="polygon3554"
+           style="fill:#9cebff" />
+        <polygon
+           points="10.31,11.48 8.84,10.62 10.31,9.77 "
+           id="polygon3556"
+           style="fill:#c3f1ff" />
+        <polygon
+           points="10.31,11.48 11.77,10.62 10.31,9.77 "
+           id="polygon3558"
+           style="fill:#9cebff" />
+      </g>
+      <path
+         d="M 12.07,14.48 C 11.2,14.34 11.17,13.71 11.17,12.7 H 9.44 c 0,1 0,1.64 -0.9,1.78 a 0.51,0.51 0 0 0 -0.43,0.49 h 4.4 a 0.51,0.51 0 0 0 -0.44,-0.49 z"
+         id="path3562"
+         inkscape:connector-curvature="0"
+         style="fill:url(#fd885ea0-9b31-4878-9e85-930d64f33955)" />
+    </g>
+    <rect
+       x="5.0700002"
+       y="0.5"
+       width="1.97"
+       height="0.56999999"
+       id="rect3566"
+       style="fill:#0078d4" />
+    <rect
+       x="8.0100002"
+       y="0.5"
+       width="1.97"
+       height="0.56999999"
+       id="rect3568"
+       style="fill:#0078d4" />
+    <rect
+       x="10.96"
+       y="0.5"
+       width="1.97"
+       height="0.56999999"
+       id="rect3570"
+       style="fill:#0078d4" />
+    <rect
+       x="13.91"
+       y="0.5"
+       width="1.97"
+       height="0.56999999"
+       id="rect3572"
+       style="fill:#0078d4" />
+    <rect
+       x="2.1400001"
+       y="16.889999"
+       width="1.97"
+       height="0.56999999"
+       id="rect3574"
+       style="fill:#0078d4" />
+    <rect
+       x="5.0799999"
+       y="16.889999"
+       width="1.97"
+       height="0.56999999"
+       id="rect3576"
+       style="fill:#0078d4" />
+    <rect
+       x="8.0299997"
+       y="16.889999"
+       width="1.97"
+       height="0.56999999"
+       id="rect3578"
+       style="fill:#0078d4" />
+    <rect
+       x="10.98"
+       y="16.889999"
+       width="1.97"
+       height="0.56999999"
+       id="rect3580"
+       style="fill:#0078d4" />
+    <rect
+       x="13.92"
+       y="16.889999"
+       width="1.97"
+       height="0.56999999"
+       id="rect3582"
+       style="fill:#0078d4" />
+    <rect
+       x="16.93"
+       y="2.05"
+       width="0.56999999"
+       height="1.97"
+       id="rect3584"
+       style="fill:#0078d4" />
+    <rect
+       x="16.93"
+       y="4.9899998"
+       width="0.56999999"
+       height="1.97"
+       id="rect3586"
+       style="fill:#0078d4" />
+    <rect
+       x="16.93"
+       y="7.9400001"
+       width="0.56999999"
+       height="1.97"
+       id="rect3588"
+       style="fill:#0078d4" />
+    <rect
+       x="16.93"
+       y="10.88"
+       width="0.56999999"
+       height="1.97"
+       id="rect3590"
+       style="fill:#0078d4" />
+    <rect
+       x="16.93"
+       y="13.83"
+       width="0.56999999"
+       height="1.97"
+       id="rect3592"
+       style="fill:#0078d4" />
+    <rect
+       x="0.5"
+       y="2.03"
+       width="0.56999999"
+       height="1.97"
+       id="rect3594"
+       style="fill:#0078d4" />
+    <rect
+       x="0.5"
+       y="4.98"
+       width="0.56999999"
+       height="1.97"
+       id="rect3596"
+       style="fill:#0078d4" />
+    <rect
+       x="0.5"
+       y="7.9200001"
+       width="0.56999999"
+       height="1.97"
+       id="rect3598"
+       style="fill:#0078d4" />
+    <rect
+       x="0.5"
+       y="10.87"
+       width="0.56999999"
+       height="1.97"
+       id="rect3600"
+       style="fill:#0078d4" />
+    <rect
+       x="0.5"
+       y="13.81"
+       width="0.56999999"
+       height="1.97"
+       id="rect3602"
+       style="fill:#0078d4" />
+  </g>
+  <metadata
+     id="metadata3606">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.AvailabilitySet()</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-25</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg1661" sodipodi:docname="02390-icon-service-Azure-SQL.svg" version="1.1" width="18"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 18 13.052629"
+    height="13.052629" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs1654">
+        <linearGradient x1="9.908" y1="15.943" x2="7.5159998" gradientUnits="userSpaceOnUse" y2="2.3829999" id="f67d1585-6164-4ad0-b2dd-f9cc59b2969f">
+            <stop offset="0.15" stop-color="#0078d4" id="stop1647"/>
+            <stop offset="0.8" stop-color="#5ea0ef" id="stop1649"/>
+            <stop offset="1" stop-color="#83b9f9" id="stop1651"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:url(#f67d1585-6164-4ad0-b2dd-f9cc59b2969f)" d="M 14.49,4.987081 A 5.147,5.147 0 0 0 
+        9.24,0.00108104 5.272,5.272 0 0 0 4.216,3.490081 4.869,4.869 0 0 0 0,8.237081 a 4.946,4.946 0 0 0 5.068,4.814 h 
+        8.752 a 4.292,4.292 0 0 0 4.18,-4.087 4.105,4.105 0 0 0 -3.51,-3.977 z"/>
+    <path style="fill:#f2f2f2" d="m 12.9,9.237081 v -3.4 H 12 v 4.13 h 2.46 v -0.73 z m -7.14,-1.67 a 1.825,1.825 0 0 1 
+        -0.51,-0.31 0.441,0.441 0 0 1 -0.12,-0.32 0.342,0.342 0 0 1 0.15,-0.3 0.683,0.683 0 0 1 0.42,-0.12 1.62,1.62 0 0 
+        1 1,0.29 v -0.86 a 2.58,2.58 0 0 0 -1,-0.16 1.641,1.641 0 0 0 -1.09,0.34 1.08,1.08 0 0 0 -0.42,0.89 c 0,0.51 
+        0.32,0.91 1,1.21 a 2.907,2.907 0 0 1 0.62,0.36 0.419,0.419 0 0 1 0.15,0.32 0.381,0.381 0 0 1 -0.16,0.31 
+        0.806,0.806 0 0 1 -0.45,0.11 1.66,1.66 0 0 1 -1.09,-0.42 v 0.93 a 2.173,2.173 0 0 0 1.07,0.24 1.877,1.877 0 0 0 
+        1.18,-0.33 1.08,1.08 0 0 0 0.33,-0.91 1.048,1.048 0 0 0 -0.25,-0.7 2.425,2.425 0 0 0 -0.83,-0.57 z m 5.24,1.59 a 
+        2.191,2.191 0 0 0 0,-2.32 1.808,1.808 0 0 0 -0.7,-0.75 2,2 0 0 0 -1,-0.26 2.112,2.112 0 0 0 -1.08,0.27 
+        1.856,1.856 0 0 0 -0.73,0.74 2.465,2.465 0 0 0 -0.26,1.14 2.256,2.256 0 0 0 0.24,1 1.766,1.766 0 0 0 0.69,0.74 
+        2.056,2.056 0 0 0 1,0.3 l 0.86,1 h 1.21 l -1.23,-1.1 a 1.79,1.79 0 0 0 1,-0.76 z m -1,-0.25 a 0.941,0.941 0 0 1 
+        -0.76,0.35 0.916,0.916 0 0 1 -0.76,-0.36 1.523,1.523 0 0 1 -0.29,-1 1.529,1.529 0 0 1 0.29,-1 1,1 0 0 1 
+        0.78,-0.37 0.869,0.869 0 0 1 0.75,0.37 1.619,1.619 0 0 1 0.27,1 1.459,1.459 0 0 1 -0.28,1.01 z"/>​
+</svg>

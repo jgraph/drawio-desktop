@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b7c2a418-e983-45bb-8b22-a3ab53d9ffdb"
+   width="17"
+   height="13.67"
+   viewBox="0 0 17 13.67"
+   version="1.1"
+   sodipodi:docname="Azure_NetApp_Files.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview74243"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="6.84"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b7c2a418-e983-45bb-8b22-a3ab53d9ffdb" />
+  <defs
+     id="defs74225">
+    <linearGradient
+       id="ecfac9f9-2ace-451a-aef4-4aae90523bfb"
+       x1="9"
+       y1="15.83"
+       x2="9"
+       y2="5.79"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#32bedd"
+         id="stop74216" />
+      <stop
+         offset="0.18"
+         stop-color="#32caea"
+         id="stop74218" />
+      <stop
+         offset="0.41"
+         stop-color="#32d2f2"
+         id="stop74220" />
+      <stop
+         offset="0.78"
+         stop-color="#32d4f5"
+         id="stop74222" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title74227">Icon-storage-96</title>
+  <path
+     d="m 0,3.62 h 17 v 9.48 a 0.57,0.57 0 0 1 -0.57,0.57 H 0.57 A 0.57,0.57 0 0 1 0,13.1 Z"
+     id="path74229"
+     inkscape:connector-curvature="0"
+     style="fill:url(#ecfac9f9-2ace-451a-aef4-4aae90523bfb)" />
+  <path
+     d="M 0.57,0 H 16.43 A 0.57,0.57 0 0 1 17,0.57000001 V 3.62 H 0 V 0.56000001 A 0.57,0.57 0 0 1 0.57,0 Z"
+     id="path74231"
+     inkscape:connector-curvature="0"
+     style="fill:#198ab3" />
+  <path
+     d="m 2.31,4.72 h 12.36 a 0.27,0.27 0 0 1 0.27,0.27 v 1.4 A 0.27,0.27 0 0 1 14.67,6.66 H 2.31 A 0.27,0.27 0 0 1 2.05,6.39 V 4.99 A 0.27,0.27 0 0 1 2.31,4.72 Z"
+     id="path74233"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="m 2.32,7.51 h 12.36 a 0.27,0.27 0 0 1 0.27,0.27 V 9.19 A 0.27,0.27 0 0 1 14.68,9.46 H 2.32 A 0.26,0.26 0 0 1 2.06,9.19 V 7.83 A 0.26,0.26 0 0 1 2.32,7.51 Z"
+     id="path74235"
+     inkscape:connector-curvature="0"
+     style="fill:#9cebff" />
+  <path
+     d="m 2.32,10.33 h 12.36 a 0.27,0.27 0 0 1 0.27,0.27 v 1.41 a 0.27,0.27 0 0 1 -0.27,0.27 H 2.32 A 0.26,0.26 0 0 1 2.06,12.01 V 10.6 a 0.26,0.26 0 0 1 0.26,-0.27 z"
+     id="path74237"
+     inkscape:connector-curvature="0"
+     style="fill:#9cebff" />
+  <path
+     id="ae090ab3-6849-4f1b-8ada-ca4d90aafe4f"
+     d="m 4.61,5.69 v 5.59 a 0.28,0.28 0 0 0 0.28,0.28 H 7.24 A 0.28,0.28 0 0 0 7.5,11.28 V 7.96 A 0.27,0.27 0 0 1 7.78,7.68 h 1.41 a 0.27,0.27 0 0 1 0.28,0.28 v 3.32 a 0.28,0.28 0 0 0 0.29,0.28 h 2.35 a 0.28,0.28 0 0 0 0.28,-0.28 V 5.69 A 0.28,0.28 0 0 0 12.11,5.41 H 4.89 A 0.28,0.28 0 0 0 4.61,5.69 Z"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <metadata
+     id="metadata74240">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Storage</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-storage-96</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="bc5816c9-c40c-4700-a3cd-6054b6abe2f7"
+   width="17.630085"
+   height="17.528103"
+   viewBox="0 0 17.630085 17.528103"
+   version="1.1"
+   sodipodi:docname="Web_Application_Firewall_Policies(WAF).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview71380"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.8300847"
+     inkscape:cy="8.8"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bc5816c9-c40c-4700-a3cd-6054b6abe2f7" />
+  <defs
+     id="defs71328">
+    <radialGradient
+       id="bb8edb14-0b70-46fb-997d-f3a277915c9b"
+       cx="15013.284"
+       cy="4584.1909"
+       r="56.625999"
+       gradientTransform="matrix(0.15,0,0,0.15,-2243.333,-678.832)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.183"
+         stop-color="#5ea0ef"
+         id="stop71312" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop71314" />
+    </radialGradient>
+    <linearGradient
+       id="a6f3c115-b661-478c-8384-79eca0b050eb"
+       x1="4.0219998"
+       y1="171.297"
+       x2="3.9909999"
+       y2="167.338"
+       gradientTransform="translate(0,-160)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#ccc"
+         id="stop71317" />
+      <stop
+         offset="0.123"
+         stop-color="#d7d7d7"
+         id="stop71319" />
+      <stop
+         offset="0.421"
+         stop-color="#ebebeb"
+         id="stop71321" />
+      <stop
+         offset="0.716"
+         stop-color="#f8f8f8"
+         id="stop71323" />
+      <stop
+         offset="1"
+         stop-color="#fcfcfc"
+         id="stop71325" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title71330">Icon-362Artboard 1</title>
+  <path
+     id="a365ed42-c10c-4d6b-b8da-5311b6818174"
+     d="M 13.730085,15.228102 A 8.512,8.512 0 0 1 3.2300847,1.8281022 l 0.1,-0.1 A 8.521,8.521 0 0 1 13.730085,15.228102"
+     inkscape:connector-curvature="0"
+     style="fill:url(#bb8edb14-0b70-46fb-997d-f3a277915c9b)" />
+  <path
+     d="m 1.9300847,10.228102 a 25.824,25.824 0 0 0 -0.8,2.6 l 0.6,0.9 0.6,0.6 a 14.249,14.249 0 0 1 1.1,-3.5 2.529,2.529 0 0 1 -1.5,-0.6 z"
+     id="path71333"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <path
+     d="m 2.9300847,5.6281022 a 13.655,13.655 0 0 1 -0.7,-2.9 7.551,7.551 0 0 0 -1.1,1.4 10.548,10.548 0 0 0 0.6,2.4 2.73,2.73 0 0 1 1.2,-0.9 z"
+     id="path71335"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <circle
+     cx="3.8300848"
+     cy="8.2281017"
+     r="2.7"
+     id="circle71337"
+     style="fill:url(#a6f3c115-b661-478c-8384-79eca0b050eb)" />
+  <path
+     d="m 7.8300847,13.228102 a 2.106,2.106 0 0 1 0.5,-1.3 9.2,9.2 0 0 1 -2.5,-1.9 2.751,2.751 0 0 1 -1.5,0.8 19.2,19.2 0 0 0 1.5,1.4 8.175,8.175 0 0 0 2,1.2 z"
+     id="path71339"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <path
+     d="m 14.130085,13.428102 a 13.329,13.329 0 0 1 -2.8,-0.3 v 0.1 a 1.656,1.656 0 0 1 -0.5,1.2 12.967,12.967 0 0 0 3.4,0.2 c 0.4,-0.4 0.8,-0.9 1.2,-1.3 a 5.283,5.283 0 0 1 -1.3,0.1 z"
+     id="path71341"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <circle
+     cx="9.630085"
+     cy="13.228102"
+     r="1.8"
+     id="circle71343"
+     style="fill:none" />
+  <path
+     d="m 9.1300847,4.6281022 a 13.468,13.468 0 0 1 5.9000003,-1.4 6.73,6.73 0 0 0 -1.5,-1.4 15.335,15.335 0 0 0 -4.7000003,1.1 9.25,9.25 0 0 0 -1,0.5 18.723,18.723 0 0 1 -2,-2.9 1.9,1.9 0 0 0 -0.9,0.3 21.123,21.123 0 0 0 2.1,3.1 9.841,9.841 0 0 0 -2.2,1.7 2.85,2.85 0 0 1 1.3,1.1 8.961,8.961 0 0 1 1.9,-1.5 22.363,22.363 0 0 0 3.7000003,3.2 2.075,2.075 0 0 1 0.6,-1 27.892,27.892 0 0 1 -3.2000003,-2.8 z"
+     id="path71345"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <circle
+     cx="13.630085"
+     cy="8.8281021"
+     r="1.9"
+     id="circle71347"
+     style="fill:#f2f2f2" />
+  <path
+     d="m 16.830085,10.128102 c -0.1,-0.1 -0.2,-0.1 -0.3,-0.1999998 v 0 c -0.1,-0.1 -0.2,-0.1 -0.3,-0.2 h -0.1 l -0.3,-0.2 h -0.1 l -0.3,-0.2 a 1.456,1.456 0 0 1 -0.6,0.8999998 c 0.1,0.1 0.2,0.1 0.4,0.2 h 0.1 c 0.1,0.1 0.2,0.1 0.3,0.2 v 0 c 0.3,0.2 0.6,0.3 0.9,0.5 v 0 c 0.1,-0.3 0.2,-0.7 0.3,-1 z"
+     id="path71349"
+     inkscape:connector-curvature="0"
+     style="fill:#83b9f9" />
+  <circle
+     cx="3.8300848"
+     cy="8.2281017"
+     r="2.7"
+     id="circle71351"
+     style="fill:#f2f2f2" />
+  <circle
+     cx="9.630085"
+     cy="13.228102"
+     r="1.8"
+     id="circle71353"
+     style="fill:#f2f2f2" />
+  <path
+     d="M 5.0300847,10.228102 H 17.130085 c 0.2,0 0.5,0.2 0.5,0.4 v 6.4 a 0.536,0.536 0 0 1 -0.5,0.5 H 5.0300847 a 0.458,0.458 0 0 1 -0.4,-0.5 v -6.3 a 0.458,0.458 0 0 1 0.4,-0.5 z"
+     id="path71355"
+     inkscape:connector-curvature="0"
+     style="fill:#821010" />
+  <rect
+     x="5.130085"
+     y="11.028102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71357"
+     style="fill:#e62323" />
+  <rect
+     x="9.3300848"
+     y="11.028102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71359"
+     style="fill:#ff7381" />
+  <rect
+     x="13.430085"
+     y="11.028102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71361"
+     style="fill:#e62323" />
+  <rect
+     x="5.130085"
+     y="13.128101"
+     width="1.5"
+     height="1.6"
+     id="rect71363"
+     style="fill:#e62323" />
+  <rect
+     x="15.530085"
+     y="13.128101"
+     width="1.5"
+     height="1.6"
+     id="rect71365"
+     style="fill:#ff7381" />
+  <rect
+     x="7.2300849"
+     y="13.128101"
+     width="3.5999999"
+     height="1.6"
+     id="rect71367"
+     style="fill:#ff7381" />
+  <rect
+     x="11.330085"
+     y="13.128101"
+     width="3.5999999"
+     height="1.6"
+     id="rect71369"
+     style="fill:#e62323" />
+  <rect
+     x="5.130085"
+     y="15.228102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71371"
+     style="fill:#e62323" />
+  <rect
+     x="9.3300848"
+     y="15.228102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71373"
+     style="fill:#ff7381" />
+  <rect
+     x="13.430085"
+     y="15.228102"
+     width="3.5999999"
+     height="1.6"
+     id="rect71375"
+     style="fill:#e62323" />
+  <metadata
+     id="metadata71377">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-362Artboard 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="13.668008"
+   viewBox="0 0 17 13.668008"
+   version="1.1"
+   id="svg21016"
+   sodipodi:docname="Counter.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs21020" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview21018"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="6.834"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21016" />
+  <title
+     id="title20993">MsPortalFx.base.images-12</title>
+  <g
+     id="b83efaea-bdda-4ca6-b3f3-bd9b440f1d12"
+     transform="translate(-0.5,-2.1659921)">
+    <g
+       id="g21011">
+      <path
+         d="M 17.5,5.788 V 2.734 A 0.568,0.568 0 0 0 16.932,2.166 H 1.071 A 0.568,0.568 0 0 0 0.5,2.734 v 3.054 0 9.478 a 0.568,0.568 0 0 0 0.568,0.568 H 16.932 A 0.568,0.568 0 0 0 17.5,15.266 Z"
+         id="path20995"
+         inkscape:connector-curvature="0"
+         style="fill:#0078d4" />
+      <g
+         id="g21003">
+        <rect
+           x="1.857"
+           y="4.552"
+           width="4.1300001"
+           height="8.8950005"
+           rx="0.30700001"
+           id="rect20997"
+           style="fill:#ffffff" />
+        <rect
+           x="6.9400001"
+           y="4.552"
+           width="4.1300001"
+           height="8.8950005"
+           rx="0.30700001"
+           id="rect20999"
+           style="opacity:0.75;fill:#ffffff" />
+        <rect
+           x="12.023"
+           y="4.552"
+           width="4.1300001"
+           height="8.8950005"
+           rx="0.30700001"
+           id="rect21001"
+           style="opacity:0.5;fill:#ffffff" />
+      </g>
+      <path
+         d="M 3.9,11.1 Q 2.454,11.1 2.454,9.069 A 2.763,2.763 0 0 1 2.845,7.463 1.3,1.3 0 0 1 3.979,6.911 q 1.411,0 1.412,2.065 A 2.723,2.723 0 0 1 5.005,10.552 1.27,1.27 0 0 1 3.9,11.1 Z M 3.939,7.6 q -0.579,0 -0.579,1.45 0,1.371 0.568,1.37 Q 4.496,10.419 4.482,9.008 4.482,7.6 3.939,7.6 Z"
+         id="path21005"
+         inkscape:connector-curvature="0"
+         style="fill:#0078d4" />
+      <path
+         d="M 8.911,11.1 Q 7.465,11.1 7.465,9.069 A 2.763,2.763 0 0 1 7.857,7.463 1.3,1.3 0 0 1 8.991,6.911 q 1.412,0 1.412,2.065 A 2.723,2.723 0 0 1 10.017,10.552 1.27,1.27 0 0 1 8.911,11.1 Z m 0.04,-3.5 q -0.579,0 -0.579,1.454 0,1.371 0.568,1.37 Q 9.508,10.423 9.493,9.012 9.493,7.6 8.951,7.6 Z"
+         id="path21007"
+         inkscape:connector-curvature="0"
+         style="fill:#0078d4" />
+      <path
+         d="M 14.8,6.939 V 11.08 H 13.91 V 7.945 a 1.044,1.044 0 0 1 -0.174,0.122 1.757,1.757 0 0 1 -0.213,0.105 2.026,2.026 0 0 1 -0.235,0.079 1.752,1.752 0 0 1 -0.24,0.047 V 7.546 A 3.661,3.661 0 0 0 13.703,7.287 3.773,3.773 0 0 0 14.26,6.939 Z"
+         id="path21009"
+         inkscape:connector-curvature="0"
+         style="fill:#f2f2f2" />
+    </g>
+  </g>
+  <metadata
+     id="metadata21014">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Counter()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-12</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

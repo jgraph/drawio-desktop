@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b6f6d99e-f330-481d-836f-ea58cc42217f"
+   width="11.898839"
+   height="17.000299"
+   viewBox="0 0 11.898839 17.000299"
+   version="1.1"
+   sodipodi:docname="Application_Insights.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview16040"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="5.9494195"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b6f6d99e-f330-481d-836f-ea58cc42217f" />
+  <defs
+     id="defs16023">
+    <radialGradient
+       id="a7a1c431-6c6d-4a8f-9a69-8da437e5b0c5"
+       cx="9"
+       cy="7.3499999"
+       r="6.4200001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b77af4"
+         id="stop15987" />
+      <stop
+         offset="0.21"
+         stop-color="#b378f2"
+         id="stop15989" />
+      <stop
+         offset="0.43"
+         stop-color="#a672ed"
+         id="stop15991" />
+      <stop
+         offset="0.65"
+         stop-color="#9267e4"
+         id="stop15993" />
+      <stop
+         offset="0.88"
+         stop-color="#7559d8"
+         id="stop15995" />
+      <stop
+         offset="1"
+         stop-color="#624fd0"
+         id="stop15997" />
+    </radialGradient>
+    <linearGradient
+       id="ec0c4f0d-5c8e-4882-96a1-89d61808eb49"
+       x1="9.0200005"
+       y1="3.9100001"
+       x2="9.0799999"
+       y2="11.49"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#f2f2f2"
+         id="stop16000" />
+      <stop
+         offset="0.23"
+         stop-color="#f1f1f2"
+         stop-opacity="0.99"
+         id="stop16002" />
+      <stop
+         offset="0.37"
+         stop-color="#ededf1"
+         stop-opacity="0.95"
+         id="stop16004" />
+      <stop
+         offset="0.48"
+         stop-color="#e7e5f0"
+         stop-opacity="0.89"
+         id="stop16006" />
+      <stop
+         offset="0.58"
+         stop-color="#dedbee"
+         stop-opacity="0.81"
+         id="stop16008" />
+      <stop
+         offset="0.67"
+         stop-color="#d3ceeb"
+         stop-opacity="0.7"
+         id="stop16010" />
+      <stop
+         offset="0.76"
+         stop-color="#c4bee8"
+         stop-opacity="0.57"
+         id="stop16012" />
+      <stop
+         offset="0.84"
+         stop-color="#b4abe5"
+         stop-opacity="0.41"
+         id="stop16014" />
+      <stop
+         offset="0.92"
+         stop-color="#a095e1"
+         stop-opacity="0.22"
+         id="stop16016" />
+      <stop
+         offset="0.99"
+         stop-color="#8b7ddc"
+         stop-opacity="0.02"
+         id="stop16018" />
+      <stop
+         offset="1"
+         stop-color="#897bdc"
+         stop-opacity="0"
+         id="stop16020" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title16025">Icon-manage-310</title>
+  <path
+     d="m 7.1794195,16.8903 0.81,-0.87 v -2.32 h -4.04 v 2.32 l 0.81,0.87 a 0.32,0.32 0 0 0 0.19,0.11 h 2 a 0.32,0.32 0 0 0 0.23,-0.11 z"
+     id="path16027"
+     inkscape:connector-curvature="0"
+     style="fill:#cecece" />
+  <path
+     d="M 5.9494195,2.9972545e-4 A 5.89,5.89 0 0 0 0.03941949,6.5702997 c 0.27,2.47 2.62000001,3.6200003 3.29000001,6.7500003 a 0.49,0.49 0 0 0 0.47,0.38 h 4.3 a 0.49,0.49 0 0 0 0.47,-0.38 c 0.67,-3.13 2.9999995,-4.2800003 3.2899995,-6.7500003 A 5.89,5.89 0 0 0 5.9494195,2.9972545e-4 Z m -2,13.70000027455"
+     id="path16029"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a7a1c431-6c6d-4a8f-9a69-8da437e5b0c5)" />
+  <path
+     d="m 8.4094195,3.2902997 a 1.4,1.4 0 0 0 -1.35,1.44 v 0.77 h -2.11 v -0.77 a 1.41,1.41 0 0 0 -1.41,-1.44 1.4,1.4 0 0 0 -1.35,1.44 1.41,1.41 0 0 0 1.35,1.45 h 0.64 V 12.1803 a 0.36,0.36 0 0 0 0.72,0 V 6.1802997 h 2.16 V 12.1803 a 0.36,0.36 0 1 0 0.72,0 V 6.1802997 h 0.63 a 1.4,1.4 0 0 0 1.35,-1.45 1.4,1.4 0 0 0 -1.35,-1.44 z m -4.23,2.21 h -0.68 a 0.74,0.74 0 0 1 -0.68,-0.77 0.74,0.74 0 0 1 0.68,-0.77 0.74,0.74 0 0 1 0.68,0.77 z m 4.28,0 h -0.68 v -0.81 a 0.68,0.68 0 1 1 1.35,0 0.73,0.73 0 0 1 -0.67,0.81 z"
+     id="path16031"
+     inkscape:connector-curvature="0"
+     style="fill:url(#ec0c4f0d-5c8e-4882-96a1-89d61808eb49)" />
+  <polygon
+     points="11.04,14.56 6.96,15.36 6.96,15.8 11.04,15.01 "
+     id="polygon16033"
+     style="fill:#999999"
+     transform="translate(-3.0505805,-0.49970027)" />
+  <polygon
+     points="6.96,16.48 6.96,16.52 7.27,16.86 11.04,16.11 11.04,15.67 "
+     id="polygon16035"
+     style="fill:#999999"
+     transform="translate(-3.0505805,-0.49970027)" />
+  <metadata
+     id="metadata16037">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.AppInsigh(); MsPortalFx.Base.Images.Polychromatic.Insights()</rdf:li>
+      <rdf:li>category: DevOps, Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-310</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

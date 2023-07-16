@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b388e944-5509-49c9-84d7-f38bffa995b2"
+   width="16.901033"
+   height="16.900316"
+   viewBox="0 0 16.901033 16.900316"
+   version="1.1"
+   sodipodi:docname="Log_Analytics_Workspaces.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview6213"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.45"
+     inkscape:cy="8.45"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b388e944-5509-49c9-84d7-f38bffa995b2" />
+  <defs
+     id="defs6196">
+    <linearGradient
+       id="a997e203-1d7d-4cb9-b131-5dc44e029b46"
+       x1="5.23"
+       y1="17.450001"
+       x2="5.23"
+       y2="8.0900002"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1988d9"
+         id="stop6180" />
+      <stop
+         offset="0.9"
+         stop-color="#54aef0"
+         id="stop6182" />
+    </linearGradient>
+    <linearGradient
+       id="e122e9d8-aee5-4f1a-a60e-b1eae355daa5"
+       x1="11.5"
+       y1="12.45"
+       x2="11.5"
+       y2="0.55000001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop6185" />
+      <stop
+         offset="0.01"
+         stop-color="#198bb4"
+         id="stop6187" />
+      <stop
+         offset="0.44"
+         stop-color="#27b2d7"
+         id="stop6189" />
+      <stop
+         offset="0.79"
+         stop-color="#2fcbed"
+         id="stop6191" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop6193" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title6198">Icon-manage-307</title>
+  <path
+     d="m 5.04,12.580316 h 4.32 v 4.32 H 5.04 Z m -4.44,4.32 h 3.72 v -4.32 H 0 v 3.72 a 0.6,0.6 0 0 0 0.6,0.6 z m -0.6,-5 H 4.32 V 7.5403162 H 0 Z"
+     id="path6200"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a997e203-1d7d-4cb9-b131-5dc44e029b46)" />
+  <path
+     d="M 10.95,3.1622647e-4 A 5.89,5.89 0 0 1 16.9,6.0003162 5.89,5.89 0 0 1 10.95,11.950316 H 5 V 5.9503162 A 5.89,5.89 0 0 1 10.95,3.1622647e-4 Z"
+     id="path6202"
+     inkscape:connector-curvature="0"
+     style="fill:url(#e122e9d8-aee5-4f1a-a60e-b1eae355daa5);fill-rule:evenodd" />
+  <rect
+     x="7.04"
+     y="5.1003165"
+     width="1.36"
+     height="4.0799999"
+     id="rect6204"
+     style="fill:#ffffff" />
+  <rect
+     x="9.7600002"
+     y="6.4603167"
+     width="1.36"
+     height="2.72"
+     id="rect6206"
+     style="fill:#ffffff" />
+  <rect
+     x="12.48"
+     y="3.7403162"
+     width="1.36"
+     height="5.4400001"
+     id="rect6208"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata6210">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.LogAnalytics(); MsPortalFx.Base.Images.Polychromatic.OperationalInsights()</rdf:li>
+      <rdf:li>category: Management + Governance, Analytics</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-307</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

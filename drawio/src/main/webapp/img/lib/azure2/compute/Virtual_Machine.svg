@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="fd454f1c-5506-44b8-874e-8814b8b2f70b"
+   width="18"
+   height="16.629999"
+   viewBox="0 0 18 16.629999"
+   version="1.1"
+   sodipodi:docname="Virtual_Machine.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview9611"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9.12"
+     inkscape:cy="7.84"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="fd454f1c-5506-44b8-874e-8814b8b2f70b" />
+  <defs
+     id="defs9590">
+    <linearGradient
+       id="f34d9569-2bd0-4002-8f16-3d01d8106cb5"
+       x1="8.8800001"
+       y1="12.21"
+       x2="8.8800001"
+       y2="0.20999999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop9580" />
+      <stop
+         offset="0.82"
+         stop-color="#5ea0ef"
+         id="stop9582" />
+    </linearGradient>
+    <linearGradient
+       id="bdb45a0b-eb58-4970-a60a-fb2ce314f866"
+       x1="8.8800001"
+       y1="16.84"
+       x2="8.8800001"
+       y2="12.21"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.15"
+         stop-color="#ccc"
+         id="stop9585" />
+      <stop
+         offset="1"
+         stop-color="#707070"
+         id="stop9587" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title9592">Icon-compute-21</title>
+  <rect
+     x="0"
+     y="0"
+     width="18"
+     height="12"
+     rx="0.60000002"
+     id="rect9594"
+     style="fill:url(#f34d9569-2bd0-4002-8f16-3d01d8106cb5)" />
+  <polygon
+     points="8.88,9.71 8.88,6.21 11.88,4.46 11.88,7.95 "
+     id="polygon9596"
+     style="fill:#50e6ff"
+     transform="translate(0.12,-0.20999999)" />
+  <polygon
+     points="5.88,4.46 8.88,2.71 11.88,4.46 8.88,6.22 "
+     id="polygon9598"
+     style="fill:#c3f1ff"
+     transform="translate(0.12,-0.20999999)" />
+  <polygon
+     points="5.88,7.95 5.88,4.46 8.88,6.22 8.88,9.71 "
+     id="polygon9600"
+     style="fill:#9cebff"
+     transform="translate(0.12,-0.20999999)" />
+  <polygon
+     points="8.88,9.71 5.88,7.95 8.88,6.21 "
+     id="polygon9602"
+     style="fill:#c3f1ff"
+     transform="translate(0.12,-0.20999999)" />
+  <polygon
+     points="8.88,9.71 11.88,7.95 8.88,6.21 "
+     id="polygon9604"
+     style="fill:#9cebff"
+     transform="translate(0.12,-0.20999999)" />
+  <path
+     d="M 12.61,15.63 C 10.83,15.35 10.76,14.07 10.76,12 H 7.23 c 0,2.07 -0.06,3.35 -1.84,3.63 a 1,1 0 0 0 -0.89,1 h 9 a 1,1 0 0 0 -0.89,-1 z"
+     id="path9606"
+     inkscape:connector-curvature="0"
+     style="fill:url(#bdb45a0b-eb58-4970-a60a-fb2ce314f866)" />
+  <metadata
+     id="metadata9608">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.VirtualMachine()</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-21</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="f7bf0037-9a5e-4bb7-8b50-ac71cb035d97"
+   width="15.997221"
+   height="15.997221"
+   viewBox="0 0 15.997221 15.997221"
+   version="1.1"
+   sodipodi:docname="Logic_Apps_Custom_Connector.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview32279"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.9331652"
+     inkscape:cy="7.9331652"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f7bf0037-9a5e-4bb7-8b50-ac71cb035d97" />
+  <defs
+     id="defs32269">
+    <linearGradient
+       id="acc4deac-96b1-4d46-9a2c-4b829b24be19"
+       x1="4.7600002"
+       y1="9.6599998"
+       x2="4.7600002"
+       y2="17.059999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.0627786,-1.06)">
+      <stop
+         offset="0"
+         stop-color="#008bf1"
+         id="stop32254" />
+      <stop
+         offset="1"
+         stop-color="#004dae"
+         id="stop32256" />
+    </linearGradient>
+    <linearGradient
+       id="a6951013-a0d6-4369-a16b-d4a62b78c934"
+       x1="4.8299999"
+       y1="1.0599999"
+       x2="4.8299999"
+       y2="6.3800001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.0627786,-1.06)">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop32259" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop32261" />
+    </linearGradient>
+    <linearGradient
+       id="b9ef11bd-7128-47a8-8cf1-427a2a8cc53d"
+       x1="14.4"
+       y1="10.64"
+       x2="14.4"
+       y2="15.95"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.0627786,-1.06)">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop32264" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop32266" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title32271">Icon-integration-210</title>
+  <polygon
+     points="4.31,6.38 4.31,12.77 4.31,13.36 4.31,13.82 12.65,13.82 12.65,12.77 5.36,12.77 5.36,6.38 "
+     fill="#949494"
+     id="polygon32273"
+     transform="translate(-1.0627786,-1.06)" />
+  <path
+     id="bcfff480-0908-4673-8dd3-211accb6f5e9"
+     d="m 3.3172214,8.76 -3.15999996,3.18 a 0.55,0.55 0 0 0 0,0.77 l 3.15999996,3.13 a 0.55,0.55 0 0 0 0.77,0 l 3.16,-3.16 a 0.55,0.55 0 0 0 0,-0.77 l -3.16,-3.15 a 0.55,0.55 0 0 0 -0.77,0 z"
+     fill="url(#acc4deac-96b1-4d46-9a2c-4b829b24be19)"
+     style="fill:url(#acc4deac-96b1-4d46-9a2c-4b829b24be19)" />
+  <path
+     id="a2e9ce98-ac6d-463e-9773-5eed323da406"
+     d="M 6.4272214,4.78 V 0.54 a 0.54,0.54 0 0 0 -0.49,-0.54 h -4.29 a 0.54,0.54 0 0 0 -0.54,0.54 v 4.24 a 0.54,0.54 0 0 0 0.54,0.54 h 4.29 a 0.54,0.54 0 0 0 0.49,-0.54 z"
+     fill="url(#a6951013-a0d6-4369-a16b-d4a62b78c934)"
+     style="fill:url(#a6951013-a0d6-4369-a16b-d4a62b78c934)" />
+  <path
+     id="abb7af69-4e26-4379-92b2-a9feddec43db"
+     d="m 10.677221,10.12 v 4.23 a 0.54,0.54 0 0 0 0.54,0.54 h 4.24 a 0.54,0.54 0 0 0 0.54,-0.54 v -4.23 a 0.54,0.54 0 0 0 -0.54,-0.54 h -4.24 a 0.54,0.54 0 0 0 -0.54,0.54 z"
+     fill="url(#b9ef11bd-7128-47a8-8cf1-427a2a8cc53d)"
+     style="fill:url(#b9ef11bd-7128-47a8-8cf1-427a2a8cc53d)" />
+  <metadata
+     id="metadata32361">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-integration-210</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

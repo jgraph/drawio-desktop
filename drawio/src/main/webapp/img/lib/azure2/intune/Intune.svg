@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="a9ed4d43-c916-4b9a-b9ca-be76fbdc694c" sodipodi:docname="10329-icon-service-Intune.svg"
+    version="1.1" width="16.99" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 16.99 15.48"
+    height="15.48" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs3090">
+        <linearGradient x1="8.0500002" y1="11.32" x2="8.0500002" gradientUnits="userSpaceOnUse" y2="1.26" id="aaede26b-698f-4a65-b6db-859d207e2da6">
+            <stop offset="0" stop-color="#0078d4" id="stop3075"/>
+            <stop offset="0.82" stop-color="#5ea0ef" id="stop3077"/>
+        </linearGradient>
+        <linearGradient x1="8.0500002" y1="15.21" x2="8.0500002" gradientUnits="userSpaceOnUse" y2="11.32" id="bc54987f-34ba-4701-8ce4-6eca10aff9e9">
+            <stop offset="0" stop-color="#1490df" id="stop3080"/>
+            <stop offset="0.98" stop-color="#1f56a3" id="stop3082"/>
+        </linearGradient>
+        <linearGradient x1="8.0500002" y1="7.8699999" x2="8.0500002" gradientUnits="userSpaceOnUse" y2="4.9400001" id="a5434fd8-c18c-472c-be91-f2aa070858b7">
+            <stop offset="0" stop-color="#d2ebff" id="stop3085"/>
+            <stop offset="1" stop-color="#f0fffd" id="stop3087"/>
+        </linearGradient>
+    </defs>
+    <rect rx="0.5" x="0" width="15.1" height="10.06" y="0" style="fill:url(#aaede26b-698f-4a65-b6db-859d207e2da6)"/>
+    <rect rx="0.28" x="0.84000003" width="13.42" height="8.3900003" y="0.83999991" style="fill:#ffffff"/>
+    <path style="fill:url(#bc54987f-34ba-4701-8ce4-6eca10aff9e9)" d="m 10.58,13.11 c -1.5,-0.23 -1.56,-1.31 -1.55,-3 h 
+        -3 c 0,1.74 -0.06,2.82 -1.55,3 a 0.87,0.87 0 0 0 -0.74,0.84 h 7.54 a 0.88,0.88 0 0 0 -0.7,-0.84 z"/>
+    <path style="fill:#32bedd" d="M 16.67,4.65 H 9.79 a 2.31,2.31 0 1 0 0,0.92 h 0.71 v 9.58 a 0.33,0.33 0 0 0 0.33,0.33 
+        h 5.83 a 0.33,0.33 0 0 0 0.33,-0.33 V 4.98 A 0.33,0.33 0 0 0 16.67,4.65 Z"/>
+    <rect rx="0.12" x="11.12" width="5.27" height="8.6999998" y="5.5600004" style="fill:#ffffff"/>
+    <circle r="1.46" style="opacity:0.9;fill:url(#a5434fd8-c18c-472c-be91-f2aa070858b7)" cx="7.5500002" cy="5.1499996"/>
+    <path style="fill:#0078d4" d="M 14.38,9.56 13.26,8.44 a 0.06,0.06 0 0 0 -0.1,0.05 V 9.17 A 0.06,0.06 0 0 1 13.1,9.23 
+        h -2.6 v 0.83 h 2.6 a 0.06,0.06 0 0 1 0.06,0.06 v 0.69 a 0.06,0.06 0 0 0 0.1,0 l 1.12,-1.07 a 0.12,0.12 0 0 0 
+        0,-0.18 z"/>
+</svg>

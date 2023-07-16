@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e4e764cd-2e73-472f-b88a-bf8bfc2c2994"
+   width="17"
+   height="16.940001"
+   viewBox="0 0 17 16.940001"
+   version="1.1"
+   sodipodi:docname="Monitor.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview60995"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.4700003"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e4e764cd-2e73-472f-b88a-bf8bfc2c2994" />
+  <defs
+     id="defs60970">
+    <radialGradient
+       id="ac8b32da-30ca-4b92-8d0f-8d2d5ef278a0"
+       cx="5.7199998"
+       cy="7.4499998"
+       r="8.4200001"
+       gradientTransform="matrix(1.01,0,0,1.01,3.23,1.51)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop60942" />
+      <stop
+         offset="0.56"
+         stop-color="#5c9fee"
+         id="stop60944" />
+      <stop
+         offset="0.69"
+         stop-color="#559ced"
+         id="stop60946" />
+      <stop
+         offset="0.78"
+         stop-color="#4a97e9"
+         id="stop60948" />
+      <stop
+         offset="0.86"
+         stop-color="#3990e4"
+         id="stop60950" />
+      <stop
+         offset="0.93"
+         stop-color="#2387de"
+         id="stop60952" />
+      <stop
+         offset="0.99"
+         stop-color="#087bd6"
+         id="stop60954" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop60956" />
+    </radialGradient>
+    <radialGradient
+       id="a9954820-cb38-4943-9842-f0a568d2b015"
+       cx="28.18"
+       cy="202.28999"
+       r="2.7"
+       gradientTransform="matrix(0.95,0,0,0.95,-17.77,-185.01)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.19"
+         stop-color="#8c8e90"
+         id="stop60959" />
+      <stop
+         offset="0.35"
+         stop-color="#848688"
+         id="stop60961" />
+      <stop
+         offset="0.6"
+         stop-color="#6e7071"
+         id="stop60963" />
+      <stop
+         offset="0.91"
+         stop-color="#4a4b4c"
+         id="stop60965" />
+      <stop
+         offset="1"
+         stop-color="#3e3f3f"
+         id="stop60967" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title60972">Icon-manage-317</title>
+  <ellipse
+     cx="8.5"
+     cy="8.4700003"
+     rx="8.5"
+     ry="8.4700003"
+     id="ellipse60974"
+     style="fill:url(#ac8b32da-30ca-4b92-8d0f-8d2d5ef278a0)" />
+  <ellipse
+     cx="8.5"
+     cy="8.4700003"
+     rx="7.4000001"
+     ry="7.3699999"
+     id="ellipse60976"
+     style="fill:#ffffff" />
+  <path
+     d="M 2.22,8.9100003 A 6.24,6.24 0 0 0 4.04,12.91 l 2,-2 a 3.53,3.53 0 0 1 -1,-1.9999997 z"
+     id="path60978"
+     inkscape:connector-curvature="0"
+     style="fill:#9cebff" />
+  <path
+     d="m 12.63,3.7400003 a 6.25,6.25 0 0 0 -3.69,-1.53 v 2.79 a 3.41,3.41 0 0 1 1.71,0.7 z"
+     id="path60980"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 4.37,3.7400003 2,2 a 3.41,3.41 0 0 1 1.71,-0.7 v -2.83 a 6.25,6.25 0 0 0 -3.71,1.53 z"
+     id="path60982"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 11.28,6.3200003 a 3.6,3.6 0 0 1 0.71,1.71 h 2.79 a 6.16,6.16 0 0 0 -1.53,-3.67 z"
+     id="path60984"
+     inkscape:connector-curvature="0"
+     style="fill:#32bedd" />
+  <path
+     d="m 5.72,6.3200003 -2,-2 a 6.16,6.16 0 0 0 -1.5,3.71 h 2.79 a 3.6,3.6 0 0 1 0.71,-1.71 z"
+     id="path60986"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 13.64,6.4700003 a 0.45,0.45 0 0 0 -0.57,-0.25 l -4.12,1.66 0.32,0.81 4.12,-1.63 a 0.44,0.44 0 0 0 0.25,-0.59 z"
+     id="path60988"
+     inkscape:connector-curvature="0"
+     style="fill:#f04049" />
+  <circle
+     cx="8.5"
+     cy="8.4700003"
+     id="ellipse60990"
+     r="1.2"
+     style="fill:url(#a9954820-cb38-4943-9842-f0a568d2b015)" />
+  <metadata
+     id="metadata60992">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Monitoring()</rdf:li>
+      <rdf:li>category: Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-317</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

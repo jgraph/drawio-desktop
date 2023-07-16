@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="svg3023" sodipodi:docname="10192-icon-service-Time-Series-Insights-Access-Policies.svg"
+    version="1.1" width="11.213455" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 11.213455 17.990788"
+    height="17.990788" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs3017">
+        <radialGradient gradientTransform="matrix(0.94,0,0,0.94,-110.36,-108.4)" gradientUnits="userSpaceOnUse" cx="125.5"
+            r="11.18" id="b17621e4-6399-4962-9fdc-bbf01106b616" cy="123.98">
+            <stop offset="0.27" stop-color="#ffd70f" id="stop3008"/>
+            <stop offset="0.49" stop-color="#ffcb12" id="stop3010"/>
+            <stop offset="0.88" stop-color="#feac19" id="stop3012"/>
+            <stop offset="1" stop-color="#fea11b" id="stop3014"/>
+        </radialGradient>
+    </defs>
+    <path style="fill:url(#b17621e4-6399-4962-9fdc-bbf01106b616)" d="m 10.606728,7.0967278 a 2.06,2.06 0 0 0 0,-2.92 v 0 
+        L 7.0667278,0.60672783 a 2.06,2.06 0 0 0 -2.92,0 v 0 L 0.60672783,4.1767278 a 2.06,2.06 0 0 0 0,2.92 L 
+        3.6067278,10.096728 a 0.57,0.57 0 0 1 0.17,0.41 v 5.49 a 0.71,0.71 0 0 0 0.21,0.5 l 1.35,1.35 a 0.45,0.45 0 0 0 
+        0.66,0 l 1.31,-1.31 v 0 l 0.77,-0.78 a 0.26,0.26 0 0 0 0,-0.38 l -0.55,-0.55 a 0.29,0.29 0 0 1 0,-0.42 l 
+        0.55,-0.56 a 0.26,0.26 0 0 0 0,-0.38 l -0.55,-0.56 a 0.28,0.28 0 0 1 0,-0.41 l 0.55,-0.56 a 0.26,0.26 0 0 0 
+        0,-0.38 l -0.77,-0.78 v -0.28 z m -5.0000002,-5.63 a 1.18,1.18 0 1 1 -1.17,1.17 1.17,1.17 0 0 1 1.17,-1.17 z"/>
+    <path style="opacity:0.75;fill:#ff9300" d="m 4.6767278,16.126728 v 0 a 0.25,0.25 0 0 0 0.43,-0.19 v -4.47 a 
+        0.24,0.24 0 0 0 -0.12,-0.22 v 0 a 0.25,0.25 0 0 0 -0.39,0.22 v 4.47 a 0.27,0.27 0 0 0 0.08,0.19 z"/>
+    <rect rx="0.31999999" x="2.7567279" width="5.8600001" height="0.69" y="5.3667278" style="opacity:0.75;fill:#ff9300"/>
+    <rect rx="0.31999999" x="2.7567279" width="5.8600001" height="0.69" y="6.4867277" style="opacity:0.75;fill:#ff9300"/>​
+</svg>

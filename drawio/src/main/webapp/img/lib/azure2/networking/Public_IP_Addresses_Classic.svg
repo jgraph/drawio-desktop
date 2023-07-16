@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="ad83bb93-39a1-4a0a-bb3f-2a7b7dbaf4fb"
+   width="17.00079"
+   height="13.710001"
+   viewBox="0 0 17.00079 13.710001"
+   version="1.1"
+   sodipodi:docname="Public_IP_Addresses_(Classic).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview68094"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5007901"
+     inkscape:cy="6.71"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="ad83bb93-39a1-4a0a-bb3f-2a7b7dbaf4fb" />
+  <defs
+     id="defs68075">
+    <linearGradient
+       id="a73b79b8-c434-4cf3-819a-3c2f2126c264"
+       x1="9"
+       y1="15.7"
+       x2="9"
+       y2="5.6599998"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#32bedd"
+         id="stop68066" />
+      <stop
+         offset="0.18"
+         stop-color="#32caea"
+         id="stop68068" />
+      <stop
+         offset="0.41"
+         stop-color="#32d2f2"
+         id="stop68070" />
+      <stop
+         offset="0.78"
+         stop-color="#32d4f5"
+         id="stop68072" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title68077">Icon-networking-68</title>
+  <path
+     d="M 7.9005003e-4,3.6600005 H 17.00079 v 9.4800005 a 0.57,0.57 0 0 1 -0.57,0.57 H 0.57079005 a 0.57,0.57 0 0 1 -0.56999999997,-0.57 z"
+     id="path68079"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a73b79b8-c434-4cf3-819a-3c2f2126c264)" />
+  <path
+     d="M 0.57079005,5.4752574e-7 H 16.43079 A 0.57,0.57 0 0 1 17.00079,0.57000055 V 3.6600005 H 7.9005003e-4 V 0.60000055 A 0.57,0.57 0 0 1 0.57079005,5.4752574e-7 Z"
+     id="path68081"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <circle
+     cx="12.320789"
+     cy="8.0600014"
+     r="1.38"
+     id="circle68083"
+     style="fill:#f2f2f2" />
+  <circle
+     cx="8.5607901"
+     cy="8.0600014"
+     r="1.38"
+     id="circle68085"
+     style="fill:#f2f2f2" />
+  <circle
+     cx="4.6807899"
+     cy="8.0600014"
+     r="1.38"
+     id="circle68087"
+     style="fill:#f2f2f2" />
+  <rect
+     x="2.2907901"
+     y="1.1200005"
+     width="12.43"
+     height="1.46"
+     rx="0.28"
+     id="rect68089"
+     style="fill:#f2f2f2" />
+  <metadata
+     id="metadata68091">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Networking</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-networking-68</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

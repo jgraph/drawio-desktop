@@ -1,0 +1,7 @@
+<categories>
+	<category img="images/icon-plus.svg" title="basic" libs="general"/>
+	<category img="images/icon-flowchart.svg" title="flowcharts" libs="general;flowchart"/>
+	<category img="images/icon-uml-erd.svg" title="uml" libs="general;uml"/>
+	<category img="images/icon-network.svg" title="network" libs="general;network"/>
+	<category img="images/icon-mind-map.svg" title="maps" libs="general"/>
+</categories>

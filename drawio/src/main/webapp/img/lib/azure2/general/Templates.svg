@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="e4ba5d2b-e6e4-4101-93ac-7c6b3d568a27"
+   width="13.9"
+   height="16.99"
+   viewBox="0 0 13.9 16.99"
+   version="1.1"
+   sodipodi:docname="Templates.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview19451"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.3203026"
+     inkscape:cy="8.4098361"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e4ba5d2b-e6e4-4101-93ac-7c6b3d568a27" />
+  <defs
+     id="defs19438">
+    <linearGradient
+       id="bd2f9494-d3ff-43bd-b599-4ec170f090bd"
+       x1="8.6300001"
+       y1="17.59"
+       x2="8.6300001"
+       y2="0.58999997"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.68,-0.59)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop19433" />
+      <stop
+         offset="0.82"
+         stop-color="#5ea0ef"
+         id="stop19435" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title19440">Icon-general-9</title>
+  <path
+     d="M 7.91,0.13 H 0.68 A 0.56,0.56 0 0 0 0.11,0.7 v 15.6 a 0.56,0.56 0 0 0 0.57,0.57 H 13.21 A 0.57,0.57 0 0 0 13.79,16.3 V 5.97 A 0.58,0.58 0 0 0 13.21,5.41 H 9.05 A 0.57,0.57 0 0 1 8.48,4.84 V 0.7 A 0.56,0.56 0 0 0 7.91,0.13 Z"
+     fill="#ffffff"
+     id="path19442" />
+  <path
+     d="m 7.65,0.86 v 3.92 a 1.43,1.43 0 0 0 1.43,1.43 h 4 v 9.93 H 0.86 V 0.86 H 7.65 M 7.92,0 H 0.58 A 0.58,0.58 0 0 0 0,0.58 v 15.83 a 0.58,0.58 0 0 0 0.58,0.58 H 13.32 A 0.58,0.58 0 0 0 13.9,16.41 V 5.94 A 0.58,0.58 0 0 0 13.32,5.41 H 9.08 A 0.58,0.58 0 0 1 8.5,4.83 V 0.58 A 0.58,0.58 0 0 0 7.92,0 Z"
+     fill="url(#bd2f9494-d3ff-43bd-b599-4ec170f090bd)"
+     id="path19444"
+     style="fill:url(#bd2f9494-d3ff-43bd-b599-4ec170f090bd)" />
+  <path
+     d="M 13.67,5.47 8.32,0.13 v 4.35 a 1,1 0 0 0 1,1 z"
+     fill="#0078d4"
+     id="path19446" />
+  <path
+     d="M 3.59,9.97 A 1.21,1.21 0 0 1 3.33,10.8 0.89,0.89 0 0 1 2.61,11.09 1,1 0 0 1 2.22,11.01 v -0.6 a 0.55,0.55 0 0 0 0.35,0.12 c 0.27,0 0.41,-0.21 0.41,-0.62 V 8.34 h 0.61 z m 0.46,1 v -0.6 a 1.31,1.31 0 0 0 0.36,0.21 1.22,1.22 0 0 0 0.38,0.07 h 0.2 l 0.15,-0.06 a 0.34,0.34 0 0 0 0.08,-0.18 0.2,0.2 0 0 0 0,-0.11 0.23,0.23 0 0 0 0,-0.14 A 0.47,0.47 0 0 0 5.09,10.05 0.77,0.77 0 0 0 4.91,9.95 L 4.68,9.85 A 1.25,1.25 0 0 1 4.21,9.53 0.68,0.68 0 0 1 4.05,9.07 0.87,0.87 0 0 1 4.13,8.7 0.92,0.92 0 0 1 4.32,8.48 1.16,1.16 0 0 1 4.66,8.34 a 1.84,1.84 0 0 1 0.41,0 2.05,2.05 0 0 1 0.37,0 1.32,1.32 0 0 1 0.3,0.08 V 8.98 A 0.53,0.53 0 0 0 5.59,8.9 0.44,0.44 0 0 0 5.43,8.84 L 5.32,8.78 H 5.13 4.94 a 0.59,0.59 0 0 0 -0.14,0.06 0.21,0.21 0 0 0 -0.12,0.2 0.27,0.27 0 0 0 0,0.12 0.55,0.55 0 0 0 0.11,0.1 l 0.16,0.09 0.21,0.1 a 2,2 0 0 1 0.29,0.14 1.28,1.28 0 0 1 0.22,0.17 0.74,0.74 0 0 1 0.14,0.22 0.88,0.88 0 0 1 0.05,0.29 0.74,0.74 0 0 1 -0.09,0.38 0.68,0.68 0 0 1 -0.23,0.25 0.93,0.93 0 0 1 -0.34,0.13 1.84,1.84 0 0 1 -0.41,0 2.72,2.72 0 0 1 -0.42,0 1.11,1.11 0 0 1 -0.32,-0.1 z m 3.42,0.16 a 1.26,1.26 0 0 1 -0.94,-0.38 1.38,1.38 0 0 1 -0.37,-1 1.48,1.48 0 0 1 0.37,-1 1.31,1.31 0 0 1 1,-0.4 1.24,1.24 0 0 1 0.94,0.38 1.4,1.4 0 0 1 0.35,1 1.43,1.43 0 0 1 -0.37,1 1.24,1.24 0 0 1 -0.98,0.36 z m 0,-2.27 a 0.61,0.61 0 0 0 -0.51,0.24 1.16,1.16 0 0 0 0,1.27 0.62,0.62 0 0 0 0.49,0.23 0.61,0.61 0 0 0 0.5,-0.23 A 1,1 0 0 0 8.13,9.74 1,1 0 0 0 7.96,9.09 0.61,0.61 0 0 0 7.5,8.82 Z m 4.18,2.22 H 11.03 L 9.92,9.38 A 2.34,2.34 0 0 1 9.79,9.16 v 0 c 0,0.09 0,0.24 0,0.44 v 1.48 H 9.22 V 8.34 h 0.66 l 1.06,1.64 0.14,0.22 v 0 a 2.51,2.51 0 0 1 0,-0.37 V 8.34 h 0.58 z"
+     fill="#5ea0ef"
+     id="path19448" />
+  <metadata
+     id="metadata19533">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-general-9</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

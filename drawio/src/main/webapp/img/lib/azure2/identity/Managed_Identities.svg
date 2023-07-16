@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="f807cdde-18f2-4574-ba14-f0b1eef94a4a" sodipodi:docname="10227-icon-service-Managed-Identities.svg"
+    version="1.1" width="17.700001" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.700001 17.001848"
+    height="17.001848" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2523">
+        <linearGradient gradientTransform="translate(0.15,1)" x1="13.18" y1="13.01" x2="8.6300001" gradientUnits="userSpaceOnUse"
+            y2="4.3800001" id="bb67b154-af8f-4a53-a9ce-aa046b9398e9">
+            <stop offset="0" stop-color="#1988d9" id="stop2507"/>
+            <stop offset="0.9" stop-color="#54aef0" id="stop2509"/>
+        </linearGradient>
+        <linearGradient gradientTransform="translate(0.15,1)" x1="11.22" y1="10.5" x2="14.37" gradientUnits="userSpaceOnUse"
+            y2="15.93" id="a47d7138-084a-471d-8d63-744e75b9e8a3">
+            <stop offset="0.1" stop-color="#54aef0" id="stop2512"/>
+            <stop offset="0.29" stop-color="#4fabee" id="stop2514"/>
+            <stop offset="0.51" stop-color="#41a2e9" id="stop2516"/>
+            <stop offset="0.74" stop-color="#2a93e0" id="stop2518"/>
+            <stop offset="0.88" stop-color="#1988d9" id="stop2520"/>
+        </linearGradient>
+    </defs>
+    <polygon style="fill:#50e6ff" points="8.93,17.11 0.15,11.37 1.15,10.22 8.93,15.27 16.85,10.21 17.85,11.36"
+        transform="translate(-0.15,-1)"/>
+    <polygon style="fill:#ffffff" points="1.73,9.58 8.93,1 16.28,9.59 8.93,14.23" transform="translate(-0.15,-1)"/>
+    <polygon style="fill:#50e6ff" points="8.93,14.23 1.73,9.58 8.93,1" transform="translate(-0.15,-1)"/>
+    <polygon style="fill:url(#bb67b154-af8f-4a53-a9ce-aa046b9398e9)" points="8.93,14.23 16.28,9.59 8.93,1" transform="translate(-0.15,-1)"/>
+    <polygon style="fill:#53b1e0" points="16.28,9.59 8.93,14.23 8.93,7.83" transform="translate(-0.15,-1)"/>
+    <polygon style="fill:#9cebff" points="1.73,9.58 8.93,7.83 8.93,14.23" transform="translate(-0.15,-1)"/>
+    <polygon style="fill:url(#a47d7138-084a-471d-8d63-744e75b9e8a3)" points="8.93,17.11 17.85,11.36 16.85,10.21 
+        8.93,15.27" transform="translate(-0.15,-1)"/>
+    <path style="fill:#ffca00" d="m 16.17,10.88 a 1.16,1.16 0 0 0 0,-1.65 v 0 l -2,-2 a 1.16,1.16 0 0 0 -1.64,0 v 0 l 
+        -2,2 a 1.18,1.18 0 0 0 0,1.65 l 1.67,1.67 a 0.32,0.32 0 0 1 0.09,0.23 v 3.1 a 0.36,0.36 0 0 0 0.12,0.28 l 
+        0.76,0.76 a 0.25,0.25 0 0 0 0.37,0 l 0.73,-0.73 v 0 l 0.44,-0.44 a 0.15,0.15 0 0 0 0,-0.21 L 14.4,15.23 a 
+        0.16,0.16 0 0 1 0,-0.24 l 0.31,-0.31 a 0.16,0.16 0 0 0 0,-0.22 L 14.4,14.15 a 0.15,0.15 0 0 1 0,-0.23 l 
+        0.31,-0.32 a 0.15,0.15 0 0 0 0,-0.21 L 14.27,12.95 V 12.79 Z M 13.35,7.71 a 0.66,0.66 0 1 1 -0.66,0.66 0.66,0.66 
+        0 0 1 0.66,-0.66 z"/>
+    <path style="opacity:0.75;fill:#ff9300" d="m 12.85,16 v 0 a 0.14,0.14 0 0 0 0.24,-0.11 V 13.33 A 0.16,0.16 0 0 0 
+        13.03,13.2 v 0 a 0.14,0.14 0 0 0 -0.22,0.13 v 2.51 A 0.15,0.15 0 0 0 12.85,16 Z"/>
+    <rect rx="0.18000001" x="11.75" width="3.29" height="0.38999999" y="9.8999996" style="opacity:0.75;fill:#ff9300"/>
+    <rect rx="0.18000001" x="11.75" width="3.29" height="0.38999999" y="10.53" style="opacity:0.75;fill:#ff9300"/>
+</svg>

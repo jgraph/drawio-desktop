@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="f861199a-9921-482a-87ea-8504385ff0cd"
+   width="16.792048"
+   height="16.867935"
+   viewBox="0 0 16.792048 16.867935"
+   version="1.1"
+   sodipodi:docname="Identity_Governance.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview53846"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.3960235"
+     inkscape:cy="8.4384379"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f861199a-9921-482a-87ea-8504385ff0cd" />
+  <defs
+     id="defs53813">
+    <linearGradient
+       id="f13c7428-fd1f-409a-aa83-518164fbbc0c"
+       x1="9"
+       y1="7.1100001"
+       x2="9"
+       y2="14.2"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.60397652,0.57050358)">
+      <stop
+         offset="0"
+         stop-color="#a67af4"
+         id="stop53803" />
+      <stop
+         offset="1"
+         stop-color="#552f99"
+         id="stop53805" />
+    </linearGradient>
+    <linearGradient
+       id="a6b01360-3b65-4cb5-8c1b-eed2f64af70c"
+       x1="8.8000002"
+       y1="3.3099999"
+       x2="9.3199997"
+       y2="9.75"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.60397652,0.57050358)">
+      <stop
+         offset="0"
+         stop-color="#a67af4"
+         id="stop53808" />
+      <stop
+         offset="1"
+         stop-color="#552f99"
+         id="stop53810" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title53815">Icon-identity-235</title>
+  <g
+     id="g53841"
+     transform="translate(-0.60397652,-0.57050358)">
+    <path
+       d="m 2.15,11.75 a 7.34,7.34 0 0 1 1,-7.2 1.94,1.94 0 0 1 -0.7,-0.83 8.48,8.48 0 0 0 -1.17,8.6 3.1,3.1 0 0 1 0.87,-0.57 z M 5.94,1.14 A 3.14,3.14 0 0 1 6.56,2.04 7.5,7.5 0 0 1 9,1.61 7.33,7.33 0 0 1 13.33,3 2.15,2.15 0 0 1 13.88,2.31 v 0 L 14,2.22 A 8.44,8.44 0 0 0 5.94,1.14 Z m 9.91,5.12 a 7.32,7.32 0 0 1 -1,7.19 2,2 0 0 1 0.43,0.4 1.94,1.94 0 0 1 0.27,0.43 8.48,8.48 0 0 0 1.17,-8.6 3.13,3.13 0 0 1 -0.87,0.58 z M 11.44,16 A 7.25,7.25 0 0 1 9,16.39 v 0 A 7.32,7.32 0 0 1 4.67,15 2.05,2.05 0 0 1 4.12,15.69 v 0 L 4,15.78 A 8.48,8.48 0 0 0 12.09,16.87 3.13,3.13 0 0 1 11.44,16 Z"
+       id="path53817"
+       inkscape:connector-curvature="0"
+       style="fill:#0078d4" />
+    <path
+       d="m 5.18,1.87 a 2.09,2.09 0 1 1 -3,0 2.09,2.09 0 0 1 3,0 z"
+       id="path53819"
+       inkscape:connector-curvature="0"
+       style="fill:#32bedd" />
+    <path
+       d="m 4.42,4.07 a 1,1 0 0 0 0,-1.45 1,1 0 0 0 -1.42,0 1,1 0 0 0 0,1.45 v 0 a 1,1 0 0 0 1.44,0"
+       id="path53821"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 13.18,1.87 a 2.09,2.09 0 1 1 0,3 2.09,2.09 0 0 1 0,-2.95 z"
+       id="path53823"
+       inkscape:connector-curvature="0"
+       style="fill:#32bedd" />
+    <path
+       d="m 15.38,2.62 a 1,1 0 1 0 0,1.45 v 0 a 1,1 0 0 0 0,-1.45"
+       id="path53825"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 12.82,16.13 a 2.09,2.09 0 1 1 3,0 2.09,2.09 0 0 1 -3,0 z"
+       id="path53827"
+       inkscape:connector-curvature="0"
+       style="fill:#32bedd" />
+    <path
+       d="m 13.58,13.93 a 1,1 0 0 0 0,1.45 1,1 0 0 0 1.44,0 1,1 0 0 0 0,-1.45 v 0 a 1,1 0 0 0 -1.44,0"
+       id="path53829"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 4.82,16.13 a 2.09,2.09 0 1 1 0,-2.95 2.09,2.09 0 0 1 0,2.95 z"
+       id="path53831"
+       inkscape:connector-curvature="0"
+       style="fill:#32bedd" />
+    <path
+       d="m 2.62,15.38 a 1,1 0 1 0 0,-1.45 v 0 a 1,1 0 0 0 0,1.45"
+       id="path53833"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+    <path
+       d="m 12.51,12.92 a 0.76,0.76 0 0 0 0.76,-0.76 V 12.07 C 13,9.69 11.61,7.74 9,7.74 6.39,7.74 5,9.39 4.74,12.08 a 0.76,0.76 0 0 0 0.68,0.84 z"
+       id="path53835"
+       inkscape:connector-curvature="0"
+       style="fill:url(#f13c7428-fd1f-409a-aa83-518164fbbc0c)" />
+    <path
+       d="M 9,8.31 A 2.41,2.41 0 0 1 7.7,7.93 L 9,11.28 10.27,8 A 2.37,2.37 0 0 1 9,8.31 Z"
+       id="path53837"
+       inkscape:connector-curvature="0"
+       style="opacity:0.8;fill:#ffffff" />
+    <circle
+       cx="9.0100002"
+       cy="5.9200001"
+       r="2.3900001"
+       id="circle53839"
+       style="fill:url(#a6b01360-3b65-4cb5-8c1b-eed2f64af70c)" />
+  </g>
+  <metadata
+     id="metadata53843">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Identity</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-identity-235</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

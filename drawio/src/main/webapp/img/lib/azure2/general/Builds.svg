@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17"
+   height="16.931"
+   viewBox="0 0 17 16.931"
+   version="1.1"
+   id="svg17511"
+   sodipodi:docname="Builds.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview17513"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.4650002"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg17511" />
+  <defs
+     id="defs17484">
+    <linearGradient
+       id="b0b56ca2-72b1-41c5-af06-32eb990813e7"
+       x1="-4199.3589"
+       y1="990.27502"
+       x2="-4199.3589"
+       y2="982.92102"
+       gradientTransform="rotate(180,-2094.862,495.6715)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.265"
+         stop-color="#a67af4"
+         id="stop17470" />
+      <stop
+         offset="0.45"
+         stop-color="#9e6ff0"
+         id="stop17472" />
+      <stop
+         offset="0.771"
+         stop-color="#8952e5"
+         id="stop17474" />
+      <stop
+         offset="1"
+         stop-color="#773adc"
+         id="stop17476" />
+    </linearGradient>
+    <linearGradient
+       id="a6beae7e-dfa6-485f-bc06-215b34038868"
+       x1="9"
+       y1="17.466"
+       x2="9"
+       y2="12.672"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.534)">
+      <stop
+         offset="0"
+         stop-color="#773adc"
+         id="stop17479" />
+      <stop
+         offset="0.735"
+         stop-color="#a67af4"
+         id="stop17481" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title17486">MsPortalFx.base.images-33</title>
+  <g
+     id="efce58b1-e297-4fa7-8d29-7ddbd73756de"
+     transform="translate(-0.5,-0.534)">
+    <g
+       id="g17506">
+      <path
+         d="M 12.362,4.809 9.386,7.785 a 0.356,0.356 0 0 1 -0.5,0 L 5.909,4.809 A 0.159,0.159 0 0 1 6.021,4.538 h 1.83 A 0.158,0.158 0 0 0 8.009,4.38 V 0.661 A 0.127,0.127 0 0 1 8.136,0.534 h 2 a 0.126,0.126 0 0 1 0.126,0.127 V 4.38 a 0.159,0.159 0 0 0 0.159,0.158 h 1.83 a 0.159,0.159 0 0 1 0.111,0.271 z"
+         id="path17488"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b0b56ca2-72b1-41c5-af06-32eb990813e7)" />
+      <rect
+         x="0.5"
+         y="12.672"
+         width="17"
+         height="4.7930002"
+         rx="0.51300001"
+         id="rect17490"
+         style="fill:url(#a6beae7e-dfa6-485f-bc06-215b34038868)" />
+      <g
+         id="g17498">
+        <rect
+           x="4.1739998"
+           y="9.3079996"
+           width="2.4879999"
+           height="2.4879999"
+           rx="0.20299999"
+           id="rect17492"
+           style="fill:#86d633" />
+        <rect
+           x="7.8909998"
+           y="9.3079996"
+           width="2.4879999"
+           height="2.4879999"
+           rx="0.20299999"
+           id="rect17494"
+           style="fill:#86d633" />
+        <rect
+           x="11.608"
+           y="9.3079996"
+           width="2.4879999"
+           height="2.4879999"
+           rx="0.20299999"
+           id="rect17496"
+           style="fill:#86d633" />
+      </g>
+      <g
+         id="g17504">
+        <rect
+           x="6.033"
+           y="13.746"
+           width="2.4879999"
+           height="2.4879999"
+           rx="0.20299999"
+           id="rect17500"
+           style="fill:#b4ec36" />
+        <rect
+           x="9.75"
+           y="13.746"
+           width="2.4879999"
+           height="2.4879999"
+           rx="0.20299999"
+           id="rect17502"
+           style="fill:#b4ec36" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata17509">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.base.images.Polychromatic.Builds()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-33</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e9f7ba73-56b8-4864-96ff-dce80bef729a"
+   width="17.99"
+   height="16.123848"
+   viewBox="0 0 17.99 16.123848"
+   version="1.1"
+   sodipodi:docname="Container_Registries.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview10762"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="8.74"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e9f7ba73-56b8-4864-96ff-dce80bef729a" />
+  <defs
+     id="defs10724">
+    <linearGradient
+       id="bdf27dc6-025c-4805-8bfd-3a05defd3fbd"
+       x1="8.6370001"
+       y1="-1.9910001"
+       x2="8.6370001"
+       y2="16.739"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop10714" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop10716" />
+    </linearGradient>
+    <linearGradient
+       id="fcd6c6c7-e2eb-4a32-b914-3a8485585a1b"
+       x1="12.96"
+       y1="8.5609999"
+       x2="12.96"
+       y2="6.1409998"
+       gradientTransform="matrix(1,0,0,-1,0,21.616153)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#333132"
+         id="stop10719" />
+      <stop
+         offset="1"
+         stop-color="#5b5a5c"
+         id="stop10721" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 7.43,6.5618471 2.589,-1.573 7.255,2.731 a 3.664,3.664 0 0 0 -1.044,-1.846 l -0.01,-0.05 A 4.194,4.194 0 0 0 14,4.7038471 4.91,4.91 0 0 0 8.9,0.00384713 5.071,5.071 0 0 0 4.06,3.2938471 4.621,4.621 0 0 0 0,7.7738471 4.73,4.73 0 0 0 4.89,12.313847 h 2.54 z"
+     id="path10726"
+     inkscape:connector-curvature="0"
+     style="fill:url(#bdf27dc6-025c-4805-8bfd-3a05defd3fbd)" />
+  <polygon
+     points="17.99,13.119 17.99,10.139 10.07,7.159 10.08,11.439 "
+     id="polygon10728"
+     style="fill:#767676"
+     transform="translate(0,-1.6161529)" />
+  <polyline
+     points="10.07 7.159 7.93 8.459 7.93 12.439 10.08 11.439"
+     id="polyline10730"
+     style="fill:#999999"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="14.4,9.369 13.68,9.119 13.68,11.499 14.4,11.699 "
+     id="polygon10732"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="12.24,11.119 12.96,11.319 12.96,8.889 12.24,8.629 "
+     id="polygon10734"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="15.84,9.859 15.12,9.619 15.12,11.889 15.82,12.079 "
+     id="polygon10736"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="11.53,8.399 10.81,8.159 10.81,10.749 11.53,10.929 "
+     id="polygon10738"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="16.55,12.269 17.27,12.469 17.27,10.349 16.55,10.099 "
+     id="polygon10740"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <path
+     id="ef0d1b54-a1e7-4cb9-a4e5-8a8518e7c127"
+     d="m 8.66,9.7528471 -0.36,0.21 v -2.83 l 0.36,-0.19 z m 0.71,-3.22 -0.37,0.24 v 2.75 l 0.37,-0.2 z"
+     inkscape:connector-curvature="0"
+     style="fill:#b3b3b3" />
+  <polygon
+     points="7.93,12.439 10.08,11.439 17.99,13.119 15.83,13.859 "
+     id="polygon10743"
+     style="fill:url(#fcd6c6c7-e2eb-4a32-b914-3a8485585a1b)"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="10.08,12.089 17.99,13.559 17.99,16.169 10.04,17.679 "
+     id="polygon10745"
+     style="fill:#767676"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="11.53,13.299 11.53,16.639 10.81,16.759 10.81,13.209 "
+     id="polygon10747"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="12.24,13.389 12.96,13.499 12.96,16.399 12.24,16.529 "
+     id="polygon10749"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="14.4,13.659 14.4,16.159 13.68,16.289 13.68,13.569 "
+     id="polygon10751"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="15.12,13.749 15.83,13.859 15.83,15.909 15.12,16.039 "
+     id="polygon10753"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <polygon
+     points="16.55,13.929 17.24,14.019 17.29,15.679 16.55,15.809 "
+     id="polygon10755"
+     style="fill:#a3a3a3"
+     transform="translate(0,-1.6161529)" />
+  <path
+     id="b9f25eb4-4c88-45c2-bc4d-f992757d7e0e"
+     d="m 7.93,14.783847 v -3.26 l 2.16,-1 v 5.6 z"
+     inkscape:connector-curvature="0"
+     style="fill:#999999" />
+  <path
+     id="eb9200a7-4693-4427-bdae-b33ce90ff7f2"
+     d="m 8.61,14.772847 -0.32,-0.16 v -2.76 l 0.32,-0.15 z m 0.77,-3.45 -0.38,0.19 v 3.48 l 0.37,0.19 v -3.86 z"
+     inkscape:connector-curvature="0"
+     style="fill:#b3b3b3" />
+  <metadata
+     id="metadata10759">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Containers</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

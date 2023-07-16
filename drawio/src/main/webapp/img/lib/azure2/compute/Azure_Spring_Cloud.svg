@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="b9f988c7-d095-4215-8b16-8d8cc86b6c65" sodipodi:docname="10370-icon-service-Azure-Spring-Cloud.svg"
+    version="1.1" width="17.000044" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.000044 16.976"
+    height="16.976" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs1186">
+        <linearGradient x1="-0.25799999" y1="-0.226" x2="8.7270002" gradientUnits="userSpaceOnUse" y2="8.7200003" id="b47f94fd-7fe4-4917-bd6e-7d39fdacb02d">
+            <stop offset="0.059" stop-color="#0086ec" id="stop1166"/>
+            <stop offset="1" stop-color="#004dae" id="stop1168"/>
+        </linearGradient>
+        <linearGradient x1="9.0640001" y1="8.7799997" x2="17.493" gradientUnits="userSpaceOnUse" y2="0.66900003" id="bef9bc5a-934e-44d8-b62b-16ab92305435">
+            <stop offset="0" stop-color="#004dae" id="stop1171"/>
+            <stop offset="0.941" stop-color="#0086ec" id="stop1173"/>
+        </linearGradient>
+        <linearGradient x1="8.8629999" y1="8.4989996" x2="17.77" gradientUnits="userSpaceOnUse" y2="18.080999" id="a0c9727a-e709-4755-89bc-774bac323d99">
+            <stop offset="0.059" stop-color="#0086ec" id="stop1176"/>
+            <stop offset="1" stop-color="#004dae" id="stop1178"/>
+        </linearGradient>
+        <linearGradient x1="8.6429996" y1="9.1630001" x2="0.493" gradientUnits="userSpaceOnUse" y2="17.672001" id="e54b8060-10bb-4b24-8de8-05d1103aa483">
+            <stop offset="0.059" stop-color="#0086ec" id="stop1181"/>
+            <stop offset="1" stop-color="#004dae" id="stop1183"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:url(#b47f94fd-7fe4-4917-bd6e-7d39fdacb02d)" d="m 6.8350437,6.836 h -5.405 a 0.286,0.286 0 0 1 
+        -0.286,-0.286 V 1.431 a 0.286,0.286 0 0 1 0.286,-0.286 h 5.119 a 0.286,0.286 0 0 1 0.286,0.286 v 5.405 m 
+        1.145,1.144 V 0.289 A 0.287,0.287 0 0 0 7.6940437,0 H 0.28604371 A 0.287,0.287 0 0 0 4.3709692e-5,0.289 V 7.694 
+        A 0.286,0.286 0 0 0 0.28604371,7.98 Z"/>
+    <path style="fill:url(#bef9bc5a-934e-44d8-b62b-16ab92305435)" d="m 10.165044,6.836 v -5.4 a 0.286,0.286 0 0 1 
+        0.286,-0.286 h 5.119 a 0.286,0.286 0 0 1 0.286,0.286 V 6.55 a 0.286,0.286 0 0 1 -0.286,0.286 h -5.405 M 
+        9.0200437,7.98 h 7.6940003 a 0.286,0.286 0 0 0 0.286,-0.286 V 0.289 a 0.287,0.287 0 0 0 -0.286,-0.287 H 
+        9.3060437 a 0.287,0.287 0 0 0 -0.286,0.287 z"/>
+    <path style="fill:url(#a0c9727a-e709-4755-89bc-774bac323d99)" d="m 10.165044,10.142 h 5.405 a 0.286,0.286 0 0 1 
+        0.286,0.286 v 5.119 a 0.286,0.286 0 0 1 -0.286,0.286 h -5.119 a 0.286,0.286 0 0 1 -0.286,-0.286 v -5.4 M 
+        9.0200437,8.998 v 7.691 a 0.287,0.287 0 0 0 0.286,0.287 h 7.4080003 a 0.287,0.287 0 0 0 0.286,-0.287 v -7.4 a 
+        0.286,0.286 0 0 0 -0.286,-0.286 z"/>
+    <path style="fill:url(#e54b8060-10bb-4b24-8de8-05d1103aa483)" d="m 6.8350437,10.142 v 5.4 a 0.286,0.286 0 0 1 
+        -0.286,0.286 h -5.119 a 0.286,0.286 0 0 1 -0.286,-0.286 v -5.114 a 0.286,0.286 0 0 1 0.286,-0.286 h 5.405 m 
+        1.145,-1.144 H 0.28604371 A 0.286,0.286 0 0 0 4.3709692e-5,9.289 v 7.4 A 0.287,0.287 0 0 0 0.28604371,16.976 H 
+        7.6940437 a 0.287,0.287 0 0 0 0.286,-0.287 z"/>
+    <path style="fill:#5fb832" d="m 14.400044,7.709 a 15.94,15.94 0 0 0 -1.033,-4.881 4.868,4.868 0 0 1 -0.563,0.985 A 
+        5.8,5.8 0 0 0 8.7680437,2.17 5.633,5.633 0 1 0 14.400044,7.803 Z"/>
+    <path style="fill:#ffffff" d="m 13.321044,10.338 c -1.408,1.83 -4.3650003,1.22 -6.2420003,1.314 a 5.315,5.315 0 0 0 
+        -0.658,0.047 l 0.282,-0.094 a 21.8,21.8 0 0 0 2.769,-0.986 6.39,6.39 0 0 0 3.3330003,-4.271 6.617,6.617 0 0 1 
+        -3.9430003,3.755 22.549,22.549 0 0 1 -3.1,0.8 l -0.094,-0.047 c -1.359,-0.659 -1.406,-3.616 1.032,-4.555 
+        1.08,-0.422 2.112,-0.188 3.286,-0.469 A 5.256,5.256 0 0 0 13.275044,3.389 c 0.704,2.02 1.455,5.071 0.046,6.949 z 
+        m -7.9320003,1.83 a 0.469,0.469 0 1 0 -0.47,-0.469 0.469,0.469 0 0 0 0.47,0.469 z"/>
+</svg>

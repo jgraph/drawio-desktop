@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="bbea868e-8a71-493f-b725-c934b9a84f18"
+   width="17.010014"
+   height="16.071936"
+   viewBox="0 0 17.010014 16.071936"
+   version="1.1"
+   sodipodi:docname="Scheduler_Job_Collections.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview44027"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.5006305"
+     inkscape:cy="8.0466583"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bbea868e-8a71-493f-b725-c934b9a84f18" />
+  <defs
+     id="defs43989">
+    <radialGradient
+       id="a81c9c09-6274-4ca3-a4e1-ccea67c24c15"
+       cx="-3179.5"
+       cy="28295.77"
+       r="40.52"
+       gradientTransform="matrix(0.13,0,0,0.13,435.23001,-3786.1304)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.18"
+         stop-color="#5ea0ef"
+         id="stop43972" />
+      <stop
+         offset="0.56"
+         stop-color="#5c9fee"
+         id="stop43974" />
+      <stop
+         offset="0.69"
+         stop-color="#559ced"
+         id="stop43976" />
+      <stop
+         offset="0.78"
+         stop-color="#4a97e9"
+         id="stop43978" />
+      <stop
+         offset="0.86"
+         stop-color="#3990e4"
+         id="stop43980" />
+      <stop
+         offset="0.93"
+         stop-color="#2387de"
+         id="stop43982" />
+      <stop
+         offset="0.99"
+         stop-color="#087bd6"
+         id="stop43984" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop43986" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title43991">Icon-manage-308</title>
+  <circle
+     cx="8.890007"
+     cy="8.049551"
+     r="5.4299998"
+     fill="url(#a81c9c09-6274-4ca3-a4e1-ccea67c24c15)"
+     id="circle43993"
+     style="fill:url(#a81c9c09-6274-4ca3-a4e1-ccea67c24c15)" />
+  <circle
+     cx="8.9100065"
+     cy="8.049551"
+     r="4.73"
+     fill="#ffffff"
+     id="circle43995" />
+  <rect
+     id="b42eed36-9db4-477b-a93a-b71dd9eafb01"
+     x="3.854574"
+     y="11.861689"
+     width="0.81"
+     height="0.25999999"
+     transform="rotate(-45)"
+     fill="#7a7a7a" />
+  <rect
+     id="ad8c6ead-147d-43b2-a109-456e78be7081"
+     x="12.120007"
+     y="7.9195509"
+     width="0.81"
+     height="0.25999999"
+     fill="#7a7a7a" />
+  <rect
+     id="fe21f182-2c9c-417d-b5d9-d14559b34877"
+     x="0.47832856"
+     y="15.174337"
+     width="0.25999999"
+     height="0.81"
+     transform="rotate(-45)"
+     fill="#7a7a7a" />
+  <rect
+     id="ac180879-4dfd-4584-a8aa-5ef507fe43af"
+     x="8.7800064"
+     y="11.239551"
+     width="0.25999999"
+     height="0.81"
+     fill="#7a7a7a" />
+  <rect
+     id="b4e17954-3f15-4e0f-a45d-bd11f26be64c"
+     x="0.47899517"
+     y="7.9059463"
+     width="0.25999999"
+     height="0.81"
+     transform="rotate(-45)"
+     fill="#7a7a7a" />
+  <rect
+     id="aa99a954-37ab-43d9-b437-1be309bf32b2"
+     x="-3.4238179"
+     y="11.861023"
+     width="0.81"
+     height="0.25999999"
+     transform="rotate(-45)"
+     fill="#7a7a7a" />
+  <rect
+     id="a6cfd9f5-a8af-49cb-b4d2-8cb476152496"
+     x="4.8500061"
+     y="7.9195509"
+     width="0.81"
+     height="0.25999999"
+     fill="#7a7a7a" />
+  <path
+     d="m 10.870006,9.5095512 -1.3699996,-1.38 a 0.3,0.3 0 0 0 -0.25,-0.08 0.44,0.44 0 0 0 0.06,-0.16 v -3.51 a 0.33,0.33 0 0 0 -0.33,-0.33 h -0.07 a 0.33,0.33 0 0 0 -0.33,0.33 v 3.5 a 0.34,0.34 0 0 0 0.33,0.34 h 0.05 a 0.32,0.32 0 0 0 0,0.43 l 1.3899996,1.3999998 a 0.33,0.33 0 0 0 0.47,0 v 0 a 0.33,0.33 0 0 0 0.05,-0.5399998 z"
+     fill="#7a7a7a"
+     id="path44004" />
+  <circle
+     cx="8.9200068"
+     cy="8.049551"
+     r="0.76999998"
+     fill="#4f4f4f"
+     id="circle44006" />
+  <path
+     d="m 6.4104276e-6,14.129551 a 0.16,0.16 0 0 0 0.079999999572,0.14 l 1.15999999,0.65 1.96,1.13 a 0.17,0.17 0 0 0 0.23,-0.06 l 0.66,-1.12 a 0.16,0.16 0 0 0 -0.06,-0.21 l -2.3,-1.3 a 0.17,0.17 0 0 1 -0.08,-0.14 V 2.8995512 a 0.16,0.16 0 0 1 0.08,-0.14 l 2.3,-1.3 a 0.16,0.16 0 0 0 0.06,-0.21 l -0.66,-1.11999997 a 0.17,0.17 0 0 0 -0.23,-0.08 l -1.92,1.10999997 -1.19999999,0.67 a 0.16,0.16 0 0 0 -0.079999999572,0.14 z"
+     fill="#949494"
+     id="path44008" />
+  <path
+     d="m 1.6400064,2.8195512 0.06,-0.06 2.3,-1.3 a 0.14,0.14 0 0 0 0.06,-0.21 l -0.66,-1.11999997 a 0.15,0.15 0 0 0 -0.22,-0.08 l -1.93,1.10999997 -1.18999999,0.67 c 0,0 -0.05,0 -0.059999999572,0.06 l 0.8999999995724,0.51 z"
+     fill="#a3a3a3"
+     id="path44010" />
+  <path
+     d="m 4.0000064,14.639551 -2.3,-1.3 a 0.22,0.22 0 0 1 -0.07,-0.09 l -1.61999999,1 h 0.05 l 1.14999999,0.65 2,1.11 a 0.15,0.15 0 0 0 0.22,-0.06 l 0.66,-1.12 a 0.14,0.14 0 0 0 -0.09,-0.19 z"
+     fill="#a3a3a3"
+     id="path44012" />
+  <path
+     d="m 17.010006,14.129551 a 0.16,0.16 0 0 1 -0.08,0.14 l -1.16,0.65 -2,1.11 a 0.15,0.15 0 0 1 -0.22,-0.06 l -0.66,-1.12 a 0.15,0.15 0 0 1 0.05,-0.21 l 2.3,-1.3 a 0.17,0.17 0 0 0 0.08,-0.14 V 2.8995512 a 0.16,0.16 0 0 0 -0.08,-0.14 l -2.3,-1.3 a 0.15,0.15 0 0 1 -0.05,-0.21 l 0.66,-1.11999997 a 0.15,0.15 0 0 1 0.26,-0.08 l 1.92,1.08999997 1.2,0.67 a 0.16,0.16 0 0 1 0.08,0.14 z"
+     fill="#949494"
+     id="path44016" />
+  <path
+     d="m 15.370006,2.8195512 -0.06,-0.06 -2.3,-1.3 a 0.14,0.14 0 0 1 -0.06,-0.21 l 0.66,-1.11999997 a 0.15,0.15 0 0 1 0.22,-0.08 l 1.93,1.08999997 1.19,0.67 c 0,0 0.05,0 0.06,0.06 l -0.9,0.51 z"
+     fill="#a3a3a3"
+     id="path44018" />
+  <path
+     d="m 13.010006,14.639551 2.3,-1.3 a 0.16,0.16 0 0 0 0.07,-0.09 l 1.62,1 h -0.05 l -1.15,0.65 -2,1.11 a 0.15,0.15 0 0 1 -0.22,-0.06 l -0.66,-1.12 a 0.14,0.14 0 0 1 0.09,-0.19 z"
+     fill="#a3a3a3"
+     id="path44020" />
+  <path
+     d="m 7.4400064,2.3995512 v 0 a 0.49,0.49 0 0 0 -0.64,-0.3 6.56,6.56 0 0 0 -4.3,6.19 6.13,6.13 0 0 0 2,4.3499998 l -0.34,0.46 a 0.21,0.21 0 0 0 0.16,0.34 l 1.88,0.13 a 0.22,0.22 0 0 0 0.23,-0.31 l -0.79,-1.64 a 0.23,0.23 0 0 0 -0.39,0 l -0.19,0.26 a 5.23,5.23 0 0 1 -1.56,-3.6299998 5.58,5.58 0 0 1 3.65,-5.28 0.47,0.47 0 0 0 0.29,-0.57 z"
+     fill="#76bc2d"
+     id="path44024" />
+  <metadata
+     id="metadata44109">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-manage-308</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

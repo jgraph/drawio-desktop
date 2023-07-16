@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="fcdf2200-0558-41f8-8840-46e299a8553d"
+   width="12.76"
+   height="17.000074"
+   viewBox="0 0 12.76 17.000074"
+   version="1.1"
+   sodipodi:docname="StorSimple_Data_Managers.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview75991"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="6.37"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="fcdf2200-0558-41f8-8840-46e299a8553d" />
+  <defs
+     id="defs75974">
+    <linearGradient
+       id="b53f55b6-5b8c-4246-8553-f63a4c06f010"
+       x1="2.55"
+       y1="10.17"
+       x2="15.3"
+       y2="10.17"
+       gradientTransform="rotate(0.15,11.509153,38.182211)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop75959" />
+      <stop
+         offset="0.07"
+         stop-color="#0060a9"
+         id="stop75961" />
+      <stop
+         offset="0.36"
+         stop-color="#0071c8"
+         id="stop75963" />
+      <stop
+         offset="0.52"
+         stop-color="#0078d4"
+         id="stop75965" />
+      <stop
+         offset="0.64"
+         stop-color="#0074cd"
+         id="stop75967" />
+      <stop
+         offset="0.82"
+         stop-color="#006abb"
+         id="stop75969" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop75971" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title75976">Icon-storage-92</title>
+  <path
+     d="m 6.37,4.6400751 c -3.52,0 -6.37,-1 -6.37,-2.33 V 14.660075 c 0,1.27 2.8,2.31 6.28,2.34 h 0.09 c 3.52,0 6.38,-1 6.38,-2.31 V 2.3400751 c 0.01,1.28 -2.85,2.31 -6.38,2.3 z"
+     id="path75978"
+     inkscape:connector-curvature="0"
+     style="fill:url(#b53f55b6-5b8c-4246-8553-f63a4c06f010)" />
+  <path
+     d="m 12.76,2.3400751 c 0,1.28 -2.86,2.31 -6.38,2.3 -3.52,-0.01 -6.37,-1 -6.37,-2.33 C 0.01,0.98007508 2.87,-0.00992492 6.37,7.5082705e-5 9.87,0.01007508 12.74,1.0600751 12.74,2.3400751"
+     id="path75980"
+     inkscape:connector-curvature="0"
+     style="fill:#f2f2f2" />
+  <path
+     d="m 11.27,2.1500751 c 0,0.81 -2.19,1.47 -4.89,1.46 -2.7,-0.01 -4.88,-0.67 -4.88,-1.49 0,-0.82 2.19,-1.47000002 4.87,-1.46000002 2.68,0.01 4.89,0.67000002 4.88,1.49000002"
+     id="path75982"
+     inkscape:connector-curvature="0"
+     style="fill:#50e6ff" />
+  <path
+     d="m 6.37,2.5000751 a 11.86,11.86 0 0 0 -3.88,0.56 11.39,11.39 0 0 0 3.88,0.55 11.44,11.44 0 0 0 3.88,-0.57 12.08,12.08 0 0 0 -3.88,-0.54 z"
+     id="path75984"
+     inkscape:connector-curvature="0"
+     style="fill:#198ab3" />
+  <path
+     d="m 9.84,9.6800751 -0.82,-0.26 c -0.05,0 -0.08,0 -0.1,-0.09 l -0.17,-0.42 a 0.38,0.38 0 0 1 0,-0.15 c 0.12,-0.26 0.24,-0.52 0.38,-0.77 a 0.11,0.11 0 0 0 0,-0.16 v 0 c -0.14,-0.14 -0.28,-0.26 -0.41,-0.41 a 0.13,0.13 0 0 0 -0.22,0 v 0 l -0.7,0.35 c -0.05,0 -0.08,0 -0.13,0 l -0.41,-0.17 a 0.14,0.14 0 0 1 -0.16,-0.1 c -0.1,-0.27 -0.2,-0.54 -0.28,-0.81 a 0.11,0.11 0 0 0 -0.1,-0.09 H 6.05 c -0.07,0 -0.08,0 -0.12,0.08 -0.08,0.28 -0.17,0.55 -0.27,0.82 0,0 0,0.09 -0.09,0.1 l -0.42,0.17 a 0.22,0.22 0 0 1 -0.16,0 l -0.8,-0.39 a 0.11,0.11 0 0 0 -0.12,0 c -0.15,0.16 -0.3,0.33 -0.47,0.48 a 0.08,0.08 0 0 0 0,0.12 v 0 c 0.13,0.25 0.25,0.51 0.39,0.76 a 0.18,0.18 0 0 1 0,0.16 l -0.18,0.39 a 0.14,0.14 0 0 1 -0.12,0.12 c -0.27,0.1 -0.54,0.2 -0.81,0.28 -0.07,0 -0.09,0.05 -0.09,0.11 v 0.6999999 c 0,0.07 0,0.1 0.08,0.12 0.28,0.08 0.55,0.19 0.82,0.27 a 0.13,0.13 0 0 1 0.1,0.11 c 0,0.13 0.12,0.27 0.17,0.41 a 0.19,0.19 0 0 1 0,0.15 c -0.14,0.27 -0.26,0.54 -0.39,0.81 a 0.09,0.09 0 0 0 0,0.11 l 0.5,0.49 c 0,0 0,0.05 0.08,0 l 0.48,-0.25 0.35,-0.22 c 0,0 0.09,0 0.14,0 l 0.42,0.17 c 0.05,0 0.07,0.05 0.09,0.1 0.1,0.27 0.2,0.56 0.28,0.83 a 0.12,0.12 0 0 0 0.11,0.09 h 0.66 c 0.07,0 0.09,0 0.12,-0.08 0.09,-0.27 0.19,-0.55 0.27,-0.82 a 0.15,0.15 0 0 1 0.09,-0.1 l 0.43,-0.17 a 0.15,0.15 0 0 1 0.13,0 l 0.8,0.39 a 0.1,0.1 0 0 0 0.12,0 c 0.15,-0.16 0.31,-0.33 0.48,-0.48 0.17,-0.15 0.05,-0.07 0,-0.14 a 8.1,8.1 0 0 1 -0.39,-0.78 0.11,0.11 0 0 1 0,-0.15 c 0.06,-0.14 0.12,-0.27 0.17,-0.41 a 0.13,0.13 0 0 1 0.1,-0.1 c 0.27,-0.1 0.55,-0.21 0.82,-0.29 0.07,0 0.08,-0.05 0.08,-0.12 0,-0.24 0,-0.44 0,-0.6499999 0,-0.21 0.01,-0.08 -0.06,-0.11 z m -2.36,1.5199999 -0.08,0.07 a 1.58,1.58 0 0 1 -1.87,0.12 l -0.1,-0.07 a 1.61,1.61 0 0 1 -0.63,-1 1.53,1.53 0 0 1 0.46,-1.4099999 c 0.05,-0.05 0.05,-0.07 0,-0.12 l -0.13,-0.15 h 0.78 c 0,0 0.05,0 0.05,0 v 0 0.77 l -0.22,-0.21 c 0,0 0,-0.05 -0.1,0 a 1.12,1.12 0 0 0 -0.11,1.5699999 0.8,0.8 0 0 0 0.17,0.15 l 0.12,0.06 a 1,1 0 0 0 0.56,0.17 1,1 0 0 0 0.94,-0.55 1.09,1.09 0 0 0 -0.19,-1.2999999 c 0,0 -0.1,-0.07 -0.11,-0.14 -0.01,-0.07 0,0 0,-0.07 a 1.62,1.62 0 0 0 0.18,-0.19 c 0.14,-0.11 0.14,-0.11 0.24,0 a 1.63,1.63 0 0 1 0.04,2.2999999 z"
+     id="path75986"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata75988">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Storage</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-storage-92</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

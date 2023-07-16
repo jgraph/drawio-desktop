@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.999346"
+   height="17.281"
+   viewBox="0 0 17.999346 17.281"
+   version="1.1"
+   id="svg57703"
+   sodipodi:docname="Azure_Load_Testing.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview57705"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="8.6368222"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg57703" />
+  <defs
+     id="defs57682">
+    <linearGradient
+       id="b13821aa-6567-41d3-b92d-ba8b13fed6c1"
+       x1="5.3569999"
+       y1="14.378"
+       x2="5.3569999"
+       y2="0.35800001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-6.5388353e-4,-0.358)">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop57670" />
+      <stop
+         offset="0.914"
+         stop-color="#0078d4"
+         id="stop57672" />
+    </linearGradient>
+    <linearGradient
+       id="b2601e92-ef0b-42b4-aa08-7dc7e21c5631"
+       x1="13.151"
+       y1="9.4200001"
+       x2="13.151"
+       y2="18.4"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-6.5388353e-4,-0.358)">
+      <stop
+         offset="0.346"
+         stop-color="#0078d4"
+         id="stop57675" />
+      <stop
+         offset="0.605"
+         stop-color="#006ec3"
+         id="stop57677" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop57679" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 10.713346,7.76 A 5.209,5.209 0 0 0 9.5333461,8.61 l -0.86,-1.26 a 0.8,0.8 0 0 1 -0.15,-0.47 V 4.8 a 0.38,0.38 0 0 0 -0.38,-0.38 h -1.89 a 0.38,0.38 0 0 0 -0.38,0.38 v 1.95 a 1.2,1.2 0 0 1 -0.22,0.69 l -3.32,4.84 a 0.332,0.332 0 0 0 -0.05,0.16 0.29,0.29 0 0 0 0.29,0.29 h 5.32 a 4.984,4.984 0 0 0 0.23,1.29 H 0.53334612 c -0.43,0 -0.68,-0.68 -0.44,-1.03 L 4.6833461,6.29 a 0.529,0.529 0 0 0 0.09,-0.3 V 1.55 a 0.258,0.258 0 0 0 -0.26,-0.26 h -0.24 a 0.531,0.531 0 0 1 -0.53,-0.52 V 0.53 a 0.534,0.534 0 0 1 0.53,-0.53 h 5.8499999 a 0.534,0.534 0 0 1 0.53,0.53 v 0.24 a 0.525,0.525 0 0 1 -0.52,0.53 H 9.8833461 a 0.267,0.267 0 0 0 -0.27,0.26 V 6 a 0.529,0.529 0 0 0 0.09,0.3 z"
+     fill="url(#b13821aa-6567-41d3-b92d-ba8b13fed6c1)"
+     id="path57684"
+     style="fill:url(#b13821aa-6567-41d3-b92d-ba8b13fed6c1)" />
+  <circle
+     cx="13.150346"
+     cy="12.432"
+     r="4.849"
+     fill="url(#b2601e92-ef0b-42b4-aa08-7dc7e21c5631)"
+     id="circle57686"
+     style="fill:url(#b2601e92-ef0b-42b4-aa08-7dc7e21c5631)" />
+  <ellipse
+     cx="13.150346"
+     cy="12.432"
+     rx="3.9630001"
+     ry="3.947"
+     fill="#ffffff"
+     id="ellipse57688" />
+  <path
+     d="m 15.711346,10.209 a 3.728,3.728 0 0 1 0.8,1.893 0.088,0.088 0 0 1 -0.088,0.094 h -1.324 a 0.087,0.087 0 0 1 -0.085,-0.074 1.928,1.928 0 0 0 -0.369,-0.842 1.393,1.393 0 0 0 -0.348,-0.31 1.821,1.821 0 0 0 -0.841,-0.365 0.088,0.088 0 0 1 -0.075,-0.086 V 9.173 a 0.088,0.088 0 0 1 0.094,-0.087 3.294,3.294 0 0 1 2.236,1.123 z"
+     fill="#f78d1e"
+     id="path57690" />
+  <path
+     d="m 15.981346,11.324 a 0.251,0.251 0 0 0 -0.319,-0.14 l -2.31,0.93 0.18,0.454 2.309,-0.913 a 0.247,0.247 0 0 0 0.146,-0.317 z"
+     fill="#005ba1"
+     id="path57692" />
+  <circle
+     cx="13.100346"
+     cy="12.445001"
+     r="0.67299998"
+     fill="#5ea0ef"
+     id="circle57694" />
+  <path
+     d="m 10.099346,13.599 1.284,-0.39 a 0.087,0.087 0 0 1 0.1,0.045 1.906,1.906 0 0 0 0.717,0.762 0.086,0.086 0 0 1 0.034,0.116 l -0.635,1.183 a 0.087,0.087 0 0 1 -0.119,0.035 3.337,3.337 0 0 1 -1.442,-1.635 0.086,0.086 0 0 1 0.061,-0.116 z m 0.179,-2.966 a 3.715,3.715 0 0 0 -0.4919999,1.994 0.086,0.086 0 0 0 0.1,0.079 L 11.196346,12.5 a 0.088,0.088 0 0 0 0.073,-0.086 1.923,1.923 0 0 1 0.234,-0.889 1.411,1.411 0 0 1 0.295,-0.361 1.825,1.825 0 0 1 0.774,-0.491 0.09,0.09 0 0 0 0.061,-0.1 l -0.21,-1.329 a 0.085,0.085 0 0 0 -0.106,-0.071 3.286,3.286 0 0 0 -2.042,1.46 z"
+     fill="#b4ec36"
+     id="path57696" />
+  <path
+     d="m 7.8833461,12.43 c 0,0.1 0,0.2 0.01,0.3 h -5.32 a 0.29,0.29 0 0 1 -0.29,-0.29 0.332,0.332 0 0 1 0.05,-0.16 l 3.32,-4.838 a 1.2,1.2 0 0 0 0.22,-0.69 V 4.8 a 0.38,0.38 0 0 1 0.38,-0.38 h 1.89 a 0.38,0.38 0 0 1 0.38,0.38 v 2.08 a 0.8,0.8 0 0 0 0.15,0.47 l 0.86,1.26 a 5.231,5.231 0 0 0 -1.65,3.82 z"
+     fill="#ffffff"
+     id="path57698" />
+</svg>

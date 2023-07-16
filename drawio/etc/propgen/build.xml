@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project basedir="." default="run">
+
+	<target name="compile">
+		<mkdir dir="classes"/>
+		<javac includeantruntime="false" srcdir="." destdir="classes"/>
+	</target>
+
+	<target name="run" depends="compile">
+		<java fork="true" classname="com.mxgraph.properties.PropGen">
+            <classpath>
+                <path location="classes"/>
+            </classpath>
+        </java>
+	</target>
+
+</project>

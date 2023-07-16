@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18"
+   height="14.700003"
+   viewBox="0 0 18 14.700003"
+   version="1.1"
+   id="svg25058"
+   sodipodi:docname="Folder_Blank.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview25060"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="7.3500012"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg25058" />
+  <defs
+     id="defs25043">
+    <linearGradient
+       id="ba550277-e5d9-459d-bfde-60aa3d6d8bb4"
+       x1="9.2519999"
+       y1="0.48500001"
+       x2="8.842"
+       y2="16.966"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,1.6499988)">
+      <stop
+         offset="0"
+         stop-color="#ffd400"
+         id="stop25034" />
+      <stop
+         offset="0.415"
+         stop-color="#ffd000"
+         id="stop25036" />
+      <stop
+         offset="0.845"
+         stop-color="#ffc301"
+         id="stop25038" />
+      <stop
+         offset="1"
+         stop-color="#ffbd02"
+         id="stop25040" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title25045">MsPortalFx.base.images-24</title>
+  <g
+     id="a2d6bd0e-ea40-44ec-b813-9a41f466150e"
+     transform="translate(0,-1.6499988)">
+    <g
+       id="g25053">
+      <path
+         d="M 17.579,3.283 H 9.727 A 0.419,0.419 0 0 1 9.494,3.213 L 7.251,1.721 A 0.42,0.42 0 0 0 7.018,1.65 H 0.421 A 0.42,0.42 0 0 0 0,2.07 v 13.86 a 0.42,0.42 0 0 0 0.421,0.42 H 17.579 A 0.42,0.42 0 0 0 18,15.93 V 3.7 A 0.42,0.42 0 0 0 17.579,3.283 Z"
+         id="path25047"
+         inkscape:connector-curvature="0"
+         style="fill:#dfa500" />
+      <rect
+         x="1.636"
+         y="2.4549999"
+         width="4.0910001"
+         height="0.81800002"
+         rx="0.17200001"
+         id="rect25049"
+         style="fill:#ffffff" />
+      <path
+         d="M 17.579,3.263 H 8.956 a 0.421,0.421 0 0 0 -0.3,0.123 L 7.272,4.773 a 0.42,0.42 0 0 1 -0.3,0.123 H 0.421 A 0.42,0.42 0 0 0 0,5.316 V 15.91 a 0.42,0.42 0 0 0 0.421,0.419 H 17.579 A 0.42,0.42 0 0 0 18,15.91 V 3.683 a 0.42,0.42 0 0 0 -0.421,-0.42 z"
+         id="path25051"
+         inkscape:connector-curvature="0"
+         style="fill:url(#ba550277-e5d9-459d-bfde-60aa3d6d8bb4)" />
+    </g>
+  </g>
+  <metadata
+     id="metadata25056">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.FolderBlank()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-24</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

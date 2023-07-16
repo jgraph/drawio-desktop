@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="fb45399d-101d-4307-af8b-b95e6d550e3d"
+   width="17.457331"
+   height="17.879999"
+   viewBox="0 0 17.457331 17.879999"
+   version="1.1"
+   sodipodi:docname="Service_Providers.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview62489"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.8071743"
+     inkscape:cy="9.05"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="fb45399d-101d-4307-af8b-b95e6d550e3d" />
+  <defs
+     id="defs62474">
+    <linearGradient
+       id="efc8edab-197e-437c-8de3-c7ad62d8cf10"
+       x1="6.4899998"
+       y1="6.29"
+       x2="6.4899998"
+       y2="18.379999"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.1"
+         stop-color="#54aef0"
+         id="stop62457" />
+      <stop
+         offset="1"
+         stop-color="#1988d9"
+         id="stop62459" />
+    </linearGradient>
+    <linearGradient
+       id="f6def0c6-d993-4d63-90a2-b68ba69df74a"
+       x1="7.1300001"
+       y1="-0.19"
+       x2="8.0100002"
+       y2="10.79"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.1"
+         stop-color="#54aef0"
+         id="stop62462" />
+      <stop
+         offset="1"
+         stop-color="#1988d9"
+         id="stop62464" />
+    </linearGradient>
+    <linearGradient
+       id="ada114d9-8e8c-4a06-9507-f18462256263"
+       x1="13.76"
+       y1="18.049999"
+       x2="13.76"
+       y2="10.25"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop62467" />
+      <stop
+         offset="0.6"
+         stop-color="#81ce31"
+         id="stop62469" />
+      <stop
+         offset="0.82"
+         stop-color="#86d633"
+         id="stop62471" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title62476">Icon-manage-325</title>
+  <path
+     d="m 9.1571743,10.14 a 0.51,0.51 0 0 1 0.51,-0.5100001 h 2.9299997 a 6.53,6.53 0 0 0 -5.3099997,-2.43 c -4.48,0 -6.83000004,2.8100001 -7.28000004,7.4000001 a 1.29,1.29 0 0 0 1.16000004,1.42 h 8 z"
+     id="path62478"
+     inkscape:connector-curvature="0"
+     style="fill:url(#efc8edab-197e-437c-8de3-c7ad62d8cf10)" />
+  <path
+     d="m 7.2871743,8.1699999 a 4.09,4.09 0 0 1 -2.21,-0.65 l 2.19,5.7100001 2.17,-5.6800001 a 4,4 0 0 1 -2.15,0.62 z"
+     id="path62480"
+     inkscape:connector-curvature="0"
+     style="opacity:0.8;fill:#ffffff" />
+  <circle
+     cx="7.2871742"
+     cy="4.0799999"
+     r="4.0799999"
+     id="circle62482"
+     style="fill:url(#f6def0c6-d993-4d63-90a2-b68ba69df74a)" />
+  <path
+     d="m 12.397174,15.54 h 2.34 v 2.34 h -2.34 z M 9.6671743,12.42 h 2.3399997 v -2.34 h -2 a 0.33,0.33 0 0 0 -0.3299997,0.33 z m 0.33,5.46 H 11.997174 V 15.54 H 9.6671743 v 2 a 0.33,0.33 0 0 0 0.33,0.34 z m -0.33,-2.73 H 12.007174 V 12.83 H 9.6671743 Z m 5.4499997,2.73 h 2 a 0.32,0.32 0 0 0 0.32,-0.33 v -2 h -2.32 z m -2.72,-2.73 h 2.34 v -2.32 h -2.34 z m 2.72,0 h 2.34 v -2.32 h -2.34 z m 0,-5.07 v 2.34 h 2.34 v -2 a 0.32,0.32 0 0 0 -0.32,-0.33 z m -2.72,2.34 h 2.34 v -2.34 h -2.34 z"
+     id="path62484"
+     inkscape:connector-curvature="0"
+     style="fill:url(#ada114d9-8e8c-4a06-9507-f18462256263)" />
+  <metadata
+     id="metadata62486">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Management + Governance</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-325</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

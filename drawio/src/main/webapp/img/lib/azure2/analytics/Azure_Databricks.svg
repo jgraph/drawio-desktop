@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="b1e71479-2138-44e0-adf0-02fe9fed5c1e" sodipodi:docname="10787-icon-service-Azure-Databricks.svg"
+    version="1.1" width="15.69" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 15.69 17" height="17"
+    xmlns="http://www.w3.org/2000/svg">
+    <path style="fill:#ff3621" d="m 0,4.43 v 0.512 l 7.845,4.426 7.006,-3.957 v 1.6 L 7.845,10.991 0.395,6.758 0,6.978 v 
+        3.062 l 7.845,4.415 7.006,-3.942 v 1.586 L 7.845,16.081 0.395,11.847 0,12.067 v 0.519 L 7.845,17 15.69,12.586 V 
+        9.521 L 15.29,9.303 7.845,13.536 0.837,9.554 V 7.976 L 7.845,11.914 15.69,7.5 V 4.478 L 15.29,4.259 7.845,8.493 
+        1.197,4.715 7.845,0.96 13.321,4.054 13.8,3.785 V 3.363 L 7.845,0 Z"/>
+</svg>

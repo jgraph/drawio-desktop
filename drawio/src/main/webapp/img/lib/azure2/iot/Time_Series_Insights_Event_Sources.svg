@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a978b06d-4c0e-4630-bb2f-1c95b82750dc"
+   width="17.040115"
+   height="17.200001"
+   viewBox="0 0 17.040115 17.200001"
+   version="1.1"
+   sodipodi:docname="Time_Series_Insights_Event_Sources.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview57270"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.52"
+     inkscape:cy="8.6"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a978b06d-4c0e-4630-bb2f-1c95b82750dc" />
+  <defs
+     id="defs57253">
+    <linearGradient
+       id="be18c16e-547a-4c25-9f22-b3a89153c17b"
+       x1="9.0299997"
+       y1="13.38"
+       x2="9.0299997"
+       y2="4.6300001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop57244" />
+      <stop
+         offset="0.4"
+         stop-color="#25aed3"
+         id="stop57246" />
+      <stop
+         offset="0.78"
+         stop-color="#2fcaec"
+         id="stop57248" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop57250" />
+    </linearGradient>
+  </defs>
+  <rect
+     x="4.1700001"
+     y="4.23"
+     width="8.75"
+     height="8.75"
+     rx="0.41"
+     id="rect57255"
+     style="fill:url(#be18c16e-547a-4c25-9f22-b3a89153c17b)" />
+  <path
+     d="M 6.83,12.13 Z"
+     id="path57257"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="m 11.3,11.78 4.38,-3.07 a 0.13,0.13 0 0 0 0,-0.22 L 11.3,5.43 A 0.13,0.13 0 0 0 11.09,5.54 V 7.3 H 4.17 v 2.6 h 6.92 v 1.77 a 0.14,0.14 0 0 0 0.21,0.11 z"
+     id="path57259"
+     inkscape:connector-curvature="0"
+     style="fill:#c3f1ff" />
+  <path
+     d="m 16.52,17.2 h -16 A 0.52,0.52 0 0 1 0,16.68 V 0.52 A 0.52,0.52 0 0 1 0.52,0 h 16 a 0.52,0.52 0 0 1 0.52,0.52 V 5.6 a 0.26,0.26 0 0 1 -0.41,0.22 l -1,-0.7 A 0.27,0.27 0 0 1 15.52,4.9 V 1.6 H 1.58 v 14 h 13.88 v -3.2 a 0.26,0.26 0 0 1 0.11,-0.21 l 1,-0.73 a 0.26,0.26 0 0 1 0.41,0.22 v 5 a 0.52,0.52 0 0 1 -0.46,0.52 z"
+     id="path57261"
+     inkscape:connector-curvature="0"
+     style="fill:#949494" />
+  <path
+     d="m 15.46,1.6 v 3.25 a 0.27,0.27 0 0 0 0.11,0.22 l 1,0.7 A 0.26,0.26 0 0 0 17.02,5.6 v -4 z"
+     id="path57263"
+     inkscape:connector-curvature="0"
+     style="fill:#767676" />
+  <path
+     d="m 15.46,15.6 v -3.25 a 0.25,0.25 0 0 1 0.11,-0.21 l 1,-0.71 a 0.27,0.27 0 0 1 0.41,0.22 v 4 z"
+     id="path57265"
+     inkscape:connector-curvature="0"
+     style="fill:#767676" />
+  <metadata
+     id="metadata57267">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

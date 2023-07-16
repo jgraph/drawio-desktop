@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.48"
+   height="16.93091"
+   viewBox="0 0 16.48 16.93091"
+   version="1.1"
+   id="svg1850"
+   sodipodi:docname="Azure_Stack.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview1852"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.24"
+     inkscape:cy="8.4209095"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1850" />
+  <defs
+     id="defs1834">
+    <linearGradient
+       id="f88be120-e228-4e82-b7ea-9cc753ab1741"
+       x1="12.3"
+       y1="0.49000001"
+       x2="12.3"
+       y2="17.33"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.76,0.48999999)">
+      <stop
+         offset="0"
+         stop-color="#5ea0ef"
+         id="stop1808" />
+      <stop
+         offset="0.18"
+         stop-color="#559cec"
+         id="stop1810" />
+      <stop
+         offset="0.47"
+         stop-color="#3c91e5"
+         id="stop1812" />
+      <stop
+         offset="0.84"
+         stop-color="#1380da"
+         id="stop1814" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop1816" />
+    </linearGradient>
+    <linearGradient
+       id="ba0a489b-e6fc-478b-a844-ae016f2be8bf"
+       x1="9.4799995"
+       y1="17.51"
+       x2="9.4799995"
+       y2="9.3500004"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.76,0.48999999)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop1819" />
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop1821" />
+      <stop
+         offset="0.14"
+         stop-color="#22a5cb"
+         id="stop1823" />
+      <stop
+         offset="0.3"
+         stop-color="#29bade"
+         id="stop1825" />
+      <stop
+         offset="0.47"
+         stop-color="#2ec9eb"
+         id="stop1827" />
+      <stop
+         offset="0.68"
+         stop-color="#31d1f3"
+         id="stop1829" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop1831" />
+    </linearGradient>
+  </defs>
+  <g
+     id="b1186d34-5ca3-4e43-992d-40ecef5e891b"
+     transform="translate(-0.76,-0.48999999)">
+    <g
+       id="g1845">
+      <path
+         d="M 16.68,0.49 H 7.92 A 0.57,0.57 0 0 0 7.35,1.05 v 12.48 a 10.47,10.47 0 0 1 1.42,-1 h 1.66 l 0.92,1.22 v 1.85 l -1.16,0.84 -1.61,-0.2 -1.23,-1.16 v 1.69 a 0.57,0.57 0 0 0 0.57,0.56 h 8.76 a 0.56,0.56 0 0 0 0.56,-0.56 V 1.05 A 0.56,0.56 0 0 0 16.68,0.49 Z"
+         id="path1836"
+         inkscape:connector-curvature="0"
+         style="fill:url(#f88be120-e228-4e82-b7ea-9cc753ab1741)" />
+      <path
+         id="af47f827-8b1b-4acd-8974-8eafe35490c9"
+         d="m 8.66,2.24 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 4.46 A 0.14,0.14 0 0 1 10.27,4.6 H 8.66 A 0.14,0.14 0 0 1 8.52,4.46 V 2.38 A 0.14,0.14 0 0 1 8.66,2.24 Z m 2.83,0 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 4.46 A 0.14,0.14 0 0 1 13.1,4.6 H 11.49 A 0.14,0.14 0 0 1 11.35,4.46 V 2.38 a 0.14,0.14 0 0 1 0.14,-0.14 z m 2.84,0 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 4.46 A 0.14,0.14 0 0 1 15.94,4.6 H 14.33 A 0.14,0.14 0 0 1 14.19,4.46 V 2.38 A 0.14,0.14 0 0 1 14.33,2.24 Z M 8.66,6 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 v 2.1 A 0.14,0.14 0 0 1 10.27,8.38 H 8.66 A 0.14,0.14 0 0 1 8.52,8.24 V 6.16 A 0.14,0.14 0 0 1 8.66,6 Z m 2.83,0 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 v 2.1 A 0.14,0.14 0 0 1 13.1,8.38 H 11.49 A 0.14,0.14 0 0 1 11.35,8.24 V 6.16 A 0.14,0.14 0 0 1 11.49,6 Z m 2.84,0 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 v 2.1 A 0.14,0.14 0 0 1 15.94,8.38 H 14.33 A 0.14,0.14 0 0 1 14.19,8.24 V 6.16 A 0.14,0.14 0 0 1 14.33,6 Z M 8.66,9.8 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 12 a 0.14,0.14 0 0 1 -0.14,0.14 H 8.66 A 0.14,0.14 0 0 1 8.52,12 V 9.94 A 0.14,0.14 0 0 1 8.66,9.8 Z m 2.83,0 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 12 A 0.14,0.14 0 0 1 13.1,12.14 H 11.49 A 0.14,0.14 0 0 1 11.35,12 V 9.94 A 0.14,0.14 0 0 1 11.49,9.8 Z m 0,3.78 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 16.8 A 0.14,0.14 0 0 1 13.1,16.94 H 11.49 A 0.14,0.14 0 0 1 11.35,16.8 v -3.08 a 0.14,0.14 0 0 1 0.14,-0.14 z M 14.33,9.8 h 1.61 a 0.14,0.14 0 0 1 0.14,0.14 V 12 a 0.14,0.14 0 0 1 -0.14,0.14 H 14.33 A 0.14,0.14 0 0 1 14.19,12 V 9.94 A 0.14,0.14 0 0 1 14.33,9.8 Z"
+         inkscape:connector-curvature="0"
+         style="fill:#f2f2f2" />
+      <path
+         d="m 9.5,13 a 1.3,1.3 0 0 0 -1.24,1 h -4.5 a 2.82,2.82 0 0 0 -0.08,0.65 v 0.06 H 8.26 A 1.29,1.29 0 1 0 9.5,13 Z"
+         id="path1839"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+      <path
+         d="m 13,12.46 a 3.26,3.26 0 0 0 -3.4,-3.11 3.34,3.34 0 0 0 -3.2,2.18 3.18,3.18 0 0 0 -2.54,2 H 8 A 1.72,1.72 0 1 1 9.5,16 1.73,1.73 0 0 1 7.97,15 H 3.75 a 3.2,3.2 0 0 0 3.18,2.42 h 5.54 0.14 A 2.63,2.63 0 0 0 15.21,15 2.6,2.6 0 0 0 13,12.46 Z"
+         id="path1841"
+         inkscape:connector-curvature="0"
+         style="fill:url(#ba0a489b-e6fc-478b-a844-ae016f2be8bf)" />
+      <path
+         d="M 9.5,13 A 1.3,1.3 0 0 0 8.26,14 H 3.76 A 2.22,2.22 0 0 1 3.29,13.94 2.32,2.32 0 0 1 1.47,11.75 2.33,2.33 0 0 1 3.54,9.46 H 3.76 L 3.83,9.26 A 2.56,2.56 0 0 1 6.29,7.55 2.64,2.64 0 0 1 8.57,8.82 3.08,3.08 0 0 1 9.32,8.73 3.32,3.32 0 0 0 6.32,6.84 3.28,3.28 0 0 0 3.23,8.79 3,3 0 0 0 0.76,11.71 3,3 0 0 0 3,14.55 v 0 a 2,2 0 0 0 0.73,0.12 H 8.26 A 1.29,1.29 0 1 0 9.5,13 Z"
+         id="path1843"
+         inkscape:connector-curvature="0"
+         style="fill:#50e6ff" />
+    </g>
+  </g>
+  <metadata
+     id="metadata1848">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Azure Stack</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

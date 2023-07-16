@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="b22678f2-604d-47bc-b419-116b961e0d07" sodipodi:docname="10077-icon-service-Local-Network-Gateways.svg"
+    version="1.1" width="16.994371" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 16.994371 16.994371"
+    height="16.994371" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs3806">
+        <linearGradient gradientTransform="rotate(45,0.00354733,-0.00354732)" x1="9" y1="17.790001" x2="9"
+            gradientUnits="userSpaceOnUse" y2="1.8200001" id="b1a497bc-2886-4e22-b230-918a36444c3e">
+            <stop offset="0" stop-color="#258277" id="stop3797"/>
+            <stop offset="0.42" stop-color="#49a498" id="stop3799"/>
+            <stop offset="0.78" stop-color="#60baad" id="stop3801"/>
+            <stop offset="1" stop-color="#68c2b5" id="stop3803"/>
+        </linearGradient>
+    </defs>
+    <rect x="-6.1750002" y="5.841835" transform="rotate(-45)" width="12.35" style=
+        "fill:url(#b1a497bc-2886-4e22-b230-918a36444c3e)" rx="0.56999999" height="12.35"/>
+    <path style="fill:#ffffff" d="m 6.5563346,4.1771858 1.88,-1.88 a 0.1,0.1 0 0 1 0.14,0 l 1.9300004,1.88 a 0.09,0.09 0 
+        0 1 -0.07,0.16 H 9.2863346 a 0.1,0.1 0 0 0 -0.1,0.1 v 2.43 a 0.09,0.09 0 0 1 -0.09,0.09 h -1.17 a 0.09,0.09 0 0 
+        1 -0.1,-0.09 v -2.43 a 0.1,0.1 0 0 0 -0.09,-0.1 h -1.11 a 0.1,0.1 0 0 1 -0.07,-0.16 z m 3.9500004,8.6400002 
+        -1.9300004,1.88 a 0.1,0.1 0 0 1 -0.14,0 l -1.88,-1.88 a 0.1,0.1 0 0 1 0.07,-0.16 h 1.11 a 0.1,0.1 0 0 0 
+        0.09,-0.1 v -2.43 a 0.09,0.09 0 0 1 0.1,-0.09 h 1.17 a 0.09,0.09 0 0 1 0.09,0.09 v 2.43 a 0.1,0.1 0 0 0 0.1,0.1 
+        h 1.1000004 a 0.1,0.1 0 0 1 0.12,0.16 z m -5.6600004,-2.48 V 9.2371858 a 0.11,0.11 0 0 0 -0.1,-0.1 h -2.43 a 
+        0.1,0.1 0 0 1 -0.1,-0.09 v -1.17 a 0.11,0.11 0 0 1 0.1,-0.1 h 2.43 a 0.1,0.1 0 0 0 0.1,-0.09 v -1.11 a 0.09,0.09 
+        0 0 1 0.16,-0.08 l 1.88,1.9 a 0.09,0.09 0 0 1 0,0.13 l -1.88,1.8800002 a 0.09,0.09 0 0 1 -0.16,-0.07 z M 
+        12.166335,6.5771858 v 1.11 a 0.1,0.1 0 0 0 0.1,0.09 h 2.43 a 0.11,0.11 0 0 1 0.1,0.1 v 1.17 a 0.1,0.1 0 0 1 
+        -0.1,0.09 h -2.43 a 0.11,0.11 0 0 0 -0.1,0.1 v 1.1000002 a 0.09,0.09 0 0 1 -0.16,0.07 l -1.88,-1.9100002 a 
+        0.09,0.09 0 0 1 0,-0.13 l 1.88,-1.87 a 0.09,0.09 0 0 1 0.16,0.08 z"/>
+</svg>

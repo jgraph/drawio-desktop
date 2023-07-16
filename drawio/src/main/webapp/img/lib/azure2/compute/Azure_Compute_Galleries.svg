@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18.000006"
+   height="18"
+   viewBox="0 0 18.000006 18"
+   version="1.1"
+   id="svg6354"
+   sodipodi:docname="Azure_Compute_Galleries.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6356"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6354" />
+  <defs
+     id="defs6331">
+    <linearGradient
+       id="b9a9ff0b-7dac-405b-a6dd-a489a2813f83"
+       x1="8.8979998"
+       y1="16.344999"
+       x2="8.8979998"
+       y2="1.887"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(5.1948404e-6)">
+      <stop
+         offset="0.001"
+         stop-color="#773adc"
+         id="stop6326" />
+      <stop
+         offset="1"
+         stop-color="#a67af4"
+         id="stop6328" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 7.8550052,2.526 h -0.608 A 0.431,0.431 0 0 1 6.8160052,2.1 V 0.431 A 0.431,0.431 0 0 1 7.2470052,0 h 0.608 a 0.43,0.43 0 0 1 0.43,0.431 V 2.1 a 0.43,0.43 0 0 1 -0.43,0.426 z M 10.979005,2.1 V 0.431 A 0.431,0.431 0 0 0 10.548005,0 H 9.9410052 a 0.431,0.431 0 0 0 -0.431,0.431 V 2.1 a 0.431,0.431 0 0 0 0.431,0.431 h 0.6069998 a 0.431,0.431 0 0 0 0.431,-0.431 z M 8.2850052,17.612 v -1.274 a 0.388,0.388 0 0 0 -0.385,-0.388 h -0.7 a 0.388,0.388 0 0 0 -0.388,0.388 v 1.274 a 0.388,0.388 0 0 0 0.388,0.388 h 0.7 a 0.388,0.388 0 0 0 0.385,-0.388 z m 2.6939998,0 v -1.274 a 0.388,0.388 0 0 0 -0.388,-0.388 H 9.9000052 a 0.388,0.388 0 0 0 -0.388,0.388 v 1.274 a 0.388,0.388 0 0 0 0.388,0.388 h 0.6929998 a 0.388,0.388 0 0 0 0.386,-0.388 z m 4.8,-9.114 h 1.777 a 0.445,0.445 0 0 0 0.444,-0.445 V 7.46 a 0.445,0.445 0 0 0 -0.445,-0.445 h -1.777 a 0.445,0.445 0 0 0 -0.445,0.445 v 0.593 a 0.445,0.445 0 0 0 0.445,0.447 z m 0,2.719 h 1.777 a 0.445,0.445 0 0 0 0.444,-0.445 v -0.594 a 0.444,0.444 0 0 0 -0.445,-0.444 h -1.777 a 0.444,0.444 0 0 0 -0.445,0.444 v 0.594 a 0.445,0.445 0 0 0 0.445,0.445 z M 0.38500519,8.5 H 1.6150052 a 0.385,0.385 0 0 0 0.385,-0.387 V 7.4 a 0.385,0.385 0 0 0 -0.385,-0.385 H 0.38500519 A 0.385,0.385 0 0 0 5.1948404e-6,7.4 V 8.113 A 0.385,0.385 0 0 0 0.38500519,8.5 Z m 0,2.719 H 1.6150052 a 0.385,0.385 0 0 0 0.385,-0.387 v -0.713 a 0.385,0.385 0 0 0 -0.385,-0.385 H 0.38500519 A 0.385,0.385 0 0 0 5.1948404e-6,10.119 v 0.713 A 0.385,0.385 0 0 0 0.38500519,11.217 Z"
+     fill="#773adc"
+     id="path6333" />
+  <rect
+     x="1.7340052"
+     y="1.887"
+     width="14.327"
+     height="14.458"
+     rx="0.88"
+     fill="url(#b9a9ff0b-7dac-405b-a6dd-a489a2813f83)"
+     id="rect6335"
+     style="fill:url(#b9a9ff0b-7dac-405b-a6dd-a489a2813f83)" />
+  <polygon
+     points="12.097,7.198 12.097,10.802 9.004,12.612 9.004,9 "
+     fill="#50e6ff"
+     id="polygon6339" />
+  <polygon
+     points="12.097,7.198 9.004,9.008 5.903,7.198 9.004,5.388 "
+     fill="#c3f1ff"
+     id="polygon6341" />
+  <polygon
+     points="9.004,9.008 9.004,12.612 5.903,10.802 5.903,7.198 "
+     fill="#9cebff"
+     id="polygon6343" />
+  <polygon
+     points="9.004,12.612 5.903,10.802 9.004,9 "
+     fill="#c3f1ff"
+     id="polygon6345" />
+  <polygon
+     points="9.004,12.612 12.097,10.802 9.004,9 "
+     fill="#9cebff"
+     id="polygon6347" />
+</svg>

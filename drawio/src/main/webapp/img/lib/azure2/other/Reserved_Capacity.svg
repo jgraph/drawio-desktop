@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="15.510004"
+   height="18.001535"
+   viewBox="0 0 15.510004 18.001535"
+   version="1.1"
+   id="svg81001"
+   sodipodi:docname="Reserved_Capacity.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs81005" />
+  <sodipodi:namedview
+     id="namedview81003"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.7515763"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg81001" />
+  <polygon
+     points="2.567,9.341 8.998,5.559 15.433,9.341 13.721,10.347 12.005,11.354 8.998,13.119 5.992,11.354 4.279,10.347 "
+     fill="#a33a85"
+     id="polygon80986"
+     transform="translate(-1.2449978,0.00152056)" />
+  <polygon
+     points="5.992,11.354 8.998,13.119 12.005,11.354 13.721,10.347 15.433,9.341 15.433,12.563 8.998,16.341 2.567,12.563 2.567,9.341 4.279,10.347 "
+     fill="#59285f"
+     id="polygon80988"
+     transform="translate(-1.2449978,0.00152056)" />
+  <path
+     d="m 15.510002,4.7955206 v 8.4160004 a 0.565,0.565 0 0 1 -0.281,0.49 l -7.1859998,4.222 a 0.566,0.566 0 0 1 -0.288,0.078 V 9.0235206 l 7.6789998,-4.51 a 0.569,0.569 0 0 1 0.076,0.282 z"
+     fill="#a33a85"
+     opacity="0.6"
+     id="path80992" />
+  <path
+     d="m 15.435002,4.5135206 -7.6799998,4.499 v 0.011 l -7.68000004,-4.511 a 0.551,0.551 0 0 1 0.206,-0.211 L 7.4730022,0.07652056 a 0.569,0.569 0 0 1 0.57,0 L 15.232002,4.3035206 a 0.567,0.567 0 0 1 0.203,0.21 z"
+     fill="#dc92bf"
+     opacity="0.6"
+     id="path80994" />
+  <path
+     d="m 7.7550022,9.0235206 v 8.9780004 a 0.547,0.547 0 0 1 -0.284,-0.077 l -7.19000004,-4.223 A 0.565,0.565 0 0 1 2.1632668e-6,13.211521 V 4.7925206 a 0.564,0.564 0 0 1 0.074999996733,-0.28 z"
+     fill="#ce74b6"
+     opacity="0.6"
+     id="path80996" />
+</svg>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="ea317b31-b31a-44fd-a7c4-260774575363"
+   width="15.04"
+   height="14.67"
+   viewBox="0 0 15.04 14.67"
+   version="1.1"
+   sodipodi:docname="Disks_(Classic).svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5310"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.54"
+     inkscape:cy="7.58"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="ea317b31-b31a-44fd-a7c4-260774575363" />
+  <defs
+     id="defs5287">
+    <linearGradient
+       id="a3aecb5c-11f5-4ece-99f7-9672f3236156"
+       x1="15.35"
+       y1="13.41"
+       x2="15.37"
+       y2="13.41"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop5249" />
+      <stop
+         offset="0.14"
+         stop-color="#1782da"
+         id="stop5251" />
+      <stop
+         offset="0.37"
+         stop-color="#368fe3"
+         id="stop5253" />
+      <stop
+         offset="0.59"
+         stop-color="#4c98ea"
+         id="stop5255" />
+      <stop
+         offset="0.8"
+         stop-color="#599eee"
+         id="stop5257" />
+      <stop
+         offset="0.99"
+         stop-color="#5ea0ef"
+         id="stop5259" />
+    </linearGradient>
+    <linearGradient
+       id="b4dfb3ab-25fe-416c-a6fa-f33fcfbf22dc"
+       x1="5.5100002"
+       y1="802.5"
+       x2="12.94"
+       y2="810.58002"
+       gradientTransform="matrix(1,0,0,1.59,-3.8146973e-8,-1278.76)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop5262" />
+      <stop
+         offset="0.02"
+         stop-color="#0d7ed8"
+         id="stop5264" />
+      <stop
+         offset="0.08"
+         stop-color="#2b8ae0"
+         id="stop5266" />
+      <stop
+         offset="0.15"
+         stop-color="#4194e7"
+         id="stop5268" />
+      <stop
+         offset="0.22"
+         stop-color="#519beb"
+         id="stop5270" />
+      <stop
+         offset="0.29"
+         stop-color="#5b9fee"
+         id="stop5272" />
+      <stop
+         offset="0.4"
+         stop-color="#5ea0ef"
+         id="stop5274" />
+      <stop
+         offset="0.55"
+         stop-color="#5b9fee"
+         id="stop5276" />
+      <stop
+         offset="0.68"
+         stop-color="#509aeb"
+         id="stop5278" />
+      <stop
+         offset="0.8"
+         stop-color="#3f92e6"
+         id="stop5280" />
+      <stop
+         offset="0.91"
+         stop-color="#2688df"
+         id="stop5282" />
+      <stop
+         offset="0.99"
+         stop-color="#127fd9"
+         id="stop5284" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#a3aecb5c-11f5-4ece-99f7-9672f3236156"
+       id="linearGradient5312"
+       gradientUnits="userSpaceOnUse"
+       x1="15.35"
+       y1="13.41"
+       x2="15.37"
+       y2="13.41" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#a3aecb5c-11f5-4ece-99f7-9672f3236156"
+       id="linearGradient5314"
+       gradientUnits="userSpaceOnUse"
+       x1="15.35"
+       y1="13.41"
+       x2="15.37"
+       y2="13.41" />
+  </defs>
+  <title
+     id="title5289">Icon-compute-32</title>
+  <ellipse
+     cx="7.5"
+     cy="9.9099998"
+     rx="7.5"
+     ry="3.0799999"
+     id="ellipse5291"
+     style="fill:#76bc2d" />
+  <ellipse
+     cx="7.6899996"
+     cy="9.8800001"
+     rx="2.49"
+     ry="0.68000001"
+     id="ellipse5293"
+     style="fill:#5e9624" />
+  <path
+     d="M 13.89,11.49 Z"
+     id="path5295"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient5312)" />
+  <ellipse
+     cx="7.5"
+     cy="3.0799999"
+     rx="7.5"
+     ry="3.0799999"
+     id="ellipse5297"
+     style="fill:url(#b4dfb3ab-25fe-416c-a6fa-f33fcfbf22dc)" />
+  <ellipse
+     cx="7.6899996"
+     cy="3.04"
+     rx="2.49"
+     ry="0.68000001"
+     id="ellipse5299"
+     style="fill:#005ba1" />
+  <path
+     d="m 7.54,12.93 c 4.15,0 7.5,-1.38 7.5,-3.0799998 v 0 1.8199998 0 c -0.14,1.65 -3.44,3 -7.5,3 -4.06,0 -7.50000004,-1.38 -7.50000004,-3.08 V 9.8500002 C -3.8146973e-8,11.55 3.36,12.93 7.54,12.93 Z"
+     id="path5301"
+     inkscape:connector-curvature="0"
+     style="fill:#5e9624" />
+  <path
+     d="M 13.89,11.49 Z"
+     id="path5303"
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient5314)" />
+  <path
+     d="m 7.54,6.0900002 c 4.15,0 7.5,-1.38 7.5,-3.08 v 0 1.82 0 c -0.14,1.65 -3.44,3 -7.5,3 -4.06,0 -7.50000004,-1.38 -7.50000004,-3.08 v -1.74 c -0.03999999814697,1.7 3.32000004,3.08 7.50000004,3.08 z"
+     id="path5305"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <metadata
+     id="metadata5307">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-32</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

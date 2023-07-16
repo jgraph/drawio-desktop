@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "To cite draw.io in publications please use:"
+type: software
+license: Apache-2.0
+abstract: "draw.io - JavaScript Diagramming and Whiteboard Application"
+authors:
+- name: "JGraph"
+  website: "http://www.drawio.com"
+title: "draw.io"
+version: 15.5.2
+date-released: 2021-10-14
+repository-code: "https://github.com/jgraph/drawio"
+url: "https://www.drawio.com/"

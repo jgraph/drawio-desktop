@@ -1,0 +1,24 @@
+{
+	"name": "draw.io dependencies",
+	"version": "18.1.3",
+	"description": "draw.io dependencies",
+	"author": "JGraph <support@draw.io>",
+	"license": "Apache-2.0",
+	"bugs": {
+	  "url": "https://github.com/jgraph/drawio/issues"
+	},
+	"homepage": "https://github.com/jgraph/drawio",
+	"dependencies": {
+	  "jsZip": "3.10.1",
+	  "perfect-freehand": "1.0.16",
+	  "jquery": "3.6.0",
+	  "mermaid": "10.0.2",
+	  "pako": "2.1.0",
+	  "crypto-js": "3.1.2",
+	  "dompurify": "3.0.3",
+	  "spin.js": "2.0.0",
+	  "roughjs": "4.4.1",
+	  "jscolor": "^3.8.0"
+	}
+  }
+  

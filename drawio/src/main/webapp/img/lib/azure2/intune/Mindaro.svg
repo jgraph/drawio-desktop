@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="f3fd6249-104f-4be9-975d-cbeefcf4479a"
+   width="17.59"
+   height="17.860001"
+   viewBox="0 0 17.59 17.860001"
+   version="1.1"
+   sodipodi:docname="Mindaro.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview38277"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.6822194"
+     inkscape:cy="8.9319042"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f3fd6249-104f-4be9-975d-cbeefcf4479a" />
+  <defs
+     id="defs38249">
+    <linearGradient
+       id="e56cab92-60db-4789-9ec0-59f44d4da934"
+       x1="13.8"
+       y1="4.27"
+       x2="13.8"
+       y2="9.3400002"
+       gradientTransform="matrix(1,0,0,-1,-0.31,19.93)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop38238" />
+      <stop
+         offset="0.16"
+         stop-color="#1380da"
+         id="stop38240" />
+      <stop
+         offset="0.53"
+         stop-color="#3c91e5"
+         id="stop38242" />
+      <stop
+         offset="0.82"
+         stop-color="#559cec"
+         id="stop38244" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop38246" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title38251">Icon-Artboard 1</title>
+  <polygon
+     points="13.23,2.49 13.23,7.33 9.08,9.76 9.08,4.91 "
+     fill="#949494"
+     id="polygon38253"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="13.23,2.49 9.08,4.92 4.93,2.49 9.08,0.07 "
+     fill="#b3b3b3"
+     id="polygon38255"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="9.08,4.92 9.08,9.76 4.93,7.33 4.93,2.49 "
+     fill="#e6e6e6"
+     id="polygon38257"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="8.61,10.67 8.61,15.49 4.47,17.92 4.47,13.09 "
+     fill="#949494"
+     id="polygon38259"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="8.61,10.67 4.47,13.1 0.31,10.67 4.47,8.24 "
+     fill="#b3b3b3"
+     id="polygon38261"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="4.47,13.1 4.47,17.92 0.31,15.49 0.31,10.67 "
+     fill="#e6e6e6"
+     id="polygon38263"
+     transform="translate(-0.31,-0.07)" />
+  <polygon
+     points="17.9,15.51 17.9,10.66 13.74,8.23 9.59,10.66 9.59,15.51 13.74,17.93 "
+     fill="#50e6ff"
+     id="polygon38265"
+     transform="translate(-0.31,-0.07)" />
+  <path
+     id="fe5a0693-7ac1-41ed-8008-1d80e4daeb81"
+     d="m 16.44,15.67 h -5.86 a 0.57,0.57 0 0 1 -0.56,-0.58 v 0 -3.95 a 0.51,0.51 0 0 1 0.47,-0.55 h 5.91 a 0.6,0.6 0 0 1 0.56,0.59 v 3.9 a 0.52,0.52 0 0 1 -0.43,0.59 z"
+     fill="url(#e56cab92-60db-4789-9ec0-59f44d4da934)"
+     style="fill:url(#e56cab92-60db-4789-9ec0-59f44d4da934)" />
+  <path
+     d="m 12.53,14.71 -1.57,-1.55 a 0.18,0.18 0 0 1 0,-0.24 l 1.6,-1.49 a 0.18,0.18 0 0 1 0.22,0 l 0.14,0.14 a 0.15,0.15 0 0 1 0,0.22 v 0 l -1.23,1.14 a 0.17,0.17 0 0 0 0,0.23 l 1.21,1.24 a 0.14,0.14 0 0 1 0,0.21 v 0 l -0.1,0.1 a 0.16,0.16 0 0 1 -0.22,0 z"
+     fill="#f2f2f2"
+     id="path38268" />
+  <path
+     d="m 14.41,14.71 1.56,-1.55 a 0.16,0.16 0 0 0 0,-0.24 l -1.64,-1.49 a 0.15,0.15 0 0 0 -0.22,0 v 0 L 14,11.55 a 0.16,0.16 0 0 0 0,0.22 l 1.24,1.16 a 0.16,0.16 0 0 1 0,0.24 l -1.19,1.22 a 0.14,0.14 0 0 0 0,0.21 v 0 l 0.09,0.09 a 0.14,0.14 0 0 0 0.2,0.07 0.16,0.16 0 0 0 0.07,-0.05 z"
+     fill="#f2f2f2"
+     id="path38271" />
+  <metadata
+     id="metadata38359">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-Artboard 1</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

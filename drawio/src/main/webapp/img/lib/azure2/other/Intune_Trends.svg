@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 12.524923 14.950001"
+   version="1.1"
+   id="svg77515"
+   sodipodi:docname="Intune_Trends.svg"
+   width="12.524923"
+   height="14.950001"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview77517"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="6.2534678"
+     inkscape:cy="7.4564943"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg77515" />
+  <defs
+     id="defs77499">
+    <style
+       id="style77488">.cls-1{fill:#0078d4;}.cls-2{fill:url(#linear-gradient);}</style>
+    <linearGradient
+       id="linear-gradient"
+       x1="9.04"
+       y1="9.54"
+       x2="9.04"
+       y2="1.5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2.74,-1.55)">
+      <stop
+         offset="0"
+         stop-color="#5e9624"
+         id="stop77490" />
+      <stop
+         offset="0.26"
+         stop-color="#70a828"
+         id="stop77492" />
+      <stop
+         offset="0.79"
+         stop-color="#9fd732"
+         id="stop77494" />
+      <stop
+         offset="1"
+         stop-color="#b4ec36"
+         id="stop77496" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title77501">Icon408_Intune_Trends</title>
+  <rect
+     class="cls-1"
+     x="3.45"
+     y="7.6300001"
+     width="2.1700001"
+     height="7.3200002"
+     rx="0.23999999"
+     id="rect77503" />
+  <rect
+     class="cls-1"
+     x="6.9000006"
+     y="9.8299999"
+     width="2.1700001"
+     height="5.1199999"
+     rx="0.23999999"
+     id="rect77505" />
+  <rect
+     class="cls-1"
+     x="10.35"
+     y="5.5"
+     width="2.1700001"
+     height="9.4499998"
+     rx="0.23999999"
+     id="rect77507" />
+  <rect
+     class="cls-1"
+     x="0"
+     y="9.8299999"
+     width="2.1700001"
+     height="5.1199999"
+     rx="0.23999999"
+     id="rect77509" />
+  <path
+     class="cls-2"
+     d="m 12.26,4.03 -1,-1.06 -0.5,-0.5 -3.5,3.51 a 0.16,0.16 0 0 1 -0.24,0 L 4.9,3.9 0.89999999,7.9 a 0.16,0.16 0 0 1 -0.24,0 l -0.53,-0.45 a 0.18,0.18 0 0 1 0,-0.25 L 4.78,2.56 a 0.16,0.16 0 0 1 0.24,0 L 7.1,4.63 9.99,1.74 9.49,1.24 8.44,0.24 A 0.14,0.14 0 0 1 8.53,0 h 3.85 a 0.14,0.14 0 0 1 0.14,0.14 v 3.79 a 0.14,0.14 0 0 1 -0.26,0.1 z"
+     id="path77511"
+     style="fill:url(#linear-gradient)" />
+  <metadata
+     id="metadata77599">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon408_Intune_Trends</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

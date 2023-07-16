@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.3701"
+   height="17"
+   viewBox="0 0 14.3701 17"
+   version="1.1"
+   id="svg25957"
+   sodipodi:docname="Globe_Error.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview25959"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.1920004"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg25957" />
+  <defs
+     id="defs25934">
+    <linearGradient
+       id="f97bfabb-698c-4f28-ad92-a76baa953a8b"
+       x1="-223.179"
+       y1="749.61499"
+       x2="-223.179"
+       y2="761.74103"
+       gradientTransform="matrix(0.707,0.707,0.707,-0.707,-366.855,699.219)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#b31b1b"
+         id="stop25929" />
+      <stop
+         offset="0.82"
+         stop-color="#e62323"
+         id="stop25931" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title25936">MsPortalFx.base.images-69</title>
+  <g
+     id="a5521566-a820-402c-879d-299d720d1210"
+     transform="translate(-1.8079996,-0.5)">
+    <g
+       id="g25952">
+      <path
+         d="m 9.3,14.752 c 0,-0.154 -0.613,-0.154 -0.613,0 a 1.656,1.656 0 0 1 -1.636,1.8 h 3.882 A 1.655,1.655 0 0 1 9.3,14.752 Z"
+         id="path25938"
+         inkscape:connector-curvature="0"
+         style="fill:#999999" />
+      <path
+         d="m 13.335,1.1 a 0.571,0.571 0 0 1 0.807,0 l 0.026,0.028 a 8.32,8.32 0 0 1 -11.736,11.73 0.57,0.57 0 0 1 -0.049,-0.8 l 0.025,-0.026 v 0 A 0.571,0.571 0 0 1 3.19,12 7.178,7.178 0 0 0 13.312,1.882 0.573,0.573 0 0 1 13.335,1.1 Z"
+         id="path25940"
+         inkscape:connector-curvature="0"
+         style="fill:#a3a3a3" />
+      <path
+         d="m 11.946,17.5 h -5.9 A 0.476,0.476 0 0 1 5.57,17.024 v 0 a 0.476,0.476 0 0 1 0.476,-0.476 h 5.9 a 0.476,0.476 0 0 1 0.475,0.476 v 0 A 0.476,0.476 0 0 1 11.946,17.5 Z"
+         id="path25942"
+         inkscape:connector-curvature="0"
+         style="fill:#a3a3a3" />
+      <circle
+         cx="7.8709998"
+         cy="6.5630002"
+         r="6.0630002"
+         id="circle25944"
+         style="fill:url(#f97bfabb-698c-4f28-ad92-a76baa953a8b)" />
+      <g
+         id="g25950">
+        <path
+           d="M 8.391,8.105 H 7.256 A 0.255,0.255 0 0 1 6.991,7.869 L 6.869,2.705 A 0.254,0.254 0 0 1 7.135,2.459 H 8.512 A 0.254,0.254 0 0 1 8.778,2.705 L 8.656,7.869 A 0.255,0.255 0 0 1 8.391,8.105 Z"
+           id="path25946"
+           inkscape:connector-curvature="0"
+           style="fill:#f2f2f2" />
+        <circle
+           cx="7.823"
+           cy="9.6470003"
+           r="0.90499997"
+           id="circle25948"
+           style="fill:#f2f2f2" />
+      </g>
+    </g>
+  </g>
+  <metadata
+     id="metadata25955">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.GlobeError()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-69</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="18"
+   height="18.02"
+   viewBox="0 0 18 18.02"
+   version="1.1"
+   id="svg88753"
+   sodipodi:docname="Azure_Fileshare.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview88755"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg88753" />
+  <defs
+     id="defs88732">
+    <linearGradient
+       id="ba3d4428-273b-47d2-80ac-53671019b795"
+       x1="-1267.23"
+       y1="3.0699999"
+       x2="-1267.52"
+       y2="14.64"
+       gradientTransform="matrix(-1,0,0,1,-1256.13,0.00999999)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#32d4f5"
+         id="stop88719" />
+      <stop
+         offset="0.23"
+         stop-color="#31d0f1"
+         id="stop88721" />
+      <stop
+         offset="0.46"
+         stop-color="#2cc3e6"
+         id="stop88723" />
+      <stop
+         offset="0.7"
+         stop-color="#25afd4"
+         id="stop88725" />
+      <stop
+         offset="0.94"
+         stop-color="#1c92ba"
+         id="stop88727" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop88729" />
+    </linearGradient>
+  </defs>
+  <path
+     d="m 17.28,3.91 h -0.91 a 4.16,4.16 0 0 0 -0.55,0 0.68,0.68 0 0 1 -0.59,-1 l 0.39,-0.7 A 1.83,1.83 0 0 0 15.11,1.92 l -0.93,1.66 a 0.7,0.7 0 0 1 -0.6,0.35 h -0.83 a 0.66,0.66 0 0 0 -0.32,0.08 v 0 l -1.57,1 a 0.25,0.25 0 0 1 -0.16,0 H 5.27 A 0.29,0.29 0 0 0 5,5.33 v 4.82 L 3.25,10.69 3.38,11.25 5,11.01 v 2.9 a 0.29,0.29 0 0 0 0.29,0.29 h 9.37 l 1.15,1.49 0.49,-0.31 -0.68,-1.18 h 1.68 a 0.29,0.29 0 0 0 0.3,-0.29 v -9.7 a 0.3,0.3 0 0 0 -0.32,-0.3 z"
+     fill="#005ba1"
+     id="path88734" />
+  <circle
+     cx="15.88"
+     cy="1.09"
+     r="1.09"
+     fill="#50e5ff"
+     id="circle88736" />
+  <circle
+     cx="16.58"
+     cy="16.6"
+     r="1.42"
+     fill="#50e5ff"
+     id="circle88738" />
+  <circle
+     cx="1.77"
+     cy="11.45"
+     r="1.77"
+     fill="#50e5ff"
+     id="circle88740" />
+  <path
+     d="m 15.17,4.76 -6.91,-1 H 8.12 a 1,1 0 0 0 -1,0.87 L 6.86,6.32 H 16 V 5.91 A 1,1 0 0 0 15.17,4.76 Z"
+     fill="#0078d4"
+     id="path88742" />
+  <path
+     d="m 15.1,5.19 -6.9,-1 H 8.11 A 0.58,0.58 0 0 0 7.54,4.69 L 7.3,6.32 h 8.22 L 15.59,5.85 A 0.58,0.58 0 0 0 15.1,5.19 Z"
+     fill="#ffffff"
+     id="path88744" />
+  <path
+     d="m 5.26,5.01 h 6.05 a 0.33,0.33 0 0 1 0.21,0.09 l 1,1 a 0.29,0.29 0 0 0 0.21,0.09 h 4.6 a 0.3,0.3 0 0 1 0.3,0.29 v 7.43 a 0.3,0.3 0 0 1 -0.3,0.29 h -12 A 0.29,0.29 0 0 1 5,13.91 V 5.33 A 0.3,0.3 0 0 1 5.26,5.01 Z"
+     fill="url(#ba3d4428-273b-47d2-80ac-53671019b795)"
+     id="path88748"
+     style="fill:url(#ba3d4428-273b-47d2-80ac-53671019b795)" />
+</svg>

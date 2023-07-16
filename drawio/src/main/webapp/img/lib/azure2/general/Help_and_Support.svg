@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b67d27d7-b238-4cb0-bc90-a803a2c4fe4a"
+   width="14.609425"
+   height="18.01613"
+   viewBox="0 0 14.609425 18.01613"
+   version="1.1"
+   sodipodi:docname="Help_and_Support.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview27655"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7.6094244"
+     inkscape:cy="9.0009631"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b67d27d7-b238-4cb0-bc90-a803a2c4fe4a" />
+  <defs
+     id="defs27640">
+    <linearGradient
+       id="ba9d1e8e-19b8-4782-ad3f-f688d67182ec"
+       x1="8.6700001"
+       y1="8.0900002"
+       x2="8.6700001"
+       y2="20.18"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop27630" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop27632" />
+    </linearGradient>
+    <linearGradient
+       id="ae99c3ef-995c-40af-9fc5-5a2da5013186"
+       x1="8.3299999"
+       y1="1.61"
+       x2="9.21"
+       y2="12.59"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop27635" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop27637" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title27642">Icon-general-13</title>
+  <path
+     d="m 13.259424,18.015167 a 1.3,1.3 0 0 0 1.35,-1.29 v -0.16 c -0.51,-4.07 -2.84,-7.3799997 -7.2699996,-7.3799997 -4.43,0 -6.88,2.8299997 -7.33,7.3899997 a 1.29,1.29 0 0 0 1.16,1.44 z"
+     id="path27644"
+     inkscape:connector-curvature="0"
+     style="fill:url(#ba9d1e8e-19b8-4782-ad3f-f688d67182ec)" />
+  <path
+     d="m 7.2894244,10.145167 a 4,4 0 0 1 -2.21,-0.6499997 l 2.19,5.7199997 2.18,-5.6799997 a 4.09,4.09 0 0 1 -2.16,0.6099997 z"
+     id="path27646"
+     inkscape:connector-curvature="0"
+     style="opacity:0.8;fill:#ffffff" />
+  <circle
+     cx="7.2894249"
+     cy="6.0651674"
+     r="4.0799999"
+     id="circle27648"
+     style="fill:url(#ae99c3ef-995c-40af-9fc5-5a2da5013186)" />
+  <path
+     d="m 13.409424,7.2451673 a 6.26,6.26 0 0 0 -0.09,-2.55 6.19,6.19 0 0 0 -5.8199996,-4.68 5.53,5.53 0 0 0 -5.21,2.77 0.59,0.59 0 0 0 0.18,0.81 v 0 a 0.54,0.54 0 0 0 0.74,-0.16 4.53,4.53 0 0 1 4.22,-2.29 5.1,5.1 0 0 1 4.7599996,3.68 5.34,5.34 0 0 1 0.13,2.19 0.93,0.93 0 0 0 -0.54,0.59 l -0.27,0.9 a 0.94,0.94 0 0 0 0.62,1.17 1,1 0 0 0 1.18,-0.66 l 0.27,-0.9 a 0.92,0.92 0 0 0 -0.17,-0.87 z"
+     id="path27650"
+     inkscape:connector-curvature="0"
+     style="fill:#767676" />
+  <metadata
+     id="metadata27652">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Support()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-13</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

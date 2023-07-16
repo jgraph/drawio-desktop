@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a5c2c34a-a5f9-4043-a084-e51b74497895"
+   width="18.026663"
+   height="14.72"
+   viewBox="0 0 18.026663 14.72"
+   version="1.1"
+   sodipodi:docname="Groups.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview53616"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9.0056645"
+     inkscape:cy="7.36"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a5c2c34a-a5f9-4043-a084-e51b74497895" />
+  <defs
+     id="defs53597">
+    <linearGradient
+       id="f97360fa-fd13-420b-9b43-74b8dde83a11"
+       x1="6.6999998"
+       y1="7.2600002"
+       x2="6.6999998"
+       y2="18.360001"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop53587" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop53589" />
+    </linearGradient>
+    <linearGradient
+       id="b2ab4071-529d-4450-9443-e6dc0939cc4e"
+       x1="6.4200001"
+       y1="1.3200001"
+       x2="7.23"
+       y2="11.39"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.22"
+         stop-color="#32d4f5"
+         id="stop53592" />
+      <stop
+         offset="1"
+         stop-color="#198ab3"
+         id="stop53594" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title53599">Icon-identity-223</title>
+  <path
+     d="m 17.225664,12.28 a 0.79,0.79 0 0 0 0.8,-0.79 0.28,0.28 0 0 0 -0.02,-0.13 c -0.31,-2.4999999 -1.74,-4.5399999 -4.46,-4.5399999 -2.72,0 -4.1899995,1.76 -4.4699995,4.5399999 a 0.81,0.81 0 0 0 0.72,0.88 h 7.4299995 z"
+     id="path53601"
+     inkscape:connector-curvature="0"
+     style="fill:#0078d4" />
+  <path
+     d="m 13.555664,7.4500001 a 2.44,2.44 0 0 1 -1.36,-0.4 l 1.35,3.5199999 1.33,-3.4899999 a 2.54,2.54 0 0 1 -1.32,0.37 z"
+     id="path53603"
+     inkscape:connector-curvature="0"
+     style="opacity:0.8;fill:#ffffff" />
+  <circle
+     cx="13.555665"
+     cy="4.9400001"
+     r="2.51"
+     id="circle53605"
+     style="fill:#0078d4" />
+  <path
+     d="m 12.195664,14.72 a 1.19,1.19 0 0 0 1.19,-1.19 0.66,0.66 0 0 0 0,-0.14 c -0.47,-3.7399999 -2.6,-6.7799999 -6.6599995,-6.7799999 -4.06,0 -6.28000003,2.58 -6.72000003,6.7499999 A 1.2,1.2 0 0 0 1.0756645,14.67 H 12.175664 Z"
+     id="path53607"
+     inkscape:connector-curvature="0"
+     style="fill:url(#f97360fa-fd13-420b-9b43-74b8dde83a11)" />
+  <path
+     d="m 6.7756645,7.5000001 a 3.72,3.72 0 0 1 -2,-0.6 l 2,5.2499999 2,-5.2099999 a 3.81,3.81 0 0 1 -2,0.56 z"
+     id="path53609"
+     inkscape:connector-curvature="0"
+     style="opacity:0.8;fill:#ffffff" />
+  <circle
+     cx="6.7456641"
+     cy="3.75"
+     r="3.75"
+     id="circle53611"
+     style="fill:url(#b2ab4071-529d-4450-9443-e6dc0939cc4e)" />
+  <metadata
+     id="metadata53613">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.TeamProject()</rdf:li>
+      <rdf:li>category: Identity</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-identity-223</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

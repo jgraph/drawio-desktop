@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="14.192503"
+   height="17.62159"
+   viewBox="0 0 14.192503 17.62159"
+   version="1.1"
+   id="svg11148"
+   sodipodi:docname="Metrics_Advisor.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11150"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.0933165"
+     inkscape:cy="8.8184111"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg11148" />
+  <defs
+     id="defs11119">
+    <linearGradient
+       id="ac30098d-c5f4-4c98-83c3-3c8be7717d62"
+       x1="8.2840004"
+       y1="13.471"
+       x2="8.2840004"
+       y2="0.189"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.904,-0.189)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop11114" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop11116" />
+    </linearGradient>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="12.761"
+     height="13.281"
+     rx="0.52100003"
+     fill="url(#ac30098d-c5f4-4c98-83c3-3c8be7717d62)"
+     id="rect11121"
+     style="fill:url(#ac30098d-c5f4-4c98-83c3-3c8be7717d62)" />
+  <ellipse
+     cx="4.3859997"
+     cy="4.8969998"
+     rx="1.025"
+     ry="1.029"
+     fill="#ffffff"
+     id="ellipse11123" />
+  <ellipse
+     cx="8.2199993"
+     cy="6.8449998"
+     rx="1.025"
+     ry="1.029"
+     fill="#ffffff"
+     id="ellipse11125" />
+  <ellipse
+     cx="10.724"
+     cy="1.9269999"
+     rx="1.025"
+     ry="1.029"
+     fill="#ffffff"
+     id="ellipse11127" />
+  <ellipse
+     cx="2.3370001"
+     cy="10.798"
+     rx="1.025"
+     ry="1.029"
+     fill="#ffffff"
+     id="ellipse11129" />
+  <polygon
+     points="4.591,11.097 3.891,10.876 5.879,4.575 10.083,6.547 12.298,1.957 12.959,2.276 10.429,7.52 6.327,5.596 "
+     fill="#ffffff"
+     opacity="0.8"
+     id="polygon11131"
+     transform="translate(-1.904,-0.189)" />
+  <path
+     d="m 14.096,15.575 -1.847,1.976 a 0.24,0.24 0 0 1 -0.34,0 0.236,0.236 0 0 1 -0.066,-0.129 l -1.118,-5.449 a 0.241,0.241 0 0 1 0.111,-0.222 l 1.219,-0.5 a 0.239,0.239 0 0 1 0.3,0.12 l 1.8,3.971 a 0.223,0.223 0 0 1 -0.059,0.233 z"
+     fill="#32bedd"
+     id="path11135" />
+  <path
+     d="m 8.065,15.575 1.847,1.976 a 0.24,0.24 0 0 0 0.34,0 0.244,0.244 0 0 0 0.067,-0.129 l 1.117,-5.449 a 0.241,0.241 0 0 0 -0.14,-0.262 l -1.219,-0.5 a 0.239,0.239 0 0 0 -0.3,0.12 l -1.804,3.98 a 0.222,0.222 0 0 0 0.092,0.264 z"
+     fill="#50e6ff"
+     id="path11137" />
+  <path
+     d="m 11.372,7.133 0.24,-0.2 a 0.378,0.378 0 0 1 0.526,0.046 0.338,0.338 0 0 1 0.065,0.111 l 0.111,0.3 a 0.388,0.388 0 0 0 0.415,0.24 l 0.305,-0.056 a 0.379,0.379 0 0 1 0.434,0.3 0.316,0.316 0 0 1 0,0.13 l -0.055,0.3 a 0.386,0.386 0 0 0 0.24,0.416 l 0.295,0.1 A 0.386,0.386 0 0 1 14.17,9.309 0.686,0.686 0 0 1 14.105,9.42 l -0.2,0.231 a 0.388,0.388 0 0 0 0,0.48 l 0.2,0.24 a 0.368,0.368 0 0 1 -0.047,0.52 l -0.008,0.007 a 0.382,0.382 0 0 1 -0.1,0.064 l -0.295,0.111 a 0.37,0.37 0 0 0 -0.24,0.416 l 0.055,0.3 a 0.359,0.359 0 0 1 -0.286,0.422 h -0.019 a 0.281,0.281 0 0 1 -0.129,0 h -0.305 a 0.369,0.369 0 0 0 -0.415,0.24 l -0.111,0.287 a 0.37,0.37 0 0 1 -0.472,0.225 h -0.008 a 0.332,0.332 0 0 1 -0.111,-0.064 l -0.231,-0.231 a 0.37,0.37 0 0 0 -0.48,0 l -0.24,0.194 a 0.369,0.369 0 0 1 -0.521,-0.04 l -0.006,-0.006 a 0.233,0.233 0 0 1 -0.065,-0.111 l -0.11,-0.287 a 0.362,0.362 0 0 0 -0.416,-0.24 l -0.3,0.056 A 0.379,0.379 0 0 1 8.811,11.92 v 0 a 0.27,0.27 0 0 1 0,-0.12 L 8.867,11.5 A 0.37,0.37 0 0 0 8.626,11.084 L 8.34,10.973 A 0.388,0.388 0 0 1 8.072,10.512 0.686,0.686 0 0 1 8.137,10.401 l 0.2,-0.24 a 0.389,0.389 0 0 0 0,-0.481 L 8.137,9.45 A 0.378,0.378 0 0 1 8.189,8.917 v 0 A 0.226,0.226 0 0 1 8.3,8.861 L 8.587,8.751 A 0.39,0.39 0 0 0 8.827,8.335 L 8.808,8.058 a 0.379,0.379 0 0 1 0.3,-0.434 h 0.129 l 0.3,0.055 a 0.379,0.379 0 0 0 0.416,-0.24 l 0.11,-0.3 a 0.379,0.379 0 0 1 0.481,-0.221 l 0.111,0.064 0.24,0.2 a 0.379,0.379 0 0 0 0.477,-0.049 z"
+     fill="#005ba1"
+     id="path11139" />
+  <circle
+     cx="11.141"
+     cy="9.9230003"
+     r="2.1800001"
+     fill="#ffd400"
+     id="circle11141" />
+</svg>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="a26e7d0d-c159-437c-845e-529726f3df9e"
+   width="18"
+   height="15.940001"
+   viewBox="0 0 18 15.940001"
+   version="1.1"
+   sodipodi:docname="Devices.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview36920"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="9"
+     inkscape:cy="7.9785624"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a26e7d0d-c159-437c-845e-529726f3df9e" />
+  <defs
+     id="defs36901">
+    <linearGradient
+       id="aea576e5-fef8-4bf5-a6dd-590c075a08c5"
+       x1="8.3400002"
+       y1="11.96"
+       x2="8.3400002"
+       y2="1.86"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-1.03)">
+      <stop
+         offset="0"
+         stop-color="#d2ebff"
+         id="stop36882" />
+      <stop
+         offset="1"
+         stop-color="#f0fffd"
+         id="stop36884" />
+    </linearGradient>
+    <linearGradient
+       id="ae1611cd-4cf1-4ed1-b5e1-db19220ee586"
+       x1="14.15"
+       y1="20.41"
+       x2="14.15"
+       y2="2.3399999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,-1.03)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop36887" />
+      <stop
+         offset="0.17"
+         stop-color="#1c84dc"
+         id="stop36889" />
+      <stop
+         offset="0.38"
+         stop-color="#3990e4"
+         id="stop36891" />
+      <stop
+         offset="0.59"
+         stop-color="#4d99ea"
+         id="stop36893" />
+      <stop
+         offset="0.8"
+         stop-color="#5a9eee"
+         id="stop36895" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop36897" />
+    </linearGradient>
+    <linearGradient
+       id="bb0a651b-bb97-4569-a23e-5fed56c1e359"
+       x1="127.87668"
+       y1="128.82954"
+       x2="127.87668"
+       y2="45.827175"
+       href="#aea576e5-fef8-4bf5-a6dd-590c075a08c5"
+       gradientTransform="matrix(0.77783924,0,0,1.2856127,0,-1.03)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <title
+     id="title36903">Icon-intune-332</title>
+  <rect
+     y="0"
+     width="16.68"
+     height="11.87"
+     rx="0.60000002"
+     fill="#0078d4"
+     id="rect36905"
+     x="0" />
+  <rect
+     x="0.97000003"
+     y="0.83000004"
+     width="14.74"
+     height="10.1"
+     rx="0.30000001"
+     opacity="0.9"
+     fill="url(#aea576e5-fef8-4bf5-a6dd-590c075a08c5)"
+     id="rect36907"
+     style="fill:url(#aea576e5-fef8-4bf5-a6dd-590c075a08c5)" />
+  <rect
+     x="10.3"
+     y="3.0899999"
+     width="7.6999998"
+     height="12.85"
+     rx="0.30000001"
+     fill="url(#ae1611cd-4cf1-4ed1-b5e1-db19220ee586)"
+     id="rect36909"
+     style="fill:url(#ae1611cd-4cf1-4ed1-b5e1-db19220ee586)" />
+  <rect
+     x="13.27"
+     y="3.5200002"
+     width="1.77"
+     height="0.23999999"
+     rx="0.11"
+     fill="#f2f2f2"
+     id="rect36911" />
+  <rect
+     x="11.03"
+     y="4.1700001"
+     width="6.25"
+     height="10.33"
+     rx="0.14"
+     opacity="0.9"
+     fill="url(#bb0a651b-bb97-4569-a23e-5fed56c1e359)"
+     id="rect36913"
+     style="fill:url(#bb0a651b-bb97-4569-a23e-5fed56c1e359)" />
+  <rect
+     x="7.48"
+     y="0.37"
+     width="1.77"
+     height="0.23999999"
+     rx="0.11"
+     fill="#f2f2f2"
+     id="rect36915" />
+  <rect
+     x="13.72"
+     y="14.93"
+     width="0.86000001"
+     height="0.73000002"
+     rx="0.2"
+     fill="#f2f2f2"
+     id="rect36917" />
+  <metadata
+     id="metadata37002">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-intune-332</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

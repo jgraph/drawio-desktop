@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="14.74"
+   height="17.129999"
+   viewBox="0 0 14.74 17.129999"
+   version="1.1"
+   id="svg78906"
+   sodipodi:docname="Marketplace_Management.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview78908"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.3656999"
+     inkscape:cy="8.6141236"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg78906" />
+  <defs
+     id="defs78889">
+    <linearGradient
+       id="bd8b454e-57d0-4e9e-b7dd-7f2f7c4a6f28"
+       x1="8.1800003"
+       y1="6.52"
+       x2="8.1800003"
+       y2="15.24"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.63,-0.38)">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop78882" />
+      <stop
+         offset="0.48"
+         stop-color="#f6f6f6"
+         id="stop78884" />
+      <stop
+         offset="1"
+         stop-color="#e6e6e6"
+         id="stop78886" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title78891">Icon-azurestack-5</title>
+  <path
+     id="e7683ea0-9914-452a-a6ce-eba81ed14626"
+     d="m 13.51,4.32 h -1 v 12.81 l 1,-1.93 z"
+     fill="#50e6ff" />
+  <path
+     id="b2cfc25a-7db2-4d82-94f3-4ad5068ca79d"
+     d="m 13.51,15.19 v 0 l -1,1.93 1,-0.8 1.23,-1 z"
+     fill="#9cebff" />
+  <path
+     id="e6582dd3-817c-4e32-88b3-34fb1b6c9cec"
+     d="M 6.94,2.41 A 1.57,1.57 0 0 1 8.57,0.9 1.57,1.57 0 0 1 10.19,2.41 v 1.91 h 0.79 V 2.41 a 2.41,2.41 0 0 0 -4.82,0 v 1.91 h 0.78 z"
+     fill="#a3a3a3" />
+  <path
+     id="b506684c-dab5-49dd-a805-0ff2e9fb2f29"
+     d="M 4.55,2.41 A 1.57,1.57 0 0 1 6.17,0.9 1.57,1.57 0 0 1 7.8,2.41 V 4.32 H 8.58 V 2.41 a 2.36,2.36 0 0 0 -2.41,-2.3 2.35,2.35 0 0 0 -2.4,2.3 v 1.91 h 0.78 z"
+     fill="#767676" />
+  <polygon
+     points="1.63,16.52 2,4.7 14.1,4.7 14.1,17.51 "
+     fill="#32bedd"
+     id="polygon78897"
+     transform="translate(-1.63,-0.38)" />
+  <polygon
+     points="16.37,15.76 16,4.7 15.14,4.7 15.14,15.58 "
+     fill="#32bedd"
+     id="polygon78899"
+     transform="translate(-1.63,-0.38)" />
+  <path
+     d="M 8.78,6.14 H 4.37 A 0.29,0.29 0 0 0 4.08,6.43 v 8 a 0.29,0.29 0 0 0 0.29,0.29 l 4.46,0.14 A 0.28,0.28 0 0 0 9.11,14.57 V 6.43 A 0.28,0.28 0 0 0 8.78,6.14 Z M 5.59,11.87 A 0.08,0.08 0 0 1 5.51,11.94 H 4.69 A 0.08,0.08 0 0 1 4.62,11.87 v -1.06 a 0.08,0.08 0 0 1 0.07,-0.07 h 0.82 a 0.08,0.08 0 0 1 0.08,0.07 z m 0,-1.92 A 0.08,0.08 0 0 1 5.51,10.02 H 4.69 A 0.08,0.08 0 0 1 4.62,9.95 V 8.89 A 0.08,0.08 0 0 1 4.69,8.82 h 0.82 a 0.08,0.08 0 0 1 0.08,0.07 z m 0,-1.93 A 0.09,0.09 0 0 1 5.51,8.1 H 4.69 A 0.09,0.09 0 0 1 4.62,8.02 V 6.96 A 0.08,0.08 0 0 1 4.69,6.89 h 0.82 a 0.08,0.08 0 0 1 0.08,0.07 z m 1.42,6.32 A 0.07,0.07 0 0 1 6.94,14.41 H 6.14 A 0.07,0.07 0 0 1 6.07,14.34 v -1.6 a 0.07,0.07 0 0 1 0.07,-0.07 h 0.82 a 0.07,0.07 0 0 1 0.07,0.07 z m 0,-2.47 A 0.07,0.07 0 0 1 6.94,11.94 H 6.14 A 0.07,0.07 0 0 1 6.07,11.87 v -1.06 a 0.07,0.07 0 0 1 0.07,-0.07 h 0.82 a 0.07,0.07 0 0 1 0.07,0.07 z m 0,-1.92 A 0.07,0.07 0 0 1 6.94,10.02 H 6.14 A 0.07,0.07 0 0 1 6.07,9.95 V 8.89 A 0.07,0.07 0 0 1 6.14,8.82 h 0.82 a 0.07,0.07 0 0 1 0.07,0.07 z m 0,-1.93 A 0.08,0.08 0 0 1 6.94,8.1 H 6.14 A 0.08,0.08 0 0 1 6.07,8.02 V 6.96 A 0.07,0.07 0 0 1 6.14,6.89 h 0.82 a 0.07,0.07 0 0 1 0.07,0.07 z m 1.44,3.85 A 0.07,0.07 0 0 1 8.38,11.94 H 7.58 A 0.07,0.07 0 0 1 7.51,11.87 v -1.06 a 0.07,0.07 0 0 1 0.07,-0.07 h 0.79 a 0.07,0.07 0 0 1 0.07,0.07 z m 0,-1.92 A 0.07,0.07 0 0 1 8.38,10.02 H 7.58 A 0.07,0.07 0 0 1 7.51,9.95 V 8.89 A 0.07,0.07 0 0 1 7.58,8.82 h 0.79 a 0.07,0.07 0 0 1 0.07,0.07 z m 0,-1.93 A 0.08,0.08 0 0 1 8.38,8.1 H 7.58 A 0.08,0.08 0 0 1 7.51,8.02 V 6.96 A 0.07,0.07 0 0 1 7.58,6.89 h 0.79 a 0.07,0.07 0 0 1 0.07,0.07 z"
+     fill="url(#bd8b454e-57d0-4e9e-b7dd-7f2f7c4a6f28)"
+     id="path78901"
+     style="fill:url(#bd8b454e-57d0-4e9e-b7dd-7f2f7c4a6f28)" />
+  <metadata
+     id="metadata78990">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-azurestack-5</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

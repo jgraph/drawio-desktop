@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="ae0f0a87-55d1-4209-a659-116f5661950c" sodipodi:docname="10349-icon-service-Resource-Explorer.svg"
+    version="1.1" width="17.0005" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 17.0005 13.880001"
+    height="13.880001" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2347">
+        <linearGradient x1="9" y1="15.92" x2="9" gradientUnits="userSpaceOnUse" y2="3.5799999" id="b9aa270a-a747-473c-8e0d-b8fa9ead4a39">
+            <stop offset="0" stop-color="#e27908" id="stop2336"/>
+            <stop offset="0.3" stop-color="#e57e0a" id="stop2338"/>
+            <stop offset="0.64" stop-color="#ed8b11" id="stop2340"/>
+            <stop offset="1" stop-color="#faa21d" id="stop2342"/>
+            <stop offset="1" stop-color="#faa21d" id="stop2344"/>
+        </linearGradient>
+    </defs>
+    <path style="fill:#ef7100" d="M 16.6,1.540001 H 9.19 a 0.34,0.34 0 0 1 -0.22,-0.07 L 6.85,0.06000096 A 0.43,0.43 0 0 
+        0 6.63,9.6153962e-7 H 0.4 A 0.4,0.4 0 0 0 0,0.39000096 V 13.490001 a 0.4,0.4 0 0 0 0.4,0.39 h 16.2 a 0.4,0.4 0 0 
+        0 0.4,-0.39 v -11.55 a 0.4,0.4 0 0 0 -0.4,-0.4 z"/>
+    <rect rx="0.16" x="1.55" width="3.8599999" height="0.76999998" y="0.76000088" style="fill:#ffffff"/>
+    <rect rx="0.11" x="1.55" width="0.76999998" height="0.76999998" y="0.76000088" style="fill:#d15900"/>
+    <path style="fill:url(#b9aa270a-a747-473c-8e0d-b8fa9ead4a39)" d="M 16.6,1.520001 H 8.5 a 0.36,0.36 0 0 0 -0.28,0.12 
+        l -1.35,1.3 a 0.43,0.43 0 0 1 -0.28,0.11 H 0.4 a 0.4,0.4 0 0 0 -0.4,0.4 v 10 a 0.4,0.4 0 0 0 0.4,0.39 h 16.2 a 
+        0.4,0.4 0 0 0 0.4,-0.39 v -11.51 a 0.4,0.4 0 0 0 -0.4,-0.42 z"/>
+    <polygon style="fill:#ffca00" points="9.25,14.31 9.25,10.12 12.84,8.03 12.84,12.21" transform="translate(-0.5,-2.059999)"/>
+    <polygon style="fill:#ffe452" points="5.65,8.03 9.25,5.92 12.84,8.03 9.25,10.13" transform="translate(-0.5,-2.059999)"/>
+    <polygon style="fill:#ffd400" points="5.65,12.21 5.65,8.03 9.25,10.13 9.25,14.31" transform="translate(-0.5,-2.059999)"/>
+</svg>

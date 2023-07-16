@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.75"
+   height="12.584534"
+   viewBox="0 0 17.75 12.584534"
+   version="1.1"
+   id="svg63067"
+   sodipodi:docname="Remote_Rendering.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview63069"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.875"
+     inkscape:cy="6.38212"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg63067" />
+  <defs
+     id="defs63042">
+    <linearGradient
+       id="bd22e575-b917-4c6b-b5a7-5fd52e419078"
+       x1="9"
+       y1="15.379"
+       x2="9"
+       y2="2.7980001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.125,2.797586)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop63024" />
+      <stop
+         offset="0.156"
+         stop-color="#1380da"
+         id="stop63026" />
+      <stop
+         offset="0.528"
+         stop-color="#3c91e5"
+         id="stop63028" />
+      <stop
+         offset="0.822"
+         stop-color="#559cec"
+         id="stop63030" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop63032" />
+    </linearGradient>
+    <linearGradient
+       id="e88792aa-d42b-4571-a8a2-5af1dccbee2f"
+       x1="-416.202"
+       y1="-210.743"
+       x2="-416.202"
+       y2="-217.83299"
+       gradientTransform="matrix(1,0,0,-1,427.251,-202.96041)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#c3f1ff"
+         id="stop63035" />
+      <stop
+         offset="0.107"
+         stop-color="#beeffe"
+         id="stop63037" />
+      <stop
+         offset="0.765"
+         stop-color="#32bedd"
+         id="stop63039" />
+    </linearGradient>
+  </defs>
+  <g
+     id="a9f13b7f-95dc-4f59-87a4-8398fff3a7bb"
+     transform="translate(-0.125,-2.797586)">
+    <g
+       id="g63062">
+      <path
+         d="M 17.875,11.439 A 3.989,3.989 0 0 0 14.414,7.605 5.026,5.026 0 0 0 9.237,2.8 5.156,5.156 0 0 0 4.309,6.159 a 4.759,4.759 0 0 0 -4.184,4.579 4.83,4.83 0 0 0 5,4.641 c 0.148,0 0.295,-0.007 0.44,-0.019 h 8.094 a 0.789,0.789 0 0 0 0.213,-0.032 4.036,4.036 0 0 0 4.003,-3.889 z"
+         id="path63044"
+         inkscape:connector-curvature="0"
+         style="fill:url(#bd22e575-b917-4c6b-b5a7-5fd52e419078)" />
+      <path
+         d="m 8.371,9.669 v 0 l 2.3,-4.522 a 0.294,0.294 0 0 1 0.522,0 l 2.29,4.32 a 1.571,1.571 0 0 1 0.232,0.9 c 0,0.948 -1.248,1.716 -2.788,1.716 -1.54,0 -2.788,-0.768 -2.788,-1.716 A 1.179,1.179 0 0 1 8.371,9.669 Z"
+         id="path63046"
+         inkscape:connector-curvature="0"
+         style="fill:url(#e88792aa-d42b-4571-a8a2-5af1dccbee2f)" />
+      <path
+         d="m 8.371,9.707 c -0.189,0.381 -0.235,0.445 -0.235,0.691 a 1.181,1.181 0 0 0 0.012,0.146 c 0,0.019 0,0.037 0,0.056 h 0.013 c 0.14,0.733 1.032,1.325 2.189,1.475 V 11.927 C 9.25,11.78 8.405,11.227 8.3,10.542 8.345,9.855 9.179,9.116 10.35,8.951 V 8.864 l -0.023,0.013 -0.1,-0.056 A 2.933,2.933 0 0 0 8.541,9.7 L 8.557,9.669 9.269,8.269 9.141,8.195 8.371,9.713 Z"
+         id="path63048"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <g
+         id="g63052"
+         style="opacity:0.8">
+        <polygon
+           points="7.317,14.075 7.317,10.565 10.346,8.809 10.346,12.314 "
+           id="polygon63050"
+           style="fill:#9cebff" />
+      </g>
+      <polygon
+         points="4.288,8.8 7.317,7.039 10.346,8.801 7.317,10.561 "
+         id="polygon63054"
+         style="opacity:0.85;fill:#9cebff" />
+      <polygon
+         points="4.288,12.309 4.288,8.804 7.317,10.564 7.317,14.07 "
+         id="polygon63056"
+         style="fill:#9cebff" />
+      <path
+         d="m 7.317,14.16 -3.1,-1.8 V 8.767 l 3.1,-1.8 3.1,1.8 v 3.589 z M 4.361,12.272 7.317,13.99 10.272,12.272 V 8.852 L 7.317,7.133 4.361,8.851 Z"
+         id="path63058"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+      <path
+         d="m 13.712,10.359 a 1.571,1.571 0 0 0 -0.232,-0.9 l -2.29,-4.32 a 0.294,0.294 0 0 0 -0.522,0 L 9.141,8.151 9.269,8.225 10.8,5.213 a 0.143,0.143 0 0 1 0.131,-0.081 0.144,0.144 0 0 1 0.13,0.078 l 2.29,4.32 v 0.006 0.006 a 1.214,1.214 0 0 1 0.18,0.464 3.292,3.292 0 0 0 -2.7,-1.276 3.518,3.518 0 0 0 -0.608,0.053 l 0.1,0.055 0.023,-0.013 v 0.087 a 3.517,3.517 0 0 1 0.489,-0.035 c 1.473,0 2.663,0.879 2.718,1.631 -0.127,0.8 -1.257,1.42 -2.629,1.42 a 4.335,4.335 0 0 1 -0.578,-0.04 v 0.149 a 4.538,4.538 0 0 0 0.578,0.038 c 1.429,0 2.605,-0.661 2.767,-1.514 h 0.014 c 0,-0.017 0,-0.034 -0.005,-0.051 a 1.085,1.085 0 0 0 0.012,-0.151 z"
+         id="path63060"
+         inkscape:connector-curvature="0"
+         style="fill:#ffffff" />
+    </g>
+  </g>
+  <metadata
+     id="metadata63065">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Mixed Reality</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

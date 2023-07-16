@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="18"
+   height="17.444"
+   viewBox="0 0 18 17.444"
+   version="1.1"
+   id="svg36286"
+   sodipodi:docname="Process_Explorer.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs36290" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview36288"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="8.722"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg36286" />
+  <title
+     id="title36271">MsPortalFx.base.images-41</title>
+  <g
+     id="f32485b0-f730-4ade-91ae-ae62edcf1e5e"
+     transform="translate(0,-0.278)">
+    <g
+       id="g36281">
+      <path
+         d="m 13.022,16.764 c -2.09,-0.28 -2.055,-1.624 -2.045,-3.8 H 7.061 c 0.01,2.179 0.045,3.523 -2.046,3.8 a 1.066,1.066 0 0 0 -0.984,0.958 h 9.981 a 1.072,1.072 0 0 0 -0.99,-0.958 z"
+         id="path36273"
+         inkscape:connector-curvature="0"
+         style="fill:#1f56a3" />
+      <rect
+         y="0.278"
+         width="18"
+         height="12.747"
+         rx="0.61000001"
+         id="rect36275"
+         x="0"
+         style="fill:#1490df" />
+      <rect
+         x="1.0369999"
+         y="1.265"
+         width="15.901"
+         height="10.576"
+         rx="0.30500001"
+         id="rect36277"
+         style="fill:#ffffff" />
+      <path
+         d="m 12.079,4.654 a 0.153,0.153 0 0 0 -0.13,0.074 L 11.019,6.3 A 0.15,0.15 0 0 1 10.757,6.294 L 9.333,3.581 A 0.151,0.151 0 0 0 9.057,3.603 L 7.719,7.575 A 0.151,0.151 0 0 1 7.438,7.586 L 6.281,4.905 A 0.15,0.15 0 0 0 6.011,4.892 l -1.593,2.9 A 0.15,0.15 0 0 1 4.286,7.87 H 1.037 V 8.828 H 4.852 A 0.15,0.15 0 0 0 4.984,8.75 L 5.907,7.072 a 0.151,0.151 0 0 1 0.27,0.013 l 1.371,3.178 a 0.15,0.15 0 0 0 0.28,-0.011 L 9.25,6.031 A 0.15,0.15 0 0 1 9.525,6.009 l 1.182,2.25 a 0.151,0.151 0 0 0 0.263,0.007 l 1.53,-2.58 a 0.149,0.149 0 0 1 0.129,-0.074 h 4.314 V 4.654 Z"
+         id="path36279"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+    </g>
+  </g>
+  <metadata
+     id="metadata36284">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.ProcessExplorer()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-41</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

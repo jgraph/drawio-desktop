@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a597878d-75df-4c17-b48a-8881b353adeb"
+   width="17"
+   height="17"
+   viewBox="0 0 17 17"
+   version="1.1"
+   sodipodi:docname="Azure_Maps_Accounts.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview56037"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a597878d-75df-4c17-b48a-8881b353adeb" />
+  <defs
+     id="defs56023">
+    <linearGradient
+       id="b708c95a-acf9-48dc-86e6-fd00deeb187d"
+       x1="9"
+       y1="17.5"
+       x2="9"
+       y2="0.5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.5)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop56016" />
+      <stop
+         offset="0.442"
+         stop-color="#28b7db"
+         id="stop56018" />
+      <stop
+         offset="0.775"
+         stop-color="#32d4f5"
+         id="stop56020" />
+    </linearGradient>
+  </defs>
+  <g
+     id="g56032"
+     transform="translate(-0.5,-0.5)">
+    <circle
+       cx="9"
+       cy="9"
+       r="8.5"
+       id="circle56025"
+       style="fill:url(#b708c95a-acf9-48dc-86e6-fd00deeb187d)" />
+    <g
+       id="g56030">
+      <path
+         id="aea28990-0f7a-41ea-b630-96207e88670d"
+         d="M 10.282,2.757 3.941,12.82 11.88,9.742 Z"
+         inkscape:connector-curvature="0"
+         style="fill:#9cebff" />
+      <path
+         id="ab7613f7-985d-4b9c-a222-e520a3439041"
+         d="M 9,4.79 12.934,14.33 10.282,2.757 Z"
+         inkscape:connector-curvature="0"
+         style="opacity:0.7;fill:#ffffff" />
+      <path
+         id="f5bebea7-9a6d-4d44-be76-be804ddf602b"
+         d="m 8.772,10.947 2.386,-0.925 1.776,4.308 z"
+         inkscape:connector-curvature="0"
+         style="fill:#32bedd" />
+    </g>
+  </g>
+  <metadata
+     id="metadata56034">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

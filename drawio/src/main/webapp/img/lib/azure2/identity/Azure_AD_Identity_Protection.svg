@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="e43c77ce-4ab9-446f-aa74-c41429bb9cbb" sodipodi:docname="10231-icon-service-Azure-AD-Identity-Protection.svg"
+    version="1.1" width="18" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 18 16.379999"
+    height="16.379999" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2625">
+        <linearGradient gradientTransform="translate(0,0.81)" x1="8.21" y1="5.1599998" x2="12.34" gradientUnits="userSpaceOnUse"
+            y2="11.42" id="b371e9d4-03ce-4242-9f79-d5a269ffcb88">
+            <stop offset="0" stop-color="#f9a11f" id="stop2613"/>
+            <stop offset="0.02" stop-color="#f89f1f" id="stop2615"/>
+            <stop offset="0.39" stop-color="#f28721" id="stop2617"/>
+            <stop offset="0.72" stop-color="#ed7823" id="stop2619"/>
+            <stop offset="1" stop-color="#ec7323" id="stop2621"/>
+        </linearGradient>
+        <linearGradient href="#b371e9d4-03ce-4242-9f79-d5a269ffcb88" x1="96.348217" gradientTransform="matrix(1.1366718,0,0,0.87976142,0,0.81)"
+            y1="99.57313" x2="137.6817" gradientUnits="userSpaceOnUse" y2="155.98775" id="a1794fd5-e1a9-408f-9605-810ce38ab87a"/>
+    </defs>
+    <polygon style="fill:#faa21d" points="16.99,10.17 18,11.35 8.93,17.19 0,11.35 1.01,10.19 8.93,15.33" transform="translate(0,-0.81)"/>
+    <polygon style="fill:#ffffff" points="16.4,9.54 8.93,14.26 1.61,9.53 8.93,0.81" transform="translate(0,-0.81)"/>
+    <polygon style="fill:#f78d1e" points="1.61,9.53 8.93,0.81 8.93,14.26" transform="translate(0,-0.81)"/>
+    <polygon style="fill:url(#b371e9d4-03ce-4242-9f79-d5a269ffcb88)" points="16.4,9.54 8.93,0.81 8.93,14.26" transform="translate(0,-0.81)"/>
+    <polygon style="fill:#f78d1e" points="8.93,14.26 8.93,7.76 16.4,9.54" transform="translate(0,-0.81)"/>
+    <polygon style="fill:#faa21d" points="8.93,7.76 8.93,14.26 1.61,9.53" transform="translate(0,-0.81)"/>
+    <polygon style="fill:url(#a1794fd5-e1a9-408f-9605-810ce38ab87a)" points="16.99,10.17 8.93,15.33 8.93,17.19 18,11.35"
+        transform="translate(0,-0.81)"/>
+</svg>

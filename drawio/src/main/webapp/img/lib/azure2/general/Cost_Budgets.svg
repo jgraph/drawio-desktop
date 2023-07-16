@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.003237"
+   height="17.196468"
+   viewBox="0 0 17.003237 17.196468"
+   version="1.1"
+   id="svg20194"
+   sodipodi:docname="Cost_Budgets.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview20196"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5"
+     inkscape:cy="8.5974682"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg20194" />
+  <defs
+     id="defs20175">
+    <radialGradient
+       id="b42f2a6e-7039-431b-834c-df913d4ac29c"
+       cx="9.4770002"
+       cy="9.5760002"
+       r="7.8889999"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.5,0.40100002)">
+      <stop
+         offset="0.669"
+         stop-color="#76bc2d"
+         id="stop20166" />
+      <stop
+         offset="0.787"
+         stop-color="#70b22b"
+         id="stop20168" />
+      <stop
+         offset="0.985"
+         stop-color="#5f9825"
+         id="stop20170" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop20172" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title20177">MsPortalFx.base.images-11</title>
+  <g
+     id="a3e62a36-d247-4815-8b25-f526266fc9df"
+     transform="translate(-0.5,-0.40100002)">
+    <g
+       id="g20189">
+      <path
+         d="m 11.609,9.82 v 0 A 4.577,4.577 0 0 0 9.9,8.81 V 6.93 a 4.118,4.118 0 0 1 1.547,0.547 0.134,0.134 0 0 0 0.134,0 0.131,0.131 0 0 0 0.068,-0.115 V 5.849 A 0.134,0.134 0 0 0 11.581,5.733 4.064,4.064 0 0 0 9.9,5.343 V 4.449 A 0.132,0.132 0 0 0 9.767,4.316 H 8.952 A 0.132,0.132 0 0 0 8.819,4.449 V 5.37 a 2.76,2.76 0 0 0 -1.58,0.739 2.159,2.159 0 0 0 -0.669,1.6 2.147,2.147 0 0 0 0.547,1.528 4.625,4.625 0 0 0 1.7,1.006 v 1.8 A 4.391,4.391 0 0 1 7.849,11.799 3.133,3.133 0 0 1 6.93,11.339 0.136,0.136 0 0 0 6.791,11.328 0.135,0.135 0 0 0 6.719,11.447 V 13 a 0.132,0.132 0 0 0 0.071,0.118 4.667,4.667 0 0 0 2.027,0.529 V 14.7 A 0.132,0.132 0 0 0 8.95,14.832 H 9.761 A 0.132,0.132 0 0 0 9.9,14.7 v -1.1 a 2.883,2.883 0 0 0 1.65,-0.716 2.129,2.129 0 0 0 0.619,-1.588 2.071,2.071 0 0 0 -0.56,-1.476 z m -1.186,1.538 v 0.01 a 0.606,0.606 0 0 1 -0.527,0.638 v -1.321 c 0.346,0.191 0.523,0.415 0.527,0.673 z M 8.313,7.615 A 0.618,0.618 0 0 1 8.819,6.969 V 8.355 A 0.873,0.873 0 0 1 8.313,7.615 Z"
+         id="path20179"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <circle
+         cx="2.027"
+         cy="8.4960003"
+         r="1.527"
+         id="circle20181"
+         style="fill:#f78d1e" />
+      <circle
+         cx="4.1020002"
+         cy="3.9319999"
+         r="1.527"
+         id="circle20183"
+         style="fill:#f78d1e" />
+      <path
+         d="m 11.636,1.891 a 7.742,7.742 0 0 0 -0.947,-0.2 1.512,1.512 0 0 1 -0.252,1.146 6.825,6.825 0 1 1 -6.754,10.331 l 0.6,-0.225 A 0.132,0.132 0 0 0 4.321,12.717 L 2.172,10.945 a 0.133,0.133 0 0 0 -0.216,0.081 l -0.448,2.747 a 0.133,0.133 0 0 0 0.178,0.146 l 0.883,-0.332 a 8,8 0 1 0 9.067,-11.7 z"
+         id="path20185"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b42f2a6e-7039-431b-834c-df913d4ac29c)" />
+      <circle
+         cx="8.566"
+         cy="1.928"
+         r="1.527"
+         id="circle20187"
+         style="fill:#f78d1e" />
+    </g>
+  </g>
+  <metadata
+     id="metadata20192">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.CostBudgets()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-11</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

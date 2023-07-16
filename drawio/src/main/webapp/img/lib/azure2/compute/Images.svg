@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a9383d60-b33f-4c78-8dbe-8ab68ace6065"
+   width="18"
+   height="16.629999"
+   viewBox="0 0 18 16.629999"
+   version="1.1"
+   sodipodi:docname="Images.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview7419"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9.2"
+     inkscape:cy="8.5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a9383d60-b33f-4c78-8dbe-8ab68ace6065" />
+  <defs
+     id="defs7390">
+    <linearGradient
+       id="a7cb4d9d-9f89-4e53-8eda-938427310066"
+       x1="8.8000002"
+       y1="12.87"
+       x2="8.8000002"
+       y2="0.87"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop7380" />
+      <stop
+         offset="0.82"
+         stop-color="#5ea0ef"
+         id="stop7382" />
+    </linearGradient>
+    <linearGradient
+       id="eab4c6b4-621d-4d9b-b611-15ceb58765b1"
+       x1="8.8100004"
+       y1="17.5"
+       x2="8.8100004"
+       y2="12.87"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1490df"
+         id="stop7385" />
+      <stop
+         offset="0.98"
+         stop-color="#1f56a3"
+         id="stop7387" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title7392">Icon-compute-33</title>
+  <rect
+     x="0"
+     y="0"
+     width="18"
+     height="12"
+     rx="0.60000002"
+     id="rect7394"
+     style="fill:url(#a7cb4d9d-9f89-4e53-8eda-938427310066)" />
+  <polygon
+     points="8.8,10.37 8.8,6.87 11.8,5.12 11.8,8.61 "
+     id="polygon7396"
+     style="fill:#50e6ff"
+     transform="translate(0.2,-0.87)" />
+  <polygon
+     points="5.8,5.12 8.81,3.37 11.8,5.12 8.81,6.88 "
+     id="polygon7398"
+     style="fill:#c3f1ff"
+     transform="translate(0.2,-0.87)" />
+  <polygon
+     points="5.8,8.61 5.8,5.12 8.8,6.88 8.8,10.37 "
+     id="polygon7400"
+     style="fill:#9cebff"
+     transform="translate(0.2,-0.87)" />
+  <polygon
+     points="8.8,10.37 5.8,8.61 8.8,6.87 "
+     id="polygon7402"
+     style="fill:#c3f1ff"
+     transform="translate(0.2,-0.87)" />
+  <polygon
+     points="8.8,10.37 11.8,8.61 8.8,6.87 "
+     id="polygon7404"
+     style="fill:#9cebff"
+     transform="translate(0.2,-0.87)" />
+  <path
+     d="M 12.61,15.63 C 10.83,15.35 10.76,14.07 10.77,12 H 7.2 c 0,2.07 0,3.35 -1.81,3.63 a 1,1 0 0 0 -0.88,1 h 9 a 1.06,1.06 0 0 0 -0.9,-1 z"
+     id="path7406"
+     inkscape:connector-curvature="0"
+     style="fill:url(#eab4c6b4-621d-4d9b-b611-15ceb58765b1)" />
+  <path
+     d="M 4.88,1.2 H 2.13 A 0.66,0.66 0 0 0 1.47,1.86 V 4.62 A 0.33,0.33 0 0 0 1.8,4.95 H 2.02 A 0.33,0.33 0 0 0 2.35,4.62 V 2.07 H 4.88 A 0.33,0.33 0 0 0 5.2,1.74 V 1.53 A 0.33,0.33 0 0 0 4.88,1.2 Z"
+     id="path7408"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="M 4.88,9.86 H 2.34 V 7.33 A 0.33,0.33 0 0 0 2.01,7 H 1.8 A 0.33,0.33 0 0 0 1.47,7.33 v 2.8 A 0.66,0.66 0 0 0 2.13,10.8 H 4.88 A 0.34,0.34 0 0 0 5.2,10.41 V 10.19 A 0.33,0.33 0 0 0 4.88,9.86 Z"
+     id="path7410"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="M 15.91,1.23 H 13.2 a 0.33,0.33 0 0 0 -0.33,0.33 v 0.21 a 0.33,0.33 0 0 0 0.33,0.36 h 2.53 v 2.51 a 0.33,0.33 0 0 0 0.33,0.33 h 0.23 A 0.33,0.33 0 0 0 16.62,4.64 V 1.89 A 0.66,0.66 0 0 0 15.91,1.23 Z"
+     id="path7412"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="M 16.25,7.02 H 16.04 A 0.33,0.33 0 0 0 15.71,7.35 V 9.89 H 13.2 a 0.33,0.33 0 0 0 -0.33,0.33 v 0.22 a 0.33,0.33 0 0 0 0.33,0.33 h 2.75 a 0.67,0.67 0 0 0 0.67,-0.66 V 7.35 A 0.33,0.33 0 0 0 16.25,7.02 Z"
+     id="path7414"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <metadata
+     id="metadata7416">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Compute</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-compute-33</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="e00fef30-156c-4930-8b65-3a593543aa1d"
+   width="17.375898"
+   height="15.59"
+   viewBox="0 0 17.375898 15.59"
+   version="1.1"
+   sodipodi:docname="Cost_Management.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview20600"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.6879492"
+     inkscape:cy="8.07"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="e00fef30-156c-4930-8b65-3a593543aa1d" />
+  <defs
+     id="defs20589">
+    <linearGradient
+       id="a45ba9b5-2e08-4c39-8916-0bab184f06e9"
+       x1="9"
+       y1="1.48"
+       x2="9"
+       y2="17.07"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#76bc2d"
+         id="stop20573" />
+      <stop
+         offset="0.32"
+         stop-color="#73b82c"
+         id="stop20575" />
+      <stop
+         offset="0.65"
+         stop-color="#6cab29"
+         id="stop20577" />
+      <stop
+         offset="0.99"
+         stop-color="#5e9724"
+         id="stop20579" />
+      <stop
+         offset="1"
+         stop-color="#5e9624"
+         id="stop20581" />
+    </linearGradient>
+    <linearGradient
+       id="e74e2f36-f70f-4351-9609-a084522a8ba7"
+       x1="6.1300001"
+       y1="9.2799997"
+       x2="11.87"
+       y2="9.2799997"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#fff"
+         id="stop20584" />
+      <stop
+         offset="1"
+         stop-color="#fff"
+         id="stop20586" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title20591">Icon-general-19</title>
+  <path
+     d="M 12.037949,0 H 5.3379492 a 2,2 0 0 0 -1.73,1 L 0.26794919,6.8 a 2,2 0 0 0 0,2 l 3.34000001,5.79 a 2,2 0 0 0 1.73,1 h 6.6999998 a 2,2 0 0 0 1.73,-1 l 3.34,-5.79 a 2,2 0 0 0 0,-2 l -3.34,-5.8 a 2,2 0 0 0 -1.73,-1 z"
+     id="path20593"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a45ba9b5-2e08-4c39-8916-0bab184f06e9)" />
+  <path
+     d="m 8.7579492,3.33 a 0.82,0.82 0 0 1 -0.82,-0.81 0.82,0.82 0 0 1 1.64,0 0.82,0.82 0 0 1 -0.82,0.81 z m -0.82,9.75 a 0.82,0.82 0 1 0 1.64,0 0.82,0.82 0 0 0 -1.64,0 z m 0.84,-2.7 a 1.5,1.5 0 0 1 -1.51,-0.86 l -1.45,0.28 a 2.68,2.68 0 0 0 2.87,1.72 c 1.6899998,0 2.9099998,-0.89 2.9099998,-2.13 a 2.07,2.07 0 0 0 -1.12,-2 13,13 0 0 0 -1.7899998,-0.54 c -0.67,-0.16 -1.1,-0.53 -1.1,-1 a 1,1 0 0 1 1.1,-0.87 1.4,1.4 0 0 1 1.29,0.69 L 11.227949,5.27 A 2.56,2.56 0 0 0 8.6879492,3.97 c -1.18,0 -2.55,0.52 -2.55,2 0,1.81 1.11,2.17 2.69,2.48 0.37,0.07 1.2299998,0.32 1.2299998,1 -0.04,0.38 -0.3699998,0.93 -1.2799998,0.93 z"
+     id="path20595"
+     inkscape:connector-curvature="0"
+     style="opacity:0.9;fill:url(#e74e2f36-f70f-4351-9609-a084522a8ba7)" />
+  <metadata
+     id="metadata20597">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-19</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

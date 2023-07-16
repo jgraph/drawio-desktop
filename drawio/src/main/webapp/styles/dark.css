@@ -1,0 +1,294 @@
+:root {
+	--dark-color: #18141D;
+	--header-color: #363238;
+	--panel-color: #2A252F;
+	--text-color: #8D8D8D;
+	--border-color: #505759;
+}
+.geEditor * {
+	border-color:#000;
+}
+html body .geBackground {
+	background:var(--dark-color);
+}
+html body .geStatus > *, html body .geUser {
+	color:var(--text-color);
+}
+html body .geDiagramContainer {
+	background-color:var(--dark-color);
+}
+html body div.geMenubarContainer, html body .geFormatContainer,
+html body div.geMenubarContainer .geStatus:hover {
+	background-color:var(--panel-color);
+	border-color:#000000;
+}
+html body .geActiveItem {
+	background-color:#e0e0e0;
+}
+html body .mxCellEditor {
+	color: #f0f0f0;
+}
+html body.geEditor div.mxPopupMenu {
+	border:1px solid var(--border-color);
+	background:var(--panel-color);
+	box-shadow:none;
+}
+.geEditor .geTabItem {
+	background:var(--panel-color);
+	border-color:#000000;
+}
+.geTabContainer {
+	border-left-color:#000000;
+	border-right-color:#000000;
+}
+.geTabContainer div {
+	border-color:var(--dark-color);
+}
+html body .geShapePicker {
+	box-shadow:none;
+}
+html body .geTabContainer div.geActivePage, html body .geRuler {
+	background:var(--dark-color);
+}
+.geSearchSidebar input, .geBtnStepper, .geBtnUp,
+html body a.geStatus .geStatusBox {
+	border-color: var(--border-color);
+}
+html body.geEditor div.mxPopupMenu hr {
+	background-color:var(--border-color);
+}
+html body .geDragPreview {
+	border: 1px dashed #cccccc;
+}
+html body .geMenubarContainer .geItem:active, html .geSidebarContainer button:active {
+	opacity: 0.7;
+}
+html body, html body .geFooterContainer, html body #geFooterItem1, html body textarea,
+html body .mxWindowTitle, html body .geDialogTitle, html body .geDialogFooter,
+html .geEditor div.mxTooltip, html .geHint
+{
+	background: var(--panel-color);
+	color:#c0c0c0;
+}
+html > body > div > div.geToolbarContainer.geSimpleMainMenu,
+html > body > div > div.geToolbarContainer.geSimpleMainMenu .geToolbarContainer {
+	background:var(--header-color);
+}
+html > body > div > div.geToolbarContainer.geSimpleMainMenu,
+html body .mxWindowTitle, .geDialogTitle, .geDialogFooter {
+	border-color:black !important;
+}
+html body .geFooterContainer a, html body .geDiagramContainer a, html body .geStatus a {
+	color:#337ab7;
+}
+html body div.mxRubberband {
+	border:1px dashed #ffffff !important;
+	background:var(--border-color) !important;
+}
+html body .geTemplate {
+	color:#000000;
+}
+html body .geSidebar {
+	opacity:0.7;
+}
+html body.geEditor .geSidebarContainer div.geDropTarget {
+	color:#767676;
+	border-color:#767676;
+}
+html body.geEditor .gePrimaryBtn:not([disabled]),
+html body.geEditor .geBigButton:not([disabled]) {
+	background:var(--header-color);
+	border: 1px solid var(--border-color);
+	color:#aaaaaa;
+}
+html body.geEditor .geBtn, html body.geEditor button,
+html body.geEditor button:hover:not([disabled]),
+html body.geEditor button:focus, html body.geEditor select,
+html body.geEditor .geColorBtn {
+	background:none;
+	border: 1px solid var(--border-color);
+	color:#aaaaaa;
+}
+html body .geBtn:hover:not([disabled]) {
+	color: #c0c0c0;
+}
+html body.geEditor button.geAdaptiveAsset:hover:not([disabled]) {
+	background:#fff;
+}
+html body.geEditor button.geAdaptiveAsset:not([disabled]) {
+	border-color:#a2a2a2;
+}
+html body.geEditor button:hover:not([disabled]):not(.geAdaptiveAsset),
+html body.geEditor select:hover:not([disabled]),
+html body.geEditor .geColorBtn:hover:not([disabled]) {
+	background:var(--dark-color);
+	border: 1px solid var(--border-color);
+}
+html body.geEditor .geSidebar, html body.geEditor .geSidebarContainer .geTitle, html body.geEditor input, html body.geEditor textarea,
+html body.geEditor .geBaseButton, html body.geEditor .geSidebarTooltip, html body.geEditor .geBaseButton, html body.geEditor select,
+html body.geEditor .geSidebarContainer .geDropTarget, html body.geEditor .geToolbarContainer {
+	background:var(--panel-color);
+	border-color:var(--dark-color);
+	color:#aaaaaa;
+}
+html body.geEditor .geSidebar, html body.geEditor .geSidebarContainer .geTitle, html body.geEditor input, html body.geEditor textarea,
+html body.geEditor .geBaseButton, html body.geEditor .geSidebarTooltip, html body.geEditor .geBaseButton, html body.geEditor select,
+html body.geEditor .geSidebarContainer .geDropTarget {
+	box-shadow:none;
+}
+html body.geEditor button, html body.geEditor input,
+html body.geEditor textarea, html body.geEditor select,
+.geInsertTablePicker, .geInsertTablePicker * {
+	border-color:var(--border-color);
+}
+html body .geMenubarContainer .geToolbarContainer, html body div.geToolbarContainer, html body .geToolbar {
+	border-color:#000000;
+	box-shadow:none;
+}
+html body .geSketch .geToolbarContainer {
+	border-style:none;
+}
+html body.geEditor .geColorBtn, html body .geToolbarContainer {
+	box-shadow:none;
+}
+html body .geSidebarTooltip {
+	border:1px solid var(--border-color);
+}
+html body .geSprite, html body .geSocialFooter img, html body .mxPopupMenuItem>img, .geAdaptiveAsset {
+	filter:invert(100%);
+}
+.geAdaptiveAsset {
+	color: #333333;
+}
+.geInverseAdaptiveAsset {
+	filter:none !important
+}
+html body .geSidebarFooter {
+	border-color:var(--dark-color);
+}
+html body .geFormatSection {
+	border-bottom:1px solid var(--dark-color);
+	border-color:var(--dark-color);
+}
+html body .geDiagramContainer {
+	border-color:var(--border-color);
+}
+html body .geSidebarContainer a, html body .geMenubarContainer a, html body .geToolbar a {
+	color:#c0c0c0;
+}
+html body .geMenubarMenu {
+	border-color:var(--border-color) !important;
+}
+html body .geToolbarMenu, html body .geFooterContainer, html body .geFooterContainer td {
+	border-color:var(--border-color);
+}
+html body .geFooterContainer a {
+	background-color:none;
+}
+html body .geBigStandardButton {
+	border: 1px solid var(--border-color);
+}
+html body .geFooterContainer td:hover, html body #geFooterItem1:hover, html body .geBigStandardButton:hover {
+	background-color:#000000;
+}
+html body .geSidebarContainer, html body .geDiagramBackdrop {
+	background:var(--panel-color);
+}
+html body .geBackgroundPage {
+	box-shadow:none;
+}
+.gePropHeader, .gePropRow, .gePropRowDark, .gePropRowCell, .gePropRow>.gePropRowCell, .gePropRowAlt>.gePropRowCell, .gePropRowDark>.gePropRowCell, .gePropRowDarkAlt>.gePropRowCell {
+	background:var(--panel-color) !important;
+	border-color:var(--panel-color) !important;
+	color:#cccccc !important;
+	font-weight:normal !important;
+}
+html body tr.mxPopupMenuItem {
+	color:#cccccc;
+}
+html body.geEditor table.mxPopupMenu tr.mxPopupMenuItemHover {
+	background:var(--dark-color);
+	color:#cccccc;
+}
+html body .geSidebarContainer .geTitle:hover, html body .geSidebarContainer .geItem:hover,
+html body .geMenubarContainer .geItem:hover, html body.geEditor .geBaseButton:hover {
+	background:var(--dark-color);
+}
+html body .geToolbarContainer .geSeparator {
+	background-color:var(--border-color);
+}
+html body .geVsplit, html body table.mxPopupMenu hr {
+	border-color:var(--border-color);
+	background-color:var(--dark-color);
+}
+html body .geHsplit {
+	border-color:#000;
+}
+html body .geHsplit:hover {
+	background-color:#000;
+}
+html body .geToolbarContainer .geButton:hover, html body .geToolbarContainer .geButton:active,
+html body .geToolbarContainer .geLabel:hover, html body .geToolbarContainer .geLabel:active,
+html body .geVsplit:hover, html .geSidebarContainer button:active:not([disabled]) {
+	background-color:var(--dark-color);
+}
+html body .geToolbarContainer .geButton.geAdaptiveAsset:hover {
+	background-color: #fff;
+}
+html body .geDialog, html body div.mxWindow {
+	background:var(--panel-color);
+	border-color:var(--header-color);
+}
+html body .geDialog {
+	box-shadow:none;
+}
+.geHint {
+	-webkit-box-shadow: 1px 1px 1px 0px #ccc;
+	-moz-box-shadow: 1px 1px 1px 0px #ccc;
+	box-shadow: 1px 1px 1px 0px #ccc;
+}
+html .geEditor ::-webkit-scrollbar-thumb {
+	background-color: var(--header-color);
+}
+html .geEditor ::-webkit-scrollbar-thumb:hover, .geVsplit:hover {
+	background-color:#a0a0a0;
+}
+html body a.geStatus .geStatusAlertOrange {
+	background-color:rgb(187, 103, 0);
+	border:rgb(240, 135, 5);
+}
+html body a.geStatus .geStatusAlert {
+	background-color:#a20025;
+	border:1px solid #bd002b;
+	color:#fff !important;
+}
+html body a.geStatus .geStatusAlert:hover {
+	background-color:#a20025;
+	border-color:#bd002b;
+}
+html body .geCommentContainer {
+	background-color: transparent;
+	border-width: 1px;
+	box-shadow: none;
+	color: inherit;
+}
+
+html .geNotification-bell * {
+  background-color: #aaa;
+  box-shadow: none;
+}
+
+html .geNotification-count {
+  color: #DEEBFF;
+}
+
+html .geNotifPanel .header {
+  height: 30px;
+  width: 100%;
+  background: #424242;
+  color: #ccc;
+}
+
+.geNotifPanel .notifications {
+    background-color: #707070;
+}

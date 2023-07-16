@@ -1,0 +1,36 @@
+<?xml version="1.0" standalone="no"?>
+<svg contentScriptType="text/ecmascript" zoomAndPan="magnify" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" baseProfile="full"
+    contentStyleType="text/css" id="b7f3cc8c-0f17-4df2-b094-aa6721afea52" sodipodi:docname="10016-icon-service-Free-Services.svg"
+    version="1.1" width="16.75" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:cc="http://creativecommons.org/ns#"
+    preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.3 (2405546, 2018-03-11)" viewBox="0 0 16.75 15.48"
+    height="15.48" xmlns="http://www.w3.org/2000/svg">
+    <defs id="defs2230">
+        <linearGradient x1="9" y1="12.43" x2="9" gradientUnits="userSpaceOnUse" y2="1.26" id="f2d4c630-5e56-4dbd-bc1a-8308f98f4aba">
+            <stop offset="0" stop-color="#0078d4" id="stop2220"/>
+            <stop offset="0.82" stop-color="#5ea0ef" id="stop2222"/>
+        </linearGradient>
+        <linearGradient x1="9" y1="16.74" x2="9" gradientUnits="userSpaceOnUse" y2="12.43" id="ae31fcfe-e9ed-4030-a840-88293eb566e7">
+            <stop offset="0.15" stop-color="#ccc" id="stop2225"/>
+            <stop offset="1" stop-color="#707070" id="stop2227"/>
+        </linearGradient>
+    </defs>
+    <rect rx="0.56" x="0" width="16.75" height="11.17" y="0" style="fill:url(#f2d4c630-5e56-4dbd-bc1a-8308f98f4aba)"/>
+    <polygon style="fill:#50e6ff" points="11.79,6.34 11.79,9.59 9,11.22 9,7.97" transform="translate(-0.62,-1.26)"/>
+    <polygon style="fill:#9cebff" points="9,7.97 9,11.22 6.21,9.59 6.21,6.34" transform="translate(-0.62,-1.26)"/>
+    <polygon style="fill:#c3f1ff" points="9,7.97 9,11.22 6.21,9.59" transform="translate(-0.62,-1.26)"/>
+    <polygon style="fill:#9cebff" points="9,7.97 9,11.22 11.79,9.59" transform="translate(-0.62,-1.26)"/>
+    <path style="fill:url(#ae31fcfe-e9ed-4030-a840-88293eb566e7)" d="M 11.74,14.55 C 10.08,14.29 10.02,13.09 10.02,11.17 
+        H 6.74 c 0,1.92 -0.06,3.12 -1.72,3.38 a 1,1 0 0 0 -0.83,0.93 h 8.38 a 1,1 0 0 0 -0.83,-0.93 z"/>
+    <path style="fill:#c3f1ff" d="m 10.51,4.96 a 3.78,3.78 0 0 1 -2.08,0 L 8.38,4.91 8.19,4.98 A 3.57,3.57 0 0 1 
+        6.12,4.83 v 0 L 5.66,5.1 8.38,6.74 11.17,5.1 10.79,4.88 Z"/>
+    <path style="fill:#ffca00" d="M 11.86,3.74 C 11.77,3.45 11.41,3.04 10.03,3.46 a 3.78,3.78 0 0 0 -1.55,1 4.33,4.33 0 
+        0 1 2.69,-1.73 L 9.96,2.67 10.38,1.86 a 4.34,4.34 0 0 0 -2,2.54 c 0,0 0,0.09 0,0.13 A 5.89,5.89 0 0 0 
+        5.76,0.74000001 L 6.17,1.82 H 4.49 A 6.37,6.37 0 0 1 7.7,3.95 3.42,3.42 0 0 0 6.7,3.33 2.25,2.25 0 0 0 5.22,3.11 
+        0.63,0.63 0 0 0 4.85,3.47 C 4.73,3.75 4.75,4.3 6.08,4.83 A 3.57,3.57 0 0 0 8.15,4.98 L 8.38,4.91 h 0.08 a 
+        3.78,3.78 0 0 0 2.08,0 2.33,2.33 0 0 0 1.28,-0.76 0.62,0.62 0 0 0 0.04,-0.41 z M 6.28,4.41 C 5.5,4.1 5.22,3.78 
+        5.28,3.62 a 0.11,0.11 0 0 1 0.1,-0.08 c 0.1,0 0.42,-0.09 1.15,0.21 A 3,3 0 0 1 7.7,4.61 3.27,3.27 0 0 1 
+        6.28,4.41 Z m 5.1,-0.45 a 2,2 0 0 1 -1,0.56 3.2,3.2 0 0 1 -1.45,0.07 3.34,3.34 0 0 1 1.24,-0.76 c 0.8,-0.25 
+        1.21,-0.18 1.27,0 a 0.17,0.17 0 0 1 -0.06,0.13 z"/>
+</svg>

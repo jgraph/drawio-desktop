@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="f76232ac-3a76-4330-97ca-3f381bd6f190"
+   width="14.050179"
+   height="16.700001"
+   viewBox="0 0 14.050179 16.700001"
+   version="1.1"
+   sodipodi:docname="Hosts.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview7664"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="7.0025221"
+     inkscape:cy="8.3417402"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="f76232ac-3a76-4330-97ca-3f381bd6f190" />
+  <defs
+     id="defs7635">
+    <linearGradient
+       id="aa3419c0-cd8f-4ac0-8da9-8de597fd3cbf"
+       x1="9.0200005"
+       y1="5.46"
+       x2="9.0200005"
+       y2="0.64999998"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.9999091,-0.64999999)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop7620" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop7622" />
+    </linearGradient>
+    <linearGradient
+       id="a07223d6-5912-4349-a93f-23c27741ba44"
+       x1="8.9799995"
+       y1="11.97"
+       x2="8.9799995"
+       y2="7.1700001"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.9999091,-0.64999999)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop7625" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop7627" />
+    </linearGradient>
+    <linearGradient
+       id="f8b2b35f-4e8d-49ce-8b60-0d07f0c093e9"
+       x1="9.0200005"
+       y1="17.34"
+       x2="9.0200005"
+       y2="14.32"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-1.9999091,-0.64999999)">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop7630" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop7632" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title7637">Icon-other-347</title>
+  <path
+     d="m 6.4600909,4.81 h 1 v 9.6 h -1 z"
+     fill="#32bedd"
+     id="path7639" />
+  <path
+     d="M 13.480091,0 H 0.56009092 A 0.58,0.58 0 0 0 9.0924122e-5,0.58000001 V 4.23 A 0.58,0.58 0 0 0 0.57009092,4.81 H 13.480091 a 0.57,0.57 0 0 0 0.57,-0.58 V 0.58000001 A 0.57,0.57 0 0 0 13.480091,0 Z"
+     fill="url(#aa3419c0-cd8f-4ac0-8da9-8de597fd3cbf)"
+     id="path7641"
+     style="fill:url(#aa3419c0-cd8f-4ac0-8da9-8de597fd3cbf)" />
+  <path
+     d="M 13.440091,6.52 H 0.52009092 A 0.57,0.57 0 0 0 9.0924122e-5,7.09 v 3.66 A 0.56,0.56 0 0 0 0.57009092,11.32 H 13.440091 a 0.57,0.57 0 0 0 0.56,-0.57 V 7.09 a 0.58,0.58 0 0 0 -0.56,-0.57 z"
+     fill="url(#a07223d6-5912-4349-a93f-23c27741ba44)"
+     id="path7643"
+     style="fill:url(#a07223d6-5912-4349-a93f-23c27741ba44)" />
+  <circle
+     cx="7.0600915"
+     cy="15.190001"
+     r="1.51"
+     fill="#7fba00"
+     id="circle7645" />
+  <circle
+     cx="7.0200915"
+     cy="15.18"
+     r="1.51"
+     fill="url(#f8b2b35f-4e8d-49ce-8b60-0d07f0c093e9)"
+     id="circle7647"
+     style="fill:url(#f8b2b35f-4e8d-49ce-8b60-0d07f0c093e9)" />
+  <rect
+     x="11.720091"
+     y="0.89999998"
+     width="1.05"
+     height="1.05"
+     rx="0.15000001"
+     fill="#b4ec36"
+     id="rect7649" />
+  <rect
+     x="11.720091"
+     y="2.7099998"
+     width="1.05"
+     height="1.05"
+     rx="0.15000001"
+     fill="#b4ec36"
+     id="rect7651" />
+  <rect
+     x="11.720091"
+     y="7.3899999"
+     width="1.05"
+     height="1.05"
+     rx="0.15000001"
+     fill="#b4ec36"
+     id="rect7655" />
+  <rect
+     x="11.720091"
+     y="9.2000008"
+     width="1.05"
+     height="1.05"
+     rx="0.15000001"
+     fill="#b4ec36"
+     id="rect7657" />
+  <metadata
+     id="metadata7746">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-other-347</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

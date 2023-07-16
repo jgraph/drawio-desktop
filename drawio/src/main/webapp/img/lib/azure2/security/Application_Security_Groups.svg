@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a7e5c284-13cc-4ac5-b842-ecfb3e7bbb73"
+   width="14"
+   height="17.006681"
+   viewBox="0 0 14 17.006681"
+   version="1.1"
+   sodipodi:docname="Application_Security_Groups.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview73440"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="7"
+     inkscape:cy="8.506682"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a7e5c284-13cc-4ac5-b842-ecfb3e7bbb73" />
+  <defs
+     id="defs73413">
+    <linearGradient
+       id="a3df7d19-3d54-4d86-b7b8-c8d5b9b1be6b"
+       x1="9"
+       y1="16.209999"
+       x2="9"
+       y2="0.62"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#1b93eb"
+         id="stop73400" />
+      <stop
+         offset="0.21"
+         stop-color="#2095eb"
+         id="stop73402" />
+      <stop
+         offset="0.44"
+         stop-color="#2e9ced"
+         id="stop73404" />
+      <stop
+         offset="0.69"
+         stop-color="#45a7ef"
+         id="stop73406" />
+      <stop
+         offset="0.95"
+         stop-color="#64b6f1"
+         id="stop73408" />
+      <stop
+         offset="1"
+         stop-color="#6bb9f2"
+         id="stop73410" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title73415">Icon-security-244</title>
+  <path
+     d="m 14,7.94 c 0,4.57 -5.53,8.25 -6.73,9 a 0.43,0.43 0 0 1 -0.46,0 C 5.57,16.19 1.4677822e-8,12.5 1.4677822e-8,7.94 V 2.44 A 0.44,0.44 0 0 1 0.43000001,2 C 4.77,1.89 3.78,0 7,0 c 3.22,0 2.23,1.89 6.53,2 a 0.44,0.44 0 0 1 0.43,0.44 z"
+     id="path73417"
+     inkscape:connector-curvature="0"
+     style="fill:#1b93eb" />
+  <path
+     d="m 13.38,7.98 c 0,4.2 -5.07,7.57 -6.17,8.25 a 0.4,0.4 0 0 1 -0.42,0 C 5.69,15.55 0.62000001,12.18 0.62000001,7.98 v -5 A 0.41,0.41 0 0 1 1,2.5 C 4.94,2.39 4,0.67 7,0.67 c 3,0 2.05,1.76 6,1.83 a 0.41,0.41 0 0 1 0.39,0.4 z"
+     id="path73419"
+     inkscape:connector-curvature="0"
+     style="fill:url(#a3df7d19-3d54-4d86-b7b8-c8d5b9b1be6b)" />
+  <path
+     d="m 8.94,12.22 c -1.07,-0.14 -1,-0.83 -1,-1.94 h -2 c 0,1.11 0,1.8 -1,1.94 a 0.56,0.56 0 0 0 -0.51,0.49 h 5.1 A 0.56,0.56 0 0 0 8.94,12.22 Z"
+     id="path73421"
+     inkscape:connector-curvature="0"
+     style="fill:#1f56a3" />
+  <rect
+     x="2.3000002"
+     y="3.8099999"
+     width="9.1800003"
+     height="6.5"
+     rx="0.31"
+     id="rect73423"
+     style="fill:#1490df" />
+  <rect
+     x="2.8299999"
+     y="4.3200002"
+     width="8.1099997"
+     height="5.3899999"
+     rx="0.16"
+     id="rect73425"
+     style="fill:#ffffff" />
+  <polygon
+     points="8.88,9.42 8.89,7.52 10.53,6.57 10.54,8.46 "
+     id="polygon73427"
+     style="fill:#0078d4"
+     transform="translate(-2,-0.5)" />
+  <polygon
+     points="7.24,6.56 8.88,5.61 10.53,6.56 8.89,7.52 "
+     id="polygon73429"
+     style="fill:#83b9f9"
+     transform="translate(-2,-0.5)" />
+  <polygon
+     points="7.23,8.46 7.23,6.56 8.89,7.52 8.88,9.42 "
+     id="polygon73431"
+     style="fill:#5ea0ef"
+     transform="translate(-2,-0.5)" />
+  <polygon
+     points="8.88,9.42 8.88,9.42 10.53,8.46 8.89,7.51 8.88,7.52 "
+     id="polygon73433"
+     style="opacity:0.2;fill:#5ea0ef"
+     transform="translate(-2,-0.5)" />
+  <polygon
+     points="8.88,9.44 8.88,9.44 7.23,8.49 8.87,7.54 8.88,7.54 "
+     id="polygon73435"
+     style="opacity:0.2;fill:#83b9f9"
+     transform="translate(-2,-0.5)" />
+  <metadata
+     id="metadata73437">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:false</rdf:li>
+      <rdf:li>category: Security</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-security-244</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

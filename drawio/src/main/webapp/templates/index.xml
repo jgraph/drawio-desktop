@@ -1,0 +1,198 @@
+<templates>
+<clibs name="azure">
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/additional_or_support.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/ai_machine_learning.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/apps_and_system_logos.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/azure.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/azure_additional_or_support.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/buildings.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/databases.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/developer.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/devices.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/files.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/generic.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/infrastructure.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/integration.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/integration_patterns.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/iot_devices.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/office365.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/others.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/power_bi.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/powerapps_and_flows.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/sap.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/servers.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/users_and_roles.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/integration/deprecated.xml</add>
+</clibs>
+<clibs name="fortinet">
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Buildings.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Cloud.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Connector_DevOps_API.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Devices.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Features.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Generic_Devices.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Generic_Products.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Generic_Technology.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_OT_and_IoT.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_People_and_NOC_SOC.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_People_and_Red_Blue_Team.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Platform_Core_Elements.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Products.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_SaaS_Family_of_Offerings.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Solutions_and_Deployment_Scenarios.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Threats_and_Threat_Services.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_Vertical_Related.xml</add>
+  <add>Uhttps://jgraph.github.io/drawio-libs/libs/fortinet/Fortinet_VM_Components.xml</add>
+</clibs>
+<template url="basic/classes.xml" title="classDiagram" libs="general;uml" tags="classDiagram;Classes"/>
+<template url="basic/flowchart.xml" title="flowchart" libs="general;flowchart" tags="flowchart;Flowchart"/>
+<template url="basic/orgchart.xml" title="orgChart" libs="general;basic;arrows" tags="orgChart;Orgchart"/>
+<template url="basic/swimlanes.xml" title="swimlaneDiagram" libs="general;flowchart;bpmn" tags="swimlaneDiagram;Swimlanes"/>
+<template url="basic/erd.xml" title="entityRelationshipDiagram" libs="general;er" tags="entityRelationshipDiagram;Erd"/>
+<template url="basic/sequence.xml" title="Sequence Diagram" tags="Sequence;Diagram;Sequence"/>
+<template url="basic/kanban.xml" title="Simple Kanban Board" tags="Simple;Kanban;Board;Kanban"/>
+<template url="basic/cross.xml" title="Cross-Functional Flowchart" tags="Cross-Functional;Flowchart;Cross"/>
+<template url="business/accd.xml" name="Accd" libs="general" tags="Accd"/>
+<template url="business/archimate.xml" name="Archimate" libs="general;archimate3" tags="Archimate"/>
+<template url="business/bpmn.xml" name="Bpmn" libs="general;bpmn" tags="Bpmn"/>
+<template url="business/business_model_1.xml" name="Business model 1" libs="general;signs" tags="Business;model"/>
+<template url="business/business_model_2.xml" name="Business model 2" libs="general" tags="Business;model"/>
+<template url="business/business_model_canvas_1.xml" name="Business model canvas 1" libs="general;signs" tags="Business;model;canvas"/>
+<template url="business/ishikawa_1.xml" name="Ishikawa 1" libs="general" tags="Ishikawa"/>
+<template url="business/ishikawa_2.xml" name="Ishikawa 2" libs="general" tags="Ishikawa"/>
+<template url="business/pert_1.xml" name="Pert 1" libs="general" tags="Pert"/>
+<template url="business/pert_2.xml" name="Pert 2" libs="general" tags="Pert"/>
+<template url="business/swimlane.xml" name="Swimlane" tags="Swimlane"/>
+<template url="business/timeline_1.xml" name="Timeline 1" libs="general" tags="Timeline"/>
+<template url="business/timeline_2.xml" name="Timeline 2" libs="general" tags="Timeline"/>
+<template url="business/timeline_3.xml" name="Timeline 3" libs="general" tags="Timeline"/>
+<template url="business/timeline_4.xml" name="Timeline 4" libs="general" tags="Timeline"/>
+<template url="charts/bar_chart_1.xml" name="Bar chart 1" libs="general" tags="Bar;chart"/>
+<template url="charts/coc.xml" name="Coc" libs="general" tags="Coc"/>
+<template url="charts/org_chart_1.xml" name="Org chart 1" libs="general" tags="Org;chart"/>
+<template url="charts/org_chart_2.xml" name="Org chart 2" libs="general" tags="Org;chart"/>
+<template url="charts/work_breakdown_structure.xml" name="Work breakdown structure" libs="general" tags="Work;breakdown;structure"/>
+<template url="cloud/aws/aws_1.xml" name="Aws 1" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_2.xml" name="Aws 2" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_3.xml" name="Aws 3" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_4.xml" name="Aws 4" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_5.xml" name="Aws 5" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_6.xml" name="Aws 6" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_7.xml" name="Aws 7" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_8.xml" name="Aws 8" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_9.xml" name="Aws 9" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_10.xml" name="Aws 10" libs="general;aws4" tags="Aws"/>
+<template url="cloud/aws/aws_3d.xml" name="Aws 3d" libs="general;aws3d" tags="Aws;3d"/>
+<template url="cloud/azure/azure_1.xml" name="Azure 1" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_2.xml" name="Azure 2" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_3.xml" name="Azure 3" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_4.xml" name="Azure 4" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_5.xml" name="Azure 5" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_6.xml" name="Azure 6" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_7.xml" name="Azure 7" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_8.xml" name="Azure 8" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/azure/azure_9.xml" name="Azure 9" libs="general;azure;mscae" clibs="azure" tags="Azure"/>
+<template url="cloud/gcp/gcp_backup_and_archive_api_hosting.xml" name="Gcp backup and archive api hosting" libs="gcp2" tags="Gcp;backup;and;archive;api;hosting"/>
+<template url="cloud/gcp/gcp_big_data_complex_event_processing.xml" name="Gcp big data complex event processing" libs="gcp2" tags="Gcp;big;data;complex;event;processing"/>
+<template url="cloud/gcp/gcp_dev_test_continuous_delivery_with_spinnaker.xml" name="Gcp dev test continuous delivery with spinnaker" libs="gcp2" tags="Gcp;dev;test;continuous;delivery;with;spinnaker"/>
+<template url="cloud/gcp/gcp_digital_marketing_dmp_data_warehouse.xml" name="Gcp digital marketing dmp data warehouse" libs="gcp2" tags="Gcp;digital;marketing;dmp;data;warehouse"/>
+<template url="cloud/gcp/gcp_financial_services_monte_carlo_simulations.xml" name="Gcp financial services monte carlo simulations" libs="gcp2" tags="Gcp;financial;services;monte;carlo;simulations"/>
+<template url="cloud/gcp/gcp_gaming_backend_database.xml" name="Gcp gaming backend database" libs="gcp2" tags="Gcp;gaming;backend;database"/>
+<template url="cloud/gcp/gcp_general_app_engine_and_cloud_endpoints.xml" name="Gcp general app engine and cloud endpoints" libs="gcp2" tags="Gcp;general;app;engine;and;cloud;endpoints"/>
+<template url="cloud/gcp/gcp_internet_of_things_mqtt_to_pubsub_broker.xml" name="Gcp internet of things mqtt to pubsub broker" libs="gcp2" tags="Gcp;internet;of;things;mqtt;to;pubsub;broker"/>
+<template url="cloud/gcp/gcp_lifesciences_genomics_secondary_analysis.xml" name="Gcp lifesciences genomics secondary analysis" libs="gcp2" tags="Gcp;lifesciences;genomics;secondary;analysis"/>
+<template url="cloud/gcp/gcp_media_hybrid_rendering.xml" name="Gcp media hybrid rendering" libs="gcp2" tags="Gcp;media;hybrid;rendering"/>
+<template url="cloud/gcp/gcp_retail_beacons_and_targeted_marketing.xml" name="Gcp retail beacons and targeted marketing" libs="gcp2" tags="Gcp;retail;beacons;and;targeted;marketing"/>
+<template url="cloud/gcp/gcp_websites_content_hosting.xml" name="Gcp websites content hosting" libs="gcp2" tags="Gcp;websites;content;hosting"/>
+<template url="cloud/ibm/ibm_bda_reference_architecture.xml" name="Ibm bda reference architecture" libs="general;ibm" tags="Ibm;bda;reference;architecture"/>
+<template url="cloud/ibm/ibm_blockchain.xml" name="Ibm blockchain" libs="general;ibm" tags="Ibm;blockchain"/>
+<template url="cloud/ibm/ibm_cognitive_conversation.xml" name="Ibm cognitive conversation" libs="general;ibm" tags="Ibm;cognitive;conversation"/>
+<template url="cloud/ibm/ibm_cognitive_discovery.xml" name="Ibm cognitive discovery" libs="general;ibm" tags="Ibm;cognitive;discovery"/>
+<template url="cloud/ibm/ibm_iot_architecture.xml" name="Ibm iot architecture" libs="general;ibm" tags="Ibm;iot;architecture"/>
+<template url="cloud/ibm/ibm_microservices.xml" name="Ibm microservices" libs="general;ibm" tags="Ibm;microservices"/>
+<template url="cloud/ibm/ibm_private_cloud.xml" name="Ibm private cloud" libs="general;ibm" tags="Ibm;private;cloud"/>
+<template url="cloud/ibm/ibm_vcenter_server_platform.xml" name="Ibm vcenter server platform" libs="general;ibm" tags="Ibm;vcenter;server;platform"/>
+<template url="cloud/ibm/ibm_vpc_architecture.xml" name="Ibm vpc architecture" libs="general;ibm" tags="Ibm;vpc;architecture"/>
+<template url="engineering/cabinet.xml" name="Cabinet" libs="general;cabinets" tags="Cabinet"/>
+<template url="engineering/electrical_1.xml" name="Electrical 1" libs="general;electrical" tags="Electrical"/>
+<template url="engineering/electrical_2.xml" name="Electrical 2" libs="general;electrical" tags="Electrical"/>
+<template url="flowcharts/cross_functional_flowchart_1.xml" name="Cross functional flowchart 1" libs="general;flowchart" tags="Cross;functional;flowchart"/>
+<template url="flowcharts/cross_functional_flowchart_2.xml" name="Cross functional flowchart 2" libs="general;flowchart" tags="Cross;functional;flowchart"/>
+<template url="flowcharts/data_flow_1.xml" name="Data flow 1" libs="general;uml" tags="Data;flow"/>
+<template url="flowcharts/data_flow_2.xml" name="Data flow 2" libs="general;uml" tags="Data;flow"/>
+<template url="flowcharts/data_flow_3.xml" name="Data flow 3" libs="general;uml" tags="Data;flow"/>
+<template url="flowcharts/epc.xml" name="Epc" libs="general;flowchart" tags="Epc"/>
+<template url="flowcharts/flowchart_1.xml" name="Flowchart 1" libs="general;flowchart" tags="Flowchart"/>
+<template url="flowcharts/flowchart_2.xml" name="Flowchart 2" libs="general;flowchart" tags="Flowchart"/>
+<template url="flowcharts/workflow_1.xml" name="Workflow 1" libs="general;flowchart" tags="Workflow"/>
+<template url="maps/concept_map_1.xml" name="Concept map 1" libs="general" tags="Concept;map"/>
+<template url="maps/concept_map_2.xml" name="Concept map 2" libs="general" tags="Concept;map"/>
+<template url="maps/living_beings_mind_map.xml" name="Living beings mind map" libs="general" tags="Living;beings;mind;map"/>
+<template url="maps/mind_map.xml" name="Mind map" libs="general" tags="Mind;map"/>
+<template url="maps/site_map.xml" name="Site map" libs="general" tags="Site;map"/>
+<template url="network/active_directory.xml" name="Active directory" libs="general;citrix" tags="Active;directory"/>
+<template url="network/arista.xml" name="Arista" libs="general" clibs="Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-libs%2Flibs%2F%2Farista.xml" tags="Arista"/>
+<template url="network/cisco_1.xml" name="Cisco 1" libs="general;cisco" tags="Cisco"/>
+<template url="network/cisco_2.xml" name="Cisco 2" libs="general;cisco" tags="Cisco"/>
+<template url="network/citrix.xml" name="Citrix" libs="general;citrix" tags="Citrix"/>
+<template url="network/enterprise_1.xml" name="Enterprise 1" libs="general;citrix" tags="Enterprise"/>
+<template url="network/fortinet.xml" name="Fortinet" libs="general" clibs="fortinet" tags="Fortinet"/>
+<template url="network/internet.xml" name="Internet" libs="general;network" tags="Internet"/>
+<template url="network/lan.xml" name="Lan" libs="general;network" tags="Lan"/>
+<template url="network/network.xml" name="Network" libs="general" clibs="Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-libs%2Flibs%2F%2Fflat-color-icons.xml" tags="Network"/>
+<template url="network/telecomm.xml" name="Telecomm" libs="general;network" tags="Telecomm"/>
+<template url="network/veeam.xml" name="Veeam" libs="general;veeam" tags="Veeam"/>
+<template url="network/wireless_home_network.xml" name="Wireless home network" libs="general;network;clipart" tags="Wireless;home;network"/>
+<template url="other/block.xml" name="Block" libs="general;" tags="Block"/>
+<template url="other/cycle_1.xml" name="Cycle 1" libs="general;" tags="Cycle"/>
+<template url="other/decision_tree.xml" name="Decision tree" libs="general;" tags="Decision;tree"/>
+<template url="other/delivery_diagram.xml" name="Delivery diagram" libs="general;" clibs="Uhttps%3A%2F%2Fjgraph.github.io%2Fdrawio-libs%2Flibs%2F%2Fdelivery-icons.xml" tags="Delivery;diagram"/>
+<template url="other/educational.xml" name="Educational" libs="general;" tags="Educational"/>
+<template url="other/floor_plan.xml" name="Floor plan" libs="general;floorplan" tags="Floor;plan"/>
+<template url="other/infographic_1.xml" name="Infographic 1" libs="general;mockups;signs" tags="Infographic"/>
+<template url="other/infographic_2.xml" name="Infographic 2" libs="general;mockups;signs" tags="Infographic"/>
+<template url="other/infographic_3.xml" name="Infographic 3" libs="general;mockups;signs" tags="Infographic"/>
+<template url="other/infographic_4.xml" name="Infographic 4" libs="general;mockups;signs" tags="Infographic"/>
+<template url="other/lan_plan.xml" name="Lan plan" libs="general;floorplan" tags="Lan;plan"/>
+<template url="software/class_1.xml" name="Class 1" libs="general;uml" tags="Class"/>
+<template url="software/class_2.xml" name="Class 2" libs="general;uml" tags="Class"/>
+<template url="software/component.xml" name="Component" libs="general;uml" tags="Component"/>
+<template url="software/database_1.xml" name="Database 1" libs="general;uml" tags="Database"/>
+<template url="software/database_2.xml" name="Database 2" libs="general;uml" tags="Database"/>
+<template url="software/database_3.xml" name="Database 3" libs="general;uml" tags="Database"/>
+<template url="software/eip.xml" name="Eip" libs="general;eip" tags="Eip"/>
+<template url="software/entity_relationship.xml" name="Entity relationship" libs="general;uml;er" tags="Entity;relationship"/>
+<template url="software/git_flow_1.xml" name="Git flow 1" libs="general" tags="Git;flow"/>
+<template url="software/git_flow_2.xml" name="Git flow 2" libs="general" tags="Git;flow"/>
+<template url="software/git_flow_3.xml" name="Git flow 3" libs="general" tags="Git;flow"/>
+<template url="tables/authority_matrix.xml" name="Authority matrix" libs="general" tags="Authority;matrix"/>
+<template url="tables/gantt_1.xml" name="Gantt 1" libs="general" tags="Gantt"/>
+<template url="tables/gantt_2.xml" name="Gantt 2" libs="general" tags="Gantt"/>
+<template url="tables/gantt_3.xml" name="Gantt 3" libs="general" tags="Gantt"/>
+<template url="uml/activity_diagram_1.xml" name="Activity diagram 1" libs="general;uml" tags="Activity;diagram"/>
+<template url="uml/activity_diagram_2.xml" name="Activity diagram 2" libs="general;uml" tags="Activity;diagram"/>
+<template url="uml/sequence_1.xml" name="Sequence 1" libs="general;uml" tags="Sequence"/>
+<template url="uml/sequence_2.xml" name="Sequence 2" libs="general;uml" tags="Sequence"/>
+<template url="uml/state_machine.xml" name="State machine" libs="general;uml" tags="State;machine"/>
+<template url="uml/sysml.xml" name="Sysml" libs="general;uml;sysml" tags="Sysml"/>
+<template url="uml/uml_1.xml" name="Uml 1" libs="general;uml" tags="Uml"/>
+<template url="uml/uml_2.xml" name="Uml 2" libs="general;uml" tags="Uml"/>
+<template url="venn/spider_1.xml" name="Spider 1" libs="general" tags="Spider"/>
+<template url="venn/spider_2.xml" name="Spider 2" libs="general" tags="Spider"/>
+<template url="venn/venn_1.xml" name="Venn 1" libs="general" tags="Venn"/>
+<template url="venn/venn_2.xml" name="Venn 2" libs="general" tags="Venn"/>
+<template url="venn/venn_3.xml" name="Venn 3" libs="general" tags="Venn"/>
+<template url="venn/venn_4.xml" name="Venn 4" libs="general" tags="Venn"/>
+<template url="venn/venn_5.xml" name="Venn 5" libs="general" tags="Venn"/>
+<template url="venn/venn_6.xml" name="Venn 6" libs="general" tags="Venn"/>
+<template url="wireframes/blog_1.xml" name="Blog 1" libs="general;mockups" tags="Blog"/>
+<template url="wireframes/bootstrap_1.xml" name="Bootstrap 1" libs="general;bootstrap" tags="Bootstrap"/>
+<template url="wireframes/home_page_hero_video_1.xml" name="Home page hero video 1" libs="general;mockups" tags="Home;page;hero;video"/>
+<template url="wireframes/home_page_1.xml" name="Home page 1" libs="general;mockups" tags="Home;page"/>
+<template url="wireframes/home_page_2.xml" name="Home page 2" libs="general;mockups" tags="Home;page"/>
+<template url="layout/blog_wireframe.xml" name="Blog wireframe" tags="Blog;wireframe"/>
+<template url="layout/bootstrap.xml" name="Bootstrap" tags="Bootstrap"/>
+<template url="layout/wireframe_1.xml" name="Wireframe 1" tags="Wireframe"/>
+<template url="layout/wireframe_2.xml" name="Wireframe 2" tags="Wireframe"/>
+<template url="software/data_flow_1.xml" name="Data flow 1" tags="Data;flow"/>
+</templates>

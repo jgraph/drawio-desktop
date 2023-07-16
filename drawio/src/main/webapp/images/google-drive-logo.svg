@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="509.08mm" height="440.97mm" version="1.1" viewBox="0 0 133156 115341">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil2 {fill:#11A861}
+    .fil0 {fill:#3777E3}
+    .fil1 {fill:#FFCF63}
+   ]]>
+  </style>
+ </defs>
+ <g>
+  <polygon class="fil0" points="22194,115341 44385,76894 133156,76894 110963,115341 "/>
+  <polygon class="fil1" points="88772,76894 133156,76894 88772,0 44385,0 "/>
+  <polygon class="fil2" points="0,76894 22194,115341 66578,38447 44385,0 "/>
+ </g>
+</svg>

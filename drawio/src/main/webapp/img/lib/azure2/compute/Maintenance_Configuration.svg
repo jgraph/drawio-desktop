@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.700064"
+   height="16.834044"
+   viewBox="0 0 17.700064 16.834044"
+   version="1.1"
+   id="svg9296"
+   sodipodi:docname="Maintenance_Configuration.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9298"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.8411097"
+     inkscape:cy="8.4325347"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9296" />
+  <defs
+     id="defs9284">
+    <radialGradient
+       id="bb939890-e5c9-4401-bac3-d94dd8e0e7c1"
+       cx="5.6139998"
+       cy="6.1469998"
+       r="7.4429998"
+       gradientTransform="matrix(0.944,0,0,0.944,1.7280004,1.2240003)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset=".183"
+         stop-color="#5ea0ef"
+         id="stop9262" />
+      <stop
+         offset=".555"
+         stop-color="#5c9fee"
+         id="stop9264" />
+      <stop
+         offset=".689"
+         stop-color="#559ced"
+         id="stop9266" />
+      <stop
+         offset=".785"
+         stop-color="#4a97e9"
+         id="stop9268" />
+      <stop
+         offset=".862"
+         stop-color="#3990e4"
+         id="stop9270" />
+      <stop
+         offset=".928"
+         stop-color="#2387de"
+         id="stop9272" />
+      <stop
+         offset=".985"
+         stop-color="#087bd6"
+         id="stop9274" />
+      <stop
+         offset="1"
+         stop-color="#0078d4"
+         id="stop9276" />
+    </radialGradient>
+    <radialGradient
+       id="986fec79-aad0-473e-a309-44607edb7ba9"
+       cx="6.4499998"
+       cy="6.9200001"
+       r="1.041"
+       gradientTransform="matrix(0.943,0,0,0.943,0.97400038,0.51300034)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#7f7f7f"
+         id="stop9279" />
+      <stop
+         offset="1"
+         stop-color="#5e5e5e"
+         id="stop9281" />
+    </radialGradient>
+  </defs>
+  <circle
+     cx="7.0300002"
+     cy="7.0300002"
+     r="7.0300002"
+     fill="url(#bb939890-e5c9-4401-bac3-d94dd8e0e7c1)"
+     id="circle9286"
+     style="fill:url(#bb939890-e5c9-4401-bac3-d94dd8e0e7c1)" />
+  <circle
+     cx="7.0580006"
+     cy="7.0300002"
+     r="6.1209998"
+     fill="#ffffff"
+     id="circle9288" />
+  <path
+     d="m 6.8880004,11.153 h 0.338 v 1.05 h -0.338 z m -3.7,-7.7499997 0.24,-0.24 0.742,0.742 -0.24,0.24 z m 0.052,7.1999997 0.742,-0.7419997 0.24,0.2399997 -0.742,0.742 z m -1.445,-3.7499997 h 1.05 v 0.338 h -1.05 z m 7.8,2.054 -1.788,-1.778 a 0.43,0.43 0 0 0 -0.291,-0.123 0.411,0.411 0 0 0 0.054,-0.2 v -4.525 a 0.431,0.431 0 0 0 -0.43,-0.43 h -0.082 a 0.431,0.431 0 0 0 -0.431,0.43 v 4.53 a 0.431,0.431 0 0 0 0.431,0.43 h 0.048 a 0.427,0.427 0 0 0 0.035,0.555 l 1.78,1.777 a 0.432,0.432 0 0 0 0.608,0 l 0.058,-0.058 a 0.432,0.432 0 0 0 0,-0.608 z"
+     fill="#7a7a7a"
+     id="path9290" />
+  <circle
+     cx="7.0620003"
+     cy="7.0190005"
+     r="0.99599999"
+     fill="url(#986fec79-aad0-473e-a309-44607edb7ba9)"
+     id="circle9292"
+     style="fill:url(#986fec79-aad0-473e-a309-44607edb7ba9)" />
+  <path
+     d="M 8.7050004,16.005 14.24,9.6810003 a 2.9,2.9 0 0 0 2.763,-0.875 2.691,2.691 0 0 0 0.558,-2.661 l -1.465,1.645 -1.567,-0.29 -0.52,-1.487 1.466,-1.62 a 2.866,2.866 0 0 0 -2.643,0.885 2.647,2.647 0 0 0 -0.54,2.651 L 6.3920004,14.674 a 1.309,1.309 0 0 0 1.97,1.724 z"
+     fill="#949494"
+     id="path9294" />
+</svg>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11.596"
+   height="18.00164"
+   viewBox="0 0 11.596 18.00164"
+   version="1.1"
+   id="svg34939"
+   sodipodi:docname="Power.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview34941"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="5.798"
+     inkscape:cy="9.0001243"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg34939" />
+  <defs
+     id="defs34930">
+    <radialGradient
+       id="bf0e6238-d7a1-45b5-861c-8bbe56952eb1"
+       cx="3.1170001"
+       cy="-116.12"
+       r="9.0220003"
+       gradientTransform="matrix(1.013,0,0,0.789,9.046,100.65448)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.196"
+         stop-color="#ffd70f"
+         id="stop34921" />
+      <stop
+         offset="0.438"
+         stop-color="#ffcb12"
+         id="stop34923" />
+      <stop
+         offset="0.873"
+         stop-color="#feac19"
+         id="stop34925" />
+      <stop
+         offset="1"
+         stop-color="#fea11b"
+         id="stop34927" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title34932">MsPortalFx.base.images-37</title>
+  <g
+     id="b6078d51-b129-4cd0-9a4d-e8ff551d4747"
+     transform="translate(-3.202,0.00151521)">
+    <path
+       d="M 8.09,10.01 H 3.464 A 0.239,0.239 0 0 1 3.202,9.81 0.175,0.175 0 0 1 3.225,9.725 L 8.775,0.12 A 0.274,0.274 0 0 1 9.014,0 h 5.47 A 0.238,0.238 0 0 1 14.746,0.2 0.177,0.177 0 0 1 14.7,0.319 L 8.186,7.834 h 6.35 a 0.239,0.239 0 0 1 0.262,0.2 0.185,0.185 0 0 1 -0.067,0.137 L 4.175,17.788 c -0.1,0.051 -0.8,0.562 -0.458,-0.214 v 0 z"
+       id="path34934"
+       inkscape:connector-curvature="0"
+       style="fill:url(#bf0e6238-d7a1-45b5-861c-8bbe56952eb1)" />
+  </g>
+  <metadata
+     id="metadata34937">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Power()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-37</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

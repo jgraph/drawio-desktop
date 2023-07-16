@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="a685cc8c-32ba-4d54-91da-3a125cb58ded"
+   width="17.000013"
+   height="16.044224"
+   viewBox="0 0 17.000013 16.044224"
+   version="1.1"
+   sodipodi:docname="Resource_Groups.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs38314" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview38312"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5000064"
+     inkscape:cy="8.0223837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a685cc8c-32ba-4d54-91da-3a125cb58ded" />
+  <title
+     id="title38281">Icon-general-7</title>
+  <g
+     id="g38307"
+     transform="translate(-0.49999359,-0.97816044)">
+    <g
+       id="g38289">
+      <path
+         d="m 0.5,15.08 a 0.16,0.16 0 0 0 0.08,0.14 L 1.74,15.87 3.7,17 A 0.17,0.17 0 0 0 3.93,16.94 L 4.59,15.82 A 0.16,0.16 0 0 0 4.53,15.61 l -2.3,-1.3 A 0.17,0.17 0 0 1 2.15,14.17 V 3.85 A 0.16,0.16 0 0 1 2.23,3.71 l 2.3,-1.3 A 0.16,0.16 0 0 0 4.59,2.2 L 3.93,1.08 A 0.17,0.17 0 0 0 3.7,1 L 1.78,2.11 0.58,2.78 A 0.16,0.16 0 0 0 0.5,2.92 Z"
+         id="path38283"
+         inkscape:connector-curvature="0"
+         style="fill:#949494" />
+      <path
+         d="M 2.14,3.77 2.2,3.71 4.5,2.41 A 0.14,0.14 0 0 0 4.56,2.2 L 3.9,1.08 A 0.15,0.15 0 0 0 3.68,1 L 1.75,2.11 0.56,2.78 c 0,0 -0.05,0 -0.06,0.06 l 0.9,0.51 z"
+         id="path38285"
+         inkscape:connector-curvature="0"
+         style="fill:#a3a3a3" />
+      <path
+         d="M 4.5,15.59 2.2,14.29 A 0.22,0.22 0 0 1 2.13,14.2 l -1.62,1 h 0.05 l 1.15,0.65 2,1.11 A 0.15,0.15 0 0 0 3.93,16.9 L 4.59,15.78 A 0.14,0.14 0 0 0 4.5,15.59 Z"
+         id="path38287"
+         inkscape:connector-curvature="0"
+         style="fill:#a3a3a3" />
+    </g>
+    <path
+       d="m 17.5,15.08 a 0.16,0.16 0 0 1 -0.08,0.14 L 16.26,15.87 14.3,17 a 0.17,0.17 0 0 1 -0.23,-0.06 l -0.66,-1.12 a 0.16,0.16 0 0 1 0.06,-0.21 l 2.3,-1.3 a 0.17,0.17 0 0 0 0.08,-0.14 V 3.85 A 0.16,0.16 0 0 0 15.77,3.71 l -2.3,-1.3 A 0.16,0.16 0 0 1 13.41,2.2 L 14.07,1.08 A 0.17,0.17 0 0 1 14.3,1 l 1.92,1.09 1.2,0.67 A 0.16,0.16 0 0 1 17.5,2.9 Z"
+       id="path38291"
+       inkscape:connector-curvature="0"
+       style="fill:#949494" />
+    <path
+       d="M 15.86,3.77 15.8,3.71 13.5,2.41 A 0.14,0.14 0 0 1 13.44,2.2 L 14.1,1.08 A 0.15,0.15 0 0 1 14.32,1 l 1.93,1.09 1.19,0.67 c 0,0 0,0 0.06,0.06 l -0.9,0.51 z"
+       id="path38293"
+       inkscape:connector-curvature="0"
+       style="fill:#a3a3a3" />
+    <path
+       d="m 13.5,15.59 2.3,-1.3 a 0.22,0.22 0 0 0 0.07,-0.09 l 1.62,1 v 0 l -1.15,0.65 -2,1.11 A 0.15,0.15 0 0 1 14.12,16.9 l -0.66,-1.12 a 0.14,0.14 0 0 1 0.04,-0.19 z"
+       id="path38295"
+       inkscape:connector-curvature="0"
+       style="fill:#a3a3a3" />
+    <polygon
+       points="8.99,15.16 8.99,9.01 14.31,5.93 14.31,12.07 "
+       id="polygon38297"
+       style="fill:#32bedd" />
+    <polygon
+       points="3.68,5.93 9,2.84 14.31,5.93 9,9.02 "
+       id="polygon38299"
+       style="fill:#9cebff" />
+    <polygon
+       points="3.68,12.07 3.68,5.93 8.99,9.02 8.99,15.16 "
+       id="polygon38301"
+       style="fill:#50e6ff" />
+    <polygon
+       points="8.99,15.16 3.68,12.07 8.99,9.01 "
+       id="polygon38303"
+       style="fill:#9cebff" />
+    <polygon
+       points="8.99,15.16 14.31,12.07 8.99,9.01 "
+       id="polygon38305"
+       style="fill:#50e6ff" />
+  </g>
+  <metadata
+     id="metadata38309">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.ResourceGroup()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-general-7</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

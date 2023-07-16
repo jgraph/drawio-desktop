@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.00079"
+   height="15.14"
+   viewBox="0 0 17.00079 15.14"
+   version="1.1"
+   id="svg5903"
+   sodipodi:docname="Event_Hubs.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <defs
+     id="defs5907" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview5905"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.5007901"
+     inkscape:cy="7.65"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5903" />
+  <title
+     id="title5856">Icon-analytics-144</title>
+  <g
+     id="g5899"
+     transform="translate(-0.49920995,-1.5099995)">
+    <g
+       id="a53a4de8-371c-49da-a662-c4631299fc03">
+      <path
+         d="M 10.83,8.42 A 0.26,0.26 0 0 1 10.59,8.69 H 8.5 A 0.26,0.26 0 0 1 8.23,8.45 V 6.89 A 0.26,0.26 0 0 1 8.47,6.62 h 2.09 a 0.26,0.26 0 0 1 0.27,0.24 z"
+         id="path5858"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <path
+         d="M 14.54,10 A 0.26,0.26 0 0 1 14.3,10.27 H 12.21 A 0.26,0.26 0 0 1 11.94,10.03 V 8.48 a 0.26,0.26 0 0 1 0.24,-0.27 h 2.09 a 0.26,0.26 0 0 1 0.27,0.24 z"
+         id="path5860"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <path
+         d="m 10.83,11.6 a 0.26,0.26 0 0 1 -0.24,0.27 H 8.5 A 0.26,0.26 0 0 1 8.23,11.63 V 10.07 A 0.26,0.26 0 0 1 8.47,9.8 h 2.09 a 0.26,0.26 0 0 1 0.27,0.24 z"
+         id="path5862"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <path
+         d="M 7.12,6.84 A 0.25,0.25 0 0 1 6.89,7.1 H 4.74 A 0.26,0.26 0 0 1 4.47,6.87 V 5.25 A 0.26,0.26 0 0 1 4.71,5 H 6.8 c 0.22,0 0.32,0.11 0.32,0.27 z"
+         id="path5864"
+         inkscape:connector-curvature="0"
+         style="fill:#86d633" />
+      <path
+         d="M 7.12,10 A 0.25,0.25 0 0 1 6.89,10.27 H 4.74 A 0.26,0.26 0 0 1 4.47,10 V 8.42 A 0.26,0.26 0 0 1 4.71,8.16 H 6.8 c 0.22,0 0.32,0.11 0.32,0.26 z"
+         id="path5866"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <path
+         d="M 7.12,13.19 A 0.25,0.25 0 0 1 6.89,13.46 H 4.74 A 0.26,0.26 0 0 1 4.47,13.22 V 11.6 A 0.25,0.25 0 0 1 4.71,11.34 H 6.8 c 0.22,0 0.32,0.1 0.32,0.26 z"
+         id="path5868"
+         inkscape:connector-curvature="0"
+         style="fill:#76bc2d" />
+      <g
+         id="g5874">
+        <path
+           d="m 1.07,1.51 h 1.29 v 3.6 A 0.29,0.29 0 0 1 2.07,5.4 H 0.79 A 0.29,0.29 0 0 1 0.5,5.11 v -3 a 0.57,0.57 0 0 1 0.57,-0.6 z"
+           id="path5870"
+           inkscape:connector-curvature="0"
+           style="fill:#999999" />
+        <path
+           d="m 1.07,1.51 h 1.29 v 3.6 A 0.29,0.29 0 0 1 2.07,5.4 H 0.79 A 0.29,0.29 0 0 1 0.5,5.11 v -3 a 0.57,0.57 0 0 1 0.57,-0.6 z"
+           id="path5872"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#999999" />
+      </g>
+      <g
+         id="g5880">
+        <path
+           d="m 15.64,1.51 h 1.29 a 0.57,0.57 0 0 1 0.57,0.57 v 3 A 0.29,0.29 0 0 1 17.21,5.37 H 15.92 A 0.29,0.29 0 0 1 15.63,5.08 V 1.51 Z"
+           id="path5876"
+           inkscape:connector-curvature="0"
+           style="fill:#999999" />
+        <path
+           d="m 15.64,1.51 h 1.29 a 0.57,0.57 0 0 1 0.57,0.57 v 3 A 0.29,0.29 0 0 1 17.21,5.37 H 15.92 A 0.29,0.29 0 0 1 15.63,5.08 V 1.51 Z"
+           id="path5878"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#999999" />
+      </g>
+      <path
+         d="m 8.66,-6.08 h 1.25 v 17 H 8.66 A 0.57,0.57 0 0 1 8.09,10.35 V -5.52 a 0.57,0.57 0 0 1 0.57,-0.56 z"
+         transform="rotate(90,9,2.42)"
+         id="path5882"
+         inkscape:connector-curvature="0"
+         style="fill:#949494" />
+      <g
+         id="g5888">
+        <path
+           d="m 0.79,12.76 h 1.29 a 0.29,0.29 0 0 1 0.29,0.29 v 3.6 H 1.07 A 0.57,0.57 0 0 1 0.5,16.08 V 13 a 0.29,0.29 0 0 1 0.29,-0.24 z"
+           id="path5884"
+           inkscape:connector-curvature="0"
+           style="fill:#999999" />
+        <path
+           d="m 0.79,12.76 h 1.29 a 0.29,0.29 0 0 1 0.29,0.29 v 3.6 H 1.07 A 0.57,0.57 0 0 1 0.5,16.08 V 13 a 0.29,0.29 0 0 1 0.29,-0.24 z"
+           id="path5886"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#999999" />
+      </g>
+      <g
+         id="g5894">
+        <path
+           d="m 15.92,12.76 h 1.29 a 0.29,0.29 0 0 1 0.29,0.29 v 3 a 0.57,0.57 0 0 1 -0.57,0.57 H 15.64 V 13 a 0.29,0.29 0 0 1 0.28,-0.24 z"
+           id="path5890"
+           inkscape:connector-curvature="0"
+           style="fill:#999999" />
+        <path
+           d="m 15.92,12.76 h 1.29 a 0.29,0.29 0 0 1 0.29,0.29 v 3 a 0.57,0.57 0 0 1 -0.57,0.57 H 15.64 V 13 a 0.29,0.29 0 0 1 0.28,-0.24 z"
+           id="path5892"
+           inkscape:connector-curvature="0"
+           style="opacity:0.5;fill:#999999" />
+      </g>
+      <path
+         d="m 8.66,7.24 h 1.25 v 17 H 8.66 A 0.57,0.57 0 0 1 8.09,23.67 V 7.81 A 0.57,0.57 0 0 1 8.66,7.24 Z"
+         transform="rotate(-90,9,15.74)"
+         id="path5896"
+         inkscape:connector-curvature="0"
+         style="fill:#949494" />
+    </g>
+  </g>
+  <metadata
+     id="metadata5901">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.EventHub()</rdf:li>
+      <rdf:li>category: Analytics, IoT</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-analytics-144</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

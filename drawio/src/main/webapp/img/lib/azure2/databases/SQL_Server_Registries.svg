@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="a81cfd0a-f55d-4a3a-80ec-9674de4090d8"
+   width="17.17"
+   height="15.52"
+   viewBox="0 0 17.17 15.52"
+   version="1.1"
+   sodipodi:docname="SQL_Server_Registries.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     id="namedview14472"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.591425"
+     inkscape:cy="7.7515763"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="a81cfd0a-f55d-4a3a-80ec-9674de4090d8" />
+  <defs
+     id="defs14441">
+    <linearGradient
+       id="f35c07bb-c9f1-4421-adc8-18b67234813b"
+       x1="0.40000001"
+       y1="10.06"
+       x2="12.11"
+       y2="10.06"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.4,-1.24)">
+      <stop
+         offset="0"
+         stop-color="#005ba1"
+         id="stop14419" />
+      <stop
+         offset="0.07"
+         stop-color="#0060a9"
+         id="stop14421" />
+      <stop
+         offset="0.36"
+         stop-color="#0071c8"
+         id="stop14423" />
+      <stop
+         offset="0.52"
+         stop-color="#0078d4"
+         id="stop14425" />
+      <stop
+         offset="0.64"
+         stop-color="#0074cd"
+         id="stop14427" />
+      <stop
+         offset="0.82"
+         stop-color="#006abb"
+         id="stop14429" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop14431" />
+    </linearGradient>
+    <radialGradient
+       id="a0e83ca8-5136-49ab-85fc-6e4ceacbf137"
+       cx="6.5799999"
+       cy="10.43"
+       r="6.46"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.4,-1.24)">
+      <stop
+         offset="0"
+         stop-color="#f2f2f2"
+         id="stop14434" />
+      <stop
+         offset="0.58"
+         stop-color="#eee"
+         id="stop14436" />
+      <stop
+         offset="1"
+         stop-color="#e6e6e6"
+         id="stop14438" />
+    </radialGradient>
+  </defs>
+  <title
+     id="title14443">Icon-other-351</title>
+  <path
+     d="M 5.86,4.24 C 2.6,4.24 0,3.29 0,2.12 V 13.4 c 0,1.16 2.6,2.11 5.78,2.12 h 0.08 c 3.23,0 5.85,-1 5.85,-2.12 V 2.12 c 0,1.17 -2.62,2.12 -5.85,2.12 z"
+     fill="url(#f35c07bb-c9f1-4421-adc8-18b67234813b)"
+     id="path14445"
+     style="fill:url(#f35c07bb-c9f1-4421-adc8-18b67234813b)" />
+  <path
+     d="M 11.71,2.12 C 11.71,3.29 9.09,4.24 5.86,4.24 2.63,4.24 0,3.29 0,2.12 0,0.95 2.6,0 5.86,0 c 3.26,0 5.85,1 5.85,2.12"
+     fill="#e8e8e8"
+     id="path14447" />
+  <path
+     d="m 10.35,1.95 c 0,0.74 -2,1.35 -4.49,1.35 -2.49,0 -4.49,-0.61 -4.49,-1.35 0,-0.74 2,-1.35 4.49,-1.35 2.49,0 4.49,0.6 4.49,1.35"
+     fill="#50e6ff"
+     id="path14449" />
+  <path
+     d="M 5.86,2.26 A 10.93,10.93 0 0 0 2.3,2.76 10.48,10.48 0 0 0 5.86,3.29 10.41,10.41 0 0 0 9.41,2.76 10.86,10.86 0 0 0 5.86,2.26 Z"
+     fill="#198ab3"
+     id="path14451" />
+  <path
+     d="M 9.42,9.95 V 6.87 H 8.6 v 3.77 h 2.24 V 9.95 Z M 2.9,8.43 A 2.26,2.26 0 0 1 2.43,8.15 0.44,0.44 0 0 1 2.32,7.85 0.35,0.35 0 0 1 2.46,7.57 0.64,0.64 0 0 1 2.85,7.47 1.56,1.56 0 0 1 3.72,7.76 V 6.95 A 2.46,2.46 0 0 0 2.8,6.76 1.5,1.5 0 0 0 1.8,7.07 1,1 0 0 0 1.42,7.88 1.24,1.24 0 0 0 2.29,8.99 2.6,2.6 0 0 1 2.85,9.31 0.42,0.42 0 0 1 2.99,9.61 0.32,0.32 0 0 1 2.84,9.89 0.66,0.66 0 0 1 2.44,10 1.48,1.48 0 0 1 1.44,9.61 v 0.84 a 2,2 0 0 0 1,0.22 1.72,1.72 0 0 0 1.07,-0.3 A 1,1 0 0 0 3.9,9.54 0.92,0.92 0 0 0 3.68,8.9 2.21,2.21 0 0 0 2.9,8.43 Z M 7.6,9.88 A 2.14,2.14 0 0 0 7.94,8.76 2.09,2.09 0 0 0 7.71,7.76 1.66,1.66 0 0 0 7.08,7.08 1.85,1.85 0 0 0 6.14,6.76 a 1.92,1.92 0 0 0 -1,0.25 1.65,1.65 0 0 0 -0.66,0.75 2.38,2.38 0 0 0 0,2 1.72,1.72 0 0 0 0.63,0.68 2,2 0 0 0 0.89,0.32 l 0.78,0.87 h 1.1 l -1.09,-1 A 1.61,1.61 0 0 0 7.6,9.88 Z M 6.75,9.65 A 0.85,0.85 0 0 1 6.05,9.97 0.83,0.83 0 0 1 5.36,9.64 1.4,1.4 0 0 1 5.14,8.76 1.37,1.37 0 0 1 5.41,7.87 0.83,0.83 0 0 1 6.11,7.53 0.81,0.81 0 0 1 6.8,7.87 1.44,1.44 0 0 1 7.05,8.77 1.36,1.36 0 0 1 6.79,9.65 Z"
+     fill="url(#a0e83ca8-5136-49ab-85fc-6e4ceacbf137)"
+     id="path14453"
+     style="fill:url(#a0e83ca8-5136-49ab-85fc-6e4ceacbf137)" />
+  <path
+     d="m 14.18,0.1 h -3.65 a 0.29,0.29 0 0 0 -0.29,0.29 v 7.87 a 0.29,0.29 0 0 0 0.29,0.29 h 6.33 A 0.29,0.29 0 0 0 17.15,8.26 V 3.05 A 0.29,0.29 0 0 0 16.86,2.76 h -2.1 A 0.29,0.29 0 0 1 14.47,2.47 V 0.39 A 0.29,0.29 0 0 0 14.18,0.1 Z"
+     fill="#ffffff"
+     id="path14457" />
+  <path
+     d="m 14.05,0.47 v 2 a 0.72,0.72 0 0 0 0.72,0.72 h 2 v 5 H 10.6 V 0.47 h 3.42 m 0.14,-0.43 h -3.7 a 0.29,0.29 0 0 0 -0.3,0.29 v 8 a 0.29,0.29 0 0 0 0.3,0.29 h 6.42 A 0.29,0.29 0 0 0 17.17,8.33 V 3.03 A 0.29,0.29 0 0 0 16.91,2.76 H 14.77 A 0.29,0.29 0 0 1 14.48,2.47 V 0.33 A 0.29,0.29 0 0 0 14.19,0.04 Z"
+     fill="#50e6ff"
+     id="path14459" />
+  <path
+     d="m 17.09,2.76 -2.71,-2.7 v 2.2 a 0.5,0.5 0 0 0 0.49,0.5 z"
+     fill="#32bedd"
+     id="path14461" />
+  <rect
+     x="11.650001"
+     y="4.6400003"
+     width="4.0799999"
+     height="0.54000002"
+     rx="0.27000001"
+     fill="#32bedd"
+     id="rect14463" />
+  <rect
+     x="11.650001"
+     y="5.5500002"
+     width="4.0799999"
+     height="0.54000002"
+     rx="0.27000001"
+     fill="#32bedd"
+     id="rect14465" />
+  <rect
+     x="11.650001"
+     y="6.48"
+     width="2.1900001"
+     height="0.5"
+     rx="0.25"
+     fill="#32bedd"
+     id="rect14467" />
+  <metadata
+     id="metadata14554">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Icon-other-351</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

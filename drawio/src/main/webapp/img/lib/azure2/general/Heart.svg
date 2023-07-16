@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16.009813"
+   height="15.144841"
+   viewBox="0 0 16.009813 15.144841"
+   version="1.1"
+   id="svg27458"
+   sodipodi:docname="Heart.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview27460"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="8.0044493"
+     inkscape:cy="7.573"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg27458" />
+  <defs
+     id="defs27445">
+    <linearGradient
+       id="be262aa0-1e96-4515-9b80-c7d70e614118"
+       x1="9"
+       y1="16.573"
+       x2="9"
+       y2="1.427"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.99555072,1.4281589)">
+      <stop
+         offset="0"
+         stop-color="#b31b1b"
+         id="stop27435" />
+      <stop
+         offset="0.82"
+         stop-color="#e62323"
+         id="stop27437" />
+    </linearGradient>
+    <linearGradient
+       id="b1eb80a0-ef92-42a3-af43-f22c07fe7d9c"
+       x1="9"
+       y1="16.525"
+       x2="9"
+       y2="1.427"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.99555072,1.4281589)">
+      <stop
+         offset="0"
+         stop-color="#b31b1b"
+         id="stop27440" />
+      <stop
+         offset="0.82"
+         stop-color="#e62323"
+         id="stop27442" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title27447">MsPortalFx.base.images-73</title>
+  <g
+     id="f1ad3e33-de4b-4fca-85f1-c9a05025345f"
+     transform="translate(-0.99555072,-1.4281589)">
+    <g
+       id="g27453">
+      <path
+         d="m 9,16.573 c 7.7,-5.518 7.96,-8.737 8,-9.745 0.048,-1.409 -0.149,-5.1 -3.866,-5.386 A 4.023,4.023 0 0 0 9,4.132 4.023,4.023 0 0 0 4.871,1.442 C 1.154,1.733 0.957,5.419 1,6.828 c 0.035,1.008 0.294,4.227 8,9.745"
+         id="path27449"
+         inkscape:connector-curvature="0"
+         style="fill:url(#be262aa0-1e96-4515-9b80-c7d70e614118)" />
+      <path
+         d="M 17,6.828 C 17.048,5.419 16.851,1.728 13.134,1.442 A 4.023,4.023 0 0 0 9,4.132 4.023,4.023 0 0 0 4.871,1.442 C 1.154,1.733 0.957,5.419 1,6.828 c 0.035,1.008 0.227,4.179 7.928,9.7"
+         id="path27451"
+         inkscape:connector-curvature="0"
+         style="fill:url(#b1eb80a0-ef92-42a3-af43-f22c07fe7d9c)" />
+    </g>
+  </g>
+  <metadata
+     id="metadata27456">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk: MsPortalFx.Base.Images.Polychromatic.Heart()</rdf:li>
+      <rdf:li>category: General</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>MsPortalFx.base.images-73</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

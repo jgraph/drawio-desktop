@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="b4d0e6e2-12c1-4275-b717-890060dd1560"
+   width="18"
+   height="15.619411"
+   viewBox="0 0 18 15.619411"
+   version="1.1"
+   sodipodi:docname="Recovery_Services_Vaults.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview62165"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="7.7977501"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="b4d0e6e2-12c1-4275-b717-890060dd1560" />
+  <defs
+     id="defs62152">
+    <linearGradient
+       id="f1a30f9e-7f48-44e2-9483-6a6db8928977"
+       x1="11.13"
+       y1="10.95"
+       x2="11.13"
+       y2="1.21"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop62128" />
+      <stop
+         offset="0.16"
+         stop-color="#1380da"
+         id="stop62130" />
+      <stop
+         offset="0.53"
+         stop-color="#3c91e5"
+         id="stop62132" />
+      <stop
+         offset="0.82"
+         stop-color="#559cec"
+         id="stop62134" />
+      <stop
+         offset="1"
+         stop-color="#5ea0ef"
+         id="stop62136" />
+    </linearGradient>
+    <linearGradient
+       id="b4a5ed8d-a28d-4d26-9aad-a57e6ad0c0b9"
+       x1="7.0599999"
+       y1="16.790001"
+       x2="7.0599999"
+       y2="6.7800002"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#198ab3"
+         id="stop62139" />
+      <stop
+         offset="0.13"
+         stop-color="#21a0c7"
+         id="stop62141" />
+      <stop
+         offset="0.31"
+         stop-color="#28b7db"
+         id="stop62143" />
+      <stop
+         offset="0.5"
+         stop-color="#2ec7ea"
+         id="stop62145" />
+      <stop
+         offset="0.72"
+         stop-color="#31d1f2"
+         id="stop62147" />
+      <stop
+         offset="1"
+         stop-color="#32d4f5"
+         id="stop62149" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title62154">Icon-manage-315</title>
+  <path
+     d="m 18,6.7216604 a 3.09,3.09 0 0 0 -2.68,-3 3.89,3.89 0 0 0 -4,-3.72000002 4,4 0 0 0 -3.82,2.63000002 3.68,3.68 0 0 0 -3.24,3.55 3.74,3.74 0 0 0 3.87,3.64 h 0.34 6.26 0.17 a 3.13,3.13 0 0 0 3.1,-3.1 z"
+     id="path62156"
+     inkscape:connector-curvature="0"
+     style="fill:url(#f1a30f9e-7f48-44e2-9483-6a6db8928977)" />
+  <path
+     d="m 14.39,4.0416604 -1.83,-1.78 c -0.2,-0.2 -0.37,-0.13 -0.37,0.18 v 0.8 a 0.22,0.22 0 0 1 -0.23,0.22 c -1.18,0 -4.47,0.31 -4.59,4.81 a 0.23,0.23 0 0 0 0.23,0.23 h 1.17 a 0.23,0.23 0 0 0 0.23,-0.25 2.76,2.76 0 0 1 3,-3.33 0.23,0.23 0 0 1 0.23,0.23 v 0.74 c 0,0.37 0.12,0.43 0.37,0.18 l 1.79,-1.65 a 0.23,0.23 0 0 0 0,-0.38 z"
+     id="path62158"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" />
+  <path
+     d="m 14.12,12.48166 a 3.17,3.17 0 0 0 -2.75,-3.0499996 4,4 0 0 0 -4.12,-3.83 4.1,4.1 0 0 0 -3.92,2.68 A 3.78,3.78 0 0 0 0,11.92166 a 3.84,3.84 0 0 0 4,3.69 h 6.78 a 0.47,0.47 0 0 0 0.17,0 3.21,3.21 0 0 0 3.17,-3.13 z"
+     id="path62160"
+     inkscape:connector-curvature="0"
+     style="fill:url(#b4a5ed8d-a28d-4d26-9aad-a57e6ad0c0b9)" />
+  <metadata
+     id="metadata62162">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.Backup(); MsPortalFx.Base.Images.Polychromatic.SiteRecovery()</rdf:li>
+      <rdf:li>category: Management + Governance, Migrate, Storage</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-manage-315</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

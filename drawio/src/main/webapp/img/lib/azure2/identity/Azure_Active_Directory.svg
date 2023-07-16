@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="bdb56329-4717-4410-aa13-4505ecaa4e46"
+   width="18"
+   height="16.379999"
+   viewBox="0 0 18 16.379999"
+   version="1.1"
+   sodipodi:docname="Azure_Active_Directory.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview52939"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="48.111111"
+     inkscape:cx="9"
+     inkscape:cy="8.19"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="bdb56329-4717-4410-aa13-4505ecaa4e46" />
+  <defs
+     id="defs52918">
+    <linearGradient
+       id="ba2610c3-a45a-4e7e-a0c0-285cfd7e005d"
+       x1="13.25"
+       y1="13.02"
+       x2="8.6199999"
+       y2="4.25"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,0.81)">
+      <stop
+         offset="0"
+         stop-color="#1988d9"
+         id="stop52902" />
+      <stop
+         offset="0.9"
+         stop-color="#54aef0"
+         id="stop52904" />
+    </linearGradient>
+    <linearGradient
+       id="bd8f618b-4f2f-4cb7-aff0-2fd2d211326d"
+       x1="11.26"
+       y1="10.47"
+       x2="14.46"
+       y2="15.99"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0,0.81)">
+      <stop
+         offset="0.1"
+         stop-color="#54aef0"
+         id="stop52907" />
+      <stop
+         offset="0.29"
+         stop-color="#4fabee"
+         id="stop52909" />
+      <stop
+         offset="0.51"
+         stop-color="#41a2e9"
+         id="stop52911" />
+      <stop
+         offset="0.74"
+         stop-color="#2a93e0"
+         id="stop52913" />
+      <stop
+         offset="0.88"
+         stop-color="#1988d9"
+         id="stop52915" />
+    </linearGradient>
+  </defs>
+  <title
+     id="title52920">Icon-identity-221</title>
+  <polygon
+     points="16.99,10.17 18,11.35 8.93,17.19 0,11.35 1.01,10.19 8.93,15.33 "
+     id="polygon52922"
+     style="fill:#50e6ff"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="16.4,9.54 8.93,14.26 1.61,9.53 8.93,0.81 "
+     id="polygon52924"
+     style="fill:#ffffff"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="1.61,9.53 8.93,0.81 8.93,14.26 "
+     id="polygon52926"
+     style="fill:#50e6ff"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="16.4,9.54 8.93,0.81 8.93,14.26 "
+     id="polygon52928"
+     style="fill:url(#ba2610c3-a45a-4e7e-a0c0-285cfd7e005d)"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="8.93,14.26 8.93,7.76 16.4,9.54 "
+     id="polygon52930"
+     style="fill:#53b1e0"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="8.93,7.76 8.93,14.26 1.61,9.53 "
+     id="polygon52932"
+     style="fill:#9cebff"
+     transform="translate(0,-0.81)" />
+  <polygon
+     points="16.99,10.17 8.93,15.33 8.93,17.19 18,11.35 "
+     id="polygon52934"
+     style="fill:url(#bd8f618b-4f2f-4cb7-aff0-2fd2d211326d)"
+     transform="translate(0,-0.81)" />
+  <metadata
+     id="metadata52936">
+    <rdf:RDF>
+      <rdf:li>public:true</rdf:li>
+      <rdf:li>sdk:MsPortalFx.Base.Images.Polychromatic.ActiveDirectory()</rdf:li>
+      <rdf:li>category: Identity</rdf:li>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Icon-identity-221</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

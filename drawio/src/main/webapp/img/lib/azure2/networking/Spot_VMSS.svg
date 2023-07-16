@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="17.181"
+   height="16.191999"
+   viewBox="0 0 17.181 16.191999"
+   version="1.1"
+   id="svg52137"
+   sodipodi:docname="Spot_VMSS.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview52139"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="44.055556"
+     inkscape:cx="8.591425"
+     inkscape:cy="8.0920555"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg52137" />
+  <defs
+     id="defs52114">
+    <linearGradient
+       id="a2f58454-f917-4d1e-acd3-78dded8ce803"
+       x1="-530.216"
+       y1="-219.48599"
+       x2="-530.216"
+       y2="-210.552"
+       gradientTransform="matrix(1,0,0,-1,540.716,-206.662)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop52099" />
+      <stop
+         offset="0.817"
+         stop-color="#5ea0ef"
+         id="stop52101" />
+    </linearGradient>
+    <linearGradient
+       id="b9941531-993e-4ca9-b874-605f839ffc30"
+       x1="-530.216"
+       y1="-222.854"
+       x2="-530.216"
+       y2="-219.405"
+       gradientTransform="matrix(1,0,0,-1,540.716,-206.662)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.15"
+         stop-color="#ccc"
+         id="stop52104" />
+      <stop
+         offset="1"
+         stop-color="#707070"
+         id="stop52106" />
+    </linearGradient>
+    <linearGradient
+       id="ffd6f155-8e95-4b34-bc35-fc5e20c5d0fd"
+       x1="10.752"
+       y1="4.2789998"
+       x2="10.752"
+       y2="12.118"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.41,-0.90399998)">
+      <stop
+         offset="0"
+         stop-color="#0078d4"
+         id="stop52109" />
+      <stop
+         offset="1"
+         stop-color="#005ba1"
+         id="stop52111" />
+    </linearGradient>
+  </defs>
+  <rect
+     x="0"
+     y="0"
+     width="13.361"
+     height="8.9200001"
+     rx="0.449"
+     fill="#005ba1"
+     id="rect52116" />
+  <rect
+     x="2.043"
+     y="1.816"
+     width="13.361"
+     height="8.9200001"
+     rx="0.449"
+     fill="#0078d4"
+     id="rect52118" />
+  <rect
+     x="3.8199999"
+     y="3.8900001"
+     width="13.361"
+     height="8.9200001"
+     rx="0.449"
+     fill="url(#a2f58454-f917-4d1e-acd3-78dded8ce803)"
+     id="rect52120"
+     style="fill:url(#a2f58454-f917-4d1e-acd3-78dded8ce803)" />
+  <path
+     d="M 13.143,15.439 C 11.821,15.228 11.821,14.276 11.821,12.796 H 9.178 c 0,1.533 0,2.484 -1.321,2.643 a 0.78,0.78 0 0 0 -0.661,0.753 h 6.608 a 0.78,0.78 0 0 0 -0.661,-0.753 z"
+     fill="url(#b9941531-993e-4ca9-b874-605f839ffc30)"
+     id="path52122"
+     style="fill:url(#b9941531-993e-4ca9-b874-605f839ffc30)" />
+  <circle
+     cx="10.342"
+     cy="8.2220001"
+     r="3.0179999"
+     fill="url(#ffd6f155-8e95-4b34-bc35-fc5e20c5d0fd)"
+     id="circle52124"
+     style="fill:url(#ffd6f155-8e95-4b34-bc35-fc5e20c5d0fd)" />
+  <polygon
+     points="10.749,11.236 10.749,9.174 12.528,8.143 12.528,10.202 "
+     fill="#50e6ff"
+     id="polygon52126"
+     transform="translate(-0.41,-0.90399998)" />
+  <polygon
+     points="8.97,8.142 10.749,7.108 12.528,8.143 10.749,9.177 "
+     fill="#c3f1ff"
+     id="polygon52128"
+     transform="translate(-0.41,-0.90399998)" />
+  <polygon
+     points="8.965,10.194 8.983,8.135 10.754,9.185 10.736,11.244 "
+     fill="#9cebff"
+     id="polygon52130"
+     transform="translate(-0.41,-0.90399998)" />
+  <path
+     d="m 12.73,5.907 v 0 a 0.243,0.243 0 0 0 -0.342,0 v 0 a 0.25,0.25 0 0 0 0,0.351 v 0 A 2.883,2.883 0 1 1 10.223,5.413 l -0.035,0.189 a 0.092,0.092 0 0 0 0.124,0.1 l 0.93,-0.353 A 0.123,0.123 0 0 0 11.275,5.138 L 10.49,4.53 a 0.093,0.093 0 0 0 -0.149,0.06 l -0.047,0.331 a 3.373,3.373 0 1 0 2.434,0.986 z"
+     fill="#ffffff"
+     id="path52132" />
+</svg>
