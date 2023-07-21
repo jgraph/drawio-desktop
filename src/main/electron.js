@@ -179,11 +179,11 @@ function createWindow (opt = {})
 
 	mainWindow.on('close', (event) =>
 	{
-		const win = event.sender
-		const index = windowsRegistry.indexOf(win)
+		const win = mainWindow;
 		
-		if (__DEV__) 
+		if (__DEV__)
 		{
+			const index = windowsRegistry.indexOf(win)
 			console.log('Window on close', index)
 		}
 		
@@ -244,9 +244,9 @@ function createWindow (opt = {})
 	})
 
 	// Emitted when the window is closed.
-	mainWindow.on('closed', (event/*:WindowEvent*/) =>
+	mainWindow.on('closed', () =>
 	{
-		const index = windowsRegistry.indexOf(event.sender)
+		const index = windowsRegistry.indexOf(mainWindow)
 		
 		if (__DEV__) 
 		{
