@@ -805,7 +805,7 @@ electron-updater@^6.1.1:
     semver "^7.3.8"
     typed-emitter "^2.1.0"
 
-electron@^25.3.0:
+electron@^25.3.1:
   version "25.3.1"
   resolved "https://registry.yarnpkg.com/electron/-/electron-25.3.1.tgz#898cbb5e54d17ad0014123a10f5febc17638c6a9"
   integrity sha512-t0QXXqgf0/P0OJ9LU3qpcBMK+wL0FRwTQfooBaaG08v5hywPzc1yplfb3l4tS1xC0Ttw8IBaKLBeEoRgxBRHjg==
