@@ -41,7 +41,7 @@
   "devDependencies": {
     "@electron/notarize": "^2.1.0",
     "dotenv": "^16.3.1",
-    "electron": "^25.3.0",
+    "electron": "^25.3.1",
     "electron-builder": "^24.5.2",
     "sumchecker": "^3.0.1"
   }
