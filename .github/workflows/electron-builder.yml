@@ -29,7 +29,7 @@ jobs:
     - name: Installing Node
       uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 16
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm; fi
