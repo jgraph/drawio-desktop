@@ -44,11 +44,11 @@ Local Storage and Session Storage is stored in the AppData folder:
 - macOS: `~/Library/Application Support/draw.io`
 - Windows: `C:\Users\<USER-NAME>\AppData\Roaming\draw.io\`
 
-Open-source, not open-contribution
+Neither Open-source, nor open-contribution
 ----------------------------------
 
-[Similar to SQLite](https://www.sqlite.org/copyright.html), draw.io is open
-source but closed to contributions.
+draw.io is not open source software. The complete source code required to build the app from scratch is not available.
+draw.io is also closed to contributions.
 
 The level of complexity of this project means that even simple changes 
 can break a _lot_ of other moving parts. The amount of testing required 
