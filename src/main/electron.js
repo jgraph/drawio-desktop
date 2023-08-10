@@ -274,7 +274,8 @@ app.on('ready', e =>
 		callback({
 			responseHeaders: {
 				...details.responseHeaders,
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\' \'sha256-6zAB96lsBZREqf0sT44BhH1T69sm7HrN34rpMOcWbNo=\'; connect-src \'self\' https://*.draw.io https://*.diagrams.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; base-uri \'none\';child-src \'self\';object-src \'none\';']
+				// Replace the first sha with the one of the current version shown in the console log (the second one is for the second script block which is rarely changed)
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-PDJOTCOfwIg8Ri7U2PH1pIpx+haCyKsJEbFxlW6hdSI=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\'; connect-src \'self\' https://*.draw.io https://*.diagrams.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
 		})
 	});
