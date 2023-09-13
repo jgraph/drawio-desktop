@@ -47,6 +47,8 @@ const codeUrl = url.pathToFileURL(codeDir).href;
 const appBaseDir = path.join(__dirname, __dirname.endsWith(path.join('resources', 'app.asar', 'src', 'main')) ? 
 								'/../../../../' : '/../../');
 let appZoom = 1;
+// Disabled by default
+let isGoogleFontsEnabled = store.get('isGoogleFontsEnabled') != null? store.get('isGoogleFontsEnabled') : false;
 
 //Read config file
 var queryObj = {
@@ -64,7 +66,8 @@ var queryObj = {
 	'export': 'https://convert.diagrams.net/node/export',
 	'disableUpdate': disableUpdate? 1 : 0,
 	'enableSpellCheck': enableSpellCheck? 1 : 0,
-	'enableStoreBkp': enableStoreBkp? 1 : 0
+	'enableStoreBkp': enableStoreBkp? 1 : 0,
+	'isGoogleFontsEnabled': isGoogleFontsEnabled? 1 : 0
 };
 
 try
@@ -275,7 +278,9 @@ app.on('ready', e =>
 			responseHeaders: {
 				...details.responseHeaders,
 				// Replace the first sha with the one of the current version shown in the console log (the second one is for the second script block which is rarely changed)
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-PDJOTCOfwIg8Ri7U2PH1pIpx+haCyKsJEbFxlW6hdSI=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\'; connect-src \'self\' https://*.draw.io https://*.diagrams.net https://fonts.googleapis.com https://fonts.gstatic.com; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com; base-uri \'none\';child-src \'self\';object-src \'none\';']
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-PDJOTCOfwIg8Ri7U2PH1pIpx+haCyKsJEbFxlW6hdSI=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\'; connect-src \'self\'' +
+				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\'' +
+				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
 		})
 	});
@@ -832,6 +837,16 @@ app.on('ready', e =>
 	};
 
 	ipcMain.on('toggleStoreBkp', toggleStoreBkp);
+
+	function toggleGoogleFonts(e)
+	{
+		if (e != null && !validateSender(e.senderFrame)) return null;
+
+		isGoogleFontsEnabled = !isGoogleFontsEnabled;
+		store.set('isGoogleFontsEnabled', isGoogleFontsEnabled);
+	}
+
+	ipcMain.on('toggleGoogleFonts', toggleGoogleFonts);
 
     let updateNoAvailAdded = false;
     
