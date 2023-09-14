@@ -50,4 +50,4 @@ jobs:
         sudo snap install snapcraft --classic
         yarn run release-snap
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        snapcraft push --release stable dist/draw.io-amd64-*.snap
+        snapcraft push --release edge dist/draw.io-amd64-*.snap
