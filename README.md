@@ -14,6 +14,15 @@ draw.io Desktop is designed to be completely isolated from the Internet, apart f
 
 No diagram data is ever sent externally, nor do we send any analytics about app usage externally. This means certain functionality for which we do not have a JavaScript implementation do not work in the Desktop build, namely .vsd and Gliffy import.
 
+Security and isolating the app are the primarily objectives of draw.io desktop. If you ask for anything that involves external connections enabled in the app by default, the answer will be no.
+
+Support
+-------
+
+Support is provided on a reasonable business constraints basis, but without anything contractually binding. All support is provided via this repo. There is no private ticketing support.
+
+Purchasing draw.io for Confluence or Jira does not entitle you to commercial support for draw.io desktop. The draw.io integrations for Atlassian are sold by Seibert Media, they have no involvement with this project.
+
 Developing
 ----------
 
