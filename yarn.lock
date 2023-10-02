@@ -163,14 +163,14 @@
   integrity sha512-xPSg0jm4mqgEkNhowKgZFBNtwoEwF6gJ4Dhww+GFpm3IgtNseHQZ5IqdNwnquZEoANxyDAKDRAdVo4Z72VvD/g==
 
 "@types/node@*":
-  version "20.7.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.7.1.tgz#06d732ead0bd5ad978ef0ea9cbdeb24dc8717514"
-  integrity sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==
+  version "20.8.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.0.tgz#10ddf0119cf20028781c06d7115562934e53f745"
+  integrity sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==
 
 "@types/node@^18.11.18":
-  version "18.18.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.18.0.tgz#bd19d5133a6e5e2d0152ec079ac27c120e7f1763"
-  integrity sha512-3xA4X31gHT1F1l38ATDIL9GpRLdwVhnEFC8Uikv5ZLlXATwrCYyPq7ZWHxzxc3J/30SUiwiYT+bQe0/XvKlWbw==
+  version "18.18.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.18.1.tgz#80b22f3df719f15c9736207980e95f35d01ec1aa"
+  integrity sha512-3G42sxmm0fF2+Vtb9TJQpnjmP+uKlWvFa8KoEGquh4gqRmoUG/N0ufuhikw6HEsdG2G2oIKhog1GCTfz9v5NdQ==
 
 "@types/plist@^3.0.1":
   version "3.0.3"
@@ -807,9 +807,9 @@ electron-updater@^6.1.1:
     tiny-typed-emitter "^2.1.0"
 
 electron@^25.3.1:
-  version "25.8.3"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-25.8.3.tgz#f92426042eecf3286db40fd84df9179bba168c12"
-  integrity sha512-BdcTIrhQIf6YgsihCXYh3DgKobtLaNcFb1B5C/5euepxxXQ7qmTWC6WgNUm+IntLOFEDQO926rvm2nhRdSN+Nw==
+  version "25.8.4"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-25.8.4.tgz#b50877aac7d96323920437baf309ad86382cb455"
+  integrity sha512-hUYS3RGdaa6E1UWnzeGnsdsBYOggwMMg4WGxNGvAoWtmRrr6J1BsjFW/yRq4WsJHJce2HdzQXtz4OGXV6yUCLg==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^18.11.18"
