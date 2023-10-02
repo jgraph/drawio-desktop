@@ -1602,6 +1602,7 @@ function exportDiagram(event, args, directFinalize)
 								//This height adjustment fixes the output. TODO Test more cases
 								height: (args.pageHeight * 1.025) * MICRON_TO_PIXEL
 							},
+							landscape: args.pageWidth > args.pageHeight,
 							marginsType: 1 // no margin
 						};
 						 
