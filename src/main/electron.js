@@ -1602,7 +1602,7 @@ function exportDiagram(event, args, directFinalize)
 								//This height adjustment fixes the output. TODO Test more cases
 								height: (args.pageHeight * 1.025) * MICRON_TO_PIXEL
 							},
-							landscape: args.pageWidth > args.pageHeight,
+							//landscape: args.pageWidth > args.pageHeight, // This doesn't work in windows and broke the page shape in mac
 							marginsType: 1 // no margin
 						};
 						 
