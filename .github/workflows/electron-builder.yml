@@ -23,9 +23,39 @@ jobs:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN }}
       OS_NAME: ${{ matrix.os }}
+      GH_REF: ${{ github.ref }}
     steps:
     - name: Checkout reposistory
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        submodules: false
+    - name: Remove drawio submodule
+      run: |
+        rm .gitmodules
+        rm -rf drawio
+        mkdir drawio
+    - name: Checkout drawio-dev
+      uses: actions/checkout@v4
+      with:
+        repository: jgraph/drawio-dev
+        token: ${{ secrets.GH_TOKEN }}
+        ref: release
+        path: drawio
+        submodules: false
+    - name: Get drawio Tag & Submodules
+      run: |
+        cd drawio
+        # Get the current build tag from draw.io
+        export tmp1=${GH_REF/refs\//}
+        export tmp2=${tmp1/\/v/\/diagramly-}
+        export tmp3=${tmp2//\./_}
+        git fetch origin refs/$tmp3:refs/$tmp3 --no-tags
+        git checkout $tmp3 -b tmp-deploy
+        # Get submodules of draw.io
+        git config --global --add safe.directory '*'
+        git submodule init
+        git config submodule.src/main/webapp/resources.url  https://${{secrets.I18N_USERNAME}}:${{secrets.I18N_ACCESS_KEY}}@github.com/jgraph/drawio-i18n.git
+        git submodule update --init --recursive
     - name: Installing Node
       uses: actions/setup-node@v3
       with:
@@ -35,9 +65,6 @@ jobs:
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm; fi
         curl -o- -L https://yarnpkg.com/install.sh | bash
         export PATH="$HOME/.yarn/bin:$PATH"
-        # Use sed to replace the SSH URL with the public URL, then initialize submodules
-        sed -ie 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-        git submodule update --init --recursive
         sudo npm install -g yarn
         yarn install
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
