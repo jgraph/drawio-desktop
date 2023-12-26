@@ -1892,6 +1892,15 @@ function checkFileContent(body, enc)
 			}
 		}
 
+		// image/webp
+		if (cc1 == 0x52 && cc2 == 0x49 && cc3 == 0x46 && cc4 == 0x46)	//RIFF
+		{
+			if (cc9 == 0x57 && cc10 == 0x45 && cc11 == 0x42 && cc12 == 0x50) //WEBP
+			{
+				return true;
+			}
+		}
+
 		// vsdx, vssx (also zip, jar, odt, ods, odp, docx, xlsx, pptx, apk, aar)
 		if (cc1 == 0x50 && cc2 == 0x4B && cc3 == 0x03 && cc4 == 0x04)
 		{
