@@ -14,6 +14,7 @@ const PDFDocument = require('pdf-lib').PDFDocument;
 const Store = require('electron-store');
 const store = new Store();
 const ProgressBar = require('electron-progressbar');
+const contextMenu = require('electron-context-menu');
 const spawn = require('child_process').spawn;
 const disableUpdate = require('./disableUpdate').disableUpdate() || 
 						process.env.DRAWIO_DISABLE_UPDATE === 'true' || 
@@ -27,6 +28,14 @@ if (process.argv.indexOf('--disable-acceleration') !== -1)
 {
 	app.disableHardwareAcceleration();
 }
+
+// Configure context menu for text fields
+contextMenu({
+	showCopyImage: false,
+	showLookUpSelection: false,
+	showSearchWithGoogle: false,
+	showCopyLink: false
+});
 
 const __DEV__ = process.env.DRAWIO_ENV === 'dev'
 		
