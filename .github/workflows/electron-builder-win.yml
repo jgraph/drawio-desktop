@@ -10,9 +10,40 @@ jobs:
     runs-on: windows-latest
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REF: ${{ github.ref }}
     steps:
     - name: Checkout reposistory
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        submodules: false
+    - name: Remove drawio submodule
+      shell: powershell #The default shell for Windows
+      run: |
+        Remove-Item '.gitmodules'
+        Remove-Item 'drawio' -Recurse
+        md drawio
+    - name: Checkout drawio-dev
+      uses: actions/checkout@v4
+      with:
+        repository: jgraph/drawio-dev
+        token: ${{ secrets.GH_TOKEN }}
+        ref: release
+        path: drawio
+        submodules: false
+    - name: Get drawio Tag & Submodules
+      run: |
+        cd drawio
+        # Get the current build tag from draw.io
+        $tmp=$Env:GH_REF -replace '/v','/diagramly-' -replace '[.]','_'
+        $ref=$tmp+':'+$tmp
+        git fetch origin $ref --no-tags
+        $tmp=$tmp -replace 'refs/',''
+        git checkout $tmp -b tmp-deploy
+        # Get submodules of draw.io
+        git config --global --add safe.directory '*'
+        git submodule init
+        git config submodule.src/main/webapp/resources.url  https://${{secrets.I18N_USERNAME}}:${{secrets.I18N_ACCESS_KEY}}@github.com/jgraph/drawio-i18n.git
+        git submodule update --init --recursive
     - name: Installing Node
       uses: actions/setup-node@v3
       with:
@@ -20,9 +51,6 @@ jobs:
     - name: Prepare for Windows Build
       shell: powershell #The default shell for Windows
       run: |
-        git config --global core.autocrlf input
-        (gc .\.gitmodules) -replace 'git@github.com:','https://github.com/' | Out-File -encoding ASCII .gitmodules
-        git submodule update --init --recursive
         npm install -g yarn
         yarn install
     - name: Build for Windows (x32)

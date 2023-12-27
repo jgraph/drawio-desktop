@@ -14,6 +14,7 @@ const PDFDocument = require('pdf-lib').PDFDocument;
 const Store = require('electron-store');
 const store = new Store();
 const ProgressBar = require('electron-progressbar');
+const contextMenu = require('electron-context-menu');
 const spawn = require('child_process').spawn;
 const disableUpdate = require('./disableUpdate').disableUpdate() || 
 						process.env.DRAWIO_DISABLE_UPDATE === 'true' || 
@@ -27,6 +28,14 @@ if (process.argv.indexOf('--disable-acceleration') !== -1)
 {
 	app.disableHardwareAcceleration();
 }
+
+// Configure context menu for text fields
+contextMenu({
+	showCopyImage: false,
+	showLookUpSelection: false,
+	showSearchWithGoogle: false,
+	showCopyLink: false
+});
 
 const __DEV__ = process.env.DRAWIO_ENV === 'dev'
 		
@@ -278,7 +287,8 @@ app.on('ready', e =>
 			responseHeaders: {
 				...details.responseHeaders,
 				// Replace the first sha with the one of the current version shown in the console log (the second one is for the second script block which is rarely changed)
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-dLMFD7ijAw6AVaqecS7kbPcFFzkxQ+yeZSsKpOdLxps=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\'; connect-src \'self\'' +
+				// 3rd sha is for electron-progressbar
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-dLMFD7ijAw6AVaqecS7kbPcFFzkxQ+yeZSsKpOdLxps=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\' \'sha256-ZQ86kVKhLmcnklYAnUksoyZaLkv7vvOG9cc/hBJAEuQ=\'; connect-src \'self\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
@@ -1887,6 +1897,15 @@ function checkFileContent(body, enc)
 			 */
 			if ((cc4 == 0xE1) && (c7 == 'E' && c8 == 'x' && c9 == 'i'
 					&& c10 == 'f' && cc11 == 0))
+			{
+				return true;
+			}
+		}
+
+		// image/webp
+		if (cc1 == 0x52 && cc2 == 0x49 && cc3 == 0x46 && cc4 == 0x46)	//RIFF
+		{
+			if (cc9 == 0x57 && cc10 == 0x45 && cc11 == 0x42 && cc12 == 0x50) //WEBP
 			{
 				return true;
 			}

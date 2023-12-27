@@ -1,0 +1,19 @@
+name: 'Close stale issues and PRs'
+on:
+  schedule:
+    - cron: '30 1 * * *'
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions. See [the FAQ](https://github.com/jgraph/drawio/wiki/Stale-bot-FAQ) for more information.'
+          stale-pr-message: 'This PR has been automatically marked as stale because it has not had recent activity. It will be closed if no further activity occurs. Thank you for your contributions. See [the FAQ](https://github.com/jgraph/drawio/wiki/Stale-bot-FAQ) for more information.'
+          days-before-stale: 365
+          days-before-close: 20
+          stale-issue-label: 'wontfix'
+          exempt-issue-labels: 'pinned,security,notstale'
+          stale-pr-label: 'wontfix'
+          exempt-pr-labels: 'pinned,security,notstale'
