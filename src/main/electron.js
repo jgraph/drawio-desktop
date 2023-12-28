@@ -342,6 +342,7 @@ app.on('ready', e =>
 
 	var validFormatRegExp = /^(pdf|svg|png|jpeg|jpg|vsdx|xml)$/;
 	var themeRegExp = /^(dark|light)$/;
+	var linkTargetRegExp = /^(auto|new-win|same-win)$/;
 	
 	function argsRange(val) 
 	{
@@ -394,6 +395,8 @@ app.on('ready', e =>
 				'scales the application interface', parseFloat)
 			.option('--svg-theme <theme>',
 				'Theme of the exported SVG image (dark, light [default])', themeRegExp, 'light')
+			.option('--svg-links-target <target>',
+				'Target of links in the exported SVG image (auto [default], new-win, same-win)', linkTargetRegExp, 'auto')
 			.option('--enable-plugins',
 				'Enable Plugins')
 	        .parse(argv)
@@ -500,7 +503,8 @@ app.on('ready', e =>
 				embedImages: options.embedSvgImages? '1' : '0',
 				jpegQuality: options.quality,
 				uncompressed: options.uncompressed,
-				theme: options.svgTheme
+				theme: options.svgTheme,
+				linkTarget: options.svgLinksTarget
 			};
 
 			if (options.layers)
