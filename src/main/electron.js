@@ -341,6 +341,7 @@ app.on('ready', e =>
     }
 
 	var validFormatRegExp = /^(pdf|svg|png|jpeg|jpg|vsdx|xml)$/;
+	var themeRegExp = /^(dark|light)$/;
 	
 	function argsRange(val) 
 	{
@@ -391,6 +392,8 @@ app.on('ready', e =>
 				'Uncompressed XML output (for XML format only)')
 			.option('-z, --zoom <zoom>',
 				'scales the application interface', parseFloat)
+			.option('--svg-theme <theme>',
+				'Theme of the exported SVG image (dark, light [default])', themeRegExp, 'light')
 			.option('--enable-plugins',
 				'Enable Plugins')
 	        .parse(argv)
@@ -496,7 +499,8 @@ app.on('ready', e =>
 				embedXml: options.embedDiagram? '1' : '0',
 				embedImages: options.embedSvgImages? '1' : '0',
 				jpegQuality: options.quality,
-				uncompressed: options.uncompressed
+				uncompressed: options.uncompressed,
+				theme: options.svgTheme
 			};
 
 			if (options.layers)
