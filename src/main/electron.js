@@ -136,9 +136,29 @@ function createWindow (opt = {})
 			disableBlinkFeatures: 'Auxclick' // Is this needed?
 		}
 	}, opt)
+	
+	if (lastWinSize[2] != null)
+	{
+		options.x = parseInt(lastWinSize[2]);
+	}
+
+	if (lastWinSize[3] != null)
+	{
+		options.y = parseInt(lastWinSize[3]);
+	}
 
 	let mainWindow = new BrowserWindow(options)
 	windowsRegistry.push(mainWindow)
+
+	if (lastWinSize[4] === 'true')
+	{
+		mainWindow.maximize()
+	}
+
+	if (lastWinSize[5] === 'true')
+	{
+		mainWindow.setFullScreen(true);
+	}
 
 	if (__DEV__) 
 	{
@@ -171,22 +191,34 @@ function createWindow (opt = {})
 		mainWindow.webContents.openDevTools();
 	});
 
+	function rememberWinSize(win)
+	{
+		const size = win.getSize();
+		const pos = win.getPosition();
+		store.set('lastWinSize', size[0] + ',' + size[1] + ',' + pos[0] + ',' + pos[1] + ',' + win.isMaximized() + ',' + win.isFullScreen());
+	}
+
 	mainWindow.on('maximize', function()
 	{
+		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('maximize')
 	});
 
 	mainWindow.on('unmaximize', function()
 	{
+		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('unmaximize')
 	});
 
 	mainWindow.on('resize', function()
 	{
-		const size = mainWindow.getSize();
-		store.set('lastWinSize', size[0] + ',' + size[1]);
-
+		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('resize')
+	});
+
+	mainWindow.on('move', function()
+	{
+		rememberWinSize(mainWindow);
 	});
 
 	mainWindow.on('close', (event) =>
