@@ -1473,7 +1473,7 @@ function exportDiagram(event, args, directFinalize)
 		if (pageByPage)
 		{
 			from = args.allPages? 0 : parseInt(args.from || 0);
-			to = args.allPages? 1000 : parseInt(args.to || 1000) + 1; //The 'to' will be corrected later
+			to = args.allPages? 1000 : parseInt(args.to != null? args.to : 1000) + 1; //The 'to' will be corrected later
 			pdfs = [];
 
 			args.from = from;
