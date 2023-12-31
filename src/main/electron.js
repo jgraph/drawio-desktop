@@ -334,6 +334,7 @@ app.on('ready', e =>
 	{
 		if (!details.url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !details.url.startsWith(pluginsCodeUrl))))
 		{
+			console.log('Blocked loading file from ' + details.url, codeUrl, pluginsCodeUrl);
 			callback({cancel: true});
 		}
 		else
