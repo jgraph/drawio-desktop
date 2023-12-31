@@ -28,38 +28,31 @@ jobs:
     - name: Checkout reposistory
       uses: actions/checkout@v4
       with:
-        submodules: false
-    - name: Remove drawio submodule
-      run: |
-        rm .gitmodules
-        rm -rf drawio
-        mkdir drawio
+        submodules: true
     - name: Checkout drawio-dev
       uses: actions/checkout@v4
       with:
         repository: jgraph/drawio-dev
         token: ${{ secrets.GH_TOKEN }}
         ref: release
-        path: drawio
+        path: drawio-dev
         submodules: false
     - name: Get drawio Tag & Submodules
       run: |
-        cd drawio
+        cd drawio-dev
         # Get the current build tag from draw.io
         export tmp1=${GH_REF/refs\//}
         export tmp2=${tmp1/\/v/\/diagramly-}
         export tmp3=${tmp2//\./_}
         git fetch origin refs/$tmp3:refs/$tmp3 --no-tags
         git checkout $tmp3 -b tmp-deploy
-        # Get submodules of draw.io
-        git config --global --add safe.directory '*'
-        git submodule init
-        git config submodule.src/main/webapp/resources.url  https://${{secrets.I18N_USERNAME}}:${{secrets.I18N_ACCESS_KEY}}@github.com/jgraph/drawio-i18n.git
-        git submodule update --init --recursive
+        cp src/main/webapp/js/*.min.js ../drawio/src/main/webapp/js/
+        cd ..
+        rm -rf drawio-dev
     - name: Installing Node
       uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 20
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm; fi
