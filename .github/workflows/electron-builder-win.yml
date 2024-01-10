@@ -36,6 +36,13 @@ jobs:
         Copy-Item -Path "src\main\webapp\js\*.min.js"  -Destination "..\drawio\src\main\webapp\js\"
         cd ..
         Remove-Item 'drawio-dev' -Recurse -Force
+        cd drawio
+        Remove-Item 'etc','src\main\java','src\main\mxgraph','src\main\webapp\connect','src\main\webapp\shapes','src\main\webapp\stencils','src\main\webapp\service-worker*' -Recurse -Force
+        cd src\main\webapp\js
+        Copy-Item "diagramly\DesktopLibrary.js","diagramly\ElectronApp.js"  -Destination "."
+        Remove-Item 'atlas-viewer.min.js','atlas.min.js','cryptojs','deflate','diagramly','dropbox','embed*','freehand','grapheditor','integrate.min.js','jquery','jscolor','onedrive','orgchart','reader.min.js','rough','sanitizer','shapes.min.js','simplepeer','spin','viewer-static.min.js','viewer.min.js'  -Recurse -Force
+        md diagramly
+        Move-Item "DesktopLibrary.js","ElectronApp.js"  -Destination "diagramly"
     - name: Installing Node
       uses: actions/setup-node@v3
       with:

@@ -49,6 +49,13 @@ jobs:
         cp src/main/webapp/js/*.min.js ../drawio/src/main/webapp/js/
         cd ..
         rm -rf drawio-dev
+        cd drawio
+        rm -rf etc src/main/java src/main/mxgraph src/main/webapp/connect src/main/webapp/shapes src/main/webapp/stencils src/main/webapp/service-worker*
+        cd src/main/webapp/js
+        cp diagramly/DesktopLibrary.js diagramly/ElectronApp.js .
+        rm -rf atlas-viewer.min.js atlas.min.js cryptojs deflate diagramly dropbox embed* freehand grapheditor integrate.min.js jquery jscolor onedrive orgchart reader.min.js rough sanitizer shapes.min.js simplepeer spin viewer-static.min.js viewer.min.js
+        mkdir diagramly
+        mv DesktopLibrary.js ElectronApp.js diagramly
     - name: Installing Node
       uses: actions/setup-node@v3
       with:
