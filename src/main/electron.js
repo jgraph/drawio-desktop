@@ -221,68 +221,70 @@ function createWindow (opt = {})
 		rememberWinSize(mainWindow);
 	});
 
-	mainWindow.on('close', (event) =>
+	let uniqueIsModifiedId;
+
+	ipcMain.on('isModified-result', async (e, data) =>
 	{
-		const win = mainWindow;
-		
-		if (__DEV__)
-		{
-			const index = windowsRegistry.indexOf(win)
-			console.log('Window on close', index)
-		}
-		
-		const contents = win.webContents
+		if (!validateSender(e.senderFrame) || uniqueIsModifiedId != data.uniqueId) return null;
 
-		if (contents != null)
+		if (data.isModified)
 		{
-	        ipcMain.once('isModified-result', async (e, data) =>
-			{
-				if (!validateSender(e.senderFrame)) return null;
-
-				if (data.isModified)
+			// Can't use async function here because it crashes on Linux when win.destroy is called
+			let response = dialog.showMessageBoxSync(
+				mainWindow,
 				{
-					// Can't use async function here because it crashes on Linux when win.destroy is called
-					let response = dialog.showMessageBoxSync(
-						win,
-						{
-							type: 'question',
-							buttons: ['Cancel', 'Discard Changes'],
-							title: 'Confirm',
-							message: 'The document has unsaved changes. Do you really want to quit without saving?' //mxResources.get('allChangesLost')
-						});
+					type: 'question',
+					buttons: ['Cancel', 'Discard Changes'],
+					title: 'Confirm',
+					message: 'The document has unsaved changes. Do you really want to quit without saving?' //mxResources.get('allChangesLost')
+				});
 
-					if (response === 1)
-					{
-						//If user chose not to save, remove the draft
-						if (data.draftPath != null)
-						{
-							await deleteFile(data.draftPath);
-							win.destroy();
-						}
-						else
-						{
-							contents.send('removeDraft');
-
-							ipcMain.once('draftRemoved', (e) =>
-							{
-								if (!validateSender(e.senderFrame)) return null;
-
-								win.destroy();
-							});
-						}
-					}
-					else
-					{
-						cmdQPressed = false;
-					}
+			if (response === 1)
+			{
+				//If user chose not to save, remove the draft
+				if (data.draftPath != null)
+				{
+					await deleteFile(data.draftPath);
+					mainWindow.destroy();
 				}
 				else
 				{
-					win.destroy();
-				}
-			});
+					mainWindow.webContents.send('removeDraft');
 
-			contents.send('isModified');
+					ipcMain.once('draftRemoved', (e) =>
+					{
+						if (!validateSender(e.senderFrame)) return null;
+
+						mainWindow.destroy();
+					});
+				}
+			}
+			else
+			{
+				cmdQPressed = false;
+			}
+		}
+		else
+		{
+			mainWindow.destroy();
+		}
+	});
+	
+	mainWindow.on('close', (event) =>
+	{
+		uniqueIsModifiedId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+
+		if (__DEV__)
+		{
+			const index = windowsRegistry.indexOf(mainWindow)
+			console.log('Window on close', index, uniqueIsModifiedId)
+		}
+		
+		const contents = mainWindow.webContents
+
+		if (contents != null)
+		{
+			contents.send('isModified', uniqueIsModifiedId);
 			event.preventDefault();
 		}
 	})
@@ -334,6 +336,7 @@ app.on('ready', e =>
 	{
 		if (!details.url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !details.url.startsWith(pluginsCodeUrl))))
 		{
+			console.log('Blocked loading file from ' + details.url, codeUrl, pluginsCodeUrl);
 			callback({cancel: true});
 		}
 		else
@@ -2551,6 +2554,9 @@ ipcMain.on("rendererReq", async (event, args) =>
 			break;
 		case 'unwatchFile':	
 			ret = await unwatchFile(args.path);
+			break;
+		case 'exit':
+			app.quit();
 			break;
 		};
 
