@@ -33,10 +33,8 @@ async function addElectronFuses(context)
         [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: false, // TODO Enables validation of the app.asar archive on macOS
         // Some reports it crashes when enabled on arm64
         [FuseV1Options.LoadBrowserProcessSpecificV8Snapshot]: false, // TODO Loads V8 Snapshot from `browser_v8_context_snapshot.bin` for the browser process
-        // TODO Disables when moving to a custom protocol
-        [FuseV1Options.GrantFileProtocolExtraPrivileges]: true, // Grants the file protocol extra privileges
         // Based on docs, this should be enabled for macOS on arm64
-        resetAdHocDarwinSignature: electronPlatformName === 'darwin' && (targetArch === builder.Arch.arm64 || arch === builder.Arch.universal),
+        resetAdHocDarwinSignature: electronPlatformName === 'darwin' && (arch === builder.Arch.arm64 || arch === builder.Arch.universal),
     });
 }
 
