@@ -5,6 +5,8 @@ const builder = require('electron-builder');
 
 async function addElectronFuses(context) 
 {
+    console.log(JSON.stringify(context));
+
     const { appOutDir, packager: { appInfo: { productFilename } }, electronPlatformName, arch } = context;
 
     const ext = {
@@ -19,6 +21,13 @@ async function addElectronFuses(context)
         : productFilename;
 
     const electronBinaryPath = path.join(appOutDir, `${executableName}${ext}`);
+
+    // We build for x64 and arm64, but universal build for these two also but no fuses is needed at this temp stages
+    if (electronBinaryPath.includes('-temp/'))
+    {
+        return;
+    }
+
     console.log('Flipping fuses for: ', electronBinaryPath);
 
     await flipFuses(electronBinaryPath, 
