@@ -30,6 +30,7 @@
     "identityName": "draw.io.draw.ioDiagrams",
     "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733"
   },
+  "afterPack": "build/fuses.js",
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",

@@ -39,6 +39,7 @@
   "portable": {
     "artifactName": "${productName}-ia32-${version}-windows-32bit-no-installer.${ext}"
   },
+  "afterPack": "build/fuses.js",
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",

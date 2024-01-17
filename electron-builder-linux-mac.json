@@ -35,6 +35,7 @@
     ]
   },
   "afterSign": "build/notarize.js",
+  "afterPack": "build/fuses.js",
   "dmg": {
   },
   "linux": {

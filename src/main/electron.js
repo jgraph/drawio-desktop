@@ -51,7 +51,7 @@ let enableStoreBkp = store.get('enableStoreBkp') != null? store.get('enableStore
 let dialogOpen = false;
 let enablePlugins = false;
 const codeDir = path.join(__dirname, '/../../drawio/src/main/webapp');
-const codeUrl = url.pathToFileURL(codeDir).href;
+const codeUrl = url.pathToFileURL(codeDir).href.replace(/\/.\:\//, str => str.toUpperCase()); // Fix for windows drive letter
 // Production app uses asar archive, so we need to go up two more level. It's extra cautious since asar is read-only anyway.
 const appBaseDir = path.join(__dirname, __dirname.endsWith(path.join('resources', 'app.asar', 'src', 'main')) ? 
 								'/../../../../' : '/../../');
@@ -102,7 +102,7 @@ catch(e)
 // Only allow request from the app code itself
 function validateSender (frame) 
 {
-	return frame.url.startsWith(codeUrl);
+	return frame.url.replace(/\/.\:\//, str => str.toUpperCase()).startsWith(codeUrl);
 }
 
 function createWindow (opt = {})
@@ -329,14 +329,16 @@ app.on('ready', e =>
 		})
 	});
 
-	const pluginsCodeUrl = url.pathToFileURL(path.join(getAppDataFolder(), '/plugins/')).href;
+	const pluginsCodeUrl = url.pathToFileURL(path.join(getAppDataFolder(), '/plugins/')).href.replace(/\/.\:\//, str => str.toUpperCase());
 
 	// Enforce loading file only from our app directory
 	session.defaultSession.webRequest.onBeforeRequest({urls: ['file://*']}, (details, callback) =>
 	{
-		if (!details.url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !details.url.startsWith(pluginsCodeUrl))))
+		const url = details.url.replace(/\/.\:\//, str => str.toUpperCase());
+
+		if (!url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !url.startsWith(pluginsCodeUrl))))
 		{
-			console.log('Blocked loading file from ' + details.url, codeUrl, pluginsCodeUrl);
+			console.log('Blocked loading file from ' + details.url, url, codeUrl, pluginsCodeUrl);
 			callback({cancel: true});
 		}
 		else
@@ -641,6 +643,7 @@ app.on('ready', e =>
 								}
 								else if (ext === '.png')
 								{
+									expArgs.xmlEncoded = true;
 									expArgs.xml = Buffer.from(fileContent).toString('base64');
 								}
 								else
@@ -1682,6 +1685,7 @@ function exportDiagram(event, args, directFinalize)
 							}
 							else
 							{
+								// TODO extract the correct xml if the source was a pnd file
 								data = await mergePdfs(pdfs, args.embedXml == '1' ? args.xml : null);
 								event.reply('export-success', data);
 							}
