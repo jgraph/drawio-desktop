@@ -40,6 +40,7 @@
     "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
+    "@electron/fuses": "^1.7.0",
     "@electron/notarize": "^2.2.0",
     "dotenv": "^16.3.1",
     "electron": "^28.1.0",

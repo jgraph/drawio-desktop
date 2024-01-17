@@ -26,6 +26,7 @@
       "removable-media"
     ]
   },
+  "afterPack": "build/fuses.js",
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",
