@@ -5,8 +5,6 @@ const builder = require('electron-builder');
 
 async function addElectronFuses(context) 
 {
-    console.log(JSON.stringify(context));
-
     const { appOutDir, packager: { appInfo: { productFilename } }, electronPlatformName, arch } = context;
 
     const ext = {
