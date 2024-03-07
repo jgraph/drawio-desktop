@@ -80,6 +80,13 @@
 	  	"description": "VSDX Document",
 	  	"mimeType": "application/vnd.visio",
 	  	"role": "Editor"
-	  }
+	  },
+	  {
+	  	"ext": "png",
+	  	"name": "Portable Network Graphics Image",
+	  	"description": "Portable Network Graphics Image",
+	  	"mimeType": "image/png",
+	  	"role": "Editor"
+	  } 
   ]
 }
