@@ -1766,7 +1766,7 @@ const BKP_EXT = '.bkp';
 
 /**
  * Checks the file content type
- * Confirm content is xml, pdf, png, jpg, svg, vsdx ...
+ * Confirm content is xml, json, pdf, png, jpg, svg, vsdx ...
  */
 function checkFileContent(body, enc)
 {
@@ -1968,6 +1968,12 @@ function checkFileContent(body, enc)
 			return true;
 		}
 
+		// json
+		if (c1 == '{' || c1 == '[')
+		{
+			return true;
+		}
+		
 		// mxfile, mxlibrary, mxGraphModel
 		if (c1 == '<' && c2 == 'm' && c3 == 'x')
 		{
