@@ -1434,14 +1434,14 @@ function exportVsdx(event, args, directFinalize)
 	}
 	
 	//Order of these two events is not guaranteed, so wait for them async.
-	//TOOD There is still a chance we catch another window 'app-load-finished' if user created multiple windows quickly 
+	//TODO There is still a chance we catch another window 'app-load-finished' if user created multiple windows quickly
 	ipcMain.once('app-load-finished', loadFinished);
     win.webContents.on('did-finish-load', loadFinished);
 };
 
 async function mergePdfs(pdfFiles, xml)
 {
-	//Pass throgh single files
+	//Pass through single files
 	if (pdfFiles.length == 1 && xml == null)
 	{
 		return pdfFiles[0];
@@ -2011,7 +2011,7 @@ async function getFileDrafts(fileObject)
 		uniquePart = '_' + counter++;
 	} while (fs.existsSync(draftFileName)); //TODO this assume continuous drafts names
 
-	//Port old draft files to new prefex
+	//Port old draft files to new prefix
 	counter = 1;
 	uniquePart = '';
 	let draftExists = false;
