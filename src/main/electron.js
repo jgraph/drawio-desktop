@@ -1562,7 +1562,7 @@ function exportDiagram(event, args, directFinalize)
 					bounds = null;
 				}
 				
-				var pdfOptions = {pageSize: 'A4'};
+				var pdfOptions = {preferCSSPageSize: true};
 				var hasError = false;
 				
 				if (bounds == null || bounds.width < 5 || bounds.height < 5) //very small page size never return from printToPDF
@@ -1573,6 +1573,7 @@ function exportDiagram(event, args, directFinalize)
 				else
 				{
 					pdfOptions = {
+						preferCSSPageSize: true,
 						printBackground: true,
 						pageSize : {
 							width: bounds.width / PIXELS_PER_INCH,
@@ -1652,13 +1653,8 @@ function exportDiagram(event, args, directFinalize)
 					{
 						pdfOptions = {
 							scaleFactor: args.pageScale,
+							preferCSSPageSize: true,
 							printBackground: true,
-							pageSize : {
-								width: args.pageWidth * MICRON_TO_PIXEL,
-								//This height adjustment fixes the output. TODO Test more cases
-								height: (args.pageHeight * 1.025) * MICRON_TO_PIXEL
-							},
-							//landscape: args.pageWidth > args.pageHeight, // This doesn't work in windows and broke the page shape in mac
 							marginsType: 1 // no margin
 						};
 						 
