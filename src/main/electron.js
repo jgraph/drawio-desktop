@@ -904,6 +904,20 @@ app.on('ready', e =>
 
 	ipcMain.on('toggleGoogleFonts', toggleGoogleFonts);
 
+	function toggleFullscreen(e)
+	{
+		if (e != null && !validateSender(e.senderFrame)) return null;
+
+		let win = BrowserWindow.getFocusedWindow();
+
+		if (win != null)
+		{
+			win.setFullScreen(!win.isFullScreen());
+		}
+	};
+
+	ipcMain.on('toggleFullscreen', toggleFullscreen);
+
     let updateNoAvailAdded = false;
     
 	function checkForUpdatesFn(e) 
@@ -2563,6 +2577,9 @@ ipcMain.on("rendererReq", async (event, args) =>
 			break;
 		case 'exit':
 			app.quit();
+			break;
+		case 'isFullscreen':
+			ret = BrowserWindow.getFocusedWindow().isFullScreen();
 			break;
 		};
 
