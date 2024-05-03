@@ -3,7 +3,7 @@ const fsProm = require('fs/promises');
 const os = require('os');
 const path = require('path')
 const url = require('url')
-const {Menu: menu, shell, dialog, session,
+const {Menu: menu, shell, dialog, session, screen, 
 		clipboard, nativeImage, ipcMain, app, BrowserWindow} = require('electron')
 const crc = require('crc');
 const zlib = require('zlib');
@@ -105,6 +105,23 @@ function validateSender (frame)
 	return frame.url.replace(/\/.\:\//, str => str.toUpperCase()).startsWith(codeUrl);
 }
 
+function isWithinDisplayBounds(pos) 
+{
+	const displays = screen.getAllDisplays();
+
+	return displays.reduce((result, display) => 
+	{
+		const area = display.workArea
+		return (
+			result ||
+			(pos.x >= area.x &&
+			pos.y >= area.y &&
+			pos.x < area.x + area.width &&
+			pos.y < area.y + area.height)
+		)
+	}, false)
+}
+
 function createWindow (opt = {})
 {
 	let lastWinSizeStr = store.get('lastWinSize');
@@ -145,6 +162,12 @@ function createWindow (opt = {})
 	if (lastWinSize[3] != null)
 	{
 		options.y = parseInt(lastWinSize[3]);
+	}
+
+	if (!isWithinDisplayBounds(options))
+	{
+		options.x = null;
+		options.y = null;
 	}
 
 	let mainWindow = new BrowserWindow(options)
