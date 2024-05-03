@@ -20,7 +20,8 @@ const disableUpdate = require('./disableUpdate').disableUpdate() ||
 						process.env.DRAWIO_DISABLE_UPDATE === 'true' || 
 						fs.existsSync('/.flatpak-info'); //This file indicates running in flatpak sandbox
 autoUpdater.logger = log
-autoUpdater.logger.transports.file.level = 'info'
+autoUpdater.logger.transports.file.level = 'error'
+autoUpdater.logger.transports.console.level = 'error'
 autoUpdater.autoDownload = false
 
 //Command option to disable hardware acceleration
@@ -1152,8 +1153,6 @@ autoUpdater.on('error', e => log.error('@error@\n', e))
 
 autoUpdater.on('update-available', (a, b) =>
 {
-	log.info('@update-available@\n', a, b)
-	
 	dialog.showMessageBox(
 	{
 		type: 'question',
@@ -1195,8 +1194,6 @@ autoUpdater.on('update-available', (a, b) =>
 			
 			autoUpdater.on('download-progress', (d) => {
 				//On mac, download-progress event is not called, so the indeterminate progress will continue until download is finished
-				log.info('@update-progress@\n', d);
-				
 				var percent = d.percent;
 				
 				if (percent)
@@ -1222,7 +1219,10 @@ autoUpdater.on('update-available', (a, b) =>
 								progressBar.detail = 'Download completed.';
 							})
 							.on('aborted', function(value) {
-								log.info(`progress aborted... ${value}`);
+								if (__DEV__)
+								{
+									log.error(`progress aborted... ${value}`);
+								}
 							})
 							.on('progress', function(value) {
 								progressBar.detail = `${value}% ...`;
@@ -1244,7 +1244,6 @@ autoUpdater.on('update-available', (a, b) =>
 					progressBar.close()
 				}
 		
-				log.info('@update-downloaded@\n', info)
 				// Ask user to update the app
 				dialog.showMessageBox(
 				{
@@ -1265,7 +1264,6 @@ autoUpdater.on('update-available', (a, b) =>
 		else if (result.response === 2)
 		{
 			//save in settings don't check for updates
-			log.info('@dont check for updates!@')
 			store.set('dontCheckUpdates', true)
 		}
 	})
