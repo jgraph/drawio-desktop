@@ -346,7 +346,7 @@ app.on('ready', e =>
 				...details.responseHeaders,
 				// Replace the first sha with the one of the current version shown in the console log (the second one is for the second script block which is rarely changed)
 				// 3rd sha is for electron-progressbar
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-CuxCZzdV/xHExthsNvH0rD+sU8zQAaYT5XLu6LHfH78=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\' \'sha256-ZQ86kVKhLmcnklYAnUksoyZaLkv7vvOG9cc/hBJAEuQ=\'; connect-src \'self\'' +
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-qgjuMiWd1HsOihB9Ppd7j72lY0gT8BpBkiRIJFO3sRQ=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\' \'sha256-ZQ86kVKhLmcnklYAnUksoyZaLkv7vvOG9cc/hBJAEuQ=\'; connect-src \'self\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src *; frame-src \'none\'; style-src \'self\' \'unsafe-inline\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
@@ -1476,10 +1476,23 @@ function exportVsdx(event, args, directFinalize)
 
 async function mergePdfs(pdfFiles, xml)
 {
-	//Pass throgh single files
-	if (pdfFiles.length == 1 && xml == null)
+	if (pdfFiles.length == 1)
 	{
-		return pdfFiles[0];
+		// Converts to PDF 1.7 with compression
+		const pdfDoc = await PDFDocument.load(pdfFiles[0]);
+		pdfDoc.setCreator('diagrams.net');
+
+		// KNOWN: Attachments produce smaller files but break
+		// internal links in pdf-lib so using Subject for now
+		if (xml != null)
+		{
+			pdfDoc.setSubject(encodeURIComponent(xml).
+				replace(/\(/g, "\\(").replace(/\)/g, "\\)"));
+		}
+
+		const pdfBytes = await pdfDoc.save();
+		
+		return Buffer.from(pdfBytes);
 	}
 
 	try 
@@ -1545,18 +1558,9 @@ function exportDiagram(event, args, directFinalize)
 		browser.loadURL(`file://${codeDir}/export3.html`);
 
 		const contents = browser.webContents;
-		var pageByPage = (args.format == 'pdf' && !args.print), from, pdfs;
-
-		if (pageByPage)
-		{
-			from = args.allPages? 0 : parseInt(args.from || 0);
-			to = args.allPages? 1000 : parseInt(args.to != null? args.to : 1000) + 1; //The 'to' will be corrected later
-			pdfs = [];
-
-			args.from = from;
-			args.to = from;
-			args.allPages = false;
-		}
+		var from = args.from;
+		var to = args.to;
+		var pdfs = [];
 			
 		contents.on('did-finish-load', function()
 	    {
