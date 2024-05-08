@@ -812,7 +812,7 @@ app.on('ready', e =>
 
     if (!gotTheLock) 
     {
-    	app.quit()
+		app.quit()
     } 
     else 
     {
@@ -1601,7 +1601,7 @@ function exportDiagram(event, args, directFinalize)
 					bounds = null;
 				}
 				
-				var pdfOptions = {preferCSSPageSize: true};
+				var pdfOptions = {};
 				var hasError = false;
 				
 				if (bounds == null || bounds.width < 5 || bounds.height < 5) //very small page size never return from printToPDF
@@ -1613,17 +1613,7 @@ function exportDiagram(event, args, directFinalize)
 				{
 					pdfOptions = {
 						preferCSSPageSize: true,
-						printBackground: true,
-						pageSize : {
-							width: bounds.width / PIXELS_PER_INCH,
-							height: (bounds.height + 2) / PIXELS_PER_INCH //the extra 2 pixels to prevent adding an extra empty page						
-						},
-						margins: {
-							top: 0,
-							bottom: 0,
-							left: 0,
-							right: 0
-						} // no margin
+						printBackground: true
 					}
 				}
 				
@@ -1693,8 +1683,7 @@ function exportDiagram(event, args, directFinalize)
 						pdfOptions = {
 							scaleFactor: args.pageScale,
 							preferCSSPageSize: true,
-							printBackground: true,
-							marginsType: 1 // no margin
+							printBackground: true
 						};
 						 
 						contents.print(pdfOptions, (success, errorType) => 
