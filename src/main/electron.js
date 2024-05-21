@@ -554,18 +554,19 @@ app.on('ready', e =>
 				format: format,
 				w: options.width > 0 ? options.width : null,
 				h: options.height > 0 ? options.height : null,
-				border: options.border > 0 ? options.border : 0,
+				pageMargin: options.border > 0 ? options.border : 0,
 				bg: options.transparent ? 'none' : '#ffffff',
 				from: from,
 				to: to,
 				allPages: format == 'pdf' && options.allPages,
-				scale: (options.crop && (options.scale == null || options.scale == 1)) ? 1.00001: (options.scale || 1), //any value other than 1 crops the pdf
+				scale: (options.scale || 1),
 				embedXml: options.embedDiagram? '1' : '0',
 				embedImages: options.embedSvgImages? '1' : '0',
 				jpegQuality: options.quality,
 				uncompressed: options.uncompressed,
 				theme: options.svgTheme,
-				linkTarget: options.svgLinksTarget
+				linkTarget: options.svgLinksTarget,
+				crop: (options.crop && format == 'pdf') ? '1' : '0'
 			};
 
 			if (options.layers)
