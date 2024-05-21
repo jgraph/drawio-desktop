@@ -1,28 +1,31 @@
-const fs = require('fs')
-const fsProm = require('fs/promises');
-const os = require('os');
-const path = require('path')
-const url = require('url')
-const {Menu: menu, shell, dialog, session, screen, 
-		clipboard, nativeImage, ipcMain, app, BrowserWindow} = require('electron')
-const crc = require('crc');
-const zlib = require('zlib');
-const log = require('electron-log')
-const program = require('commander')
-const {autoUpdater} = require("electron-updater")
-const PDFDocument = require('pdf-lib').PDFDocument;
-const Store = require('electron-store');
+import fs from 'fs';
+import { promises as fsProm } from 'fs';
+import path from 'path';
+import url from 'url';
+import {Menu as menu, shell, dialog, session, screen, 
+		clipboard, nativeImage, ipcMain, app, BrowserWindow} from 'electron';
+import crc from 'crc';
+import zlib from 'zlib';
+import log from'electron-log';
+import { program } from 'commander';
+import elecUpPkg from 'electron-updater';
+const {autoUpdater} = elecUpPkg;
+import {PDFDocument} from 'pdf-lib';
+import Store from 'electron-store';
 const store = new Store();
-const ProgressBar = require('electron-progressbar');
-const contextMenu = require('electron-context-menu');
-const spawn = require('child_process').spawn;
-const disableUpdate = require('./disableUpdate').disableUpdate() || 
+import ProgressBar from 'electron-progressbar';
+import contextMenu from 'electron-context-menu';
+import {spawn} from 'child_process';
+import {disableUpdate as disUpPkg} from './disableUpdate.js';
+const disableUpdate = disUpPkg() || 
 						process.env.DRAWIO_DISABLE_UPDATE === 'true' || 
 						fs.existsSync('/.flatpak-info'); //This file indicates running in flatpak sandbox
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = 'error'
 autoUpdater.logger.transports.console.level = 'error'
 autoUpdater.autoDownload = false
+
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 //Command option to disable hardware acceleration
 if (process.argv.indexOf('--disable-acceleration') !== -1)
@@ -336,7 +339,7 @@ function isPluginsEnabled()
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', e =>
+app.whenReady().then(() =>
 {
 	// Enforce our CSP on all contents
 	session.defaultSession.webRequest.onHeadersReceived((details, callback) => 

@@ -2,10 +2,15 @@
   "name": "draw.io",
   "version": "24.4.0",
   "description": "draw.io desktop",
+  "exports": "./src/main/electron.js",
+  "type": "module",
   "main": "src/main/electron.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "electron .",
-    "sync": "node ./sync.js",
+    "sync": "node ./sync.cjs",
     "release-win": "electron-builder --config electron-builder-win.json --publish always",
     "release-win32": "electron-builder --config electron-builder-win32.json --publish always",
     "release-appx": "electron-builder --config electron-builder-appx.json --publish always",
@@ -29,21 +34,21 @@
   },
   "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
-    "commander": "^11.1.0",
+    "commander": "^12.0.0",
     "compression": "^1.7.4",
     "crc": "^4.3.2",
-    "electron-context-menu": "^3.6.1",
-    "electron-log": "^5.0.2",
-    "electron-progressbar": "^2.1.0",
-    "electron-store": "^8.1.0",
-    "electron-updater": "^6.1.7",
+    "electron-context-menu": "^4.0.0",
+    "electron-log": "^5.1.4",
+    "electron-progressbar": "^2.2.1",
+    "electron-store": "^9.0.0",
+    "electron-updater": "^6.1.8",
     "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
-    "@electron/fuses": "^1.7.0",
-    "@electron/notarize": "^2.2.0",
-    "dotenv": "^16.3.1",
-    "electron": "28.1.0",
+    "@electron/fuses": "^1.8.0",
+    "@electron/notarize": "^2.3.2",
+    "dotenv": "^16.4.5",
+    "electron": "30.0.6",
     "electron-builder": "^24.9.1",
     "sumchecker": "^3.0.1"
   }
