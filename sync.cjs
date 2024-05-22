@@ -13,4 +13,4 @@ pj.version = ver
 
 fs.writeFileSync(appjsonpath, JSON.stringify(pj, null, 2), 'utf8')
 //Enable/disable updates
-fs.writeFileSync(disableUpdatePath, 'module.exports = { disableUpdate: function() { return ' + (process.argv[2] == 'disableUpdate'? 'true' : 'false') + ';}}', 'utf8');
+fs.writeFileSync(disableUpdatePath, 'export function disableUpdate() { return ' + (process.argv[2] == 'disableUpdate'? 'true' : 'false') + ';}', 'utf8');
