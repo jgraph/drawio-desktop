@@ -34,8 +34,8 @@
       }
     ]
   },
-  "afterSign": "build/notarize.js",
-  "afterPack": "build/fuses.js",
+  "afterSign": "build/notarize.cjs",
+  "afterPack": "build/fuses.cjs",
   "dmg": {
   },
   "linux": {
