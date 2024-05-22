@@ -48,7 +48,7 @@
   "portable": {
     "artifactName": "${productName}-${version}-windows-no-installer.${ext}"
   },
-  "afterPack": "build/fuses.js",
+  "afterPack": "build/fuses.cjs",
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",

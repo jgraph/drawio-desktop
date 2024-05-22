@@ -57,7 +57,7 @@ jobs:
         mkdir diagramly
         mv DesktopLibrary.js ElectronApp.js diagramly
     - name: Installing Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20
     - name: Build for ${{ matrix.os}}
