@@ -600,7 +600,7 @@ app.whenReady().then(() =>
 					fs.readdirSync(dir).forEach(function(file) 
 					{
 						var filePath = path.join(dir, file);
-						stat = fs.statSync(filePath);
+						var stat = fs.statSync(filePath);
 						
 						if (stat.isFile() && path.basename(filePath).charAt(0) != '.')
 						{
