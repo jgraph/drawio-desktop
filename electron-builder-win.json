@@ -40,7 +40,9 @@
     "artifactName": "${productName}-${version}-windows-installer.${ext}",
   	"oneClick": false,
     "perMachine": true,
-    "allowToChangeInstallationDirectory": true
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": false,
+    "createDesktopShortcut": false
   },
   "msi": {
     "artifactName": "${productName}-${version}.${ext}"
