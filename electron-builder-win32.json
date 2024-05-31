@@ -34,7 +34,9 @@
     "artifactName": "${productName}-ia32-${version}-windows-32bit-installer.${ext}",
   	"oneClick": false,
     "perMachine": true,
-    "allowToChangeInstallationDirectory": true
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": false,
+    "createDesktopShortcut": false
   },
   "portable": {
     "artifactName": "${productName}-ia32-${version}-windows-32bit-no-installer.${ext}"
