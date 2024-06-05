@@ -18,12 +18,16 @@ import contextMenu from 'electron-context-menu';
 import {spawn} from 'child_process';
 import {disableUpdate as disUpPkg} from './disableUpdate.js';
 const disableUpdate = disUpPkg() || 
-						process.env.DRAWIO_DISABLE_UPDATE === 'true' || 
+						process.env.DRAWIO_DISABLE_UPDATE === 'true' ||
+						process.argv.indexOf('--disable-update') !== -1 ||
 						fs.existsSync('/.flatpak-info'); //This file indicates running in flatpak sandbox
+const silentUpdate = !disableUpdate && (process.env.DRAWIO_SILENT_UPDATE === 'true' ||
+										process.argv.indexOf('--silent-update') !== -1);
 autoUpdater.logger = log
 autoUpdater.logger.transports.file.level = 'error'
 autoUpdater.logger.transports.console.level = 'error'
-autoUpdater.autoDownload = false
+autoUpdater.autoDownload = silentUpdate
+autoUpdater.autoInstallOnAppQuit = silentUpdate
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
@@ -1157,6 +1161,8 @@ autoUpdater.on('error', e => log.error('@error@\n', e))
 
 autoUpdater.on('update-available', (a, b) =>
 {
+	if (silentUpdate) return;
+
 	dialog.showMessageBox(
 	{
 		type: 'question',
