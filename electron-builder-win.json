@@ -45,7 +45,9 @@
     "createDesktopShortcut": false
   },
   "msi": {
-    "artifactName": "${productName}-${version}.${ext}"
+    "artifactName": "${productName}-${version}.${ext}",
+    "runAfterFinish": false,
+    "createDesktopShortcut": false
   },
   "portable": {
     "artifactName": "${productName}-${version}-windows-no-installer.${ext}"
