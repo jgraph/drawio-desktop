@@ -583,6 +583,12 @@ app.whenReady().then(() =>
 
 			var paths = program.args;
 			
+			// Remove --no-sandbox arg from the paths
+			if (Array.isArray(paths))
+			{
+				paths = paths.filter(function(path) { return path != null && path != '--no-sandbox'; });
+			}
+
 			// If a file is passed 
 			if (paths !== undefined && paths[0] != null)
 			{
@@ -590,6 +596,7 @@ app.whenReady().then(() =>
 				
 				try
 				{
+					console.log('Exporting ', paths);
 					inStat = fs.statSync(paths[0]);
 				}
 				catch(e)
