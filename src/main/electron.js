@@ -231,25 +231,17 @@ function createWindow (opt = {})
 
 	mainWindow.on('maximize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('maximize')
 	});
 
 	mainWindow.on('unmaximize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('unmaximize')
 	});
 
 	mainWindow.on('resize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('resize')
-	});
-
-	mainWindow.on('move', function()
-	{
-		rememberWinSize(mainWindow);
 	});
 
 	let uniqueIsModifiedId;
@@ -318,6 +310,8 @@ function createWindow (opt = {})
 			contents.send('isModified', uniqueIsModifiedId);
 			event.preventDefault();
 		}
+
+		rememberWinSize(mainWindow);
 	})
 
 	// Emitted when the window is closed.
@@ -596,7 +590,6 @@ app.whenReady().then(() =>
 				
 				try
 				{
-					console.log('Exporting ', paths);
 					inStat = fs.statSync(paths[0]);
 				}
 				catch(e)
