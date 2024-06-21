@@ -231,25 +231,17 @@ function createWindow (opt = {})
 
 	mainWindow.on('maximize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('maximize')
 	});
 
 	mainWindow.on('unmaximize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('unmaximize')
 	});
 
 	mainWindow.on('resize', function()
 	{
-		rememberWinSize(mainWindow);
 		mainWindow.webContents.send('resize')
-	});
-
-	mainWindow.on('move', function()
-	{
-		rememberWinSize(mainWindow);
 	});
 
 	let uniqueIsModifiedId;
@@ -318,6 +310,8 @@ function createWindow (opt = {})
 			contents.send('isModified', uniqueIsModifiedId);
 			event.preventDefault();
 		}
+
+		rememberWinSize(mainWindow);
 	})
 
 	// Emitted when the window is closed.
@@ -596,7 +590,6 @@ app.whenReady().then(() =>
 				
 				try
 				{
-					console.log('Exporting ', paths);
 					inStat = fs.statSync(paths[0]);
 				}
 				catch(e)
@@ -980,13 +973,76 @@ app.whenReady().then(() =>
 			})
 		}
 	};
-	
+
+	var zoomSteps = [0.25, 0.33, 0.5, 0.67, 0.75, 0.8, 0.9, 1,
+		1.1, 1.25, 1.5, 1.75, 2, 2.5, 3, 4, 5];
+
+	// Zooms to the next zoom step
+	function zoomInFn()
+	{
+		var zoomFactor = win.webContents.zoomFactor;
+		var newZoomFactor = zoomSteps[zoomSteps.length - 1];
+
+		for (var i = 0; i < zoomSteps.length; i++)
+		{
+			if (zoomSteps[i] - zoomFactor > 0.01)
+			{
+				newZoomFactor = zoomSteps[i];
+				break;
+			}
+		}
+
+		win.webContents.zoomFactor = newZoomFactor;
+	};
+
+	// Zooms to the previous zoom step
+	function zoomOutFn()
+	{
+		var zoomFactor = win.webContents.zoomFactor;
+		var newZoomFactor = zoomSteps[0];
+
+		for (var i = zoomSteps.length - 1; i >= 0; i--)
+		{
+			if (zoomSteps[i] - zoomFactor < -0.01)
+			{
+				newZoomFactor = zoomSteps[i];
+				break;
+			}
+		}
+
+		win.webContents.zoomFactor = newZoomFactor;
+	};
+
+	// Resets the zoom factor
+	function resetZoomFn()
+	{
+		win.webContents.zoomFactor = 1;
+	};
+
 	let checkForUpdates = {
 		label: 'Check for updates',
 		click: checkForUpdatesFn
 	}
 
+	let zoomIn = {
+		label: 'Zoom In',
+		click: zoomInFn
+	};
+
+	let zoomOut = {
+		label: 'Zoom Out',
+		click: zoomOutFn
+	};
+
+	let resetZoom = {
+		label: 'Actual Size',
+		click: resetZoomFn
+	};
+
 	ipcMain.on('checkForUpdates', checkForUpdatesFn);
+	ipcMain.on('zoomIn', zoomInFn);
+	ipcMain.on('zoomOut', zoomOutFn);
+	ipcMain.on('resetZoom', resetZoomFn);
 
 	if (isMac)
 	{
@@ -1002,11 +1058,15 @@ app.whenReady().then(() =>
 	          click() { shell.openExternal('https://github.com/jgraph/drawio-desktop/issues'); }
 			},
 			checkForUpdates,
+	        { type: 'separator' },
+			resetZoom,
+			zoomIn,
+			zoomOut,
 			{ type: 'separator' },
 	        { role: 'hide' },
 	        { role: 'hideothers' },
 	        { role: 'unhide' },
-	        { type: 'separator' },
+			{ type: 'separator' },
 	        { role: 'quit' }
 	      ]
 	    }, {
