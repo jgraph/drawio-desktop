@@ -1,0 +1,61 @@
+{
+  "appId": "com.jgraph.drawio.desktop",
+  "copyright": "Copyright 2017-2019 draw.io",
+  "asar": true,
+  "files": [
+    "**/*",
+    "!**/WEB-INF{,/**}"
+  ],
+  "directories": {
+    "output": "./dist/"
+  },
+  "npmRebuild": false,
+  "publish": {
+      "provider": "github"
+  },
+  "win": {
+    "publisherName": "JGraph Ltd",
+    "target": [
+      {
+          "target": "nsis",
+          "arch": [
+            "arm64"
+          ]
+      },
+      {
+          "target": "portable",
+          "arch": [
+            "arm64"
+          ]
+      }
+    ]
+  },
+  "nsis": {
+    "artifactName": "${productName}-arm64-${version}-windows-arm64-installer.${ext}",
+  	"oneClick": false,
+    "perMachine": true,
+    "allowToChangeInstallationDirectory": true,
+    "runAfterFinish": false,
+    "createDesktopShortcut": false
+  },
+  "portable": {
+    "artifactName": "${productName}-arm64-${version}-windows-arm64-no-installer.${ext}"
+  },
+  "afterPack": "build/fuses.cjs",
+  "fileAssociations": [
+	  {
+	  	"ext": "drawio",
+	  	"name": "draw.io Diagram",
+	  	"description": "draw.io Diagram",
+	  	"mimeType": "application/vnd.jgraph.mxfile",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": "vsdx",
+	  	"name": "VSDX Document",
+	  	"description": "VSDX Document",
+	  	"mimeType": "application/vnd.visio",
+	  	"role": "Editor"
+	  }
+  ]
+}
