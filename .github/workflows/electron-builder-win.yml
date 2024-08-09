@@ -52,7 +52,7 @@ jobs:
       run: |
         npm install -g yarn
         yarn install
-    - name: Build for Windows (x32)
+    - name: Build for Windows (x32 & arm64)
       env:
         CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
         CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
@@ -61,6 +61,7 @@ jobs:
         #Disable auto-update and build 32bit first such that latest.yml is for 64bit only (64bit will overwrite 32bit one)
         yarn run sync disableUpdate
         yarn run release-win32
+        yarn run release-win-arm64
     - name: Build for Windows (x64)
       env:
         CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
