@@ -26,7 +26,7 @@ jobs:
         stale-issue-label: 'wonfix'
         stale-pr-label: 'wonfix'
         close-issue-label: 'declined'
-        days-before-stale: 300
-        days-before-close: 60
+        days-before-stale: 250
+        days-before-close: 14
         exempt-issue-labels: notstale
         exempt-pr-labels: notstale
