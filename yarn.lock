@@ -57,7 +57,7 @@
     fs-extra "^9.0.1"
     promise-retry "^2.0.1"
 
-"@electron/notarize@^2.3.2":
+"@electron/notarize@^2.4.0":
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@electron/notarize/-/notarize-2.4.0.tgz#efa35dbd86b25d97b41d4a70cf19d1800f6e4603"
   integrity sha512-ArHnRPIJJGrmV+uWNQSINAht+cM4gAo3uA3WFI54bYF93mzmD15gzhPQ0Dd+v/fkMhnRiiIO8NNkGdn87Vsy0g==
@@ -830,10 +830,10 @@ electron-builder@^24.9.1:
     simple-update-notifier "2.0.0"
     yargs "^17.6.2"
 
-electron-context-menu@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/electron-context-menu/-/electron-context-menu-4.0.2.tgz#240d2db25b9556cb92ce230bf1ddf1f360ea1978"
-  integrity sha512-rlh1HsvLI+NBYh2Iu0NnXqWt1ngmG0/eRrPC0Ia3NE9NKLRr6+36IxWEr/1gNikcsWCDGhvO1mI1wjPbAi0muA==
+electron-context-menu@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/electron-context-menu/-/electron-context-menu-4.0.3.tgz#67f89d087bc26aaaeab74fc56e8bb84905da42b7"
+  integrity sha512-TJhk750ZFC+qvlMBw5eXANbTzh0CJQuP+gCGtzVJKLb65n7WvxbufFcfXra2sIUviUhZo3mGkMzfSXWNwd2eyQ==
   dependencies:
     cli-truncate "^4.0.0"
     electron-dl "^4.0.0"
@@ -886,7 +886,7 @@ electron-store@^10.0.0:
     conf "^13.0.0"
     type-fest "^4.20.0"
 
-electron-updater@^6.3.1:
+electron-updater@^6.3.4:
   version "6.3.4"
   resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-6.3.4.tgz#3934bc89875bb524c2cbbd11041114e97c0c2496"
   integrity sha512-uZUo7p1Y53G4tl6Cgw07X1yF8Jlz6zhaL7CQJDZ1fVVkOaBfE2cWtx80avwDVi8jHp+I/FWawrMgTAeCCNIfAg==
@@ -900,10 +900,10 @@ electron-updater@^6.3.1:
     semver "^7.6.3"
     tiny-typed-emitter "^2.1.0"
 
-electron@31.3.0:
-  version "31.3.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-31.3.0.tgz#4a084a8229d5bd829c33b8b65073381d0e925093"
-  integrity sha512-3LMRMmK4UK0A+jYSLGLYdfhc20TgY2v5jD3iGmhRZlDYj0gn7xBj/waRjlNalysZ0D2rgPvoes0wHuf5e/Bguw==
+electron@32.0.1:
+  version "32.0.1"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-32.0.1.tgz#8bfc186b81a645c6b3b12f91e71db4231fd0c934"
+  integrity sha512-5Hd5Jaf9niYVR2hZxoRd3gOrcxPOxQV1XPV5WaoSfT9jLJHFadhlKtuSDIk3U6rQZke+aC7GqPPAv55nWFCMsA==
   dependencies:
     "@electron/get" "^2.0.0"
     "@types/node" "^20.9.0"
@@ -2014,9 +2014,9 @@ type-fest@^0.13.1:
   integrity sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg==
 
 type-fest@^4.18.2, type-fest@^4.20.0:
-  version "4.25.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.25.0.tgz#b190374f969631866889bbdb01ece17ca424ee60"
-  integrity sha512-bRkIGlXsnGBRBQRAY56UXBm//9qH4bmJfFvq83gSz41N282df+fjy8ofcEgc1sM8geNt5cl6mC2g9Fht1cs8Aw==
+  version "4.26.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.26.0.tgz#703f263af10c093cd6277d079e26b9e17d517c4b"
+  integrity sha512-OduNjVJsFbifKb57UqZ2EMP1i4u64Xwow3NYXUtBbD4vIwJdQd4+xl8YDou1dlm4DVrtwT/7Ky8z8WyCULVfxw==
 
 typescript@^5.3.3:
   version "5.5.4"
