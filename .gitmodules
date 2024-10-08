@@ -1,4 +1,4 @@
 [submodule "drawio"]
 	path = drawio
-	url = https://github.com/jgraph/drawio.git
+	url = https://github.com/doss-eeic/2024-03-drawio
 	branch = dev
