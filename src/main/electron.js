@@ -1759,8 +1759,15 @@ function exportDiagram(event, args, directFinalize)
 					{
 						pdfOptions = {
 							scaleFactor: args.pageScale,
-							preferCSSPageSize: true,
-							printBackground: true
+							printBackground: true,
+							pageSize : {
+								width: args.pageWidth * MICRON_TO_PIXEL,
+								//This height adjustment fixes the output. TODO Test more cases
+								height: (args.pageHeight * 1.025) * MICRON_TO_PIXEL
+							},
+							margins: {
+								marginType: 'none' // no margin
+							}
 						};
 						 
 						contents.print(pdfOptions, (success, errorType) => 
