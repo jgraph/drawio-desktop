@@ -504,7 +504,7 @@ app.whenReady().then(() =>
 				from: "user",
 			})
 		} else {
-	      program.parse(argv)
+			program.parse(argv)
 		}
 	}
 	catch(e)
