@@ -495,7 +495,17 @@ app.whenReady().then(() =>
 				'Target of links in the exported SVG image (auto [default], new-win, same-win)', linkTargetRegExp, 'auto')
 			.option('--enable-plugins',
 				'Enable Plugins')
-	        .parse(argv)
+
+		// Fixed when setting electron flags
+		// electron --high-dpi-support=1 --force-device-scale-factor=2 /usr/lib/drawio-desktop/app.asar example.drwio
+		const startArgIndex = argv.findIndex(arg => /\.asar$/i.test(arg));
+		if (startArgIndex !== -1) {
+			program.parse(argv.slice(startArgIndex + 1), {
+				from: "user",
+			})
+		} else {
+	      program.parse(argv)
+		}
 	}
 	catch(e)
 	{
