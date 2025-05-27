@@ -1,4 +1,4 @@
 [submodule "drawio"]
 	path = drawio
 	url = https://github.com/DEKonsult/drawio-SMC.git
-	branch = dev
+	branch = SMC
