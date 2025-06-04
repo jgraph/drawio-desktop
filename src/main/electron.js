@@ -1853,6 +1853,141 @@ function exportDiagram(event, args, directFinalize)
 
 ipcMain.on('export', exportDiagram);
 
+//==== Handle SMC-specific saveDataToFile event ====
+ipcMain.on('saveDataToFile', (event, args) => {
+
+	let [folder, filename, format, data, mime, base64Encoded] = args;
+	if (__DEV__) {
+		console.log(`ENTRY on saveDataToFile event=${event} folder=${folder} filename=${filename}`);
+	}
+	let hasFolderAccess = true;
+	if (!fs.existsSync(folder))
+	{
+		try
+		{
+			fs.mkdirSync(folder);
+		}
+		catch (e)
+		{
+			hasFolderAccess = false;
+		}
+	}
+	if (hasFolderAccess)
+	{
+		let path = folder + '/' + filename;
+		let fileObject = new Object();
+		fileObject.path = path;
+		fileObject.name = path.replace(/^.*[\\\/]/, '');
+		fileObject.type = (base64Encoded) ? 'base64' : 'utf-8';
+		if (__DEV__)
+		{
+			console.log(`Saving file=${path}`);
+		}
+		try
+		{
+			fs.writeFileSync(fileObject.path, data, fileObject.type);
+		}
+		catch (e)
+		{
+			console.error(e);
+			let msg = `Error writing file ${path}`;
+			console.error(msg);
+			throw new Error(msg);
+		}
+	}
+	else
+	{
+		let msg = `Cannot create folder=${folder}`;
+		console.error(msg);
+		throw new Error(msg);
+	}
+});
+
+//==== Handle SMC-specific exportPdfDirect event ====
+ipcMain.on('exportPdfDirect', (event, args) => {
+	/* Pattern of this event handler was taken from --export handler in CLI implementation above,
+	 * starting at line 481: if (options.export) ... and 704: function startExport()
+	 */
+
+	let [folder, exportName, selectionAsXml] = args;
+	if (__DEV__) {
+		console.log(`ENTRY on exportPdfDirect event=${event} symbolsFolder=${folder} exportName=${exportName} selectionAsXml=${selectionAsXml}`);
+	}
+	let filePath = folder + '/' + exportName + '.pdf';
+	let hasFolderAccess = true;
+	if (!fs.existsSync(folder))
+	{
+		try
+		{
+			fs.mkdirSync(folder);
+		}
+		catch (e)
+		{
+			hasFolderAccess = false;
+		}
+	}
+
+	if (hasFolderAccess){
+		let expArgs = {
+			format: 'pdf',
+			w: null,
+			h: null,
+			pageMargin: 20,
+			bg: '#ffffff', // alternatively 'none'
+			from: null,
+			to: null,
+			allPages: null,
+			scale: 1,
+			embedXml: '0',
+			embedImages: '0',
+			jpegQuality: null,
+			uncompressed: true,
+			theme: 'light',
+			linkTarget: 'auto',
+			crop: '1',
+			xml: selectionAsXml,
+		};
+
+		let pdfExportEvent = {
+			reply: function(msg, data)
+			{
+				try
+				{
+					if (data == null || data.length == 0)
+					{
+						console.error('Error: PDF Export failed: no data');
+					}
+					else if (msg == 'export-success')
+					{
+						try
+						{
+							fs.writeFileSync(filePath, data, {flag: 'wx'});
+							if (__DEV__) {
+								console.log('Finished writing PDF export to: ' + filePath);
+							}
+						}
+						catch (e)
+						{
+							console.error('Error writing to file: ' + filePath);
+						}
+					}
+					else
+					{
+						console.error('Error: ' + data);
+					}
+				}
+				finally
+				{
+					pdfExportEvent.finalize();
+				}
+			}
+		};
+
+		exportDiagram(pdfExportEvent, expArgs, true);
+	}
+});
+
+
 //================================================================
 // Renderer Helper functions
 //================================================================
