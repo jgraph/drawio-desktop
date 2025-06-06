@@ -11,7 +11,7 @@
   "scripts": {
     "start": "electron .",
     "sync": "node ./sync.cjs",
-    "release-win": "electron-builder --config electron-builder-win.json --publish always",
+    "release-win": "electron-builder --config electron-builder-win.json --publish never",
     "release-win32": "electron-builder --config electron-builder-win32.json --publish always",
     "release-win-arm64": "electron-builder --config electron-builder-win-arm64.json --publish always",
     "release-appx": "electron-builder --config electron-builder-appx.json --publish always",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:jgraph/drawio-desktop.git"
+    "url": "git@github.com:dekonsult/drawio-desktop-SMC.git"
   },
   "keywords": [
     "draw.io",
