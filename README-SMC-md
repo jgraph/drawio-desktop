@@ -1,0 +1,16 @@
+# Notes for Drawio Desktop SMC Version
+
+This version of Drawio Desktop is an adaptation of Drawio for use in the Systems Modeling Community
+
+In particular its purpose is to produce manually authored graphical symbols and views for the SysML v2 specification, 
+mainly for the Representative Notation Tables in clause 7 and the Graphical Notation in clause 8.2.3.
+
+The relevant repositories are:
+
+* https://github.com/Systems-Modeling/drawio-desktop-SMC forked from https://github.com/jgraph/drawio-desktop
+* https://github.com/Systems-Modeling/drawio-SMC forked from https://github.com/jgraph/drawio
+
+The working branch is named `SMC`.
+
+See https://github.com/Systems-Modeling/drawio-desktop-SMC/blob/SMC/DEVELOPMENT-SMC-version.md 
+for instructions on how to develop and build the SMC version of Drawio Desktop.
