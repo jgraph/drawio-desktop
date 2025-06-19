@@ -10,7 +10,7 @@ do not contain anymore the human-readable source code of important modules, in p
 
 The working branch is named `SMC`.
 
-The version is name `24.7.17-SMC`. This should be present in files `drawio/VERSION` and `package.json`.
+The version is postfixed with `-SMC` as in `24.7.17-SMC`. The version identifier should be present in files `drawio/VERSION` and `package.json`.
 
 ## Development environment on Windows 11
 
