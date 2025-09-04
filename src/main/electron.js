@@ -1621,7 +1621,8 @@ function exportDiagram(event, args, directFinalize)
 				preload: `${__dirname}/electron-preload.js`,
 				backgroundThrottling: false,
 				contextIsolation: true,
-				disableBlinkFeatures: 'Auxclick' // Is this needed?
+				disableBlinkFeatures: 'Auxclick', // Is this needed?
+				offscreen: true,
 			},
 			show : false,
 			frame: false,
