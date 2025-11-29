@@ -43,6 +43,9 @@
     "category": "Graphics",
     "maintainer": "JGraph <support@draw.io>",
     "icon": "./build",
+    "desktop": {
+      "StartupWMClass": "draw.io"
+    },
     "target": [
       { "target": "AppImage", "arch": [
           "x64",

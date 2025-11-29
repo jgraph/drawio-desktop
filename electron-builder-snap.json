@@ -16,6 +16,9 @@
     "category": "Graphics",
     "maintainer": "draw.io <snap@draw.io>",
     "icon": "./build",
+    "desktop": {
+      "StartupWMClass": "draw.io"
+    },
     "target": [
       "snap"
     ]
