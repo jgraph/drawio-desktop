@@ -1303,8 +1303,8 @@ autoUpdater.on('update-available', (a, b) =>
 	{
 		type: 'question',
 		buttons: ['Ok', 'Cancel', 'Don\'t Ask Again'],
-		title: 'Confirm Update',
-		message: 'Update available.\n\nWould you like to download and install new version?',
+		title: 'Confirm draw.io Update',
+		message: 'Update for draw.io available.\n\nWould you like to download and install the new version?',
 		detail: 'Application will automatically restart to apply update after download',
 	}).then( result =>
 	{
