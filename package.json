@@ -52,7 +52,7 @@
     "@electron/notarize": "^3.1.0",
     "dotenv": "^16.6.1",
     "electron": "^38.7.0",
-    "electron-builder": "^26.0.20",
+    "electron-builder": "^26.6.0",
     "sumchecker": "^3.0.1"
   }
 }
