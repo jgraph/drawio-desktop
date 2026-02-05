@@ -35,6 +35,10 @@ ipcRenderer.on('fileChanged', (event, resp) =>
 
 contextBridge.exposeInMainWorld(
     'electron', {
+        // ✅ NEW: Required for AI Proxy
+        invoke: (channel, data) => {
+            return ipcRenderer.invoke(channel, data);
+        },
         request: (msg, callback, error) => 
 		{
 			msg.reqId = reqId++;

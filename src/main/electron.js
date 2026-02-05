@@ -16,6 +16,7 @@ import ProgressBar from 'electron-progressbar';
 import contextMenu from 'electron-context-menu';
 import {spawn} from 'child_process';
 import {disableUpdate as disUpPkg} from './disableUpdate.js';
+import https from 'https'; // ✅ Added for AI Proxy
 
 let store;
 
@@ -129,9 +130,6 @@ catch(e)
 {
 	console.log('Error in urlParams.json file: ' + e.message);
 }
-
-// Trying sandboxing the renderer for more protection
-//app.enableSandbox(); // This maybe the reason snap stopped working
 
 // Only allow request from the app code itself
 function validateSender (frame) 
@@ -370,20 +368,42 @@ function isPluginsEnabled()
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() =>
 {
-	// Enforce our CSP on all contents
-	session.defaultSession.webRequest.onHeadersReceived((details, callback) => 
-	{
-		callback({
-			responseHeaders: {
-				...details.responseHeaders,
-				// Replace the first sha with the one of the current version shown in the console log (the second one is for the second script block which is rarely changed)
-				// 3rd sha is for electron-progressbar
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'sha256-f6cHSTUnCvbQqwa6rKcbWIpgN9dLl0ROfpEKTQUQPr8=\' \'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=\' \'sha256-ZQ86kVKhLmcnklYAnUksoyZaLkv7vvOG9cc/hBJAEuQ=\'; connect-src \'self\'' +
-				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src * data:; frame-src \'none\'; style-src \'self\' \'unsafe-inline\'' +
-				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
-			}
-		})
-	});
+    // Enforce CSP on all contents (AI endpoints safely allowed)
+    session.defaultSession.webRequest.onHeadersReceived((details, callback) =>
+    {
+        callback({
+            responseHeaders: {
+                ...details.responseHeaders,
+                'Content-Security-Policy': [
+                    "default-src 'self'; " +
+                    "script-src 'self' " +
+                    "'sha256-f6cHSTUnCvbQqwa6rKcbWIpgN9dLl0ROfpEKTQUQPr8=' " +
+                    "'sha256-6g514VrT/cZFZltSaKxIVNFF46+MFaTSDTPB8WfYK+c=' " +
+                    "'sha256-ZQ86kVKhLmcnklYAnUksoyZaLkv7vvOG9cc/hBJAEuQ='; " +
+                    "connect-src 'self' " +
+                    "https://api.openai.com " +
+                    "https://api.anthropic.com " +
+                    "https://generativelanguage.googleapis.com " +
+                    "https://api.x.ai " +
+                    (isGoogleFontsEnabled ?
+                        "https://fonts.googleapis.com https://fonts.gstatic.com "
+                        : ""
+                    ) +
+                    "; " +
+                    "img-src * data:; " +
+                    "media-src *; " +
+                    "font-src * data:; " +
+                    "frame-src 'none'; " +
+                    "style-src 'self' 'unsafe-inline' " +
+                    (isGoogleFontsEnabled ? "https://fonts.googleapis.com " : "") +
+                    "; " +
+                    "base-uri 'none'; " +
+                    "child-src 'self'; " +
+                    "object-src 'none';"
+                ]
+            }
+        });
+    });
 
 	const pluginsCodeUrl = url.pathToFileURL(path.join(getAppDataFolder(), '/plugins/')).href.replace(/\/.\:\//, str => str.toUpperCase());
 
@@ -525,11 +545,6 @@ app.whenReady().then(() =>
 		});
     	
     	windowsRegistry.push(dummyWin);
-    	
-		/*ipcMain.on('log', function(event, msg)
-		{
-			console.log(msg);
-		});*/
 	
     	try
     	{
@@ -2623,6 +2638,68 @@ function unwatchFile(filePath)
 {
 	fs.unwatchFile(filePath);
 }
+
+// ===============================
+// ✅ Secure AI API Proxy (Main Process)
+// ===============================
+ipcMain.handle('ai-fetch', async (event, { url, method, headers, body }) =>
+{
+	// Allow ONLY trusted AI endpoints
+	const allowedHosts = [
+  'api.openai.com',
+  'api.anthropic.com',
+  'generativelanguage.googleapis.com',
+  'api.x.ai',
+  'api.groq.com'   // ✅ added for Groq
+];
+
+
+	try
+	{
+		const u = new URL(url);
+
+		if (!allowedHosts.includes(u.hostname))
+		{
+			throw new Error('Blocked host by security policy');
+		}
+
+		return await new Promise((resolve, reject) =>
+		{
+			const req = https.request({
+				hostname: u.hostname,
+				path: u.pathname + u.search,
+				method: method || 'POST',
+				headers: headers
+			},
+			res =>
+			{
+				let data = '';
+
+				res.on('data', chunk => data += chunk);
+				res.on('end', () =>
+				{
+					resolve({
+						status: res.statusCode,
+						body: data
+					});
+				});
+			});
+
+			req.on('error', reject);
+
+			if (body)
+			{
+				req.write(body);
+			}
+
+			req.end();
+		});
+	}
+	catch (err)
+	{
+		return { error: err.message };
+	}
+});
 
 ipcMain.on("rendererReq", async (event, args) => 
 {
