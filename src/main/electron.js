@@ -273,6 +273,20 @@ function blessPath(p)
 	catch (e) {} // Defensive: blessPath must never throw into a caller's flow.
 }
 
+// fs.statSync that never throws (returns null for missing, deleted-in-between
+// or inaccessible paths) so callers can't crash the main process on a race
+function statSafe(p)
+{
+	try
+	{
+		return (typeof p === 'string' && p) ? fs.statSync(p) : null;
+	}
+	catch (e)
+	{
+		return null;
+	}
+}
+
 // One-shot migration: on first launch with the blessedPaths fix, the renderer's
 // drawio "Open Recent" list (in localStorage at key '.recent') contains paths
 // that were opened in prior versions and so were never blessed. Without this
@@ -1194,10 +1208,14 @@ app.whenReady().then(() =>
 				
 				if (loadEvtCount == 2)
 				{
-	    	    	//Open the file if new app request is from opening a file
+	    	    	//Open the file if new app request is from opening a file.
+	    	    	//Must be a regular file: the trailing token of a dev-mode
+	    	    	//launch is the app directory ".", and reading a directory
+	    	    	//shows an EISDIR error dialog.
 	    	    	var potFile = commandLine.pop();
+	    	    	var potStat = statSafe(potFile);
 
-	    	    	if (fs.existsSync(potFile))
+	    	    	if (potStat != null && potStat.isFile())
 	    	    	{
 	    	    		// User intent: launched the app from CLI / file association
 	    	    		// while another instance was already running.
@@ -1235,9 +1253,20 @@ app.whenReady().then(() =>
 			// User intent: paths passed on the command line / file association.
 			if (Array.isArray(parsedArgs))
 			{
+				// Directories cannot be opened as diagrams (reading one shows
+				// an EISDIR error dialog), so drop them here. Nonexistent
+				// paths are kept: they reach the renderer as before.
+				parsedArgs = parsedArgs.filter(a =>
+				{
+					if (typeof a !== 'string' || !a) return false;
+
+					const st = statSafe(a);
+					return st == null || !st.isDirectory();
+				});
+
 				for (const a of parsedArgs)
 				{
-					if (typeof a === 'string' && a && fs.existsSync(a))
+					if (fs.existsSync(a))
 					{
 						blessPath(a);
 					}
