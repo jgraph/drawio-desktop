@@ -876,6 +876,7 @@ app.whenReady().then(() =>
 				if (files.length > 0)
 				{
 					var fileIndex = 0;
+					var exportFailed = false;
 					
 					function processOneFile()
 					{
@@ -910,6 +911,7 @@ app.whenReady().then(() =>
 										if (!validateSender(e.senderFrame)) return null;
 
 						    	    	console.error('Error: cannot import VSDX file: ' + curFile);
+										exportFailed = true;
 						    	    	next();
 						    	    });
 							    });
@@ -953,6 +955,10 @@ app.whenReady().then(() =>
 								{
 									processOneFile();
 								}
+								else if (exportFailed)
+								{
+									app.exit(1);
+								}
 								else
 								{
 									cmdQPressed = true;
@@ -976,6 +982,7 @@ app.whenReady().then(() =>
 												if (data == null || data.length == 0)
 												{
 													console.error('Error: Empty export data: ' + curFile);
+													exportFailed = true;
 												}
 												else
 												{
@@ -1039,12 +1046,14 @@ app.whenReady().then(() =>
 													catch(e)
 													{
 														console.error('Error writing to file: ' + outFileName);
+														exportFailed = true;
 													}
 												}
 											}
 											else
 											{
 												console.error('Error: ' + (data || 'Export failed') + ': ' + curFile);
+												exportFailed = true;
 											}
 
 											next();
@@ -1121,6 +1130,7 @@ app.whenReady().then(() =>
 						catch(e)
 						{
 							console.error('Error reading file: ' + curFile);
+							exportFailed = true;
 							next();
 						}
 					}
@@ -1140,9 +1150,7 @@ app.whenReady().then(() =>
     	catch(e)
     	{
     		console.error(e);
-    		
-    		cmdQPressed = true;
-			dummyWin.destroy();
+    		app.exit(1);
     	}
     	
     	return;
