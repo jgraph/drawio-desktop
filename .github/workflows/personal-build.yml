@@ -1,0 +1,76 @@
+name: Personal Unsigned Build
+
+# Manually-triggered, unsigned build for personal forks.
+# See doc/BUILDING_FOR_PERSONAL_USE.md.
+#
+# Needs no repository secrets: signing and notarization are skipped
+# (DRAWIO_UNSIGNED), auto-update is disabled so the app keeps your
+# changes, and nothing is published — the installers are attached to
+# the workflow run as a downloadable artifact.
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform to build'
+        type: choice
+        required: true
+        default: linux
+        options:
+          - linux
+          - macos
+          - windows
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ${{ inputs.platform == 'macos' && 'macos-latest' || inputs.platform == 'windows' && 'windows-latest' || 'ubuntu-latest' }}
+    env:
+      DRAWIO_UNSIGNED: 'true'
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+          persist-credentials: false
+      - name: Installing Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Install Linux packaging tools
+        if: ${{ inputs.platform == 'linux' }}
+        run: |
+          sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm
+          # Match the official Linux builds, which use "drawio" as the product name
+          sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json
+      - name: Build
+        run: |
+          npm ci
+          # disableUpdate stops the app replacing itself with the official
+          # (unmodified) release via auto-update
+          npm run sync -- disableUpdate
+          if [ "${{ inputs.platform }}" = "windows" ]; then
+            npx electron-builder --config electron-builder-win.json --publish never
+          else
+            # Builds the current platform's targets from the shared config:
+            # dmg/zip on macOS, AppImage/deb/rpm on Linux
+            npx electron-builder --config electron-builder-linux-mac.json --publish never
+          fi
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: drawio-${{ inputs.platform }}-unsigned
+          path: |
+            dist/*.dmg
+            dist/*.zip
+            dist/*.exe
+            dist/*.msi
+            dist/*.AppImage
+            dist/*.deb
+            dist/*.rpm

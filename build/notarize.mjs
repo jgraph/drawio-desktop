@@ -192,30 +192,47 @@ function signQuickLookExtension(appPath)
   }
 
   const identity = getSigningIdentity(appPath);
+  const entitlementsPath = path.join(__dirname, 'quicklook-entitlements.plist');
+  const mainEntitlementsPath = path.join(__dirname, 'entitlements.mac.plist');
 
   if (identity === '-')
   {
     console.log('Quick Look: no signing identity found, using ad-hoc signing');
+
+    // Sign the .appex with sandbox entitlements (required for Quick Look)
+    execSync(
+      `codesign -f -s - --entitlements "${entitlementsPath}" "${appexPath}"`,
+      { stdio: 'inherit' }
+    );
+
+    // Unsigned (personal) builds need a deep ad-hoc re-sign: the fuse
+    // changes invalidated the main executable's signature, and dyld
+    // refuses to load Electron's original linker-signed frameworks from
+    // an executable with a fresh, mismatched ad-hoc signature. Hardened
+    // runtime is omitted — its library validation breaks ad-hoc builds
+    // and it is pointless without notarization. --preserve-metadata
+    // keeps the .appex entitlements applied above.
+    execSync(
+      `codesign -f -s - --deep --preserve-metadata=entitlements "${appPath}"`,
+      { stdio: 'inherit' }
+    );
   }
   else
   {
     console.log('Quick Look: signing with identity:', identity);
+
+    // Sign the .appex with sandbox entitlements (required for Quick Look)
+    execSync(
+      `codesign -f -s "${identity}" --entitlements "${entitlementsPath}" --options runtime "${appexPath}"`,
+      { stdio: 'inherit' }
+    );
+
+    // Re-sign the outer .app to update its seal (the .appex was added/signed)
+    execSync(
+      `codesign -f -s "${identity}" --entitlements "${mainEntitlementsPath}" --options runtime "${appPath}"`,
+      { stdio: 'inherit' }
+    );
   }
-
-  const entitlementsPath = path.join(__dirname, 'quicklook-entitlements.plist');
-  const mainEntitlementsPath = path.join(__dirname, 'entitlements.mac.plist');
-
-  // Sign the .appex with sandbox entitlements (required for Quick Look)
-  execSync(
-    `codesign -f -s "${identity}" --entitlements "${entitlementsPath}" --options runtime "${appexPath}"`,
-    { stdio: 'inherit' }
-  );
-
-  // Re-sign the outer .app to update its seal (the .appex was added/signed)
-  execSync(
-    `codesign -f -s "${identity}" --entitlements "${mainEntitlementsPath}" --options runtime "${appPath}"`,
-    { stdio: 'inherit' }
-  );
 
   console.log('Quick Look: signing complete');
 }
@@ -233,6 +250,14 @@ export default async function notarizing(context) {
 
   setupQuickLookExtension(appPath, appVersion);
   signQuickLookExtension(appPath);
+
+  // Explicit opt-out for personal/fork builds with no Apple Developer
+  // account. See doc/BUILDING_FOR_PERSONAL_USE.md.
+  if (process.env.DRAWIO_UNSIGNED === 'true')
+  {
+    console.log('DRAWIO_UNSIGNED=true: skipping notarization');
+    return;
+  }
 
   return await notarize({
     tool: "notarytool",
