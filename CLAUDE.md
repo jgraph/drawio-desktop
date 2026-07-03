@@ -55,7 +55,8 @@ drawio-desktop/
 │   └── entitlements.mac.plist
 ├── doc/
 │   ├── RELEASE_PROCESS.md    # Release workflow documentation
-│   └── BUILDING_FOR_PERSONAL_USE.md # Guide for unsigned fork/personal builds
+│   ├── BUILDING_FOR_PERSONAL_USE.md # Guide for unsigned fork/personal builds
+│   └── PLUGIN_SECURITY.md    # Rationale: why the signed app runs plugins + hardening notes
 ├── electron-builder-*.json   # Platform-specific build configs
 ├── sync.cjs                  # Version sync script
 └── package.json
