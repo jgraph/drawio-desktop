@@ -34,7 +34,7 @@ const OPTION_DEFS = [
 	  parse: parseInt,
 	  desc: 'output image quality for JPEG (default: 90)' },
 	{ short: '-t', long: '--transparent',      key: 'transparent',
-	  desc: 'set transparent background for PNG' },
+	  desc: 'set transparent background for PNG and SVG' },
 	{ short: '-e', long: '--embed-diagram',    key: 'embedDiagram',
 	  desc: 'includes a copy of the diagram (for PNG, SVG and PDF formats only)' },
 	{              long: '--embed-svg-images', key: 'embedSvgImages',
