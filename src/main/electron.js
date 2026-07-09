@@ -502,13 +502,6 @@ function createWindow (opt = {})
 		mainWindow.webContents.openDevTools()
 	}
 
-	ipcMain.on('openDevTools', function(e)
-	{
-		if (!validateSender(e.senderFrame)) return null;
-
-		mainWindow.webContents.openDevTools();
-	});
-
 	function rememberWinSize(win)
 	{
 		if (store != null)
@@ -672,6 +665,15 @@ app.whenReady().then(() =>
 			callback({});
 		}
 	});
+
+	// Registered once, not per window: per-window handlers leaked on window
+	// close and crashed the main process on the next openDevTools message
+	ipcMain.on('openDevTools', (e) =>
+	{
+		if (!validateSender(e.senderFrame)) return null;
+
+		e.sender.openDevTools();
+	})
 
 	ipcMain.on('newfile', (e, arg) =>
 	{
