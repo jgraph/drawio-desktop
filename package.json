@@ -51,7 +51,7 @@
     "@electron/notarize": "^3.1.1",
     "dotenv": "^17.4.2",
     "electron": "^43.1.0",
-    "electron-builder": "^26.15.3",
+    "electron-builder": "^26.15.6",
     "quicklookjs": "^1.0.1",
     "sumchecker": "^3.0.1"
   }
