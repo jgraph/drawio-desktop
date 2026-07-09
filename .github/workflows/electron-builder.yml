@@ -63,7 +63,9 @@ jobs:
         cd src/main/webapp/js
         # Save viewer-static.min.js for macOS Quick Look extension before cleanup
         if [ "$OS_NAME" = "macos-latest" ]; then cp viewer-static.min.js ../../../../../build/viewer-static.min.js; fi
-        rm -rf atlas-viewer.min.js atlas.min.js cryptojs deflate dropbox embed* freehand integrate.min.js jquery jszip mermaid onedrive orgchart reader.min.js rough sanitizer simplepeer spin viewer-static.min.js viewer.min.js
+        # js/mermaid must survive: bootstrap.js eager-loads elk > mermaid > plantuml
+        # in a chain, so deleting it also kills PlantUML and PostConfig at runtime
+        rm -rf atlas-viewer.min.js atlas.min.js cryptojs deflate dropbox embed* freehand integrate.min.js jquery jszip onedrive orgchart reader.min.js rough sanitizer simplepeer spin viewer-static.min.js viewer.min.js
     - name: Installing Node
       uses: actions/setup-node@v6
       with:
@@ -83,4 +85,4 @@ jobs:
         sudo snap install snapcraft --classic
         npm run release-snap
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
-        snapcraft push --release edge dist/draw.io-amd64-*.snap
+        snapcraft upload --release edge dist/draw.io-amd64-*.snap

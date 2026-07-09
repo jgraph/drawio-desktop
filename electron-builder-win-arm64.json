@@ -59,6 +59,13 @@
 	  	"description": "VSDX Document",
 	  	"mimeType": "application/vnd.visio",
 	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": ["mmd", "mermaid"],
+	  	"name": "Mermaid Diagram",
+	  	"description": "Mermaid Diagram",
+	  	"mimeType": "text/vnd.mermaid",
+	  	"role": "Editor"
 	  }
   ]
 }

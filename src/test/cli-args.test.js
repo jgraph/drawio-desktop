@@ -216,6 +216,89 @@ describe('--format / -f', () =>
 	});
 });
 
+// ─── --layout ────────────────────────────────────────────────────────────────
+
+describe('--layout', () =>
+{
+	const presets = ['verticalFlow', 'horizontalFlow', 'verticalTree',
+		'horizontalTree', 'radialTree', 'organic'];
+
+	for (const name of presets)
+	{
+		test(`accepts layout name: ${name}`, () =>
+		{
+			assert.equal(parse(['--layout', name]).opts.layout, name);
+		});
+	}
+
+	test('defaults to undefined when not passed', () =>
+	{
+		assert.equal(parse([]).opts.layout, undefined);
+	});
+
+	test('passes unknown names through (validated at runtime)', () =>
+	{
+		assert.equal(parse(['--layout', 'bogus']).opts.layout, 'bogus');
+	});
+
+	test('does not consume a following positional', () =>
+	{
+		const { opts, args } = parse(['--layout', 'organic', 'in.drawio']);
+		assert.equal(opts.layout, 'organic');
+		assert.deepEqual(args, ['in.drawio']);
+	});
+
+	test('passes a custom-layout JSON array through verbatim', () =>
+	{
+		const json = '[{"layout":"elkLayered","config":{"elk.direction":"RIGHT"}}]';
+		const { opts, args } = parse(['--layout', json, 'in.drawio']);
+		assert.equal(opts.layout, json);
+		assert.deepEqual(JSON.parse(opts.layout), [{layout: 'elkLayered', config: {'elk.direction': 'RIGHT'}}]);
+		assert.deepEqual(args, ['in.drawio']);
+	});
+
+	test('accepts JSON via inline --layout=<json> form', () =>
+	{
+		const json = '[{"layout":"elkTree","config":{}}]';
+		assert.equal(parse(['--layout=' + json]).opts.layout, json);
+	});
+});
+
+// ─── --mermaid-image ─────────────────────────────────────────────────────────
+
+describe('--mermaid-image', () =>
+{
+	test('defaults to undefined when not passed', () =>
+	{
+		assert.equal(parse([]).opts.mermaidImage, undefined);
+	});
+
+	test('parses 1 / true as true', () =>
+	{
+		assert.equal(parse(['--mermaid-image', '1']).opts.mermaidImage, true);
+		assert.equal(parse(['--mermaid-image', 'true']).opts.mermaidImage, true);
+	});
+
+	test('parses 0 / false as false', () =>
+	{
+		assert.equal(parse(['--mermaid-image', '0']).opts.mermaidImage, false);
+		assert.equal(parse(['--mermaid-image', 'false']).opts.mermaidImage, false);
+	});
+
+	test('consumes its value and keeps the positional file', () =>
+	{
+		const { opts, args } = parse(['in.mmd', '--mermaid-image', '1']);
+		assert.equal(opts.mermaidImage, true);
+		assert.deepEqual(args, ['in.mmd']);
+	});
+
+	test('accepts inline --mermaid-image=1 form', () =>
+	{
+		assert.equal(parse(['--mermaid-image=1']).opts.mermaidImage, true);
+		assert.equal(parse(['--mermaid-image=false']).opts.mermaidImage, false);
+	});
+});
+
 // ─── Numeric options ─────────────────────────────────────────────────────────
 
 describe('numeric options', () =>

@@ -47,6 +47,13 @@
           "CFBundleTypeRole": "Editor",
           "CFBundleTypeIconFile": "icon.icns",
           "LSHandlerRank": "Default"
+        },
+        {
+          "CFBundleTypeExtensions": ["mmd", "mermaid"],
+          "CFBundleTypeName": "Mermaid Diagram",
+          "CFBundleTypeRole": "Editor",
+          "CFBundleTypeIconFile": "icon.icns",
+          "LSHandlerRank": "Default"
         }
       ]
     },
@@ -115,6 +122,13 @@
 	  	"name": "VSDX Document",
 	  	"description": "VSDX Document",
 	  	"mimeType": "application/vnd.visio",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": ["mmd", "mermaid"],
+	  	"name": "Mermaid Diagram",
+	  	"description": "Mermaid Diagram",
+	  	"mimeType": "text/vnd.mermaid",
 	  	"role": "Editor"
 	  }
   ]
