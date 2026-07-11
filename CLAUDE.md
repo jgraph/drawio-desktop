@@ -50,6 +50,7 @@ drawio-desktop/
 │   ├── notarize.mjs          # macOS Quick Look setup, signing + notarization
 │   ├── sign-trusted.mjs      # Windows signing hook (Azure Trusted Signing)
 │   ├── fuses.mjs             # Electron security fuses
+│   ├── dmg-hidden-files.mjs  # beforePack hook: parks hidden DMG support files outside the installer window
 │   ├── quicklook-preview.html # Quick Look preview page (viewer-static.min.js)
 │   ├── quicklook-entitlements.plist # Sandbox entitlements for .appex
 │   └── entitlements.mac.plist

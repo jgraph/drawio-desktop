@@ -71,6 +71,7 @@
       }
     ]
   },
+  "beforePack": "build/dmg-hidden-files.mjs",
   "afterSign": "build/notarize.mjs",
   "afterPack": "build/fuses.mjs",
   "dmg": {
