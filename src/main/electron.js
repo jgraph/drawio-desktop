@@ -2567,7 +2567,13 @@ function exportDiagram(event, args, directFinalize)
 						pdfOptions = {
 							// scaleFactor is an integer percent in Chromium (Electron 41+ honors
 							// it in the native macOS print dialog), so pageScale 1 = 100%, not 1%.
-							scaleFactor: 100 * (args.pageScale || 1),
+							// The render paginates at pageFormat * pageScale to match the
+							// editor's page breaks, so each rendered page is pageScale times
+							// the physical paper and must shrink by 1 / pageScale to fit one
+							// sheet. Chromium accepts 10-200%, which bounds the printable
+							// page scale to 50%-1000% [jgraph/drawio#5540]
+							scaleFactor: Math.max(10, Math.min(200, Math.round(
+								100 / (args.pageScale > 0 ? args.pageScale : 1)))),
 							printBackground: true,
 							pageSize : {
 								width: args.pageWidth * MICRON_TO_PIXEL,
