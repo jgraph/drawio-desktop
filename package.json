@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/jgraph/drawio",
   "dependencies": {
-    "@cantoo/pdf-lib": "^2.7.1",
+    "@cantoo/pdf-lib": "^2.7.3",
     "buffer": "^6.0.3",
     "compression": "^1.8.1",
     "crc": "^4.3.2",
