@@ -777,18 +777,28 @@ app.whenReady().then(() =>
 			}
 	    	
 	    	let from = null, to = null;
-	    	
-	    	if (options.pageIndex != null && options.pageIndex >= 0)
+
+	    	if (options.pageIndex != null)
 			{
+				// The 1-based CLI value arrives shifted to 0-based, so 0, negative and
+				// non-numeric input all land below 0. Page indexes were 0-based before
+				// v27.0.2 and old scripts pass 0 — fail loudly instead of silently
+				// exporting the first page [jgraph/drawio-desktop#2319]
+				if (!(options.pageIndex >= 0))
+				{
+					console.error('Invalid page index: pages are numbered from 1 (0-based before v27.0.2)');
+					process.exit(1);
+				}
+
 	    		from = options.pageIndex;
 				to = options.pageIndex;
 				options.allPages = false;
 			}
-	    	else if (options.pageRange && options.pageRange.length == 2)
+	    	else if (options.pageRange)
 			{
 				const [rangeFrom, rangeTo] = options.pageRange;
 
-				if (rangeFrom >= 0 && rangeTo >= 0 && rangeFrom <= rangeTo)
+				if (options.pageRange.length == 2 && rangeFrom >= 0 && rangeTo >= 0 && rangeFrom <= rangeTo)
 				{
 					from = rangeFrom;
 					to = rangeTo;
@@ -796,7 +806,7 @@ app.whenReady().then(() =>
 				}
 				else
 				{
-					console.error('Invalid page range: must be non-negative and from ≤ to');
+					console.error('Invalid page range: expected <from>..<to> with pages numbered from 1 and from ≤ to (0-based before v27.0.2)');
 					process.exit(1);
 				}
 			}

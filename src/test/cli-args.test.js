@@ -348,6 +348,18 @@ describe('-p / --page-index', () =>
 		assert.equal(parse(['-p', '2']).opts.pageIndex, 1);
 		assert.equal(parse(['--page-index', '5']).opts.pageIndex, 4);
 	});
+
+	// The export path rejects any pageIndex below 0 with an error instead of
+	// silently exporting the first page [jgraph/drawio-desktop#2319]
+	test('0 (first page in the pre-v27.0.2 0-based scheme) maps below 0', () =>
+	{
+		assert.equal(parse(['-p', '0']).opts.pageIndex, -1);
+	});
+
+	test('non-numeric input maps to NaN', () =>
+	{
+		assert.ok(Number.isNaN(parse(['-p', 'abc']).opts.pageIndex));
+	});
 });
 
 // ─── Page range ──────────────────────────────────────────────────────────────
@@ -363,6 +375,18 @@ describe('-g / --page-range', () =>
 	test('single-page range', () =>
 	{
 		assert.deepEqual(parse(['-g', '3..3']).opts.pageRange, [2, 2]);
+	});
+
+	// The export path rejects these malformed shapes with an error instead of
+	// silently exporting the first page [jgraph/drawio-desktop#2319]
+	test('value without ".." yields a single-element array', () =>
+	{
+		assert.deepEqual(parse(['-g', '3']).opts.pageRange, [2]);
+	});
+
+	test('0-based range values map below 0', () =>
+	{
+		assert.deepEqual(parse(['-g', '0..2']).opts.pageRange, [-1, 1]);
 	});
 });
 
