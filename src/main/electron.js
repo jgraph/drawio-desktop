@@ -861,15 +861,21 @@ app.whenReady().then(() =>
 				}
 				
 				var files = [];
-				
+
+				// Directory scans only pick up file types the export can ingest,
+				// so unrelated files don't fail the batch [jgraph/drawio-desktop#2248]
+				var exportableExts = ['.drawio', '.dio', '.xml', '.csv', '.vsdx',
+					'.mmd', '.mermaid', '.png', '.svg', '.pdf'];
+
 				function addDirectoryFiles(dir, isRecursive)
 				{
-					fs.readdirSync(dir).forEach(function(file) 
+					fs.readdirSync(dir).forEach(function(file)
 					{
 						var filePath = path.join(dir, file);
 						var stat = fs.statSync(filePath);
-						
-						if (stat.isFile() && path.basename(filePath).charAt(0) != '.')
+
+						if (stat.isFile() && path.basename(filePath).charAt(0) != '.' &&
+							exportableExts.includes(path.extname(filePath).toLowerCase()))
 						{
 							files.push(filePath);
 						}
@@ -900,10 +906,47 @@ app.whenReady().then(() =>
 						
 						try
 						{
-							var ext = path.extname(curFile);
-							
+							var ext = path.extname(curFile).toLowerCase();
+
 							let fileContent = fs.readFileSync(curFile, ext === '.png' || ext === '.pdf' || ext === '.vsdx' ? null : 'utf-8');
-							
+
+							// PNG/PDF/SVG files picked up by a directory scan are only
+							// exportable if they contain an embedded diagram; skip the
+							// rest (eg. previous export outputs) instead of failing
+							// the batch [jgraph/drawio-desktop#2248]
+							if (inStat.isDirectory() &&
+								(ext === '.png' || ext === '.pdf' || ext === '.svg'))
+							{
+								var embXml = null;
+
+								try
+								{
+									if (ext === '.png')
+									{
+										embXml = readPngXml(fileContent);
+									}
+									else if (ext === '.pdf')
+									{
+										embXml = readPdfXml(fileContent);
+									}
+									else
+									{
+										embXml = readSvgXml(fileContent);
+									}
+								}
+								catch (e)
+								{
+									// Malformed file, treated as no diagram data
+								}
+
+								if (embXml == null)
+								{
+									console.log('Skipping ' + curFile + ' (no diagram data)');
+									next();
+									return;
+								}
+							}
+
 							if (ext === '.vsdx')
 							{
 								dummyWin.loadURL(`file://${codeDir}/vsdxImporter.html`);
@@ -1155,7 +1198,7 @@ app.whenReady().then(() =>
 				}
 				else
 				{
-					throw 'Error: input file/directory not found or directory is empty';
+					throw 'Error: no exportable files found in the input file/directory';
 				}
 			}
 			else
