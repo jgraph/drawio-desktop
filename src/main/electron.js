@@ -8,6 +8,7 @@ import crc from 'crc';
 import zlib from 'zlib';
 import log from'electron-log';
 import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImport } from './args.js';
+import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument} from '@cantoo/pdf-lib';
@@ -380,38 +381,10 @@ function validateSender (frame)
 	return frame.url.replace(/\/.\:\//, str => str.toUpperCase()).startsWith(codeUrl);
 }
 
-function isWithinDisplayBounds(pos) 
-{
-	const displays = screen.getAllDisplays();
-
-	return displays.reduce((result, display) => 
-	{
-		const area = display.workArea
-		return (
-			result ||
-			(pos.x >= area.x &&
-			pos.y >= area.y &&
-			pos.x < area.x + area.width &&
-			pos.y < area.y + area.height)
-		)
-	}, false)
-}
-
 function createWindow (opt = {})
 {
 	let lastWinSizeStr = (store && store.get('lastWinSize')) || '1200,800,0,0,false,false';
-	let lastWinSize = lastWinSizeStr ? lastWinSizeStr.split(',') : [1200, 800];
-
-	// TODO On some Mac OS, double click the titlebar set incorrect window size
-	if (lastWinSize[0] < 500)
-	{
-		lastWinSize[0] = 500;
-	}
-
-	if (lastWinSize[1] < 500)
-	{
-		lastWinSize[1] = 500;
-	}
+	let lastWinSize = parseLastWinSize(lastWinSizeStr);
 
 	const additionalArguments = [];
 
@@ -423,8 +396,8 @@ function createWindow (opt = {})
 	let options = Object.assign(
 	{
 		backgroundColor: '#FFF',
-		width: parseInt(lastWinSize[0]),
-		height: parseInt(lastWinSize[1]),
+		width: lastWinSize.width,
+		height: lastWinSize.height,
 		icon: `${codeDir}/images/drawlogo256.png`,
 		webviewTag: false,
 		webSecurity: true,
@@ -437,31 +410,28 @@ function createWindow (opt = {})
 		}
 	}, opt)
 	
-	if (lastWinSize[2] != null)
-	{
-		options.x = parseInt(lastWinSize[2]);
-	}
+	// Displays may have been removed or changed resolution since the window
+	// size was saved, leaving the saved position off-screen or the saved size
+	// too large for the remaining displays [jgraph/drawio-desktop#2282]
+	const bounds = placeWindowOnDisplays(
+		{x: lastWinSize.x, y: lastWinSize.y, width: options.width, height: options.height},
+		screen.getAllDisplays().map(display => display.workArea),
+		screen.getPrimaryDisplay().workArea);
 
-	if (lastWinSize[3] != null)
-	{
-		options.y = parseInt(lastWinSize[3]);
-	}
-
-	if (!isWithinDisplayBounds(options))
-	{
-		options.x = null;
-		options.y = null;
-	}
+	options.x = bounds.x;
+	options.y = bounds.y;
+	options.width = bounds.width;
+	options.height = bounds.height;
 
 	let mainWindow = new BrowserWindow(options)
 	windowsRegistry.push(mainWindow)
 
-	if (lastWinSize[4] === 'true')
+	if (lastWinSize.maximized)
 	{
 		mainWindow.maximize()
 	}
 
-	if (lastWinSize[5] === 'true')
+	if (lastWinSize.fullScreen)
 	{
 		mainWindow.setFullScreen(true);
 	}
