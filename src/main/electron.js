@@ -825,7 +825,8 @@ app.whenReady().then(() =>
 				embedFonts: (options.embedSvgFonts === true || options.embedSvgFonts === 'true')? '1' : '0',
 				jpegQuality: options.quality,
 				uncompressed: options.uncompressed,
-				theme: options.svgTheme,
+				// --theme applies to all formats and wins over the deprecated --svg-theme
+				theme: options.theme != null ? options.theme : options.svgTheme,
 				linkTarget: options.svgLinksTarget,
 				crop: (options.crop && format == 'pdf') ? '1' : '0'
 			};

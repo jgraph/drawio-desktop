@@ -444,6 +444,25 @@ describe('positional argument', () =>
 	});
 });
 
+// ─── Theme (all formats) ─────────────────────────────────────────────────────
+
+describe('--theme', () =>
+{
+	test('accepts dark',  () => assert.equal(parse(['--theme', 'dark']).opts.theme, 'dark'));
+	test('accepts light', () => assert.equal(parse(['--theme', 'light']).opts.theme, 'light'));
+	test('accepts auto',  () => assert.equal(parse(['--theme', 'auto']).opts.theme, 'auto'));
+
+	test('has no default so absence is distinguishable from auto (falls back to --svg-theme)', () =>
+	{
+		assert.equal(parse([]).opts.theme, undefined);
+	});
+
+	test('invalid value falls back to undefined', () =>
+	{
+		assert.equal(parse(['--theme', 'blue']).opts.theme, undefined);
+	});
+});
+
 // ─── SVG theme ───────────────────────────────────────────────────────────────
 // themeRegExp = /^(dark|light)$/ — 'auto' is NOT in the pattern.
 // Commander v14 silently falls back to the option default when the regex doesn't match,
