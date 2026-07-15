@@ -641,7 +641,10 @@ app.whenReady().then(() =>
 		callback({
 			responseHeaders: {
 				...details.responseHeaders,
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\'; connect-src \'self\'' +
+				// 'wasm-unsafe-eval' is required to compile the inlined libavoid WASM edge
+				// router; without it this header CSP overrides the more permissive meta CSP
+				// set in ElectronApp.js (the strictest of multiple policies wins)
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'wasm-unsafe-eval\'; connect-src \'self\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src * data:; frame-src \'self\'; style-src \'self\' \'unsafe-inline\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
