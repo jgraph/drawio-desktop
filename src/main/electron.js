@@ -2631,7 +2631,7 @@ function exportDiagram(event, args, directFinalize)
 							}
 						};
 						
-						contents.print(pdfOptions, (success, errorType) => 
+						var printFinished = (success, errorType) =>
 						{
 							//Consider all as success
 							event.reply('export-success', {});
@@ -2643,6 +2643,29 @@ function exportDiagram(event, args, directFinalize)
 									title: 'Printing Error',
 									message: 'There was an error printing. ' + errorType
 								});
+							}
+						};
+
+						contents.print(pdfOptions, (success, errorType) =>
+						{
+							// Electron >= 43 fails webContents.print() with any options on all
+							// platforms: its Chromium printing patch moved UpdatePrintSettings()
+							// from PrintViewManagerBase (which Electron's manager inherits) into
+							// Chrome's preview-only PrintViewManager, and PrintViewManagerElectron
+							// now overrides it to reject every request, so printing with settings
+							// fails as 'Invalid printer settings' before any dialog opens (still
+							// broken in 43.1.1 and on electron main as of 44.0.0-alpha.3). Retry
+							// once without settings: that path skips UpdatePrintSettings, the
+							// native dialog opens and the user sets paper size and scale there,
+							// as before Electron 41.
+							if (!success && errorType == 'Invalid printer settings')
+							{
+								console.log('Print settings rejected by Electron, retrying without settings');
+								contents.print({}, printFinished);
+							}
+							else
+							{
+								printFinished(success, errorType);
 							}
 						});
 					}
