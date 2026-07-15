@@ -3549,10 +3549,13 @@ async function installPlugin(filePath)
 function getPluginFile(plugin)
 {
 	if (!enablePlugins) return null;
-	
+
 	const prefix = path.join(getAppDataFolder(), '/plugins/');
-	const pluginFile = path.join(prefix, plugin);
-	        	
+	// Settings written by earlier versions may contain the resolved file://
+	// URL or absolute path instead of the installed file name, so reduce
+	// the value to its base name before resolving in the plugins folder
+	const pluginFile = path.join(prefix, path.basename(plugin));
+
 	if (pluginFile.startsWith(prefix) && fs.existsSync(pluginFile))
 	{
 		return pluginFile;
