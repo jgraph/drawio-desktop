@@ -425,6 +425,23 @@ describe('positional argument', () =>
 		const { args } = parse([]);
 		assert.equal(args.length, 0);
 	});
+
+	// Multiple input files/folders are exported in one run
+	// [jgraph/drawio-desktop#2433]
+	test('captures multiple input paths in order', () =>
+	{
+		const { args } = parse(['a.drawio', 'b.drawio', 'some/folder']);
+		assert.deepEqual(args, ['a.drawio', 'b.drawio', 'some/folder']);
+	});
+
+	test('multiple inputs mixed with flags', () =>
+	{
+		const { opts, args } = parse(['-x', 'a.drawio', '-f', 'png', 'b.drawio', '-t', 'c.drawio']);
+		assert.equal(opts.export, true);
+		assert.equal(opts.format, 'png');
+		assert.equal(opts.transparent, true);
+		assert.deepEqual(args, ['a.drawio', 'b.drawio', 'c.drawio']);
+	});
 });
 
 // ─── SVG theme ───────────────────────────────────────────────────────────────

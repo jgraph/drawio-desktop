@@ -12,7 +12,7 @@ const OPTION_DEFS = [
 	{ short: '-k', long: '--check',            key: 'check',
 	  desc: 'does not overwrite existing files' },
 	{ short: '-x', long: '--export',           key: 'export',
-	  desc: 'export the input file/folder based on the given options. Besides draw.io files, vsdx, csv and Mermaid (.mmd/.mermaid) inputs are also supported' },
+	  desc: 'export the input files/folders based on the given options. Besides draw.io files, vsdx, csv and Mermaid (.mmd/.mermaid) inputs are also supported' },
 	{ short: '-r', long: '--recursive',        key: 'recursive',
 	  desc: 'for a folder input, recursively convert all files in sub-folders also' },
 	{ short: '-o', long: '--output',           key: 'output',         takesValue: true,
@@ -139,7 +139,7 @@ export function formatHelp(version)
 	const lines = [
 		`draw.io ${version}`,
 		'',
-		'Usage: drawio [options] [input file/folder]',
+		'Usage: drawio [options] [input file/folder]...',
 		'',
 		'Options:',
 	];

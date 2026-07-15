@@ -859,21 +859,14 @@ app.whenReady().then(() =>
 				paths = paths.filter(function(path) { return path != null && path != '--no-sandbox'; });
 			}
 
-			// If a file is passed 
+			// If input files/folders are passed
 			if (paths !== undefined && paths[0] != null)
 			{
-				var inStat = null;
-				
-				try
-				{
-					inStat = fs.statSync(paths[0]);
-				}
-				catch(e)
-				{
-					throw 'Error: input file/directory not found';	
-				}
-				
 				var files = [];
+
+				// Tracks files found by directory scans (vs listed explicitly)
+				// for the lenient no-diagram-data handling below
+				var scannedFiles = new Set();
 
 				// Directory scans only pick up file types the export can ingest,
 				// so unrelated files don't fail the batch [jgraph/drawio-desktop#2248]
@@ -891,6 +884,7 @@ app.whenReady().then(() =>
 							exportableExts.includes(path.extname(filePath).toLowerCase()))
 						{
 							files.push(filePath);
+							scannedFiles.add(filePath);
 						}
 						if (stat.isDirectory() && isRecursive)
 					    {
@@ -899,13 +893,37 @@ app.whenReady().then(() =>
 					});
 				}
 				
-				if (inStat.isFile())
+				// Each positional argument is an input file or folder to
+				// export [jgraph/drawio-desktop#2433]
+				for (const inPath of paths)
 				{
-					files.push(paths[0]);
+					var inStat = null;
+
+					try
+					{
+						inStat = fs.statSync(inPath);
+					}
+					catch(e)
+					{
+						throw 'Error: input file/directory not found: ' + inPath;
+					}
+
+					if (inStat.isFile())
+					{
+						files.push(inPath);
+					}
+					else if (inStat.isDirectory())
+					{
+						addDirectoryFiles(inPath, options.recursive);
+					}
 				}
-				else if (inStat.isDirectory())
+
+				// Exporting several files into one output file would just
+				// overwrite it on each export (--check keeps its
+				// counter-suffixed copies instead)
+				if (files.length > 1 && outType != null && outType.isFile && !options.check)
 				{
-					addDirectoryFiles(paths[0], options.recursive);
+					throw 'Error: output must be a folder when exporting multiple files';
 				}
 
 				if (files.length > 0)
@@ -926,8 +944,9 @@ app.whenReady().then(() =>
 							// PNG/PDF/SVG files picked up by a directory scan are only
 							// exportable if they contain an embedded diagram; skip the
 							// rest (eg. previous export outputs) instead of failing
-							// the batch [jgraph/drawio-desktop#2248]
-							if (inStat.isDirectory() &&
+							// the batch. Explicitly listed files still fail loudly
+							// [jgraph/drawio-desktop#2248]
+							if (scannedFiles.has(curFile) &&
 								(ext === '.png' || ext === '.pdf' || ext === '.svg'))
 							{
 								var embXml = null;
@@ -960,32 +979,49 @@ app.whenReady().then(() =>
 								}
 							}
 
+							// expArgs is shared across the batch, so content and decode
+							// flags from the previous file must not leak into this one
+							// (eg. a stale csv would hijack the render of the next file)
+							delete expArgs.xml;
+							delete expArgs.csv;
+							delete expArgs.mermaid;
+							delete expArgs.xmlEncoded;
+							delete expArgs.pdfEncoded;
+
 							if (ext === '.vsdx')
 							{
 								dummyWin.loadURL(`file://${codeDir}/vsdxImporter.html`);
-								
+
 								const contents = dummyWin.webContents;
 
-								contents.on('did-finish-load', function()
+								// once() and cross-removal: with several vsdx inputs in one
+								// batch, leftover listeners from the previous file would
+								// re-send its content and consume the next file's reply
+								contents.once('did-finish-load', function()
 							    {
 									contents.send('import', fileContent);
 
-									ipcMain.once('import-success', function(e, xml)
+									function onImportSuccess(e, xml)
 						    	    {
 										if (!validateSender(e.senderFrame)) return null;
 
+										ipcMain.removeListener('import-error', onImportError);
 										expArgs.xml = xml;
 										startExport();
-						    	    });
-						    	    
-						    	    ipcMain.once('import-error', function(e)
+						    	    }
+
+						    	    function onImportError(e)
 						    	    {
 										if (!validateSender(e.senderFrame)) return null;
 
+										ipcMain.removeListener('import-success', onImportSuccess);
 						    	    	console.error('Error: cannot import VSDX file: ' + curFile);
 										exportFailed = true;
 						    	    	next();
-						    	    });
+						    	    }
+
+									ipcMain.once('import-success', onImportSuccess);
+									ipcMain.once('import-error', onImportError);
 							    });
 							}
 							else
@@ -1072,14 +1108,10 @@ app.whenReady().then(() =>
 															outFileName = options.output;
 														}
 													}
-													else if (inStat.isFile())
+													else
 													{
-														outFileName = path.join(path.dirname(paths[0]), path.basename(paths[0],
-															path.extname(paths[0]))) + '.' + format;
-
-													}
-													else //dir
-													{
+														// Output goes next to the input file, whether
+														// passed explicitly or found by a folder scan
 														outFileName = path.join(path.dirname(curFile), path.basename(curFile,
 															path.extname(curFile))) + '.' + format;
 													}
