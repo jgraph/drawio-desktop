@@ -1588,6 +1588,11 @@ app.whenReady().then(() =>
 	        { role: 'quit' }
 	      ]
 	    }, {
+	      label: 'File',
+	      submenu: [
+	        { role: 'close' }
+	      ]
+	    }, {
 	      label: 'Edit',
 	      submenu: [
 			{ role: 'undo' },
