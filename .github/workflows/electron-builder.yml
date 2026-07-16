@@ -82,7 +82,14 @@ jobs:
       if: ${{ matrix.os == 'ubuntu-latest' }}
       run: |
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. It is used now without login
-        sudo snap install snapcraft --classic
-        npm run release-snap
+        # Pin snapcraft to the 8.x track: snapcraft 9 cannot build core20 fallbacks and
+        # 9.0.0 intermittently hangs fetching stage packages (8.x builds core24 fine)
+        sudo snap install snapcraft --classic --channel=8.x/stable
+        # The core24 snap builds inside LXD; the gnome extension (which wires up the
+        # gnome-46-2404 runtime) is incompatible with destructive/host mode
+        sudo snap list lxd >/dev/null 2>&1 || sudo snap install lxd
+        sudo lxd init --minimal
+        sudo usermod -aG lxd "$(id -un)"
+        sg lxd -c "npm run release-snap"
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
         snapcraft upload --release edge dist/draw.io-amd64-*.snap

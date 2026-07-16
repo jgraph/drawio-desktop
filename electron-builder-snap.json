@@ -25,12 +25,21 @@
       "snap"
     ]
   },
-  "snap": {
-    "base": "core20",
-    "plugs": [
-      "default",
-      "removable-media"
-    ]
+  "snapcraft": {
+    "base": "core24",
+    "core24": {
+      "useLXD": true,
+      "plugs": [
+        "default",
+        "removable-media",
+        {
+          "browser-support": {
+            "interface": "browser-support",
+            "allow-sandbox": true
+          }
+        }
+      ]
+    }
   },
   "afterPack": "build/fuses.mjs",
   "fileAssociations": [
