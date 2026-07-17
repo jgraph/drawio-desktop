@@ -80,6 +80,9 @@ jobs:
         npm run release-linux
     - name: Build for Snap
       if: ${{ matrix.os == 'ubuntu-latest' }}
+      # Snap releasing is flaky and not release-critical; a snap failure must never
+      # fail the release build (or fail-fast cancel the in-progress macOS job)
+      continue-on-error: true
       run: |
         #To generate SNAP_TOKEN run `snapcraft export-login [FILE]` and login with your snapcraft credentials. It is used now without login
         # Pin snapcraft to the 8.x track: snapcraft 9 cannot build core20 fallbacks and
