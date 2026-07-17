@@ -89,6 +89,12 @@ jobs:
         # gnome-46-2404 runtime) is incompatible with destructive/host mode
         sudo snap list lxd >/dev/null 2>&1 || sudo snap install lxd
         sudo lxd init --minimal
+        # Docker (preinstalled on the runner) sets the iptables FORWARD policy to DROP,
+        # which cuts off egress from lxdbr0 - the build instance then has no network and
+        # snapcraft fails with "A network related operation failed in a context of no
+        # network access". Standard LXD+Docker workaround from the LXD docs:
+        sudo iptables -I DOCKER-USER -i lxdbr0 -j ACCEPT || sudo iptables -P FORWARD ACCEPT
+        sudo iptables -I DOCKER-USER -o lxdbr0 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT || true
         sudo usermod -aG lxd "$(id -un)"
         sg lxd -c "npm run release-snap"
         # Cannot configure electron-builder to publish to stable channel, so do it explicitly
