@@ -506,17 +506,64 @@ function createWindow (opt = {})
 		if (data.isModified)
 		{
 			modifiedModalOpen = true;
+			// Button order follows platform conventions, indices are mapped below.
+			// Enter triggers Save, Esc triggers Cancel, Alt+S/Alt+D work on Windows and Linux
+			let saveBtn = 0, cancelBtn, discardBtn, buttons;
+
+			if (isMac)
+			{
+				buttons = ['Save', 'Cancel', 'Discard Changes'];
+				cancelBtn = 1;
+				discardBtn = 2;
+			}
+			else
+			{
+				buttons = ['&Save', '&Discard Changes', 'Cancel'];
+				discardBtn = 1;
+				cancelBtn = 2;
+			}
+
 			// Can't use async function here because it crashes on Linux when win.destroy is called
 			let response = dialog.showMessageBoxSync(
 				mainWindow,
 				{
 					type: 'question',
-					buttons: ['Cancel', 'Discard Changes'],
+					buttons: buttons,
+					defaultId: saveBtn,
+					cancelId: cancelBtn,
+					noLink: true,
+					normalizeAccessKeys: true,
 					title: 'Confirm',
-					message: 'The document has unsaved changes. Do you really want to quit without saving?' //mxResources.get('allChangesLost')
+					message: 'The document has unsaved changes. Do you want to save them?'
 				});
 
-			if (response === 1)
+			if (response === saveBtn)
+			{
+				//Save in the renderer (opens Save As dialog for new files), then
+				//close the window unless saving failed or was cancelled
+				const saveUniqueId = uniqueIsModifiedId;
+				mainWindow.webContents.send('saveAndClose', saveUniqueId);
+
+				const saveAndCloseResult = (e, result) =>
+				{
+					if (!validateSender(e.senderFrame) || saveUniqueId != result.uniqueId) return null;
+
+					ipcMain.removeListener('saveAndClose-result', saveAndCloseResult);
+
+					if (result.success && !mainWindow.isDestroyed())
+					{
+						mainWindow.destroy();
+					}
+					else
+					{
+						cmdQPressed = false;
+						modifiedModalOpen = false;
+					}
+				};
+
+				ipcMain.on('saveAndClose-result', saveAndCloseResult);
+			}
+			else if (response === discardBtn)
 			{
 				//If user chose not to save, remove the draft
 				if (data.draftPath != null)
