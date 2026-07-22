@@ -11,7 +11,7 @@ import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImpo
 import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
-import {PDFDocument} from '@cantoo/pdf-lib';
+import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
 import Store from 'electron-store';
 import ProgressBar from './progress-bar.js';
 import contextMenu from 'electron-context-menu';
@@ -2084,7 +2084,123 @@ function writePngWithText(origBuff, key, text, compressed, base64encoded)
 	}
 }
 
-async function mergePdfs(pdfFiles, xml)
+// Adds PDF annotations for cell tooltips and notes. Tooltips become
+// invisible read-only button widgets whose /TU alternate field name shows
+// the tooltip on hover in PDF viewers (the standard PDF tooltip mechanism,
+// also read by screen readers). Notes become standard sticky note
+// annotations with a click popup at the bottom left corner of the cell.
+// Rects are in CSS pixels relative to the rendered page, so scaling to
+// PDF points uses the actual page size of the output. Failures are
+// logged and ignored as annotations must not break the export.
+function addDiagramAnnotations(pdfDoc, annots)
+{
+	if (annots == null || !Array.isArray(annots) || annots.length == 0)
+	{
+		return;
+	}
+
+	try
+	{
+		const context = pdfDoc.context;
+		const pages = pdfDoc.getPages();
+		let acroForm = null;
+		let emptyAp = null;
+
+		for (let i = 0; i < annots.length; i++)
+		{
+			const t = annots[i];
+
+			if (t == null || !(t.page >= 1) || t.page > pages.length ||
+				!isFinite(t.x) || !isFinite(t.y) || !(t.w > 0) || !(t.h > 0) ||
+				!(t.pw > 0) || !(t.ph > 0) || typeof t.tip !== 'string' || t.tip == '')
+			{
+				continue;
+			}
+
+			const page = pages[t.page - 1];
+			const pageH = page.getHeight();
+			const sx = page.getWidth() / t.pw;
+			const sy = pageH / t.ph;
+			const text = PDFHexString.fromText(t.tip.substring(0, 4096));
+
+			if (t.type == 'note')
+			{
+				// Sticky note with the standard viewer icon centered on the
+				// bottom left corner of the cell (NoZoom | NoRotate | Print)
+				const ix = Math.max(8, t.x * sx);
+				const iy = Math.max(8, pageH - (t.y + t.h) * sy);
+
+				const note = context.obj({
+					Type: 'Annot',
+					Subtype: 'Text',
+					Rect: [ix - 8, iy - 8, ix + 8, iy + 8],
+					Contents: text,
+					Name: 'Comment',
+					F: 28,
+					C: [1, 0.85, 0.3],
+					P: page.ref
+				});
+				const noteRef = context.register(note);
+
+				const popup = context.obj({
+					Type: 'Annot',
+					Subtype: 'Popup',
+					Rect: [ix + 12, Math.max(0, iy - 90), ix + 192, iy + 20],
+					Parent: noteRef,
+					Open: false
+				});
+				const popupRef = context.register(popup);
+				note.set(PDFName.of('Popup'), popupRef);
+
+				page.node.addAnnot(noteRef);
+				page.node.addAnnot(popupRef);
+			}
+			else
+			{
+				if (emptyAp == null)
+				{
+					// Shared empty appearance stream so viewers render nothing
+					// for the widgets without complaining about a missing
+					// appearance
+					emptyAp = context.register(context.stream('', {
+						Type: 'XObject', Subtype: 'Form', FormType: 1, BBox: [0, 0, 1, 1]
+					}));
+				}
+
+				const widget = context.obj({
+					Type: 'Annot',
+					Subtype: 'Widget',
+					FT: 'Btn',
+					// Pushbutton (bit 17) + read-only (bit 1): no value, no focus
+					Ff: 65537,
+					T: PDFHexString.fromText('tooltip.' + i),
+					TU: text,
+					F: 4,
+					Rect: [t.x * sx, pageH - (t.y + t.h) * sy,
+						(t.x + t.w) * sx, pageH - t.y * sy],
+					P: page.ref,
+					AP: { N: emptyAp }
+				});
+
+				const widgetRef = context.register(widget);
+				page.node.addAnnot(widgetRef);
+
+				if (acroForm == null)
+				{
+					acroForm = pdfDoc.catalog.getOrCreateAcroForm();
+				}
+
+				acroForm.addField(widgetRef);
+			}
+		}
+	}
+	catch (e)
+	{
+		log.error('Failed to add PDF annotations:', e);
+	}
+}
+
+async function mergePdfs(pdfFiles, xml, annots)
 {
 	if (pdfFiles.length == 1)
 	{
@@ -2099,6 +2215,8 @@ async function mergePdfs(pdfFiles, xml)
 			pdfDoc.setSubject(encodeURIComponent(xml).
 				replace(/\(/g, "\\(").replace(/\)/g, "\\)"));
 		}
+
+		addDiagramAnnotations(pdfDoc, annots);
 
 		// Forces /ObjStm so the hex-encoded Subject is reachable by the PDF
 		// importer [jgraph/drawio-desktop#2394]
@@ -2583,7 +2701,7 @@ function exportDiagram(event, args, directFinalize)
 					resolvedXml = renderInfo.xml;
 				}
 
-				var pageCount = renderInfo.pageCount, bounds = null;
+				var pageCount = renderInfo.pageCount, bounds = null, diagramAnnots = null;
 				//For some reason, Electron 9 doesn't send this object as is without stringifying. Usually when variable is external to function own scope
 				try
 				{
@@ -2592,6 +2710,16 @@ function exportDiagram(event, args, directFinalize)
 				catch(e)
 				{
 					bounds = null;
+				}
+
+				try
+				{
+					diagramAnnots = (renderInfo.annots != null) ?
+						JSON.parse(renderInfo.annots) : null;
+				}
+				catch(e)
+				{
+					diagramAnnots = null;
 				}
 				
 				var pdfOptions = {};
@@ -2748,7 +2876,8 @@ function exportDiagram(event, args, directFinalize)
 							// because its from/to collapsed to one page, exiting the loop
 							// after the first full-document render.
 							data = await mergePdfs([data], args.embedXml == '1' ?
-								((resolvedXml != null) ? resolvedXml : args.xml) : null);
+								((resolvedXml != null) ? resolvedXml : args.xml) : null,
+								diagramAnnots);
 							event.reply('export-success', data);
 						})
 						.catch((error) => 
