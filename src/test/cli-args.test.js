@@ -348,6 +348,18 @@ describe('-p / --page-index', () =>
 		assert.equal(parse(['-p', '2']).opts.pageIndex, 1);
 		assert.equal(parse(['--page-index', '5']).opts.pageIndex, 4);
 	});
+
+	// The export path rejects any pageIndex below 0 with an error instead of
+	// silently exporting the first page [jgraph/drawio-desktop#2319]
+	test('0 (first page in the pre-v27.0.2 0-based scheme) maps below 0', () =>
+	{
+		assert.equal(parse(['-p', '0']).opts.pageIndex, -1);
+	});
+
+	test('non-numeric input maps to NaN', () =>
+	{
+		assert.ok(Number.isNaN(parse(['-p', 'abc']).opts.pageIndex));
+	});
 });
 
 // ─── Page range ──────────────────────────────────────────────────────────────
@@ -363,6 +375,18 @@ describe('-g / --page-range', () =>
 	test('single-page range', () =>
 	{
 		assert.deepEqual(parse(['-g', '3..3']).opts.pageRange, [2, 2]);
+	});
+
+	// The export path rejects these malformed shapes with an error instead of
+	// silently exporting the first page [jgraph/drawio-desktop#2319]
+	test('value without ".." yields a single-element array', () =>
+	{
+		assert.deepEqual(parse(['-g', '3']).opts.pageRange, [2]);
+	});
+
+	test('0-based range values map below 0', () =>
+	{
+		assert.deepEqual(parse(['-g', '0..2']).opts.pageRange, [-1, 1]);
 	});
 });
 
@@ -400,6 +424,42 @@ describe('positional argument', () =>
 	{
 		const { args } = parse([]);
 		assert.equal(args.length, 0);
+	});
+
+	// Multiple input files/folders are exported in one run
+	// [jgraph/drawio-desktop#2433]
+	test('captures multiple input paths in order', () =>
+	{
+		const { args } = parse(['a.drawio', 'b.drawio', 'some/folder']);
+		assert.deepEqual(args, ['a.drawio', 'b.drawio', 'some/folder']);
+	});
+
+	test('multiple inputs mixed with flags', () =>
+	{
+		const { opts, args } = parse(['-x', 'a.drawio', '-f', 'png', 'b.drawio', '-t', 'c.drawio']);
+		assert.equal(opts.export, true);
+		assert.equal(opts.format, 'png');
+		assert.equal(opts.transparent, true);
+		assert.deepEqual(args, ['a.drawio', 'b.drawio', 'c.drawio']);
+	});
+});
+
+// ─── Theme (all formats) ─────────────────────────────────────────────────────
+
+describe('--theme', () =>
+{
+	test('accepts dark',  () => assert.equal(parse(['--theme', 'dark']).opts.theme, 'dark'));
+	test('accepts light', () => assert.equal(parse(['--theme', 'light']).opts.theme, 'light'));
+	test('accepts auto',  () => assert.equal(parse(['--theme', 'auto']).opts.theme, 'auto'));
+
+	test('has no default so absence is distinguishable from auto (falls back to --svg-theme)', () =>
+	{
+		assert.equal(parse([]).opts.theme, undefined);
+	});
+
+	test('invalid value falls back to undefined', () =>
+	{
+		assert.equal(parse(['--theme', 'blue']).opts.theme, undefined);
 	});
 });
 

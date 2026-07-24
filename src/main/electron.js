@@ -8,6 +8,7 @@ import crc from 'crc';
 import zlib from 'zlib';
 import log from'electron-log';
 import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImport } from './args.js';
+import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument} from '@cantoo/pdf-lib';
@@ -380,38 +381,10 @@ function validateSender (frame)
 	return frame.url.replace(/\/.\:\//, str => str.toUpperCase()).startsWith(codeUrl);
 }
 
-function isWithinDisplayBounds(pos) 
-{
-	const displays = screen.getAllDisplays();
-
-	return displays.reduce((result, display) => 
-	{
-		const area = display.workArea
-		return (
-			result ||
-			(pos.x >= area.x &&
-			pos.y >= area.y &&
-			pos.x < area.x + area.width &&
-			pos.y < area.y + area.height)
-		)
-	}, false)
-}
-
 function createWindow (opt = {})
 {
 	let lastWinSizeStr = (store && store.get('lastWinSize')) || '1200,800,0,0,false,false';
-	let lastWinSize = lastWinSizeStr ? lastWinSizeStr.split(',') : [1200, 800];
-
-	// TODO On some Mac OS, double click the titlebar set incorrect window size
-	if (lastWinSize[0] < 500)
-	{
-		lastWinSize[0] = 500;
-	}
-
-	if (lastWinSize[1] < 500)
-	{
-		lastWinSize[1] = 500;
-	}
+	let lastWinSize = parseLastWinSize(lastWinSizeStr);
 
 	const additionalArguments = [];
 
@@ -423,8 +396,8 @@ function createWindow (opt = {})
 	let options = Object.assign(
 	{
 		backgroundColor: '#FFF',
-		width: parseInt(lastWinSize[0]),
-		height: parseInt(lastWinSize[1]),
+		width: lastWinSize.width,
+		height: lastWinSize.height,
 		icon: `${codeDir}/images/drawlogo256.png`,
 		webviewTag: false,
 		webSecurity: true,
@@ -437,31 +410,28 @@ function createWindow (opt = {})
 		}
 	}, opt)
 	
-	if (lastWinSize[2] != null)
-	{
-		options.x = parseInt(lastWinSize[2]);
-	}
+	// Displays may have been removed or changed resolution since the window
+	// size was saved, leaving the saved position off-screen or the saved size
+	// too large for the remaining displays [jgraph/drawio-desktop#2282]
+	const bounds = placeWindowOnDisplays(
+		{x: lastWinSize.x, y: lastWinSize.y, width: options.width, height: options.height},
+		screen.getAllDisplays().map(display => display.workArea),
+		screen.getPrimaryDisplay().workArea);
 
-	if (lastWinSize[3] != null)
-	{
-		options.y = parseInt(lastWinSize[3]);
-	}
-
-	if (!isWithinDisplayBounds(options))
-	{
-		options.x = null;
-		options.y = null;
-	}
+	options.x = bounds.x;
+	options.y = bounds.y;
+	options.width = bounds.width;
+	options.height = bounds.height;
 
 	let mainWindow = new BrowserWindow(options)
 	windowsRegistry.push(mainWindow)
 
-	if (lastWinSize[4] === 'true')
+	if (lastWinSize.maximized)
 	{
 		mainWindow.maximize()
 	}
 
-	if (lastWinSize[5] === 'true')
+	if (lastWinSize.fullScreen)
 	{
 		mainWindow.setFullScreen(true);
 	}
@@ -536,17 +506,64 @@ function createWindow (opt = {})
 		if (data.isModified)
 		{
 			modifiedModalOpen = true;
+			// Button order follows platform conventions, indices are mapped below.
+			// Enter triggers Save, Esc triggers Cancel, Alt+S/Alt+D work on Windows and Linux
+			let saveBtn = 0, cancelBtn, discardBtn, buttons;
+
+			if (isMac)
+			{
+				buttons = ['Save', 'Cancel', 'Discard Changes'];
+				cancelBtn = 1;
+				discardBtn = 2;
+			}
+			else
+			{
+				buttons = ['&Save', '&Discard Changes', 'Cancel'];
+				discardBtn = 1;
+				cancelBtn = 2;
+			}
+
 			// Can't use async function here because it crashes on Linux when win.destroy is called
 			let response = dialog.showMessageBoxSync(
 				mainWindow,
 				{
 					type: 'question',
-					buttons: ['Cancel', 'Discard Changes'],
+					buttons: buttons,
+					defaultId: saveBtn,
+					cancelId: cancelBtn,
+					noLink: true,
+					normalizeAccessKeys: true,
 					title: 'Confirm',
-					message: 'The document has unsaved changes. Do you really want to quit without saving?' //mxResources.get('allChangesLost')
+					message: 'The document has unsaved changes. Do you want to save them?'
 				});
 
-			if (response === 1)
+			if (response === saveBtn)
+			{
+				//Save in the renderer (opens Save As dialog for new files), then
+				//close the window unless saving failed or was cancelled
+				const saveUniqueId = uniqueIsModifiedId;
+				mainWindow.webContents.send('saveAndClose', saveUniqueId);
+
+				const saveAndCloseResult = (e, result) =>
+				{
+					if (!validateSender(e.senderFrame) || saveUniqueId != result.uniqueId) return null;
+
+					ipcMain.removeListener('saveAndClose-result', saveAndCloseResult);
+
+					if (result.success && !mainWindow.isDestroyed())
+					{
+						mainWindow.destroy();
+					}
+					else
+					{
+						cmdQPressed = false;
+						modifiedModalOpen = false;
+					}
+				};
+
+				ipcMain.on('saveAndClose-result', saveAndCloseResult);
+			}
+			else if (response === discardBtn)
 			{
 				//If user chose not to save, remove the draft
 				if (data.draftPath != null)
@@ -641,7 +658,10 @@ app.whenReady().then(() =>
 		callback({
 			responseHeaders: {
 				...details.responseHeaders,
-				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\'; connect-src \'self\'' +
+				// 'wasm-unsafe-eval' is required to compile the inlined libavoid WASM edge
+				// router; without it this header CSP overrides the more permissive meta CSP
+				// set in ElectronApp.js (the strictest of multiple policies wins)
+				'Content-Security-Policy': ['default-src \'self\'; script-src \'self\' \'wasm-unsafe-eval\'; connect-src \'self\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com https://fonts.gstatic.com' : '') + '; img-src * data:; media-src *; font-src * data:; frame-src \'self\'; style-src \'self\' \'unsafe-inline\'' +
 				(isGoogleFontsEnabled? ' https://fonts.googleapis.com' : '') + '; base-uri \'none\';child-src \'self\';object-src \'none\';']
 			}
@@ -774,18 +794,28 @@ app.whenReady().then(() =>
 			}
 	    	
 	    	let from = null, to = null;
-	    	
-	    	if (options.pageIndex != null && options.pageIndex >= 0)
+
+	    	if (options.pageIndex != null)
 			{
+				// The 1-based CLI value arrives shifted to 0-based, so 0, negative and
+				// non-numeric input all land below 0. Page indexes were 0-based before
+				// v27.0.2 and old scripts pass 0 — fail loudly instead of silently
+				// exporting the first page [jgraph/drawio-desktop#2319]
+				if (!(options.pageIndex >= 0))
+				{
+					console.error('Invalid page index: pages are numbered from 1 (0-based before v27.0.2)');
+					process.exit(1);
+				}
+
 	    		from = options.pageIndex;
 				to = options.pageIndex;
 				options.allPages = false;
 			}
-	    	else if (options.pageRange && options.pageRange.length == 2)
+	    	else if (options.pageRange)
 			{
 				const [rangeFrom, rangeTo] = options.pageRange;
 
-				if (rangeFrom >= 0 && rangeTo >= 0 && rangeFrom <= rangeTo)
+				if (options.pageRange.length == 2 && rangeFrom >= 0 && rangeTo >= 0 && rangeFrom <= rangeTo)
 				{
 					from = rangeFrom;
 					to = rangeTo;
@@ -793,7 +823,7 @@ app.whenReady().then(() =>
 				}
 				else
 				{
-					console.error('Invalid page range: must be non-negative and from ≤ to');
+					console.error('Invalid page range: expected <from>..<to> with pages numbered from 1 and from ≤ to (0-based before v27.0.2)');
 					process.exit(1);
 				}
 			}
@@ -812,7 +842,8 @@ app.whenReady().then(() =>
 				embedFonts: (options.embedSvgFonts === true || options.embedSvgFonts === 'true')? '1' : '0',
 				jpegQuality: options.quality,
 				uncompressed: options.uncompressed,
-				theme: options.svgTheme,
+				// --theme applies to all formats and wins over the deprecated --svg-theme
+				theme: options.theme != null ? options.theme : options.svgTheme,
 				linkTarget: options.svgLinksTarget,
 				crop: (options.crop && format == 'pdf') ? '1' : '0'
 			};
@@ -846,32 +877,32 @@ app.whenReady().then(() =>
 				paths = paths.filter(function(path) { return path != null && path != '--no-sandbox'; });
 			}
 
-			// If a file is passed 
+			// If input files/folders are passed
 			if (paths !== undefined && paths[0] != null)
 			{
-				var inStat = null;
-				
-				try
-				{
-					inStat = fs.statSync(paths[0]);
-				}
-				catch(e)
-				{
-					throw 'Error: input file/directory not found';	
-				}
-				
 				var files = [];
-				
+
+				// Tracks files found by directory scans (vs listed explicitly)
+				// for the lenient no-diagram-data handling below
+				var scannedFiles = new Set();
+
+				// Directory scans only pick up file types the export can ingest,
+				// so unrelated files don't fail the batch [jgraph/drawio-desktop#2248]
+				var exportableExts = ['.drawio', '.dio', '.xml', '.csv', '.vsdx',
+					'.mmd', '.mermaid', '.png', '.svg', '.pdf'];
+
 				function addDirectoryFiles(dir, isRecursive)
 				{
-					fs.readdirSync(dir).forEach(function(file) 
+					fs.readdirSync(dir).forEach(function(file)
 					{
 						var filePath = path.join(dir, file);
 						var stat = fs.statSync(filePath);
-						
-						if (stat.isFile() && path.basename(filePath).charAt(0) != '.')
+
+						if (stat.isFile() && path.basename(filePath).charAt(0) != '.' &&
+							exportableExts.includes(path.extname(filePath).toLowerCase()))
 						{
 							files.push(filePath);
+							scannedFiles.add(filePath);
 						}
 						if (stat.isDirectory() && isRecursive)
 					    {
@@ -880,13 +911,37 @@ app.whenReady().then(() =>
 					});
 				}
 				
-				if (inStat.isFile())
+				// Each positional argument is an input file or folder to
+				// export [jgraph/drawio-desktop#2433]
+				for (const inPath of paths)
 				{
-					files.push(paths[0]);
+					var inStat = null;
+
+					try
+					{
+						inStat = fs.statSync(inPath);
+					}
+					catch(e)
+					{
+						throw 'Error: input file/directory not found: ' + inPath;
+					}
+
+					if (inStat.isFile())
+					{
+						files.push(inPath);
+					}
+					else if (inStat.isDirectory())
+					{
+						addDirectoryFiles(inPath, options.recursive);
+					}
 				}
-				else if (inStat.isDirectory())
+
+				// Exporting several files into one output file would just
+				// overwrite it on each export (--check keeps its
+				// counter-suffixed copies instead)
+				if (files.length > 1 && outType != null && outType.isFile && !options.check)
 				{
-					addDirectoryFiles(paths[0], options.recursive);
+					throw 'Error: output must be a folder when exporting multiple files';
 				}
 
 				if (files.length > 0)
@@ -900,36 +955,91 @@ app.whenReady().then(() =>
 						
 						try
 						{
-							var ext = path.extname(curFile);
-							
+							var ext = path.extname(curFile).toLowerCase();
+
 							let fileContent = fs.readFileSync(curFile, ext === '.png' || ext === '.pdf' || ext === '.vsdx' ? null : 'utf-8');
-							
+
+							// PNG/PDF/SVG files picked up by a directory scan are only
+							// exportable if they contain an embedded diagram; skip the
+							// rest (eg. previous export outputs) instead of failing
+							// the batch. Explicitly listed files still fail loudly
+							// [jgraph/drawio-desktop#2248]
+							if (scannedFiles.has(curFile) &&
+								(ext === '.png' || ext === '.pdf' || ext === '.svg'))
+							{
+								var embXml = null;
+
+								try
+								{
+									if (ext === '.png')
+									{
+										embXml = readPngXml(fileContent);
+									}
+									else if (ext === '.pdf')
+									{
+										embXml = readPdfXml(fileContent);
+									}
+									else
+									{
+										embXml = readSvgXml(fileContent);
+									}
+								}
+								catch (e)
+								{
+									// Malformed file, treated as no diagram data
+								}
+
+								if (embXml == null)
+								{
+									console.log('Skipping ' + curFile + ' (no diagram data)');
+									next();
+									return;
+								}
+							}
+
+							// expArgs is shared across the batch, so content and decode
+							// flags from the previous file must not leak into this one
+							// (eg. a stale csv would hijack the render of the next file)
+							delete expArgs.xml;
+							delete expArgs.csv;
+							delete expArgs.mermaid;
+							delete expArgs.xmlEncoded;
+							delete expArgs.pdfEncoded;
+
 							if (ext === '.vsdx')
 							{
 								dummyWin.loadURL(`file://${codeDir}/vsdxImporter.html`);
-								
+
 								const contents = dummyWin.webContents;
 
-								contents.on('did-finish-load', function()
+								// once() and cross-removal: with several vsdx inputs in one
+								// batch, leftover listeners from the previous file would
+								// re-send its content and consume the next file's reply
+								contents.once('did-finish-load', function()
 							    {
 									contents.send('import', fileContent);
 
-									ipcMain.once('import-success', function(e, xml)
+									function onImportSuccess(e, xml)
 						    	    {
 										if (!validateSender(e.senderFrame)) return null;
 
+										ipcMain.removeListener('import-error', onImportError);
 										expArgs.xml = xml;
 										startExport();
-						    	    });
-						    	    
-						    	    ipcMain.once('import-error', function(e)
+						    	    }
+
+						    	    function onImportError(e)
 						    	    {
 										if (!validateSender(e.senderFrame)) return null;
 
+										ipcMain.removeListener('import-success', onImportSuccess);
 						    	    	console.error('Error: cannot import VSDX file: ' + curFile);
 										exportFailed = true;
 						    	    	next();
-						    	    });
+						    	    }
+
+									ipcMain.once('import-success', onImportSuccess);
+									ipcMain.once('import-error', onImportError);
 							    });
 							}
 							else
@@ -1016,14 +1126,10 @@ app.whenReady().then(() =>
 															outFileName = options.output;
 														}
 													}
-													else if (inStat.isFile())
+													else
 													{
-														outFileName = path.join(path.dirname(paths[0]), path.basename(paths[0],
-															path.extname(paths[0]))) + '.' + format;
-
-													}
-													else //dir
-													{
+														// Output goes next to the input file, whether
+														// passed explicitly or found by a folder scan
 														outFileName = path.join(path.dirname(curFile), path.basename(curFile,
 															path.extname(curFile))) + '.' + format;
 													}
@@ -1155,7 +1261,7 @@ app.whenReady().then(() =>
 				}
 				else
 				{
-					throw 'Error: input file/directory not found or directory is empty';
+					throw 'Error: no exportable files found in the input file/directory';
 				}
 			}
 			else
@@ -1527,6 +1633,11 @@ app.whenReady().then(() =>
 	        { role: 'unhide' },
 			{ type: 'separator' },
 	        { role: 'quit' }
+	      ]
+	    }, {
+	      label: 'File',
+	      submenu: [
+	        { role: 'close' }
 	      ]
 	    }, {
 	      label: 'Edit',
@@ -2567,7 +2678,13 @@ function exportDiagram(event, args, directFinalize)
 						pdfOptions = {
 							// scaleFactor is an integer percent in Chromium (Electron 41+ honors
 							// it in the native macOS print dialog), so pageScale 1 = 100%, not 1%.
-							scaleFactor: 100 * (args.pageScale || 1),
+							// The render paginates at pageFormat * pageScale to match the
+							// editor's page breaks, so each rendered page is pageScale times
+							// the physical paper and must shrink by 1 / pageScale to fit one
+							// sheet. Chromium accepts 10-200%, which bounds the printable
+							// page scale to 50%-1000% [jgraph/drawio#5540]
+							scaleFactor: Math.max(10, Math.min(200, Math.round(
+								100 / (args.pageScale > 0 ? args.pageScale : 1)))),
 							printBackground: true,
 							pageSize : {
 								width: args.pageWidth * MICRON_TO_PIXEL,
@@ -2579,7 +2696,7 @@ function exportDiagram(event, args, directFinalize)
 							}
 						};
 						
-						contents.print(pdfOptions, (success, errorType) => 
+						var printFinished = (success, errorType) =>
 						{
 							//Consider all as success
 							event.reply('export-success', {});
@@ -2591,6 +2708,29 @@ function exportDiagram(event, args, directFinalize)
 									title: 'Printing Error',
 									message: 'There was an error printing. ' + errorType
 								});
+							}
+						};
+
+						contents.print(pdfOptions, (success, errorType) =>
+						{
+							// Electron >= 43 fails webContents.print() with any options on all
+							// platforms: its Chromium printing patch moved UpdatePrintSettings()
+							// from PrintViewManagerBase (which Electron's manager inherits) into
+							// Chrome's preview-only PrintViewManager, and PrintViewManagerElectron
+							// now overrides it to reject every request, so printing with settings
+							// fails as 'Invalid printer settings' before any dialog opens (still
+							// broken in 43.1.1 and on electron main as of 44.0.0-alpha.3). Retry
+							// once without settings: that path skips UpdatePrintSettings, the
+							// native dialog opens and the user sets paper size and scale there,
+							// as before Electron 41.
+							if (!success && errorType == 'Invalid printer settings')
+							{
+								console.log('Print settings rejected by Electron, retrying without settings');
+								contents.print({}, printFinished);
+							}
+							else
+							{
+								printFinished(success, errorType);
 							}
 						});
 					}
@@ -3461,10 +3601,13 @@ async function installPlugin(filePath)
 function getPluginFile(plugin)
 {
 	if (!enablePlugins) return null;
-	
+
 	const prefix = path.join(getAppDataFolder(), '/plugins/');
-	const pluginFile = path.join(prefix, plugin);
-	        	
+	// Settings written by earlier versions may contain the resolved file://
+	// URL or absolute path instead of the installed file name, so reduce
+	// the value to its base name before resolving in the plugins folder
+	const pluginFile = path.join(prefix, path.basename(plugin));
+
 	if (pluginFile.startsWith(prefix) && fs.existsSync(pluginFile))
 	{
 		return pluginFile;

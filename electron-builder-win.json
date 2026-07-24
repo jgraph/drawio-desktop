@@ -47,6 +47,7 @@
     "createDesktopShortcut": false
   },
   "afterPack": "build/fuses.mjs",
+  "msiProjectCreated": "build/msi-project-created.mjs",
   "fileAssociations": [
 	  {
 	  	"ext": "drawio",

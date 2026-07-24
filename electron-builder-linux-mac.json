@@ -71,6 +71,7 @@
       }
     ]
   },
+  "beforePack": "build/dmg-hidden-files.mjs",
   "afterSign": "build/notarize.mjs",
   "afterPack": "build/fuses.mjs",
   "dmg": {
@@ -82,7 +83,7 @@
     "icon": "./build",
     "desktop": {
       "entry": {
-        "StartupWMClass": "draw.io"
+        "StartupWMClass": "draw-io"
       }
     },
     "target": [
