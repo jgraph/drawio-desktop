@@ -845,7 +845,11 @@ app.whenReady().then(() =>
 				// --theme applies to all formats and wins over the deprecated --svg-theme
 				theme: options.theme != null ? options.theme : options.svgTheme,
 				linkTarget: options.svgLinksTarget,
-				crop: (options.crop && format == 'pdf') ? '1' : '0'
+				crop: (options.crop && format == 'pdf') ? '1' : '0',
+				// --size page exports images at the full page size instead of
+				// cropping to the diagram content (the render ignores this for
+				// other formats) [jgraph/drawio-desktop#2481]
+				exportType: options.size
 			};
 
 			options.border = options.border > 0 ? options.border : 0;

@@ -499,6 +499,39 @@ describe('--svg-links-target', () =>
 	});
 });
 
+// ─── Export size mode ────────────────────────────────────────────────────────
+// --size page exports images at the full page size instead of cropping to the
+// diagram content, matching the export dialog's Size option
+// [jgraph/drawio-desktop#2481]
+
+describe('--size', () =>
+{
+	test('defaults to diagram', () =>
+	{
+		assert.equal(parse([]).opts.size, 'diagram');
+	});
+
+	test('accepts diagram', () => assert.equal(parse(['--size', 'diagram']).opts.size, 'diagram'));
+	test('accepts page',    () => assert.equal(parse(['--size', 'page']).opts.size, 'page'));
+
+	test('accepts inline --size=page form', () =>
+	{
+		assert.equal(parse(['--size=page']).opts.size, 'page');
+	});
+
+	test('invalid value falls back to default "diagram"', () =>
+	{
+		assert.equal(parse(['--size', 'selectionOnly']).opts.size, 'diagram');
+	});
+
+	test('does not consume a following positional', () =>
+	{
+		const { opts, args } = parse(['--size', 'page', 'in.drawio']);
+		assert.equal(opts.size, 'page');
+		assert.deepEqual(args, ['in.drawio']);
+	});
+});
+
 // ─── HTML options ────────────────────────────────────────────────────────────
 
 describe('html-theme', () =>
