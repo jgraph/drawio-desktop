@@ -116,7 +116,6 @@ describe('defaults', () =>
 		assert.equal(opts.transparent, undefined);
 		assert.equal(opts.allPages, undefined);
 		assert.equal(opts.crop, undefined);
-		assert.equal(opts.enablePlugins, undefined);
 	});
 });
 
@@ -182,9 +181,13 @@ describe('boolean flags', () =>
 		assert.equal(parse(['--uncompressed']).opts.uncompressed, true);
 	});
 
-	test('--enable-plugins sets enablePlugins to true', () =>
+	test('removed --enable-plugins flag is ignored', () =>
 	{
-		assert.equal(parse(['--enable-plugins']).opts.enablePlugins, true);
+		// External plugin support was removed; the flag may linger in old
+		// shortcuts and must be dropped, not parsed or read as a file name
+		const { opts, args } = parse(['--enable-plugins', 'diagram.drawio']);
+		assert.equal(opts.enablePlugins, undefined);
+		assert.deepEqual(args, ['diagram.drawio']);
 	});
 });
 

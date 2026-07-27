@@ -96,8 +96,6 @@ const OPTION_DEFS = [
 	  valueLabel: '<target>',
 	  parse: v => /^(auto|new-win|same-win)$/.test(v) ? v : null,     default: 'auto',
 	  desc: 'Target of links in the exported SVG image (auto [default], new-win, same-win)' },
-	{              long: '--enable-plugins',   key: 'enablePlugins',
-	  desc: 'Enable Plugins' },
 	{              long: '--html-theme',       key: 'htmlTheme',      takesValue: true,
 	  valueLabel: '<theme>',
 	  parse: v => /^(dark|light|auto)$/.test(v) ? v : null,           default: 'auto',

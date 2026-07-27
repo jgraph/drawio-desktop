@@ -58,8 +58,7 @@ drawio-desktop/
 │   └── entitlements.mac.plist
 ├── doc/
 │   ├── RELEASE_PROCESS.md    # Release workflow documentation
-│   ├── BUILDING_FOR_PERSONAL_USE.md # Guide for unsigned fork/personal builds
-│   └── PLUGIN_SECURITY.md    # Rationale: why the signed app runs plugins + hardening notes
+│   └── BUILDING_FOR_PERSONAL_USE.md # Guide for unsigned fork/personal builds
 ├── electron-builder-*.json   # Platform-specific build configs
 ├── sync.cjs                  # Version sync script
 └── package.json
@@ -148,6 +147,7 @@ Tags trigger CI/CD build workflows.
 - **contextBridge** exposes only specific APIs to renderer
 - **validateSender()** ensures IPC calls originate from local draw.io
 - No external transmission of diagram data
+- **Built-in plugins only** - external/third-party plugins were removed (07/2026). The `isPluginsEnabled` IPC action is retained, hardcoded `false`, so an older bundled webapp degrades to the "plugins disabled" dialog rather than failing
 
 ### IPC Pattern
 The preload script uses a request/response pattern with unique IDs:

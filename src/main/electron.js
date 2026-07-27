@@ -195,7 +195,6 @@ let enableSpellCheck = store != null ? store.get('enableSpellCheck') : false;
 enableSpellCheck = enableSpellCheck != null ? enableSpellCheck : isMac;
 let enableStoreBkp = store != null ? (store.get('enableStoreBkp') != null ? store.get('enableStoreBkp') : true) : false;
 let dialogOpen = false;
-let enablePlugins = false;
 // One-shot value used to seed the drawio Configuration's defaultAdaptiveColors
 // for users running this version for the first time. 'auto' for new installs,
 // 'simple' for updates from a previous desktop version. Null after migration.
@@ -632,10 +631,6 @@ function createWindow (opt = {})
 	return mainWindow
 }
 
-function isPluginsEnabled()
-{
-	return enablePlugins;
-}
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
@@ -668,16 +663,14 @@ app.whenReady().then(() =>
 		})
 	});
 
-	const pluginsCodeUrl = url.pathToFileURL(path.join(getAppDataFolder(), '/plugins/')).href.replace(/\/.\:\//, str => str.toUpperCase());
-
 	// Enforce loading file only from our app directory
 	session.defaultSession.webRequest.onBeforeRequest({urls: ['file://*']}, (details, callback) =>
 	{
 		const url = details.url.replace(/\/.\:\//, str => str.toUpperCase());
 
-		if (!url.startsWith(codeUrl) && (!isPluginsEnabled() || (isPluginsEnabled() && !url.startsWith(pluginsCodeUrl))))
+		if (!url.startsWith(codeUrl))
 		{
-			console.log('Blocked loading file from ' + details.url, url, codeUrl, pluginsCodeUrl);
+			console.log('Blocked loading file from ' + details.url, url, codeUrl);
 			callback({cancel: true});
 		}
 		else
@@ -727,7 +720,6 @@ app.whenReady().then(() =>
 
 	var validFormatRegExp = validFormatRegExpImport;
 	var { opts: options, args: parsedArgs } = parseDrawioArgs(argv);
-	enablePlugins = options.enablePlugins;
 
 	if (options.zoom != null)
 	{
@@ -3296,9 +3288,7 @@ async function assertWritablePath(p)
 		throw new Error('path not authorised');
 	}
 
-	// Block writes anywhere inside userData (settings store, plugins, Local
-	// Storage). installPlugin has its own write-into-userData flow and is
-	// out of scope here; it does not go through assertWritablePath.
+	// Block writes anywhere inside userData (settings store, Local Storage)
 	let userDataDir;
 
 	try
@@ -3630,25 +3620,6 @@ async function writeFile(filePath, data, enc)
 	}
 };
 
-function getAppDataFolder()
-{
-	try
-	{
-		var appDataDir = app.getPath('appData');
-		var drawioDir = appDataDir + '/draw.io';
-		
-		if (!fs.existsSync(drawioDir)) //Usually this dir already exists
-		{
-			fs.mkdirSync(drawioDir);
-		}
-		
-		return drawioDir;
-	}
-	catch(e) {}
-	
-	return '.';
-};
-
 function getDocumentsFolder()
 {
 	//On windows, misconfigured Documents folder cause an exception
@@ -3704,60 +3675,6 @@ async function showSaveDialog(defaultPath, filters)
 
 	return result;
 };
-
-async function installPlugin(filePath)
-{
-	if (!enablePlugins) return {};
-
-	var pluginsDir = path.join(getAppDataFolder(), '/plugins');
-	
-	if (!fs.existsSync(pluginsDir))
-	{
-		fs.mkdirSync(pluginsDir);
-	}
-	
-	var pluginName = path.basename(filePath);
-	var dstFile = path.join(pluginsDir, pluginName);
-	
-	if (fs.existsSync(dstFile))
-	{
-		throw new Error('fileExists');
-	}
-	else
-	{
-		await fsProm.copyFile(filePath, dstFile);
-	}
-
-	return {pluginName: pluginName, selDir: path.dirname(filePath)};
-}
-
-function getPluginFile(plugin)
-{
-	if (!enablePlugins) return null;
-
-	const prefix = path.join(getAppDataFolder(), '/plugins/');
-	// Settings written by earlier versions may contain the resolved file://
-	// URL or absolute path instead of the installed file name, so reduce
-	// the value to its base name before resolving in the plugins folder
-	const pluginFile = path.join(prefix, path.basename(plugin));
-
-	if (pluginFile.startsWith(prefix) && fs.existsSync(pluginFile))
-	{
-		return pluginFile;
-	}
-
-	return null;
-}
-
-function uninstallPlugin(plugin)
-{
-	const pluginFile = getPluginFile(plugin);
-	        	
-	if (pluginFile != null)
-	{
-		fs.unlinkSync(pluginFile);
-	}
-}
 
 function dirname(path_p)
 {
@@ -3992,20 +3909,11 @@ ipcMain.on("rendererReq", async (event, args) =>
 			ret = ret.canceled? null : ret.filePath;
 			dialogOpen = false;
 			break;
-		case 'installPlugin':
-			reqStr(args.filePath, 'filePath');
-			ret = await installPlugin(args.filePath);
-			break;
-		case 'uninstallPlugin':
-			reqStr(args.plugin, 'plugin');
-			ret = await uninstallPlugin(args.plugin);
-			break;
-		case 'getPluginFile':
-			reqStr(args.plugin, 'plugin');
-			ret = await getPluginFile(args.plugin);
-			break;
 		case 'isPluginsEnabled':
-			ret = enablePlugins;
+			// External plugins were removed; only built-in plugins remain.
+			// Kept so an older bundled webapp degrades to the disabled
+			// message in the Plugins dialog instead of failing
+			ret = false;
 			break;
 		case 'dirname':
 			reqStr(args.path, 'path');
