@@ -48,11 +48,13 @@ jobs:
         Copy-Item -Path "drawio-dev\VERSION" -Destination "drawio\VERSION" -Force
         Remove-Item 'drawio-dev' -Recurse -Force
         cd drawio
-        Remove-Item 'docs','etc','src\main\java','src\main\webapp\connect','src\main\webapp\service-worker*','src\main\webapp\workbox-*' -Recurse -Force
+        # Filter through Test-Path: GH powershell runs with ErrorActionPreference=stop,
+        # so a path already gone upstream would otherwise fail the build (rm -rf semantics)
+        'docs','etc','src\main\java','src\main\server','src\main\webapp\connect','src\main\webapp\service-worker*','src\main\webapp\workbox-*' | Where-Object { Test-Path $_ } | Remove-Item -Recurse -Force
         cd src\main\webapp\js
         # js/mermaid must survive: bootstrap.js eager-loads elk > mermaid > plantuml
         # in a chain, so deleting it also kills PlantUML and PostConfig at runtime
-        Remove-Item 'atlas-viewer.min.js','atlas.min.js','cryptojs','deflate','dropbox','embed*','freehand','integrate.min.js','jquery','jszip','onedrive','orgchart','reader.min.js','rough','sanitizer','simplepeer','spin','viewer-static.min.js','viewer.min.js'  -Recurse -Force
+        'atlas-viewer.min.js','atlas.min.js','cryptojs','deflate','dropbox','embed*','freehand','integrate.min.js','jquery','jszip','onedrive','orgchart','reader.min.js','rough','sanitizer','simplepeer','spin','viewer-static.min.js','viewer.min.js' | Where-Object { Test-Path $_ } | Remove-Item -Recurse -Force
     - name: Installing Node
       uses: actions/setup-node@v6
       with:

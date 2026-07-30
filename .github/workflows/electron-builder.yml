@@ -59,7 +59,7 @@ jobs:
         cp drawio-dev/VERSION drawio/VERSION
         rm -rf drawio-dev
         cd drawio
-        rm -rf docs etc src/main/java src/main/webapp/connect src/main/webapp/service-worker* src/main/webapp/workbox-*
+        rm -rf docs etc src/main/java src/main/server src/main/webapp/connect src/main/webapp/service-worker* src/main/webapp/workbox-*
         cd src/main/webapp/js
         # Save viewer-static.min.js for macOS Quick Look extension before cleanup
         if [ "$OS_NAME" = "macos-latest" ]; then cp viewer-static.min.js ../../../../../build/viewer-static.min.js; fi
