@@ -20,6 +20,11 @@ on:
         required: false
         type: boolean
         default: false
+      override_audit:
+        description: 'Proceed even if npm audit finds critical/high vulnerabilities in runtime dependencies. Only for reviewed, accepted advisories - the override is recorded in the release PR.'
+        required: false
+        type: boolean
+        default: false
 
 env:
   NODE_VERSION: '24'
@@ -188,31 +193,48 @@ jobs:
         run: |
           echo "## npm audit results" >> $GITHUB_STEP_SUMMARY
           
-          # Run audit and capture output
+          # Full audit (all deps) for the report; runtime-only audit for the gate.
+          # Build tooling (electron-builder tree) never ships in the app, so its
+          # advisories are reported but do not block the release.
           npm audit --json > audit-results.json 2>&1 || true
-          
+          npm audit --omit=dev --json > audit-prod.json 2>&1 || true
+
           # Parse results
           CRITICAL=$(jq '.metadata.vulnerabilities.critical // 0' audit-results.json)
           HIGH=$(jq '.metadata.vulnerabilities.high // 0' audit-results.json)
           MODERATE=$(jq '.metadata.vulnerabilities.moderate // 0' audit-results.json)
           LOW=$(jq '.metadata.vulnerabilities.low // 0' audit-results.json)
-          
-          echo "| Severity | Count |" >> $GITHUB_STEP_SUMMARY
-          echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Critical | $CRITICAL |" >> $GITHUB_STEP_SUMMARY
-          echo "| High | $HIGH |" >> $GITHUB_STEP_SUMMARY
-          echo "| Moderate | $MODERATE |" >> $GITHUB_STEP_SUMMARY
-          echo "| Low | $LOW |" >> $GITHUB_STEP_SUMMARY
-          
+          PROD_CRITICAL=$(jq '.metadata.vulnerabilities.critical // 0' audit-prod.json)
+          PROD_HIGH=$(jq '.metadata.vulnerabilities.high // 0' audit-prod.json)
+
+          echo "| Severity | Runtime deps | All deps |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|--------------|----------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Critical | $PROD_CRITICAL | $CRITICAL |" >> $GITHUB_STEP_SUMMARY
+          echo "| High | $PROD_HIGH | $HIGH |" >> $GITHUB_STEP_SUMMARY
+          echo "| Moderate | - | $MODERATE |" >> $GITHUB_STEP_SUMMARY
+          echo "| Low | - | $LOW |" >> $GITHUB_STEP_SUMMARY
+
           # Save for artifact
           npm audit > audit-report.txt 2>&1 || true
-          
-          # Fail if critical or high vulnerabilities
-          if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
-            echo "::error::Security vulnerabilities found: $CRITICAL critical, $HIGH high"
-            echo "AUDIT_FAILED=true" >> $GITHUB_ENV
+
+          # Fail if critical or high vulnerabilities in runtime dependencies
+          if [ "$PROD_CRITICAL" -gt 0 ] || [ "$PROD_HIGH" -gt 0 ]; then
+            if [ "${{ inputs.override_audit }}" = "true" ]; then
+              echo "::warning::Audit override: proceeding despite $PROD_CRITICAL critical, $PROD_HIGH high in runtime dependencies"
+              echo "AUDIT_FAILED=false" >> $GITHUB_ENV
+              echo "AUDIT_LINE=:warning: OVERRIDDEN: $PROD_CRITICAL critical, $PROD_HIGH high in runtime dependencies (override_audit=true)" >> $GITHUB_ENV
+            else
+              echo "::error::Security vulnerabilities found in runtime dependencies: $PROD_CRITICAL critical, $PROD_HIGH high"
+              echo "AUDIT_FAILED=true" >> $GITHUB_ENV
+              echo "AUDIT_LINE=:x: $PROD_CRITICAL critical, $PROD_HIGH high in runtime dependencies" >> $GITHUB_ENV
+            fi
           else
             echo "AUDIT_FAILED=false" >> $GITHUB_ENV
+            if [ "$CRITICAL" -gt 0 ] || [ "$HIGH" -gt 0 ]; then
+              echo "AUDIT_LINE=:white_check_mark: Runtime dependencies clean ($CRITICAL critical, $HIGH high in build tooling only, non-blocking - see audit artifact)" >> $GITHUB_ENV
+            else
+              echo "AUDIT_LINE=:white_check_mark: No critical/high vulnerabilities" >> $GITHUB_ENV
+            fi
           fi
           
       - name: Check outdated dependencies
@@ -230,6 +252,7 @@ jobs:
           name: release-evidence-v${{ env.VERSION }}
           path: |
             audit-results.json
+            audit-prod.json
             audit-report.txt
             outdated-report.txt
             release-notes.md
@@ -238,8 +261,9 @@ jobs:
       - name: Fail if audit has issues
         if: env.AUDIT_FAILED == 'true'
         run: |
-          echo "::error::Cannot proceed with release due to security vulnerabilities"
-          echo "Review audit-report.txt and fix vulnerabilities before releasing"
+          echo "::error::Cannot proceed with release due to security vulnerabilities in runtime dependencies"
+          echo "Review audit-report.txt and fix vulnerabilities before releasing."
+          echo "If the advisories have been reviewed and accepted, re-run with override_audit=true (recorded in the release PR)."
           exit 1
           
       - name: Generate release summary
@@ -270,7 +294,7 @@ jobs:
           
           # Remove generated files that shouldn't be committed
           # (package-lock.json IS committed to lock electron version)
-          rm -f audit-results.json audit-report.txt outdated-report.txt release-notes.md
+          rm -f audit-results.json audit-prod.json audit-report.txt outdated-report.txt release-notes.md
           
           git add -A
           git commit -m "Prepare release v${{ env.VERSION }}
@@ -310,7 +334,7 @@ jobs:
           - Electron version: ${{ env.ELECTRON_VERSION }}
 
           ### Audit Results
-          - npm audit: ✅ No critical/high vulnerabilities
+          - npm audit: ${{ env.AUDIT_LINE }}
 
           ### After Merging
           Create and push the tag to trigger builds:
