@@ -50,8 +50,8 @@
     "@electron/fuses": "^2.1.3",
     "@electron/notarize": "^3.1.1",
     "dotenv": "^17.4.2",
-    "electron": "^42.7.0",
-    "electron-builder": "^26.15.6",
+    "electron": "^42.8.0",
+    "electron-builder": "^26.15.7",
     "quicklookjs": "^1.0.1",
     "sumchecker": "^3.0.1"
   }
