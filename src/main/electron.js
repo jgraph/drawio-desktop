@@ -2198,65 +2198,30 @@ function addDiagramAnnotations(pdfDoc, annots)
 
 async function mergePdfs(pdfFiles, xml, annots)
 {
-	if (pdfFiles.length == 1)
+	// Only ever called with a single PDF since the per-page render loop was
+	// removed with [jgraph/drawio-desktop#2170]. Older releases merged the
+	// parts here with the XML as a file attachment, a format readPdfXml
+	// retains support for importing
+
+	// Converts to PDF 1.7 with compression
+	const pdfDoc = await PDFDocument.load(pdfFiles[0]);
+	pdfDoc.setCreator('diagrams.net');
+
+	// KNOWN: Attachments produce smaller files but break
+	// internal links in pdf-lib so using Subject for now
+	if (xml != null)
 	{
-		// Converts to PDF 1.7 with compression
-		const pdfDoc = await PDFDocument.load(pdfFiles[0]);
-		pdfDoc.setCreator('diagrams.net');
-
-		// KNOWN: Attachments produce smaller files but break
-		// internal links in pdf-lib so using Subject for now
-		if (xml != null)
-		{
-			pdfDoc.setSubject(encodeURIComponent(xml).
-				replace(/\(/g, "\\(").replace(/\)/g, "\\)"));
-		}
-
-		addDiagramAnnotations(pdfDoc, annots);
-
-		// Forces /ObjStm so the hex-encoded Subject is reachable by the PDF
-		// importer [jgraph/drawio-desktop#2394]
-		const pdfBytes = await pdfDoc.save({ useObjectStreams: true });
-
-		return Buffer.from(pdfBytes);
+		pdfDoc.setSubject(encodeURIComponent(xml).
+			replace(/\(/g, "\\(").replace(/\)/g, "\\)"));
 	}
 
-	try
-	{
-		const pdfDoc = await PDFDocument.create();
-		pdfDoc.setCreator('diagrams.net');
+	addDiagramAnnotations(pdfDoc, annots);
 
-		if (xml != null)
-		{	
-			//Embed diagram XML as file attachment
-			await pdfDoc.attach(Buffer.from(xml).toString('base64'), 'diagram.xml', {
-				mimeType: 'application/vnd.jgraph.mxfile',
-				description: 'Diagram Content'
-			  });
-		}
+	// Forces /ObjStm so the hex-encoded Subject is reachable by the PDF
+	// importer [jgraph/drawio-desktop#2394]
+	const pdfBytes = await pdfDoc.save({ useObjectStreams: true });
 
-		for (var i = 0; i < pdfFiles.length; i++)
-		{
-			try
-			{
-				const pdfFile = await PDFDocument.load(pdfFiles[i].buffer);
-				const pages = await pdfDoc.copyPages(pdfFile, pdfFile.getPageIndices());
-				pages.forEach(p => pdfDoc.addPage(p));
-			}
-			catch (innerError)
-			{
-				log.error(`Failed to load PDF part ${i}:`, innerError);
-				throw new Error(`Failed to process page ${i+1}. The file may be corrupt.`);
-			}
-		}
-
-		const pdfBytes = await pdfDoc.save();
-        return Buffer.from(pdfBytes);
-    }
-	catch(e)
-	{
-        throw new Error('Error during PDF combination: ' + e.message);
-    }
+	return Buffer.from(pdfBytes);
 }
 
 function htmlEntities(str)
@@ -2364,9 +2329,12 @@ function readPdfXml(buffer)
 	// Extracts Subject or Embedded file attachment from PDF 1.7
 	if (f.substring(0, 8) == '%PDF-1.7')
 	{
+		// Checks all occurrences as the first may be the /EmbeddedFiles
+		// name tree entry in the document catalog rather than the
+		// /Type /EmbeddedFile stream object with the attached diagram
 		var blockStart = f.indexOf('EmbeddedFile');
 
-		if (blockStart > -1)
+		while (blockStart > -1)
 		{
 			var streamStart = f.indexOf('stream', blockStart) + 9;
 			var fileInfo = f.substring(blockStart, streamStart);
@@ -2382,9 +2350,11 @@ function readPdfXml(buffer)
 				}
 				catch (e)
 				{
-					// Continue to next extraction method
+					// Continue to next occurrence or extraction method
 				}
 			}
+
+			blockStart = f.indexOf('EmbeddedFile', blockStart + 1);
 		}
 
 		var last = f.indexOf('/ObjStm');
