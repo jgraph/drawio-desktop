@@ -1462,8 +1462,6 @@ app.whenReady().then(() =>
 
 	ipcMain.on('toggleFullscreen', toggleFullscreen);
 
-    let updateNoAvailAdded = false;
-    
 	function checkForUpdatesFn(e)
 	{
 		if (e != null && e.senderFrame != null &&
@@ -1471,23 +1469,6 @@ app.whenReady().then(() =>
 
 		manualUpdateCheck = true;
 		safeUpdaterCall('checkForUpdates (manual)', () => autoUpdater.checkForUpdates());
-
-		if (!updateNoAvailAdded)
-		{
-			updateNoAvailAdded = true;
-			autoUpdater.on('update-not-available', safeUpdaterListener('update-not-available', (info) =>
-			{
-				if (!manualUpdateCheck) return; // Suppress dialog for boot-time silent checks
-
-				manualUpdateCheck = false;
-				dialog.showMessageBox(
-				{
-					type: 'info',
-					title: 'No updates found',
-					message: 'Your application is up-to-date',
-				})
-			}))
-		}
 	};
 
 	var zoomSteps = [0.25, 0.33, 0.5, 0.67, 0.75, 0.8, 0.9, 1,
@@ -1807,6 +1788,131 @@ app.on('web-contents-created', (event, contents) => {
 
 autoUpdater.on('error', e => notifyUpdateFailure(e, 'autoUpdater error event'))
 
+autoUpdater.on('update-not-available', safeUpdaterListener('update-not-available', (info) =>
+{
+	if (!manualUpdateCheck) return; // Suppress dialog for boot-time silent checks
+
+	manualUpdateCheck = false;
+	dialog.showMessageBox(
+	{
+		type: 'info',
+		title: 'No updates found',
+		message: 'Your application is up-to-date',
+	})
+}))
+
+// The download listeners below are registered once here, not inside the update prompt
+// callback, so repeated manual checks can't stack duplicates (a second install dialog,
+// writes to closed progress bars). updateProgressBar is null unless a manual download
+// is in progress; the silent boot-time download keeps it null, so these listeners
+// no-op and autoInstallOnAppQuit handles the install without any UI.
+var updateProgressBar = null;
+var updateFirstProg = true;
+
+function reportUpdateError(e)
+{
+	try
+	{
+		updateProgressBar.detail = 'Error occurred while fetching updates. ' + (e && e.message? e.message : e)
+		updateProgressBar._window.setClosable(true);
+	}
+	catch (err)
+	{
+		notifyUpdateFailure(err, 'reportUpdateError');
+	}
+}
+
+autoUpdater.on('error', safeUpdaterListener('download error', e => {
+	if (updateProgressBar == null) return;
+
+	if (updateProgressBar._window != null)
+	{
+		reportUpdateError(e);
+	}
+	else
+	{
+		updateProgressBar.on('ready', function() {
+			reportUpdateError(e);
+		});
+	}
+}))
+
+autoUpdater.on('download-progress', safeUpdaterListener('download-progress', (d) => {
+	if (updateProgressBar == null) return;
+
+	//On mac, download-progress event is not called, so the indeterminate progress will continue until download is finished
+	var percent = d.percent;
+
+	if (percent)
+	{
+		percent = Math.round(percent * 100)/100;
+	}
+
+	if (updateFirstProg)
+	{
+		updateFirstProg = false;
+		updateProgressBar.close();
+
+		var progressBar = new ProgressBar({
+			indeterminate: false,
+			title: 'draw.io Update',
+			text: 'Downloading draw.io update...',
+			detail: `${percent}% ...`,
+			initialValue: percent
+		});
+
+		updateProgressBar = progressBar;
+
+		progressBar
+				.on('completed', function() {
+					progressBar.detail = 'Download completed.';
+				})
+				.on('aborted', function(value) {
+					if (__DEV__)
+					{
+						log.error(`progress aborted... ${value}`);
+					}
+				})
+				.on('progress', function(value) {
+					progressBar.detail = `${value}% ...`;
+				})
+				.on('ready', function() {
+					//InitialValue doesn't set the UI! so this is needed to render it correctly
+					progressBar.value = percent;
+				});
+	}
+	else
+	{
+		updateProgressBar.value = percent;
+	}
+}));
+
+autoUpdater.on('update-downloaded', safeUpdaterListener('update-downloaded', (info) => {
+	if (updateProgressBar == null) return;
+
+	// The window must always be closed here: unlike electron-progressbar,
+	// ProgressBar has no closeOnComplete, so a completed bar stays open
+	// and would cover the install prompt [jgraph/drawio-desktop#2516]
+	updateProgressBar.close()
+	updateProgressBar = null;
+
+	// Ask user to update the app
+	dialog.showMessageBox(
+	{
+		type: 'question',
+		buttons: ['Install', 'Later'],
+		defaultId: 0,
+		message: 'A new version of ' + app.name + ' has been downloaded',
+		detail: 'It will be installed the next time you restart the application',
+	}).then(result =>
+	{
+		if (result.response === 0)
+		{
+			setTimeout(() => safeUpdaterCall('quitAndInstall', () => autoUpdater.quitAndInstall()), 1)
+		}
+	})
+}));
+
 autoUpdater.on('update-available', safeUpdaterListener('update-available', (info) =>
 {
 	// Boot-time silent path: download in the background; autoInstallOnAppQuit handles install
@@ -1829,109 +1935,19 @@ autoUpdater.on('update-available', safeUpdaterListener('update-available', (info
 	{
 		if (result.response === 0)
 		{
-			safeUpdaterCall('downloadUpdate (manual)', () => autoUpdater.downloadUpdate())
-
-			var progressBar = new ProgressBar({
-				title: 'draw.io Update',
-			    text: 'Downloading draw.io update...'
-			});
-
-			function reportUpdateError(e)
+			// Reset the per-download state targeted by the module-level download listeners
+			if (updateProgressBar != null)
 			{
-				try
-				{
-					progressBar.detail = 'Error occurred while fetching updates. ' + (e && e.message? e.message : e)
-					progressBar._window.setClosable(true);
-				}
-				catch (err)
-				{
-					notifyUpdateFailure(err, 'reportUpdateError');
-				}
+				updateProgressBar.close();
 			}
 
-			autoUpdater.on('error', safeUpdaterListener('download error', e => {
-				if (progressBar._window != null)
-				{
-					reportUpdateError(e);
-				}
-				else
-				{
-					progressBar.on('ready', function() {
-						reportUpdateError(e);
-					});
-				}
-			}))
+			updateFirstProg = true;
+			updateProgressBar = new ProgressBar({
+				title: 'draw.io Update',
+				text: 'Downloading draw.io update...'
+			});
 
-			var firstTimeProg = true;
-
-			autoUpdater.on('download-progress', safeUpdaterListener('download-progress', (d) => {
-				//On mac, download-progress event is not called, so the indeterminate progress will continue until download is finished
-				var percent = d.percent;
-				
-				if (percent)
-				{
-					percent = Math.round(percent * 100)/100;
-				}
-				
-				if (firstTimeProg)
-				{
-					firstTimeProg = false;
-					progressBar.close();
-
-					progressBar = new ProgressBar({
-						indeterminate: false,
-						title: 'draw.io Update',
-						text: 'Downloading draw.io update...',
-						detail: `${percent}% ...`,
-						initialValue: percent
-					});
-				
-					progressBar
-							.on('completed', function() {
-								progressBar.detail = 'Download completed.';
-							})
-							.on('aborted', function(value) {
-								if (__DEV__)
-								{
-									log.error(`progress aborted... ${value}`);
-								}
-							})
-							.on('progress', function(value) {
-								progressBar.detail = `${value}% ...`;
-							})
-							.on('ready', function() {
-								//InitialValue doesn't set the UI! so this is needed to render it correctly
-								progressBar.value = percent;
-							});
-				}
-				else
-				{
-					progressBar.value = percent;
-				}
-			}));
-
-		    autoUpdater.on('update-downloaded', safeUpdaterListener('update-downloaded', (info) => {
-				// The window must always be closed here: unlike electron-progressbar,
-				// ProgressBar has no closeOnComplete, so a completed bar stays open
-				// and would cover the install prompt [jgraph/drawio-desktop#2516]
-				progressBar.close()
-
-				// Ask user to update the app
-				dialog.showMessageBox(
-				{
-					type: 'question',
-					buttons: ['Install', 'Later'],
-					defaultId: 0,
-					message: 'A new version of ' + app.name + ' has been downloaded',
-					detail: 'It will be installed the next time you restart the application',
-				}).then(result =>
-				{
-					if (result.response === 0)
-					{
-						setTimeout(() => safeUpdaterCall('quitAndInstall', () => autoUpdater.quitAndInstall()), 1)
-					}
-				})
-		    }));
+			safeUpdaterCall('downloadUpdate (manual)', () => autoUpdater.downloadUpdate())
 		}
 		else if (result.response === 2 && store != null)
 		{
