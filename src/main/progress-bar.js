@@ -40,7 +40,6 @@ export default class ProgressBar extends EventEmitter
 			minimizable: false,
 			maximizable: false,
 			closable: false,
-			alwaysOnTop: true,
 			title: this._title,
 			show: false,
 			webPreferences: {

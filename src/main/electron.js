@@ -1911,10 +1911,10 @@ autoUpdater.on('update-available', safeUpdaterListener('update-available', (info
 			}));
 
 		    autoUpdater.on('update-downloaded', safeUpdaterListener('update-downloaded', (info) => {
-				if (!progressBar.isCompleted())
-				{
-					progressBar.close()
-				}
+				// The window must always be closed here: unlike electron-progressbar,
+				// ProgressBar has no closeOnComplete, so a completed bar stays open
+				// and would cover the install prompt [jgraph/drawio-desktop#2516]
+				progressBar.close()
 
 				// Ask user to update the app
 				dialog.showMessageBox(
