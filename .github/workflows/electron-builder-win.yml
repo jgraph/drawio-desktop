@@ -122,10 +122,17 @@ jobs:
         npm run sync
         npm run release-win
     - name: Build unpacked Windows x64 (for zip portable)
+      env:
+        AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+        AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       shell: powershell
       run: |
+        # --config is required here: a bare --dir run loads no config file at all
+        # (the win config is not at a default path), which shipped the portable zip
+        # unsigned and without the fuses afterPack hook [jgraph/drawio-desktop#2509]
         npm run sync -- disableUpdate
-        npx electron-builder --win --x64 --dir
+        npx electron-builder --config electron-builder-win.json --win --x64 --dir --publish never
 
     - name: Zip unpacked x64 build
       shell: powershell

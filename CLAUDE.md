@@ -119,7 +119,7 @@ Tags trigger CI/CD build workflows.
 4. **Post-build:** Security fuses applied, Quick Look extension assembled (macOS), notarization (macOS)
 
 ### Code Signing
-- **Windows:** Azure Trusted Signing via the `signtoolOptions.sign` hook `build/sign-trusted.mjs` (configured in `electron-builder-win*.json`, not CSC_LINK certificates). CI (`electron-builder-win.yml`) downloads the signing dlib, locates `signtool.exe`, and authenticates with `AZURE_TENANT_ID`/`AZURE_CLIENT_ID`/`AZURE_CLIENT_SECRET` secrets
+- **Windows:** Azure Trusted Signing via the `signtoolOptions.sign` hook `build/sign-trusted.mjs` (configured in `electron-builder-win*.json`, not CSC_LINK certificates). CI (`electron-builder-win.yml`) downloads the signing dlib, locates `signtool.exe`, and authenticates with `AZURE_TENANT_ID`/`AZURE_CLIENT_ID`/`AZURE_CLIENT_SECRET` secrets. `win.signExts: [".dll"]` signs the bundled Electron DLLs too — unsigned ffmpeg.dll etc. trip Defender's ASR ransomware rule after each release (#2509). The portable-zip step must pass `--config electron-builder-win.json`; a bare `--dir` run loads no config and ships unsigned, unfused binaries
 - **macOS:** Apple Developer certificate + notarization in `build/notarize.mjs`
 - **Unsigned builds:** `DRAWIO_UNSIGNED=true` skips signing (Windows) and notarization (macOS) for personal/fork builds
 

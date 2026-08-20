@@ -16,8 +16,10 @@
   "win": {
     "signtoolOptions": {
       "publisherName": ["JGraph Ltd", "draw.io Ltd"],
-      "sign": "build/sign-trusted.mjs"
+      "sign": "build/sign-trusted.mjs",
+      "signingHashAlgorithms": ["sha256"]
     },
+    "signExts": [".dll"],
     "target": [
       {
           "target": "nsis",
