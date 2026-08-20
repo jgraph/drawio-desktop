@@ -28,11 +28,19 @@ jobs:
       uses: actions/checkout@v6
       with:
         submodules: true
+    - name: Mint drawio-dev token
+      id: app-token
+      uses: actions/create-github-app-token@v3
+      with:
+        client-id: ${{ vars.JGRAPH_CI_APP_CLIENT_ID }}
+        private-key: ${{ secrets.JGRAPH_CI_APP_PRIVATE_KEY }}
+        owner: jgraph
+        repositories: drawio-dev
     - name: Checkout drawio-dev
       uses: actions/checkout@v6
       with:
         repository: jgraph/drawio-dev
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ steps.app-token.outputs.token }}
         ref: release
         path: drawio-dev
         submodules: false
