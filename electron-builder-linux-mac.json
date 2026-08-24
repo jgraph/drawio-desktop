@@ -76,6 +76,9 @@
   "afterPack": "build/fuses.mjs",
   "dmg": {
   },
+  "toolsets": {
+    "appimage": "1.0.3"
+  },
   "linux": {
   	"executableName": "drawio",
     "category": "Graphics",
