@@ -3,27 +3,68 @@ name: Generate sha256 hashes for release files
 on:
   release:
     types: [published]
+  # The release:published event has been delivered unreliably since late
+  # 2024 (only 3 of 46 publishes triggered this workflow), so a daily cron
+  # sweeps up any release whose event was dropped.
+  schedule:
+    - cron: '30 4 * * *'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Process published releases up to this many days old'
+        required: false
+        default: '7'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hash-gen
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      TAG: ${{ github.event.release.tag_name }}
+      DAYS: ${{ github.event.inputs.days || '7' }}
     steps:
     - name: Generate and upload SHA256 hashes
       run: |
-        # Download every asset attached to this release, compute SHA256 hashes,
-        # and upload the result back to the same release as
-        # Files-SHA256-Hashes.txt. Excludes any pre-existing hash file so a
-        # re-run does not re-hash its own previous output.
-        mkdir release-assets
-        cd release-assets
-        gh release download "$TAG" --repo "$GITHUB_REPOSITORY"
-        find . -maxdepth 1 -type f ! -name 'Files-SHA256-Hashes.txt' -print0 \
-          | xargs -0 sha256sum > ../Files-SHA256-Hashes.txt
-        cd ..
-        gh release upload "$TAG" Files-SHA256-Hashes.txt \
-          --repo "$GITHUB_REPOSITORY" --clobber
+        # Upload Files-SHA256-Hashes.txt (sha256sum -c compatible) to every
+        # release published in the last $DAYS days that is still missing it.
+        # Hashes are taken from the GitHub-computed asset digests; any asset
+        # without a sha256 digest is downloaded and hashed. Skipping releases
+        # that already have the file keeps the three triggers safe to overlap.
+        DAYS="${DAYS//[^0-9]/}"
+        since=$(date -u -d "${DAYS:-7} days ago" +%Y-%m-%dT%H:%M:%SZ)
+        gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" |
+          jq -r --arg since "$since" \
+            '.[] | select(.draft == false and .published_at != null and .published_at >= $since) | .tag_name' |
+        while read -r tag; do
+          release=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$tag" < /dev/null)
+          if echo "$release" | jq -e '[.assets[].name] | index("Files-SHA256-Hashes.txt")' > /dev/null; then
+            echo "$tag: hash file already present"
+            continue
+          fi
+          if [ "$(echo "$release" | jq '.assets | length')" = "0" ]; then
+            echo "$tag: no assets to hash"
+            continue
+          fi
+          echo "$release" | jq -r '.assets[]
+            | select(.digest != null and (.digest | startswith("sha256:")))
+            | (.digest | sub("^sha256:"; "")) + "  " + .name' > Files-SHA256-Hashes.txt
+          echo "$release" | jq -r '.assets[]
+            | select(.digest == null or ((.digest | startswith("sha256:")) | not))
+            | .name' |
+          while read -r name; do
+            gh release download "$tag" --repo "$GITHUB_REPOSITORY" \
+              --pattern "$name" --output asset-to-hash < /dev/null
+            sha256sum asset-to-hash | sed "s|asset-to-hash|$name|" >> Files-SHA256-Hashes.txt
+            rm -f asset-to-hash
+          done
+          sort -k 2 -o Files-SHA256-Hashes.txt Files-SHA256-Hashes.txt
+          gh release upload "$tag" Files-SHA256-Hashes.txt \
+            --repo "$GITHUB_REPOSITORY" --clobber < /dev/null
+          echo "$tag: uploaded Files-SHA256-Hashes.txt with $(wc -l < Files-SHA256-Hashes.txt) entries"
+          rm -f Files-SHA256-Hashes.txt
+        done
