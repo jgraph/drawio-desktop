@@ -194,7 +194,7 @@ ipcMain.on('request', (e, data) => { ... });
 | `electron-builder.yml` | Version tag | macOS/Linux builds |
 | `electron-builder-win.yml` | Version tag | Windows builds (Azure Trusted Signing) |
 | `prepare-release.yml` | Manual | Automated release prep |
-| `hash-gen.yml` | Manual | Generate checksums |
+| `hash-gen.yml` | Release publish, daily cron, manual | Upload checksums to releases missing them (release events are dropped by GitHub since Dec 2024, hence the cron) |
 | `personal-build.yml` | Manual | Unsigned fork builds, artifacts only (no secrets, no publish) |
 | `stale.yml` | Schedule | Mark stale issues/PRs |
 
