@@ -1,0 +1,202 @@
+name: Flathub Release
+
+# Opens a version-bump PR on flathub/com.jgraph.drawio.desktop when a new
+# desktop release is published. The release:published event has been delivered
+# unreliably for this repo since late 2024 (see hash-gen.yml history), so the
+# same idempotent job also runs on an hourly cron as a catch-all: it compares
+# the latest published release against the Flathub manifest and exits quietly
+# when there is nothing to do. FLATHUB_TOKEN (a PAT with write access to the
+# Flathub repo) is only required once an update is actually needed.
+
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to package (e.g. v31.3.2). Empty = latest published release.'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flathub-release
+  cancel-in-progress: false
+
+env:
+  FLATHUB_REPO: flathub/com.jgraph.drawio.desktop
+  MANIFEST: com.jgraph.drawio.desktop.yaml
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    # release:published never fires for drafts; the prerelease guard is belt
+    # and braces since this repo does not publish prereleases.
+    if: github.event_name != 'release' || (!github.event.release.draft && !github.event.release.prerelease)
+    steps:
+    - name: Decide whether Flathub needs this release
+      id: gate
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        INPUT_TAG: ${{ inputs.tag }}
+        EVENT_TAG: ${{ github.event.release.tag_name }}
+      run: |
+        if [ -n "$INPUT_TAG" ]; then
+          TAG="$INPUT_TAG"
+        elif [ -n "$EVENT_TAG" ]; then
+          TAG="$EVENT_TAG"
+        else
+          TAG=$(gh api "repos/$GITHUB_REPOSITORY/releases/latest" -q .tag_name)
+        fi
+        if ! [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+          echo "::error::Unexpected tag format: $TAG"
+          exit 1
+        fi
+        CURRENT=$(gh api -H "Accept: application/vnd.github.raw" \
+          "repos/$FLATHUB_REPO/contents/$MANIFEST?ref=master" \
+          | grep -m1 -E '^\s+tag: ' | awk '{print $2}')
+        echo "Desktop release: $TAG — Flathub manifest: $CURRENT"
+        if [ "$TAG" = "$CURRENT" ]; then
+          echo "Flathub is already at $TAG - nothing to do." >> "$GITHUB_STEP_SUMMARY"
+          echo "update=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+        BRANCH="release-$TAG"
+        if gh api "repos/$FLATHUB_REPO/pulls?state=open" -q '.[].head.ref' | grep -qx "$BRANCH"; then
+          echo "A PR from branch $BRANCH is already open on $FLATHUB_REPO." >> "$GITHUB_STEP_SUMMARY"
+          echo "update=false" >> "$GITHUB_OUTPUT"
+          exit 0
+        fi
+        RELEASE_DATE=$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/$TAG" -q .published_at | cut -dT -f1)
+        {
+          echo "update=true"
+          echo "tag=$TAG"
+          echo "version=${TAG#v}"
+          echo "branch=$BRANCH"
+          echo "release_date=$RELEASE_DATE"
+        } >> "$GITHUB_OUTPUT"
+
+    - name: Check FLATHUB_TOKEN is configured
+      if: steps.gate.outputs.update == 'true'
+      env:
+        FLATHUB_TOKEN: ${{ secrets.FLATHUB_TOKEN }}
+      run: |
+        if [ -z "$FLATHUB_TOKEN" ]; then
+          echo "::error::An update to ${{ steps.gate.outputs.tag }} is needed but the FLATHUB_TOKEN secret is not set. Create a PAT with write access to $FLATHUB_REPO and add it as a repository secret."
+          exit 1
+        fi
+
+    - name: Checkout drawio-desktop at the release tag
+      if: steps.gate.outputs.update == 'true'
+      uses: actions/checkout@v6
+      with:
+        ref: ${{ steps.gate.outputs.tag }}
+        path: desktop
+
+    - name: Checkout Flathub packaging repo
+      if: steps.gate.outputs.update == 'true'
+      uses: actions/checkout@v6
+      with:
+        repository: flathub/com.jgraph.drawio.desktop
+        token: ${{ secrets.FLATHUB_TOKEN }}
+        ref: master
+        path: flathub
+
+    - name: Regenerate offline npm/electron sources
+      if: steps.gate.outputs.update == 'true'
+      run: |
+        # Flathub builds run offline in a sandbox; generated-sources.json
+        # vendors every npm dependency and the Electron binaries with sha256
+        # hashes, all derived from the release's package-lock.json (which
+        # prepare-release regenerates from scratch for exactly this reason).
+        pipx install "git+https://github.com/flatpak/flatpak-builder-tools.git#subdirectory=node"
+        flatpak-node-generator npm desktop/package-lock.json -o flathub/generated-sources.json
+
+    - name: Update manifest and metainfo
+      if: steps.gate.outputs.update == 'true'
+      working-directory: flathub
+      env:
+        VERSION: ${{ steps.gate.outputs.version }}
+        TAG: ${{ steps.gate.outputs.tag }}
+        RELEASE_DATE: ${{ steps.gate.outputs.release_date }}
+      run: |
+        COMMIT=$(git -C ../desktop rev-parse HEAD)
+        export COMMIT
+        python3 - <<'PYEOF'
+        import os, re, pathlib
+
+        ver = os.environ['VERSION']
+        tag = os.environ['TAG']
+        commit = os.environ['COMMIT']
+        date = os.environ['RELEASE_DATE']
+
+        y = pathlib.Path('com.jgraph.drawio.desktop.yaml')
+        t = y.read_text()
+        t, n1 = re.subn(r'(?m)^(\s*)tag: \S+$', rf'\g<1>tag: {tag}', t)
+        t, n2 = re.subn(r'(?m)^(\s*)commit: [0-9a-f]{40}$', rf'\g<1>commit: {commit}', t)
+        assert n1 == 1 and n2 == 1, f'unexpected manifest structure: tag lines={n1} commit lines={n2}'
+        y.write_text(t)
+
+        m = pathlib.Path('com.jgraph.drawio.desktop.metainfo.xml')
+        t = m.read_text()
+        if f'<release version="{ver}"' in t:
+            print(f'metainfo already lists {ver}')
+        else:
+            entry = f'    <release version="{ver}" date="{date}"/>'
+            t, n = re.subn(r'(?m)^(\s*<releases>)$', rf'\g<1>\n{entry}', t, count=1)
+            assert n == 1, 'no <releases> element found in metainfo'
+            m.write_text(t)
+        print(f'manifest patched to {tag} ({commit})')
+        PYEOF
+
+    - name: Push branch and open PR on Flathub
+      if: steps.gate.outputs.update == 'true'
+      working-directory: flathub
+      env:
+        GH_TOKEN: ${{ secrets.FLATHUB_TOKEN }}
+        VERSION: ${{ steps.gate.outputs.version }}
+        TAG: ${{ steps.gate.outputs.tag }}
+        BRANCH: ${{ steps.gate.outputs.branch }}
+        RELEASE_DATE: ${{ steps.gate.outputs.release_date }}
+      run: |
+        COMMIT=$(git -C ../desktop rev-parse HEAD)
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git checkout -b "$BRANCH"
+        git add -A
+        if git diff --cached --quiet; then
+          echo "No file changes after regeneration - nothing to push." >> "$GITHUB_STEP_SUMMARY"
+          exit 0
+        fi
+        git commit -m "Version $VERSION"
+        git push -f origin "$BRANCH"
+
+        EOL_NOTE=""
+        if grep -q '"end-of-life"' flathub.json 2>/dev/null; then
+          EOL_NOTE="> **Warning**: flathub.json still carries an \"end-of-life\" key. Remove it (in this PR or a follow-up) or the next published build will keep showing users the EOL notice."
+        fi
+        PR_URL=$(gh pr create --repo "$FLATHUB_REPO" --base master --head "$BRANCH" \
+          --title "Version $VERSION" \
+          --body "Automated update to [drawio-desktop $VERSION](https://github.com/jgraph/drawio-desktop/releases/tag/$TAG).
+
+        - \`com.jgraph.drawio.desktop.yaml\`: source bumped to $TAG ($COMMIT)
+        - \`generated-sources.json\`: regenerated with flatpak-node-generator from the release's package-lock.json
+        - metainfo: added release entry $VERSION ($RELEASE_DATE)
+
+        $EOL_NOTE
+
+        Opened by the [Flathub Release workflow](https://github.com/jgraph/drawio-desktop/actions/workflows/flathub-release.yml) in jgraph/drawio-desktop. Wait for the Flathub test build on this PR and install it to verify before merging; merging to master publishes to the stable repo automatically.")
+        echo "Opened $PR_URL" >> "$GITHUB_STEP_SUMMARY"
+
+        # Close older automation PRs this one supersedes (same release-vX.Y.Z
+        # branch naming). Releases are sometimes superseded within a day, so
+        # stale bump PRs would otherwise pile up.
+        gh api "repos/$FLATHUB_REPO/pulls?state=open" \
+          -q '.[] | select(.head.ref | test("^release-v[0-9]+\\.[0-9]+\\.[0-9]+$")) | select(.head.ref != env.BRANCH) | .number' \
+          | while read -r n; do
+              gh pr close --repo "$FLATHUB_REPO" "$n" --comment "Superseded by $PR_URL"
+            done
