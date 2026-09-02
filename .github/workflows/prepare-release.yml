@@ -174,7 +174,6 @@ jobs:
           [Windows No Installer (zip)](https://github.com/jgraph/drawio-desktop/releases/download/v${VERSION}/draw.io-${VERSION}-windows.zip)
           [macOS - Universal](https://github.com/jgraph/drawio-desktop/releases/download/v${VERSION}/draw.io-universal-${VERSION}.dmg)
           Linux - [deb](https://github.com/jgraph/drawio-desktop/releases/download/v${VERSION}/drawio-amd64-${VERSION}.deb), [AppImage](https://github.com/jgraph/drawio-desktop/releases/download/v${VERSION}/drawio-x86_64-${VERSION}.AppImage) or [rpm](https://github.com/jgraph/drawio-desktop/releases/download/v${VERSION}/drawio-x86_64-${VERSION}.rpm)
-          Windows intel x32 releases are marked -ia32-
 
           **ChangeLog:**
           - Uses electron ${ELECTRON_VERSION}.

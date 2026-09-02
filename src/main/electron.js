@@ -2,7 +2,7 @@ import fs from 'fs';
 import { promises as fsProm } from 'fs';
 import path from 'path';
 import url from 'url';
-import {Menu as menu, shell, dialog, session, screen, 
+import {Menu as menu, shell, dialog, session, screen, ClipboardItem, 
 		clipboard, nativeImage, ipcMain, app, BrowserWindow} from 'electron';
 import crc from 'crc';
 import zlib from 'zlib';
@@ -173,8 +173,10 @@ contextMenu({
 	append: (defaultActions, params, browserWindow) => [
 		{
 			label: 'Paste and Match Style',
-			// Only show this item when there's a text in the clipboard
-			visible: clipboard.availableFormats().includes('text/plain'),
+			// Electron 44 removed the synchronous clipboard.availableFormats(), so
+			// mirror the built-in Paste item instead of checking for clipboard text
+			visible: params.isEditable,
+			enabled: params.editFlags.canPaste,
 			click: () => {
 				// Execute the paste command in the focused window
 				browserWindow.webContents.pasteAndMatchStyle();
@@ -2823,16 +2825,11 @@ function exportDiagram(event, args, directFinalize)
 
 						contents.print(pdfOptions, (success, errorType) =>
 						{
-							// Electron >= 43 fails webContents.print() with any options on all
-							// platforms: its Chromium printing patch moved UpdatePrintSettings()
-							// from PrintViewManagerBase (which Electron's manager inherits) into
-							// Chrome's preview-only PrintViewManager, and PrintViewManagerElectron
-							// now overrides it to reject every request, so printing with settings
-							// fails as 'Invalid printer settings' before any dialog opens (still
-							// broken in 43.1.1 and on electron main as of 44.0.0-alpha.3). Retry
-							// once without settings: that path skips UpdatePrintSettings, the
-							// native dialog opens and the user sets paper size and scale there,
-							// as before Electron 41.
+							// Electron 43.0 to 43.1 failed webContents.print() with any options on
+							// all platforms as 'Invalid printer settings' (electron/electron#52266,
+							// fixed in 43.2.0 and 44.0.0). Kept as a safety net: retry once without
+							// settings so the native dialog opens and the user sets paper size and
+							// scale there, as before Electron 41.
 							if (!success && errorType == 'Invalid printer settings')
 							{
 								console.log('Print settings rejected by Electron, retrying without settings');
@@ -3704,11 +3701,14 @@ async function isFileWritable(file)
 	}
 }
 
+// Electron 44 aligned the clipboard module with the W3C Clipboard API: every
+// method returns a promise and write() takes ClipboardItem instances keyed by
+// MIME type instead of the old {image, html} object
 function clipboardAction(method, data)
 {
 	if (method == 'writeText')
 	{
-		clipboard.writeText(data);
+		return clipboard.writeText(data);
 	}
 	else if (method == 'readText')
 	{
@@ -3716,9 +3716,12 @@ function clipboardAction(method, data)
 	}
 	else if (method == 'writeImage')
 	{
-		clipboard.write({image: 
-			nativeImage.createFromDataURL(data.dataUrl), html: '<img src="' +
-			data.dataUrl + '" width="' + data.w + '" height="' + data.h + '">'});
+		return clipboard.write([new ClipboardItem({
+			'image/png': new Blob([nativeImage.createFromDataURL(data.dataUrl).toPNG()],
+				{type: 'image/png'}),
+			'text/html': '<img src="' + data.dataUrl + '" width="' + data.w +
+				'" height="' + data.h + '">'
+		})]);
 	}
 }
 

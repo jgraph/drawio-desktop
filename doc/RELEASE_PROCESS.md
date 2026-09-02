@@ -273,7 +273,7 @@ Windows and macOS builds are signed during CI. Linux artifacts are unsigned (bey
 
 ### 11.1 Windows — Azure Trusted Signing
 
-Windows binaries (NSIS installer, MSI, portable, inner `.exe`) are signed via Microsoft Azure Trusted Signing. Microsoft has rebranded this service to "Artifact Signing" — same product, the resource provider is still `Microsoft.CodeSigning`. The integration uses our own electron-builder sign hook at [`build/sign-trusted.mjs`](../build/sign-trusted.mjs), invoked from `win.signtoolOptions.sign` in [`electron-builder-win.json`](../electron-builder-win.json), [`electron-builder-win32.json`](../electron-builder-win32.json), and [`electron-builder-win-arm64.json`](../electron-builder-win-arm64.json).
+Windows binaries (NSIS installer, MSI, portable, inner `.exe`) are signed via Microsoft Azure Trusted Signing. Microsoft has rebranded this service to "Artifact Signing" — same product, the resource provider is still `Microsoft.CodeSigning`. The integration uses our own electron-builder sign hook at [`build/sign-trusted.mjs`](../build/sign-trusted.mjs), invoked from `win.signtoolOptions.sign` in [`electron-builder-win.json`](../electron-builder-win.json) and [`electron-builder-win-arm64.json`](../electron-builder-win-arm64.json).
 
 **Azure resources** (region: West Europe):
 

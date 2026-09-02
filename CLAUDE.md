@@ -134,7 +134,6 @@ Tags trigger CI/CD build workflows.
 | Command | Target |
 |---------|--------|
 | `npm run release-win` | Windows x64 (NSIS + MSI) |
-| `npm run release-win32` | Windows 32-bit |
 | `npm run release-win-arm64` | Windows ARM64 |
 | `npm run release-linux` | Linux (AppImage, deb, rpm) |
 | `npm run release-appx` | Windows Store |
@@ -205,6 +204,7 @@ ipcMain.on('request', (e, data) => { ... });
 3. **Version source of truth** - `drawio/VERSION` for public builds; `drawio-dev/VERSION` is copied over `drawio/VERSION` at CI time so the internal release number wins for packaged builds
 4. **Closed to contributions** - PRs not accepted; maintained by JGraph (forks for personal use are fine, see `doc/BUILDING_FOR_PERSONAL_USE.md`)
 5. **Node 22.12+ required** - see `engines` in `package.json`
+6. **Windows x64/arm64 and macOS 13+ only** - Electron 44 dropped ia32 binaries and macOS 12, so the 32-bit Windows build was removed (09/2026)
 
 ## Development Tips
 

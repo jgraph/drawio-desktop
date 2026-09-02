@@ -108,16 +108,15 @@ jobs:
 
         Write-Host "Trusted Signing dlib: $dlib"
         Write-Host "signtool.exe:         $signtool"
-    - name: Build for Windows (x32 & arm64)
+    - name: Build for Windows (arm64)
       env:
         AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       shell: powershell
       run: |
-        #Disable auto-update and build 32bit/arm64 first such that latest.yml is for 64bit only (64bit will overwrite 32bit one)
+        #Disable auto-update and build arm64 first such that latest.yml is for x64 only (x64 will overwrite the arm64 one)
         npm run sync -- disableUpdate
-        npm run release-win32
         npm run release-win-arm64
     - name: Build for Windows (x64)
       env:
