@@ -145,6 +145,7 @@ Tags trigger CI/CD build workflows.
 - **Content Security Policy** prevents remote script execution
 - **contextBridge** exposes only specific APIs to renderer
 - **validateSender()** ensures IPC calls originate from local draw.io
+- **Path authorisation** - `validateSender` alone is not enough (a renderer XSS passes it, and diagram content reaches some IPC handlers on its own), so file IPC also checks the path: writes against `assertWritablePath` (paths blessed through OS chrome - file picker, file association, argv), reads/stat/watch against `assertReadablePath` (the same set plus local paths declared in the user's configuration, for #1278 libraries/templates/fonts). Both realpath-canonicalise first, so symlinks cannot escape
 - No external transmission of diagram data
 - **Built-in plugins only** - external/third-party plugins were removed (07/2026). The `isPluginsEnabled` IPC action is retained, hardcoded `false`, so an older bundled webapp degrades to the "plugins disabled" dialog rather than failing
 

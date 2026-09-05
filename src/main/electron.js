@@ -275,6 +275,219 @@ function blessPath(p)
 	catch (e) {} // Defensive: blessPath must never throw into a caller's flow.
 }
 
+// Paths declared in the user's configuration (Extras > Edit Configuration):
+// libraries, templates and fonts that point at local files or file:// URLs are
+// fetched through the readFile IPC [jgraph/drawio-desktop#1278]. They are never
+// picked in a file dialog, so they cannot be blessed the way opened files are
+// and get their own read-only set instead. Deliberately not persisted and never
+// consulted by assertWritablePath: the configuration widens what the renderer
+// may read, never what it may write.
+const configReadablePaths = new Set();
+let configReadablePathsPromise = null;
+
+// Collects the config-declared URLs from the renderer. The keys to look at are
+// listed here, in the main process, and only the values of known path-carrying
+// fields are used, so a tampered configuration cannot nominate paths through
+// some other key. Returned values are still just candidates: the caller keeps
+// the ones that name a local file.
+//
+// Runs in the renderer via executeJavaScript (see collectConfigPathsScript), so
+// it must not reference anything outside its own body.
+function collectConfigPaths()
+{
+	try
+	{
+		var urls = [];
+
+		function addUrl(url)
+		{
+			if (typeof url === 'string' && url.length > 0)
+			{
+				urls.push(url);
+			}
+		};
+
+		function addFont(entry)
+		{
+			if (entry != null && typeof entry === 'object')
+			{
+				addUrl(entry.fontUrl);
+			}
+		};
+
+		var config = (typeof Editor !== 'undefined') ? Editor.config : null;
+
+		if (config != null && typeof config === 'object')
+		{
+			addUrl(config.templateFile);
+
+			if (Array.isArray(config.customTemplates))
+			{
+				config.customTemplates.forEach(function(entry)
+				{
+					if (entry != null && typeof entry === 'object')
+					{
+						addUrl(entry.url);
+						addUrl(entry.preview);
+					}
+				});
+			}
+
+			// Library ids are a one-character service prefix (U for a URL,
+			// S for a desktop file) followed by the encoded URL
+			if (Array.isArray(config.defaultCustomLibraries))
+			{
+				config.defaultCustomLibraries.forEach(function(id)
+				{
+					if (typeof id === 'string' && id.length > 1)
+					{
+						var url = id.substring(1);
+
+						try
+						{
+							url = decodeURIComponent(url);
+						}
+						catch (e) {} // Not encoded, use as-is
+
+						addUrl(url);
+					}
+				});
+			}
+
+			if (Array.isArray(config.customFonts))
+			{
+				config.customFonts.forEach(addFont);
+			}
+
+			if (Array.isArray(config.defaultFonts))
+			{
+				config.defaultFonts.forEach(addFont);
+			}
+
+			if (typeof config.fontCss === 'string')
+			{
+				var parts = config.fontCss.split('url(');
+
+				for (var i = 1; i < parts.length; i++)
+				{
+					var end = parts[i].indexOf(')');
+
+					if (end > 0)
+					{
+						// Same trimming as Editor.trimCssUrl in the renderer
+						addUrl(parts[i].substring(0, end).
+							replace(/^[\s"']+/, '').replace(/[\s"']+$/, ''));
+					}
+				}
+			}
+		}
+
+		return urls;
+	}
+	catch (e)
+	{
+		return [];
+	}
+};
+
+// Serialised so it can be handed to executeJavaScript, which takes source and
+// not a function. Built from the function above so it stays ordinary,
+// syntax-checked code instead of a string literal with escaped regexes.
+const collectConfigPathsScript = '(' + String(collectConfigPaths) + ')()';
+
+// Returns the filesystem path for URLs that name a local file (file:// URLs,
+// drive, UNC and absolute paths), null otherwise. Mirrors Editor.getLocalFilePath
+// in the renderer, which decides what is routed through the readFile IPC.
+function getLocalFilePath(url)
+{
+	if (typeof url !== 'string')
+	{
+		return null;
+	}
+
+	if (url.substring(0, 7) == 'file://')
+	{
+		let decoded;
+
+		try
+		{
+			decoded = decodeURIComponent(url.substring(7).split(/[?#]/)[0]);
+		}
+		catch (e)
+		{
+			return null;
+		}
+
+		// Removes the leading slash before Windows drive letters (file:///C:/...)
+		return (/^\/[a-zA-Z]:/.test(decoded)) ? decoded.substring(1) : decoded;
+	}
+	else if (/^([a-zA-Z]:[\\\/]|[\\\/])/.test(url))
+	{
+		return url;
+	}
+
+	return null;
+};
+
+// Rebuilds configReadablePaths from the renderer's configuration. Called on a
+// miss in assertReadablePath and reset on every page load, so a configuration
+// edit (which reloads the app) takes effect without a restart.
+function loadConfigReadablePaths()
+{
+	if (configReadablePathsPromise == null)
+	{
+		configReadablePathsPromise = (async function()
+		{
+			const win = BrowserWindow.getFocusedWindow() || BrowserWindow.getAllWindows()[0];
+
+			if (win == null || win.webContents == null)
+			{
+				return;
+			}
+
+			const urls = await win.webContents.executeJavaScript(collectConfigPathsScript);
+
+			if (!Array.isArray(urls))
+			{
+				return;
+			}
+
+			for (const url of urls)
+			{
+				const local = getLocalFilePath(url);
+
+				if (local == null || local.includes('\0'))
+				{
+					continue;
+				}
+
+				const resolved = path.resolve(local);
+				configReadablePaths.add(resolved);
+
+				try
+				{
+					configReadablePaths.add(fs.realpathSync(resolved));
+				}
+				catch (e) {} // Configured path may not exist, that's fine
+			}
+		})().catch(function()
+		{
+			// Renderer not ready or config unreadable. Drop the cached promise
+			// so the next denied read retries instead of leaving the configured
+			// paths unavailable for the rest of the session.
+			configReadablePathsPromise = null;
+		});
+	}
+
+	return configReadablePathsPromise;
+};
+
+function invalidateConfigReadablePaths()
+{
+	configReadablePathsPromise = null;
+	configReadablePaths.clear();
+};
+
 // fs.statSync that never throws (returns null for missing, deleted-in-between
 // or inaccessible paths) so callers can't crash the main process on a race
 function statSafe(p)
@@ -328,6 +541,61 @@ async function migrateLegacyRecentsOnce(webContents)
 	catch (e) {} // Migration is best-effort; never block app startup.
 
 	try { store.set(BLESSED_PATHS_MIGRATION_KEY, true); } catch (e) {}
+}
+
+// One-shot migration for the read-side path gate: custom libraries added
+// through File > Open Library in versions before blessPath existed are still
+// in the renderer's settings but were never authorised, so assertReadablePath
+// would now refuse to load them into the sidebar. Same trust-on-first-use
+// reasoning as migrateLegacyRecentsOnce, and its own key so it also runs for
+// installs that already completed that migration.
+const BLESSED_LIBRARIES_MIGRATION_KEY = 'blessedLibrariesLegacyMigrated';
+
+// Held so assertReadablePath can wait for the migration instead of refusing a
+// legacy library that the sidebar requests while it is still running
+let legacyLibrariesMigration = null;
+
+async function migrateLegacyLibrariesOnce(webContents)
+{
+	if (store == null) return;
+	if (store.get(BLESSED_LIBRARIES_MIGRATION_KEY)) return;
+
+	try
+	{
+		const settingsJson = await webContents.executeJavaScript(
+			'try { localStorage.getItem(".drawio-config") } catch (e) { null }');
+
+		if (typeof settingsJson === 'string')
+		{
+			const settings = JSON.parse(settingsJson);
+
+			if (settings != null && Array.isArray(settings.customLibraries))
+			{
+				for (const id of settings.customLibraries)
+				{
+					// 'S' is the desktop (local file) library service, the
+					// only one whose id is a filesystem path
+					if (typeof id !== 'string' || id.charAt(0) !== 'S') continue;
+
+					let libPath = id.substring(1);
+
+					try
+					{
+						libPath = decodeURIComponent(libPath);
+					}
+					catch (e) {} // Not encoded, use as-is
+
+					if (libPath && fs.existsSync(libPath))
+					{
+						blessPath(libPath);
+					}
+				}
+			}
+		}
+	}
+	catch (e) {} // Migration is best-effort; never block app startup.
+
+	try { store.set(BLESSED_LIBRARIES_MIGRATION_KEY, true); } catch (e) {}
 }
 let appZoom = 1;
 // Disabled by default
@@ -454,6 +722,15 @@ function createWindow (opt = {})
 	})
 	
 	mainWindow.loadURL(ourl)
+
+	// The configuration lives in the renderer, so the local paths it declares
+	// (see loadConfigReadablePaths) must be collected again after every load —
+	// editing the configuration reloads the app
+	mainWindow.webContents.on('did-finish-load', function()
+	{
+		invalidateConfigReadablePaths();
+		legacyLibrariesMigration = migrateLegacyLibrariesOnce(mainWindow.webContents);
+	});
 
 	// Intercept Ctrl/Cmd+Shift+V before it reaches the renderer
 	// so paste-without-formatting works even when the web app captures the shortcut
@@ -3220,15 +3497,10 @@ function isDraftOrBkpOfBlessed(realpath)
 	return false;
 }
 
-// The renderer is semi-untrusted: it parses attacker-controlled diagram XML,
-// .vsdx, SVG, Mermaid, etc. validateSender is necessary but not sufficient,
-// because a renderer-side XSS attacker would also pass it. So write-side IPC
-// handlers must additionally confirm the requested path is one the user has
-// authorised through OS chrome (file picker, file association, argv) — see
-// blessPath. This function realpath-canonicalises the requested path
-// (defeating symlink traversal) and accepts only paths in blessedPaths or
-// their draft/backup siblings.
-async function assertWritablePath(p)
+// Canonicalises a renderer-supplied path for the authorisation checks below:
+// returns both the lexically-resolved path and its realpath, and rejects
+// anything that isn't a usable path or that points inside the app bundle.
+async function canonicalisePath(p)
 {
 	if (typeof p !== 'string' || !p || p.includes('\0'))
 	{
@@ -3259,9 +3531,9 @@ async function assertWritablePath(p)
 			// underlying call (e.g. WinFSP "local" / Cryptomator, some FUSE
 			// mounts), not just on missing paths. realpath is a defence-in-depth
 			// measure against symlink traversal; when it's simply unavailable we
-			// must not deny an otherwise-blessed write, so fall back to the
-			// lexically-resolved path. blessedPaths is still consulted below, so
-			// only paths the user authorised through trusted UI are accepted.
+			// must not deny an otherwise-authorised request, so fall back to the
+			// lexically-resolved path. The path sets are still consulted by the
+			// callers, so only paths the user authorised are accepted.
 			realpath = resolved;
 		}
 	}
@@ -3270,6 +3542,21 @@ async function assertWritablePath(p)
 	{
 		throw new Error('path not authorised');
 	}
+
+	return {resolved: resolved, realpath: realpath};
+};
+
+// The renderer is semi-untrusted: it parses attacker-controlled diagram XML,
+// .vsdx, SVG, Mermaid, etc. validateSender is necessary but not sufficient,
+// because a renderer-side XSS attacker would also pass it. So write-side IPC
+// handlers must additionally confirm the requested path is one the user has
+// authorised through OS chrome (file picker, file association, argv) — see
+// blessPath. This function realpath-canonicalises the requested path
+// (defeating symlink traversal) and accepts only paths in blessedPaths or
+// their draft/backup siblings.
+async function assertWritablePath(p)
+{
+	const {resolved, realpath} = await canonicalisePath(p);
 
 	// Block writes anywhere inside userData (settings store, Local Storage)
 	let userDataDir;
@@ -3302,6 +3589,53 @@ async function assertWritablePath(p)
 	throw new Error('path not authorised');
 };
 
+// The read side needs the same authorisation as the write side above: without
+// it the renderer can read any file the user can, and diagram content alone is
+// enough to reach it (a cell style's fontSource is fetched through readFile and
+// embedded in exports), so this is not gated on a renderer XSS. Accepts the same
+// paths as assertWritablePath plus the local paths named in the user's
+// configuration, which are loaded on every launch and so are never blessed
+// through a file dialog [jgraph/drawio-desktop#1278].
+async function assertReadablePath(p)
+{
+	const {resolved, realpath} = await canonicalisePath(p);
+
+	if (blessedPaths.has(realpath) || blessedPaths.has(resolved) ||
+		configReadablePaths.has(realpath) || configReadablePaths.has(resolved))
+	{
+		return;
+	}
+
+	if (isDraftOrBkpOfBlessed(realpath) || isDraftOrBkpOfBlessed(resolved))
+	{
+		return;
+	}
+
+	// The configuration is read from the renderer, so the first request for a
+	// configured library, template or font can arrive before it has been
+	// collected. Refresh once and re-check before refusing.
+	await loadConfigReadablePaths();
+
+	if (configReadablePaths.has(realpath) || configReadablePaths.has(resolved))
+	{
+		return;
+	}
+
+	// Same for the legacy custom libraries, which the sidebar asks for while
+	// migrateLegacyLibrariesOnce may still be reading them from the renderer
+	if (legacyLibrariesMigration != null)
+	{
+		try { await legacyLibrariesMigration; } catch (e) {}
+
+		if (blessedPaths.has(realpath) || blessedPaths.has(resolved))
+		{
+			return;
+		}
+	}
+
+	throw new Error('path not authorised');
+};
+
 function getDraftFileName(fileObject)
 {
 	let filePath = fileObject.path;
@@ -3319,6 +3653,11 @@ function getDraftFileName(fileObject)
 async function getFileDrafts(fileObject)
 {
 	let filePath = fileObject.path;
+
+	// Drafts are siblings derived from filePath, so authorising the file the
+	// drafts belong to authorises the whole set
+	await assertReadablePath(filePath);
+
 	let draftsPaths = [], drafts = [], draftFileName, counter = 1, uniquePart = '';
 
 	do
@@ -3411,6 +3750,10 @@ async function saveDraft(fileObject, data)
 async function getBkpFile(fileObject)
 {
 	let filePath = fileObject.path;
+
+	// The backup is a sibling derived from filePath (see saveFile)
+	await assertReadablePath(filePath);
+
 	let bkpPaths = [
 		path.join(path.dirname(filePath), BKP_PREFEX + path.basename(filePath) + BKP_EXT),
 		path.join(path.dirname(filePath), OLD_BKP_PREFEX + path.basename(filePath) + BKP_EXT)
@@ -3615,9 +3958,12 @@ function getDocumentsFolder()
 	return '.';
 };
 
-function checkFileExists(pathParts)
+async function checkFileExists(pathParts)
 {
 	let filePath = path.join(...pathParts);
+
+	await assertReadablePath(filePath);
+
 	return {exists: fs.existsSync(filePath), path: filePath};
 };
 
@@ -3666,16 +4012,16 @@ function dirname(path_p)
 
 async function readFile(filename, encoding)
 {
+	await assertReadablePath(filename);
+
 	let data = await fsProm.readFile(filename, encoding);
 
 	// Mermaid (.mmd/.mermaid) files are plain text that checkFileContent does
 	// not recognise as a known diagram format; allow them through by extension
-	// (the renderer converts them to a diagram on open). The appBaseDir guard
-	// below still applies.
+	// (the renderer converts them to a diagram on open).
 	let isMermaid = /\.(mmd|mermaid)$/i.test(filename);
 
-	if ((checkFileContent(data, encoding) || isMermaid) &&
-		!path.resolve(filename).startsWith(appBaseDir))
+	if (checkFileContent(data, encoding) || isMermaid)
 	{
 		return data;
 	}
@@ -3685,11 +4031,15 @@ async function readFile(filename, encoding)
 
 async function fileStat(file)
 {
+	await assertReadablePath(file);
+
 	return await fsProm.stat(file);
 }
 
 async function isFileWritable(file)
 {
+	await assertReadablePath(file);
+
 	try 
 	{
 		await fsProm.access(file, fs.constants.W_OK);
@@ -3788,8 +4138,10 @@ function openExternal(url)
 	return false;
 }
 
-function watchFile(filePath)
+async function watchFile(filePath)
 {
+	await assertReadablePath(filePath);
+
 	let win = BrowserWindow.getFocusedWindow();
 
 	if (win)
