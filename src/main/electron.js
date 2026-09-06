@@ -17,6 +17,7 @@ import ProgressBar from './progress-bar.js';
 import contextMenu from 'electron-context-menu';
 import {spawn, exec} from 'child_process';
 import {disableUpdate as disUpPkg} from './disableUpdate.js';
+import {updateChannel} from './updateChannel.js';
 
 let store;
 
@@ -1925,7 +1926,8 @@ app.whenReady().then(() =>
 	safeUpdaterCall('setFeedURL', () => autoUpdater.setFeedURL({
 		provider: 'github',
 		repo: 'drawio-desktop',
-		owner: 'jgraph'
+		owner: 'jgraph',
+		channel: updateChannel()
 	}))
 	
 	// Cache update check - configurable interval (default: 24 hours)

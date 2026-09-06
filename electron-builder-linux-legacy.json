@@ -1,0 +1,61 @@
+{
+  "appId": "com.jgraph.drawio.desktop",
+  "productName": "drawio",
+  "copyright": "Copyright 2017-2026 draw.io Ltd",
+  "asar": true,
+  "files": [
+    "**/*",
+    "!**/WEB-INF{,/**}"
+  ],
+  "artifactName": "${productName}-${arch}-${version}-legacy.${ext}",
+  "directories": {
+    "output": "./dist/"
+  },
+  "npmRebuild": false,
+  "publish": {
+      "provider": "github",
+      "channel": "legacy"
+  },
+  "afterPack": "build/fuses.mjs",
+  "linux": {
+  	"executableName": "drawio",
+    "category": "Graphics",
+    "maintainer": "draw.io <desktop@draw.io>",
+    "icon": "./build",
+    "desktop": {
+      "entry": {
+        "StartupWMClass": "draw-io"
+      }
+    },
+    "target": [
+      { "target": "AppImage", "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
+    ]
+  },
+  "fileAssociations": [
+	  {
+	  	"ext": "drawio",
+	  	"name": "draw.io Diagram",
+	  	"description": "draw.io Diagram",
+	  	"mimeType": "application/vnd.jgraph.mxfile",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": "vsdx",
+	  	"name": "VSDX Document",
+	  	"description": "VSDX Document",
+	  	"mimeType": "application/vnd.visio",
+	  	"role": "Editor"
+	  },
+	  {
+	  	"ext": ["mmd", "mermaid"],
+	  	"name": "Mermaid Diagram",
+	  	"description": "Mermaid Diagram",
+	  	"mimeType": "text/vnd.mermaid",
+	  	"role": "Editor"
+	  }
+  ]
+}
