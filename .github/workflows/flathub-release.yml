@@ -1,5 +1,11 @@
 name: Flathub Release
 
+# DISABLED (09/2026) via `gh workflow disable flathub-release.yml`. FLATHUB_TOKEN
+# was never configured, so once v31.4.4 was published and the Flathub manifest
+# fell behind, every hourly cron run failed on the token check. Re-enable with
+# `gh workflow enable flathub-release.yml` once a PAT with write access to
+# flathub/com.jgraph.drawio.desktop is added as the FLATHUB_TOKEN secret.
+
 # Opens a version-bump PR on flathub/com.jgraph.drawio.desktop when a new
 # desktop release is published. The release:published event has been delivered
 # unreliably for this repo since late 2024 (see hash-gen.yml history), so the
