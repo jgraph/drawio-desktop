@@ -18,8 +18,6 @@ jobs:
       APPLEID: ${{ secrets.APPLEID }}
       APPLEIDPASS: ${{ secrets.APPLEIDPASS }}
       APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
-      CSC_LINK: ${{ secrets.CSC_LINK }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAP_TOKEN }}
       OS_NAME: ${{ matrix.os }}
@@ -78,6 +76,41 @@ jobs:
       uses: actions/setup-node@v6
       with:
         node-version: 24
+    - name: Import signing certificate
+      if: ${{ matrix.os == 'macos-latest' }}
+      env:
+        CSC_LINK: ${{ secrets.CSC_LINK }}
+        CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+      run: |
+        # electron-builder builds its own temp keychain when CSC_LINK is set, but it
+        # passes the p12 password to `security set-key-partition-list -k`, which wants
+        # the keychain password. macOS 26.6 stopped tolerating that (it now always
+        # attempts SecKeychainUnlock) and signing dies with "the user name or
+        # passphrase you entered is not correct". Set the keychain up here instead and
+        # hand it over via CSC_KEYCHAIN - with CSC_LINK unset, MacPackager skips its
+        # own keychain code entirely.
+        if [ -z "$CSC_LINK" ] || [ -z "$CSC_KEY_PASSWORD" ]; then
+          echo "::error::CSC_LINK/CSC_KEY_PASSWORD are not set, cannot sign"
+          exit 1
+        fi
+        KEYCHAIN="$RUNNER_TEMP/build.keychain"
+        KEYCHAIN_PASSWORD="$(openssl rand -base64 32)"
+        CERT="$RUNNER_TEMP/cert.p12"
+        printf '%s' "$CSC_LINK" | base64 --decode > "$CERT"
+        security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+        # No lock timeout and no lock on sleep, notarization can outlast the default
+        security set-keychain-settings "$KEYCHAIN"
+        security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN"
+        security import "$CERT" -k "$KEYCHAIN" -P "$CSC_KEY_PASSWORD" \
+          -T /usr/bin/codesign -T /usr/bin/productbuild
+        rm -f "$CERT"
+        security set-key-partition-list -S apple-tool:,apple:,codesign: -s \
+          -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN" > /dev/null
+        # build/notarize.mjs re-signs the .appex and the outer .app with
+        # `codesign -s <identity>`, so the keychain has to be in the search list
+        security list-keychains -d user -s "$KEYCHAIN" $(security list-keychains -d user | tr -d '"')
+        security find-identity -v -p codesigning "$KEYCHAIN"
+        echo "CSC_KEYCHAIN=$KEYCHAIN" >> "$GITHUB_ENV"
     - name: Build for ${{ matrix.os}}
       run: |
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sudo apt-get update && sudo apt-get install -y icnsutils graphicsmagick xz-utils rpm; fi
