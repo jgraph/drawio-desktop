@@ -119,14 +119,6 @@ jobs:
         if [ "$OS_NAME" = "ubuntu-latest" ]; then sed -ie 's/"asar": true,/"asar": true,\n"productName": "drawio",/' electron-builder-linux-mac.json; fi 
         npm run sync
         npm run release-linux
-        # Second AppImage on the legacy fuse2 runtime, for AppImageLauncher 2.x users the
-        # static runtime cannot serve [jgraph/drawio-desktop#2538]. It publishes to its own
-        # update channel, so re-sync afterwards to leave the tree on 'latest' for the snap
-        if [ "$OS_NAME" = "ubuntu-latest" ]; then
-          npm run sync -- legacy
-          npm run release-linux-legacy
-          npm run sync
-        fi
     - name: Build for Snap
       if: ${{ matrix.os == 'ubuntu-latest' }}
       # Snap releasing is flaky and not release-critical; a snap failure must never
