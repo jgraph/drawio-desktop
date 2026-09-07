@@ -45,6 +45,10 @@ export default class ProgressBar extends EventEmitter
 			webPreferences: {
 				nodeIntegration: false,
 				contextIsolation: true,
+				webviewTag: false,
+				webSecurity: true,
+				// No preload here, so the renderer can be fully sandboxed
+				sandbox: true,
 			},
 		});
 
