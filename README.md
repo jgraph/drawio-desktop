@@ -18,6 +18,15 @@ Three flavours of Windows download are published on the [releases page](https://
 
 The Microsoft Store (APPX) build is also installable per-user without admin rights via the Store.
 
+### Windows on Arm
+
+draw.io Desktop is built natively for Windows on Arm (ARM64) and is supported on Windows 11 ARM64 devices. Two native ARM64 downloads are published with every release:
+
+- `draw.io-arm64-<version>-windows-arm64-installer.exe` — NSIS installer, per-machine, requires administrator privileges.
+- `draw.io-arm64-<version>-windows-arm64-no-installer.exe` — portable build, no installation or admin rights needed.
+
+The MSI and Microsoft Store builds are x64 only and run under emulation on ARM64 devices. The ARM64 builds do not auto-update; download new versions from the releases page.
+
 Linux installation
 ------------------
 
