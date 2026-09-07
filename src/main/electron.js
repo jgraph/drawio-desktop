@@ -9,6 +9,7 @@ import zlib from 'zlib';
 import log from'electron-log';
 import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImport } from './args.js';
 import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
+import { getUpdateChannel } from './update-channel.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
@@ -668,12 +669,15 @@ function createWindow (opt = {})
 		width: lastWinSize.width,
 		height: lastWinSize.height,
 		icon: `${codeDir}/images/drawlogo256.png`,
-		webviewTag: false,
-		webSecurity: true,
 		webPreferences: {
 			preload: `${__dirname}/electron-preload.js`,
 			spellcheck: enableSpellCheck,
 			contextIsolation: true,
+			nodeIntegration: false,
+			// webviewTag and webSecurity belong here, not on the top-level
+			// BrowserWindow options, where they are silently ignored
+			webviewTag: false,
+			webSecurity: true,
 			disableBlinkFeatures: 'Auxclick', // Is this needed?
 			additionalArguments: additionalArguments
 		}
@@ -1013,6 +1017,9 @@ app.whenReady().then(() =>
 			webPreferences: {
 				preload: `${__dirname}/electron-preload.js`,
 				contextIsolation: true,
+				nodeIntegration: false,
+				webviewTag: false,
+				webSecurity: true,
 				disableBlinkFeatures: 'Auxclick' // Is this needed?
 			}
 		});
@@ -1922,10 +1929,13 @@ app.whenReady().then(() =>
 		menu.setApplicationMenu(null)
 	}
 	
+	const updateChannel = getUpdateChannel(process.platform, process.arch);
+
 	safeUpdaterCall('setFeedURL', () => autoUpdater.setFeedURL({
 		provider: 'github',
 		repo: 'drawio-desktop',
-		owner: 'jgraph'
+		owner: 'jgraph',
+		...(updateChannel != null ? {channel: updateChannel} : {})
 	}))
 	
 	// Cache update check - configurable interval (default: 24 hours)
@@ -2047,8 +2057,13 @@ app.on('web-contents-created', (event, contents) => {
 				action: 'allow',
 				overrideBrowserWindowOptions: {
 					fullscreenable: false,
+					// Child windows inherit the opener's webPreferences, so these
+					// restate the guarantees rather than relying on that inheritance
 					webPreferences: {
-						contextIsolation: true
+						contextIsolation: true,
+						nodeIntegration: false,
+						webviewTag: false,
+						webSecurity: true
 					}
 				}
 			}
@@ -2909,6 +2924,9 @@ function exportDiagram(event, args, directFinalize)
 				preload: `${__dirname}/electron-preload.js`,
 				backgroundThrottling: false,
 				contextIsolation: true,
+				nodeIntegration: false,
+				webviewTag: false,
+				webSecurity: true,
 				disableBlinkFeatures: 'Auxclick', // Is this needed?
 				// Electron 42 offscreen DPR defaults to 1; force 2 so post-capture img.resize() downsamples [jgraph/drawio-desktop#2422]
 				offscreen: { deviceScaleFactor: 2 },

@@ -25,7 +25,7 @@ draw.io Desktop is built natively for Windows on Arm (ARM64) and is supported on
 - `draw.io-arm64-<version>-windows-arm64-installer.exe` — NSIS installer, per-machine, requires administrator privileges.
 - `draw.io-arm64-<version>-windows-arm64-no-installer.exe` — portable build, no installation or admin rights needed.
 
-The MSI and Microsoft Store builds are x64 only and run under emulation on ARM64 devices. The ARM64 builds do not auto-update; download new versions from the releases page.
+The MSI and Microsoft Store builds are x64 only and run under emulation on ARM64 devices. ARM64 builds up to and including 31.4.4 were shipped with auto-update disabled; install a newer release manually once, after which the ARM64 build updates itself like x64.
 
 Linux installation
 ------------------

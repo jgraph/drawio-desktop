@@ -115,8 +115,8 @@ jobs:
         AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       shell: powershell
       run: |
-        #Disable auto-update and build arm64 first such that latest.yml is for x64 only (x64 will overwrite the arm64 one)
-        npm run sync -- disableUpdate
+        #arm64 publishes its update manifest as latest-arm64.yml (publish.channel in electron-builder-win-arm64.json) so it does not collide with the x64 latest.yml
+        npm run sync
         npm run release-win-arm64
     - name: Build for Windows (x64)
       env:
@@ -125,7 +125,6 @@ jobs:
         AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
       shell: powershell
       run: |
-        #Enable auto-update again
         npm run sync
         npm run release-win
     - name: Build unpacked Windows x64 (for zip portable)

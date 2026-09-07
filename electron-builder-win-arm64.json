@@ -11,7 +11,8 @@
   },
   "npmRebuild": false,
   "publish": {
-      "provider": "github"
+      "provider": "github",
+      "channel": "latest-arm64"
   },
   "win": {
     "signtoolOptions": {

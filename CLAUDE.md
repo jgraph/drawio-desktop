@@ -173,6 +173,7 @@ ipcMain.on('request', (e, data) => { ... });
 - Checks GitHub releases on startup
 - Disable via `DRAWIO_DISABLE_UPDATE=true` or `--disable-update` flag
 - Flatpak detection disables updates automatically
+- Windows arm64 builds publish and fetch `latest-arm64.yml` (`publish.channel` in `electron-builder-win-arm64.json`, matched by `src/main/update-channel.js`) because electron-builder gives Windows manifests no arch suffix; the x64 build keeps `latest.yml`. `npm test` pins the two names together
 
 ### Data Storage
 - **macOS:** `~/Library/Application Support/draw.io`
