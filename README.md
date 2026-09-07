@@ -18,6 +18,20 @@ Three flavours of Windows download are published on the [releases page](https://
 
 The Microsoft Store (APPX) build is also installable per-user without admin rights via the Store.
 
+Linux installation
+------------------
+
+If you manage AppImages with [AppImageLauncher](https://github.com/TheAssassin/AppImageLauncher), you need a 3.0 release of it (currently labelled beta). Since 31.4.2 the AppImage uses the static AppImage runtime so that it no longer depends on the end-of-life `libfuse2`, and AppImageLauncher 2.2.0, the last stable release, cannot load a static runtime. The app then fails to start with:
+
+```
+fuse: memory allocation failed
+squashfuse 0.5.2 (c) 2012 Dave Vasilevsky
+...
+Can't open squashfs image: Bad address
+```
+
+Install a current AppImageLauncher from its [releases page](https://github.com/TheAssassin/AppImageLauncher/releases), which provides .deb packages, or uninstall AppImageLauncher altogether. It is not needed to run the AppImage. See [#2538](https://github.com/jgraph/drawio-desktop/issues/2538) for the detail.
+
 Security
 --------
 
