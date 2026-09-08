@@ -4,7 +4,16 @@
   "asar": true,
   "files": [
     "**/*",
-    "!**/WEB-INF{,/**}"
+    "!**/WEB-INF{,/**}",
+    "!drawio/src/main/webapp/stencils/**/*.xml",
+    "!drawio/src/main/webapp/shapes{,/**}",
+    "!drawio/src/main/webapp/js/diagramly{,/**}",
+    "drawio/src/main/webapp/js/diagramly/{ElectronApp,DesktopLibrary}.js",
+    "!drawio/src/main/webapp/js/grapheditor{,/**}",
+    "!drawio/src/main/webapp/mxgraph/src{,/**}",
+    "!drawio/src/main/webapp/mxgraph/mxClient.js",
+    "!node_modules/@cantoo/pdf-lib/{cjs,dist,src,ts3.4}{,/**}",
+    "!**/*.map"
   ],
   "directories": {
     "output": "./dist/"

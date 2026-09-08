@@ -118,6 +118,10 @@ Tags trigger CI/CD build workflows.
 3. **Build:** `electron-builder` with platform-specific config
 4. **Post-build:** Security fuses applied, Quick Look extension assembled (macOS), notarization (macOS)
 
+### Packaged File Set
+- The `files` arrays in the five `electron-builder-*.json` configs leave out what the packaged app never loads (about 80 MB of `app.asar`): `stencils/**/*.xml` (embedded in `js/stencils.min.js`, which overrides `mxStencilRegistry.loadStencil`), `shapes/**` (compiled into `js/shapes-14-6-5.min.js`; `mxStencilRegistry.allowEval` is false on desktop), the unminified editor sources `js/diagramly/**`, `js/grapheditor/**`, `mxgraph/src/**` and `mxgraph/mxClient.js` (only loaded with `dev=1`), the `cjs`/`dist`/`src`/`ts3.4` trees of `@cantoo/pdf-lib` (the ESM main process resolves the `es` build) and all `*.map` files. `js/diagramly/ElectronApp.js` and `DesktopLibrary.js` stay because `bootstrap.js` loads them uncompiled. Keep the five configs in sync
+- `DRAWIO_ENV=dev` on a packaged build therefore runs the minified bundles: `electron.js` only passes `dev=1` when `js/diagramly/Devel.js` exists. DevTools and main-process logging still work
+
 ### Code Signing
 - **Windows:** Azure Trusted Signing via the `signtoolOptions.sign` hook `build/sign-trusted.mjs` (configured in `electron-builder-win*.json`, not CSC_LINK certificates). CI (`electron-builder-win.yml`) downloads the signing dlib, locates `signtool.exe`, and authenticates with `AZURE_TENANT_ID`/`AZURE_CLIENT_ID`/`AZURE_CLIENT_SECRET` secrets. `win.signExts: [".dll"]` signs the bundled Electron DLLs too — unsigned ffmpeg.dll etc. trip Defender's ASR ransomware rule after each release (#2509). The portable-zip step must pass `--config electron-builder-win.json`; a bare `--dir` run loads no config and ships unsigned, unfused binaries
 - **macOS:** Apple Developer certificate + notarization in `build/notarize.mjs`
@@ -210,7 +214,7 @@ ipcMain.on('request', (e, data) => { ... });
 
 ## Development Tips
 
-- Set `DRAWIO_ENV=dev` to auto-open DevTools
+- Set `DRAWIO_ENV=dev` to auto-open DevTools (the unminified `dev=1` sources only load from a source checkout, packaged builds omit them)
 - Use `npm start --enable-logging` for verbose output
 - If using symlink instead of submodule, also symlink `node_modules`
 - Main process logs to console; check terminal for errors
