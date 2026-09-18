@@ -267,6 +267,32 @@ describe('--layout', () =>
 	});
 });
 
+// ─── --normalize ─────────────────────────────────────────────────────────────
+
+describe('--normalize', () =>
+{
+	test('defaults to undefined when not passed', () =>
+	{
+		assert.equal(parse([]).opts.normalize, undefined);
+	});
+
+	test('is a flag, so it does not consume a following positional', () =>
+	{
+		const { opts, args } = parse(['--normalize', 'in.drawio']);
+		assert.equal(opts.normalize, true);
+		assert.deepEqual(args, ['in.drawio']);
+	});
+
+	test('combines with --layout', () =>
+	{
+		const { opts, args } = parse(['-x', '--normalize', '--layout', 'verticalFlow',
+			'-o', 'out.drawio', 'in.drawio']);
+		assert.equal(opts.normalize, true);
+		assert.equal(opts.layout, 'verticalFlow');
+		assert.deepEqual(args, ['in.drawio']);
+	});
+});
+
 // ─── --mermaid-image ─────────────────────────────────────────────────────────
 
 describe('--mermaid-image', () =>

@@ -1156,6 +1156,11 @@ app.whenReady().then(() =>
 				expArgs.layout = options.layout;
 			}
 
+			if (options.normalize)
+			{
+				expArgs.normalize = true;
+			}
+
 			var paths = parsedArgs;
 			
 			// Remove --no-sandbox arg from the paths
@@ -1525,6 +1530,11 @@ app.whenReady().then(() =>
 										mockEvent.reply('export-error', 'Layout is not supported for HTML export');
 										return;
 									}
+									else if (expArgs.normalize)
+									{
+										mockEvent.reply('export-error', 'Normalize is not supported for HTML export');
+										return;
+									}
 
 									var title = path.basename(curFile, path.extname(curFile));
 									var htmlData = buildHtmlExport(xml, title, options);
@@ -1669,7 +1679,7 @@ app.whenReady().then(() =>
 			}
 
 			//Sending entire program is not allowed in Electron 9 as it is not native JS object
-			win.webContents.send('args-obj', {args: parsedArgs, create: options.create, layout: options.layout, mermaidImage: options.mermaidImage});
+			win.webContents.send('args-obj', {args: parsedArgs, create: options.create, layout: options.layout, normalize: options.normalize, mermaidImage: options.mermaidImage});
 		}
 	}
 	

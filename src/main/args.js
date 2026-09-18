@@ -25,6 +25,8 @@ const OPTION_DEFS = [
 	{              long: '--layout',            key: 'layout',         takesValue: true,
 	  valueLabel: '<name|json>',
 	  desc: 'run a layout on the diagram after opening it (applies on open and before export). Either a preset name (verticalFlow, horizontalFlow, verticalTree, horizontalTree, radialTree, organic) or a custom-layout JSON array as used by the Layout dialog, e.g. [{"layout":"elkLayered","config":{"elk.direction":"RIGHT"}}], for layout sequences and per-layout options' },
+	{              long: '--normalize',         key: 'normalize',
+	  desc: 'repair the model before anything else touches it (applies on open and before export): file each edge at the nearest common ancestor of its terminals, give an edge written without a geometry the standard one so it renders, and grow a container that would clip its children. Never moves or shrinks what the author placed. Useful for generated diagrams, and for files that are about to be laid out with --layout' },
 	{              long: '--mermaid-image',     key: 'mermaidImage',   takesValue: true,
 	  valueLabel: '<true/false>',
 	  parse: v => v === '1' || v === 'true',
