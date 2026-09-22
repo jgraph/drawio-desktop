@@ -14,7 +14,7 @@
     "test": "node --test src/test/cli-args.test.js src/test/msi-project-created.test.js src/test/window-bounds.test.js src/test/update-channel.test.js",
     "release-win": "electron-builder --config electron-builder-win.json --publish always",
     "release-win-arm64": "electron-builder --config electron-builder-win-arm64.json --publish always",
-    "release-appx": "electron-builder --config electron-builder-appx.json --publish always",
+    "release-appx": "electron-builder --config electron-builder-appx.json --publish never",
     "release-linux": "electron-builder --config electron-builder-linux-mac.json --publish always",
     "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },

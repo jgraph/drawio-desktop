@@ -127,6 +127,41 @@ After all build workflows complete successfully:
 4. **Obtain Reviewer approval** (Section 5)
 5. Click "Publish release"
 
+The `.appx` is not among the release assets. It is built by the same Windows
+workflow but published straight to Partner Center by its `microsoft-store` job —
+see Section 4.5.
+
+### 4.5 Microsoft Store Submission
+
+The `microsoft-store` job in `electron-builder-win.yml` submits the `.appx` to
+Partner Center automatically once the Windows build succeeds. `msstore publish`
+clones the last published submission, swaps in the new package and commits it, so
+the release goes into Store certification without any manual upload.
+
+1. Check the `microsoft-store` job succeeded in the Actions tab
+2. Confirm the new submission is in certification in [Partner Center](https://partner.microsoft.com/dashboard)
+3. Certification typically completes within a few hours; the Store listing updates
+   after it passes
+
+If the job fails, re-run it on its own ("Re-run failed jobs") — the release assets
+are already published by then and are not affected. The package is also kept as
+the `appx-package` workflow artifact for 30 days, so a submission can be redone by
+hand from Partner Center without rebuilding.
+
+Do not edit an API-created submission in Partner Center while it is pending: doing
+so blocks further API changes to it, and the next release's job will fail.
+
+**Credentials:** the job authenticates with an Entra ID app registration that is
+added under Partner Center > Account settings > User management > Microsoft Entra
+applications with the **Manager** role. It is held in the repository secrets
+`MS_STORE_TENANT_ID`, `MS_STORE_SELLER_ID`, `MS_STORE_CLIENT_ID` and
+`MS_STORE_CLIENT_SECRET`. The client secret expires (24 months maximum) and has to
+be rotated in Entra and re-added here before it lapses.
+
+Run the **Check Microsoft Store Credentials** workflow (manual, read-only) to
+confirm all four still work — after setting them up, after a rotation, or to tell
+a credential failure apart from a submission one.
+
 ---
 
 ## 5. Approval

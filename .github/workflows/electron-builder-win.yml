@@ -156,7 +156,25 @@ jobs:
       run: |
         #Disable auto-update for appx also
         npm run sync -- disableUpdate
+        # release-appx publishes nowhere (--publish never): the appx goes to the
+        # Microsoft Store, not to the GitHub release, so it is handed to the
+        # microsoft-store job below as a workflow artifact instead
         npm run release-appx
+        # msstore's package publisher only recognises .msix/.msixbundle/.msixupload
+        # (MSIXProjectPublisher.PackageFilesExtensionInclude), so hand it the appx
+        # under a .msix name. Identical OPC container and AppxManifest.xml —
+        # Partner Center accepts either extension. Copy, not rename, so the .appx
+        # is still there if a build needs to be inspected.
+        $version = (Get-Content package.json -Raw | ConvertFrom-Json).version
+        Copy-Item "dist/draw.io-x64-$version.appx" "dist/draw.io-x64-$version.msix"
+
+    - name: Upload appx for the Microsoft Store job
+      uses: actions/upload-artifact@v7
+      with:
+        name: appx-package
+        path: dist/draw.io-*.msix
+        retention-days: 30
+        if-no-files-found: error
 
     - name: Install GitHub CLI
       shell: powershell
@@ -175,3 +193,66 @@ jobs:
         # this correct even if the triggering tag and the built version differ.
         $version = (Get-Content package.json -Raw | ConvertFrom-Json).version
         gh release upload "v$version" "dist/draw.io-$version-windows.zip" --clobber
+
+  microsoft-store:
+    # Submits the appx to Partner Center so it no longer has to be downloaded from
+    # the draft release, deleted from it, and uploaded by hand each release.
+    #
+    # Its own job on purpose: the release assets are already published by the time
+    # this runs, so a Store API failure leaves them untouched, and the submission
+    # can be re-run on its own (Re-run failed jobs) without a full Windows rebuild.
+    #
+    # One-off setup this depends on:
+    #   - an Entra ID app registration added under Partner Center > Account settings
+    #     > User management > Microsoft Entra applications, with the Manager role
+    #   - repository secrets MS_STORE_TENANT_ID, MS_STORE_SELLER_ID,
+    #     MS_STORE_CLIENT_ID, MS_STORE_CLIENT_SECRET
+    # The client secret expires (24 months max), so it has to be rotated in Entra
+    # and re-added here before it lapses. store-credentials-check.yml is a
+    # read-only workflow_dispatch check that all four still work.
+    needs: build
+    runs-on: windows-latest
+    steps:
+    - name: Download appx package
+      uses: actions/download-artifact@v7
+      with:
+        name: appx-package
+        path: dist
+
+    - name: Set up Microsoft Store Developer CLI
+      uses: microsoft/microsoft-store-apppublisher@v1.4
+
+    - name: Configure Microsoft Store Developer CLI
+      shell: powershell
+      env:
+        MS_STORE_TENANT_ID: ${{ secrets.MS_STORE_TENANT_ID }}
+        MS_STORE_SELLER_ID: ${{ secrets.MS_STORE_SELLER_ID }}
+        MS_STORE_CLIENT_ID: ${{ secrets.MS_STORE_CLIENT_ID }}
+        MS_STORE_CLIENT_SECRET: ${{ secrets.MS_STORE_CLIENT_SECRET }}
+      run: |
+        # Through the environment rather than inline ${{ }}: a client secret
+        # holding a quote, backtick or $ would otherwise be re-parsed by
+        # PowerShell and mangled before it ever reached the CLI
+        msstore reconfigure `
+          --tenantId $env:MS_STORE_TENANT_ID `
+          --sellerId $env:MS_STORE_SELLER_ID `
+          --clientId $env:MS_STORE_CLIENT_ID `
+          --clientSecret $env:MS_STORE_CLIENT_SECRET
+
+    - name: Submit to the Microsoft Store
+      shell: powershell
+      run: |
+        # 9MVVSZK43QQW is the "draw.io Diagrams" Store product ID
+        # (https://apps.microsoft.com/detail/9MVVSZK43QQW).
+        #
+        # publish clones the last published submission, swaps in this package and
+        # commits it, which sends it straight into certification. Add --noCommit to
+        # leave it as a draft in Partner Center for a manual look before release.
+        #
+        # Note: once a submission is created through the API, editing it in Partner
+        # Center blocks further API changes to it — let this workflow own the
+        # package submissions.
+        $package = (Get-ChildItem dist/*.msix | Select-Object -First 1).FullName
+        if (-not $package) { throw "No .msix found in dist/" }
+        Write-Host "Submitting $package"
+        msstore publish $package -id 9MVVSZK43QQW

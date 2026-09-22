@@ -127,6 +127,11 @@ Tags trigger CI/CD build workflows.
 - **macOS:** Apple Developer certificate + notarization in `build/notarize.mjs`
 - **Unsigned builds:** `DRAWIO_UNSIGNED=true` skips signing (Windows) and notarization (macOS) for personal/fork builds
 
+### Microsoft Store
+- The `.appx` is never a GitHub release asset — `release-appx` runs `--publish never` and the `microsoft-store` job in `electron-builder-win.yml` submits it to Partner Center with the msstore CLI (`msstore publish <pkg> -id 9MVVSZK43QQW`), which commits the submission into certification
+- The appx is copied to a `.msix` name first: msstore's `MSIXProjectPublisher` only matches `.msix`/`.msixbundle`/`.msixupload`, and pointing it at the project root instead would send it down the Electron configurator path, which runs `npm install`. Same container either way, Partner Center takes both
+- Needs `MS_STORE_TENANT_ID`/`MS_STORE_SELLER_ID`/`MS_STORE_CLIENT_ID`/`MS_STORE_CLIENT_SECRET` secrets from an Entra app registration holding the Manager role in Partner Center; the client secret expires and must be rotated
+
 ### Personal / Fork Builds
 - `doc/BUILDING_FOR_PERSONAL_USE.md` documents building unsigned from a fork (the project is closed to contributions but Apache 2.0 licensed)
 - Set `DRAWIO_UNSIGNED=true` and run `electron-builder` directly with `--publish never`; use `npm run sync -- disableUpdate` so auto-update doesn't replace the custom build
@@ -140,7 +145,7 @@ Tags trigger CI/CD build workflows.
 | `npm run release-win` | Windows x64 (NSIS + MSI) |
 | `npm run release-win-arm64` | Windows ARM64 |
 | `npm run release-linux` | Linux (AppImage, deb, rpm) |
-| `npm run release-appx` | Windows Store |
+| `npm run release-appx` | Windows Store (`--publish never`; the Store job submits it) |
 | `npm run release-snap` | Snap package |
 
 ## Architecture Notes
@@ -197,9 +202,10 @@ ipcMain.on('request', (e, data) => { ... });
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `electron-builder.yml` | Version tag | macOS/Linux builds |
-| `electron-builder-win.yml` | Version tag | Windows builds (Azure Trusted Signing) |
+| `electron-builder-win.yml` | Version tag | Windows builds (Azure Trusted Signing) + Microsoft Store submission |
 | `prepare-release.yml` | Manual | Automated release prep |
 | `hash-gen.yml` | Release publish, daily cron, manual | Upload checksums to releases missing them (release events are dropped by GitHub since Dec 2024, hence the cron) |
+| `store-credentials-check.yml` | Manual | Read-only check of the Partner Center credentials (`msstore apps get`) |
 | `personal-build.yml` | Manual | Unsigned fork builds, artifacts only (no secrets, no publish) |
 | `stale.yml` | Schedule | Mark stale issues/PRs |
 
