@@ -129,7 +129,7 @@ Tags trigger CI/CD build workflows.
 
 ### Microsoft Store
 - The `.appx` is never a GitHub release asset — `release-appx` runs `--publish never` and the `microsoft-store` job in `electron-builder-win.yml` submits it to Partner Center with the msstore CLI (`msstore publish <pkg> -id 9MVVSZK43QQW`), which commits the submission into certification
-- The appx is copied to a `.msix` name first: msstore's `MSIXProjectPublisher` only matches `.msix`/`.msixbundle`/`.msixupload`, and pointing it at the project root instead would send it down the Electron configurator path, which runs `npm install`. Same container either way, Partner Center takes both
+- The appx is copied to a `.msix` name first: msstore's `MSIXProjectPublisher` only matches `.msix`/`.msixbundle`/`.msixupload`, and pointing it at the project root instead would send it down the Electron configurator path, which runs `npm install`. Same container, but Partner Center holds a `.msix` to the MSIX floor and fails the commit if `MinVersion` is 10.0.17134.0 or lower, so `electron-builder-appx.json` sets `appx.minVersion` to 10.0.17763.0 (Windows 10 1809, the first build the Store installs MSIX on; electron-builder's x64 default 10.0.14316.0 only passed as a hand-uploaded `.appx`). `maxVersionTested` is kept equal to it on purpose: it sets which OS behaviours the packaged app runs with, and a raise cannot be tested before the job commits into certification
 - Needs `MS_STORE_TENANT_ID`/`MS_STORE_SELLER_ID`/`MS_STORE_CLIENT_ID`/`MS_STORE_CLIENT_SECRET` secrets from an Entra app registration holding the Manager role in Partner Center; the client secret expires and must be rotated
 
 ### Personal / Fork Builds
