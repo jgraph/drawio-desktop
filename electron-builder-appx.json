@@ -37,7 +37,9 @@
     "displayName": "draw.io Diagrams",
     "publisherDisplayName": "draw.io Ltd",
     "identityName": "draw.io.draw.ioDiagrams",
-    "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733"
+    "publisher": "CN=9E628CCB-BE04-4557-A5A8-81EC34B09733",
+    "minVersion": "10.0.17763.0",
+    "maxVersionTested": "10.0.17763.0"
   },
   "afterPack": "build/fuses.mjs",
   "fileAssociations": [

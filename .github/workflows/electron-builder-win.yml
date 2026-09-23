@@ -162,9 +162,12 @@ jobs:
         npm run release-appx
         # msstore's package publisher only recognises .msix/.msixbundle/.msixupload
         # (MSIXProjectPublisher.PackageFilesExtensionInclude), so hand it the appx
-        # under a .msix name. Identical OPC container and AppxManifest.xml —
-        # Partner Center accepts either extension. Copy, not rename, so the .appx
-        # is still there if a build needs to be inspected.
+        # under a .msix name. Same OPC container, but Partner Center holds a .msix
+        # to the MSIX floor and fails the commit if its MinVersion is 10.0.17134.0
+        # or lower, so electron-builder-appx.json sets appx.minVersion (the x64
+        # default, 10.0.14316.0, only ever passed as a hand-uploaded .appx).
+        # Copy, not rename, so the .appx is still there if a build needs to be
+        # inspected.
         $version = (Get-Content package.json -Raw | ConvertFrom-Json).version
         Copy-Item "dist/draw.io-x64-$version.appx" "dist/draw.io-x64-$version.msix"
 
