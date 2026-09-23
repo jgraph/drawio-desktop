@@ -10,6 +10,7 @@ import log from'electron-log';
 import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImport } from './args.js';
 import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import { getUpdateChannel } from './update-channel.js';
+import { listExportFiles, lexists, openExportFile } from './export-files.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
@@ -1183,23 +1184,17 @@ app.whenReady().then(() =>
 				var exportableExts = ['.drawio', '.dio', '.xml', '.csv', '.vsdx',
 					'.mmd', '.mermaid', '.png', '.svg', '.pdf'];
 
+				// Symbolic links found by the scan are not followed, they
+				// could point outside the folder [GHSA-2w35-fgjm-2vvh]
 				function addDirectoryFiles(dir, isRecursive)
 				{
-					fs.readdirSync(dir).forEach(function(file)
+					listExportFiles(dir, isRecursive, exportableExts, function(link)
 					{
-						var filePath = path.join(dir, file);
-						var stat = fs.statSync(filePath);
-
-						if (stat.isFile() && path.basename(filePath).charAt(0) != '.' &&
-							exportableExts.includes(path.extname(filePath).toLowerCase()))
-						{
-							files.push(filePath);
-							scannedFiles.add(filePath);
-						}
-						if (stat.isDirectory() && isRecursive)
-					    {
-							addDirectoryFiles(filePath, isRecursive)
-					    }
+						console.log('Skipping ' + link + ' (symbolic link)');
+					}).forEach(function(filePath)
+					{
+						files.push(filePath);
+						scannedFiles.add(filePath);
 					});
 				}
 				
@@ -1433,7 +1428,7 @@ app.whenReady().then(() =>
 
 														if (options.check)
 														{
-															while (fs.existsSync(realFileName))
+															while (lexists(realFileName))
 															{
 																counter++;
 																realFileName = path.join(path.dirname(outFileName), path.basename(outFileName,
@@ -1441,9 +1436,10 @@ app.whenReady().then(() =>
 															}
 														}
 
-														let fh = fs.openSync(realFileName,
-															fs.constants.O_SYNC | fs.constants.O_CREAT |
-															fs.constants.O_WRONLY | fs.constants.O_TRUNC);
+														// A typed -o file name is used as given, but names made up
+														// from the input name are never written through a symbolic
+														// link planted there [GHSA-2w35-fgjm-2vvh]
+														let fh = openExportFile(realFileName, realFileName == options.output);
 
 														try
 														{
@@ -1459,7 +1455,8 @@ app.whenReady().then(() =>
 													}
 													catch(e)
 													{
-														console.error('Error writing to file: ' + outFileName);
+														console.error(e.code == 'ELOOP' ? 'Error: output file is a symbolic link: ' + realFileName :
+															'Error writing to file: ' + outFileName);
 														exportFailed = true;
 													}
 												}
