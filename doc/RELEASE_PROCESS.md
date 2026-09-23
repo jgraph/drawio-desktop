@@ -1,7 +1,7 @@
 # draw.io Desktop Release Process
 
 **Document ID:** REL-PROC-DESKTOP-001  
-**Version:** 1.2  
+**Version:** 1.3  
 **Last Updated:** 2026-09-23
 **Owner:** Engineering Team
 
@@ -69,7 +69,7 @@ It does not create the version tag, so no build starts when it completes. The ta
 3. Enter:
    - **version:** The release version, which is the `VERSION` on drawio-dev's `release` branch (e.g., `31.4.5`, see Section 4.2)
    - **previous_version:** (Optional) The previous release, used in the ChangeLog line of the draft release notes (e.g., `31.4.4`). Leave empty to use the newest tag reachable from dev.
-   - **drawio_ref:** (Optional) Tag or commit to move the public `drawio` submodule to. Leave empty: the submodule is moved to the public tag in its own commit before the workflow runs (Section 4.2).
+   - **drawio_ref:** (Optional) Tag or commit to move the public `drawio` submodule to. Leave empty: the submodule is moved to the tip of jgraph/drawio's dev branch in its own commit before the workflow runs (Section 4.2).
    - **dry_run:** Check to validate without creating the branch or pull request
    - **override_audit:** Check only to proceed despite critical/high vulnerabilities in runtime dependencies that have been reviewed and accepted. The override is recorded in the pull request.
 
@@ -119,20 +119,22 @@ Before triggering the workflow:
 | ☐ | Release scope documented (what's included) |
 | ☐ | All feature changes merged to dev branch |
 | ☐ | Release version read from `VERSION` on drawio-dev's `release` branch |
-| ☐ | Public `jgraph/drawio` tag `vX.Y.Z` exists |
-| ☐ | drawio submodule moved to that tag in its own commit on dev, "Updates to draw.io X.Y.Z" |
+| ☐ | `jgraph/drawio` dev branch carries `VERSION` X.Y.Z |
+| ☐ | drawio submodule moved to the tip of that branch in its own commit on dev, "Updates to draw.io X.Y.Z" |
 
 The version is not a free choice. The CI build workflows copy `VERSION` from drawio-dev's `release` branch into the submodule tree and `npm run sync` stamps it into package.json, so the desktop version always equals that branch's `VERSION`. A tag that does not match makes the builds publish a draft release for the other version.
 
-The public tag appears when drawio-dev's "Deploy to Public GitHub" workflow runs. Once it exists, move the submodule on an up-to-date dev checkout:
+drawio-dev's "Deploy to Public GitHub" workflow pushes the release to jgraph/drawio's dev branch together with the tag `vX.Y.Z`, which the ChangeLog link in the draft release notes needs. The submodule follows the tip of dev, the branch `.gitmodules` tracks, not the tag: dev can be ahead of the tag (after 31.5.2 it gained a settings commit). Once dev carries `VERSION` X.Y.Z, move the submodule on an up-to-date dev checkout:
 
 ```bash
-git -C drawio fetch --tags origin
-git -C drawio checkout vX.Y.Z
+git submodule update --remote drawio
+cat drawio/VERSION
 git add drawio
 git commit -m "Updates to draw.io X.Y.Z"
 git push origin dev
 ```
+
+`cat drawio/VERSION` must print X.Y.Z. An older version means the public deploy has not run yet.
 
 The CI builds copy only the minified editor (`js/*.min.js`) and `VERSION` from drawio-dev. Every other web app file the app loads, such as `index.html`, `bootstrap.js`, `ElectronApp.js`, the resources and the styles, ships from the submodule pin.
 
@@ -424,3 +426,4 @@ Linux artifacts (`.deb`, `.rpm`, `.AppImage`, `.snap`) are unsigned by us. The s
 | 1.0     | 2026.01.02 | D Benson    | Initial release |
 | 1.1     | 2026.05.09 | D Benson    | Added §11 Code Signing (Windows via Azure Trusted Signing, macOS via Apple Developer ID); fixed stale `CSC_LINK` reference in §4.4 (it's the macOS secret, not Windows) |
 | 1.2     | 2026.09.23 | D Benson    | Corrected §4.1-4.3 and §10 for the PR-based prepare-release flow: the workflow opens a release PR and never tags; the submodule bump, merge and tag on the `releases/vX.Y.Z` head are manual |
+| 1.3     | 2026.09.23 | D Benson    | §4.1-4.2: the submodule bump moves to the tip of jgraph/drawio's dev branch once it carries `VERSION` X.Y.Z, not to the `vX.Y.Z` tag, which dev can be ahead of |
