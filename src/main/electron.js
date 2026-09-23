@@ -12,6 +12,7 @@ import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import { getUpdateChannel } from './update-channel.js';
 import { listExportFiles, lexists, openExportFile } from './export-files.js';
 import { getSystem32Path } from './system-path.js';
+import FileWatcher from './file-watcher.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
@@ -751,6 +752,24 @@ function createWindow (opt = {})
 	{
 		invalidateConfigReadablePaths();
 		legacyLibrariesMigration = migrateLegacyLibrariesOnce(mainWindow.webContents);
+	});
+
+	// File watches are keyed by webContents, so drop this window's watches when
+	// it goes away or navigates: the renderer that armed them is gone and its
+	// fs listeners would keep polling forever [jgraph/drawio-desktop#2541]
+	const watchOwner = mainWindow.webContents;
+
+	watchOwner.on('destroyed', () =>
+	{
+		fileWatcher.unwatchAll(watchOwner);
+	});
+
+	// Only fires once a main frame navigation has committed, so the page that
+	// armed these watches is already gone and an aborted navigation cannot
+	// clear a watch that is still live
+	watchOwner.on('did-navigate', () =>
+	{
+		fileWatcher.unwatchAll(watchOwner);
 	});
 
 	// Intercept Ctrl/Cmd+Shift+V before it reaches the renderer
@@ -4179,31 +4198,38 @@ function openExternal(url)
 	return false;
 }
 
-async function watchFile(filePath)
+const fileWatcher = new FileWatcher(fs);
+
+// The requesting webContents is watched, not the focused window: the app is
+// often not frontmost when a file is opened, and with more than one window the
+// focused one is not the one that asked [jgraph/drawio-desktop#2541]
+async function watchFile(webContents, filePath)
 {
 	await assertReadablePath(filePath);
 
-	let win = BrowserWindow.getFocusedWindow();
-
-	if (win)
+	fileWatcher.watch(webContents, filePath, (curr, prev) =>
 	{
-		fs.watchFile(filePath, (curr, prev) => {
-			try
+		try
+		{
+			if (webContents.isDestroyed())
 			{
-				win.webContents.send('fileChanged', {
-					path: filePath,
-					curr: curr,
-					prev: prev
-				});
+				fileWatcher.unwatchAll(webContents);
+				return;
 			}
-			catch (e) {} // Ignore
-		});
-	}
+
+			webContents.send('fileChanged', {
+				path: filePath,
+				curr: curr,
+				prev: prev
+			});
+		}
+		catch (e) {} // Ignore
+	});
 }
 
-function unwatchFile(filePath)
+function unwatchFile(webContents, filePath)
 {
-	fs.unwatchFile(filePath);
+	fileWatcher.unwatch(webContents, filePath);
 }
 
 function getLocalFonts()
@@ -4330,11 +4356,11 @@ ipcMain.on("rendererReq", async (event, args) =>
 			break;
 		case 'watchFile':
 			reqStr(args.path, 'path');
-			ret = await watchFile(args.path);
+			ret = await watchFile(event.sender, args.path);
 			break;
 		case 'unwatchFile':
 			reqStr(args.path, 'path');
-			ret = await unwatchFile(args.path);
+			ret = await unwatchFile(event.sender, args.path);
 			break;
 		case 'exit':
 			app.quit();
