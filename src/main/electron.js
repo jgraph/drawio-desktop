@@ -11,13 +11,14 @@ import { parseDrawioArgs, formatHelp, validFormatRegExp as validFormatRegExpImpo
 import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import { getUpdateChannel } from './update-channel.js';
 import { listExportFiles, lexists, openExportFile } from './export-files.js';
+import { getSystem32Path } from './system-path.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
 import Store from 'electron-store';
 import ProgressBar from './progress-bar.js';
 import contextMenu from 'electron-context-menu';
-import {spawn, exec} from 'child_process';
+import {spawn, execFile} from 'child_process';
 import {disableUpdate as disUpPkg} from './disableUpdate.js';
 
 let store;
@@ -195,6 +196,16 @@ let firstWinLoaded = false
 let firstWinFilePath = null
 const isMac = process.platform === 'darwin'
 const isWin = process.platform === 'win32'
+
+// Dependencies still start programs by bare name (electron-updater's signature
+// check runs chcp and powershell.exe through cmd.exe). If this variable exists,
+// cmd.exe and libuv skip the working directory when they look for a program
+// [GHSA-qg46-52fx-h7p8]
+if (isWin)
+{
+	process.env.NoDefaultCurrentDirectoryInExePath = '1';
+}
+
 let enableSpellCheck = store != null ? store.get('enableSpellCheck') : false;
 enableSpellCheck = enableSpellCheck != null ? enableSpellCheck : isMac;
 let enableStoreBkp = store != null ? (store.get('enableStoreBkp') != null ? store.get('enableStoreBkp') : true) : false;
@@ -3763,7 +3774,7 @@ async function saveDraft(fileObject, data)
 		try
 		{
 			// Add Hidden attribute:
-			var child = spawn('attrib', ['+h', draftFileName]);
+			var child = spawn(getSystem32Path('attrib.exe'), ['+h', draftFileName]);
 			child.on('error', function(err)
 			{
 				console.log('hiding draft file error: ' + err);
@@ -3919,7 +3930,7 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 					try
 					{
 						// Add Hidden attribute:
-						var child = spawn('attrib', ['+h', bkpPath]);
+						var child = spawn(getSystem32Path('attrib.exe'), ['+h', bkpPath]);
 						child.on('error', function(err) 
 						{
 							console.log('hiding backup file error: ' + err);
@@ -4199,18 +4210,20 @@ function getLocalFonts()
 {
 	return new Promise((resolve) =>
 	{
-		let cmd;
+		let file, args;
 
 		if (process.platform === 'win32')
 		{
-			cmd = 'powershell -NoProfile -command "Add-Type -AssemblyName System.Drawing; (New-Object System.Drawing.Text.InstalledFontCollection).Families | ForEach-Object { $_.Name }"';
+			file = getSystem32Path('WindowsPowerShell\\v1.0\\powershell.exe');
+			args = ['-NoProfile', '-command', 'Add-Type -AssemblyName System.Drawing; (New-Object System.Drawing.Text.InstalledFontCollection).Families | ForEach-Object { $_.Name }'];
 		}
 		else
 		{
-			cmd = 'fc-list --format="%{family[0]}\\n"';
+			file = 'fc-list';
+			args = ['--format=%{family[0]}\\n'];
 		}
 
-		exec(cmd, {encoding: 'utf8', timeout: 30000}, (err, stdout) =>
+		execFile(file, args, {encoding: 'utf8', timeout: 30000}, (err, stdout) =>
 		{
 			if (err)
 			{
