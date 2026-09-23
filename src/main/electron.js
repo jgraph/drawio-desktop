@@ -12,6 +12,7 @@ import { parseLastWinSize, placeWindowOnDisplays } from './window-bounds.js';
 import { getUpdateChannel } from './update-channel.js';
 import { listExportFiles, lexists, openExportFile } from './export-files.js';
 import { getSystem32Path } from './system-path.js';
+import { writeBackupFile } from './backup-file.js';
 import FileWatcher from './file-watcher.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
@@ -282,7 +283,16 @@ function blessPath(p)
 		{
 			blessedPaths.add(fs.realpathSync(resolved));
 		}
-		catch (e) {} // Path may not exist yet (Save As) — that's fine.
+		catch (e)
+		{
+			// Save As can select a new file in a symlinked directory. Authorise
+			// its canonical destination before the file exists too.
+			try
+			{
+				blessedPaths.add(path.join(fs.realpathSync(path.dirname(resolved)), path.basename(resolved)));
+			}
+			catch (e2) {} // Some filesystems do not support realpath.
+		}
 
 		persistBlessedPaths();
 	}
@@ -3576,6 +3586,24 @@ async function canonicalisePath(p)
 	}
 	catch (e)
 	{
+		// A dangling or looping symlink is not a new file. Falling back to
+		// its lexical name would authorise writes through that link.
+		let stat;
+
+		try
+		{
+			stat = await fsProm.lstat(resolved);
+		}
+		catch (statError)
+		{
+			if (statError.code !== 'ENOENT') throw statError;
+		}
+
+		if (stat?.isSymbolicLink())
+		{
+			throw new Error('path not authorised');
+		}
+
 		// File doesn't exist yet (e.g. Save As to a new file). Canonicalise
 		// the parent directory so symlinks in the directory chain are still
 		// resolved.
@@ -3616,7 +3644,7 @@ async function canonicalisePath(p)
 // their draft/backup siblings.
 async function assertWritablePath(p)
 {
-	const {resolved, realpath} = await canonicalisePath(p);
+	const {realpath} = await canonicalisePath(p);
 
 	// Block writes anywhere inside userData (settings store, Local Storage)
 	let userDataDir;
@@ -3636,12 +3664,13 @@ async function assertWritablePath(p)
 		throw new Error('path not authorised');
 	}
 
-	if (blessedPaths.has(realpath) || blessedPaths.has(resolved))
+	// The lexical name must never override an unauthorised symlink target.
+	if (blessedPaths.has(realpath))
 	{
 		return;
 	}
 
-	if (isDraftOrBkpOfBlessed(realpath) || isDraftOrBkpOfBlessed(resolved))
+	if (isDraftOrBkpOfBlessed(realpath))
 	{
 		return;
 	}
@@ -3658,15 +3687,14 @@ async function assertWritablePath(p)
 // through a file dialog [jgraph/drawio-desktop#1278].
 async function assertReadablePath(p)
 {
-	const {resolved, realpath} = await canonicalisePath(p);
+	const {realpath} = await canonicalisePath(p);
 
-	if (blessedPaths.has(realpath) || blessedPaths.has(resolved) ||
-		configReadablePaths.has(realpath) || configReadablePaths.has(resolved))
+	if (blessedPaths.has(realpath) || configReadablePaths.has(realpath))
 	{
 		return;
 	}
 
-	if (isDraftOrBkpOfBlessed(realpath) || isDraftOrBkpOfBlessed(resolved))
+	if (isDraftOrBkpOfBlessed(realpath))
 	{
 		return;
 	}
@@ -3676,7 +3704,7 @@ async function assertReadablePath(p)
 	// collected. Refresh once and re-check before refusing.
 	await loadConfigReadablePaths();
 
-	if (configReadablePaths.has(realpath) || configReadablePaths.has(resolved))
+	if (configReadablePaths.has(realpath))
 	{
 		return;
 	}
@@ -3687,7 +3715,7 @@ async function assertReadablePath(p)
 	{
 		try { await legacyLibrariesMigration; } catch (e) {}
 
-		if (blessedPaths.has(realpath) || blessedPaths.has(resolved))
+		if (blessedPaths.has(realpath))
 		{
 			return;
 		}
@@ -3855,11 +3883,6 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 	const oldBkpPath = path.join(path.dirname(fileObject.path), OLD_BKP_PREFEX + path.basename(fileObject.path) + BKP_EXT);
 	var writeEnc = defEnc || fileObject.encoding;
 
-	// Backup paths are derived siblings of fileObject.path, so they pass the
-	// draft/bkp carve-out — but realpath them anyway in case symlinks have
-	// been planted at those names.
-	await assertWritablePath(bkpPath);
-
 	var writeFile = async function()
 	{
 		let fh;
@@ -3922,15 +3945,13 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 		if (enableStoreBkp && !isNew)
 		{
 			//Copy file to backup file (after conflict and stat is checked)
-			let bkpFh;
-
 			try
 			{
-				//Use file read then write to open the backup file direct sync write to reduce the chance of file corruption
+				// An unsafe backup is skipped like other backup failures. The
+				// replacement also handles links planted after this check.
+				await assertWritablePath(bkpPath);
 				let fileContent = await fsProm.readFile(fileObject.path, writeEnc);
-				bkpFh = await fsProm.open(bkpPath, O_SYNC | O_CREAT | O_WRONLY | O_TRUNC);
-				await fsProm.writeFile(bkpFh, fileContent, writeEnc);
-				await bkpFh.sync(); // Flush to disk
+				await writeBackupFile(bkpPath, fileContent, writeEnc);
 				backupCreated = true;
 			}
 			catch (e) 
@@ -3942,9 +3963,7 @@ async function saveFile(fileObject, data, origStat, overwrite, defEnc)
 			}
 			finally 
 			{
-				await bkpFh?.close();
-
-				if (isWin)
+				if (isWin && backupCreated)
 				{
 					try
 					{
