@@ -1,8 +1,8 @@
 # draw.io Desktop Release Process
 
 **Document ID:** REL-PROC-DESKTOP-001  
-**Version:** 1.1  
-**Last Updated:** 2026-05-09
+**Version:** 1.2  
+**Last Updated:** 2026-09-23
 **Owner:** Engineering Team
 
 ---
@@ -51,51 +51,64 @@ When updating tooling versions:
 ### 4.1 Automated Preparation (GitHub Actions)
 
 The `prepare-release` workflow automates:
-- Updating drawio submodule to target ref (with recursive submodule init)
 - Updating version in package.json
-- Running `npm audit` and failing on critical/high vulnerabilities
+- Updating the drawio submodule to `drawio_ref`, when one is given
+- Regenerating package-lock.json from scratch (see **Dependency lock** below)
+- Generating draft release notes
+- Running `npm audit` and failing on critical/high vulnerabilities in runtime dependencies
 - Running `npm outdated` for review
-- Committing changes and creating version tag
 - Uploading audit evidence as artifacts
+- Committing to a new branch `releases/vX.Y.Z` and opening a pull request "Release vX.Y.Z" into dev
+
+It does not create the version tag, so no build starts when it completes. The tag is created by hand after the pull request is merged (Section 4.3).
 
 **To trigger:**
 
 1. Go to Actions → "Prepare Release"
-2. Click "Run workflow"
+2. Click "Run workflow" on the dev branch
 3. Enter:
-   - **version:** The release version (e.g., `29.0.4`)
-   - **drawio_ref:** (Optional) Specific tag/commit for the public `drawio` submodule. Leave empty to keep the current submodule pin — CI builds source the editor from `drawio-dev`'s release branch, so the public submodule only needs to track what out-of-tree builders should see.
-   - **dry_run:** Check to validate without committing
+   - **version:** The release version, which is the `VERSION` on drawio-dev's `release` branch (e.g., `31.4.5`, see Section 4.2)
+   - **previous_version:** (Optional) The previous release, used in the ChangeLog line of the draft release notes (e.g., `31.4.4`). Leave empty to use the newest tag reachable from dev.
+   - **drawio_ref:** (Optional) Tag or commit to move the public `drawio` submodule to. Leave empty: the submodule is moved to the public tag in its own commit before the workflow runs (Section 4.2).
+   - **dry_run:** Check to validate without creating the branch or pull request
+   - **override_audit:** Check only to proceed despite critical/high vulnerabilities in runtime dependencies that have been reviewed and accepted. The override is recorded in the pull request.
 
 **What happens:**
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  Workflow: prepare-release                                       │
+│  Workflow: prepare-release                                      │
 ├─────────────────────────────────────────────────────────────────┤
-│  1. Validate version format (X.Y.Z)                              │
-│  2. Checkout with submodules (recursive)                         │
+│  1. Validate version format (X.Y.Z)                             │
+│  2. Checkout with submodules (recursive), full history          │
 │  3. Setup Node.js 24.x                                          │
-│  4. Update drawio submodule → target ref                         │
-│     └── Update nested submodules (recursive)                     │
-│  5. Update package.json version                                  │
-│  6. npm ci                                                       │
-│  7. npm audit → FAIL if critical/high vulns                      │
-│  8. npm outdated → report only                                  │
-│  9. Upload evidence artifacts                                    │
-│ 10. Commit + push                                                │
-│ 11. Create + push tag v{version}                                 │
-│ 12. Build workflows trigger automatically                        │
+│  4. Update drawio submodule → drawio_ref (only if supplied)     │
+│  5. Update package.json version                                 │
+│  6. rm -rf node_modules package-lock.json, then npm install     │
+│  7. Generate draft release notes                                │
+│  8. npm audit (all dependencies reported, runtime ones gated)   │
+│  9. npm outdated → report only                                  │
+│ 10. Upload evidence artifacts                                   │
+│ 11. FAIL if critical/high vulns in runtime dependencies         │
+│     └── unless override_audit is set                            │
+│ 12. Commit to new branch releases/vX.Y.Z + push                 │
+│ 13. Open PR "Release vX.Y.Z" into dev                           │
+│     (12 and 13 are skipped on a dry run; nothing is tagged)     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+**Dependency lock:** Step 6 deletes `node_modules` and `package-lock.json` and runs `npm install` rather than `npm ci`. This is deliberate: a lock written from scratch has a resolved URL and integrity hash on every entry, which offline builds such as Flatpak need ([#2301](https://github.com/jgraph/drawio-desktop/issues/2301)). As a result every caret range in package.json floats to its newest match at release time. Only an exact version pin in package.json holds a dependency back.
+
 **Evidence produced:**
 - Workflow run log (retained by GitHub)
-- `release-evidence-v{VERSION}` artifact containing:
-  - `audit-results.json`
+- `release-evidence-vX.Y.Z` artifact, uploaded before the audit gate so it is also kept when the gate fails, containing:
+  - `audit-results.json` (all dependencies)
+  - `audit-prod.json` (runtime dependencies, the ones the gate checks)
   - `audit-report.txt`
   - `outdated-report.txt`
+  - `release-notes.md`
 - Job summary with version details and audit results
+- The release pull request, whose body holds the npm audit result and the draft release notes
 
 ### 4.2 Pre-Release Verification
 
@@ -105,15 +118,41 @@ Before triggering the workflow:
 |---|------|
 | ☐ | Release scope documented (what's included) |
 | ☐ | All feature changes merged to dev branch |
-| ☐ | Target drawio ref exists and is tested |
+| ☐ | Release version read from `VERSION` on drawio-dev's `release` branch |
+| ☐ | Public `jgraph/drawio` tag `vX.Y.Z` exists |
+| ☐ | drawio submodule moved to that tag in its own commit on dev, "Updates to draw.io X.Y.Z" |
 
-### 4.3 Monitor Build
+The version is not a free choice. The CI build workflows copy `VERSION` from drawio-dev's `release` branch into the submodule tree and `npm run sync` stamps it into package.json, so the desktop version always equals that branch's `VERSION`. A tag that does not match makes the builds publish a draft release for the other version.
+
+The public tag appears when drawio-dev's "Deploy to Public GitHub" workflow runs. Once it exists, move the submodule on an up-to-date dev checkout:
+
+```bash
+git -C drawio fetch --tags origin
+git -C drawio checkout vX.Y.Z
+git add drawio
+git commit -m "Updates to draw.io X.Y.Z"
+git push origin dev
+```
+
+The CI builds copy only the minified editor (`js/*.min.js`) and `VERSION` from drawio-dev. Every other web app file the app loads, such as `index.html`, `bootstrap.js`, `ElectronApp.js`, the resources and the styles, ships from the submodule pin.
+
+### 4.3 Merge, Tag and Monitor Build
 
 After the prepare-release workflow completes:
 
-1. Verify the build workflows triggered automatically
-2. Monitor build status in Actions tab
-3. All platform builds must succeed before proceeding
+1. Review the pull request "Release vX.Y.Z". Its single commit, "Prepare release vX.Y.Z", should change only the version in package.json and the regenerated package-lock.json. The lock diff shows which dependencies moved (Section 4.1).
+2. Merge it into dev. dev requires one approving review.
+3. Create an annotated tag on the head of `releases/vX.Y.Z` (the "Prepare release vX.Y.Z" commit) and push it:
+
+   ```bash
+   git fetch origin
+   git tag -a vX.Y.Z -m "Release vX.Y.Z" origin/releases/vX.Y.Z
+   git push origin vX.Y.Z
+   ```
+
+   The pull request body suggests tagging the head of dev after the merge instead. That is the same tree unless other commits reached dev in between, and the branch head is the commit that was reviewed.
+4. The tag push starts `electron-builder.yml` (macOS and Linux) and `electron-builder-win.yml` (Windows, then the `microsoft-store` job). Monitor them in the Actions tab. All platform builds must succeed before proceeding.
+5. The builds create a draft release named X.Y.Z on tag vX.Y.Z with 28 assets (29 once the release is published and hash-gen adds `Files-SHA256-Hashes.txt`). The `.appx` is not among them; the `microsoft-store` job submits it to the Store (Section 4.5). A draft named after another version means the tag did not match drawio-dev's `VERSION` (Section 4.2).
 
 **Evidence:** Link to successful build run: `_______________`
 
@@ -291,14 +330,18 @@ For audits requiring longer retention, download artifacts to secure storage.
 ### Build fails
 
 1. Check workflow logs for error
-2. Fix issue in codebase
-3. Delete the tag: `git push --delete origin v{VERSION}`
-4. Re-run prepare-release workflow
+2. For a transient failure (runner, network, notarisation), use "Re-run failed jobs". A re-run reads drawio-dev's `release` branch again, so first check that its `VERSION` still matches the tag.
+3. For a failure that needs a commit, including a fix to a workflow file (tag builds use the workflow files at the tagged commit):
+   1. Fix it on dev
+   2. Delete the draft release and the tag: `git push --delete origin vX.Y.Z` and `git tag -d vX.Y.Z`
+   3. Create the tag again on the commit on dev that has the fix and push it (Section 4.3)
+
+There is no need to re-run prepare-release: the merged release pull request has already set the version on dev.
 
 ### Submodule ref not found
 
 1. Verify the drawio tag/ref exists in the public drawio repository
-2. Use `drawio_ref` input to specify the correct ref — or leave it empty to keep the current submodule pin (the CI build workflows source the editor from `drawio-dev`, so they are unaffected by a lagging public pin)
+2. Use `drawio_ref` input to specify the correct ref, or leave it empty to keep the current submodule pin. Releases leave it empty and move the submodule beforehand (Section 4.2)
 
 ---
 
@@ -380,3 +423,4 @@ Linux artifacts (`.deb`, `.rpm`, `.AppImage`, `.snap`) are unsigned by us. The s
 |---------|------------|-------------|---------|
 | 1.0     | 2026.01.02 | D Benson    | Initial release |
 | 1.1     | 2026.05.09 | D Benson    | Added §11 Code Signing (Windows via Azure Trusted Signing, macOS via Apple Developer ID); fixed stale `CSC_LINK` reference in §4.4 (it's the macOS secret, not Windows) |
+| 1.2     | 2026.09.23 | D Benson    | Corrected §4.1-4.3 and §10 for the PR-based prepare-release flow: the workflow opens a release PR and never tags; the submodule bump, merge and tag on the `releases/vX.Y.Z` head are manual |
