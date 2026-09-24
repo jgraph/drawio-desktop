@@ -2967,6 +2967,20 @@ function exportDiagram(event, args, directFinalize)
 	if (event != null && event.senderFrame != null &&
 		!validateSender(event.senderFrame)) return null;
 
+	// Only the first reply counts: a renderer that dies while printing or
+	// capturing fails that step too, which replies an error of its own
+	var reply = event.reply;
+	var replied = false;
+
+	event.reply = function()
+	{
+		if (!replied)
+		{
+			replied = true;
+			reply.apply(event, arguments);
+		}
+	};
+
 	var browser = null;
 	
 	try
@@ -3002,6 +3016,13 @@ function exportDiagram(event, args, directFinalize)
 		}
 
 		const contents = browser.webContents;
+
+		// A renderer that crashed or was killed (eg. out of memory) never
+		// replies. Not emitted when finalize destroys the window
+		contents.on('render-process-gone', function(e, details)
+		{
+			event.reply('export-error', 'Renderer process gone (' + details.reason + ')');
+		});
 
 		// Resolved diagram XML reported by the renderer (render-finished). For
 		// Mermaid/CSV/layout inputs the CLI never set args.xml (or it's the
