@@ -1273,6 +1273,27 @@ app.whenReady().then(() =>
 					{
 						var curFile = files[fileIndex];
 						
+						// Outside the try block so the catch below can call it
+						// (ES modules scope function declarations to their block)
+						function next()
+						{
+							fileIndex++;
+
+							if (fileIndex < files.length)
+							{
+								processOneFile();
+							}
+							else if (exportFailed)
+							{
+								app.exit(1);
+							}
+							else
+							{
+								cmdQPressed = true;
+								dummyWin.destroy();
+							}
+						};
+
 						try
 						{
 							var ext = path.extname(curFile).toLowerCase();
@@ -1393,33 +1414,16 @@ app.whenReady().then(() =>
 								startExport();
 							}
 							
-							function next()
-							{
-								fileIndex++;
-								
-								if (fileIndex < files.length)
-								{
-									processOneFile();
-								}
-								else if (exportFailed)
-								{
-									app.exit(1);
-								}
-								else
-								{
-									cmdQPressed = true;
-									dummyWin.destroy();
-								}
-							};
-							
 							function startExport()
 							{
 								var replied = false;
+								var timer = null;
 								var mockEvent = {
 									reply: function(msg, data)
 									{
 										if (replied) return;
 										replied = true;
+										clearTimeout(timer);
 
 										try
 										{
@@ -1509,9 +1513,11 @@ app.whenReady().then(() =>
 							    	}
 								};
 
+								// Replaced by exportDiagram once it has a window to close
+								mockEvent.finalize = function() {};
+
 								if (format === 'html')
 								{
-									mockEvent.finalize = function() {};
 									var xml = expArgs.xml;
 
 									if (expArgs.xmlEncoded)
@@ -1572,6 +1578,17 @@ app.whenReady().then(() =>
 								}
 								else
 								{
+									// A renderer that never replies must not stall the batch
+									if (options.timeout > 0)
+									{
+										// setTimeout fires at once for delays over 2^31 - 1 ms
+										timer = setTimeout(function()
+										{
+											mockEvent.reply('export-error', 'Export timed out after ' +
+												options.timeout + ' seconds');
+										}, Math.min(options.timeout * 1000, 0x7fffffff));
+									}
+
 									exportDiagram(mockEvent, expArgs, true);
 								}
 							};
@@ -2987,6 +3004,15 @@ function exportDiagram(event, args, directFinalize)
 
 		browser.loadURL(`file://${codeDir}/export3.html`);
 
+		// A CLI export can time out before the page has loaded
+		if (directFinalize === true)
+		{
+			event.finalize = function()
+			{
+				browser.destroy();
+			};
+		}
+
 		const contents = browser.webContents;
 
 		// Resolved diagram XML reported by the renderer (render-finished). For
@@ -2999,6 +3025,10 @@ function exportDiagram(event, args, directFinalize)
 			//Set finalize here since it is call in the reply below
 			function finalize()
 			{
+				// ipcMain listeners are global, so one left behind would handle
+				// the next export's messages with this destroyed window
+				ipcMain.removeListener('render-finished', renderingFinishHandler);
+				ipcMain.removeListener('export-error', exportErrorHandler);
 				browser.destroy();
 			};
 			
@@ -3080,6 +3110,9 @@ function exportDiagram(event, args, directFinalize)
 					//	 	1 sec is most probably enough (for small images, 5 for large ones) BUT not a stable solution
 					setTimeout(function()
 					{
+						// Ended by a CLI timeout in the meantime
+						if (browser.isDestroyed()) return;
+
 						browser.capturePage().then(function(img)
 						{
 							//Image is double the given bounds, so resize is needed!
@@ -3224,7 +3257,17 @@ function exportDiagram(event, args, directFinalize)
 				}
 			};
 			
+			// Sent instead of render-finished for input the renderer cannot
+			// convert, eg. invalid Mermaid or an unknown --layout
+			function exportErrorHandler(e, msg)
+			{
+				if (!validateSender(e.senderFrame)) return null;
+
+				event.reply('export-error', msg);
+			};
+
 			ipcMain.once('render-finished', renderingFinishHandler);
+			ipcMain.once('export-error', exportErrorHandler);
 
 			if (args.format == 'xml')
 			{

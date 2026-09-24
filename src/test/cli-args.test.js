@@ -328,6 +328,37 @@ describe('--mermaid-image', () =>
 	});
 });
 
+// ─── --timeout ───────────────────────────────────────────────────────────────
+
+describe('--timeout', () =>
+{
+	// Off by default: a slow export (eg. a large organic layout) must not fail
+	test('defaults to 0 (no limit)', () =>
+	{
+		assert.equal(parse([]).opts.timeout, 0);
+	});
+
+	test('parses whole seconds and keeps the positional file', () =>
+	{
+		const { opts, args } = parse(['-x', '--timeout', '60', 'in.mmd']);
+		assert.equal(opts.timeout, 60);
+		assert.deepEqual(args, ['in.mmd']);
+		assert.equal(parse(['--timeout=120']).opts.timeout, 120);
+	});
+
+	test('0 disables the timeout', () =>
+	{
+		assert.equal(parse(['--timeout', '60', '--timeout', '0']).opts.timeout, 0);
+	});
+
+	test('invalid values fall back to the default', () =>
+	{
+		assert.equal(parse(['--timeout', 'abc']).opts.timeout, 0);
+		assert.equal(parse(['--timeout', '1.5']).opts.timeout, 0);
+		assert.equal(parse(['--timeout=-5']).opts.timeout, 0);
+	});
+});
+
 // ─── Numeric options ─────────────────────────────────────────────────────────
 
 describe('numeric options', () =>
