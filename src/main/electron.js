@@ -366,6 +366,32 @@ function collectConfigPaths()
 				});
 			}
 
+			// Libraries offered in the More Shapes dialog
+			if (Array.isArray(config.libraries))
+			{
+				config.libraries.forEach(function(section)
+				{
+					if (section != null && typeof section === 'object' &&
+						Array.isArray(section.entries))
+					{
+						section.entries.forEach(function(entry)
+						{
+							if (entry != null && typeof entry === 'object' &&
+								Array.isArray(entry.libs))
+							{
+								entry.libs.forEach(function(lib)
+								{
+									if (lib != null && typeof lib === 'object')
+									{
+										addUrl(lib.url);
+									}
+								});
+							}
+						});
+					}
+				});
+			}
+
 			if (Array.isArray(config.customFonts))
 			{
 				config.customFonts.forEach(addFont);
