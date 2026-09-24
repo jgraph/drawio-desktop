@@ -1039,6 +1039,15 @@ app.whenReady().then(() =>
     //Start export mode?
     if (options.export)
 	{
+		// Electron shows an uncaught error in a modal dialog, which stalls a CI
+		// run. Nothing can be trusted after one, so fail the whole export. Also
+		// stops Electron's dialog, which only shows without other listeners
+		process.on('uncaughtException', function(e)
+		{
+			console.error('Error: uncaught exception: ' + ((e != null && e.stack) || e));
+			app.exit(1);
+		});
+
     	var dummyWin = new BrowserWindow({
 			show : false,
 			webPreferences: {
