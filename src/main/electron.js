@@ -1261,10 +1261,15 @@ app.whenReady().then(() =>
 					{
 						var curFile = files[fileIndex];
 						
+						// Ends the vsdx import or the export in progress on timeout
+						var abort = null;
+						var timer = null;
+
 						// Outside the try block so the catch below can call it
 						// (ES modules scope function declarations to their block)
 						function next()
 						{
+							clearTimeout(timer);
 							fileIndex++;
 
 							if (fileIndex < files.length)
@@ -1281,6 +1286,17 @@ app.whenReady().then(() =>
 								dummyWin.destroy();
 							}
 						};
+
+						// A renderer that never replies must not stall the batch.
+						// One limit for the whole file, vsdx import included
+						if (options.timeout > 0)
+						{
+							// setTimeout fires at once for delays over 2^31 - 1 ms
+							timer = setTimeout(function()
+							{
+								abort('Export timed out after ' + options.timeout + ' seconds');
+							}, Math.min(options.timeout * 1000, 0x7fffffff));
+						}
 
 						try
 						{
@@ -1337,39 +1353,78 @@ app.whenReady().then(() =>
 
 							if (ext === '.vsdx')
 							{
-								dummyWin.loadURL(`file://${codeDir}/vsdxImporter.html`);
+								// A window per file, so a crashed or stuck importer goes
+								// with it instead of answering for the next file
+								var importWin = new BrowserWindow({
+									show : false,
+									webPreferences: {
+										preload: `${__dirname}/electron-preload.js`,
+										contextIsolation: true,
+										nodeIntegration: false,
+										webviewTag: false,
+										webSecurity: true,
+										disableBlinkFeatures: 'Auxclick'
+									}
+								});
 
-								const contents = dummyWin.webContents;
+								const contents = importWin.webContents;
 
-								// once() and cross-removal: with several vsdx inputs in one
-								// batch, leftover listeners from the previous file would
-								// re-send its content and consume the next file's reply
-								contents.once('did-finish-load', function()
-							    {
-									contents.send('import', fileContent);
+								// Ends the import once, on the importer's reply, a renderer
+								// crash or the timeout, whichever comes first
+								function endImport(xml, error)
+								{
+									if (importWin.isDestroyed()) return;
 
-									function onImportSuccess(e, xml)
-						    	    {
-										if (!validateSender(e.senderFrame)) return null;
+									ipcMain.removeListener('import-success', onImportSuccess);
+									ipcMain.removeListener('import-error', onImportError);
+									importWin.destroy();
 
-										ipcMain.removeListener('import-error', onImportError);
+									if (xml != null)
+									{
 										expArgs.xml = xml;
 										startExport();
-						    	    }
-
-						    	    function onImportError(e)
-						    	    {
-										if (!validateSender(e.senderFrame)) return null;
-
-										ipcMain.removeListener('import-success', onImportSuccess);
-						    	    	console.error('Error: cannot import VSDX file: ' + curFile);
+									}
+									else
+									{
+										console.error('Error: ' + (error || 'cannot import VSDX file') + ': ' + curFile);
 										exportFailed = true;
-						    	    	next();
-						    	    }
+										next();
+									}
+								};
 
-									ipcMain.once('import-success', onImportSuccess);
-									ipcMain.once('import-error', onImportError);
-							    });
+								function onImportSuccess(e, xml)
+								{
+									if (!validateSender(e.senderFrame)) return null;
+
+									endImport(xml);
+								};
+
+								function onImportError(e)
+								{
+									if (!validateSender(e.senderFrame)) return null;
+
+									endImport(null);
+								};
+
+								ipcMain.once('import-success', onImportSuccess);
+								ipcMain.once('import-error', onImportError);
+
+								contents.on('render-process-gone', function(e, details)
+								{
+									endImport(null, 'Renderer process gone (' + details.reason + ')');
+								});
+
+								contents.once('did-finish-load', function()
+								{
+									contents.send('import', fileContent);
+								});
+
+								abort = function(msg)
+								{
+									endImport(null, msg);
+								};
+
+								importWin.loadURL(`file://${codeDir}/vsdxImporter.html`);
 							}
 							else
 							{
@@ -1405,13 +1460,11 @@ app.whenReady().then(() =>
 							function startExport()
 							{
 								var replied = false;
-								var timer = null;
 								var mockEvent = {
 									reply: function(msg, data)
 									{
 										if (replied) return;
 										replied = true;
-										clearTimeout(timer);
 
 										try
 										{
@@ -1504,6 +1557,11 @@ app.whenReady().then(() =>
 								// Replaced by exportDiagram once it has a window to close
 								mockEvent.finalize = function() {};
 
+								abort = function(msg)
+								{
+									mockEvent.reply('export-error', msg);
+								};
+
 								if (format === 'html')
 								{
 									var xml = expArgs.xml;
@@ -1566,17 +1624,6 @@ app.whenReady().then(() =>
 								}
 								else
 								{
-									// A renderer that never replies must not stall the batch
-									if (options.timeout > 0)
-									{
-										// setTimeout fires at once for delays over 2^31 - 1 ms
-										timer = setTimeout(function()
-										{
-											mockEvent.reply('export-error', 'Export timed out after ' +
-												options.timeout + ' seconds');
-										}, Math.min(options.timeout * 1000, 0x7fffffff));
-									}
-
 									exportDiagram(mockEvent, expArgs, true);
 								}
 							};
