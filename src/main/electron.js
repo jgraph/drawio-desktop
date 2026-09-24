@@ -1606,12 +1606,14 @@ app.whenReady().then(() =>
 											return;
 										}
 									}
-									else if (expArgs.csv)
+									// Not truthiness: an empty file would slip through as an
+									// HTML page without a diagram
+									else if (expArgs.csv != null)
 									{
 										mockEvent.reply('export-error', 'CSV to HTML export is not supported');
 										return;
 									}
-									else if (expArgs.mermaid)
+									else if (expArgs.mermaid != null)
 									{
 										mockEvent.reply('export-error', 'Mermaid to HTML export is not supported');
 										return;
