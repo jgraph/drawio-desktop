@@ -972,13 +972,6 @@ app.whenReady().then(() =>
 	// Enforce our CSP on all contents
 	session.defaultSession.webRequest.onHeadersReceived((details, callback) =>
 	{
-		// Skip CSP for config-editor iframe
-		if (details.url.indexOf('config-editor.html') >= 0)
-		{
-			callback({responseHeaders: details.responseHeaders});
-			return;
-		}
-
 		callback({
 			responseHeaders: {
 				...details.responseHeaders,
@@ -1802,6 +1795,8 @@ app.whenReady().then(() =>
 
 	function checkForUpdatesFn(e)
 	{
+		if (disableUpdate) return null;
+
 		if (e != null && e.senderFrame != null &&
 			!validateSender(e.senderFrame)) return null;
 
@@ -1997,7 +1992,7 @@ app.whenReady().then(() =>
 	const lastUpdateCheck = store?.get('lastUpdateCheck') || 0;
 	const shouldCheckUpdates = Date.now() - lastUpdateCheck > UPDATE_CHECK_INTERVAL;
 	
-	if (store == null || (!disableUpdate && !store.get('dontCheckUpdates') && shouldCheckUpdates))
+	if (!disableUpdate && (store == null || (!store.get('dontCheckUpdates') && shouldCheckUpdates)))
 	{
 		if (store != null)
 		{
