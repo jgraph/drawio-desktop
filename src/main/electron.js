@@ -175,19 +175,7 @@ contextMenu({
 	showSearchWithGoogle: false,
 	showCopyLink: false,
 	showSelectAll: true,
-	append: (defaultActions, params, browserWindow) => [
-		{
-			label: 'Paste and Match Style',
-			// Electron 44 removed the synchronous clipboard.availableFormats(), so
-			// mirror the built-in Paste item instead of checking for clipboard text
-			visible: params.isEditable,
-			enabled: params.editFlags.canPaste,
-			click: () => {
-				// Execute the paste command in the focused window
-				browserWindow.webContents.pasteAndMatchStyle();
-			}
-		}
-	]
+	showPasteAndMatchStyle: true
 });
 
 const __DEV__ = process.env.DRAWIO_ENV === 'dev'
