@@ -22,9 +22,9 @@ function renderer(config)
 	return {webContents: {executeJavaScript: async (script) => vm.runInContext(script, context)}};
 }
 
-function mainProcess(win)
+function mainProcess(win, files = fs)
 {
-	const context = vm.createContext({fs, path,
+	const context = vm.createContext({fs: files, path,
 		BrowserWindow: {getFocusedWindow: () => win, getAllWindows: () => [win]}});
 	vm.runInContext(helpers, context, {filename: 'electron-config-paths.js'});
 	return context;
@@ -107,5 +107,26 @@ describe('loadConfigReadablePaths', () =>
 		}));
 		await vm.runInContext('loadConfigReadablePaths()', context);
 		assert.deepEqual([...vm.runInContext('configReadablePaths', context)], [library]);
+	});
+
+	test('keeps the form that reads are checked against for a mapped network drive', async (t) =>
+	{
+		const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'drawio-config-')));
+		t.after(() => fs.rmSync(root, {recursive: true, force: true}));
+		const share = path.join(root, 'share');
+		const drive = path.join(root, 'Z');
+		const library = path.join(drive, 'library.xml');
+		fs.mkdirSync(share);
+		fs.writeFileSync(path.join(share, 'library.xml'), '<mxlibrary>[]</mxlibrary>');
+		fs.symlinkSync(share, drive, 'junction');
+		// Node's JS walker keeps a mapped drive as given, see mapDrive in backup-file.test.js
+		const walker = (p, options) => path.resolve(p).startsWith(drive + path.sep) ?
+			path.resolve(p) : fs.realpathSync(p, options);
+		walker.native = fs.realpathSync.native;
+		const context = mainProcess(renderer({libraries: [{entries: [{id: 'z',
+			libs: [{url: library}]}]}]}), Object.assign(Object.create(fs), {realpathSync: walker}));
+		await vm.runInContext('loadConfigReadablePaths()', context);
+		// canonicalisePath in electron.js checks reads with fs.promises.realpath
+		assert.ok(vm.runInContext('configReadablePaths', context).has(await fs.promises.realpath(library)));
 	});
 });

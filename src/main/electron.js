@@ -267,9 +267,14 @@ function blessPath(p)
 		const resolved = path.resolve(p);
 		blessedPaths.add(resolved);
 
+		// Must be the native realpath that canonicalisePath checks against.
+		// Node's JS walker (fs.realpathSync) keeps mapped and subst drive
+		// letters and the case as given, where the native call returns
+		// \\server\share, the substituted folder and the case on disk, so files
+		// on network drives were refused [jgraph/drawio-desktop#2559].
 		try
 		{
-			blessedPaths.add(fs.realpathSync(resolved));
+			blessedPaths.add(fs.realpathSync.native(resolved));
 		}
 		catch (e)
 		{
@@ -277,7 +282,7 @@ function blessPath(p)
 			// its canonical destination before the file exists too.
 			try
 			{
-				blessedPaths.add(path.join(fs.realpathSync(path.dirname(resolved)), path.basename(resolved)));
+				blessedPaths.add(path.join(fs.realpathSync.native(path.dirname(resolved)), path.basename(resolved)));
 			}
 			catch (e2) {} // Some filesystems do not support realpath.
 		}
@@ -504,7 +509,8 @@ function loadConfigReadablePaths()
 
 				try
 				{
-					configReadablePaths.add(fs.realpathSync(resolved));
+					// Native, as in blessPath
+					configReadablePaths.add(fs.realpathSync.native(resolved));
 				}
 				catch (e) {} // Configured path may not exist, that's fine
 			}
@@ -3713,6 +3719,8 @@ async function canonicalisePath(p)
 
 	try
 	{
+		// Native realpath, the same call blessPath and loadConfigReadablePaths
+		// must use for their paths to match
 		realpath = await fsProm.realpath(resolved);
 	}
 	catch (e)

@@ -71,6 +71,30 @@ function symlink(t, target, linkPath, type = 'file')
 	}
 }
 
+// Windows maps a network drive (Z: to \\server\share) in the path root, which
+// Node's JS walker fs.realpathSync steps over, so it keeps Z:\ where the native
+// realpath returns \\server\share [jgraph/drawio-desktop#2559]. A directory
+// link stands in for the drive, and this walker keeps it as given.
+function mapDrive(f)
+{
+	const drive = path.join(f.root, 'Z');
+	fs.symlinkSync(f.directory, drive, 'junction');
+	const walker = (p, options) =>
+	{
+		if (path.resolve(p).startsWith(drive + path.sep))
+		{
+			fs.statSync(p); // Missing files throw ENOENT as in the real walker
+			return path.resolve(p);
+		}
+
+		return fs.realpathSync(p, options);
+	};
+	walker.native = fs.realpathSync.native;
+	f.context.fs = Object.assign(Object.create(fs), {realpathSync: walker});
+	f.context.blessedPaths.clear();
+	return drive;
+}
+
 describe('GUI save authorisation', () =>
 {
 	test('normal saves retain the previous diagram and replace an existing backup', async (t) =>
@@ -154,6 +178,55 @@ describe('GUI save authorisation', () =>
 		await f.context.saveFile({path: newFile, encoding: 'utf8'}, edited, fs.statSync(newFile), false);
 		assert.equal(fs.readFileSync(path.join(f.directory, 'new.drawio'), 'utf8'), edited);
 		assert.equal(fs.readFileSync(path.join(f.directory, '.$new.drawio.bkp'), 'utf8'), original);
+	});
+
+	test('opens, saves, drafts and saves as through a mapped network drive', async (t) =>
+	{
+		const f = fixture(t);
+		const drive = mapDrive(f);
+		const picked = path.join(drive, 'poc.drawio');
+		f.context.blessPath(picked);
+		await f.context.assertReadablePath(picked);
+		await f.context.saveFile({path: picked, encoding: 'utf8'}, edited, fs.statSync(picked), false);
+		assert.equal(fs.readFileSync(f.diagram, 'utf8'), edited);
+		assert.equal(fs.readFileSync(f.backup, 'utf8'), original);
+		const draft = await f.context.saveDraft({path: picked}, edited);
+		assert.deepEqual(Array.from(await f.context.getFileDrafts({path: picked}), d => d.path), [draft]);
+		const newFile = path.join(drive, 'new.drawio');
+		f.context.blessPath(newFile);
+		await f.context.saveFile({path: newFile, encoding: 'utf8'}, original, null, false);
+		assert.equal(fs.readFileSync(path.join(f.directory, 'new.drawio'), 'utf8'), original);
+	});
+
+	test('does not authorise a retargeted file on a mapped network drive', async (t) =>
+	{
+		const f = fixture(t);
+		const picked = path.join(mapDrive(f), 'poc.drawio');
+		f.context.blessPath(picked);
+		fs.unlinkSync(f.diagram);
+		if (!symlink(t, f.target, f.diagram)) return;
+		await assert.rejects(f.context.assertReadablePath(picked), /path not authorised/);
+		await assert.rejects(f.context.writeFile(picked, edited, 'utf8'), /path not authorised/);
+		assert.equal(fs.readFileSync(f.target, 'utf8'), sentinel);
+	});
+
+	test('opens and saves a file named in another case on a case-insensitive disk', async (t) =>
+	{
+		const f = fixture(t);
+		const respelt = path.join(f.directory, 'POC.drawio');
+
+		if (!fs.existsSync(respelt))
+		{
+			t.skip('case-sensitive filesystem');
+			return;
+		}
+
+		f.context.blessedPaths.clear();
+		f.context.blessPath(respelt);
+		await f.context.assertReadablePath(respelt);
+		await f.context.saveFile({path: respelt, encoding: 'utf8'}, edited, fs.statSync(respelt), false);
+		assert.equal(fs.readFileSync(f.diagram, 'utf8'), edited);
+		assert.equal(fs.readFileSync(f.backup, 'utf8'), original);
 	});
 
 	test('configured reads require the current canonical target', async (t) =>
