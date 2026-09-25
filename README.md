@@ -5,7 +5,7 @@ About
 
 Download built binaries from the [releases section](https://github.com/jgraph/drawio-desktop/releases).
 
-**Can I use this app for free?** Yes, under the apache 2.0 license. If you don't change the code and accept it is provided "as-is", you can use it for any purpose.
+**Can I use this app for free?** Yes, under the GPL v3 license. If you don't change the code and accept it is provided "as-is", you can use it for any purpose.
 
 Windows installation
 --------------------

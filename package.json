@@ -29,7 +29,7 @@
     "UML"
   ],
   "author": "JGraph <support@draw.io>",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0-only",
   "bugs": {
     "url": "https://github.com/jgraph/drawio-desktop/issues"
   },

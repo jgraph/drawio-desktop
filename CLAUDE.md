@@ -5,7 +5,7 @@
 Draw.io Desktop is an Electron-based desktop application that wraps the core draw.io diagramming editor (included as a git submodule). It enables creating flowcharts, UML diagrams, and more, with a security-first design that isolates diagram data from the internet.
 
 **Repository:** https://github.com/jgraph/drawio-desktop
-**License:** Apache 2.0
+**License:** GPL v3 only since v31.5.2, Apache 2.0 before it (`GPL-3.0-only` in `package.json`, which electron-builder writes into the deb/rpm `License:` field; the `drawio` core submodule stays Apache 2.0)
 **Version:** see `drawio/VERSION` (stamped into `package.json` by `npm run sync`)
 
 ## Quick Reference
@@ -146,7 +146,7 @@ Tags trigger CI/CD build workflows.
 - Needs `MS_STORE_TENANT_ID`/`MS_STORE_SELLER_ID`/`MS_STORE_CLIENT_ID`/`MS_STORE_CLIENT_SECRET` secrets from an Entra app registration holding the Manager role in Partner Center; the client secret expires and must be rotated
 
 ### Personal / Fork Builds
-- `doc/BUILDING_FOR_PERSONAL_USE.md` documents building unsigned from a fork (the project is closed to contributions but Apache 2.0 licensed)
+- `doc/BUILDING_FOR_PERSONAL_USE.md` documents building unsigned from a fork (the project is closed to contributions but GPL v3 licensed)
 - Set `DRAWIO_UNSIGNED=true` and run `electron-builder` directly with `--publish never`; use `npm run sync -- disableUpdate` so auto-update doesn't replace the custom build
 - `.github/workflows/personal-build.yml` is a manual (`workflow_dispatch`) workflow that builds unsigned installers on a fork with no secrets and attaches them as run artifacts
 

@@ -1,6 +1,6 @@
 # Building draw.io Desktop from a fork for personal use
 
-draw.io Desktop is closed to code contributions, but it is Apache 2.0
+draw.io Desktop is closed to code contributions, but it is GPL v3
 licensed — you are free to fork it, make your own changes and build the
 app for your own use.
 
