@@ -37,6 +37,23 @@ catch (e)
 	console.error('Failed to seed defaultAdaptiveColors:', e);
 }
 
+// Navigations to about: URLs (about:blank, about:srcdoc) never reach
+// will-navigate in the main process, as Chromium commits them without a
+// network request, and cannot be stopped there. Without this, a link,
+// window.open('about:blank', '_self') or top.location from an iframe or popup
+// replaces the editor with a blank page. The listener is in the isolated
+// world, so page scripts cannot remove it.
+if (window.navigation != null)
+{
+	window.navigation.addEventListener('navigate', (e) =>
+	{
+		if (/^about:/i.test(e.destination.url))
+		{
+			e.preventDefault();
+		}
+	});
+}
+
 let reqId = 1;
 let reqInfo = {};
 let fileChangedListeners = {};

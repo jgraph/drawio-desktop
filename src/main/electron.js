@@ -2185,7 +2185,8 @@ app.on('will-finish-launching', function()
 });
  
 app.on('web-contents-created', (event, contents) => {
-	// Disable navigation
+	// Disable navigation. Navigations to about: URLs never reach will-navigate
+	// and cannot be stopped from here, see the navigate listener in electron-preload.js
 	contents.on('will-navigate', (event, navigationUrl) => {
 		event.preventDefault()
 	})
