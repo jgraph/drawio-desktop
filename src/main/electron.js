@@ -1186,6 +1186,7 @@ app.whenReady().then(() =>
 				embedXml: options.embedDiagram? '1' : '0',
 				embedImages: options.embedSvgImages? '1' : '0',
 				embedFonts: (options.embedSvgFonts === true || options.embedSvgFonts === 'true')? '1' : '0',
+				embedCellMetadata: options.embedSvgMetadata? '1' : '0',
 				jpegQuality: options.quality,
 				uncompressed: options.uncompressed,
 				// --theme applies to all formats and wins over the deprecated --svg-theme

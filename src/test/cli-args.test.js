@@ -164,6 +164,12 @@ describe('boolean flags', () =>
 		assert.equal(parse(['--embed-svg-images']).opts.embedSvgImages, true);
 	});
 
+	test('--embed-svg-metadata sets embedSvgMetadata to true, absent by default', () =>
+	{
+		assert.equal(parse(['--embed-svg-metadata']).opts.embedSvgMetadata, true);
+		assert.equal(parse([]).opts.embedSvgMetadata, undefined);
+	});
+
 	test('--crop sets crop to true', () =>
 	{
 		assert.equal(parse(['--crop']).opts.crop, true);
