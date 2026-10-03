@@ -49,6 +49,8 @@ const OPTION_DEFS = [
 	  valueLabel: '<true/false>',
 	  parse: parseBool,                                                default: true,
 	  desc: 'Embed Fonts in SVG file (for SVG format only). Default is true' },
+	{              long: '--embed-svg-metadata', key: 'embedSvgMetadata',
+	  desc: 'Embed Cell Metadata (shape and connector properties as data-meta-* attributes) in SVG file (for SVG format only)' },
 	{ short: '-b', long: '--border',           key: 'border',         takesValue: true,
 	  valueLabel: '<border>',
 	  parse: parseInt,
