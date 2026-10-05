@@ -3,7 +3,7 @@ import { promises as fsProm } from 'fs';
 import path from 'path';
 import url from 'url';
 import {Menu as menu, shell, dialog, session, screen, ClipboardItem, 
-		clipboard, nativeImage, ipcMain, app, BrowserWindow} from 'electron';
+		clipboard, nativeImage, nativeTheme, ipcMain, app, BrowserWindow} from 'electron';
 import crc from 'crc';
 import zlib from 'zlib';
 import log from'electron-log';
@@ -713,7 +713,8 @@ function createWindow (opt = {})
 
 	let options = Object.assign(
 	{
-		backgroundColor: '#FFF',
+		// Matches the background of the loading splash to avoid a white flash in dark mode
+		backgroundColor: nativeTheme.shouldUseDarkColors ? '#1B1D1E' : '#F1F3F4',
 		width: lastWinSize.width,
 		height: lastWinSize.height,
 		icon: `${codeDir}/images/drawlogo256.png`,
