@@ -13,6 +13,7 @@ import { getUpdateChannel } from './update-channel.js';
 import { listExportFiles, lexists, openExportFile } from './export-files.js';
 import { getSystem32Path } from './system-path.js';
 import { writeBackupFile } from './backup-file.js';
+import { getPrintOptions } from './print-options.js';
 import FileWatcher from './file-watcher.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
@@ -2397,7 +2398,6 @@ autoUpdater.on('update-available', safeUpdaterListener('update-available', (info
 }))
 
 //Pdf export
-const MICRON_TO_PIXEL = 264.58 		//264.58 micron = 1 pixel
 const PIXELS_PER_INCH = 100.117		// Usually it is 100 pixels per inch but this give better results
 const PNG_CHUNK_IDAT = 1229209940;
 const LARGE_IMAGE_AREA = 30000000;
@@ -3264,27 +3264,8 @@ function exportDiagram(event, args, directFinalize)
 				{
 					if (args.print)
 					{
-						pdfOptions = {
-							// scaleFactor is an integer percent in Chromium (Electron 41+ honors
-							// it in the native macOS print dialog), so pageScale 1 = 100%, not 1%.
-							// The render paginates at pageFormat * pageScale to match the
-							// editor's page breaks, so each rendered page is pageScale times
-							// the physical paper and must shrink by 1 / pageScale to fit one
-							// sheet. Chromium accepts 10-200%, which bounds the printable
-							// page scale to 50%-1000% [jgraph/drawio#5540]
-							scaleFactor: Math.max(10, Math.min(200, Math.round(
-								100 / (args.pageScale > 0 ? args.pageScale : 1)))),
-							printBackground: true,
-							pageSize : {
-								width: args.pageWidth * MICRON_TO_PIXEL,
-								//This height adjustment fixes the output. TODO Test more cases
-								height: (args.pageHeight * 1.025) * MICRON_TO_PIXEL
-							},
-							margins: {
-								marginType: 'none' // no margin
-							}
-						};
-						
+						pdfOptions = getPrintOptions(args.pageWidth, args.pageHeight, args.pageScale);
+
 						var printFinished = (success, errorType) =>
 						{
 							//Consider all as success
