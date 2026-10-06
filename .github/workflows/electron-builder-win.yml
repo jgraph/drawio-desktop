@@ -137,7 +137,9 @@ jobs:
         # --config is required here: a bare --dir run loads no config file at all
         # (the win config is not at a default path), which shipped the portable zip
         # unsigned and without the fuses afterPack hook [jgraph/drawio-desktop#2509]
-        npm run sync -- disableUpdate
+        # Updates stay enabled: with no NSIS uninstaller next to the exe the app
+        # only says that a new version is out (update-mode.js) [jgraph/drawio-desktop#2569]
+        npm run sync
         npx electron-builder --config electron-builder-win.json --win --x64 --dir --publish never
 
     - name: Zip unpacked x64 build

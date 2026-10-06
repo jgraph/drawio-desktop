@@ -25,7 +25,7 @@ draw.io Desktop is built natively for Windows on Arm (ARM64) and is supported on
 - `draw.io-arm64-<version>-windows-arm64-installer.exe` — NSIS installer, per-machine, requires administrator privileges.
 - `draw.io-arm64-<version>-windows-arm64-no-installer.exe` — portable build, no installation or admin rights needed.
 
-The MSI and Microsoft Store builds are x64 only and run under emulation on ARM64 devices. ARM64 builds up to and including 31.4.4 were shipped with auto-update disabled; install a newer release manually once, after which the ARM64 build updates itself like x64.
+The MSI and Microsoft Store builds are x64 only and run under emulation on ARM64 devices. ARM64 builds up to and including 31.4.4 were shipped with auto-update disabled; install a newer release manually once, after which the ARM64 installer build updates itself like x64.
 
 Linux installation
 ------------------
@@ -41,10 +41,21 @@ Can't open squashfs image: Bad address
 
 Install a current AppImageLauncher from its [releases page](https://github.com/TheAssassin/AppImageLauncher/releases), which provides .deb packages, or uninstall AppImageLauncher altogether. It is not needed to run the AppImage. See [#2538](https://github.com/jgraph/drawio-desktop/issues/2538) for the detail.
 
+Updates
+-------
+
+How draw.io Desktop updates depends on how it was installed:
+
+- **Windows installer (`.exe`), macOS and AppImage:** new versions download in the background. When one is ready, the editor shows a notice, and clicking it or Help > Restart to Update installs it straight away. Otherwise it is installed when you quit draw.io. The Windows installer is per-machine, so the update asks for administrator rights.
+- **MSI, Windows zip, Windows ARM64 portable, deb and rpm:** draw.io tells you when a new version is available and links to its release page. Install it the same way as the current one.
+- **Microsoft Store, Snap and Flatpak:** the store updates the app, and draw.io does not check for updates.
+
+Extras > Automatic Updates (draw.io > Check for Updates Automatically on macOS) turns the background checks off. Help > Check for Updates still works. For centrally managed installs, set the `DRAWIO_DISABLE_UPDATE=true` environment variable or pass `--disable-update` to turn off all update checks, or set `DRAWIO_NO_SILENT_UPDATE=true` or pass `--no-silent-update` so that draw.io asks before it downloads an update.
+
 Security
 --------
 
-draw.io Desktop is designed to be completely isolated from the Internet, apart from the update process. This checks github.com at startup for a newer version and downloads it from an AWS S3 bucket owned by Github. To disable the update check entirely (e.g. for centrally-managed installs), set the `DRAWIO_DISABLE_UPDATE=true` environment variable or pass `--disable-update` on launch. All JavaScript files are self-contained, the Content Security Policy forbids running remotely loaded JavaScript.
+draw.io Desktop is designed to be completely isolated from the Internet, apart from the update process. This checks github.com once a day for a newer version and downloads it from an AWS S3 bucket owned by Github. To disable the update check entirely (e.g. for centrally-managed installs), set the `DRAWIO_DISABLE_UPDATE=true` environment variable or pass `--disable-update` on launch. All JavaScript files are self-contained, the Content Security Policy forbids running remotely loaded JavaScript.
 
 No diagram data is ever sent externally, nor do we send any analytics about app usage externally. The Content Security Policy on the web part of the interface forbids remotely-loaded JavaScript and restricts the application's own network connections to itself, so the app cannot transmit your diagrams or otherwise phone home. Note that a diagram can reference external media - for example an image, background or font loaded from a URL embedded in the diagram - and these are fetched when the diagram is opened so that it renders correctly. Opening a diagram from an untrusted source may therefore trigger a request to the referenced URL, which can reveal metadata such as your IP address to that server; no diagram content is transmitted.
 
