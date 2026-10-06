@@ -34,14 +34,14 @@ describe('getPrintOptions', () =>
 	{
 		test(f.name + ' portrait is the printer paper in portrait', () =>
 		{
-			var options = getPrintOptions(f.width, f.height, 1);
+			var options = getPrintOptions(f.width, f.height);
 			assertPaper(options.pageSize, f.paper);
 			assert.equal(options.landscape, false);
 		});
 
 		test(f.name + ' landscape is the same paper in landscape', () =>
 		{
-			var options = getPrintOptions(f.height, f.width, 1);
+			var options = getPrintOptions(f.height, f.width);
 			assertPaper(options.pageSize, f.paper);
 			assert.equal(options.landscape, true);
 		});
@@ -49,36 +49,28 @@ describe('getPrintOptions', () =>
 
 	test('custom and screen formats keep their size', () =>
 	{
-		var options = getPrintOptions(1600, 900, 1);
+		var options = getPrintOptions(1600, 900);
 		assert.deepEqual(options.pageSize, {width: 900 * 254, height: 1600 * 254});
 		assert.equal(options.landscape, true);
 	});
 
 	test('a square page is portrait', () =>
 	{
-		assert.equal(getPrintOptions(1000, 1000, 1).landscape, false);
+		assert.equal(getPrintOptions(1000, 1000).landscape, false);
 	});
 
 	test('no margins and backgrounds printed', () =>
 	{
-		var options = getPrintOptions(827, 1169, 1);
+		var options = getPrintOptions(827, 1169);
 		assert.deepEqual(options.margins, {marginType: 'none'});
 		assert.equal(options.printBackground, true);
 	});
 
-	test('scaleFactor is the inverse page scale in percent', () =>
+	test('scaleFactor stays 100% as Chromium fits larger pages to the paper', () =>
 	{
-		assert.equal(getPrintOptions(827, 1169, 1).scaleFactor, 100);
-		assert.equal(getPrintOptions(827, 1169, 2).scaleFactor, 50);
-		assert.equal(getPrintOptions(827, 1169, 0.5).scaleFactor, 200);
-		assert.equal(getPrintOptions(827, 1169, 1.5).scaleFactor, 67);
-	});
-
-	test('scaleFactor is clamped to 10-200% and defaults to 100%', () =>
-	{
-		assert.equal(getPrintOptions(827, 1169, 20).scaleFactor, 10);
-		assert.equal(getPrintOptions(827, 1169, 0.1).scaleFactor, 200);
-		assert.equal(getPrintOptions(827, 1169, 0).scaleFactor, 100);
-		assert.equal(getPrintOptions(827, 1169, undefined).scaleFactor, 100);
+		// A scaled page renders at pageFormat * pageScale and is shrunk to the
+		// sheet when printing; 100 / pageScale shrank it twice
+		assert.equal(getPrintOptions(827, 1169).scaleFactor, 100);
+		assert.equal(getPrintOptions(1169, 827).scaleFactor, 100);
 	});
 });

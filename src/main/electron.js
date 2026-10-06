@@ -3264,7 +3264,7 @@ function exportDiagram(event, args, directFinalize)
 				{
 					if (args.print)
 					{
-						pdfOptions = getPrintOptions(args.pageWidth, args.pageHeight, args.pageScale);
+						pdfOptions = getPrintOptions(args.pageWidth, args.pageHeight);
 
 						var printFinished = (success, errorType) =>
 						{
