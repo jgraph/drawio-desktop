@@ -14,7 +14,7 @@ Three flavours of Windows download are published on the [releases page](https://
 
 - `draw.io-<version>-windows-installer.exe` — NSIS installer. Installs **per-machine** into `Program Files` and **requires administrator privileges**.
 - `draw.io-<version>.msi` — MSI installer. Installs **per-user** into the user's profile and **does not require administrator privileges**. Use this one if you don't have admin rights on your machine.
-- `draw.io-<version>-windows-no-installer.exe` — portable build that runs without any installation (and therefore without admin rights). File-type associations are not registered.
+- `draw.io-<version>-windows.zip` — portable build. Extract the zip anywhere and run `draw.io.exe`, with no installation (and therefore without admin rights). File-type associations are not registered.
 
 The Microsoft Store (APPX) build is also installable per-user without admin rights via the Store.
 
@@ -84,14 +84,7 @@ Note: If a symlink is used to refer to drawio repo (instead of the submodule), t
 
 To fork the project, make your own changes and build an (unsigned) app for personal use, see [doc/BUILDING_FOR_PERSONAL_USE.md](doc/BUILDING_FOR_PERSONAL_USE.md).
 
-To release:
-1. Update the draw.io sub-module and push the change. Add version tag before pushing to origin.
-2. Wait for the builds to complete (https://travis-ci.org/jgraph/drawio-desktop and https://ci.appveyor.com/project/davidjgraph/drawio-desktop)
-3. Go to https://github.com/jgraph/drawio-desktop/releases, edit the preview release.
-4. Download the windows exe and windows portable, sign them using `signtool sign /a /tr http://rfc3161timestamp.globalsign.com/advanced /td SHA256 c:/path/to/your/file.exe`
-5. Re-upload signed file as `draw.io-windows-installer-x.y.z.exe` and `draw.io-windows-no-installer-x.y.z.exe`
-6. Add release notes
-7. Publish release
+The release process (GitHub Actions builds, signing and publishing) is described in [doc/RELEASE_PROCESS.md](doc/RELEASE_PROCESS.md).
 
 Local Storage and Session Storage is stored in the AppData folder:
 
