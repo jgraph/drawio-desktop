@@ -6,35 +6,69 @@ import os from 'os';
 import path from 'path';
 import { pathToFileURL } from 'url';
 import vm from 'vm';
+import { collectConfigPathsScript, getLocalFilePath, ConfigPathGrants } from '../main/config-paths.js';
 
-// Run the actual main-process code without starting Electron
-const source = fs.readFileSync(new URL('../main/electron.js', import.meta.url), 'utf8');
-const from = source.indexOf('// Paths declared in the user');
-const to = source.indexOf('// fs.statSync that never throws', from);
-assert.ok(from >= 0 && to > from, 'config path helper boundaries exist');
-const helpers = source.slice(from, to);
-
-// Stands in for the renderer that runs collectConfigPathsScript. Its only global
-// is Editor, so the script also fails here if it reaches outside its own body.
-function renderer(config)
+// Stands in for an editor window that runs collectConfigPathsScript. Its only
+// global is Editor, so the script also fails here if it reaches outside its own body.
+function editorWindow(config)
 {
-	const context = vm.createContext((config !== undefined) ? {Editor: {config}} : {});
-	return {webContents: {executeJavaScript: async (script) => vm.runInContext(script, context)}};
-}
-
-function mainProcess(win, files = fs)
-{
-	const context = vm.createContext({fs: files, path,
-		BrowserWindow: {getFocusedWindow: () => win, getAllWindows: () => [win]}});
-	vm.runInContext(helpers, context, {filename: 'electron-config-paths.js'});
-	return context;
+	const page = vm.createContext((config !== undefined) ? {Editor: {config}} : {});
+	return {page, executeJavaScript: async (script) => vm.runInContext(script, page)};
 }
 
 async function collect(config)
 {
-	const win = renderer(config);
-	const script = vm.runInContext('collectConfigPathsScript', mainProcess(win));
-	return Array.from(await win.webContents.executeJavaScript(script));
+	return Array.from(await editorWindow(config).executeJavaScript(collectConfigPathsScript));
+}
+
+function memoryStore(values = {})
+{
+	return {values, get: (key) => values[key], set: (key, value) => { values[key] = value; }};
+}
+
+// The store of an install that already adopted the configuration it had
+function migratedStore(allowed = [])
+{
+	return memoryStore({allowedConfigPathsMigrated: true, allowedConfigPaths: allowed});
+}
+
+// answer is what the user clicks, or a function of the window and the entries
+function grants(store, answer = true, fsImpl = fs)
+{
+	const asked = [];
+	const result = new ConfigPathGrants(fsImpl, store, async (owner, entries) =>
+	{
+		asked.push(entries.map((entry) => entry.path));
+		return (typeof answer === 'function') ? answer(owner, entries) : answer;
+	});
+	result.asked = asked;
+	return result;
+}
+
+async function load(configGrants, config)
+{
+	const win = editorWindow(config);
+	configGrants.register(win);
+	await configGrants.collect(win);
+	return win;
+}
+
+function files(t, ...names)
+{
+	const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'drawio-config-')));
+	t.after(() => fs.rmSync(root, {recursive: true, force: true}));
+
+	return names.map((name) =>
+	{
+		const file = path.join(root, name);
+		fs.writeFileSync(file, '<mxlibrary>[]</mxlibrary>');
+		return file;
+	});
+}
+
+function libraries(...paths)
+{
+	return {libraries: [{entries: [{id: 'local', libs: paths.map((p) => ({url: pathToFileURL(p).href}))}]}]};
 }
 
 describe('collectConfigPaths', () =>
@@ -90,23 +124,208 @@ describe('collectConfigPaths', () =>
 	});
 });
 
-describe('loadConfigReadablePaths', () =>
+describe('getLocalFilePath', () =>
+{
+	test('returns the path of file URLs, drive, UNC and absolute paths only', () =>
+	{
+		assert.equal(getLocalFilePath('file:///C:/libs/a%20b.xml?x=1#y'), 'C:/libs/a b.xml');
+		assert.equal(getLocalFilePath('file:///libs/a.xml'), '/libs/a.xml');
+		assert.equal(getLocalFilePath('C:\\libs\\a.xml'), 'C:\\libs\\a.xml');
+		assert.equal(getLocalFilePath('\\\\server\\share\\a.xml'), '\\\\server\\share\\a.xml');
+		assert.equal(getLocalFilePath('/libs/a.xml'), '/libs/a.xml');
+		assert.equal(getLocalFilePath('https://example.com/a.xml'), null);
+		assert.equal(getLocalFilePath('relative.xml'), null);
+		assert.equal(getLocalFilePath('file:///%E0%A4%A'), null);
+		assert.equal(getLocalFilePath(null), null);
+	});
+});
+
+describe('ConfigPathGrants', () =>
 {
 	test('makes configured local library files readable and nothing else', async (t) =>
 	{
-		const root = fs.realpathSync(fs.mkdtempSync(path.join(os.tmpdir(), 'drawio-config-')));
-		t.after(() => fs.rmSync(root, {recursive: true, force: true}));
-		const library = path.join(root, 'library.xml');
-		const other = path.join(root, 'other.xml');
-		fs.writeFileSync(library, '<mxlibrary>[]</mxlibrary>');
-		fs.writeFileSync(other, '<mxlibrary>[]</mxlibrary>');
-		const context = mainProcess(renderer({
+		const [library, other] = files(t, 'library.xml', 'other.xml');
+		const configGrants = grants(migratedStore());
+		const win = await load(configGrants, {
 			libraries: [{entries: [{id: 'local', libs: [{url: pathToFileURL(library).href},
 				{url: 'https://example.com/remote.xml'}, {url: 'relative.xml'}]}]}],
 			unknownKey: {url: pathToFileURL(other).href}
-		}));
-		await vm.runInContext('loadConfigReadablePaths()', context);
-		assert.deepEqual([...vm.runInContext('configReadablePaths', context)], [library]);
+		});
+		assert.deepEqual(configGrants.asked, [[library]]);
+		assert.equal(await configGrants.isReadable(win, library), true);
+		assert.equal(await configGrants.isReadable(win, other), false);
+	});
+
+	test('never reads the configuration again once the window has loaded', async (t) =>
+	{
+		const [library, secret] = files(t, 'library.xml', 'credentials.json');
+		const configGrants = grants(migratedStore([library]));
+		const win = await load(configGrants, libraries(library));
+		// What any script in the page can do once a diagram is open
+		vm.runInContext('Editor.config = ' + JSON.stringify(libraries(secret)), win.page);
+		assert.equal(await configGrants.collect(win), false);
+		assert.equal(await configGrants.isReadable(win, secret), false);
+		assert.equal(await configGrants.isReadable(win, library), true);
+		assert.deepEqual(configGrants.asked, []);
+	});
+
+	test('holds reads until the window configuration has been read', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(migratedStore([library]));
+		const win = editorWindow(libraries(library));
+		configGrants.register(win);
+		let collected = false;
+		const waiting = configGrants.waitForCollection(win).then(() => collected = true);
+		await new Promise((resolve) => setImmediate(resolve));
+		assert.equal(collected, false);
+		await configGrants.collect(win);
+		await waiting;
+		assert.equal(collected, true);
+	});
+
+	test('gives windows it was never told about no configured paths and no wait', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(migratedStore([library]));
+		await load(configGrants, libraries(library));
+		const exportWindow = editorWindow(libraries(library));
+		await configGrants.waitForCollection(exportWindow);
+		assert.equal(await configGrants.collect(exportWindow), false);
+		assert.equal(await configGrants.isReadable(exportWindow, library), false);
+	});
+
+	test('asks once before a newly configured file becomes readable and remembers it', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const store = migratedStore();
+		const first = grants(store, true);
+		assert.equal(await first.isReadable(await load(first, libraries(library)), library), true);
+		assert.deepEqual(first.asked, [[library]]);
+		const nextLaunch = grants(store, false);
+		assert.equal(await nextLaunch.isReadable(await load(nextLaunch, libraries(library)), library), true);
+		assert.deepEqual(nextLaunch.asked, []);
+	});
+
+	test('keeps a refused file unreadable and asks again on the next launch only', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const store = migratedStore();
+		const configGrants = grants(store, false);
+		assert.equal(await configGrants.isReadable(await load(configGrants, libraries(library)), library), false);
+		assert.equal(await configGrants.isReadable(await load(configGrants, libraries(library)), library), false);
+		assert.deepEqual(configGrants.asked, [[library]]);
+		const nextLaunch = grants(store, true);
+		assert.equal(await nextLaunch.isReadable(await load(nextLaunch, libraries(library)), library), true);
+		assert.deepEqual(nextLaunch.asked, [[library]]);
+	});
+
+	test('adopts the configuration found on the first launch with these grants', async (t) =>
+	{
+		const [library, other] = files(t, 'library.xml', 'other.xml');
+		const store = memoryStore();
+		const configGrants = grants(store, false);
+		assert.equal(await configGrants.isReadable(await load(configGrants, libraries(library)), library), true);
+		assert.deepEqual(configGrants.asked, []);
+		assert.equal(store.values.allowedConfigPathsMigrated, true);
+		const win = await load(configGrants, libraries(library, other));
+		assert.deepEqual(configGrants.asked, [[other]]);
+		assert.equal(await configGrants.isReadable(win, library), true);
+		assert.equal(await configGrants.isReadable(win, other), false);
+	});
+
+	test('adopts nothing and remembers nothing without a store', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(null, true);
+		assert.equal(await configGrants.isReadable(await load(configGrants, libraries(library)), library), true);
+		const nextLaunch = grants(null, false);
+		assert.equal(await nextLaunch.isReadable(await load(nextLaunch, libraries(library)), library), false);
+		assert.deepEqual([...configGrants.asked, ...nextLaunch.asked], [[library], [library]]);
+	});
+
+	test('does not read a file allowed before once the configuration drops it', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(migratedStore([library]));
+		assert.equal(await configGrants.isReadable(await load(configGrants, {}), library), false);
+	});
+
+	test('asks again when a configured link points somewhere else', async (t) =>
+	{
+		const [library, other] = files(t, 'library.xml', 'other.xml');
+		const link = path.join(path.dirname(library), 'link.xml');
+
+		try
+		{
+			fs.symlinkSync(library, link, 'file');
+		}
+		catch (e)
+		{
+			if (process.platform === 'win32' && e.code === 'EPERM')
+			{
+				t.skip('creating symbolic links requires Windows Developer Mode or admin rights');
+				return;
+			}
+			throw e;
+		}
+
+		const store = migratedStore([library]);
+		const configGrants = grants(store, false);
+		assert.equal(await configGrants.isReadable(await load(configGrants, libraries(link)), library), true);
+		fs.unlinkSync(link);
+		fs.symlinkSync(other, link, 'file');
+		const nextLaunch = grants(store, false);
+		const win = await load(nextLaunch, libraries(link));
+		assert.deepEqual(nextLaunch.asked, [[link]]);
+		assert.equal(await nextLaunch.isReadable(win, other), false);
+		assert.equal(await nextLaunch.isReadable(win, link), false);
+	});
+
+	test('asks for one window at a time and applies the answer to the next', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(migratedStore(), async () =>
+		{
+			await new Promise((resolve) => setTimeout(resolve, 10));
+			return true;
+		});
+		const one = editorWindow(libraries(library));
+		const two = editorWindow(libraries(library));
+		configGrants.register(one);
+		configGrants.register(two);
+		await Promise.all([configGrants.collect(one), configGrants.collect(two)]);
+		assert.deepEqual(configGrants.asked, [[library]]);
+		assert.equal(await configGrants.isReadable(one, library), true);
+		assert.equal(await configGrants.isReadable(two, library), true);
+	});
+
+	test('does not ask for a window closed before its turn', async (t) =>
+	{
+		const [library, other] = files(t, 'library.xml', 'other.xml');
+		const one = editorWindow(libraries(library));
+		const two = editorWindow(libraries(other));
+		const configGrants = grants(migratedStore(), (owner) =>
+		{
+			configGrants.unregister(two);
+			return true;
+		});
+		configGrants.register(one);
+		configGrants.register(two);
+		await Promise.all([configGrants.collect(one), configGrants.collect(two)]);
+		assert.deepEqual(configGrants.asked, [[library]]);
+		assert.equal(await configGrants.isReadable(two, other), false);
+	});
+
+	test('makes nothing configured readable when the dialog fails', async (t) =>
+	{
+		const [library] = files(t, 'library.xml');
+		const configGrants = grants(migratedStore(), () =>
+		{
+			throw new Error('no dialog');
+		});
+		const win = await load(configGrants, libraries(library));
+		assert.equal(await configGrants.isReadable(win, library), false);
 	});
 
 	test('keeps the form that reads are checked against for a mapped network drive', async (t) =>
@@ -123,10 +342,10 @@ describe('loadConfigReadablePaths', () =>
 		const walker = (p, options) => path.resolve(p).startsWith(drive + path.sep) ?
 			path.resolve(p) : fs.realpathSync(p, options);
 		walker.native = fs.realpathSync.native;
-		const context = mainProcess(renderer({libraries: [{entries: [{id: 'z',
-			libs: [{url: library}]}]}]}), Object.assign(Object.create(fs), {realpathSync: walker}));
-		await vm.runInContext('loadConfigReadablePaths()', context);
+		const configGrants = grants(migratedStore(), true,
+			Object.assign(Object.create(fs), {realpathSync: walker}));
+		const win = await load(configGrants, libraries(library));
 		// canonicalisePath in electron.js checks reads with fs.promises.realpath
-		assert.ok(vm.runInContext('configReadablePaths', context).has(await fs.promises.realpath(library)));
+		assert.equal(await configGrants.isReadable(win, await fs.promises.realpath(library)), true);
 	});
 });

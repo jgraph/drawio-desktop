@@ -16,6 +16,7 @@ import { getSystem32Path } from './system-path.js';
 import { writeBackupFile } from './backup-file.js';
 import { getPrintOptions } from './print-options.js';
 import FileWatcher from './file-watcher.js';
+import { ConfigPathGrants } from './config-paths.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
@@ -315,245 +316,42 @@ function blessPath(p)
 	catch (e) {} // Defensive: blessPath must never throw into a caller's flow.
 }
 
-// Paths declared in the user's configuration (Extras > Edit Configuration):
-// libraries, templates and fonts that point at local files or file:// URLs are
-// fetched through the readFile IPC [jgraph/drawio-desktop#1278]. They are never
-// picked in a file dialog, so they cannot be blessed the way opened files are
-// and get their own read-only set instead. Deliberately not persisted and never
-// consulted by assertWritablePath: the configuration widens what the renderer
-// may read, never what it may write.
-const configReadablePaths = new Set();
-let configReadablePathsPromise = null;
+// Paths declared in the user's configuration become readable for the window
+// that loaded it once the user has allowed them, see config-paths.js
+// [jgraph/drawio-desktop#1278]
+const configPathGrants = new ConfigPathGrants(fs, store, confirmConfigPaths);
 
-// Collects the config-declared URLs from the renderer. The keys to look at are
-// listed here, in the main process, and only the values of known path-carrying
-// fields are used, so a tampered configuration cannot nominate paths through
-// some other key. Returned values are still just candidates: the caller keeps
-// the ones that name a local file.
-//
-// Runs in the renderer via executeJavaScript (see collectConfigPathsScript), so
-// it must not reference anything outside its own body.
-function collectConfigPaths()
+// The trusted half of ConfigPathGrants: a dialog of the main process, which no
+// script in the renderer can answer. Asked when a window loads a configuration
+// that names files not allowed before, which is after the restart that a
+// configuration change asks for.
+async function confirmConfigPaths(webContents, entries)
 {
-	try
+	const win = BrowserWindow.fromWebContents(webContents);
+
+	if (win == null || win.isDestroyed())
 	{
-		var urls = [];
-
-		function addUrl(url)
-		{
-			if (typeof url === 'string' && url.length > 0)
-			{
-				urls.push(url);
-			}
-		};
-
-		function addFont(entry)
-		{
-			if (entry != null && typeof entry === 'object')
-			{
-				addUrl(entry.fontUrl);
-			}
-		};
-
-		var config = (typeof Editor !== 'undefined') ? Editor.config : null;
-
-		if (config != null && typeof config === 'object')
-		{
-			addUrl(config.templateFile);
-
-			if (Array.isArray(config.customTemplates))
-			{
-				config.customTemplates.forEach(function(entry)
-				{
-					if (entry != null && typeof entry === 'object')
-					{
-						addUrl(entry.url);
-						addUrl(entry.preview);
-					}
-				});
-			}
-
-			// Library ids are a one-character service prefix (U for a URL,
-			// S for a desktop file) followed by the encoded URL
-			if (Array.isArray(config.defaultCustomLibraries))
-			{
-				config.defaultCustomLibraries.forEach(function(id)
-				{
-					if (typeof id === 'string' && id.length > 1)
-					{
-						var url = id.substring(1);
-
-						try
-						{
-							url = decodeURIComponent(url);
-						}
-						catch (e) {} // Not encoded, use as-is
-
-						addUrl(url);
-					}
-				});
-			}
-
-			// Libraries offered in the More Shapes dialog
-			if (Array.isArray(config.libraries))
-			{
-				config.libraries.forEach(function(section)
-				{
-					if (section != null && typeof section === 'object' &&
-						Array.isArray(section.entries))
-					{
-						section.entries.forEach(function(entry)
-						{
-							if (entry != null && typeof entry === 'object' &&
-								Array.isArray(entry.libs))
-							{
-								entry.libs.forEach(function(lib)
-								{
-									if (lib != null && typeof lib === 'object')
-									{
-										addUrl(lib.url);
-									}
-								});
-							}
-						});
-					}
-				});
-			}
-
-			if (Array.isArray(config.customFonts))
-			{
-				config.customFonts.forEach(addFont);
-			}
-
-			if (Array.isArray(config.defaultFonts))
-			{
-				config.defaultFonts.forEach(addFont);
-			}
-
-			if (typeof config.fontCss === 'string')
-			{
-				var parts = config.fontCss.split('url(');
-
-				for (var i = 1; i < parts.length; i++)
-				{
-					var end = parts[i].indexOf(')');
-
-					if (end > 0)
-					{
-						// Same trimming as Editor.trimCssUrl in the renderer
-						addUrl(parts[i].substring(0, end).
-							replace(/^[\s"']+/, '').replace(/[\s"']+$/, ''));
-					}
-				}
-			}
-		}
-
-		return urls;
-	}
-	catch (e)
-	{
-		return [];
-	}
-};
-
-// Serialised so it can be handed to executeJavaScript, which takes source and
-// not a function. Built from the function above so it stays ordinary,
-// syntax-checked code instead of a string literal with escaped regexes.
-const collectConfigPathsScript = '(' + String(collectConfigPaths) + ')()';
-
-// Returns the filesystem path for URLs that name a local file (file:// URLs,
-// drive, UNC and absolute paths), null otherwise. Mirrors Editor.getLocalFilePath
-// in the renderer, which decides what is routed through the readFile IPC.
-function getLocalFilePath(url)
-{
-	if (typeof url !== 'string')
-	{
-		return null;
+		return false;
 	}
 
-	if (url.substring(0, 7) == 'file://')
+	const names = entries.map((entry) => (entry.path == entry.realpath) ?
+		entry.path : entry.path + ' (' + entry.realpath + ')');
+
+	const result = await dialog.showMessageBox(win,
 	{
-		let decoded;
+		type: 'warning',
+		title: 'Configuration',
+		message: 'Allow draw.io to read the files named in its configuration?',
+		detail: 'Extras > Configuration names local files that draw.io has not been allowed to read:\n\n' +
+			names.join('\n') + '\n\nOnly allow this if you added them to the configuration yourself.',
+		buttons: ['Allow', 'Don\'t Allow'],
+		defaultId: 1,
+		cancelId: 1,
+		noLink: true
+	});
 
-		try
-		{
-			decoded = decodeURIComponent(url.substring(7).split(/[?#]/)[0]);
-		}
-		catch (e)
-		{
-			return null;
-		}
-
-		// Removes the leading slash before Windows drive letters (file:///C:/...)
-		return (/^\/[a-zA-Z]:/.test(decoded)) ? decoded.substring(1) : decoded;
-	}
-	else if (/^([a-zA-Z]:[\\\/]|[\\\/])/.test(url))
-	{
-		return url;
-	}
-
-	return null;
-};
-
-// Rebuilds configReadablePaths from the renderer's configuration. Called on a
-// miss in assertReadablePath and reset on every page load, so a configuration
-// edit (which reloads the app) takes effect without a restart.
-function loadConfigReadablePaths()
-{
-	if (configReadablePathsPromise == null)
-	{
-		configReadablePathsPromise = (async function()
-		{
-			const win = BrowserWindow.getFocusedWindow() || BrowserWindow.getAllWindows()[0];
-
-			if (win == null || win.webContents == null)
-			{
-				return;
-			}
-
-			const urls = await win.webContents.executeJavaScript(collectConfigPathsScript);
-
-			if (!Array.isArray(urls))
-			{
-				return;
-			}
-
-			for (const url of urls)
-			{
-				const local = getLocalFilePath(url);
-
-				if (local == null || local.includes('\0'))
-				{
-					continue;
-				}
-
-				const resolved = path.resolve(local);
-				configReadablePaths.add(resolved);
-
-				try
-				{
-					// Native, as in blessPath
-					configReadablePaths.add(fs.realpathSync.native(resolved));
-				}
-				catch (e) {} // Configured path may not exist, that's fine
-			}
-		})().catch(function()
-		{
-			// Renderer not ready or config unreadable. Drop the cached promise
-			// so the next denied read retries instead of leaving the configured
-			// paths unavailable for the rest of the session.
-			configReadablePathsPromise = null;
-		});
-	}
-
-	return configReadablePathsPromise;
-};
-
-function invalidateConfigReadablePaths()
-{
-	configReadablePathsPromise = null;
-	configReadablePaths.clear();
-};
+	return result.response === 0;
+}
 
 // fs.statSync that never throws (returns null for missing, deleted-in-between
 // or inaccessible paths) so callers can't crash the main process on a race
@@ -798,14 +596,21 @@ function createWindow (opt = {})
 		slashes: true
 	})
 	
+	// The local paths named in this window's configuration are read once, at its
+	// app-load-finished message (see the handler next to rendererReq), and only
+	// this window may read them
+	const configOwner = mainWindow.webContents;
+	configPathGrants.register(configOwner);
+
+	configOwner.on('destroyed', () =>
+	{
+		configPathGrants.unregister(configOwner);
+	});
+
 	mainWindow.loadURL(ourl)
 
-	// The configuration lives in the renderer, so the local paths it declares
-	// (see loadConfigReadablePaths) must be collected again after every load —
-	// editing the configuration reloads the app
 	mainWindow.webContents.on('did-finish-load', function()
 	{
-		invalidateConfigReadablePaths();
 		legacyLibrariesMigration = migrateLegacyLibrariesOnce(mainWindow.webContents);
 	});
 
@@ -3915,8 +3720,8 @@ async function canonicalisePath(p)
 
 	try
 	{
-		// Native realpath, the same call blessPath and loadConfigReadablePaths
-		// must use for their paths to match
+		// Native realpath, the same call blessPath and ConfigPathGrants must
+		// use for their paths to match
 		realpath = await fsProm.realpath(resolved);
 	}
 	catch (e)
@@ -4017,34 +3822,32 @@ async function assertWritablePath(p)
 // it the renderer can read any file the user can, and diagram content alone is
 // enough to reach it (a cell style's fontSource is fetched through readFile and
 // embedded in exports), so this is not gated on a renderer XSS. Accepts the same
-// paths as assertWritablePath plus the local paths named in the user's
-// configuration, which are loaded on every launch and so are never blessed
-// through a file dialog [jgraph/drawio-desktop#1278].
-async function assertReadablePath(p)
+// paths as assertWritablePath plus the local paths named in the configuration
+// of the requesting window that the user has allowed, which are loaded on every
+// launch and so are never blessed through a file dialog, see config-paths.js
+// [jgraph/drawio-desktop#1278].
+async function assertReadablePath(webContents, p)
 {
+	// Nothing that is read reaches a window before its configuration has been
+	// read, so no file content can have changed it by then
+	await configPathGrants.waitForCollection(webContents);
+
 	const {realpath} = await canonicalisePath(p);
 
-	if (blessedPaths.has(realpath) || configReadablePaths.has(realpath))
+	if (blessedPaths.has(realpath) || isDraftOrBkpOfBlessed(realpath))
 	{
 		return;
 	}
 
-	if (isDraftOrBkpOfBlessed(realpath))
+	// Waits for the user's answer if the configuration names files that were
+	// not allowed before. Never reads the configuration again: by now script
+	// from a diagram may be running in the page and could have rewritten it.
+	if (await configPathGrants.isReadable(webContents, realpath))
 	{
 		return;
 	}
 
-	// The configuration is read from the renderer, so the first request for a
-	// configured library, template or font can arrive before it has been
-	// collected. Refresh once and re-check before refusing.
-	await loadConfigReadablePaths();
-
-	if (configReadablePaths.has(realpath))
-	{
-		return;
-	}
-
-	// Same for the legacy custom libraries, which the sidebar asks for while
+	// The sidebar asks for legacy custom libraries while
 	// migrateLegacyLibrariesOnce may still be reading them from the renderer
 	if (legacyLibrariesMigration != null)
 	{
@@ -4073,13 +3876,13 @@ function getDraftFileName(fileObject)
 	return draftFileName;
 };
 
-async function getFileDrafts(fileObject)
+async function getFileDrafts(webContents, fileObject)
 {
 	let filePath = fileObject.path;
 
 	// Drafts are siblings derived from filePath, so authorising the file the
 	// drafts belong to authorises the whole set
-	await assertReadablePath(filePath);
+	await assertReadablePath(webContents, filePath);
 
 	let draftsPaths = [], drafts = [], draftFileName, counter = 1, uniquePart = '';
 
@@ -4170,12 +3973,12 @@ async function saveDraft(fileObject, data)
 // Reads the .bkp backup written before the last overwrite (see saveFile),
 // used for best-effort recovery when the main file fails to load. Returns
 // {data, created, modified, path} or null if no readable backup exists.
-async function getBkpFile(fileObject)
+async function getBkpFile(webContents, fileObject)
 {
 	let filePath = fileObject.path;
 
 	// The backup is a sibling derived from filePath (see saveFile)
-	await assertReadablePath(filePath);
+	await assertReadablePath(webContents, filePath);
 
 	let bkpPaths = [
 		path.join(path.dirname(filePath), BKP_PREFEX + path.basename(filePath) + BKP_EXT),
@@ -4372,11 +4175,11 @@ function getDocumentsFolder()
 	return '.';
 };
 
-async function checkFileExists(pathParts)
+async function checkFileExists(webContents, pathParts)
 {
 	let filePath = path.join(...pathParts);
 
-	await assertReadablePath(filePath);
+	await assertReadablePath(webContents, filePath);
 
 	return {exists: fs.existsSync(filePath), path: filePath};
 };
@@ -4424,9 +4227,9 @@ function dirname(path_p)
 	return path.dirname(path_p);
 }
 
-async function readFile(filename, encoding)
+async function readFile(webContents, filename, encoding)
 {
-	await assertReadablePath(filename);
+	await assertReadablePath(webContents, filename);
 
 	let data = await fsProm.readFile(filename, encoding);
 
@@ -4443,16 +4246,16 @@ async function readFile(filename, encoding)
 	throw new Error('Invalid file data');
 }
 
-async function fileStat(file)
+async function fileStat(webContents, file)
 {
-	await assertReadablePath(file);
+	await assertReadablePath(webContents, file);
 
 	return await fsProm.stat(file);
 }
 
-async function isFileWritable(file)
+async function isFileWritable(webContents, file)
 {
-	await assertReadablePath(file);
+	await assertReadablePath(webContents, file);
 
 	try 
 	{
@@ -4559,7 +4362,7 @@ const fileWatcher = new FileWatcher(fs);
 // focused one is not the one that asked [jgraph/drawio-desktop#2541]
 async function watchFile(webContents, filePath)
 {
-	await assertReadablePath(filePath);
+	await assertReadablePath(webContents, filePath);
 
 	fileWatcher.watch(webContents, filePath, (curr, prev) =>
 	{
@@ -4621,6 +4424,17 @@ function getLocalFonts()
 	});
 }
 
+// Every editor window sends this once its app has loaded. Reads wait for the
+// configuration read it starts, so that read happens before any file content
+// reaches the window. The ipcMain.once listeners in the ready handler wait for
+// it too, to send args-obj.
+ipcMain.on('app-load-finished', (e) =>
+{
+	if (!validateSender(e.senderFrame)) return null;
+
+	configPathGrants.collect(e.sender);
+});
+
 ipcMain.on("rendererReq", async (event, args) =>
 {
 	if (!validateSender(event.senderFrame)) return null;
@@ -4648,18 +4462,18 @@ ipcMain.on("rendererReq", async (event, args) =>
 		case 'getFileDrafts':
 			if (args.fileObject == null) throw new Error('bad arg: fileObject');
 			reqStr(args.fileObject.path, 'fileObject.path');
-			ret = await getFileDrafts(args.fileObject);
+			ret = await getFileDrafts(event.sender, args.fileObject);
 			break;
 		case 'getBkpFile':
 			if (args.fileObject == null) throw new Error('bad arg: fileObject');
 			reqStr(args.fileObject.path, 'fileObject.path');
-			ret = await getBkpFile(args.fileObject);
+			ret = await getBkpFile(event.sender, args.fileObject);
 			break;
 		case 'getDocumentsFolder':
 			ret = await getDocumentsFolder();
 			break;
 		case 'checkFileExists':
-			ret = await checkFileExists(args.pathParts);
+			ret = await checkFileExists(event.sender, args.pathParts);
 			break;
 		case 'showOpenDialog':
 			dialogOpen = true;
@@ -4685,7 +4499,7 @@ ipcMain.on("rendererReq", async (event, args) =>
 			break;
 		case 'readFile':
 			reqStr(args.filename, 'filename');
-			ret = await readFile(args.filename, args.encoding);
+			ret = await readFile(event.sender, args.filename, args.encoding);
 			break;
 		case 'clipboardAction':
 			ret = await clipboardAction(args.method, args.data);
@@ -4696,11 +4510,11 @@ ipcMain.on("rendererReq", async (event, args) =>
 			break;
 		case 'fileStat':
 			reqStr(args.file, 'file');
-			ret = await fileStat(args.file);
+			ret = await fileStat(event.sender, args.file);
 			break;
 		case 'isFileWritable':
 			reqStr(args.file, 'file');
-			ret = await isFileWritable(args.file);
+			ret = await isFileWritable(event.sender, args.file);
 			break;
 		case 'windowAction':
 			ret = await windowAction(args.method);

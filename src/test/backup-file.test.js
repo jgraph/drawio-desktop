@@ -5,7 +5,9 @@ import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import vm from 'vm';
+import { pathToFileURL } from 'url';
 import { writeBackupFile } from '../main/backup-file.js';
+import { ConfigPathGrants } from '../main/config-paths.js';
 
 const original = '<mxfile><diagram name="ATTACKER-CONTROLLED-BACKUP-MARKER"/></mxfile>';
 const edited = '<mxfile><diagram name="USER-EDIT"/></mxfile>';
@@ -42,8 +44,8 @@ function fixture(t)
 	const context = vm.createContext({
 		fs, fsProm: files, path, Buffer, TextDecoder, writeBackupFile,
 		app: {getPath: () => userData}, appBaseDir: appDir + path.sep,
-		blessedPaths: new Set(), configReadablePaths: new Set(),
-		persistBlessedPaths: () => {}, loadConfigReadablePaths: async () => {},
+		blessedPaths: new Set(), configPathGrants: new ConfigPathGrants(fs, null, async () => true),
+		persistBlessedPaths: () => {},
 		legacyLibrariesMigration: null, enableStoreBkp: true, isWin: false, __DEV__: false
 	});
 	vm.runInContext(helpers, context, {filename: 'electron-file-helpers.js'});
@@ -51,6 +53,16 @@ function fixture(t)
 	const save = () => context.saveFile({path: diagram, encoding: 'utf8'},
 		edited, fs.statSync(diagram), false);
 	return {root, directory, diagram, backup, target, userData, appDir, files, context, save};
+}
+
+// An editor window whose configuration has been read, see ConfigPathGrants
+async function editorWindow(f, config)
+{
+	const page = vm.createContext({Editor: {config}});
+	const win = {page, executeJavaScript: async (script) => vm.runInContext(script, page)};
+	f.context.configPathGrants.register(win);
+	await f.context.configPathGrants.collect(win);
+	return win;
 }
 
 function symlink(t, target, linkPath, type = 'file')
@@ -139,7 +151,7 @@ describe('GUI save authorisation', () =>
 		fs.unlinkSync(f.diagram);
 		if (!symlink(t, f.target, f.diagram)) return;
 		await assert.rejects(f.context.assertWritablePath(f.diagram), /path not authorised/);
-		await assert.rejects(f.context.assertReadablePath(f.diagram), /path not authorised/);
+		await assert.rejects(f.context.assertReadablePath(null, f.diagram), /path not authorised/);
 		await assert.rejects(f.context.writeFile(f.diagram, edited, 'utf8'), /path not authorised/);
 		assert.equal(fs.readFileSync(f.target, 'utf8'), sentinel);
 	});
@@ -149,7 +161,7 @@ describe('GUI save authorisation', () =>
 		const f = fixture(t);
 		const draft = path.join(f.directory, '.$poc.drawio.dtmp');
 		if (!symlink(t, f.target, draft)) return;
-		await assert.rejects(f.context.assertReadablePath(draft), /path not authorised/);
+		await assert.rejects(f.context.assertReadablePath(null, draft), /path not authorised/);
 		await assert.rejects(f.context.saveDraft({path: f.diagram, draftFileName: draft}, edited),
 			/path not authorised/);
 		assert.equal(fs.readFileSync(f.target, 'utf8'), sentinel);
@@ -161,7 +173,7 @@ describe('GUI save authorisation', () =>
 		const alias = path.join(f.directory, 'alias.drawio');
 		if (!symlink(t, f.diagram, alias)) return;
 		f.context.blessPath(alias);
-		await f.context.assertReadablePath(alias);
+		await f.context.assertReadablePath(null, alias);
 		await f.context.saveFile({path: alias, encoding: 'utf8'}, edited, fs.statSync(alias), false);
 		assert.equal(fs.readFileSync(f.diagram, 'utf8'), edited);
 		assert.equal(fs.readFileSync(path.join(f.directory, '.$alias.drawio.bkp'), 'utf8'), original);
@@ -186,12 +198,12 @@ describe('GUI save authorisation', () =>
 		const drive = mapDrive(f);
 		const picked = path.join(drive, 'poc.drawio');
 		f.context.blessPath(picked);
-		await f.context.assertReadablePath(picked);
+		await f.context.assertReadablePath(null, picked);
 		await f.context.saveFile({path: picked, encoding: 'utf8'}, edited, fs.statSync(picked), false);
 		assert.equal(fs.readFileSync(f.diagram, 'utf8'), edited);
 		assert.equal(fs.readFileSync(f.backup, 'utf8'), original);
 		const draft = await f.context.saveDraft({path: picked}, edited);
-		assert.deepEqual(Array.from(await f.context.getFileDrafts({path: picked}), d => d.path), [draft]);
+		assert.deepEqual(Array.from(await f.context.getFileDrafts(null, {path: picked}), d => d.path), [draft]);
 		const newFile = path.join(drive, 'new.drawio');
 		f.context.blessPath(newFile);
 		await f.context.saveFile({path: newFile, encoding: 'utf8'}, original, null, false);
@@ -205,7 +217,7 @@ describe('GUI save authorisation', () =>
 		f.context.blessPath(picked);
 		fs.unlinkSync(f.diagram);
 		if (!symlink(t, f.target, f.diagram)) return;
-		await assert.rejects(f.context.assertReadablePath(picked), /path not authorised/);
+		await assert.rejects(f.context.assertReadablePath(null, picked), /path not authorised/);
 		await assert.rejects(f.context.writeFile(picked, edited, 'utf8'), /path not authorised/);
 		assert.equal(fs.readFileSync(f.target, 'utf8'), sentinel);
 	});
@@ -223,7 +235,7 @@ describe('GUI save authorisation', () =>
 
 		f.context.blessedPaths.clear();
 		f.context.blessPath(respelt);
-		await f.context.assertReadablePath(respelt);
+		await f.context.assertReadablePath(null, respelt);
 		await f.context.saveFile({path: respelt, encoding: 'utf8'}, edited, fs.statSync(respelt), false);
 		assert.equal(fs.readFileSync(f.diagram, 'utf8'), edited);
 		assert.equal(fs.readFileSync(f.backup, 'utf8'), original);
@@ -232,14 +244,40 @@ describe('GUI save authorisation', () =>
 	test('configured reads require the current canonical target', async (t) =>
 	{
 		const f = fixture(t);
+		const library = path.join(f.root, 'library.xml');
 		const alias = path.join(f.directory, 'library.xml');
-		if (!symlink(t, f.diagram, alias)) return;
-		f.context.configReadablePaths.add(alias);
-		f.context.configReadablePaths.add(f.diagram);
-		await f.context.assertReadablePath(alias);
+		fs.writeFileSync(library, '<mxlibrary>[]</mxlibrary>');
+		if (!symlink(t, library, alias)) return;
+		const win = await editorWindow(f, {fontCss: 'url(' + alias + ')'});
+		await f.context.assertReadablePath(win, alias);
 		fs.unlinkSync(alias);
 		fs.symlinkSync(f.target, alias, 'file');
-		await assert.rejects(f.context.assertReadablePath(alias), /path not authorised/);
+		await assert.rejects(f.context.assertReadablePath(win, alias), /path not authorised/);
+	});
+
+	test('does not read a path put into the configuration after the window loaded', async (t) =>
+	{
+		const f = fixture(t);
+		const win = await editorWindow(f, {});
+		// Any script in the page can rewrite its configuration once a diagram is
+		// open, and send the message that the configuration is read at
+		vm.runInContext('Editor.config = {fontCss: "url(' + pathToFileURL(f.target).href + ')"}', win.page);
+		await f.context.configPathGrants.collect(win);
+		await assert.rejects(f.context.assertReadablePath(win, f.target), /path not authorised/);
+	});
+
+	test('sends nothing read to a window before its configuration was read', async (t) =>
+	{
+		const f = fixture(t);
+		const win = {executeJavaScript: async () => []};
+		f.context.configPathGrants.register(win);
+		let replied = false;
+		const read = f.context.assertReadablePath(win, f.diagram).then(() => replied = true);
+		await new Promise((resolve) => setTimeout(resolve, 20));
+		assert.equal(replied, false);
+		await f.context.configPathGrants.collect(win);
+		await read;
+		assert.equal(replied, true);
 	});
 
 	test('retains the app and userData write exclusions even for blessed paths', async (t) =>
