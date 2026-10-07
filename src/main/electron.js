@@ -17,6 +17,7 @@ import { writeBackupFile } from './backup-file.js';
 import { getPrintOptions } from './print-options.js';
 import FileWatcher from './file-watcher.js';
 import { ConfigPathGrants } from './config-paths.js';
+import { getUrlParams, getUrlParamsFiles } from './url-params.js';
 import elecUpPkg from 'electron-updater';
 const {autoUpdater} = elecUpPkg;
 import {PDFDocument, PDFHexString, PDFName} from '@cantoo/pdf-lib';
@@ -472,41 +473,36 @@ let isGoogleFontsEnabled = store != null ? (store.get('isGoogleFontsEnabled') !=
 const devSources = __DEV__ && fs.existsSync(path.join(codeDir, 'js', 'diagramly', 'Devel.js'));
 
 //Read config file
-var queryObj = {
-	'dev': devSources ? 1 : 0,
-	'test': __DEV__ ? 1 : 0,
-	'gapi': 0,
-	'db': 0,
-	'od': 0,
-	'gh': 0,
-	'gl': 0,
-	'tr': 0,
-	'browser': 0,
-	'picker': 0,
-	'mode': 'device',
-	'export': 'https://convert.diagrams.net/node/export',
-	'disableUpdate': updateMode == 'off'? 1 : 0,
-	'enableSpellCheck': enableSpellCheck? 1 : 0,
-	'enableStoreBkp': enableStoreBkp? 1 : 0,
-	'isGoogleFontsEnabled': isGoogleFontsEnabled? 1 : 0
-};
-
-try
-{
-	if (fs.existsSync(process.cwd() + '/urlParams.json'))
-	{
-		let urlParams = JSON.parse(fs.readFileSync(process.cwd() + '/urlParams.json'));
-		
-		for (var param in urlParams)
-		{
-			queryObj[param] = urlParams[param];
-		}
-	}
-}
-catch(e)
-{
-	console.log('Error in urlParams.json file: ' + e.message);
-}
+var queryObj = getUrlParams({
+	defaults: {
+		'dev': devSources ? 1 : 0,
+		'test': __DEV__ ? 1 : 0,
+		'gapi': 0,
+		'db': 0,
+		'od': 0,
+		'gh': 0,
+		'gl': 0,
+		'tr': 0,
+		'browser': 0,
+		'picker': 0,
+		'mode': 'device',
+		'export': 'https://convert.diagrams.net/node/export'
+	},
+	state: {
+		'disableUpdate': updateMode == 'off'? 1 : 0,
+		'enableSpellCheck': enableSpellCheck? 1 : 0,
+		'enableStoreBkp': enableStoreBkp? 1 : 0,
+		'isGoogleFontsEnabled': isGoogleFontsEnabled? 1 : 0
+	},
+	files: getUrlParamsFiles({
+		exeDir: path.dirname(process.execPath),
+		userDataDir: app.getPath('userData'),
+		cwd: process.cwd(),
+		dev: __DEV__
+	}),
+	readFile: (file) => fs.readFileSync(file, 'utf8'),
+	log: console.log
+});
 
 // Trying sandboxing the renderer for more protection
 //app.enableSandbox(); // This maybe the reason snap stopped working
