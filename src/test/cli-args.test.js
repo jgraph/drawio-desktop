@@ -717,6 +717,31 @@ describe('combined short flags', () =>
 		assert.equal(opts.format, 'png');
 	});
 
+	test('-xf png takes the next token as the value of the trailing -f', () =>
+	{
+		const { opts, args } = parse(['-xf', 'png', 'input.drawio']);
+		assert.equal(opts.export, true);
+		assert.equal(opts.format, 'png');
+		assert.deepEqual(args, ['input.drawio']);
+	});
+
+	test('-xo out.pdf takes the next token as the output', () =>
+	{
+		const { opts, args } = parse(['-xo', 'out.pdf', 'input.drawio']);
+		assert.equal(opts.export, true);
+		assert.equal(opts.output, 'out.pdf');
+		assert.deepEqual(args, ['input.drawio']);
+	});
+
+	test('trailing value-bearing flag does not consume a following flag', () =>
+	{
+		const { opts, args } = parse(['-xf', '-a', 'input.drawio']);
+		assert.equal(opts.export, true);
+		assert.equal(opts.format, 'pdf');
+		assert.equal(opts.allPages, true);
+		assert.deepEqual(args, ['input.drawio']);
+	});
+
 	test('-q85 treats 85 as the quality value', () =>
 	{
 		const { opts } = parse(['-q85']);
