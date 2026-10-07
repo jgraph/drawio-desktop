@@ -243,8 +243,18 @@ export function parseDrawioArgs(argv)
 
 					if (shortDef.takesValue)
 					{
-						// Attached-value form: -fpng → -f with value "png".
-						applyValue(opts, shortDef, token.slice(j + 1));
+						// Attached-value form: -fpng → -f with value "png". With nothing
+						// attached the value is the next token, as for a lone -f: -xf png
+						if (j + 1 < token.length)
+						{
+							applyValue(opts, shortDef, token.slice(j + 1));
+						}
+						else if (i + 1 < tokens.length && !tokens[i + 1].startsWith('-'))
+						{
+							applyValue(opts, shortDef, tokens[i + 1]);
+							i++;
+						}
+
 						j = token.length;
 						break;
 					}
