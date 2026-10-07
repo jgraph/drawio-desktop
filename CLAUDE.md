@@ -113,8 +113,7 @@ drawio-desktop/
 
 ### Branches
 - `dev` - Main development branch (PR target)
-- `release` - Production releases
-- `releases/v*.*.*` - Version-specific release branches
+- `releases/v*.*.*` - One per release, pushed by the `prepare-release` workflow with a PR into `dev`; the `vX.Y.Z` tag goes on its head (`doc/RELEASE_PROCESS.md`). There is no long-lived `release` branch in this repo (retired after v30.4.1); the `ref: release` in the build workflows is drawio-dev's
 
 ### Commit Messages
 - Lowercase sentence style without period
