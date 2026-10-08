@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "32.3.0",
+  "version": "32.4.1",
   "description": "draw.io desktop",
   "exports": "./src/main/electron.js",
   "type": "module",
