@@ -365,6 +365,30 @@ describe('GUI save authorisation', () =>
 		assert.equal(fs.readFileSync(f.backup, 'utf8'), 'OLDER BACKUP');
 		assert.deepEqual(fs.readdirSync(f.directory).sort(), ['.$poc.drawio.bkp', 'poc.drawio']);
 	});
+
+	// Animation exports are written base64 encoded [jgraph/drawio-desktop#2580]
+	test('writes animated GIF and MP4 exports and still refuses unknown data', async (t) =>
+	{
+		const f = fixture(t);
+		const exports = {
+			'gif87a.gif': Buffer.from('GIF87a\x01\x00\x01\x00\x00\x00\x00;', 'latin1'),
+			'gif89a.gif': Buffer.from('GIF89a\x01\x00\x01\x00\x00\x00\x00;', 'latin1'),
+			'video.mp4': Buffer.concat([Buffer.from([0, 0, 0, 0x14]),
+				Buffer.from('ftypisom\x00\x00\x02\x00isom', 'latin1')])
+		};
+		for (const [name, data] of Object.entries(exports))
+		{
+			const file = path.join(f.directory, name);
+			f.context.blessPath(file);
+			await f.context.writeFile(file, data.toString('base64'), 'base64');
+			assert.deepEqual(fs.readFileSync(file), data);
+		}
+		const script = path.join(f.directory, 'script.sh');
+		f.context.blessPath(script);
+		await assert.rejects(f.context.writeFile(script,
+			Buffer.from('#!/bin/sh\necho 1\n').toString('base64'), 'base64'), /Invalid file data/);
+		assert.equal(fs.existsSync(script), false);
+	});
 });
 
 describe('writeBackupFile', () =>

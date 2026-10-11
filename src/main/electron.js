@@ -3633,6 +3633,20 @@ function checkFileContent(body, enc)
 			}
 		}
 
+		// image/gif (GIF87a, GIF89a)
+		if (cc1 == 0x47 && cc2 == 0x49 && cc3 == 0x46 && cc4 == 0x38
+				&& (cc5 == 0x37 || cc5 == 0x39) && cc6 == 0x61)
+		{
+			return true;
+		}
+
+		// video/mp4 (ftyp box, size < 64K)
+		if (cc1 == 0 && cc2 == 0 && cc5 == 0x66 && cc6 == 0x74
+				&& cc7 == 0x79 && cc8 == 0x70)
+		{
+			return true;
+		}
+
 		// vsdx, vssx (also zip, jar, odt, ods, odp, docx, xlsx, pptx, apk, aar)
 		if (cc1 == 0x50 && cc2 == 0x4B && cc3 == 0x03 && cc4 == 0x04)
 		{
