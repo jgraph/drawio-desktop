@@ -743,7 +743,16 @@ function createWindow (opt = {})
 				//If user chose not to save, remove the draft
 				if (data.draftPath != null)
 				{
-					await deleteFile(data.draftPath);
+					try
+					{
+						await deleteFile(data.draftPath);
+					}
+					catch (e)
+					{
+						// Closes the window even if the draft cannot be deleted, eg. if
+						// a save deleted it and the next draft was not written yet
+					}
+
 					mainWindow.destroy();
 				}
 				else
