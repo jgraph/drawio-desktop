@@ -1018,7 +1018,8 @@ app.whenReady().then(() =>
 				bg: options.transparent ? 'none' : '#ffffff',
 				from: from,
 				to: to,
-				allPages: (format == 'pdf' || format == 'html') && options.allPages,
+				// SVG output of all pages has a view for each page
+				allPages: (format == 'pdf' || format == 'html' || format == 'svg') && options.allPages,
 				scale: (options.scale || 1),
 				embedXml: options.embedDiagram? '1' : '0',
 				embedImages: options.embedSvgImages? '1' : '0',
