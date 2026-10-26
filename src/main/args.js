@@ -74,7 +74,7 @@ const OPTION_DEFS = [
 	  parse: v => /^(diagram|page)$/.test(v) ? v : null,               default: 'diagram',
 	  desc: 'export size mode (for png, jpg and svg formats): diagram [default] crops the output to the diagram content, page exports the full page(s) the diagram is on, as with the Size option in the export dialog' },
 	{ short: '-a', long: '--all-pages',        key: 'allPages',
-	  desc: 'export all pages (for PDF and HTML formats)' },
+	  desc: 'export all pages (for PDF, HTML and SVG formats; SVG output shows the first page and the others via SVG views, eg. file.svg#Page-2)' },
 	{ short: '-p', long: '--page-index',       key: 'pageIndex',      takesValue: true,
 	  valueLabel: '<pageIndex>',
 	  parse: i => parseInt(i) - 1,
