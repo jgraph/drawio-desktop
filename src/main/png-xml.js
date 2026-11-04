@@ -1,9 +1,16 @@
+import { constants } from 'buffer';
 import zlib from 'zlib';
+
+// The longest zTXt text that can be read: toString fails past it, as every writer
+// URL-encodes the XML, so a byte is a character. Anything smaller would be a budget
+// that refuses real files: embedded images, not cell counts, set a diagram's size
+const MAX_INFLATED_LENGTH = constants.MAX_STRING_LENGTH;
 
 // Returns the diagram embedded in a PNG, or null if it has none. Chunk lengths
 // are unsigned, and a chunk that runs past the end of the file ends the scan,
-// so each pass moves forward and a malformed file cannot keep the parser going
-export function readPngXml(buffer)
+// so each pass moves forward and a malformed file cannot keep the parser going.
+// Throws if the diagram cannot be read, as with a chunk over maxInflatedLength
+export function readPngXml(buffer, maxInflatedLength = MAX_INFLATED_LENGTH)
 {
 	var offset = 8; // Skip PNG signature
 
@@ -36,18 +43,25 @@ export function readPngXml(buffer)
 				{
 					var dataStart = keyEnd + 2; // Skip null + compression method
 					var compressed = buffer.subarray(dataStart, offset + length);
+					var options = {maxOutputLength: maxInflatedLength};
 					var inflated;
 
 					try
 					{
-						inflated = zlib.inflateSync(compressed);
+						inflated = zlib.inflateSync(compressed, options);
 					}
 					catch (e)
 					{
+						// Not the raw deflate case below: this stream is valid
+						if (e.code === 'ERR_BUFFER_TOO_LARGE')
+						{
+							throw e;
+						}
+
 						// Fallback for PNGs produced by the pre-fix CLI which
 						// wrote raw deflate instead of zlib datastream
 						// [jgraph/drawio-desktop#2425]
-						inflated = zlib.inflateRawSync(compressed);
+						inflated = zlib.inflateRawSync(compressed, options);
 					}
 
 					return decodeURIComponent(inflated.toString());

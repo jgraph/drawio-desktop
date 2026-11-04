@@ -3,6 +3,7 @@
 // the test run instead of failing it
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
+import { constants } from 'buffer';
 import { spawnSync } from 'child_process';
 import path from 'path';
 import zlib from 'zlib';
@@ -111,5 +112,64 @@ describe('readPngXml', () =>
 
 		assert.equal(readInChild(cut(0x7fffffff)), null);
 		assert.equal(readInChild(cut(0xffffffff)), null);
+	});
+
+	describe('inflate limit', () =>
+	{
+		// Spans several zlib output chunks. The default limit is only checked
+		// through its options: reaching it takes over 2 GB
+		const limit = 100000;
+
+		function ztxt(deflate, length)
+		{
+			const data = Buffer.concat([key, deflate(Buffer.alloc(length, 'A'))]);
+
+			return png(ihdr, chunk('zTXt', data), iend);
+		}
+
+		test('stops a zlib chunk over the limit without trying raw deflate', (t) =>
+		{
+			const inflateRaw = t.mock.method(zlib, 'inflateRawSync');
+
+			assert.throws(() => readPngXml(ztxt(zlib.deflateSync, limit + 1), limit),
+				{code: 'ERR_BUFFER_TOO_LARGE'});
+			assert.equal(inflateRaw.mock.callCount(), 0);
+		});
+
+		test('stops a raw deflate chunk over the limit', () =>
+		{
+			assert.throws(() => readPngXml(ztxt(zlib.deflateRawSync, limit + 1), limit),
+				{code: 'ERR_BUFFER_TOO_LARGE'});
+		});
+
+		test('reads chunks up to the limit', () =>
+		{
+			for (const deflate of [zlib.deflateSync, zlib.deflateRawSync])
+			{
+				assert.equal(readPngXml(ztxt(deflate, limit - 1), limit).length, limit - 1);
+				assert.equal(readPngXml(ztxt(deflate, limit), limit).length, limit);
+			}
+		});
+
+		test('still fails on data that is not deflate', () =>
+		{
+			const data = Buffer.concat([key, Buffer.from('not deflate data')]);
+
+			assert.throws(() => readPngXml(png(ihdr, chunk('zTXt', data), iend), limit),
+				{code: 'Z_DATA_ERROR'});
+		});
+
+		test('defaults to the longest string for both inflates', (t) =>
+		{
+			const inflate = t.mock.method(zlib, 'inflateSync');
+			const inflateRaw = t.mock.method(zlib, 'inflateRawSync');
+
+			assert.equal(readPngXml(ztxt(zlib.deflateRawSync, 10)), 'A'.repeat(10));
+
+			for (const call of [inflate, inflateRaw])
+			{
+				assert.equal(call.mock.calls[0].arguments[1].maxOutputLength, constants.MAX_STRING_LENGTH);
+			}
+		});
 	});
 });
