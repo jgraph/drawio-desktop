@@ -4,7 +4,7 @@ import zlib from 'zlib';
 // The longest zTXt text that can be read: toString fails past it, as every writer
 // URL-encodes the XML, so a byte is a character. Anything smaller would be a budget
 // that refuses real files: embedded images, not cell counts, set a diagram's size
-const MAX_INFLATED_LENGTH = constants.MAX_STRING_LENGTH;
+export const MAX_INFLATED_LENGTH = constants.MAX_STRING_LENGTH;
 
 // Returns the diagram embedded in a PNG, or null if it has none. Chunk lengths
 // are unsigned, and a chunk that runs past the end of the file ends the scan,

@@ -1,6 +1,21 @@
 import zlib from 'zlib';
+import { MAX_INFLATED_LENGTH } from './png-xml.js';
 
-export function readPdfXml(buffer)
+// A diagram attachment is raw UTF-8 XML, so unlike the ASCII hex of an object stream
+// its characters can take 3 bytes each, and toString only fails past this many times
+// the longest string. A smaller limit would refuse attachments that read
+const MAX_BYTES_PER_CHAR = 3;
+
+// A stream past the longest string ends the read: the next stream is not tried
+function isTooLong(e)
+{
+	return e.code === 'ERR_BUFFER_TOO_LARGE' || e.code === 'ERR_STRING_TOO_LONG';
+}
+
+// Returns the diagram embedded in a PDF, or null if it has none. Each stream is
+// inflated at most once, however many occurrences lead to it. Throws if the diagram
+// cannot be read, as with a stream over maxInflatedLength
+export function readPdfXml(buffer, maxInflatedLength = MAX_INFLATED_LENGTH)
 {
 	var f = buffer.toString('binary');
 	var result = null;
@@ -16,24 +31,45 @@ export function readPdfXml(buffer)
 		while (blockStart > -1)
 		{
 			var streamStart = f.indexOf('stream', blockStart) + 9;
+
+			// No stream follows this occurrence or any later one
+			if (streamStart < 9)
+			{
+				break;
+			}
+
 			var fileInfo = f.substring(blockStart, streamStart);
+			var nextBlock = blockStart + 1;
 
 			if (fileInfo.indexOf('application#2Fvnd.jgraph.mxfile') > 0)
 			{
 				var streamEnd = f.indexOf('endstream', streamStart - 1);
 
+				if (streamEnd < 0)
+				{
+					break;
+				}
+
 				try
 				{
 					return zlib.inflateRawSync(
-						Buffer.from(f.substring(streamStart, streamEnd), 'binary')).toString();
+						Buffer.from(f.substring(streamStart, streamEnd), 'binary'),
+						{maxOutputLength: maxInflatedLength * MAX_BYTES_PER_CHAR}).toString();
 				}
 				catch (e)
 				{
+					if (isTooLong(e))
+					{
+						throw e;
+					}
+
 					// Continue to next occurrence or extraction method
 				}
+
+				nextBlock = streamEnd;
 			}
 
-			blockStart = f.indexOf('EmbeddedFile', blockStart + 1);
+			blockStart = f.indexOf('EmbeddedFile', nextBlock);
 		}
 
 		var last = f.indexOf('/ObjStm');
@@ -43,10 +79,17 @@ export function readPdfXml(buffer)
 			var streamStart = f.indexOf('stream', last) + 9;
 			var streamEnd = f.indexOf('endstream', streamStart - 1);
 
+			// No whole stream follows this occurrence or any later one
+			if (streamStart < 9 || streamEnd < 0)
+			{
+				break;
+			}
+
 			try
 			{
 				var text = zlib.inflateRawSync(
-					Buffer.from(f.substring(streamStart, streamEnd), 'binary')).toString();
+					Buffer.from(f.substring(streamStart, streamEnd), 'binary'),
+					{maxOutputLength: maxInflatedLength}).toString();
 				var subj = text.indexOf('/Subject <');
 
 				if (subj > 0)
@@ -76,10 +119,15 @@ export function readPdfXml(buffer)
 			}
 			catch (e)
 			{
+				if (isTooLong(e))
+				{
+					throw e;
+				}
+
 				// Continue to next object stream
 			}
 
-			last = f.indexOf('/ObjStm', last + 1);
+			last = f.indexOf('/ObjStm', streamEnd);
 		}
 	}
 
