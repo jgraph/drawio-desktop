@@ -17,6 +17,7 @@ import { writeBackupFile } from './backup-file.js';
 import { getPrintOptions } from './print-options.js';
 import { readPngXml } from './png-xml.js';
 import { readPdfXml } from './pdf-xml.js';
+import { buildHtmlExport } from './html-export.js';
 import FileWatcher from './file-watcher.js';
 import { ConfigPathGrants } from './config-paths.js';
 import { getUrlParams, getUrlParamsFiles } from './url-params.js';
@@ -28,6 +29,11 @@ import ProgressBar from './progress-bar.js';
 import contextMenu from 'electron-context-menu';
 import {spawn, execFile} from 'child_process';
 import {disableUpdate as disUpPkg} from './disableUpdate.js';
+
+// electron-store's when-exit hooks SIGTRAP. A V8 fatal error ends in a trap
+// instruction, and on arm64 the handler returns to that same instruction, so
+// the process spins forever instead of crashing
+process.removeAllListeners('SIGTRAP');
 
 let store;
 
@@ -1403,7 +1409,12 @@ app.whenReady().then(() =>
 
 														try
 														{
-															fs.writeFileSync(fh, data);
+															// An HTML page comes as an iterator of parts
+															for (const part of typeof data.next === 'function' ? data : [data])
+															{
+																fs.writeFileSync(fh, part);
+															}
+
 															fs.fsyncSync(fh);
 														}
 														finally
@@ -1503,8 +1514,7 @@ app.whenReady().then(() =>
 									}
 
 									var title = path.basename(curFile, path.extname(curFile));
-									var htmlData = buildHtmlExport(xml, title, options);
-									mockEvent.reply('export-success', htmlData);
+									mockEvent.reply('export-success', buildHtmlExport(xml, title, options));
 								}
 								else
 								{
@@ -2704,12 +2714,6 @@ async function mergePdfs(pdfFiles, xml, annots)
 	return Buffer.from(pdfBytes);
 }
 
-function htmlEntities(str)
-{
-	return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;')
-		.replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
 function readSvgXml(svgString)
 {
 	// Extracts content attribute from SVG root element
@@ -2742,96 +2746,6 @@ function readSvgXml(svgString)
 	}
 
 	return null;
-}
-
-function buildHtmlExport(xml, title, options)
-{
-	var data = {};
-
-	if (options.htmlLinkColor && options.htmlLinkColor !== 'none')
-	{
-		data.highlight = options.htmlLinkColor;
-	}
-	else
-	{
-		data.highlight = '#0000ff';
-	}
-
-	if (options.htmlLinkTarget && options.htmlLinkTarget !== 'auto')
-	{
-		data.target = options.htmlLinkTarget === 'blank' ? '_blank' : '_self';
-	}
-
-	if (options.htmlLightbox === false)
-	{
-		data.lightbox = false;
-	}
-
-	data.nav = true;
-	data.resize = true;
-	data.xml = xml;
-
-	var tb = [];
-
-	if (options.allPages)
-	{
-		tb.push('pages');
-	}
-
-	if (options.pageIndex != null && options.pageIndex >= 0)
-	{
-		data.page = options.pageIndex;
-	}
-
-	if (options.htmlZoom !== false)
-	{
-		tb.push('zoom');
-	}
-
-	if (options.htmlLayers !== false)
-	{
-		tb.push('layers');
-	}
-
-	if (options.htmlTags !== false)
-	{
-		tb.push('tags');
-	}
-
-	if (tb.length > 0)
-	{
-		if (options.htmlLightbox !== false)
-		{
-			tb.push('lightbox');
-		}
-
-		data.toolbar = tb.join(' ');
-	}
-
-	if (options.htmlTheme && options.htmlTheme !== 'auto')
-	{
-		data['dark-mode'] = options.htmlTheme;
-	}
-
-	if (options.htmlEditLink)
-	{
-		data.edit = options.htmlEditLink;
-	}
-
-	var fit = options.htmlFit !== false;
-
-	var div = '<div class="mxgraph" style="' +
-		(fit ? 'max-width:100%;' : '') +
-		(tb.length > 0 ? 'border:1px solid transparent;' : '') +
-		'" data-mxgraph="' + htmlEntities(JSON.stringify(data)) + '"></div>';
-
-	var scriptTag = '<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>';
-
-	return '<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->\n' +
-		'<!DOCTYPE html>\n<html>\n<head>\n' +
-		'<title>' + htmlEntities(title) + '</title>\n' +
-		'<meta charset="utf-8"/>\n' +
-		'</head>\n<body>\n' + div + '\n' + scriptTag + '\n</body>\n</html>';
 }
 
 //TODO Use canvas to export images if math is not used to speedup export (no capturePage). Requires change to export3.html also
