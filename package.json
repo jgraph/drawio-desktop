@@ -1,6 +1,6 @@
 {
   "name": "draw.io",
-  "version": "32.6.10",
+  "version": "32.7.4",
   "description": "draw.io desktop",
   "exports": "./src/main/electron.js",
   "type": "module",
@@ -11,10 +11,7 @@
   "scripts": {
     "start": "electron .",
     "sync": "node ./sync.cjs",
-    "test": "node --test src/test/cli-args.test.js src/test/msi-project-created.test.js src/test/window-bounds.test.js src/test/update-channel.test.js src/test/update-mode.test.js src/test/export-files.test.js src/test/system-path.test.js src/test/file-watcher.test.js src/test/backup-file.test.js src/test/config-paths.test.js src/test/print-options.test.js src/test/url-params.test.js src/test/png-xml.test.js src/test/pdf-xml.test.js src/test/html-export.test.js",
-    "release-win": "electron-builder --config electron-builder-win.json --publish always",
-    "release-win-arm64": "electron-builder --config electron-builder-win-arm64.json --publish always",
-    "release-appx": "electron-builder --config electron-builder-appx.json --publish never",
+    "test": "node --test \"src/test/*.test.js\"",
     "release-linux": "electron-builder --config electron-builder-linux-mac.json --publish always",
     "release-snap": "electron-builder --config electron-builder-snap.json --publish never"
   },

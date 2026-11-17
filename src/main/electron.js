@@ -476,9 +476,12 @@ let appZoom = 1;
 let isGoogleFontsEnabled = store != null ? (store.get('isGoogleFontsEnabled') != null? store.get('isGoogleFontsEnabled') : false) : false;
 
 // dev=1 makes bootstrap.js load the unminified editor sources, which the
-// packaged app.asar leaves out (see files in electron-builder-*.json), so a
-// packaged build started with DRAWIO_ENV=dev keeps the minified bundles
-const devSources = __DEV__ && fs.existsSync(path.join(codeDir, 'js', 'diagramly', 'Devel.js'));
+// packaged app.asar leaves out (see files in electron-builder-*.json), and
+// the desktop scripts from js/desktop, which public drawio releases move to
+// js/diagramly. A packaged build or the public submodule started with
+// DRAWIO_ENV=dev therefore keeps the minified bundles
+const devSources = __DEV__ && fs.existsSync(path.join(codeDir, 'js', 'diagramly', 'Devel.js')) &&
+	fs.existsSync(path.join(codeDir, 'js', 'desktop', 'ElectronApp.js'));
 
 //Read config file
 var queryObj = getUrlParams({

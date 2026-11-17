@@ -82,9 +82,7 @@ To run this:
 
 Note: If a symlink is used to refer to drawio repo (instead of the submodule), then symlink the `node_modules` directory inside `drawio/src/main/webapp` also.
 
-To fork the project, make your own changes and build an (unsigned) app for personal use, see [doc/BUILDING_FOR_PERSONAL_USE.md](doc/BUILDING_FOR_PERSONAL_USE.md).
-
-The release process (GitHub Actions builds, signing and publishing) is described in [doc/RELEASE_PROCESS.md](doc/RELEASE_PROCESS.md).
+To fork the project, make your own changes and build the app for personal use, see [doc/BUILDING_FOR_PERSONAL_USE.md](doc/BUILDING_FOR_PERSONAL_USE.md).
 
 Local Storage and Session Storage is stored in the AppData folder:
 

@@ -33,7 +33,10 @@ describe('getUpdateChannel', () =>
 	});
 });
 
-describe('electron-builder publish config', () =>
+// The Windows builder configs are not in the public repository (build/public/config.json)
+const windowsConfigs = fs.existsSync(path.join(root, 'electron-builder-win.json'));
+
+describe('electron-builder publish config', {skip: !windowsConfigs && 'no Windows packaging in this tree'}, () =>
 {
 	test('arm64 config publishes the channel the app asks for', () =>
 	{

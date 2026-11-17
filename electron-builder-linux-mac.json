@@ -21,70 +21,11 @@
   },
   "npmRebuild": false,
   "publish": {
-      "provider": "github"
+    "provider": "github",
+    "owner": "jgraph",
+    "repo": "drawio-desktop"
   },
-  "mac": {
-  	"hardenedRuntime": true,
-  	"gatekeeperAssess": false,
-  	"entitlements": "build/entitlements.mac.plist",
-  	"entitlementsInherit": "build/entitlements.mac.plist",
-    "category": "public.app-category.graphics-design",
-    "extendInfo": {
-      "UTExportedTypeDeclarations": [
-        {
-          "UTTypeIdentifier": "com.jgraph.drawio",
-          "UTTypeDescription": "draw.io Diagram",
-          "UTTypeConformsTo": ["public.xml", "public.data"],
-          "UTTypeTagSpecification": {
-            "public.filename-extension": ["drawio"],
-            "public.mime-type": ["application/vnd.jgraph.mxfile"]
-          }
-        }
-      ],
-      "CFBundleDocumentTypes": [
-        {
-          "CFBundleTypeExtensions": ["drawio"],
-          "CFBundleTypeName": "draw.io Diagram",
-          "CFBundleTypeRole": "Editor",
-          "CFBundleTypeIconFile": "icon.icns",
-          "LSItemContentTypes": ["com.jgraph.drawio"],
-          "LSHandlerRank": "Owner"
-        },
-        {
-          "CFBundleTypeExtensions": ["vsdx"],
-          "CFBundleTypeName": "VSDX Document",
-          "CFBundleTypeRole": "Editor",
-          "CFBundleTypeIconFile": "icon.icns",
-          "LSHandlerRank": "Default"
-        },
-        {
-          "CFBundleTypeExtensions": ["mmd", "mermaid"],
-          "CFBundleTypeName": "Mermaid Diagram",
-          "CFBundleTypeRole": "Editor",
-          "CFBundleTypeIconFile": "icon.icns",
-          "LSHandlerRank": "Default"
-        }
-      ]
-    },
-    "target": [
-      { "target": "zip", "arch": [
-          "x64",
-          "arm64"
-        ]
-      },
-      { "target": "dmg", "arch": [
-          "x64",
-          "arm64",
-          "universal"
-        ]
-      }
-    ]
-  },
-  "beforePack": "build/dmg-hidden-files.mjs",
-  "afterSign": "build/notarize.mjs",
   "afterPack": "build/fuses.mjs",
-  "dmg": {
-  },
   "toolsets": {
     "appimage": "1.0.3"
   },
@@ -92,7 +33,7 @@
     "compression": "gzip"
   },
   "linux": {
-  	"executableName": "drawio",
+    "executableName": "drawio",
     "category": "Graphics",
     "maintainer": "draw.io <desktop@draw.io>",
     "icon": "./build",
@@ -102,17 +43,23 @@
       }
     },
     "target": [
-      { "target": "AppImage", "arch": [
+      {
+        "target": "AppImage",
+        "arch": [
           "x64",
           "arm64"
         ]
       },
-      { "target": "deb", "arch": [
+      {
+        "target": "deb",
+        "arch": [
           "x64",
           "arm64"
         ]
       },
-      { "target": "rpm", "arch": [
+      {
+        "target": "rpm",
+        "arch": [
           "x64",
           "arm64"
         ]
@@ -126,26 +73,29 @@
     ]
   },
   "fileAssociations": [
-	  {
-	  	"ext": "drawio",
-	  	"name": "draw.io Diagram",
-	  	"description": "draw.io Diagram",
-	  	"mimeType": "application/vnd.jgraph.mxfile",
-	  	"role": "Editor"
-	  },
-	  {
-	  	"ext": "vsdx",
-	  	"name": "VSDX Document",
-	  	"description": "VSDX Document",
-	  	"mimeType": "application/vnd.visio",
-	  	"role": "Editor"
-	  },
-	  {
-	  	"ext": ["mmd", "mermaid"],
-	  	"name": "Mermaid Diagram",
-	  	"description": "Mermaid Diagram",
-	  	"mimeType": "text/vnd.mermaid",
-	  	"role": "Editor"
-	  }
+    {
+      "ext": "drawio",
+      "name": "draw.io Diagram",
+      "description": "draw.io Diagram",
+      "mimeType": "application/vnd.jgraph.mxfile",
+      "role": "Editor"
+    },
+    {
+      "ext": "vsdx",
+      "name": "VSDX Document",
+      "description": "VSDX Document",
+      "mimeType": "application/vnd.visio",
+      "role": "Editor"
+    },
+    {
+      "ext": [
+        "mmd",
+        "mermaid"
+      ],
+      "name": "Mermaid Diagram",
+      "description": "Mermaid Diagram",
+      "mimeType": "text/vnd.mermaid",
+      "role": "Editor"
+    }
   ]
 }
